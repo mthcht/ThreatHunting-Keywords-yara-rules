@@ -13,7 +13,7 @@ rule fcrackzip
         $string1 = /\/usr\/share\/wordlists\/.{0,1000}\.txt/ nocase ascii wide
         // Description: a Free/Fast Zip Password Cracker
         // Reference: https://manpages.ubuntu.com/manpages/trusty/man1/fcrackzip.1.html
-        $string2 = /fcrackzip\s/ nocase ascii wide
+        $string2 = "fcrackzip " nocase ascii wide
 
     condition:
         any of them

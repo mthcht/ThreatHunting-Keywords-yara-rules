@@ -22,10 +22,10 @@ rule hackshell
         $string4 = /\/var\/tmp\/\.socket\s\-p\s\-c\s\\"exec\spython3\s\-c\s\\\\"import\sos\;os\.setuid\(0\)\;os\.setgid\(0\)\;os\.execl/ nocase ascii wide
         // Description: Make BASH stealthy and hacker friendly with lots of bash functions
         // Reference: https://github.com/hackerschoice/hackshell
-        $string5 = /79023345917d346447982c87eae5639171d2bc091505dc0869632440bcc250f2/ nocase ascii wide
+        $string5 = "79023345917d346447982c87eae5639171d2bc091505dc0869632440bcc250f2" nocase ascii wide
         // Description: Make BASH stealthy and hacker friendly with lots of bash functions
         // Reference: https://github.com/hackerschoice/hackshell
-        $string6 = /BASH_HISTORY\=\/dev\/null\sexec\s\-a\s/ nocase ascii wide
+        $string6 = "BASH_HISTORY=/dev/null exec -a " nocase ascii wide
         // Description: Make BASH stealthy and hacker friendly with lots of bash functions
         // Reference: https://github.com/hackerschoice/hackshell
         $string7 = /burl\shttp\:\/\/ipinfo\.io\s2\>\/dev\/null/ nocase ascii wide
@@ -34,10 +34,10 @@ rule hackshell
         $string8 = /dl\shttp\:\/\/ipinfo\.io\s2\>\/dev\/nul/ nocase ascii wide
         // Description: Make BASH stealthy and hacker friendly with lots of bash functions
         // Reference: https://github.com/hackerschoice/hackshell
-        $string9 = /echo\s1\s\>\/proc\/sys\/net\/ipv4\/conf\/all\/route_localnet/ nocase ascii wide
+        $string9 = "echo 1 >/proc/sys/net/ipv4/conf/all/route_localnet" nocase ascii wide
         // Description: Make BASH stealthy and hacker friendly with lots of bash functions
         // Reference: https://github.com/hackerschoice/hackshell
-        $string10 = /hackerschoice\/hackshell/ nocase ascii wide
+        $string10 = "hackerschoice/hackshell" nocase ascii wide
         // Description: Make BASH stealthy and hacker friendly with lots of bash functions
         // Reference: https://github.com/hackerschoice/hackshell
         $string11 = /hackshell\-main\.zip/ nocase ascii wide
@@ -73,10 +73,10 @@ rule hackshell
         $string21 = /tinyurl\.com\/haxshl/ nocase ascii wide
         // Description: Make BASH stealthy and hacker friendly with lots of bash functions
         // Reference: https://github.com/hackerschoice/hackshell
-        $string22 = /unset\s\-f\shs_init\shs_init_alias\shs_init_dl\shs_init_shell/ nocase ascii wide
+        $string22 = "unset -f hs_init hs_init_alias hs_init_dl hs_init_shell" nocase ascii wide
         // Description: Make BASH stealthy and hacker friendly with lots of bash functions
         // Reference: https://github.com/hackerschoice/hackshell
-        $string23 = /unset\sSSH_CLIENT\sSSH_CONNECTION\;\sTERM\=xterm\-256color\sHISTFILE\=\/dev\/null\s/ nocase ascii wide
+        $string23 = "unset SSH_CLIENT SSH_CONNECTION; TERM=xterm-256color HISTFILE=/dev/null " nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

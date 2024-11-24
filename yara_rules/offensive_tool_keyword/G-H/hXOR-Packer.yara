@@ -31,19 +31,19 @@ rule hXOR_Packer
         $string7 = /\\unpackerLoadEXE\.exe/ nocase ascii wide
         // Description: hXOR Packer is a PE (Portable Executable) packer with Huffman Compression and Xor encryption.
         // Reference: https://github.com/akuafif/hXOR-Packer
-        $string8 = /akuafif\/hXOR\-Packer/ nocase ascii wide
+        $string8 = "akuafif/hXOR-Packer" nocase ascii wide
         // Description: hXOR Packer is a PE (Portable Executable) packer with Huffman Compression and Xor encryption.
         // Reference: https://github.com/akuafif/hXOR-Packer
         $string9 = /hXOR\-Packer\.v0\.1\.zip/ nocase ascii wide
         // Description: hXOR Packer is a PE (Portable Executable) packer with Huffman Compression and Xor encryption.
         // Reference: https://github.com/akuafif/hXOR-Packer
-        $string10 = /hXOR\-Packer\-main/ nocase ascii wide
+        $string10 = "hXOR-Packer-main" nocase ascii wide
         // Description: hXOR Packer is a PE (Portable Executable) packer with Huffman Compression and Xor encryption.
         // Reference: https://github.com/akuafif/hXOR-Packer
         $string11 = /packer\.exe\s.{0,1000}\.exe\s.{0,1000}\.exe/ nocase ascii wide
         // Description: hXOR Packer is a PE (Portable Executable) packer with Huffman Compression and Xor encryption.
         // Reference: https://github.com/akuafif/hXOR-Packer
-        $string12 = /Sandboxie\sdetected\!\!\!/ nocase ascii wide
+        $string12 = "Sandboxie detected!!!" nocase ascii wide
         // Description: hXOR Packer is a PE (Portable Executable) packer with Huffman Compression and Xor encryption.
         // Reference: https://github.com/akuafif/hXOR-Packer
         $string13 = /Scanning\sfor\sSandboxie\?/ nocase ascii wide
@@ -52,7 +52,7 @@ rule hXOR_Packer
         $string14 = /Unpacking\sSuccessful\!\\n\\nExecuting\sfrom\sMemory\s\>\>\>\>\s/ nocase ascii wide
         // Description: hXOR Packer is a PE (Portable Executable) packer with Huffman Compression and Xor encryption.
         // Reference: https://github.com/akuafif/hXOR-Packer
-        $string15 = /VMware\sdetected\!\!\!/ nocase ascii wide
+        $string15 = "VMware detected!!!" nocase ascii wide
 
     condition:
         any of them

@@ -10,34 +10,34 @@ rule gimmecredz
     strings:
         // Description: This tool can help pentesters to quickly dump all credz from known location. such as .bash_history. config files. wordpress credentials. and so on
         // Reference: https://github.com/0xmitsurugi/gimmecredz
-        $string1 = /dump_chrome_user/ nocase ascii wide
+        $string1 = "dump_chrome_user" nocase ascii wide
         // Description: This tool can help pentesters to quickly dump all credz from known location. such as .bash_history. config files. wordpress credentials. and so on
         // Reference: https://github.com/0xmitsurugi/gimmecredz
-        $string2 = /dump_firefox_user/ nocase ascii wide
+        $string2 = "dump_firefox_user" nocase ascii wide
         // Description: This tool can help pentesters to quickly dump all credz from known location. such as .bash_history. config files. wordpress credentials. and so on
         // Reference: https://github.com/0xmitsurugi/gimmecredz
-        $string3 = /dump_jenkins/ nocase ascii wide
+        $string3 = "dump_jenkins" nocase ascii wide
         // Description: This tool can help pentesters to quickly dump all credz from known location. such as .bash_history. config files. wordpress credentials. and so on
         // Reference: https://github.com/0xmitsurugi/gimmecredz
-        $string4 = /dump_keepassx/ nocase ascii wide
+        $string4 = "dump_keepassx" nocase ascii wide
         // Description: This tool can help pentesters to quickly dump all credz from known location. such as .bash_history. config files. wordpress credentials. and so on
         // Reference: https://github.com/0xmitsurugi/gimmecredz
-        $string5 = /dump_ssh_keys/ nocase ascii wide
+        $string5 = "dump_ssh_keys" nocase ascii wide
         // Description: This tool can help pentesters to quickly dump all credz from known location. such as .bash_history. config files. wordpress credentials. and so on
         // Reference: https://github.com/0xmitsurugi/gimmecredz
-        $string6 = /dump_tomcat/ nocase ascii wide
+        $string6 = "dump_tomcat" nocase ascii wide
         // Description: This tool can help pentesters to quickly dump all credz from known location. such as .bash_history. config files. wordpress credentials. and so on
         // Reference: https://github.com/0xmitsurugi/gimmecredz
-        $string7 = /dump_webconf/ nocase ascii wide
+        $string7 = "dump_webconf" nocase ascii wide
         // Description: This tool can help pentesters to quickly dump all credz from known location. such as .bash_history. config files. wordpress credentials. and so on
         // Reference: https://github.com/0xmitsurugi/gimmecredz
-        $string8 = /dump_webpass/ nocase ascii wide
+        $string8 = "dump_webpass" nocase ascii wide
         // Description: This tool can help pentesters to quickly dump all credz from known location. such as .bash_history. config files. wordpress credentials. and so on
         // Reference: https://github.com/0xmitsurugi/gimmecredz
-        $string9 = /dump_wifi_wpa_/ nocase ascii wide
+        $string9 = "dump_wifi_wpa_" nocase ascii wide
         // Description: This tool can help pentesters to quickly dump all credz from known location. such as .bash_history. config files. wordpress credentials. and so on
         // Reference: https://github.com/0xmitsurugi/gimmecredz
-        $string10 = /gimmecredz/ nocase ascii wide
+        $string10 = "gimmecredz" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

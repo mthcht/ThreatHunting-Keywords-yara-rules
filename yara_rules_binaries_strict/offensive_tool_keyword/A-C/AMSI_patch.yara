@@ -19,7 +19,7 @@ rule AMSI_patch
         $string3 = /AMS1\-Patch\.exe/ nocase ascii wide
         // Description: Patching AmsiOpenSession by forcing an error branching
         // Reference: https://github.com/TheD1rkMtr/AMSI_patch
-        $string4 = /AMSI_patch\-main/ nocase ascii wide
+        $string4 = "AMSI_patch-main" nocase ascii wide
         // Description: Patching AmsiOpenSession by forcing an error branching
         // Reference: https://github.com/TheD1rkMtr/AMSI_patch
         $string5 = /AmsiOpenSession\.cpp/ nocase ascii wide
@@ -31,10 +31,10 @@ rule AMSI_patch
         $string7 = /AmsiOpenSession\.vcxproj/ nocase ascii wide
         // Description: Patching AmsiOpenSession by forcing an error branching
         // Reference: https://github.com/TheD1rkMtr/AMSI_patch
-        $string8 = /E09F4899\-D8B3\-4282\-9E3A\-B20EE9A3D463/ nocase ascii wide
+        $string8 = "E09F4899-D8B3-4282-9E3A-B20EE9A3D463" nocase ascii wide
         // Description: Patching AmsiOpenSession by forcing an error branching
         // Reference: https://github.com/TheD1rkMtr/AMSI_patch
-        $string9 = /TheD1rkMtr\/AMSI_patch/ nocase ascii wide
+        $string9 = "TheD1rkMtr/AMSI_patch" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

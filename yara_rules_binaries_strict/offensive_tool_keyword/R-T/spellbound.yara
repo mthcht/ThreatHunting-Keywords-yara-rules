@@ -34,10 +34,10 @@ rule spellbound
         $string8 = /\\spellstager\.py\s/ nocase ascii wide
         // Description: Spellbound is a C2 (Command and Control) framework meant for creating a botnet. 
         // Reference: https://github.com/mhuzaifi0604/spellbound
-        $string9 = /5dec1cfe7c0c2ec55c17fb44b43f7d14/ nocase ascii wide
+        $string9 = "5dec1cfe7c0c2ec55c17fb44b43f7d14" nocase ascii wide
         // Description: Spellbound is a C2 (Command and Control) framework meant for creating a botnet. 
         // Reference: https://github.com/mhuzaifi0604/spellbound
-        $string10 = /mhuzaifi0604\/spellbound/ nocase ascii wide
+        $string10 = "mhuzaifi0604/spellbound" nocase ascii wide
         // Description: Spellbound is a C2 (Command and Control) framework meant for creating a botnet. 
         // Reference: https://github.com/mhuzaifi0604/spellbound
         $string11 = /payload_msf\.c/ nocase ascii wide

@@ -16,7 +16,7 @@ rule ired_team
         $string2 = /\\RedTeaming\-Tactics\-and\-Techniques\-master/ nocase ascii wide
         // Description: Red Teaming Tactics and Techniques
         // Reference: https://github.com/mantvydasb/RedTeaming-Tactics-and-Techniques
-        $string3 = /mantvydasb\/RedTeaming\-Tactics\-and\-Techniques/ nocase ascii wide
+        $string3 = "mantvydasb/RedTeaming-Tactics-and-Techniques" nocase ascii wide
         // Description: Red Teaming Tactics and Techniques
         // Reference: https://github.com/mantvydasb/RedTeaming-Tactics-and-Techniques
         $string4 = /www\.ired\.team/ nocase ascii wide

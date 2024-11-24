@@ -13,13 +13,13 @@ rule DLHell
         $string1 = /\sDLHell\.py/ nocase ascii wide
         // Description: Local & remote Windows DLL Proxying
         // Reference: https://github.com/synacktiv/DLHell
-        $string2 = /\#\#\sDLHell\sMain\sfunction/ nocase ascii wide
+        $string2 = "## DLHell Main function" nocase ascii wide
         // Description: Local & remote Windows DLL Proxying
         // Reference: https://github.com/synacktiv/DLHell
-        $string3 = /\#Dumps\sexported\sfunction\sfrom\slegit\sDLL\susing\swinedump/ nocase ascii wide
+        $string3 = "#Dumps exported function from legit DLL using winedump" nocase ascii wide
         // Description: Local & remote Windows DLL Proxying
         // Reference: https://github.com/synacktiv/DLHell
-        $string4 = /\#Removes\sprevious\shijacked\sdll/ nocase ascii wide
+        $string4 = "#Removes previous hijacked dll" nocase ascii wide
         // Description: Local & remote Windows DLL Proxying
         // Reference: https://github.com/synacktiv/DLHell
         $string5 = /\.py\s\s\-t\s.{0,1000}\.tpe\s\-c\s.{0,1000}\.exe.{0,1000}\s\-remote\-lib\s.{0,1000}\-remote\-target\s/ nocase ascii wide
@@ -40,7 +40,7 @@ rule DLHell
         $string10 = /\\DLHell\-main\\/ nocase ascii wide
         // Description: Local & remote Windows DLL Proxying
         // Reference: https://github.com/synacktiv/DLHell
-        $string11 = /Available\sProgIDs\sand\sCLSIDs\sfor\sDLL\sHijacking\:/ nocase ascii wide
+        $string11 = "Available ProgIDs and CLSIDs for DLL Hijacking:" nocase ascii wide
         // Description: Local & remote Windows DLL Proxying
         // Reference: https://github.com/synacktiv/DLHell
         $string12 = /DLHell\sv2\.0/ nocase ascii wide
@@ -49,13 +49,13 @@ rule DLHell
         $string13 = /DLHell\.py\s\-/ nocase ascii wide
         // Description: Local & remote Windows DLL Proxying
         // Reference: https://github.com/synacktiv/DLHell
-        $string14 = /DLL\sHell\s\-\sDLL\sProxifier\/Hijacker/ nocase ascii wide
+        $string14 = "DLL Hell - DLL Proxifier/Hijacker" nocase ascii wide
         // Description: Local & remote Windows DLL Proxying
         // Reference: https://github.com/synacktiv/DLHell
         $string15 = /dump_exported_functions\(library\,dll_orig\)/ nocase ascii wide
         // Description: Local & remote Windows DLL Proxying
         // Reference: https://github.com/synacktiv/DLHell
-        $string16 = /f47ae40fa2ba9ad689d59f8b755ea68e116c3dd603d6f985a7eff273ce0f381b/ nocase ascii wide
+        $string16 = "f47ae40fa2ba9ad689d59f8b755ea68e116c3dd603d6f985a7eff273ce0f381b" nocase ascii wide
         // Description: Local & remote Windows DLL Proxying
         // Reference: https://github.com/synacktiv/DLHell
         $string17 = /impacket\.dcerpc\.v5/ nocase ascii wide
@@ -67,7 +67,7 @@ rule DLHell
         $string19 = /kevin\.tellier\@synacktiv\.com/ nocase ascii wide
         // Description: Local & remote Windows DLL Proxying
         // Reference: https://github.com/synacktiv/DLHell
-        $string20 = /synacktiv\/DLHell/ nocase ascii wide
+        $string20 = "synacktiv/DLHell" nocase ascii wide
 
     condition:
         any of them

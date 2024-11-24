@@ -13,13 +13,13 @@ rule Crassus
         $string1 = /\/Crassus\.git/ nocase ascii wide
         // Description: Crassus Windows privilege escalation discovery tool
         // Reference: https://github.com/vu-ls/Crassus
-        $string2 = /\/Crassus\-main/ nocase ascii wide
+        $string2 = "/Crassus-main" nocase ascii wide
         // Description: Crassus Windows privilege escalation discovery tool
         // Reference: https://github.com/vu-ls/Crassus
         $string3 = /\\Crassus\-main/ nocase ascii wide
         // Description: Crassus Windows privilege escalation discovery tool
         // Reference: https://github.com/vu-ls/Crassus
-        $string4 = /7E9729AA\-4CF2\-4D0A\-8183\-7FB7CE7A5B1A/ nocase ascii wide
+        $string4 = "7E9729AA-4CF2-4D0A-8183-7FB7CE7A5B1A" nocase ascii wide
         // Description: Crassus Windows privilege escalation discovery tool
         // Reference: https://github.com/vu-ls/Crassus
         $string5 = /Crassus\.csproj/ nocase ascii wide
@@ -31,7 +31,7 @@ rule Crassus
         $string7 = /Crassus\.sln/ nocase ascii wide
         // Description: Crassus Windows privilege escalation discovery tool
         // Reference: https://github.com/vu-ls/Crassus
-        $string8 = /vu\-ls\/Crassus/ nocase ascii wide
+        $string8 = "vu-ls/Crassus" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

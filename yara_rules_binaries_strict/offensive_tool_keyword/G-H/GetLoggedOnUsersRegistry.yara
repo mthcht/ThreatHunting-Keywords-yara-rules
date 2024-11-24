@@ -16,10 +16,10 @@ rule GetLoggedOnUsersRegistry
         $string2 = /GetLoggedOnUsersRegistry\.cs/ nocase ascii wide
         // Description: PoC To enumerate logged on users on a remote system using the winreg named pipe
         // Reference: https://gist.github.com/RalphDesmangles/22f580655f479f189c1de9e7720776f1
-        $string3 = /PoC\sTo\senumerate\slogged\son\susers\son\sa\sremote\ssystem\susing\sthe\swinreg\snamed\spipe/ nocase ascii wide
+        $string3 = "PoC To enumerate logged on users on a remote system using the winreg named pipe" nocase ascii wide
         // Description: PoC To enumerate logged on users on a remote system using the winreg named pipe
         // Reference: https://gist.github.com/RalphDesmangles/22f580655f479f189c1de9e7720776f1
-        $string4 = /RalphDesmangles\/22f580655f479f189c1de9e7720776f1/ nocase ascii wide
+        $string4 = "RalphDesmangles/22f580655f479f189c1de9e7720776f1" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

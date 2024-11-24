@@ -10,7 +10,7 @@ rule seatbelt
     strings:
         // Description: Seatbelt is a comprehensive security scanning tool that can be used to perform a variety of checks. including but not limited to. user privileges. logged in users. network information. system information. and many others
         // Reference: https://github.com/GhostPack/Seatbelt
-        $string1 = /ATK\/Seatbelt\-A/ nocase ascii wide
+        $string1 = "ATK/Seatbelt-A" nocase ascii wide
         // Description: Seatbelt is a comprehensive security scanning tool that can be used to perform a variety of checks. including but not limited to. user privileges. logged in users. network information. system information. and many others
         // Reference: https://github.com/GhostPack/Seatbelt
         $string2 = /HackTool\.MSIL\.Seatbelt/ nocase ascii wide

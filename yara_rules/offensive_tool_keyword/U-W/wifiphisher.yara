@@ -10,7 +10,7 @@ rule wifiphisher
     strings:
         // Description: The Rogue Access Point Framework.
         // Reference: https://github.com/wifiphisher/wifiphisher
-        $string1 = /wifiphisher/ nocase ascii wide
+        $string1 = "wifiphisher" nocase ascii wide
 
     condition:
         any of them

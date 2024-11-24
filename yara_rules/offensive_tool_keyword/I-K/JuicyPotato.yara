@@ -13,7 +13,7 @@ rule JuicyPotato
         $string1 = /\\JuicyPotato\.pdb/ nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string2 = /JuicyPotato\sv\%s/ nocase ascii wide
+        $string2 = "JuicyPotato v%s" nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
         $string3 = /JuicyPotato\.exe/ nocase ascii wide

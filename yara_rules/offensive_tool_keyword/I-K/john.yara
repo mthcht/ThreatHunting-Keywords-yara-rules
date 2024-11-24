@@ -10,10 +10,10 @@ rule john
     strings:
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string1 = /\sbleeding\-jumbo\sjohn/ nocase ascii wide
+        $string1 = " bleeding-jumbo john" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string2 = /\s\-\-crack\-status/ nocase ascii wide
+        $string2 = " --crack-status" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
         $string3 = /\s\-\-format\=netntlmv2\s.{0,1000}\.txt/ nocase ascii wide
@@ -25,70 +25,70 @@ rule john
         $string5 = /\s\-inc\s\-u\=0\s.{0,1000}\.pwd/ nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string6 = /\s\-inc\=digits\s/ nocase ascii wide
+        $string6 = " -inc=digits " nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string7 = /\sjohn_done/ nocase ascii wide
+        $string7 = " john_done" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string8 = /\sjohn_fork/ nocase ascii wide
+        $string8 = " john_fork" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string9 = /\sjohn_load/ nocase ascii wide
+        $string9 = " john_load" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string10 = /\sjohn_load_conf/ nocase ascii wide
+        $string10 = " john_load_conf" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string11 = /\sjohn_load_conf_db/ nocase ascii wide
+        $string11 = " john_load_conf_db" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string12 = /\sjohn_log_format/ nocase ascii wide
+        $string12 = " john_log_format" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string13 = /\sjohn_log_format2/ nocase ascii wide
+        $string13 = " john_log_format2" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string14 = /\sjohn_mpi_wait/ nocase ascii wide
+        $string14 = " john_mpi_wait" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string15 = /\sjohn_omp_fallback/ nocase ascii wide
+        $string15 = " john_omp_fallback" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string16 = /\sjohn_omp_init/ nocase ascii wide
+        $string16 = " john_omp_init" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string17 = /\sjohn_omp_maybe_adjust_or_fallback/ nocase ascii wide
+        $string17 = " john_omp_maybe_adjust_or_fallback" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string18 = /\sjohn_omp_show_info/ nocase ascii wide
+        $string18 = " john_omp_show_info" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string19 = /\sjohn_register_all/ nocase ascii wide
+        $string19 = " john_register_all" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string20 = /\sjohn_register_one/ nocase ascii wide
+        $string20 = " john_register_one" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string21 = /\sjohn_run/ nocase ascii wide
+        $string21 = " john_run" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string22 = /\sjohn_set_mpi/ nocase ascii wide
+        $string22 = " john_set_mpi" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string23 = /\sjohn_set_tristates/ nocase ascii wide
+        $string23 = " john_set_tristates" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string24 = /\sjohn_wait/ nocase ascii wide
+        $string24 = " john_wait" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string25 = /\sJohnTheRipper\// nocase ascii wide
+        $string25 = " JohnTheRipper/" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string26 = /\s\-\-list\=hidden\-options/ nocase ascii wide
+        $string26 = " --list=hidden-options" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string27 = /\sload_extra_pots/ nocase ascii wide
+        $string27 = " load_extra_pots" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
         $string28 = /\smask\?a\?a\?a\?a\?/ nocase ascii wide
@@ -103,13 +103,13 @@ rule john
         $string31 = /\srockyou\.txt\s/ nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string32 = /\s\-\-rules\:Jumbo\s/ nocase ascii wide
+        $string32 = " --rules:Jumbo " nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string33 = /\s\-\-session\=allrules\s\-\-wordlist/ nocase ascii wide
+        $string33 = " --session=allrules --wordlist" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string34 = /\s\-\-show\spasswd/ nocase ascii wide
+        $string34 = " --show passwd" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
         $string35 = /\s\-\-single\sshadow\.hashes/ nocase ascii wide
@@ -121,7 +121,7 @@ rule john
         $string37 = /\/ike\-crack\./ nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string38 = /\/john\s\-/ nocase ascii wide
+        $string38 = "/john -" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
         $string39 = /\/john\/run\/.{0,1000}\.pl/ nocase ascii wide
@@ -130,7 +130,7 @@ rule john
         $string40 = /\/john\/run\/.{0,1000}\.py/ nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string41 = /\/JohnTheRipper/ nocase ascii wide
+        $string41 = "/JohnTheRipper" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
         $string42 = /\/netntlm\.pl/ nocase ascii wide
@@ -250,7 +250,7 @@ rule john
         $string80 = /axcrypt2john\.py/ nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string81 = /\-b\sbleeding\-jumbo/ nocase ascii wide
+        $string81 = "-b bleeding-jumbo" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
         $string82 = /BCHASH\-Rijndael\-128\.unverified\.test\-vectors\.txt/ nocase ascii wide
@@ -298,19 +298,19 @@ rule john
         $string96 = /cracf2john\.py/ nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string97 = /crk_get_key1/ nocase ascii wide
+        $string97 = "crk_get_key1" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string98 = /crk_get_key2/ nocase ascii wide
+        $string98 = "crk_get_key2" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string99 = /crk_max_keys_per_crypt/ nocase ascii wide
+        $string99 = "crk_max_keys_per_crypt" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
         $string100 = /crk_methods\./ nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string101 = /crk_password_loop/ nocase ascii wide
+        $string101 = "crk_password_loop" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
         $string102 = /dashlane2john\.py/ nocase ascii wide
@@ -331,7 +331,7 @@ rule john
         $string107 = /DPAPImk2john\.py/ nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string108 = /eapmd5tojohn/ nocase ascii wide
+        $string108 = "eapmd5tojohn" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
         $string109 = /ecryptfs2john\.py/ nocase ascii wide
@@ -358,7 +358,7 @@ rule john
         $string116 = /ethereum2john\.py/ nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string117 = /fcrackzip\s/ nocase ascii wide
+        $string117 = "fcrackzip " nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
         $string118 = /filezilla2john\.py/ nocase ascii wide
@@ -370,7 +370,7 @@ rule john
         $string120 = /geli2john\.py/ nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string121 = /genmkvpwd\s/ nocase ascii wide
+        $string121 = "genmkvpwd " nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
         $string122 = /gpg2john\./ nocase ascii wide
@@ -391,7 +391,7 @@ rule john
         $string127 = /ikescan2john\.py/ nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string128 = /insert_top_100_passwords_1_G/ nocase ascii wide
+        $string128 = "insert_top_100_passwords_1_G" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
         $string129 = /InsidePro\-PasswordsPro\.rule/ nocase ascii wide
@@ -442,19 +442,19 @@ rule john
         $string144 = /john\s.{0,1000}\-\-wordlist/ nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string145 = /john\shashes/ nocase ascii wide
+        $string145 = "john hashes" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string146 = /john\s\-\-show\s/ nocase ascii wide
+        $string146 = "john --show " nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string147 = /john\s\-\-status/ nocase ascii wide
+        $string147 = "john --status" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string148 = /John\sthe\sRipper/ nocase ascii wide
+        $string148 = "John the Ripper" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string149 = /john\s\-\-wordlist/ nocase ascii wide
+        $string149 = "john --wordlist" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
         $string150 = /john\.bash_completion/ nocase ascii wide
@@ -469,22 +469,22 @@ rule john
         $string153 = /john\/run\/fuzz\.dic/ nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string154 = /john\/src\/ztex\// nocase ascii wide
+        $string154 = "john/src/ztex/" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string155 = /john_log_format/ nocase ascii wide
+        $string155 = "john_log_format" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
         $string156 = /john_mpi\.c/ nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string157 = /john_register_all/ nocase ascii wide
+        $string157 = "john_register_all" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string158 = /JohnTheRipper\s/ nocase ascii wide
+        $string158 = "JohnTheRipper " nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string159 = /JohnTheRipper\// nocase ascii wide
+        $string159 = "JohnTheRipper/" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
         $string160 = /kdcdump2john\.py/ nocase ascii wide
@@ -520,7 +520,7 @@ rule john
         $string170 = /kwallet2john\.py/ nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string171 = /lastpass_sniffed_fmt_plug/ nocase ascii wide
+        $string171 = "lastpass_sniffed_fmt_plug" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
         $string172 = /lastpass2john\.py/ nocase ascii wide
@@ -607,7 +607,7 @@ rule john
         $string199 = /openwall\.John\.desktop/ nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string200 = /openwall\/john/ nocase ascii wide
+        $string200 = "openwall/john" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
         $string201 = /padlock2john\.py/ nocase ascii wide
@@ -643,7 +643,7 @@ rule john
         $string211 = /pkt_comm\/word_gen\./ nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string212 = /pkt_comm\/word_list/ nocase ascii wide
+        $string212 = "pkt_comm/word_list" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
         $string213 = /prosody2john\.py/ nocase ascii wide
@@ -664,13 +664,13 @@ rule john
         $string218 = /radius2john\.py/ nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string219 = /rar2john\s/ nocase ascii wide
+        $string219 = "rar2john " nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
         $string220 = /rar2john\./ nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string221 = /rawSHA1_linkedIn_fmt_plug/ nocase ascii wide
+        $string221 = "rawSHA1_linkedIn_fmt_plug" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
         $string222 = /restic2john\.py/ nocase ascii wide
@@ -715,10 +715,10 @@ rule john
         $string235 = /src\/john\.asm/ nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string236 = /src\/tests\/NESSIE\// nocase ascii wide
+        $string236 = "src/tests/NESSIE/" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string237 = /ssh2john\s/ nocase ascii wide
+        $string237 = "ssh2john " nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
         $string238 = /ssh2john\.py/ nocase ascii wide
@@ -754,10 +754,10 @@ rule john
         $string248 = /uaf2john\./ nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string249 = /unshadow\s\/etc\/passwd/ nocase ascii wide
+        $string249 = "unshadow /etc/passwd" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string250 = /unshadow\spasswd\sshadow/ nocase ascii wide
+        $string250 = "unshadow passwd shadow" nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
         $string251 = /vdi2john\.pl/ nocase ascii wide
@@ -784,7 +784,7 @@ rule john
         $string258 = /zed2john\.py/ nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string259 = /zip2john\s/ nocase ascii wide
+        $string259 = "zip2john " nocase ascii wide
 
     condition:
         any of them

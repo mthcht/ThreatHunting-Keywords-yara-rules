@@ -16,16 +16,16 @@ rule Inveigh
         $string2 = /\s\-IP\s.{0,100}\s\-SpooferIP\s.{0,100}\s\-HTTP\sN/ nocase ascii wide
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
-        $string3 = /\s\-llmnrtypes\sAAAA/ nocase ascii wide
+        $string3 = " -llmnrtypes AAAA" nocase ascii wide
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
-        $string4 = /\s\-mdns\sy\s\-mdnsunicast\sn/ nocase ascii wide
+        $string4 = " -mdns y -mdnsunicast n" nocase ascii wide
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
-        $string5 = /\s\-NBNSBruteForce/ nocase ascii wide
+        $string5 = " -NBNSBruteForce" nocase ascii wide
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
-        $string6 = /\s\-p\:AssemblyName\=inveigh/ nocase ascii wide
+        $string6 = " -p:AssemblyName=inveigh" nocase ascii wide
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
         $string7 = /\.exe\s\-sniffer\sn/ nocase ascii wide
@@ -106,7 +106,7 @@ rule Inveigh
         $string32 = /Inveigh\-Log\.txt/ nocase ascii wide
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
-        $string33 = /Inveigh\-master/ nocase ascii wide
+        $string33 = "Inveigh-master" nocase ascii wide
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
         $string34 = /Inveigh\-net.{0,100}\.zip/ nocase ascii wide
@@ -124,10 +124,10 @@ rule Inveigh
         $string38 = /inveighzero\.exe/ nocase ascii wide
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
-        $string39 = /Invoke\-Inveigh/ nocase ascii wide
+        $string39 = "Invoke-Inveigh" nocase ascii wide
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
-        $string40 = /Kevin\-Robertson\/Inveigh/ nocase ascii wide
+        $string40 = "Kevin-Robertson/Inveigh" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

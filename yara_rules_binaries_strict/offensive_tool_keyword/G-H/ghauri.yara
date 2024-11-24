@@ -25,7 +25,7 @@ rule ghauri
         $string5 = /\/ghauri\.py/ nocase ascii wide
         // Description: A cross-platform python based advanced sql injections detection & exploitation tool
         // Reference: https://github.com/r0oth3x49/ghauri
-        $string6 = /\/ghauri\/ghauri\// nocase ascii wide
+        $string6 = "/ghauri/ghauri/" nocase ascii wide
         // Description: A cross-platform python based advanced sql injections detection & exploitation tool
         // Reference: https://github.com/r0oth3x49/ghauri
         $string7 = /\\dbms\\fingerprint\.py/ nocase ascii wide
@@ -37,7 +37,7 @@ rule ghauri
         $string9 = /\\ghauri\-1.{0,100}\\ghauri\\/ nocase ascii wide
         // Description: A cross-platform python based advanced sql injections detection & exploitation tool
         // Reference: https://github.com/r0oth3x49/ghauri
-        $string10 = /A\scross\-platform\spython\sbased\sadvanced\ssql\sinjections\sdetection\s\&\sexploitation\stool/ nocase ascii wide
+        $string10 = "A cross-platform python based advanced sql injections detection & exploitation tool" nocase ascii wide
         // Description: A cross-platform python based advanced sql injections detection & exploitation tool
         // Reference: https://github.com/r0oth3x49/ghauri
         $string11 = /calling\sMySQL\sshell\.\sTo\squit\stype\s\'x\'\sor\s\'q\'\sand\spress\sENTER/ nocase ascii wide
@@ -49,16 +49,16 @@ rule ghauri
         $string13 = /Do\syou\swant\sto\sskip\stest\spayloads\sspecific\sfor\sother\sDBMSes\?/ nocase ascii wide
         // Description: A cross-platform python based advanced sql injections detection & exploitation tool
         // Reference: https://github.com/r0oth3x49/ghauri
-        $string14 = /ghauri\scurrently\sonly\ssupports\sDBMS\sfingerprint\spayloads\sfor\sMicrosoft\sAccess/ nocase ascii wide
+        $string14 = "ghauri currently only supports DBMS fingerprint payloads for Microsoft Access" nocase ascii wide
         // Description: A cross-platform python based advanced sql injections detection & exploitation tool
         // Reference: https://github.com/r0oth3x49/ghauri
-        $string15 = /Ghauri\sdetected\sconnection\serrors\smultiple\stimes/ nocase ascii wide
+        $string15 = "Ghauri detected connection errors multiple times" nocase ascii wide
         // Description: A cross-platform python based advanced sql injections detection & exploitation tool
         // Reference: https://github.com/r0oth3x49/ghauri
         $string16 = /Ghauri\sis\sexpecting\sdatabase\sname\sto\senumerate\stable\(s\)\sentries/ nocase ascii wide
         // Description: A cross-platform python based advanced sql injections detection & exploitation tool
         // Reference: https://github.com/r0oth3x49/ghauri
-        $string17 = /ghauri\s\-u\s/ nocase ascii wide
+        $string17 = "ghauri -u " nocase ascii wide
         // Description: A cross-platform python based advanced sql injections detection & exploitation tool
         // Reference: https://github.com/r0oth3x49/ghauri
         $string18 = /ghauri\-.{0,100}\\ghauri\-/ nocase ascii wide
@@ -91,7 +91,7 @@ rule ghauri
         $string27 = /ghauri\.py\s/ nocase ascii wide
         // Description: A cross-platform python based advanced sql injections detection & exploitation tool
         // Reference: https://github.com/r0oth3x49/ghauri
-        $string28 = /ghauri_extractor/ nocase ascii wide
+        $string28 = "ghauri_extractor" nocase ascii wide
         // Description: A cross-platform python based advanced sql injections detection & exploitation tool
         // Reference: https://github.com/r0oth3x49/ghauri
         $string29 = /ghauri\-main\.zip/ nocase ascii wide
@@ -106,7 +106,7 @@ rule ghauri
         $string32 = /Nasir\sKhan\s\(r0ot\sh3x49\)/ nocase ascii wide
         // Description: A cross-platform python based advanced sql injections detection & exploitation tool
         // Reference: https://github.com/r0oth3x49/ghauri
-        $string33 = /r0oth3x49\/ghauri/ nocase ascii wide
+        $string33 = "r0oth3x49/ghauri" nocase ascii wide
         // Description: A cross-platform python based advanced sql injections detection & exploitation tool
         // Reference: https://github.com/r0oth3x49/ghauri
         $string34 = /r0oth3x49\@gmail\.com/ nocase ascii wide
@@ -118,7 +118,7 @@ rule ghauri
         $string36 = /scripts\\ghauri\.py/ nocase ascii wide
         // Description: A cross-platform python based advanced sql injections detection & exploitation tool
         // Reference: https://github.com/r0oth3x49/ghauri
-        $string37 = /sqlmapproject\/sqlmap\/issues\/2442/ nocase ascii wide
+        $string37 = "sqlmapproject/sqlmap/issues/2442" nocase ascii wide
         // Description: A cross-platform python based advanced sql injections detection & exploitation tool
         // Reference: https://github.com/r0oth3x49/ghauri
         $string38 = /testing\sfor\sSQL\sinjection\son\s\(custom\)/ nocase ascii wide

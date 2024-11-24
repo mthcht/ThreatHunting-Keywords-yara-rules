@@ -10,22 +10,22 @@ rule SharpSocks
     strings:
         // Description: Tunnellable HTTP/HTTPS socks4a proxy written in C# and deployable via PowerShell
         // Reference: https://github.com/nettitude/SharpSocks
-        $string1 = /\s\-\-beacon\=/ nocase ascii wide
+        $string1 = " --beacon=" nocase ascii wide
         // Description: Tunnellable HTTP/HTTPS socks4a proxy written in C# and deployable via PowerShell
         // Reference: https://github.com/nettitude/SharpSocks
-        $string2 = /\s\-\-payloadcookie\s/ nocase ascii wide
+        $string2 = " --payloadcookie " nocase ascii wide
         // Description: Tunnellable HTTP/HTTPS socks4a proxy written in C# and deployable via PowerShell
         // Reference: https://github.com/nettitude/SharpSocks
-        $string3 = /\/SharpSocks/ nocase ascii wide
+        $string3 = "/SharpSocks" nocase ascii wide
         // Description: Tunnellable HTTP/HTTPS socks4a proxy written in C# and deployable via PowerShell
         // Reference: https://github.com/nettitude/SharpSocks
-        $string4 = /\-\-payload\-cookie/ nocase ascii wide
+        $string4 = "--payload-cookie" nocase ascii wide
         // Description: Tunnellable HTTP/HTTPS socks4a proxy written in C# and deployable via PowerShell
         // Reference: https://github.com/nettitude/SharpSocks
-        $string5 = /ProcessCommandChannelImplantMessage/ nocase ascii wide
+        $string5 = "ProcessCommandChannelImplantMessage" nocase ascii wide
         // Description: Tunnellable HTTP/HTTPS socks4a proxy written in C# and deployable via PowerShell
         // Reference: https://github.com/nettitude/SharpSocks
-        $string6 = /ProcessEncryptedC2Request/ nocase ascii wide
+        $string6 = "ProcessEncryptedC2Request" nocase ascii wide
         // Description: Tunnellable HTTP/HTTPS socks4a proxy written in C# and deployable via PowerShell
         // Reference: https://github.com/nettitude/SharpSocks
         $string7 = /SharpSocks\.exe/ nocase ascii wide
@@ -40,16 +40,16 @@ rule SharpSocks
         $string10 = /SharpSocks\.sln/ nocase ascii wide
         // Description: Tunnellable HTTP/HTTPS socks4a proxy written in C# and deployable via PowerShell
         // Reference: https://github.com/nettitude/SharpSocks
-        $string11 = /SharpSocksCommon/ nocase ascii wide
+        $string11 = "SharpSocksCommon" nocase ascii wide
         // Description: Tunnellable HTTP/HTTPS socks4a proxy written in C# and deployable via PowerShell
         // Reference: https://github.com/nettitude/SharpSocks
-        $string12 = /SharpSocksConfig/ nocase ascii wide
+        $string12 = "SharpSocksConfig" nocase ascii wide
         // Description: Tunnellable HTTP/HTTPS socks4a proxy written in C# and deployable via PowerShell
         // Reference: https://github.com/nettitude/SharpSocks
-        $string13 = /SharpSocksImplant/ nocase ascii wide
+        $string13 = "SharpSocksImplant" nocase ascii wide
         // Description: Tunnellable HTTP/HTTPS socks4a proxy written in C# and deployable via PowerShell
         // Reference: https://github.com/nettitude/SharpSocks
-        $string14 = /SharpSocksServer/ nocase ascii wide
+        $string14 = "SharpSocksServer" nocase ascii wide
 
     condition:
         any of them

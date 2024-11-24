@@ -13,7 +13,7 @@ rule saycheese
         $string1 = /\ssaycheese\.sh/ nocase ascii wide
         // Description: Grab target's webcam shots by link
         // Reference: https://github.com/hangetzzu/saycheese
-        $string2 = /\/ngrok\shttp\s3333\s\>\s\/dev\/null\s2\>\&1/ nocase ascii wide
+        $string2 = "/ngrok http 3333 > /dev/null 2>&1" nocase ascii wide
         // Description: Grab target's webcam shots by link
         // Reference: https://github.com/hangetzzu/saycheese
         $string3 = /\/saycheese\.html/ nocase ascii wide
@@ -22,7 +22,7 @@ rule saycheese
         $string4 = /\/saycheese\.sh/ nocase ascii wide
         // Description: Grab target's webcam shots by link
         // Reference: https://github.com/hangetzzu/saycheese
-        $string5 = /d10833b7d54745c35eec76ce48c1d8a4d90a9455bcd8b81cacdc95b9304b3be3/ nocase ascii wide
+        $string5 = "d10833b7d54745c35eec76ce48c1d8a4d90a9455bcd8b81cacdc95b9304b3be3" nocase ascii wide
         // Description: Grab target's webcam shots by link
         // Reference: https://github.com/hangetzzu/saycheese
         $string6 = /https\:\/\/saycheese.{0,100}\.serveo\.net/ nocase ascii wide
@@ -34,7 +34,7 @@ rule saycheese
         $string8 = /ssh\s\-o\sStrictHostKeyChecking\=no\s\-o\sServerAliveInterval\=60\s\-R\s.{0,100}serveo\.net/ nocase ascii wide
         // Description: Grab target's webcam shots by link
         // Reference: https://github.com/hangetzzu/saycheese
-        $string9 = /thelinuxchoice\/saycheese/ nocase ascii wide
+        $string9 = "thelinuxchoice/saycheese" nocase ascii wide
         // Description: Grab target's webcam shots by link
         // Reference: https://github.com/hangetzzu/saycheese
         $string10 = /url\:\s\'forwarding_link\/post\.php\'\,/ nocase ascii wide

@@ -19,13 +19,13 @@ rule SharpHound
         $string3 = /\\SharpHound\.pdb/ nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string4 = /\>SharpHound\</ nocase ascii wide
+        $string4 = ">SharpHound<" nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string5 = /Initializing\sSharpHound\sat\s/ nocase ascii wide
+        $string5 = "Initializing SharpHound at " nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string6 = /SharpHound\sEnumeration\sCompleted\sat\s/ nocase ascii wide
+        $string6 = "SharpHound Enumeration Completed at " nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
         $string7 = /SharpHoundCommonLib\.LDAPQueries/ nocase ascii wide

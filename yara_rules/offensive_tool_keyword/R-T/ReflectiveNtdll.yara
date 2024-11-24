@@ -37,10 +37,10 @@ rule ReflectiveNtdll
         $string9 = /POC2.{0,1000}implant\.cpp/ nocase ascii wide
         // Description: A Dropper POC with a focus on aiding in EDR evasion - NTDLL Unhooking followed by loading ntdll in-memory which is present as shellcode
         // Reference: https://github.com/reveng007/ReflectiveNtdll
-        $string10 = /ReflectiveNtdll\-main/ nocase ascii wide
+        $string10 = "ReflectiveNtdll-main" nocase ascii wide
         // Description: A Dropper POC with a focus on aiding in EDR evasion - NTDLL Unhooking followed by loading ntdll in-memory which is present as shellcode
         // Reference: https://github.com/reveng007/ReflectiveNtdll
-        $string11 = /reveng007\/ReflectiveNtdll/ nocase ascii wide
+        $string11 = "reveng007/ReflectiveNtdll" nocase ascii wide
 
     condition:
         any of them

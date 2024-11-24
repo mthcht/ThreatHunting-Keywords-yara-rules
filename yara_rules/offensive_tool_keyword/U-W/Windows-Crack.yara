@@ -10,7 +10,7 @@ rule Windows_Crack
     strings:
         // Description: automated sticky keys backdoor
         // Reference: https://github.com/japd06/Windows-Crack/
-        $string1 = /REG\sADD\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\sNT\\CurrentVersion\\Image\sFile\sExecution\sOptions\\sethc\.exe\"\s\/v\sDebugger\s\/t\sREG_SZ\s\/d\s\"C\:\\windows\\system32\\cmd\.exe\"/ nocase ascii wide
+        $string1 = /REG\sADD\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\sNT\\CurrentVersion\\Image\sFile\sExecution\sOptions\\sethc\.exe\\"\s\/v\sDebugger\s\/t\sREG_SZ\s\/d\s\\"C\:\\windows\\system32\\cmd\.exe\\"/ nocase ascii wide
 
     condition:
         any of them

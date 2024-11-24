@@ -13,7 +13,7 @@ rule LinEnum
         $string1 = /\/LinEnum\.git/ nocase ascii wide
         // Description: Scripted Local Linux Enumeration & Privilege Escalation Checks
         // Reference: https://github.com/rebootuser/LinEnum
-        $string2 = /\/LinEnum\// nocase ascii wide
+        $string2 = "/LinEnum/" nocase ascii wide
         // Description: Scripted Local Linux Enumeration & Privilege Escalation Checks
         // Reference: https://github.com/rebootuser/LinEnum
         $string3 = /LinEnum\.sh/ nocase ascii wide

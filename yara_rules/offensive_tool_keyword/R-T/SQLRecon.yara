@@ -16,7 +16,7 @@ rule SQLRecon
         $string2 = /\s\-m\solecmd\s\-o\s.{0,1000}powershell\s/ nocase ascii wide
         // Description: A C# MS SQL toolkit designed for offensive reconnaissance and post-exploitation
         // Reference: https://github.com/skahwah/SQLRecon
-        $string3 = /\/SQLRecon/ nocase ascii wide
+        $string3 = "/SQLRecon" nocase ascii wide
         // Description: A C# MS SQL toolkit designed for offensive reconnaissance and post-exploitation
         // Reference: https://github.com/skahwah/SQLRecon
         $string4 = /\\SQLRecon/ nocase ascii wide

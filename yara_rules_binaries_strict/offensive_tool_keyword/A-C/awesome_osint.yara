@@ -10,7 +10,7 @@ rule awesome_osint
     strings:
         // Description: A curated list of amazingly awesome open source intelligence tools and resources. Open-source intelligence (OSINT) is intelligence collected from publicly available sources. In the intelligence community (IC). the term open refers to overt. publicly available sources (as opposed to covert or clandestine sources)
         // Reference: https://github.com/jivoi/awesome-osint
-        $string1 = /awesome\-osint/ nocase ascii wide
+        $string1 = "awesome-osint" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -10,7 +10,7 @@ rule LOLSpoof
     strings:
         // Description: An interactive shell to spoof some LOLBins command line
         // Reference: https://github.com/itaymigdal/LOLSpoof
-        $string1 = /ATK\/LOLSpoof\-A/ nocase ascii wide
+        $string1 = "ATK/LOLSpoof-A" nocase ascii wide
 
     condition:
         any of them

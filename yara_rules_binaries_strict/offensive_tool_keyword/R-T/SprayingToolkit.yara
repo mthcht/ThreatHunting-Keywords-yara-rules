@@ -40,7 +40,7 @@ rule SprayingToolkit
         $string10 = /\/sprayers\/owa\.py/ nocase ascii wide
         // Description: Scripts to make password spraying attacks against Lync/S4B. OWA & O365 a lot quicker. less painful and more efficient
         // Reference: https://github.com/byt3bl33d3r/SprayingToolkit
-        $string11 = /\/SprayingToolkit/ nocase ascii wide
+        $string11 = "/SprayingToolkit" nocase ascii wide
         // Description: Scripts to make password spraying attacks against Lync/S4B. OWA & O365 a lot quicker. less painful and more efficient
         // Reference: https://github.com/byt3bl33d3r/SprayingToolkit
         $string12 = /\/SprayingToolkit\.git/ nocase ascii wide
@@ -52,16 +52,16 @@ rule SprayingToolkit
         $string14 = /\\ntlmdecoder\.py/ nocase ascii wide
         // Description: Scripts to make password spraying attacks against Lync/S4B. OWA & O365 a lot quicker. less painful and more efficient
         // Reference: https://github.com/byt3bl33d3r/SprayingToolkit
-        $string15 = /6f46d85ab9aef2bf824b8714f29f9ff189a390c56294ab82308178e86fad472d/ nocase ascii wide
+        $string15 = "6f46d85ab9aef2bf824b8714f29f9ff189a390c56294ab82308178e86fad472d" nocase ascii wide
         // Description: Scripts to make password spraying attacks against Lync/S4B. OWA & O365 a lot quicker. less painful and more efficient
         // Reference: https://github.com/byt3bl33d3r/SprayingToolkit
-        $string16 = /atomizer\simap\s/ nocase ascii wide
+        $string16 = "atomizer imap " nocase ascii wide
         // Description: Scripts to make password spraying attacks against Lync/S4B. OWA & O365 a lot quicker. less painful and more efficient
         // Reference: https://github.com/byt3bl33d3r/SprayingToolkit
-        $string17 = /atomizer\slync\s/ nocase ascii wide
+        $string17 = "atomizer lync " nocase ascii wide
         // Description: Scripts to make password spraying attacks against Lync/S4B. OWA & O365 a lot quicker. less painful and more efficient
         // Reference: https://github.com/byt3bl33d3r/SprayingToolkit
-        $string18 = /atomizer\sowa\s/ nocase ascii wide
+        $string18 = "atomizer owa " nocase ascii wide
         // Description: Scripts to make password spraying attacks against Lync/S4B. OWA & O365 a lot quicker. less painful and more efficient
         // Reference: https://github.com/byt3bl33d3r/SprayingToolkit
         $string19 = /atomizer\.py\s\-/ nocase ascii wide
@@ -76,13 +76,13 @@ rule SprayingToolkit
         $string22 = /atomizer\.py\sowa\s/ nocase ascii wide
         // Description: Scripts to make password spraying attacks against Lync/S4B. OWA & O365 a lot quicker. less painful and more efficient
         // Reference: https://github.com/byt3bl33d3r/SprayingToolkit
-        $string23 = /byt3bl33d3r\/SprayingToolkit/ nocase ascii wide
+        $string23 = "byt3bl33d3r/SprayingToolkit" nocase ascii wide
         // Description: Scripts to make password spraying attacks against Lync/S4B. OWA & O365 a lot quicker. less painful and more efficient
         // Reference: https://github.com/byt3bl33d3r/SprayingToolkit
         $string24 = /core\/sprayers\/lync\.py/ nocase ascii wide
         // Description: Scripts to make password spraying attacks against Lync/S4B. OWA & O365 a lot quicker. less painful and more efficient
         // Reference: https://github.com/byt3bl33d3r/SprayingToolkit
-        $string25 = /dbb049e7216149b1723b7dbbf9e3e80ce4a0f2d78b2afa8b2cf451c1e5d97b91/ nocase ascii wide
+        $string25 = "dbb049e7216149b1723b7dbbf9e3e80ce4a0f2d78b2afa8b2cf451c1e5d97b91" nocase ascii wide
         // Description: Scripts to make password spraying attacks against Lync/S4B. OWA & O365 a lot quicker. less painful and more efficient
         // Reference: https://github.com/byt3bl33d3r/SprayingToolkit
         $string26 = /mitmdump\s\-s\saerosol\.py/ nocase ascii wide
@@ -103,7 +103,7 @@ rule SprayingToolkit
         $string31 = /SprayingToolkit\.git/ nocase ascii wide
         // Description: Scripts to make password spraying attacks against Lync/S4B. OWA & O365 a lot quicker. less painful and more efficient
         // Reference: https://github.com/byt3bl33d3r/SprayingToolkit
-        $string32 = /SprayingToolkit\-master/ nocase ascii wide
+        $string32 = "SprayingToolkit-master" nocase ascii wide
         // Description: Scripts to make password spraying attacks against Lync/S4B. OWA & O365 a lot quicker. less painful and more efficient
         // Reference: https://github.com/byt3bl33d3r/SprayingToolkit
         $string33 = /SprayingToolkit\-master\.zip/ nocase ascii wide

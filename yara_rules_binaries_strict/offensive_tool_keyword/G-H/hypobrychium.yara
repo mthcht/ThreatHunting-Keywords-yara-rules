@@ -13,13 +13,13 @@ rule hypobrychium
         $string1 = /\/hypobrychium\.git/ nocase ascii wide
         // Description: hypobrychium AV/EDR Bypass
         // Reference: https://github.com/foxlox/hypobrychium
-        $string2 = /foxlox\/hypobrychium/ nocase ascii wide
+        $string2 = "foxlox/hypobrychium" nocase ascii wide
         // Description: hypobrychium AV/EDR Bypass
         // Reference: https://github.com/foxlox/hypobrychium
         $string3 = /hypobrychium\.exe/ nocase ascii wide
         // Description: hypobrychium AV/EDR Bypass
         // Reference: https://github.com/foxlox/hypobrychium
-        $string4 = /hypobrychium\-main/ nocase ascii wide
+        $string4 = "hypobrychium-main" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

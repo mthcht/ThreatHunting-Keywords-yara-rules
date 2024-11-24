@@ -19,7 +19,7 @@ rule SharpSQLPwn
         $string3 = /\s\/modules\:.{0,100}\s\/target\:.{0,100}\s\/linkedsql\:/ nocase ascii wide
         // Description: C# tool to identify and exploit weaknesses within MSSQL instances in Active Directory environments
         // Reference: https://github.com/lefayjey/SharpSQLPwn
-        $string4 = /SharpSQLPwn/ nocase ascii wide
+        $string4 = "SharpSQLPwn" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

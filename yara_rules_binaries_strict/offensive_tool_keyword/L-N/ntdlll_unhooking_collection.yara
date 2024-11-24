@@ -10,22 +10,22 @@ rule ntdlll_unhooking_collection
     strings:
         // Description: unhooking ntdll from disk - from KnownDlls - from suspended process - from remote server (fileless)
         // Reference: https://github.com/TheD1rkMtr/ntdlll-unhooking-collection
-        $string1 = /\/ntdlll\-unhooking\-collection/ nocase ascii wide
+        $string1 = "/ntdlll-unhooking-collection" nocase ascii wide
         // Description: unhooking ntdll from disk - from KnownDlls - from suspended process - from remote server (fileless)
         // Reference: https://github.com/TheD1rkMtr/ntdlll-unhooking-collection
         $string2 = /\\ntdlll\-unhooking\-collection/ nocase ascii wide
         // Description: unhooking ntdll from disk - from KnownDlls - from suspended process - from remote server (fileless)
         // Reference: https://github.com/TheD1rkMtr/ntdlll-unhooking-collection
-        $string3 = /0472A393\-9503\-491D\-B6DA\-FA47CD567EDE/ nocase ascii wide
+        $string3 = "0472A393-9503-491D-B6DA-FA47CD567EDE" nocase ascii wide
         // Description: unhooking ntdll from disk - from KnownDlls - from suspended process - from remote server (fileless)
         // Reference: https://github.com/TheD1rkMtr/ntdlll-unhooking-collection
-        $string4 = /1C5EDA8C\-D27F\-44A4\-A156\-6F863477194D/ nocase ascii wide
+        $string4 = "1C5EDA8C-D27F-44A4-A156-6F863477194D" nocase ascii wide
         // Description: unhooking ntdll from disk - from KnownDlls - from suspended process - from remote server (fileless)
         // Reference: https://github.com/TheD1rkMtr/ntdlll-unhooking-collection
-        $string5 = /4DE43724\-3851\-4376\-BB6C\-EA15CF500C44/ nocase ascii wide
+        $string5 = "4DE43724-3851-4376-BB6C-EA15CF500C44" nocase ascii wide
         // Description: unhooking ntdll from disk - from KnownDlls - from suspended process - from remote server (fileless)
         // Reference: https://github.com/TheD1rkMtr/ntdlll-unhooking-collection
-        $string6 = /DA230B64\-14EA\-4D49\-96E1\-FA5EFED9010B/ nocase ascii wide
+        $string6 = "DA230B64-14EA-4D49-96E1-FA5EFED9010B" nocase ascii wide
         // Description: unhooking ntdll from disk - from KnownDlls - from suspended process - from remote server (fileless)
         // Reference: https://github.com/TheD1rkMtr/ntdlll-unhooking-collection
         $string7 = /Ntdll_SusProcess\./ nocase ascii wide

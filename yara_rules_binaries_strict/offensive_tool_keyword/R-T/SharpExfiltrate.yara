@@ -22,16 +22,16 @@ rule SharpExfiltrate
         $string4 = /\/SharpExfiltrate\.git/ nocase ascii wide
         // Description: Modular C# framework to exfiltrate loot over secure and trusted channels.
         // Reference: https://github.com/Flangvik/SharpExfiltrate
-        $string5 = /\/SharpExfiltrate\// nocase ascii wide
+        $string5 = "/SharpExfiltrate/" nocase ascii wide
         // Description: Modular C# framework to exfiltrate loot over secure and trusted channels.
         // Reference: https://github.com/Flangvik/SharpExfiltrate
         $string6 = /\\SharpExfiltrate\\/ nocase ascii wide
         // Description: Modular C# framework to exfiltrate loot over secure and trusted channels.
         // Reference: https://github.com/Flangvik/SharpExfiltrate
-        $string7 = /3bb553cd\-0a48\-402d\-9812\-8daff60ac628/ nocase ascii wide
+        $string7 = "3bb553cd-0a48-402d-9812-8daff60ac628" nocase ascii wide
         // Description: Modular C# framework to exfiltrate loot over secure and trusted channels.
         // Reference: https://github.com/Flangvik/SharpExfiltrate
-        $string8 = /Flangvik\/SharpExfiltrate/ nocase ascii wide
+        $string8 = "Flangvik/SharpExfiltrate" nocase ascii wide
         // Description: Modular C# framework to exfiltrate loot over secure and trusted channels.
         // Reference: https://github.com/Flangvik/SharpExfiltrate
         $string9 = /SharpExfiltrate\.csproj/ nocase ascii wide
@@ -43,13 +43,13 @@ rule SharpExfiltrate
         $string11 = /SharpExfiltrate\.sln/ nocase ascii wide
         // Description: Modular C# framework to exfiltrate loot over secure and trusted channels.
         // Reference: https://github.com/Flangvik/SharpExfiltrate
-        $string12 = /SharpExfiltrateLootCache/ nocase ascii wide
+        $string12 = "SharpExfiltrateLootCache" nocase ascii wide
         // Description: Modular C# framework to exfiltrate loot over secure and trusted channels.
         // Reference: https://github.com/Flangvik/SharpExfiltrate
-        $string13 = /SharpExfiltrate\-main/ nocase ascii wide
+        $string13 = "SharpExfiltrate-main" nocase ascii wide
         // Description: Modular C# framework to exfiltrate loot over secure and trusted channels.
         // Reference: https://github.com/Flangvik/SharpExfiltrate
-        $string14 = /using\sSharpExfiltrate/ nocase ascii wide
+        $string14 = "using SharpExfiltrate" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

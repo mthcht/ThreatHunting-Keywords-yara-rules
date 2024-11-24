@@ -13,16 +13,16 @@ rule sniffer
         $string1 = /\/sniffer\.git/ nocase ascii wide
         // Description: A modern alternative network traffic sniffer.
         // Reference: https://github.com/chenjiandongx/sniffer
-        $string2 = /brew\sinstall\ssniffer/ nocase ascii wide
+        $string2 = "brew install sniffer" nocase ascii wide
         // Description: A modern alternative network traffic sniffer.
         // Reference: https://github.com/chenjiandongx/sniffer
-        $string3 = /chenjiandongx\/sniffer/ nocase ascii wide
+        $string3 = "chenjiandongx/sniffer" nocase ascii wide
         // Description: A modern alternative network traffic sniffer.
         // Reference: https://github.com/chenjiandongx/sniffer
         $string4 = /sniffer\-master\.zip/ nocase ascii wide
         // Description: A modern alternative network traffic sniffer.
         // Reference: https://github.com/chenjiandongx/sniffer
-        $string5 = /sniffer\s\-/ nocase ascii wide
+        $string5 = "sniffer -" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

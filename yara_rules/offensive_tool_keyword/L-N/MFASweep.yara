@@ -16,10 +16,10 @@ rule MFASweep
         $string2 = /\/MFASweep\.git/ nocase ascii wide
         // Description: A tool for checking if MFA is enabled on multiple Microsoft Services
         // Reference: https://github.com/dafthack/MFASweep
-        $string3 = /dafthack\/MFASweep/ nocase ascii wide
+        $string3 = "dafthack/MFASweep" nocase ascii wide
         // Description: A tool for checking if MFA is enabled on multiple Microsoft Services
         // Reference: https://github.com/dafthack/MFASweep
-        $string4 = /Invoke\-MFASweep/ nocase ascii wide
+        $string4 = "Invoke-MFASweep" nocase ascii wide
         // Description: A tool for checking if MFA is enabled on multiple Microsoft Services
         // Reference: https://github.com/dafthack/MFASweep
         $string5 = /MFASweep\.ps1/ nocase ascii wide

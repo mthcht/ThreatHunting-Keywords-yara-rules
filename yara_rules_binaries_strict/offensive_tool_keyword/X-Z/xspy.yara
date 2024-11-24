@@ -10,7 +10,7 @@ rule xspy
     strings:
         // Description: Keylogger Monitors keystrokes even the keyboard is grabbed.
         // Reference: https://github.com/mnp/xspy/blob/master/xspy.c
-        $string1 = /xspy\s\-display/ nocase ascii wide
+        $string1 = "xspy -display" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

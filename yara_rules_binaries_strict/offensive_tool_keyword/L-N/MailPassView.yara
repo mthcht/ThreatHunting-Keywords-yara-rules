@@ -19,16 +19,16 @@ rule MailPassView
         $string3 = /\\mailpv\.exe/ nocase ascii wide
         // Description: Mail PassView is a small password-recovery tool that reveals the passwords and other account details for multiple email clients
         // Reference: https://www.nirsoft.net/utils/mailpv.html
-        $string4 = /18e9b39ab7c27ea80c6b76fc04881a5348de491ab22abe65a6bdb7254e23d5d1/ nocase ascii wide
+        $string4 = "18e9b39ab7c27ea80c6b76fc04881a5348de491ab22abe65a6bdb7254e23d5d1" nocase ascii wide
         // Description: Mail PassView is a small password-recovery tool that reveals the passwords and other account details for multiple email clients
         // Reference: https://www.nirsoft.net/utils/mailpv.html
-        $string5 = /5be325905df8aab7089ab2348d89343f55a2f88dadd75de8f382e8fa026451bd/ nocase ascii wide
+        $string5 = "5be325905df8aab7089ab2348d89343f55a2f88dadd75de8f382e8fa026451bd" nocase ascii wide
         // Description: Mail PassView is a small password-recovery tool that reveals the passwords and other account details for multiple email clients
         // Reference: https://www.nirsoft.net/utils/mailpv.html
-        $string6 = /5be325905df8aab7089ab2348d89343f55a2f88dadd75de8f382e8fa026451bd/ nocase ascii wide
+        $string6 = "5be325905df8aab7089ab2348d89343f55a2f88dadd75de8f382e8fa026451bd" nocase ascii wide
         // Description: Mail PassView is a small password-recovery tool that reveals the passwords and other account details for multiple email clients
         // Reference: https://www.nirsoft.net/utils/mailpv.html
-        $string7 = /Email\s\sPassword\-Recovery/ nocase ascii wide
+        $string7 = "Email  Password-Recovery" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

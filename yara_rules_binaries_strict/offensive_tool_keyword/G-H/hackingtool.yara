@@ -37,7 +37,7 @@ rule hackingtool
         $string9 = /wireless_attack_tools\.py/ nocase ascii wide
         // Description: ALL IN ONE Hacking Tool For Hackers
         // Reference: https://github.com/Z4nzu/hackingtool
-        $string10 = /Z4nzu\/hackingtool/ nocase ascii wide
+        $string10 = "Z4nzu/hackingtool" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

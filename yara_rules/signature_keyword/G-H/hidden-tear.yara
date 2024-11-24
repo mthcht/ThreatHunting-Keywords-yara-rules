@@ -10,10 +10,10 @@ rule hidden_tear
     strings:
         // Description: open source ransomware - many variant in the wild
         // Reference: https://github.com/goliate/hidden-tear
-        $string1 = /hiddentear\/msil/ nocase ascii wide
+        $string1 = "hiddentear/msil" nocase ascii wide
         // Description: open source ransomware - many variant in the wild
         // Reference: https://github.com/goliate/hidden-tear
-        $string2 = /MSIL\/Hiddentear/ nocase ascii wide
+        $string2 = "MSIL/Hiddentear" nocase ascii wide
 
     condition:
         any of them

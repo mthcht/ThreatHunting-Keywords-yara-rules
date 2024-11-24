@@ -31,19 +31,19 @@ rule ShellGen
         $string7 = /\\ShellGen\-main\.zip/ nocase ascii wide
         // Description: PowerShell script to generate ShellCode in various formats
         // Reference: https://github.com/Leo4j/ShellGen
-        $string8 = /59c03a973a4c6ad7327812d568a8bcdd9c21af006853ce459014183bef699a24/ nocase ascii wide
+        $string8 = "59c03a973a4c6ad7327812d568a8bcdd9c21af006853ce459014183bef699a24" nocase ascii wide
         // Description: PowerShell script to generate ShellCode in various formats
         // Reference: https://github.com/Leo4j/ShellGen
-        $string9 = /Leo4j\/ShellGen/ nocase ascii wide
+        $string9 = "Leo4j/ShellGen" nocase ascii wide
         // Description: PowerShell script to generate ShellCode in various formats
         // Reference: https://github.com/Leo4j/ShellGen
-        $string10 = /ShellGen\s\-x64\s\-B64PwshCommand\s/ nocase ascii wide
+        $string10 = "ShellGen -x64 -B64PwshCommand " nocase ascii wide
         // Description: PowerShell script to generate ShellCode in various formats
         // Reference: https://github.com/Leo4j/ShellGen
-        $string11 = /ShellGen\s\-x64\s\-CmdCommand\s/ nocase ascii wide
+        $string11 = "ShellGen -x64 -CmdCommand " nocase ascii wide
         // Description: PowerShell script to generate ShellCode in various formats
         // Reference: https://github.com/Leo4j/ShellGen
-        $string12 = /ShellGen\s\-x64\s\-PwshCommand\s/ nocase ascii wide
+        $string12 = "ShellGen -x64 -PwshCommand " nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

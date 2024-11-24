@@ -10,10 +10,10 @@ rule dd
     strings:
         // Description: Detects overwriting (effectively wiping/deleting) the file
         // Reference: https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1485/T1485.yaml
-        $string1 = /dd\sif\=\/dev\/nul/ nocase ascii wide
+        $string1 = "dd if=/dev/nul" nocase ascii wide
         // Description: Detects overwriting (effectively wiping/deleting) the file
         // Reference: https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1485/T1485.yaml
-        $string2 = /dd\sif\=\/dev\/zero/ nocase ascii wide
+        $string2 = "dd if=/dev/zero" nocase ascii wide
 
     condition:
         any of them

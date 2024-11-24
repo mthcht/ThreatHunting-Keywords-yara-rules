@@ -10,7 +10,7 @@ rule ToRat
     strings:
         // Description: ToRat is a Remote Administation tool written in Go using Tor as a transport mechanism and RPC for communication
         // Reference: https://github.com/lu4p/ToRat
-        $string1 = /\/dist\:\/dist_ext\storat/ nocase ascii wide
+        $string1 = "/dist:/dist_ext torat" nocase ascii wide
         // Description: ToRat is a Remote Administation tool written in Go using Tor as a transport mechanism and RPC for communication
         // Reference: https://github.com/lu4p/ToRat
         $string2 = /\/persist_cortana\.py/ nocase ascii wide
@@ -64,7 +64,7 @@ rule ToRat
         $string18 = /docker\sbuild\s\.\s\-t\storat/ nocase ascii wide
         // Description: ToRat is a Remote Administation tool written in Go using Tor as a transport mechanism and RPC for communication
         // Reference: https://github.com/lu4p/ToRat
-        $string19 = /docker\srun\s\-it\storat/ nocase ascii wide
+        $string19 = "docker run -it torat" nocase ascii wide
         // Description: ToRat is a Remote Administation tool written in Go using Tor as a transport mechanism and RPC for communication
         // Reference: https://github.com/lu4p/ToRat
         $string20 = /localhost\:8000\/.{0,1000}\/hardware/ nocase ascii wide
@@ -79,13 +79,13 @@ rule ToRat
         $string23 = /localhost\:8000\/.{0,1000}\/speedtest/ nocase ascii wide
         // Description: ToRat is a Remote Administation tool written in Go using Tor as a transport mechanism and RPC for communication
         // Reference: https://github.com/lu4p/ToRat
-        $string24 = /lu4p\/ToRat/ nocase ascii wide
+        $string24 = "lu4p/ToRat" nocase ascii wide
         // Description: ToRat is a Remote Administation tool written in Go using Tor as a transport mechanism and RPC for communication
         // Reference: https://github.com/lu4p/ToRat
-        $string25 = /server\/ToRat_server/ nocase ascii wide
+        $string25 = "server/ToRat_server" nocase ascii wide
         // Description: ToRat is a Remote Administation tool written in Go using Tor as a transport mechanism and RPC for communication
         // Reference: https://github.com/lu4p/ToRat
-        $string26 = /torEd25519/ nocase ascii wide
+        $string26 = "torEd25519" nocase ascii wide
 
     condition:
         any of them

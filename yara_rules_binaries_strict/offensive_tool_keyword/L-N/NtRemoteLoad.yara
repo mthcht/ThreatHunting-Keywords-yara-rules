@@ -34,13 +34,13 @@ rule NtRemoteLoad
         $string8 = /\\NtRemoteLoad\.sln/ nocase ascii wide
         // Description: Remote Shellcode Injector
         // Reference: https://github.com/florylsk/NtRemoteLoad
-        $string9 = /40B05F26\-6A2F\-40BC\-88DE\-F40D4BC77FB0/ nocase ascii wide
+        $string9 = "40B05F26-6A2F-40BC-88DE-F40D4BC77FB0" nocase ascii wide
         // Description: Remote Shellcode Injector
         // Reference: https://github.com/florylsk/NtRemoteLoad
-        $string10 = /florylsk\/NtRemoteLoad/ nocase ascii wide
+        $string10 = "florylsk/NtRemoteLoad" nocase ascii wide
         // Description: Remote Shellcode Injector
         // Reference: https://github.com/florylsk/NtRemoteLoad
-        $string11 = /NtRemoteLoad\-main/ nocase ascii wide
+        $string11 = "NtRemoteLoad-main" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

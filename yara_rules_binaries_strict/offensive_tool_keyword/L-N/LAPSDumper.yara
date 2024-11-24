@@ -28,10 +28,10 @@ rule LAPSDumper
         $string6 = /\\LAPSDumper\\/ nocase ascii wide
         // Description: Dumping LAPS from Python
         // Reference: https://github.com/n00py/LAPSDumper
-        $string7 = /LAPSDumper\-main/ nocase ascii wide
+        $string7 = "LAPSDumper-main" nocase ascii wide
         // Description: Dumping LAPS from Python
         // Reference: https://github.com/n00py/LAPSDumper
-        $string8 = /n00py\/LAPSDumper/ nocase ascii wide
+        $string8 = "n00py/LAPSDumper" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

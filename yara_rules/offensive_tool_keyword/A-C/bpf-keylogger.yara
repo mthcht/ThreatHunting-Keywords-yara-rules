@@ -10,28 +10,28 @@ rule bpf_keylogger
     strings:
         // Description: Keylogger written in BPF
         // Reference: https://github.com/SkyperTHC/bpf-keylogger
-        $string1 = /\(prog\=\"bpf\-keylogger\"/ nocase ascii wide
+        $string1 = /\(prog\=\\"bpf\-keylogger\\"/ nocase ascii wide
         // Description: Keylogger written in BPF
         // Reference: https://github.com/SkyperTHC/bpf-keylogger
         $string2 = /\/bpf\-keylogger\.git/ nocase ascii wide
         // Description: Keylogger written in BPF
         // Reference: https://github.com/SkyperTHC/bpf-keylogger
-        $string3 = /\/bpf\-keylogger\// nocase ascii wide
+        $string3 = "/bpf-keylogger/" nocase ascii wide
         // Description: Keylogger written in BPF
         // Reference: https://github.com/SkyperTHC/bpf-keylogger
         $string4 = /A\skeylogger\swritten\sin\seBPF\./ nocase ascii wide
         // Description: Keylogger written in BPF
         // Reference: https://github.com/SkyperTHC/bpf-keylogger
-        $string5 = /bpf_keylogger\:\sLog\skey\spresses\sand\smouse\sbutton\sevents\ssystemwide\susing\seBPF/ nocase ascii wide
+        $string5 = "bpf_keylogger: Log key presses and mouse button events systemwide using eBPF" nocase ascii wide
         // Description: Keylogger written in BPF
         // Reference: https://github.com/SkyperTHC/bpf-keylogger
         $string6 = /Logging\skey\spresses\.\.\.\sctrl\-c\sto\squit/ nocase ascii wide
         // Description: Keylogger written in BPF
         // Reference: https://github.com/SkyperTHC/bpf-keylogger
-        $string7 = /SkyperTHC\/bpf\-keylogger/ nocase ascii wide
+        $string7 = "SkyperTHC/bpf-keylogger" nocase ascii wide
         // Description: Keylogger written in BPF
         // Reference: https://github.com/willfindlay/bpf-keylogger
-        $string8 = /willfindlay\/bpf\-keylogger/ nocase ascii wide
+        $string8 = "willfindlay/bpf-keylogger" nocase ascii wide
 
     condition:
         any of them

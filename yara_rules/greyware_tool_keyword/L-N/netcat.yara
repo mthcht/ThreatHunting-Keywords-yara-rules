@@ -22,7 +22,7 @@ rule netcat
         $string4 = /nc\s.{0,1000}\s\-e\s\/bin\/bash/ nocase ascii wide
         // Description: netcat shell listener
         // Reference: https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
-        $string5 = /nc\s\-u\s\-lvp\s/ nocase ascii wide
+        $string5 = "nc -u -lvp " nocase ascii wide
         // Description: ncat reverse shell
         // Reference: https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
         $string6 = /ncat\s.{0,1000}\s\-e\s\/bin\/bash/ nocase ascii wide

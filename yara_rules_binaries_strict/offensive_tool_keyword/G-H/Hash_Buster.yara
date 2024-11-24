@@ -10,7 +10,7 @@ rule Hash_Buster
     strings:
         // Description: hash cracking tool 
         // Reference: https://github.com/s0md3v/Hash-Buster
-        $string1 = /Hash\-Buster/ nocase ascii wide
+        $string1 = "Hash-Buster" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

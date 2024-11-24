@@ -19,7 +19,7 @@ rule FindUncommonShares
         $string3 = /FindUncommonShares\.py\s/ nocase ascii wide
         // Description: FindUncommonShares.py is a Python equivalent of PowerView's Invoke-ShareFinder.ps1 allowing to quickly find uncommon shares in vast Windows Domains
         // Reference: https://github.com/p0dalirius/FindUncommonShares
-        $string4 = /FindUncommonShares\-main/ nocase ascii wide
+        $string4 = "FindUncommonShares-main" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

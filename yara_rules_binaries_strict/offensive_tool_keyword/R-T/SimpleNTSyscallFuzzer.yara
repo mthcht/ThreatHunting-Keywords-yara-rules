@@ -13,7 +13,7 @@ rule SimpleNTSyscallFuzzer
         $string1 = /\/SimpleNTSyscallFuzzer\.git/ nocase ascii wide
         // Description: Fuzzer for Windows kernel syscalls.
         // Reference: https://github.com/waleedassar/SimpleNTSyscallFuzzer
-        $string2 = /FB351327\-0816\-448B\-8FB7\-63B550D6C808/ nocase ascii wide
+        $string2 = "FB351327-0816-448B-8FB7-63B550D6C808" nocase ascii wide
         // Description: Fuzzer for Windows kernel syscalls.
         // Reference: https://github.com/waleedassar/SimpleNTSyscallFuzzer
         $string3 = /SimpleNtSyscallFuzzer\.v11\.suo/ nocase ascii wide
@@ -22,7 +22,7 @@ rule SimpleNTSyscallFuzzer
         $string4 = /SimpleNTSyscallFuzzer\-main\\/ nocase ascii wide
         // Description: Fuzzer for Windows kernel syscalls.
         // Reference: https://github.com/waleedassar/SimpleNTSyscallFuzzer
-        $string5 = /waleedassar\/SimpleNTSyscallFuzzer/ nocase ascii wide
+        $string5 = "waleedassar/SimpleNTSyscallFuzzer" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -10,7 +10,7 @@ rule PipeViewer_
     strings:
         // Description: A tool that shows detailed information about named pipes in Windows
         // Reference: https://github.com/cyberark/PipeViewer
-        $string1 = /Trojan\:Win32\/Malagent\!MSR/ nocase ascii wide
+        $string1 = "Trojan:Win32/Malagent!MSR" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

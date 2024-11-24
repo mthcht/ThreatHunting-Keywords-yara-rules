@@ -10,7 +10,7 @@ rule Backstab
     strings:
         // Description: A tool to kill antimalware protected processes
         // Reference: https://github.com/Yaxser/Backstab
-        $string1 = /VirTool\:Win64\/Backstab/ nocase ascii wide
+        $string1 = "VirTool:Win64/Backstab" nocase ascii wide
 
     condition:
         any of them

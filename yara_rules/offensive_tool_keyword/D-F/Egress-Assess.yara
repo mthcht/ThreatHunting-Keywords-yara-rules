@@ -25,7 +25,7 @@ rule Egress_Assess
         $string5 = /\s\-Client\sSMTPOutlook\s\-IP\s.{0,1000}\s\-NoPing\s\-DataType\s.{0,1000}ssn/ nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string6 = /\sEgress\-Assess\'s\sFTP\sserver/ nocase ascii wide
+        $string6 = " Egress-Assess's FTP server" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
         $string7 = /\setumbot\.py/ nocase ascii wide
@@ -34,7 +34,7 @@ rule Egress_Assess
         $string8 = /\sputterpanda\.py/ nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string9 = /\sUse\-DarkHotel/ nocase ascii wide
+        $string9 = " Use-DarkHotel" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
         $string10 = /\.py\s\-\-client\sftp\s\-\-username\s.{0,1000}\s\-\-password\s.{0,1000}\s\-\-ip\s.{0,1000}\s\-\-datatype\sssn/ nocase ascii wide
@@ -70,7 +70,7 @@ rule Egress_Assess
         $string20 = /\/darkhotel\.py/ nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string21 = /\/Egress\-Assess/ nocase ascii wide
+        $string21 = "/Egress-Assess" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
         $string22 = /\/servers\/dns_server\.py/ nocase ascii wide
@@ -124,58 +124,58 @@ rule Egress_Assess
         $string38 = /b64encode.{0,1000}\.\:\:\:\-989\-\:\:\:\./ nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string39 = /bHVrZXJlYWxseWlzdGhlbWFubXl0aGFuZGxlZ2VuZA/ nocase ascii wide
+        $string39 = "bHVrZXJlYWxseWlzdGhlbWFubXl0aGFuZGxlZ2VuZA" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string40 = /bm90cmVkYW1lY2hlYXRzdG93aW4\-/ nocase ascii wide
+        $string40 = "bm90cmVkYW1lY2hlYXRzdG93aW4-" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string41 = /c2VydmVyMS5jaWEuZ292/ nocase ascii wide
+        $string41 = "c2VydmVyMS5jaWEuZ292" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string42 = /catchetumbotifyoucan\>/ nocase ascii wide
+        $string42 = "catchetumbotifyoucan>" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string43 = /cGlpLmZkYS5nb3Y\=/ nocase ascii wide
+        $string43 = "cGlpLmZkYS5nb3Y=" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
         $string44 = /Copy\-Item\s\-Path\s.{0,1000}\s\-Destination\s\\\\\$IP\\transfer/ nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string45 = /d2h5aXNwZW5uc3RhdGVzb2JhZGF0Zm9vdGJhbGw/ nocase ascii wide
+        $string45 = "d2h5aXNwZW5uc3RhdGVzb2JhZGF0Zm9vdGJhbGw" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string46 = /darkhotel\sbackdoor/ nocase ascii wide
+        $string46 = "darkhotel backdoor" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string47 = /DarkHotel\sC2/ nocase ascii wide
+        $string47 = "DarkHotel C2" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string48 = /darkhotel\sdata\sexfil\sserver/ nocase ascii wide
+        $string48 = "darkhotel data exfil server" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string49 = /darkhotel_headers/ nocase ascii wide
+        $string49 = "darkhotel_headers" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string50 = /dGhlU2VtaW5vbGVzYmVhdG5vcmVkYW1l/ nocase ascii wide
+        $string50 = "dGhlU2VtaW5vbGVzYmVhdG5vcmVkYW1l" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string51 = /dGhlYnJvbmNvc2FyZWJldHRlcnRoYW5yYXZlbnM\-/ nocase ascii wide
+        $string51 = "dGhlYnJvbmNvc2FyZWJldHRlcnRoYW5yYXZlbnM-" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string52 = /dGhpc2lzYXRlc3RzdHJpbmdkb250Y2F0Y2htZQ\-\-/ nocase ascii wide
+        $string52 = "dGhpc2lzYXRlc3RzdHJpbmdkb250Y2F0Y2htZQ--" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string53 = /Egress\-Assess\sExfil\sData/ nocase ascii wide
+        $string53 = "Egress-Assess Exfil Data" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string54 = /Egress\-Assess\sReport/ nocase ascii wide
+        $string54 = "Egress-Assess Report" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string55 = /Egress\-Assess\stransfer\sshare/ nocase ascii wide
+        $string55 = "Egress-Assess transfer share" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string56 = /EgressAssess\sWith\sAttachment/ nocase ascii wide
+        $string56 = "EgressAssess With Attachment" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
         $string57 = /Egress\-Assess\./ nocase ascii wide
@@ -184,22 +184,22 @@ rule Egress_Assess
         $string58 = /EgressAssess\.ps1/ nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string59 = /Egress\-Assess\-master/ nocase ascii wide
+        $string59 = "Egress-Assess-master" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string60 = /ENDTHISFILETRANSMISSIONEGRESSASSESS/ nocase ascii wide
+        $string60 = "ENDTHISFILETRANSMISSIONEGRESSASSESS" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string61 = /ENDTHISFILETRANSMISSIONEGRESSASSESS/ nocase ascii wide
+        $string61 = "ENDTHISFILETRANSMISSIONEGRESSASSESS" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string62 = /function\sUse\-Zeus/ nocase ascii wide
+        $string62 = "function Use-Zeus" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string63 = /gohaleygoandhackawaythegibson/ nocase ascii wide
+        $string63 = "gohaleygoandhackawaythegibson" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string64 = /Invoke\-EssessAgress/ nocase ascii wide
+        $string64 = "Invoke-EssessAgress" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
         $string65 = /microbrownys\.strangled\.net/ nocase ascii wide
@@ -217,19 +217,19 @@ rule Egress_Assess
         $string69 = /microplants\.strangled\.net/ nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string70 = /MIIEoQIBAAKCAQEArJqP\/6XFBa88x\/DUootMmSzYa3MxcTV9FjNYUomqbQlGzuHa/ nocase ascii wide
+        $string70 = "MIIEoQIBAAKCAQEArJqP/6XFBa88x/DUootMmSzYa3MxcTV9FjNYUomqbQlGzuHa" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
         $string71 = /New\-PSDrive\s\-Name\sT\s\-PSProvider\sFileSystem\s\-Root\s\\\\\$IP\\transfer\s/ nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string72 = /notredamecheatstowin\>/ nocase ascii wide
+        $string72 = "notredamecheatstowin>" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string73 = /putterpanda_whoami/ nocase ascii wide
+        $string73 = "putterpanda_whoami" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string74 = /RU5EVEhJU0ZJTEVUUkFOU01JU1NJT05FR1JFU1NBU1NFU1M\=/ nocase ascii wide
+        $string74 = "RU5EVEhJU0ZJTEVUUkFOU01JU1NJT05FR1JFU1NBU1NFU1M=" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
         $string75 = /server\@egress\-asses\.com/ nocase ascii wide
@@ -241,34 +241,34 @@ rule Egress_Assess
         $string77 = /tester\@egress\-assess\.com/ nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string78 = /thisisateststringdontcatchme/ nocase ascii wide
+        $string78 = "thisisateststringdontcatchme" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string79 = /TVqQAAMAAAAEAAAA/ nocase ascii wide
+        $string79 = "TVqQAAMAAAAEAAAA" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string80 = /U2VtaW5vbGVzd291bGRkZXN0cm95cGVubnN0YXRl/ nocase ascii wide
+        $string80 = "U2VtaW5vbGVzd291bGRkZXN0cm95cGVubnN0YXRl" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string81 = /Y2F0Y2hldHVtYm90aWZ5b3VjYW4\-/ nocase ascii wide
+        $string81 = "Y2F0Y2hldHVtYm90aWZ5b3VjYW4-" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string82 = /Yml0c3kubWl0LmVkdQ\=\=/ nocase ascii wide
+        $string82 = "Yml0c3kubWl0LmVkdQ==" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string83 = /YmpwZW5uaXNhbmF3ZXNvbWVmaWdodGVy/ nocase ascii wide
+        $string83 = "YmpwZW5uaXNhbmF3ZXNvbWVmaWdodGVy" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string84 = /Z29oYWxleWdvYW5kaGFja2F3YXl0aGVnaWJzb24/ nocase ascii wide
+        $string84 = "Z29oYWxleWdvYW5kaGFja2F3YXl0aGVnaWJzb24" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string85 = /ZGF0YS5mZGEuZ292/ nocase ascii wide
+        $string85 = "ZGF0YS5mZGEuZ292" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string86 = /ZGIuc3NhLmdvdg\=\=/ nocase ascii wide
+        $string86 = "ZGIuc3NhLmdvdg==" nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string87 = /ZXZpZGVuY2UuZmJpLmdvdg\=\=/ nocase ascii wide
+        $string87 = "ZXZpZGVuY2UuZmJpLmdvdg==" nocase ascii wide
 
     condition:
         any of them

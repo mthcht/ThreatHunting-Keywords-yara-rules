@@ -10,7 +10,7 @@ rule HijackHunter
     strings:
         // Description: Parses a target's PE header in order to find lined DLLs vulnerable to hijacking. Provides reasoning and abuse techniques for each detected hijack opportunity
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/HijackHunter
-        $string1 = /\/HijackHunter\// nocase ascii wide
+        $string1 = "/HijackHunter/" nocase ascii wide
         // Description: Parses a target's PE header in order to find lined DLLs vulnerable to hijacking. Provides reasoning and abuse techniques for each detected hijack opportunity
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/HijackHunter
         $string2 = /\\HijackHunter\\/ nocase ascii wide
@@ -25,7 +25,7 @@ rule HijackHunter
         $string5 = /HijackHunter\.exe/ nocase ascii wide
         // Description: Parses a target's PE header in order to find lined DLLs vulnerable to hijacking. Provides reasoning and abuse techniques for each detected hijack opportunity
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/HijackHunter
-        $string6 = /hijackProgDirMissingDll/ nocase ascii wide
+        $string6 = "hijackProgDirMissingDll" nocase ascii wide
 
     condition:
         any of them

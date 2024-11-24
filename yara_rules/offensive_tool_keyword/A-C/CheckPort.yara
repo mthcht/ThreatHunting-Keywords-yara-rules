@@ -19,7 +19,7 @@ rule CheckPort
         $string3 = /\\Release\\CheckPort\.pdb/ nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string4 = /\'Product\'\>CheckPort/ nocase ascii wide
+        $string4 = "'Product'>CheckPort" nocase ascii wide
 
     condition:
         any of them

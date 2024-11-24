@@ -10,34 +10,34 @@ rule PowerSploit
     strings:
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string1 = /Get\-NetForestCatalog/ nocase ascii wide
+        $string1 = "Get-NetForestCatalog" nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string2 = /Get\-NetForestDomain/ nocase ascii wide
+        $string2 = "Get-NetForestDomain" nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string3 = /Get\-NetForestTrust/ nocase ascii wide
+        $string3 = "Get-NetForestTrust" nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string4 = /Get\-NetSession/ nocase ascii wide
+        $string4 = "Get-NetSession" nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string5 = /Get\-NetShare/ nocase ascii wide
+        $string5 = "Get-NetShare" nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string6 = /Get\-NetSubnet/ nocase ascii wide
+        $string6 = "Get-NetSubnet" nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string7 = /Get\-RegistryAutoLogon/ nocase ascii wide
+        $string7 = "Get-RegistryAutoLogon" nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string8 = /Get\-SiteListPassword/ nocase ascii wide
+        $string8 = "Get-SiteListPassword" nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string9 = /Get\-TimedScreenshot/ nocase ascii wide
+        $string9 = "Get-TimedScreenshot" nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string10 = /Get\-UnquotedService/ nocase ascii wide
+        $string10 = "Get-UnquotedService" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

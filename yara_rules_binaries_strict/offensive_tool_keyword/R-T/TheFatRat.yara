@@ -10,13 +10,13 @@ rule TheFatRat
     strings:
         // Description: Easy tool to generate backdoor and easy tool to post exploitation attack like browser attack and dll.
         // Reference: https://github.com/Screetsec/TheFatRat
-        $string1 = /\/backdoor_apk/ nocase ascii wide
+        $string1 = "/backdoor_apk" nocase ascii wide
         // Description: Easy tool to generate backdoor and easy tool to post exploitation attack like browser attack and dll.
         // Reference: https://github.com/Screetsec/TheFatRat
         $string2 = /\/cred_dump\.rc/ nocase ascii wide
         // Description: Easy tool to generate backdoor and easy tool to post exploitation attack like browser attack and dll.
         // Reference: https://github.com/Screetsec/TheFatRat
-        $string3 = /\/TheFatRat/ nocase ascii wide
+        $string3 = "/TheFatRat" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

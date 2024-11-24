@@ -10,7 +10,7 @@ rule taskkill
     strings:
         // Description: forcefully kills processes based on a process ID (PID greater than or equal to 1000) has been used to disrupt various processes while avoiding certain window
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string1 = /TASKKILL\s\/F\s\/FI\s\"PID\sge\s1000\"\s\/FI\s\"WINDOWTITLE\sne\suntitled/ nocase ascii wide
+        $string1 = "TASKKILL /F /FI \"PID ge 1000\" /FI \"WINDOWTITLE ne untitled" nocase ascii wide
         // Description: killing lsass process
         // Reference: https://x.com/malmoeb/status/1741114854037987437
         $string2 = /taskkill\s\/F\s\/IM\slsass\.exe/ nocase ascii wide
@@ -73,7 +73,7 @@ rule taskkill
         $string21 = /taskkill\s\/im\smysqld\-opt\.exe\s\/F/ nocase ascii wide
         // Description: stopping Antivirus
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string22 = /taskkill\s\/IM\sNtrtsc/ nocase ascii wide
+        $string22 = "taskkill /IM Ntrtsc" nocase ascii wide
         // Description: stopping Database Service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
         $string23 = /taskkill\s\/im\socautoupds\.exe\s\/F/ nocase ascii wide

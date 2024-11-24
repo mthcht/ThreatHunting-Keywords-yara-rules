@@ -28,7 +28,7 @@ rule AtomLdr
         $string6 = /AtomLdr\-main\.zip/ nocase ascii wide
         // Description: A DLL loader with advanced evasive features
         // Reference: https://github.com/NUL0x4C/AtomLdr
-        $string7 = /NUL0x4C\/AtomLdr/ nocase ascii wide
+        $string7 = "NUL0x4C/AtomLdr" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

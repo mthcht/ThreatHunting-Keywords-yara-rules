@@ -13,10 +13,10 @@ rule RustDesk
         $string1 = /\sRustDesk\.exe/ nocase ascii wide
         // Description: Rustdesk open suorce remote control software abused by scammers
         // Reference: https://github.com/rustdesk/rustdesk
-        $string2 = /\sstart\srustdesk\:\/\// nocase ascii wide
+        $string2 = " start rustdesk://" nocase ascii wide
         // Description: Rustdesk open suorce remote control software abused by scammers
         // Reference: https://github.com/rustdesk/rustdesk
-        $string3 = /\/home\/user\/rustdesk/ nocase ascii wide
+        $string3 = "/home/user/rustdesk" nocase ascii wide
         // Description: Rustdesk open suorce remote control software abused by scammers
         // Reference: https://github.com/rustdesk/rustdesk
         $string4 = /\/RustDesk\.exe/ nocase ascii wide
@@ -25,7 +25,7 @@ rule RustDesk
         $string5 = /\/rustdesk\.git/ nocase ascii wide
         // Description: Rustdesk open suorce remote control software abused by scammers
         // Reference: https://github.com/rustdesk/rustdesk
-        $string6 = /\/rustdesk\/rustdesk\/releases\// nocase ascii wide
+        $string6 = "/rustdesk/rustdesk/releases/" nocase ascii wide
         // Description: Rustdesk open suorce remote control software abused by scammers
         // Reference: https://github.com/rustdesk/rustdesk
         $string7 = /\\\.rustdesk/ nocase ascii wide
@@ -70,7 +70,7 @@ rule RustDesk
         $string20 = /\\test_rustdesk\.log/ nocase ascii wide
         // Description: Rustdesk open suorce remote control software abused by scammers
         // Reference: https://github.com/rustdesk/rustdesk
-        $string21 = /095e73fc4b115afd77e39a9389ff1eff6bdbff7a/ nocase ascii wide
+        $string21 = "095e73fc4b115afd77e39a9389ff1eff6bdbff7a" nocase ascii wide
         // Description: Rustdesk open suorce remote control software abused by scammers
         // Reference: https://github.com/rustdesk/rustdesk
         $string22 = /HKEY_CLASSES_ROOT\\rustdesk/ nocase ascii wide
@@ -79,7 +79,7 @@ rule RustDesk
         $string23 = /info\@rustdesk\.com/ nocase ascii wide
         // Description: Rustdesk open suorce remote control software abused by scammers
         // Reference: https://github.com/rustdesk/rustdesk
-        $string24 = /name\=\\"RustDesk\sService\\"/ nocase ascii wide
+        $string24 = "name=\"RustDesk Service\"" nocase ascii wide
         // Description: Rustdesk open suorce remote control software abused by scammers
         // Reference: https://github.com/rustdesk/rustdesk
         $string25 = /rs\-ny\.rustdesk\.com/ nocase ascii wide
@@ -88,7 +88,7 @@ rule RustDesk
         $string26 = /RuntimeBroker_rustdesk\.exe/ nocase ascii wide
         // Description: Rustdesk open suorce remote control software abused by scammers
         // Reference: https://github.com/rustdesk/rustdesk
-        $string27 = /RustDesk\sService\sis\srunning/ nocase ascii wide
+        $string27 = "RustDesk Service is running" nocase ascii wide
         // Description: Rustdesk open suorce remote control software abused by scammers
         // Reference: https://github.com/rustdesk/rustdesk
         $string28 = /rustdesk\-.{0,100}\.apk/ nocase ascii wide
@@ -136,10 +136,10 @@ rule RustDesk
         $string42 = /rustdesk\-portable\-packer\.exe/ nocase ascii wide
         // Description: Rustdesk open suorce remote control software abused by scammers
         // Reference: https://github.com/rustdesk/rustdesk
-        $string43 = /sc\sstart\sRustDesk/ nocase ascii wide
+        $string43 = "sc start RustDesk" nocase ascii wide
         // Description: Rustdesk open suorce remote control software abused by scammers
         // Reference: https://github.com/rustdesk/rustdesk
-        $string44 = /sc\sstop\sRustDesk/ nocase ascii wide
+        $string44 = "sc stop RustDesk" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

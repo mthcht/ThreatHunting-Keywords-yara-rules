@@ -31,7 +31,7 @@ rule PyExfil
         $string7 = /\/PyExfil\.git/ nocase ascii wide
         // Description: A Python Package for Data Exfiltration
         // Reference: https://github.com/ytisf/PyExfil
-        $string8 = /\/PyExfil\/pyexfil\// nocase ascii wide
+        $string8 = "/PyExfil/pyexfil/" nocase ascii wide
         // Description: A Python Package for Data Exfiltration
         // Reference: https://github.com/ytisf/PyExfil
         $string9 = /\/spoofIPs_client\.py/ nocase ascii wide
@@ -76,16 +76,16 @@ rule PyExfil
         $string22 = /A\sPython\spackage\sfor\sdata\sexfiltration\./ nocase ascii wide
         // Description: A Python Package for Data Exfiltration
         // Reference: https://github.com/ytisf/PyExfil
-        $string23 = /cd\sPyExfil/ nocase ascii wide
+        $string23 = "cd PyExfil" nocase ascii wide
         // Description: A Python Package for Data Exfiltration
         // Reference: https://github.com/ytisf/PyExfil
         $string24 = /encode\sbaseImage\.jpg\s\/etc\/passwd\snewImage\.jpg/ nocase ascii wide
         // Description: A Python Package for Data Exfiltration
         // Reference: https://github.com/ytisf/PyExfil
-        $string25 = /FILE_TO_EXFIL\s\=\s\"/ nocase ascii wide
+        $string25 = "FILE_TO_EXFIL = \"" nocase ascii wide
         // Description: A Python Package for Data Exfiltration
         // Reference: https://github.com/ytisf/PyExfil
-        $string26 = /pip\sinstall\s\-\-user\sPyExfil/ nocase ascii wide
+        $string26 = "pip install --user PyExfil" nocase ascii wide
         // Description: A Python Package for Data Exfiltration
         // Reference: https://github.com/ytisf/PyExfil
         $string27 = /pyexfil\.Comm\.AllJoyn/ nocase ascii wide
@@ -169,16 +169,16 @@ rule PyExfil
         $string53 = /pyexfil\.Stega\.binoffset\.binoffset/ nocase ascii wide
         // Description: A Python Package for Data Exfiltration
         // Reference: https://github.com/ytisf/PyExfil
-        $string54 = /PYEXFIL_DEFAULT_PASSWORD/ nocase ascii wide
+        $string54 = "PYEXFIL_DEFAULT_PASSWORD" nocase ascii wide
         // Description: A Python Package for Data Exfiltration
         // Reference: https://github.com/ytisf/PyExfil
         $string55 = /pyExfil\-latest\.zip/ nocase ascii wide
         // Description: A Python Package for Data Exfiltration
         // Reference: https://github.com/ytisf/PyExfil
-        $string56 = /PyExfil\-master/ nocase ascii wide
+        $string56 = "PyExfil-master" nocase ascii wide
         // Description: A Python Package for Data Exfiltration
         // Reference: https://github.com/ytisf/PyExfil
-        $string57 = /ytisf\/PyExfil/ nocase ascii wide
+        $string57 = "ytisf/PyExfil" nocase ascii wide
 
     condition:
         any of them

@@ -10,10 +10,10 @@ rule ETWHash
     strings:
         // Description: C# POC to extract NetNTLMv1/v2 hashes from ETW provider
         // Reference: https://github.com/nettitude/ETWHash
-        $string1 = /\sEtwHash/ nocase ascii wide
+        $string1 = " EtwHash" nocase ascii wide
         // Description: C# POC to extract NetNTLMv1/v2 hashes from ETW provider
         // Reference: https://github.com/nettitude/ETWHash
-        $string2 = /\/ETWHash\// nocase ascii wide
+        $string2 = "/ETWHash/" nocase ascii wide
         // Description: C# POC to extract NetNTLMv1/v2 hashes from ETW provider
         // Reference: https://github.com/nettitude/ETWHash
         $string3 = /\\ETWHash\./ nocase ascii wide
@@ -28,7 +28,7 @@ rule ETWHash
         $string6 = /ETWHash\.sln/ nocase ascii wide
         // Description: C# POC to extract NetNTLMv1/v2 hashes from ETW provider
         // Reference: https://github.com/nettitude/ETWHash
-        $string7 = /nettitude\/ETWHash/ nocase ascii wide
+        $string7 = "nettitude/ETWHash" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

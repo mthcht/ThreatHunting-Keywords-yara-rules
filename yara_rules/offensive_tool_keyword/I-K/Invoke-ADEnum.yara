@@ -10,7 +10,7 @@ rule Invoke_ADEnum
     strings:
         // Description: Automate Active Directory Enumeration
         // Reference: https://github.com/Leo4j/Invoke-ADEnum
-        $string1 = /\s\-Recommended\s\-SprayEmptyPasswords/ nocase ascii wide
+        $string1 = " -Recommended -SprayEmptyPasswords" nocase ascii wide
         // Description: Automate Active Directory Enumeration
         // Reference: https://github.com/Leo4j/Invoke-ADEnum
         $string2 = /\$EmptyPasswordUsers/ nocase ascii wide
@@ -43,22 +43,22 @@ rule Invoke_ADEnum
         $string11 = /\]\sCollecting\sKrbtgt/ nocase ascii wide
         // Description: Automate Active Directory Enumeration
         // Reference: https://github.com/Leo4j/Invoke-ADEnum
-        $string12 = /27049d9f4a7125e9be92e84edcad5dc118bc8503920fb3250b3e2f7577370b49/ nocase ascii wide
+        $string12 = "27049d9f4a7125e9be92e84edcad5dc118bc8503920fb3250b3e2f7577370b49" nocase ascii wide
         // Description: Automate Active Directory Enumeration
         // Reference: https://github.com/Leo4j/Invoke-ADEnum
-        $string13 = /Find\-LocalAdminAccess\s/ nocase ascii wide
+        $string13 = "Find-LocalAdminAccess " nocase ascii wide
         // Description: Automate Active Directory Enumeration
         // Reference: https://github.com/Leo4j/Invoke-ADEnum
-        $string14 = /Invoke\-ADEnum\s\-/ nocase ascii wide
+        $string14 = "Invoke-ADEnum -" nocase ascii wide
         // Description: Automate Active Directory Enumeration
         // Reference: https://github.com/Leo4j/Invoke-ADEnum
         $string15 = /Invoke\-ADEnum\.ps1/ nocase ascii wide
         // Description: Automate Active Directory Enumeration
         // Reference: https://github.com/Leo4j/Invoke-ADEnum
-        $string16 = /Invoke\-ShareHunter\s/ nocase ascii wide
+        $string16 = "Invoke-ShareHunter " nocase ascii wide
         // Description: Automate Active Directory Enumeration
         // Reference: https://github.com/Leo4j/Invoke-ADEnum
-        $string17 = /Leo4j\/Invoke\-ADEnum/ nocase ascii wide
+        $string17 = "Leo4j/Invoke-ADEnum" nocase ascii wide
 
     condition:
         any of them

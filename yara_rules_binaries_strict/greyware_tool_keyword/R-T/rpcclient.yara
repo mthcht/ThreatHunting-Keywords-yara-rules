@@ -10,7 +10,7 @@ rule rpcclient
     strings:
         // Description: tool for executing client side MS-RPC functions (NULL session)
         // Reference: https://www.samba.org/samba/docs/current/man-html/rpcclient.1.html
-        $string1 = /rpcclient\s\-U\s\\"\\"\s/ nocase ascii wide
+        $string1 = "rpcclient -U \"\" " nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

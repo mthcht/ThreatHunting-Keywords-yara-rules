@@ -13,13 +13,13 @@ rule SharpC2
         $string1 = /\sPayloadType\.BIND_TCP/ nocase ascii wide
         // Description: Command and Control Framework written in C#
         // Reference: https://github.com/rasta-mouse/SharpC2
-        $string2 = /\sSharpC2/ nocase ascii wide
+        $string2 = " SharpC2" nocase ascii wide
         // Description: Command and Control Framework written in C#
         // Reference: https://github.com/rasta-mouse/SharpC2
         $string3 = /\/C2Frame\./ nocase ascii wide
         // Description: Command and Control Framework written in C#
         // Reference: https://github.com/rasta-mouse/SharpC2
-        $string4 = /\/C2Profiles\// nocase ascii wide
+        $string4 = "/C2Profiles/" nocase ascii wide
         // Description: Command and Control Framework written in C#
         // Reference: https://github.com/rasta-mouse/SharpC2
         $string5 = /\/Client\/Commands\/Enumeration\.yaml/ nocase ascii wide
@@ -49,10 +49,10 @@ rule SharpC2
         $string13 = /\/Drones\/SleepDialogue\.razor/ nocase ascii wide
         // Description: Command and Control Framework written in C#
         // Reference: https://github.com/rasta-mouse/SharpC2
-        $string14 = /\/ExeStager\// nocase ascii wide
+        $string14 = "/ExeStager/" nocase ascii wide
         // Description: Command and Control Framework written in C#
         // Reference: https://github.com/rasta-mouse/SharpC2
-        $string15 = /\/ExternalC2\// nocase ascii wide
+        $string15 = "/ExternalC2/" nocase ascii wide
         // Description: Command and Control Framework written in C#
         // Reference: https://github.com/rasta-mouse/SharpC2
         $string16 = /\/IPayloadService\./ nocase ascii wide
@@ -61,7 +61,7 @@ rule SharpC2
         $string17 = /\/PeerToPeerService\./ nocase ascii wide
         // Description: Command and Control Framework written in C#
         // Reference: https://github.com/rasta-mouse/SharpC2
-        $string18 = /\/SharpC2/ nocase ascii wide
+        $string18 = "/SharpC2" nocase ascii wide
         // Description: Command and Control Framework written in C#
         // Reference: https://github.com/rasta-mouse/SharpC2
         $string19 = /\/stager\.ps1/ nocase ascii wide
@@ -85,16 +85,16 @@ rule SharpC2
         $string25 = /192\.168\.1\.229\sPassw0rd\!/ nocase ascii wide
         // Description: Command and Control Framework written in C#
         // Reference: https://github.com/rasta-mouse/SharpC2
-        $string26 = /50050\/SharpC2/ nocase ascii wide
+        $string26 = "50050/SharpC2" nocase ascii wide
         // Description: Command and Control Framework written in C#
         // Reference: https://github.com/rasta-mouse/SharpC2
-        $string27 = /5E8106A6F89B053ED91C723D5D4CAE3FFC15F1CE/ nocase ascii wide
+        $string27 = "5E8106A6F89B053ED91C723D5D4CAE3FFC15F1CE" nocase ascii wide
         // Description: Command and Control Framework written in C#
         // Reference: https://github.com/rasta-mouse/SharpC2
-        $string28 = /87904247\-C363\-4F12\-A13A\-3DA484913F9E/ nocase ascii wide
+        $string28 = "87904247-C363-4F12-A13A-3DA484913F9E" nocase ascii wide
         // Description: Command and Control Framework written in C#
         // Reference: https://github.com/rasta-mouse/SharpC2
-        $string29 = /91EA50CD\-E8DF\-4EDF\-A765\-75354643BD0D/ nocase ascii wide
+        $string29 = "91EA50CD-E8DF-4EDF-A765-75354643BD0D" nocase ascii wide
         // Description: Command and Control Framework written in C#
         // Reference: https://github.com/rasta-mouse/SharpC2
         $string30 = /C2ProfileResponse\.cs/ nocase ascii wide
@@ -163,7 +163,7 @@ rule SharpC2
         $string51 = /Commands\/WmiCommand\./ nocase ascii wide
         // Description: Command and Control Framework written in C#
         // Reference: https://github.com/rasta-mouse/SharpC2
-        $string52 = /DE7B9E6B\-F73B\-4573\-A4C7\-D314B528CFCB/ nocase ascii wide
+        $string52 = "DE7B9E6B-F73B-4573-A4C7-D314B528CFCB" nocase ascii wide
         // Description: Command and Control Framework written in C#
         // Reference: https://github.com/rasta-mouse/SharpC2
         $string53 = /demo\-client\.exe\s/ nocase ascii wide
@@ -187,7 +187,7 @@ rule SharpC2
         $string59 = /ExternalC2\\/ nocase ascii wide
         // Description: Command and Control Framework written in C#
         // Reference: https://github.com/rasta-mouse/SharpC2
-        $string60 = /GenerateReverseTcpDrone/ nocase ascii wide
+        $string60 = "GenerateReverseTcpDrone" nocase ascii wide
         // Description: Command and Control Framework written in C#
         // Reference: https://github.com/rasta-mouse/SharpC2
         $string61 = /http.{0,100}127\.0\.0\.1\:50050/ nocase ascii wide
@@ -238,13 +238,13 @@ rule SharpC2
         $string76 = /PELoader\/PeLoader\./ nocase ascii wide
         // Description: Command and Control Framework written in C#
         // Reference: https://github.com/rasta-mouse/SharpC2
-        $string77 = /rasta\-mouse\/SharpC2/ nocase ascii wide
+        $string77 = "rasta-mouse/SharpC2" nocase ascii wide
         // Description: Command and Control Framework written in C#
         // Reference: https://github.com/rasta-mouse/SharpC2
         $string78 = /Resources\/drone\.dll/ nocase ascii wide
         // Description: Command and Control Framework written in C#
         // Reference: https://github.com/rasta-mouse/SharpC2
-        $string79 = /SharpC2\s/ nocase ascii wide
+        $string79 = "SharpC2 " nocase ascii wide
         // Description: Command and Control Framework written in C#
         // Reference: https://github.com/rasta-mouse/SharpC2
         $string80 = /SharpC2.{0,100}\.cs/ nocase ascii wide
@@ -262,13 +262,13 @@ rule SharpC2
         $string84 = /SharpC2\.API/ nocase ascii wide
         // Description: Command and Control Framework written in C#
         // Reference: https://github.com/rasta-mouse/SharpC2
-        $string85 = /SharpC2Event/ nocase ascii wide
+        $string85 = "SharpC2Event" nocase ascii wide
         // Description: Command and Control Framework written in C#
         // Reference: https://github.com/rasta-mouse/SharpC2
-        $string86 = /SharpC2Hub/ nocase ascii wide
+        $string86 = "SharpC2Hub" nocase ascii wide
         // Description: Command and Control Framework written in C#
         // Reference: https://github.com/rasta-mouse/SharpC2
-        $string87 = /SharpC2Webhook/ nocase ascii wide
+        $string87 = "SharpC2Webhook" nocase ascii wide
         // Description: Command and Control Framework written in C#
         // Reference: https://github.com/rasta-mouse/SharpC2
         $string88 = /Stagers\\ExeStager\\/ nocase ascii wide
@@ -283,7 +283,7 @@ rule SharpC2
         $string91 = /TeamServer\.C2Profiles/ nocase ascii wide
         // Description: Command and Control Framework written in C#
         // Reference: https://github.com/rasta-mouse/SharpC2
-        $string92 = /TeamServer\/Filters\/InjectionFilters/ nocase ascii wide
+        $string92 = "TeamServer/Filters/InjectionFilters" nocase ascii wide
         // Description: Command and Control Framework written in C#
         // Reference: https://github.com/rasta-mouse/SharpC2
         $string93 = /TeamServer\/Pivots\/.{0,100}\./ nocase ascii wide

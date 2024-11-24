@@ -10,19 +10,19 @@ rule smb_reverse_shell
     strings:
         // Description: A Reverse Shell which uses an XML file on an SMB share as a communication channel.
         // Reference: https://github.com/r1cksec/smb-reverse-shell
-        $string1 = /\/smb\-reverse\-shell/ nocase ascii wide
+        $string1 = "/smb-reverse-shell" nocase ascii wide
         // Description: A Reverse Shell which uses an XML file on an SMB share as a communication channel.
         // Reference: https://github.com/r1cksec/smb-reverse-shell
         $string2 = /invoke.{0,100}\s\-Action\scommand\s\-Execute\s.{0,100}\s\-Session/ nocase ascii wide
         // Description: A Reverse Shell which uses an XML file on an SMB share as a communication channel.
         // Reference: https://github.com/r1cksec/smb-reverse-shell
-        $string3 = /Invoke\-SmbObey\s/ nocase ascii wide
+        $string3 = "Invoke-SmbObey " nocase ascii wide
         // Description: A Reverse Shell which uses an XML file on an SMB share as a communication channel.
         // Reference: https://github.com/r1cksec/smb-reverse-shell
         $string4 = /Invoke\-SmbObey\./ nocase ascii wide
         // Description: A Reverse Shell which uses an XML file on an SMB share as a communication channel.
         // Reference: https://github.com/r1cksec/smb-reverse-shell
-        $string5 = /Invoke\-SmbOrder\s/ nocase ascii wide
+        $string5 = "Invoke-SmbOrder " nocase ascii wide
         // Description: A Reverse Shell which uses an XML file on an SMB share as a communication channel.
         // Reference: https://github.com/r1cksec/smb-reverse-shell
         $string6 = /Invoke\-SmbOrder\./ nocase ascii wide
@@ -31,7 +31,7 @@ rule smb_reverse_shell
         $string7 = /smb\-reverse\-shell\.git/ nocase ascii wide
         // Description: A Reverse Shell which uses an XML file on an SMB share as a communication channel.
         // Reference: https://github.com/r1cksec/smb-reverse-shell
-        $string8 = /smb\-reverse\-shell\-main/ nocase ascii wide
+        $string8 = "smb-reverse-shell-main" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

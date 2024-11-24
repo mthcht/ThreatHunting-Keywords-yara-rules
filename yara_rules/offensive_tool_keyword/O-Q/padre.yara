@@ -13,7 +13,7 @@ rule padre
         $string1 = /\sgo\sbuild\s\-o\spadre\s\./ nocase ascii wide
         // Description: padre?is an advanced exploiter for Padding Oracle attacks against CBC mode encryption
         // Reference: https://github.com/glebarez/padre
-        $string2 = /\/padre\/pkg\/exploit/ nocase ascii wide
+        $string2 = "/padre/pkg/exploit" nocase ascii wide
         // Description: padre?is an advanced exploiter for Padding Oracle attacks against CBC mode encryption
         // Reference: https://github.com/glebarez/padre
         $string3 = /\\padre\\pkg\\exploit/ nocase ascii wide
@@ -22,13 +22,13 @@ rule padre
         $string4 = /github.{0,1000}\/padre\.git/ nocase ascii wide
         // Description: padre?is an advanced exploiter for Padding Oracle attacks against CBC mode encryption
         // Reference: https://github.com/glebarez/padre
-        $string5 = /glebarez\/padre/ nocase ascii wide
+        $string5 = "glebarez/padre" nocase ascii wide
         // Description: padre?is an advanced exploiter for Padding Oracle attacks against CBC mode encryption
         // Reference: https://github.com/glebarez/padre
-        $string6 = /Gw3kg8e3ej4ai9wffn\%2Fd0uRqKzyaPfM2UFq\%2F8dWmoW4wnyKZhx07Bg\=\=/ nocase ascii wide
+        $string6 = "Gw3kg8e3ej4ai9wffn%2Fd0uRqKzyaPfM2UFq%2F8dWmoW4wnyKZhx07Bg==" nocase ascii wide
         // Description: padre?is an advanced exploiter for Padding Oracle attacks against CBC mode encryption
         // Reference: https://github.com/glebarez/padre
-        $string7 = /\-p\s5000\:5000\spador_vuln_server/ nocase ascii wide
+        $string7 = "-p 5000:5000 pador_vuln_server" nocase ascii wide
         // Description: padre?is an advanced exploiter for Padding Oracle attacks against CBC mode encryption
         // Reference: https://github.com/glebarez/padre
         $string8 = /padre\s\-u\s.{0,1000}http.{0,1000}\:\/\// nocase ascii wide

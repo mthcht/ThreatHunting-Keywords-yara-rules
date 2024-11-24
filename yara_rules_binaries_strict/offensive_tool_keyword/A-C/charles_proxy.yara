@@ -10,7 +10,7 @@ rule charles_proxy
     strings:
         // Description: A cross-platform GUI web debugging proxy to view intercepted HTTP and HTTPS/SSL live traffic
         // Reference: https://charlesproxy.com/
-        $string1 = /charles\-proxy/ nocase ascii wide
+        $string1 = "charles-proxy" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -16,7 +16,7 @@ rule hashcat_rule
         $string2 = /\/password_ruled\.txt/ nocase ascii wide
         // Description: Rule for hashcat or john. Aiming to crack how people generate their password
         // Reference: https://github.com/clem9669/hashcat-rule
-        $string3 = /clem9669\/hashcat\-rule/ nocase ascii wide
+        $string3 = "clem9669/hashcat-rule" nocase ascii wide
         // Description: Rule for hashcat or john. Aiming to crack how people generate their password
         // Reference: https://github.com/clem9669/hashcat-rule
         $string4 = /clem9669_case\.rule/ nocase ascii wide
@@ -31,7 +31,7 @@ rule hashcat_rule
         $string7 = /clem9669_small\.rule/ nocase ascii wide
         // Description: Rule for hashcat or john. Aiming to crack how people generate their password
         // Reference: https://github.com/clem9669/hashcat-rule
-        $string8 = /hashcat\-rule\-master/ nocase ascii wide
+        $string8 = "hashcat-rule-master" nocase ascii wide
 
     condition:
         any of them

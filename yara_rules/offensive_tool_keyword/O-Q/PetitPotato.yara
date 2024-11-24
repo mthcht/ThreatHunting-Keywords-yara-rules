@@ -112,19 +112,19 @@ rule PetitPotato
         $string34 = /\\PetitPotato\-1\.0\.0\\/ nocase ascii wide
         // Description: Local privilege escalation via PetitPotam (Abusing impersonate privileges)
         // Reference: https://github.com/wh0amitz/PetitPotato
-        $string35 = /A315E53B\-397A\-4074\-B988\-535A100D45DC/ nocase ascii wide
+        $string35 = "A315E53B-397A-4074-B988-535A100D45DC" nocase ascii wide
         // Description: Local privilege escalation via PetitPotam (Abusing impersonate privileges)
         // Reference: https://github.com/wh0amitz/PetitPotato
-        $string36 = /e55c85d7da9a60ed31867b421961b3503df0b464e068e584fccc20892b05bef2/ nocase ascii wide
+        $string36 = "e55c85d7da9a60ed31867b421961b3503df0b464e068e584fccc20892b05bef2" nocase ascii wide
         // Description: Local privilege escalation via PetitPotam (Abusing impersonate privileges)
         // Reference: https://github.com/wh0amitz/PetitPotato
-        $string37 = /eb760ea670e63083e0fef40c12861c6459ebf28b86129c8d3fa200714b2a0b02/ nocase ascii wide
+        $string37 = "eb760ea670e63083e0fef40c12861c6459ebf28b86129c8d3fa200714b2a0b02" nocase ascii wide
         // Description: Local privilege escalation via PetitPotam (Abusing impersonate privileges)
         // Reference: https://github.com/wh0amitz/PetitPotato
-        $string38 = /PetitPotam\sbypass\svia\sRPC_C_AUTHN_LEVEL_PKT_PRIVACY/ nocase ascii wide
+        $string38 = "PetitPotam bypass via RPC_C_AUTHN_LEVEL_PKT_PRIVACY" nocase ascii wide
         // Description: Local privilege escalation via PetitPotam (Abusing impersonate privileges)
         // Reference: https://github.com/wh0amitz/PetitPotato
-        $string39 = /PetitPotato\s3\scmd/ nocase ascii wide
+        $string39 = "PetitPotato 3 cmd" nocase ascii wide
         // Description: Local privilege escalation via PetitPotam (Abusing impersonate privileges)
         // Reference: https://github.com/wh0amitz/PetitPotato
         $string40 = /PetitPotato\.Build\.CppClean\.log\,/ nocase ascii wide
@@ -136,7 +136,7 @@ rule PetitPotato
         $string42 = /PetitPotato\.lastbuildstate/ nocase ascii wide
         // Description: Local privilege escalation via PetitPotam (Abusing impersonate privileges)
         // Reference: https://github.com/wh0amitz/PetitPotato
-        $string43 = /wh0amitz\/PetitPotato/ nocase ascii wide
+        $string43 = "wh0amitz/PetitPotato" nocase ascii wide
 
     condition:
         any of them

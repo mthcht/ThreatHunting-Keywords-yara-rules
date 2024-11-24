@@ -16,22 +16,22 @@ rule bpf_keylogger
         $string2 = /\/bpf\-keylogger\.git/ nocase ascii wide
         // Description: Keylogger written in BPF
         // Reference: https://github.com/SkyperTHC/bpf-keylogger
-        $string3 = /\/bpf\-keylogger\// nocase ascii wide
+        $string3 = "/bpf-keylogger/" nocase ascii wide
         // Description: Keylogger written in BPF
         // Reference: https://github.com/SkyperTHC/bpf-keylogger
         $string4 = /A\skeylogger\swritten\sin\seBPF\./ nocase ascii wide
         // Description: Keylogger written in BPF
         // Reference: https://github.com/SkyperTHC/bpf-keylogger
-        $string5 = /bpf_keylogger\:\sLog\skey\spresses\sand\smouse\sbutton\sevents\ssystemwide\susing\seBPF/ nocase ascii wide
+        $string5 = "bpf_keylogger: Log key presses and mouse button events systemwide using eBPF" nocase ascii wide
         // Description: Keylogger written in BPF
         // Reference: https://github.com/SkyperTHC/bpf-keylogger
         $string6 = /Logging\skey\spresses\.\.\.\sctrl\-c\sto\squit/ nocase ascii wide
         // Description: Keylogger written in BPF
         // Reference: https://github.com/SkyperTHC/bpf-keylogger
-        $string7 = /SkyperTHC\/bpf\-keylogger/ nocase ascii wide
+        $string7 = "SkyperTHC/bpf-keylogger" nocase ascii wide
         // Description: Keylogger written in BPF
         // Reference: https://github.com/willfindlay/bpf-keylogger
-        $string8 = /willfindlay\/bpf\-keylogger/ nocase ascii wide
+        $string8 = "willfindlay/bpf-keylogger" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

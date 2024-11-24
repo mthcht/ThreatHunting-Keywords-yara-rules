@@ -67,7 +67,7 @@ rule Splashtop
         $string19 = /Splashtop_Streamer_Windows_.{0,100}\.exe/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://hybrid-analysis.com/sample/18c10b0235bd341e065ac5c53ca04b68eaeacd98a120e043fb4883628baf644e/6267eb693836e7217b1a3c72
-        $string20 = /Splashtop\-Splashtop\sStreamer\-/ nocase ascii wide
+        $string20 = "Splashtop-Splashtop Streamer-" nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://ruler-project.github.io/ruler-project/RULER/remote/Splashtop/
         $string21 = /SplashtopStreamer\..{0,100}\.exe/ nocase ascii wide

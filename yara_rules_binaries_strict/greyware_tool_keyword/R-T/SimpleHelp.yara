@@ -10,7 +10,7 @@ rule SimpleHelp
     strings:
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string1 = /\\"SimpleHelp\sRemote\sPrinter\\"/ nocase ascii wide
+        $string1 = "\"SimpleHelp Remote Printer\"" nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
         $string2 = /\/simplehelper64\.exe/ nocase ascii wide
@@ -91,7 +91,7 @@ rule SimpleHelp
         $string27 = /\\winpty\-agent64\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string28 = /\>SimpleHelp\sLtd\</ nocase ascii wide
+        $string28 = ">SimpleHelp Ltd<" nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
         $string29 = /bin\\Remote\sAccessLauncher\.exe/ nocase ascii wide
@@ -100,13 +100,13 @@ rule SimpleHelp
         $string30 = /Elevate.{0,100}\\elev_win\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string31 = /firewall\sadd\srule\s\\"name\=SH\sRemote\sAccess\sService\sLauncher\\"/ nocase ascii wide
+        $string31 = "firewall add rule \"name=SH Remote Access Service Launcher\"" nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string32 = /firewall\sadd\srule\s\\"name\=SH\sRemote\sAccess\sService\sUpdater\\"/ nocase ascii wide
+        $string32 = "firewall add rule \"name=SH Remote Access Service Updater\"" nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string33 = /firewall\sadd\srule\s\\"name\=SH\sRemote\sAccess\sService\\"/ nocase ascii wide
+        $string33 = "firewall add rule \"name=SH Remote Access Service\"" nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
         $string34 = /Manage\sRemote\sAccess\sService\.exe/ nocase ascii wide

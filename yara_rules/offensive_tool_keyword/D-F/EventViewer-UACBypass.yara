@@ -10,10 +10,10 @@ rule EventViewer_UACBypass
     strings:
         // Description: RCE through Unsafe .Net Deserialization in Windows Event Viewer which leads to UAC bypass
         // Reference: https://github.com/CsEnox/EventViewer-UACBypass
-        $string1 = /\sEventViewer\-UACBypass/ nocase ascii wide
+        $string1 = " EventViewer-UACBypass" nocase ascii wide
         // Description: RCE through Unsafe .Net Deserialization in Windows Event Viewer which leads to UAC bypass
         // Reference: https://github.com/CsEnox/EventViewer-UACBypass
-        $string2 = /\/EventViewer\-UACBypass/ nocase ascii wide
+        $string2 = "/EventViewer-UACBypass" nocase ascii wide
         // Description: RCE through Unsafe .Net Deserialization in Windows Event Viewer which leads to UAC bypass
         // Reference: https://github.com/CsEnox/EventViewer-UACBypass
         $string3 = /\\EventViewer\-UACBypass/ nocase ascii wide
@@ -31,7 +31,7 @@ rule EventViewer_UACBypass
         $string7 = /Invoke\-EventViewer\.ps1/ nocase ascii wide
         // Description: RCE through Unsafe .Net Deserialization in Windows Event Viewer which leads to UAC bypass
         // Reference: https://github.com/CsEnox/EventViewer-UACBypass
-        $string8 = /OgBcAFcAaQBuAGQAbwB3AHMAXABUAGEAcwBrAHMAXABFAHYAZQBuAHQAVgBpAGUAdwBlAHIAUgBDAEUALgBwAHMAMQA\=/ nocase ascii wide
+        $string8 = "OgBcAFcAaQBuAGQAbwB3AHMAXABUAGEAcwBrAHMAXABFAHYAZQBuAHQAVgBpAGUAdwBlAHIAUgBDAEUALgBwAHMAMQA=" nocase ascii wide
 
     condition:
         any of them

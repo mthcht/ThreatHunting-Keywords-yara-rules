@@ -10,7 +10,7 @@ rule revsocks
     strings:
         // Description: Reverse SOCKS5 implementation in Go
         // Reference: https://github.com/kost/revsocks
-        $string1 = /\/kost\/revsocks\/releases/ nocase ascii wide
+        $string1 = "/kost/revsocks/releases" nocase ascii wide
         // Description: Cross-platform SOCKS5 proxy server program/library written in C that can also reverse itself over a firewall.
         // Reference: https://github.com/emilarner/revsocks
         $string2 = /\/out\:revsocks\.exe/ nocase ascii wide
@@ -46,70 +46,70 @@ rule revsocks
         $string12 = /\\revsocks\-master\\/ nocase ascii wide
         // Description: Cross-platform SOCKS5 proxy server program/library written in C that can also reverse itself over a firewall.
         // Reference: https://github.com/emilarner/revsocks
-        $string13 = /Cannot\ssend\sREVSOCKS_NORMAL\shandshake\!/ nocase ascii wide
+        $string13 = "Cannot send REVSOCKS_NORMAL handshake!" nocase ascii wide
         // Description: Cross-platform SOCKS5 proxy server program/library written in C that can also reverse itself over a firewall.
         // Reference: https://github.com/emilarner/revsocks
-        $string14 = /emilarner\/revsocks/ nocase ascii wide
+        $string14 = "emilarner/revsocks" nocase ascii wide
         // Description: Reverse SOCKS5 implementation in Go
         // Reference: https://github.com/kost/revsocks
-        $string15 = /kost\/revsocks/ nocase ascii wide
+        $string15 = "kost/revsocks" nocase ascii wide
         // Description: Reverse SOCKS5 implementation in Go
         // Reference: https://github.com/kost/revsocks
-        $string16 = /revsocks\s\-\sreverse\ssocks5\sserver\/client/ nocase ascii wide
+        $string16 = "revsocks - reverse socks5 server/client" nocase ascii wide
         // Description: Reverse SOCKS5 implementation in Go
         // Reference: https://github.com/kost/revsocks
-        $string17 = /revsocks\s\-connect/ nocase ascii wide
+        $string17 = "revsocks -connect" nocase ascii wide
         // Description: Reverse SOCKS5 implementation in Go
         // Reference: https://github.com/kost/revsocks
-        $string18 = /revsocks\s\-dns/ nocase ascii wide
+        $string18 = "revsocks -dns" nocase ascii wide
         // Description: Reverse SOCKS5 implementation in Go
         // Reference: https://github.com/kost/revsocks
-        $string19 = /revsocks\s\-listen/ nocase ascii wide
+        $string19 = "revsocks -listen" nocase ascii wide
         // Description: Reverse SOCKS5 implementation in Go
         // Reference: https://github.com/kost/revsocks
-        $string20 = /revsocks_darwin_amd64/ nocase ascii wide
+        $string20 = "revsocks_darwin_amd64" nocase ascii wide
         // Description: Reverse SOCKS5 implementation in Go
         // Reference: https://github.com/kost/revsocks
-        $string21 = /revsocks_freebsd_386/ nocase ascii wide
+        $string21 = "revsocks_freebsd_386" nocase ascii wide
         // Description: Reverse SOCKS5 implementation in Go
         // Reference: https://github.com/kost/revsocks
-        $string22 = /revsocks_freebsd_amd64/ nocase ascii wide
+        $string22 = "revsocks_freebsd_amd64" nocase ascii wide
         // Description: Reverse SOCKS5 implementation in Go
         // Reference: https://github.com/kost/revsocks
-        $string23 = /revsocks_freebsd_arm/ nocase ascii wide
+        $string23 = "revsocks_freebsd_arm" nocase ascii wide
         // Description: Reverse SOCKS5 implementation in Go
         // Reference: https://github.com/kost/revsocks
-        $string24 = /revsocks_linux_386/ nocase ascii wide
+        $string24 = "revsocks_linux_386" nocase ascii wide
         // Description: Reverse SOCKS5 implementation in Go
         // Reference: https://github.com/kost/revsocks
-        $string25 = /revsocks_linux_amd64/ nocase ascii wide
+        $string25 = "revsocks_linux_amd64" nocase ascii wide
         // Description: Reverse SOCKS5 implementation in Go
         // Reference: https://github.com/kost/revsocks
-        $string26 = /revsocks_linux_arm/ nocase ascii wide
+        $string26 = "revsocks_linux_arm" nocase ascii wide
         // Description: Reverse SOCKS5 implementation in Go
         // Reference: https://github.com/kost/revsocks
-        $string27 = /revsocks_linux_mips/ nocase ascii wide
+        $string27 = "revsocks_linux_mips" nocase ascii wide
         // Description: Reverse SOCKS5 implementation in Go
         // Reference: https://github.com/kost/revsocks
-        $string28 = /revsocks_linux_mipsle/ nocase ascii wide
+        $string28 = "revsocks_linux_mipsle" nocase ascii wide
         // Description: Reverse SOCKS5 implementation in Go
         // Reference: https://github.com/kost/revsocks
-        $string29 = /revsocks_linux_s390x/ nocase ascii wide
+        $string29 = "revsocks_linux_s390x" nocase ascii wide
         // Description: Reverse SOCKS5 implementation in Go
         // Reference: https://github.com/kost/revsocks
-        $string30 = /revsocks_netbsd_386/ nocase ascii wide
+        $string30 = "revsocks_netbsd_386" nocase ascii wide
         // Description: Reverse SOCKS5 implementation in Go
         // Reference: https://github.com/kost/revsocks
-        $string31 = /revsocks_netbsd_amd64/ nocase ascii wide
+        $string31 = "revsocks_netbsd_amd64" nocase ascii wide
         // Description: Reverse SOCKS5 implementation in Go
         // Reference: https://github.com/kost/revsocks
-        $string32 = /revsocks_netbsd_arm/ nocase ascii wide
+        $string32 = "revsocks_netbsd_arm" nocase ascii wide
         // Description: Reverse SOCKS5 implementation in Go
         // Reference: https://github.com/kost/revsocks
-        $string33 = /revsocks_openbsd_386/ nocase ascii wide
+        $string33 = "revsocks_openbsd_386" nocase ascii wide
         // Description: Reverse SOCKS5 implementation in Go
         // Reference: https://github.com/kost/revsocks
-        $string34 = /revsocks_openbsd_amd64/ nocase ascii wide
+        $string34 = "revsocks_openbsd_amd64" nocase ascii wide
         // Description: Reverse SOCKS5 implementation in Go
         // Reference: https://github.com/kost/revsocks
         $string35 = /revsocks_windows_386\.exe/ nocase ascii wide
@@ -121,7 +121,7 @@ rule revsocks
         $string37 = /revsocksserver\.h/ nocase ascii wide
         // Description: Cross-platform SOCKS5 proxy server program/library written in C that can also reverse itself over a firewall.
         // Reference: https://github.com/emilarner/revsocks
-        $string38 = /starting\sRevSocksServer\:\s/ nocase ascii wide
+        $string38 = "starting RevSocksServer: " nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

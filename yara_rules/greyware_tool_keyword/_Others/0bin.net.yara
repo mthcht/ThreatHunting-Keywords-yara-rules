@@ -10,10 +10,10 @@ rule _0bin_net
     strings:
         // Description: Accessing a paste on 0bin.net
         // Reference: https://0bin.net
-        $string1 = /0bin\s\-\sencrypted\spastebin/ nocase ascii wide
+        $string1 = "0bin - encrypted pastebin" nocase ascii wide
         // Description: Accessing a paste on 0bin.net
         // Reference: https://0bin.net
-        $string2 = /A\sclient\sside\sencrypted\sPasteBin/ nocase ascii wide
+        $string2 = "A client side encrypted PasteBin" nocase ascii wide
         // Description: Accessing a paste on 0bin.net
         // Reference: https://0bin.net
         $string3 = /https\:\/\/0bin\.net\/paste\/.{0,1000}\+/ nocase ascii wide

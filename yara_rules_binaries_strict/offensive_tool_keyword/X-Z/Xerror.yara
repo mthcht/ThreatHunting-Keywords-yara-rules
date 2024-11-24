@@ -10,10 +10,10 @@ rule Xerror
     strings:
         // Description: fully automated pentesting tool
         // Reference: https://github.com/Chudry/Xerror
-        $string1 = /Chudry\/Xerror/ nocase ascii wide
+        $string1 = "Chudry/Xerror" nocase ascii wide
         // Description: fully automated pentesting tool
         // Reference: https://github.com/Chudry/Xerror
-        $string2 = /cve_2_MSF_exploit_Mapping/ nocase ascii wide
+        $string2 = "cve_2_MSF_exploit_Mapping" nocase ascii wide
         // Description: fully automated pentesting tool
         // Reference: https://github.com/Chudry/Xerror
         $string3 = /mapper_cve_exploit\.py/ nocase ascii wide
@@ -22,7 +22,7 @@ rule Xerror
         $string4 = /msf_cve_extracter\.py/ nocase ascii wide
         // Description: A BurpSuite plugin intended to help with nuclei template generation.
         // Reference: https://github.com/projectdiscovery/nuclei-burp-plugin
-        $string5 = /nuclei\-burp\-plugin/ nocase ascii wide
+        $string5 = "nuclei-burp-plugin" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

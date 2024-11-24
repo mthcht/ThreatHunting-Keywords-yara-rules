@@ -10,10 +10,10 @@ rule icalcs
     strings:
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string1 = /icacls\s\"C\:\\windows\\system32\\config\\SAM\"\s\/grant/ nocase ascii wide
+        $string1 = /icacls\s\\"C\:\\windows\\system32\\config\\SAM\\"\s\/grant/ nocase ascii wide
         // Description: malware behavior - modify the permissions on files or directories that match AV name
         // Reference: https://www.hybrid-analysis.com/sample/22a2fc907d960e67fe9def8946907fd324f77afce3f2792750f1ddb1de76fc9f/5ed63f715448965c0d232702
-        $string2 = /icacls\s.{0,1000}\(x86\)\\360\"\s.{0,1000}\s\/deny\s\%username\%\:\(OI\)\(CI\)\(F\)/ nocase ascii wide
+        $string2 = /icacls\s.{0,1000}\(x86\)\\360\\"\s.{0,1000}\s\/deny\s\%username\%\:\(OI\)\(CI\)\(F\)/ nocase ascii wide
         // Description: malware behavior - modify the permissions on files or directories that match AV name
         // Reference: https://www.hybrid-analysis.com/sample/22a2fc907d960e67fe9def8946907fd324f77afce3f2792750f1ddb1de76fc9f/5ed63f715448965c0d232702
         $string3 = /icacls\s.{0,1000}\\360safe.{0,1000}\s\/deny\s\%username\%\:\(OI\)\(CI\)\(F\)/ nocase ascii wide
@@ -22,7 +22,7 @@ rule icalcs
         $string4 = /icacls\s.{0,1000}\\AVAST\sSoftware.{0,1000}\s\/deny\s\%username\%\:\(OI\)\(CI\)\(F\)/ nocase ascii wide
         // Description: malware behavior - modify the permissions on files or directories that match AV name
         // Reference: https://www.hybrid-analysis.com/sample/22a2fc907d960e67fe9def8946907fd324f77afce3f2792750f1ddb1de76fc9f/5ed63f715448965c0d232702
-        $string5 = /icacls\s.{0,1000}\\AVG\".{0,1000}\s\/deny\s\%username\%\:\(OI\)\(CI\)\(F\)/ nocase ascii wide
+        $string5 = /icacls\s.{0,1000}\\AVG\\".{0,1000}\s\/deny\s\%username\%\:\(OI\)\(CI\)\(F\)/ nocase ascii wide
         // Description: malware behavior - modify the permissions on files or directories that match AV name
         // Reference: https://www.hybrid-analysis.com/sample/22a2fc907d960e67fe9def8946907fd324f77afce3f2792750f1ddb1de76fc9f/5ed63f715448965c0d232702
         $string6 = /icacls\s.{0,1000}\\Avira.{0,1000}\s\/deny\s\%username\%\:\(OI\)\(CI\)\(F\)/ nocase ascii wide

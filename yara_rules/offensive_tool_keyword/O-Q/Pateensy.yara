@@ -31,13 +31,13 @@ rule Pateensy
         $string7 = /Bye_Explorer\.ino/ nocase ascii wide
         // Description: payload for teensy like a rubber ducky but the syntax is different. this Human interfaes device ( HID attacks ). Penetration With Teensy
         // Reference: https://github.com/screetsec/Pateensy
-        $string8 = /Pateensy\/PaensyLib\// nocase ascii wide
+        $string8 = "Pateensy/PaensyLib/" nocase ascii wide
         // Description: payload for teensy like a rubber ducky but the syntax is different. this Human interfaes device ( HID attacks ). Penetration With Teensy
         // Reference: https://github.com/screetsec/Pateensy
         $string9 = /powershell\-admin\-download\-execute\.ino/ nocase ascii wide
         // Description: payload for teensy like a rubber ducky but the syntax is different. this Human interfaes device ( HID attacks ). Penetration With Teensy
         // Reference: https://github.com/screetsec/Pateensy
-        $string10 = /screetsec\/Pateensy/ nocase ascii wide
+        $string10 = "screetsec/Pateensy" nocase ascii wide
         // Description: payload for teensy like a rubber ducky but the syntax is different. this Human interfaes device ( HID attacks ). Penetration With Teensy
         // Reference: https://github.com/screetsec/Pateensy
         $string11 = /Teensypreter\.ino/ nocase ascii wide

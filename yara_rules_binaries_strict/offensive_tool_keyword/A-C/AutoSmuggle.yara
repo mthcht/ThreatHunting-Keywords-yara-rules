@@ -22,7 +22,7 @@ rule AutoSmuggle
         $string4 = /\\AutoSmuggle\\.{0,100}\.cs/ nocase ascii wide
         // Description: Utility to craft HTML or SVG smuggled files for Red Team engagements
         // Reference: https://github.com/surajpkhetani/AutoSmuggle
-        $string5 = /57A893C7\-7527\-4B55\-B4E9\-D644BBDA89D1/ nocase ascii wide
+        $string5 = "57A893C7-7527-4B55-B4E9-D644BBDA89D1" nocase ascii wide
         // Description: Utility to craft HTML or SVG smuggled files for Red Team engagements
         // Reference: https://github.com/surajpkhetani/AutoSmuggle
         $string6 = /AutoSmuggle\.csproj/ nocase ascii wide
@@ -34,10 +34,10 @@ rule AutoSmuggle
         $string8 = /AutoSmuggle\.sln/ nocase ascii wide
         // Description: Utility to craft HTML or SVG smuggled files for Red Team engagements
         // Reference: https://github.com/surajpkhetani/AutoSmuggle
-        $string9 = /AutoSmuggle\-master/ nocase ascii wide
+        $string9 = "AutoSmuggle-master" nocase ascii wide
         // Description: Utility to craft HTML or SVG smuggled files for Red Team engagements
         // Reference: https://github.com/surajpkhetani/AutoSmuggle
-        $string10 = /surajpkhetani\/AutoSmuggle/ nocase ascii wide
+        $string10 = "surajpkhetani/AutoSmuggle" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

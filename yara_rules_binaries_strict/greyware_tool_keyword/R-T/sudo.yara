@@ -19,7 +19,7 @@ rule sudo
         $string3 = /echo\s.{0,100}\%sudo\s\sALL\=\(ALL\)\sNOPASSWD\:\sALL.{0,100}\s\>\>\s\/etc\/sudoers/ nocase ascii wide
         // Description: access sensitive files by abusing sudo permissions
         // Reference: N/A
-        $string4 = /sudo\sapache2\s\-f\s\/etc\/shadow/ nocase ascii wide
+        $string4 = "sudo apache2 -f /etc/shadow" nocase ascii wide
         // Description: abusing LD_LIBRARY_PATH sudo option  to escalade privilege
         // Reference: N/A
         $string5 = /sudo\sLD_LIBRARY_PATH\=\.\sapache2/ nocase ascii wide

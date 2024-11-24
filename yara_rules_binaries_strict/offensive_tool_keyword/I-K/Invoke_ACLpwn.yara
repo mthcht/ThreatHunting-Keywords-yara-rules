@@ -10,7 +10,7 @@ rule Invoke_ACLpwn
     strings:
         // Description: Invoke-ACLpwn is a tool that automates the discovery and pwnage of ACLs in Active Directory that are unsafe configured.
         // Reference: https://github.com/fox-it/Invoke-ACLPwn
-        $string1 = /Invoke\-ACLPwn/ nocase ascii wide
+        $string1 = "Invoke-ACLPwn" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

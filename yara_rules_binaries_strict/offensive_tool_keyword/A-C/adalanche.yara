@@ -13,19 +13,19 @@ rule adalanche
         $string1 = /\s\-\-authmode\sntlm\s\-\-username\s.{0,100}\s\-\-password\s/ nocase ascii wide
         // Description: Active Directory ACL Visualizer and Explorer - who's really Domain Admin?
         // Reference: https://github.com/lkarlslund/Adalanche
-        $string2 = /\scollect\sactivedirectory\s\-\-/ nocase ascii wide
+        $string2 = " collect activedirectory --" nocase ascii wide
         // Description: Active Directory ACL Visualizer and Explorer - who's really Domain Admin?
         // Reference: https://github.com/lkarlslund/Adalanche
-        $string3 = /\/adalanche\/modules\// nocase ascii wide
+        $string3 = "/adalanche/modules/" nocase ascii wide
         // Description: Active Directory ACL Visualizer and Explorer - who's really Domain Admin?
         // Reference: https://github.com/lkarlslund/Adalanche
         $string4 = /activedirectory\/pwns\.go/ nocase ascii wide
         // Description: Active Directory ACL Visualizer and Explorer - who's really Domain Admin?
         // Reference: https://github.com/lkarlslund/Adalanche
-        $string5 = /adalanche\sanalyze/ nocase ascii wide
+        $string5 = "adalanche analyze" nocase ascii wide
         // Description: Active Directory ACL Visualizer and Explorer - who's really Domain Admin?
         // Reference: https://github.com/lkarlslund/Adalanche
-        $string6 = /adalanche\scollect/ nocase ascii wide
+        $string6 = "adalanche collect" nocase ascii wide
         // Description: Active Directory ACL Visualizer and Explorer - who's really Domain Admin?
         // Reference: https://github.com/lkarlslund/Adalanche
         $string7 = /adalanche\-.{0,100}\.exe/ nocase ascii wide
@@ -34,22 +34,22 @@ rule adalanche
         $string8 = /Adalanche\.git/ nocase ascii wide
         // Description: Active Directory ACL Visualizer and Explorer - who's really Domain Admin?
         // Reference: https://github.com/lkarlslund/Adalanche
-        $string9 = /adalanche\-collector/ nocase ascii wide
+        $string9 = "adalanche-collector" nocase ascii wide
         // Description: Active Directory ACL Visualizer and Explorer - who's really Domain Admin?
         // Reference: https://github.com/lkarlslund/Adalanche
         $string10 = /adexplorer\.go/ nocase ascii wide
         // Description: Active Directory ACL Visualizer and Explorer - who's really Domain Admin?
         // Reference: https://github.com/lkarlslund/Adalanche
-        $string11 = /HasAutoAdminLogonCredentials/ nocase ascii wide
+        $string11 = "HasAutoAdminLogonCredentials" nocase ascii wide
         // Description: Active Directory ACL Visualizer and Explorer - who's really Domain Admin?
         // Reference: https://github.com/lkarlslund/Adalanche
-        $string12 = /HasSPNNoPreauth/ nocase ascii wide
+        $string12 = "HasSPNNoPreauth" nocase ascii wide
         // Description: Active Directory ACL Visualizer and Explorer - who's really Domain Admin?
         // Reference: https://github.com/lkarlslund/Adalanche
         $string13 = /ldap_enums\.go/ nocase ascii wide
         // Description: Active Directory ACL Visualizer and Explorer - who's really Domain Admin?
         // Reference: https://github.com/lkarlslund/Adalanche
-        $string14 = /lkarlslund\/Adalanche/ nocase ascii wide
+        $string14 = "lkarlslund/Adalanche" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

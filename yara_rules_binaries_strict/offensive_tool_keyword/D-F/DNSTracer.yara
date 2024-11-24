@@ -10,7 +10,7 @@ rule DNSTracer
     strings:
         // Description: This is a python application that traces how a DNS query is performed from a client machine to the server.
         // Reference: https://github.com/pcoder/DNSTracer
-        $string1 = /dnstracer/ nocase ascii wide
+        $string1 = "dnstracer" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

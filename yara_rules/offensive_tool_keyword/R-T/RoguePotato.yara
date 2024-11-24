@@ -13,13 +13,13 @@ rule RoguePotato
         $string1 = /\/RoguePotato\.git/ nocase ascii wide
         // Description: Windows Local Privilege Escalation from Service Account to System
         // Reference: https://github.com/antonioCoco/RoguePotato
-        $string2 = /105C2C6D\-1C0A\-4535\-A231\-80E355EFB112/ nocase ascii wide
+        $string2 = "105C2C6D-1C0A-4535-A231-80E355EFB112" nocase ascii wide
         // Description: Windows Local Privilege Escalation from Service Account to System
         // Reference: https://github.com/antonioCoco/RoguePotato
-        $string3 = /61CE6716\-E619\-483C\-B535\-8694F7617548/ nocase ascii wide
+        $string3 = "61CE6716-E619-483C-B535-8694F7617548" nocase ascii wide
         // Description: Windows Local Privilege Escalation from Service Account to System
         // Reference: https://github.com/antonioCoco/RoguePotato
-        $string4 = /antonioCoco\/RoguePotato/ nocase ascii wide
+        $string4 = "antonioCoco/RoguePotato" nocase ascii wide
         // Description: Windows Local Privilege Escalation from Service Account to System
         // Reference: https://github.com/antonioCoco/RoguePotato
         $string5 = /RogueOxidResolver\.cpp/ nocase ascii wide
@@ -37,7 +37,7 @@ rule RoguePotato
         $string9 = /RoguePotato\.zip/ nocase ascii wide
         // Description: Windows Local Privilege Escalation from Service Account to System
         // Reference: https://github.com/antonioCoco/RoguePotato
-        $string10 = /RoguePotato\-master/ nocase ascii wide
+        $string10 = "RoguePotato-master" nocase ascii wide
         // Description: Windows Local Privilege Escalation from Service Account to System
         // Reference: https://github.com/antonioCoco/RoguePotato
         $string11 = /TokenKidnapping\.cpp/ nocase ascii wide

@@ -13,7 +13,7 @@ rule bitb
         $string1 = /\/BITB\.git/ nocase ascii wide
         // Description: Browser templates for Browser In The Browser (BITB) attack
         // Reference: https://github.com/mrd0x/BITB
-        $string2 = /\/BITB\-main/ nocase ascii wide
+        $string2 = "/BITB-main" nocase ascii wide
         // Description: Browser templates for Browser In The Browser (BITB) attack
         // Reference: https://github.com/mrd0x/BITB
         $string3 = /\\BITB\-main/ nocase ascii wide
@@ -22,10 +22,10 @@ rule bitb
         $string4 = /bitb_server\/phishing\.ini/ nocase ascii wide
         // Description: Browser templates for Browser In The Browser (BITB) attack
         // Reference: https://github.com/mrd0x/BITB
-        $string5 = /mrd0x\/BITB/ nocase ascii wide
+        $string5 = "mrd0x/BITB" nocase ascii wide
         // Description: Browser templates for Browser In The Browser (BITB) attack
         // Reference: https://github.com/mrd0x/BITB
-        $string6 = /XX\-PHISHING\-LINK\-XX/ nocase ascii wide
+        $string6 = "XX-PHISHING-LINK-XX" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

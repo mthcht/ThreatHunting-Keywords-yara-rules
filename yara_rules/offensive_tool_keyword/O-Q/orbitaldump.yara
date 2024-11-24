@@ -13,22 +13,22 @@ rule orbitaldump
         $string1 = /\/orbitaldump\.git/ nocase ascii wide
         // Description: A simple multi-threaded distributed SSH brute-forcing tool written in Python.
         // Reference: https://github.com/k4yt3x/orbitaldump
-        $string2 = /k4yt3x\/orbitaldump/ nocase ascii wide
+        $string2 = "k4yt3x/orbitaldump" nocase ascii wide
         // Description: A simple multi-threaded distributed SSH brute-forcing tool written in Python.
         // Reference: https://github.com/k4yt3x/orbitaldump
         $string3 = /orbitaldump\.py/ nocase ascii wide
         // Description: A simple multi-threaded distributed SSH brute-forcing tool written in Python.
         // Reference: https://github.com/k4yt3x/orbitaldump
-        $string4 = /orbitaldump\/orbitaldump/ nocase ascii wide
+        $string4 = "orbitaldump/orbitaldump" nocase ascii wide
         // Description: A simple multi-threaded distributed SSH brute-forcing tool written in Python.
         // Reference: https://github.com/k4yt3x/orbitaldump
-        $string5 = /python\s\-m\sorbitaldump\s/ nocase ascii wide
+        $string5 = "python -m orbitaldump " nocase ascii wide
         // Description: A simple multi-threaded distributed SSH brute-forcing tool written in Python.
         // Reference: https://github.com/k4yt3x/orbitaldump
-        $string6 = /python3\s\-m\sorbitaldump\s/ nocase ascii wide
+        $string6 = "python3 -m orbitaldump " nocase ascii wide
         // Description: A simple multi-threaded distributed SSH brute-forcing tool written in Python.
         // Reference: https://github.com/k4yt3x/orbitaldump
-        $string7 = /\-\-user\sorbitaldump/ nocase ascii wide
+        $string7 = "--user orbitaldump" nocase ascii wide
 
     condition:
         any of them

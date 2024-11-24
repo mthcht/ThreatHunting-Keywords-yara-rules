@@ -10,7 +10,7 @@ rule DEDSEC_RANSOMWARE
     strings:
         // Description: dedsec ransomware
         // Reference: https://github.com/xelroth/DEDSEC-RANSOMWARE
-        $string1 = /Ransom\:Win32\/Dedsec/ nocase ascii wide
+        $string1 = "Ransom:Win32/Dedsec" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

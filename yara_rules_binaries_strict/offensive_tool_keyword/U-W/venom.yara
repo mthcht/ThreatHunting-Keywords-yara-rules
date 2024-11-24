@@ -13,10 +13,10 @@ rule Venom
         $string1 = /\sport_reuse\.py/ nocase ascii wide
         // Description: Venom - A Multi-hop Proxy for Penetration Testers
         // Reference: https://github.com/Dliv3/Venom
-        $string2 = /\s\-\-string\s\'venomcoming\'\s/ nocase ascii wide
+        $string2 = " --string 'venomcoming' " nocase ascii wide
         // Description: Venom - A Multi-hop Proxy for Penetration Testers
         // Reference: https://github.com/Dliv3/Venom
-        $string3 = /\s\-\-string\s\'venomleaving\'\s/ nocase ascii wide
+        $string3 = " --string 'venomleaving' " nocase ascii wide
         // Description: Venom - A Multi-hop Proxy for Penetration Testers
         // Reference: https://github.com/Dliv3/Venom
         $string4 = /\/port_reuse\.py/ nocase ascii wide
@@ -37,10 +37,10 @@ rule Venom
         $string9 = /\/Venom\.v1\.1\.0\.7z/ nocase ascii wide
         // Description: Venom - A Multi-hop Proxy for Penetration Testers
         // Reference: https://github.com/Dliv3/Venom
-        $string10 = /\/Venom\/tarball\/v/ nocase ascii wide
+        $string10 = "/Venom/tarball/v" nocase ascii wide
         // Description: Venom - A Multi-hop Proxy for Penetration Testers
         // Reference: https://github.com/Dliv3/Venom
-        $string11 = /\/Venom\/zipball\/v/ nocase ascii wide
+        $string11 = "/Venom/zipball/v" nocase ascii wide
         // Description: Venom - A Multi-hop Proxy for Penetration Testers
         // Reference: https://github.com/Dliv3/Venom
         $string12 = /\\port_reuse\.py/ nocase ascii wide
@@ -58,10 +58,10 @@ rule Venom
         $string16 = /\\Venom\.v1\.1\.0\.7z/ nocase ascii wide
         // Description: Venom - A Multi-hop Proxy for Penetration Testers
         // Reference: https://github.com/Dliv3/Venom
-        $string17 = /37da8267b295caeca8fadb13206ba1c498a7012673430c5d856fe93862446a28/ nocase ascii wide
+        $string17 = "37da8267b295caeca8fadb13206ba1c498a7012673430c5d856fe93862446a28" nocase ascii wide
         // Description: Venom - A Multi-hop Proxy for Penetration Testers
         // Reference: https://github.com/Dliv3/Venom
-        $string18 = /52907aebc7d2c6534099d149e61bf294b0ddf7d4e814a72b3621e3a829f83c97/ nocase ascii wide
+        $string18 = "52907aebc7d2c6534099d149e61bf294b0ddf7d4e814a72b3621e3a829f83c97" nocase ascii wide
         // Description: Venom - A Multi-hop Proxy for Penetration Testers
         // Reference: https://github.com/Dliv3/Venom
         $string19 = /admin_macos_x64\s\-rhost\s.{0,100}\s\-rport\s/ nocase ascii wide
@@ -70,19 +70,19 @@ rule Venom
         $string20 = /agent\.exe\s\-lhost\s.{0,100}\s\-reuse\-port\s/ nocase ascii wide
         // Description: Venom - A Multi-hop Proxy for Penetration Testers
         // Reference: https://github.com/Dliv3/Venom
-        $string21 = /agent_linux_x64\s\-lport\s/ nocase ascii wide
+        $string21 = "agent_linux_x64 -lport " nocase ascii wide
         // Description: Venom - A Multi-hop Proxy for Penetration Testers
         // Reference: https://github.com/Dliv3/Venom
         $string22 = /agent_linux_x64\s\-rhost\s.{0,100}\s\-rport\s/ nocase ascii wide
         // Description: Venom - A Multi-hop Proxy for Penetration Testers
         // Reference: https://github.com/Dliv3/Venom
-        $string23 = /Venom\sAdmin\sNode\sStart/ nocase ascii wide
+        $string23 = "Venom Admin Node Start" nocase ascii wide
         // Description: Venom - A Multi-hop Proxy for Penetration Testers
         // Reference: https://github.com/Dliv3/Venom
         $string24 = /Venom\\agent\\agent\.go/ nocase ascii wide
         // Description: Venom - A Multi-hop Proxy for Penetration Testers
         // Reference: https://github.com/Dliv3/Venom
-        $string25 = /You\scan\sexecute\scommands\sin\sthis\sshell\s\:D/ nocase ascii wide
+        $string25 = "You can execute commands in this shell :D" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

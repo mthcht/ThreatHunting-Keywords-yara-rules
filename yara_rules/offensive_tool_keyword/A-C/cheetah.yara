@@ -31,7 +31,7 @@ rule cheetah
         $string7 = /\\cheetah\-master\.zip/ nocase ascii wide
         // Description: a very fast brute force webshell password tool
         // Reference: https://github.com/shmilylty/cheetah
-        $string8 = /5a1f9b0e\-9f7c\-4673\-bf16\-4740707f41b7/ nocase ascii wide
+        $string8 = "5a1f9b0e-9f7c-4673-bf16-4740707f41b7" nocase ascii wide
         // Description: a very fast brute force webshell password tool
         // Reference: https://github.com/shmilylty/cheetah
         $string9 = /a\svery\sfast\sbrute\sforce\swebshell\spassword\stool\./ nocase ascii wide
@@ -46,10 +46,10 @@ rule cheetah
         $string12 = /http\:\/\/localhost\/shell\.jsp\?pwd\=System\.out\.println\(/ nocase ascii wide
         // Description: a very fast brute force webshell password tool
         // Reference: https://github.com/shmilylty/cheetah
-        $string13 = /run\s\-\-rm\s\-it\sxshuden\/cheetah/ nocase ascii wide
+        $string13 = "run --rm -it xshuden/cheetah" nocase ascii wide
         // Description: a very fast brute force webshell password tool
         // Reference: https://github.com/shmilylty/cheetah
-        $string14 = /shmilylty\/cheetah/ nocase ascii wide
+        $string14 = "shmilylty/cheetah" nocase ascii wide
         // Description: a very fast brute force webshell password tool
         // Reference: https://github.com/shmilylty/cheetah
         $string15 = /sunnyelf\/cheetah\/archive\/master\.zip/ nocase ascii wide

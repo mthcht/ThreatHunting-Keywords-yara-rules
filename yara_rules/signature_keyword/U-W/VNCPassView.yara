@@ -10,7 +10,7 @@ rule VNCPassView
     strings:
         // Description: recover the passwords stored by the VNC tool
         // Reference: https://www.nirsoft.net/utils/vnc_password.html
-        $string1 = /HackTool\:Win32\/Passview\!MSR/ nocase ascii wide
+        $string1 = "HackTool:Win32/Passview!MSR" nocase ascii wide
         // Description: recover the passwords stored by the VNC tool
         // Reference: https://www.nirsoft.net/utils/vnc_password.html
         $string2 = /VNCPassView\.exe/ nocase ascii wide

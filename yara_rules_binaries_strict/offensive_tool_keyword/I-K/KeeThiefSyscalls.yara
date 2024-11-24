@@ -19,10 +19,10 @@ rule KeeThiefSyscalls
         $string3 = /\\KeeTheft\.exe/ nocase ascii wide
         // Description: Patch GhostPack/KeeThief for it to use DInvoke and syscalls
         // Reference: https://github.com/Metro-Holografix/KeeThiefSyscalls
-        $string4 = /KeeTheft\/Dinvoke/ nocase ascii wide
+        $string4 = "KeeTheft/Dinvoke" nocase ascii wide
         // Description: Patch GhostPack/KeeThief for it to use DInvoke and syscalls
         // Reference: https://github.com/Metro-Holografix/KeeThiefSyscalls
-        $string5 = /KeeThiefSyscalls/ nocase ascii wide
+        $string5 = "KeeThiefSyscalls" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

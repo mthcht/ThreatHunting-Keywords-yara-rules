@@ -22,7 +22,7 @@ rule AttackSurfaceMapper
         $string4 = /\/guessed_emails\.txt/ nocase ascii wide
         // Description: AttackSurfaceMapper (ASM) is a reconnaissance tool that uses a mixture of open source intelligence and active techniques to expand the attack surface of your target
         // Reference: https://github.com/superhedgy/AttackSurfaceMapper
-        $string5 = /AttackSurfaceMapper\-master/ nocase ascii wide
+        $string5 = "AttackSurfaceMapper-master" nocase ascii wide
         // Description: AttackSurfaceMapper (ASM) is a reconnaissance tool that uses a mixture of open source intelligence and active techniques to expand the attack surface of your target
         // Reference: https://github.com/superhedgy/AttackSurfaceMapper
         $string6 = /bitquark_top100k_sublist\.txt/ nocase ascii wide
@@ -31,7 +31,7 @@ rule AttackSurfaceMapper
         $string7 = /commonspeak_sublist\.txt/ nocase ascii wide
         // Description: AttackSurfaceMapper (ASM) is a reconnaissance tool that uses a mixture of open source intelligence and active techniques to expand the attack surface of your target
         // Reference: https://github.com/superhedgy/AttackSurfaceMapper
-        $string8 = /superhedgy\/AttackSurfaceMapper/ nocase ascii wide
+        $string8 = "superhedgy/AttackSurfaceMapper" nocase ascii wide
         // Description: AttackSurfaceMapper (ASM) is a reconnaissance tool that uses a mixture of open source intelligence and active techniques to expand the attack surface of your target
         // Reference: https://github.com/superhedgy/AttackSurfaceMapper
         $string9 = /top100_sublist\.txt/ nocase ascii wide

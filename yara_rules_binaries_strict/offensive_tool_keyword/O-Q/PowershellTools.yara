@@ -40,13 +40,13 @@ rule PowershellTools
         $string10 = /C\:\\Temp\\.{0,100}\-.{0,100}\.kirbi/ nocase ascii wide
         // Description: Powershell tools used for Red Team / Pentesting
         // Reference: https://github.com/gustanini/PowershellTools
-        $string11 = /Find\-ADInterestingACL\s/ nocase ascii wide
+        $string11 = "Find-ADInterestingACL " nocase ascii wide
         // Description: Powershell tools used for Red Team / Pentesting
         // Reference: https://github.com/gustanini/PowershellTools
         $string12 = /Find\-ADInterestingACL\.ps1/ nocase ascii wide
         // Description: Powershell tools used for Red Team / Pentesting
         // Reference: https://github.com/gustanini/PowershellTools
-        $string13 = /Get\-NestedGroupMembership\s/ nocase ascii wide
+        $string13 = "Get-NestedGroupMembership " nocase ascii wide
         // Description: Powershell tools used for Red Team / Pentesting
         // Reference: https://github.com/gustanini/PowershellTools
         $string14 = /Get\-NestedGroupMembership\.ps1/ nocase ascii wide
@@ -55,31 +55,31 @@ rule PowershellTools
         $string15 = /Get\-TrustTicket\.ps1/ nocase ascii wide
         // Description: Powershell tools used for Red Team / Pentesting
         // Reference: https://github.com/gustanini/PowershellTools
-        $string16 = /gustanini\/PowershellTools/ nocase ascii wide
+        $string16 = "gustanini/PowershellTools" nocase ascii wide
         // Description: Powershell tools used for Red Team / Pentesting
         // Reference: https://github.com/gustanini/PowershellTools
-        $string17 = /Invoke\-AccessCheck\s\-PSRemoting/ nocase ascii wide
+        $string17 = "Invoke-AccessCheck -PSRemoting" nocase ascii wide
         // Description: Powershell tools used for Red Team / Pentesting
         // Reference: https://github.com/gustanini/PowershellTools
-        $string18 = /Invoke\-AccessCheck\s\-SMB/ nocase ascii wide
+        $string18 = "Invoke-AccessCheck -SMB" nocase ascii wide
         // Description: Powershell tools used for Red Team / Pentesting
         // Reference: https://github.com/gustanini/PowershellTools
         $string19 = /Invoke\-AccessCheck\.ps1/ nocase ascii wide
         // Description: Powershell tools used for Red Team / Pentesting
         // Reference: https://github.com/gustanini/PowershellTools
-        $string20 = /kerberos\:\:golden\s\/service\:/ nocase ascii wide
+        $string20 = "kerberos::golden /service:" nocase ascii wide
         // Description: Powershell tools used for Red Team / Pentesting
         // Reference: https://github.com/gustanini/PowershellTools
         $string21 = /PowershellTools\-main\.zip/ nocase ascii wide
         // Description: Powershell tools used for Red Team / Pentesting
         // Reference: https://github.com/gustanini/PowershellTools
-        $string22 = /Set\-MacroSecurityOff\s/ nocase ascii wide
+        $string22 = "Set-MacroSecurityOff " nocase ascii wide
         // Description: Powershell tools used for Red Team / Pentesting
         // Reference: https://github.com/gustanini/PowershellTools
         $string23 = /Set\-MacroSecurityOff\.ps1/ nocase ascii wide
         // Description: Powershell tools used for Red Team / Pentesting
         // Reference: https://github.com/gustanini/PowershellTools
-        $string24 = /tgs\:\:ask\s\/tgt\:/ nocase ascii wide
+        $string24 = "tgs::ask /tgt:" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

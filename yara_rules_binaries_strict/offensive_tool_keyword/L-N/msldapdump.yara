@@ -25,7 +25,7 @@ rule msldapdump
         $string5 = /\.unconstrained\.txt/ nocase ascii wide
         // Description: LDAP enumeration tool implemented in Python3
         // Reference: https://github.com/dievus/msLDAPDump
-        $string6 = /\/msLDAPDump/ nocase ascii wide
+        $string6 = "/msLDAPDump" nocase ascii wide
         // Description: LDAP enumeration tool implemented in Python3
         // Reference: https://github.com/dievus/msLDAPDump
         $string7 = /msLDAPDump\.py/ nocase ascii wide

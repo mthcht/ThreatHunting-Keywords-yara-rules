@@ -10,7 +10,7 @@ rule MailPassView
     strings:
         // Description: Mail PassView is a small password-recovery tool that reveals the passwords and other account details for multiple email clients
         // Reference: https://www.nirsoft.net/utils/mailpv.html
-        $string1 = /HackTool\:Win32\/Passview\!MTB/ nocase ascii wide
+        $string1 = "HackTool:Win32/Passview!MTB" nocase ascii wide
 
     condition:
         any of them

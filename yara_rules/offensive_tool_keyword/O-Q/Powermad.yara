@@ -28,7 +28,7 @@ rule Powermad
         $string6 = /Powermad\.psm1/ nocase ascii wide
         // Description: PowerShell MachineAccountQuota and DNS exploit tools
         // Reference: https://github.com/Kevin-Robertson/Powermad
-        $string7 = /Powermad\-master/ nocase ascii wide
+        $string7 = "Powermad-master" nocase ascii wide
 
     condition:
         any of them

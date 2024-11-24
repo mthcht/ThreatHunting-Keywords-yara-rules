@@ -22,16 +22,16 @@ rule Nightmangle
         $string4 = /\[\+\]\sSeImpersonatePrivilege\senabled/ nocase ascii wide
         // Description: ightmangle is post-exploitation Telegram Command and Control (C2/C&C) Agent
         // Reference: https://github.com/1N73LL1G3NC3x/Nightmangle
-        $string5 = /1N73LL1G3NC3x\/Nightmangle/ nocase ascii wide
+        $string5 = "1N73LL1G3NC3x/Nightmangle" nocase ascii wide
         // Description: ightmangle is post-exploitation Telegram Command and Control (C2/C&C) Agent
         // Reference: https://github.com/1N73LL1G3NC3x/Nightmangle
-        $string6 = /BeaconInjectProcess/ nocase ascii wide
+        $string6 = "BeaconInjectProcess" nocase ascii wide
         // Description: ightmangle is post-exploitation Telegram Command and Control (C2/C&C) Agent
         // Reference: https://github.com/1N73LL1G3NC3x/Nightmangle
-        $string7 = /BeaconInjectTemporaryProcess/ nocase ascii wide
+        $string7 = "BeaconInjectTemporaryProcess" nocase ascii wide
         // Description: ightmangle is post-exploitation Telegram Command and Control (C2/C&C) Agent
         // Reference: https://github.com/1N73LL1G3NC3x/Nightmangle
-        $string8 = /Nightmangle\-master/ nocase ascii wide
+        $string8 = "Nightmangle-master" nocase ascii wide
 
     condition:
         any of them

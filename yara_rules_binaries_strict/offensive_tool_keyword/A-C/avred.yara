@@ -31,7 +31,7 @@ rule avred
         $string7 = /\/avredweb\.py\s/ nocase ascii wide
         // Description: Avred is being used to identify which parts of a file are identified by a Antivirus and tries to show as much possible information and context about each match.
         // Reference: https://github.com/dobin/avred
-        $string8 = /\/dobin\/avred/ nocase ascii wide
+        $string8 = "/dobin/avred" nocase ascii wide
         // Description: Avred is being used to identify which parts of a file are identified by a Antivirus and tries to show as much possible information and context about each match.
         // Reference: https://github.com/dobin/avred
         $string9 = /\\avred\.py/ nocase ascii wide

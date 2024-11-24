@@ -10,16 +10,16 @@ rule mitmproxy
     strings:
         // Description: An interactive. SSL-capable man-in-the-middle proxy for HTTP with a console interface
         // Reference: https://github.com/mitmproxy/mitmproxy
-        $string1 = /6870cfc153e4d1478d4a3907036f32b7ebb1183810375475a436debb584fd8d3/ nocase ascii wide
+        $string1 = "6870cfc153e4d1478d4a3907036f32b7ebb1183810375475a436debb584fd8d3" nocase ascii wide
         // Description: An interactive. SSL-capable man-in-the-middle proxy for HTTP with a console interface
         // Reference: https://github.com/mitmproxy/mitmproxy
-        $string2 = /mitmdump/ nocase ascii wide
+        $string2 = "mitmdump" nocase ascii wide
         // Description: An interactive. SSL-capable man-in-the-middle proxy for HTTP with a console interface
         // Reference: https://github.com/mitmproxy/mitmproxy
-        $string3 = /mitmproxy/ nocase ascii wide
+        $string3 = "mitmproxy" nocase ascii wide
         // Description: An interactive. SSL-capable man-in-the-middle proxy for HTTP with a console interface
         // Reference: https://github.com/mitmproxy/mitmproxy
-        $string4 = /mitmweb/ nocase ascii wide
+        $string4 = "mitmweb" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

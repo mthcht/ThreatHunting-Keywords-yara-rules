@@ -34,16 +34,16 @@ rule BesoToken
         $string8 = /\\BesoToken\.vcxproj/ nocase ascii wide
         // Description: A tool to Impersonate logged on users without touching LSASS (Including non-Interactive sessions).
         // Reference: https://github.com/OmriBaso/BesoToken
-        $string9 = /55A48A19\-1A5C\-4E0D\-A46A\-5DB04C1D8B03/ nocase ascii wide
+        $string9 = "55A48A19-1A5C-4E0D-A46A-5DB04C1D8B03" nocase ascii wide
         // Description: A tool to Impersonate logged on users without touching LSASS (Including non-Interactive sessions).
         // Reference: https://github.com/OmriBaso/BesoToken
         $string10 = /BesoToken\.exe\slist/ nocase ascii wide
         // Description: A tool to Impersonate logged on users without touching LSASS (Including non-Interactive sessions).
         // Reference: https://github.com/OmriBaso/BesoToken
-        $string11 = /BesoToken\-master/ nocase ascii wide
+        $string11 = "BesoToken-master" nocase ascii wide
         // Description: A tool to Impersonate logged on users without touching LSASS (Including non-Interactive sessions).
         // Reference: https://github.com/OmriBaso/BesoToken
-        $string12 = /OmriBaso\/BesoToken/ nocase ascii wide
+        $string12 = "OmriBaso/BesoToken" nocase ascii wide
 
     condition:
         any of them

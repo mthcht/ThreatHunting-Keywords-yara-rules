@@ -10,7 +10,7 @@ rule mRemoteNG_Decrypt
     strings:
         // Description: Python script to decrypt passwords stored by mRemoteNG
         // Reference: https://github.com/haseebT/mRemoteNG-Decrypt
-        $string1 = /\/mRemoteNG\-Decrypt/ nocase ascii wide
+        $string1 = "/mRemoteNG-Decrypt" nocase ascii wide
         // Description: Python script to decrypt passwords stored by mRemoteNG
         // Reference: https://github.com/haseebT/mRemoteNG-Decrypt
         $string2 = /mremoteng_decrypt\.py/ nocase ascii wide

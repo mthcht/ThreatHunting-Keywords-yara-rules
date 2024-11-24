@@ -37,10 +37,10 @@ rule Ammyy_Admin
         $string9 = /AA_v3\.exe.{0,100}\s\-service\s\-lunch/ nocase ascii wide
         // Description: Ammyy Admin is a remote desktop software application abudsed by attackers
         // Reference: https://www.ammyy.com
-        $string10 = /Ammyy\sAdmin/ nocase ascii wide
+        $string10 = "Ammyy Admin" nocase ascii wide
         // Description: Ammyy Admin is a remote desktop software application abudsed by attackers
         // Reference: https://www.ammyy.com
-        $string11 = /Ammyy\sLLC/ nocase ascii wide
+        $string11 = "Ammyy LLC" nocase ascii wide
         // Description: Ammyy Admin is a remote desktop software application abudsed by attackers
         // Reference: https://www.ammyy.com
         $string12 = /AMMYY_Admin\.exe/ nocase ascii wide

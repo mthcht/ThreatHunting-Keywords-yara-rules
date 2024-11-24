@@ -10,7 +10,7 @@ rule PyPagekite
     strings:
         // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
         // Reference: https://github.com/pagekite/PyPagekite
-        $string1 = /\sinstall\sxvnc4viewer\snetcat\-traditional\ssocat/ nocase ascii wide
+        $string1 = " install xvnc4viewer netcat-traditional socat" nocase ascii wide
         // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
         // Reference: https://github.com/pagekite/PyPagekite
         $string2 = /\spagekite\.logging/ nocase ascii wide
@@ -22,7 +22,7 @@ rule PyPagekite
         $string4 = /\spagekite\-gtk\.py/ nocase ascii wide
         // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
         // Reference: https://github.com/pagekite/PyPagekite
-        $string5 = /\"PageKite\ssystem\sservice\"/ nocase ascii wide
+        $string5 = "\"PageKite system service\"" nocase ascii wide
         // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
         // Reference: https://github.com/pagekite/PyPagekite
         $string6 = /\/etc\/pagekite\.d/ nocase ascii wide
@@ -58,13 +58,13 @@ rule PyPagekite
         $string16 = /\/PyPagekite\.git/ nocase ascii wide
         // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
         // Reference: https://github.com/pagekite/PyPagekite
-        $string17 = /\/PyPagekite\/tarball\// nocase ascii wide
+        $string17 = "/PyPagekite/tarball/" nocase ascii wide
         // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
         // Reference: https://github.com/pagekite/PyPagekite
-        $string18 = /\/PyPagekite\/zipball\// nocase ascii wide
+        $string18 = "/PyPagekite/zipball/" nocase ascii wide
         // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
         // Reference: https://github.com/pagekite/PyPagekite
-        $string19 = /\/var\/log\/pagekite\// nocase ascii wide
+        $string19 = "/var/log/pagekite/" nocase ascii wide
         // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
         // Reference: https://github.com/pagekite/PyPagekite
         $string20 = /\/var\/run\/pagekite\.pid/ nocase ascii wide
@@ -82,31 +82,31 @@ rule PyPagekite
         $string24 = /\\pagekite\-gtk\.py/ nocase ascii wide
         // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
         // Reference: https://github.com/pagekite/PyPagekite
-        $string25 = /23e8d0a95d5769ea14e4fd5eac6b5c111ce538e61b18492c21482afd015170eb/ nocase ascii wide
+        $string25 = "23e8d0a95d5769ea14e4fd5eac6b5c111ce538e61b18492c21482afd015170eb" nocase ascii wide
         // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
         // Reference: https://github.com/pagekite/PyPagekite
-        $string26 = /7270581d315cffb125f9ac64ebcb6622959c8e9f779b8a07808fd6929b0e746a/ nocase ascii wide
+        $string26 = "7270581d315cffb125f9ac64ebcb6622959c8e9f779b8a07808fd6929b0e746a" nocase ascii wide
         // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
         // Reference: https://github.com/pagekite/PyPagekite
-        $string27 = /7dc50c28dc7c2fa9a6ea80df35c06bd649b17ae86d333e88b3bf242ac5690c98/ nocase ascii wide
+        $string27 = "7dc50c28dc7c2fa9a6ea80df35c06bd649b17ae86d333e88b3bf242ac5690c98" nocase ascii wide
         // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
         // Reference: https://github.com/pagekite/PyPagekite
-        $string28 = /b01db099512e344df190ee405619399c835b1d5522e2e6faa8e47b49418bab66/ nocase ascii wide
+        $string28 = "b01db099512e344df190ee405619399c835b1d5522e2e6faa8e47b49418bab66" nocase ascii wide
         // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
         // Reference: https://github.com/pagekite/PyPagekite
-        $string29 = /be8fc36ec0082bdb7d20a21ae7098899529bc9b9f6439b1496ca634395598d8a/ nocase ascii wide
+        $string29 = "be8fc36ec0082bdb7d20a21ae7098899529bc9b9f6439b1496ca634395598d8a" nocase ascii wide
         // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
         // Reference: https://github.com/pagekite/PyPagekite
         $string30 = /bre\@pagekite\.net/ nocase ascii wide
         // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
         // Reference: https://github.com/pagekite/PyPagekite
-        $string31 = /c4ec5f4d04c44b7a1c8cf813435dbc66a541b450bbaca4d70ded985d6518e76a/ nocase ascii wide
+        $string31 = "c4ec5f4d04c44b7a1c8cf813435dbc66a541b450bbaca4d70ded985d6518e76a" nocase ascii wide
         // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
         // Reference: https://github.com/pagekite/PyPagekite
-        $string32 = /f16d1b7d69bf4c2a9a7e737809dd930012f419e7b7977887226f0f6859367cc4/ nocase ascii wide
+        $string32 = "f16d1b7d69bf4c2a9a7e737809dd930012f419e7b7977887226f0f6859367cc4" nocase ascii wide
         // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
         // Reference: https://github.com/pagekite/PyPagekite
-        $string33 = /f2fd6676dba233df558278e6be42cd4c50a78a9c3f879db87acfc96607f41331/ nocase ascii wide
+        $string33 = "f2fd6676dba233df558278e6be42cd4c50a78a9c3f879db87acfc96607f41331" nocase ascii wide
         // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
         // Reference: https://github.com/pagekite/PyPagekite
         $string34 = /http\:\/\/.{0,1000}\.pagekite\.me/ nocase ascii wide
@@ -145,7 +145,7 @@ rule PyPagekite
         $string45 = /pagekite\.py\slocalhost\:/ nocase ascii wide
         // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
         // Reference: https://github.com/pagekite/PyPagekite
-        $string46 = /pagekite\/PyPagekite/ nocase ascii wide
+        $string46 = "pagekite/PyPagekite" nocase ascii wide
 
     condition:
         any of them

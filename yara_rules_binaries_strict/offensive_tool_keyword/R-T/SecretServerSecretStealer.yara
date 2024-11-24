@@ -10,10 +10,10 @@ rule SecretServerSecretStealer
     strings:
         // Description: Powershell script that decrypts the data stored within a Thycotic Secret Server
         // Reference: https://github.com/denandz/SecretServerSecretStealer
-        $string1 = /\sLocal\:DPAPIDecrypt/ nocase ascii wide
+        $string1 = " Local:DPAPIDecrypt" nocase ascii wide
         // Description: Powershell script that decrypts the data stored within a Thycotic Secret Server
         // Reference: https://github.com/denandz/SecretServerSecretStealer
-        $string2 = /\sLocal\:LoadEncryptionDll/ nocase ascii wide
+        $string2 = " Local:LoadEncryptionDll" nocase ascii wide
         // Description: Powershell script that decrypts the data stored within a Thycotic Secret Server
         // Reference: https://github.com/denandz/SecretServerSecretStealer
         $string3 = /\sSecretStealer\.ps1/ nocase ascii wide
@@ -46,22 +46,22 @@ rule SecretServerSecretStealer
         $string12 = /\\thycotic_secretserver_dump\.rb/ nocase ascii wide
         // Description: Powershell script that decrypts the data stored within a Thycotic Secret Server
         // Reference: https://github.com/denandz/SecretServerSecretStealer
-        $string13 = /a36e3489d4317d70fd2cb100020b0c53d575988b790ec33c4c4d204e5e834016/ nocase ascii wide
+        $string13 = "a36e3489d4317d70fd2cb100020b0c53d575988b790ec33c4c4d204e5e834016" nocase ascii wide
         // Description: Powershell script that decrypts the data stored within a Thycotic Secret Server
         // Reference: https://github.com/denandz/SecretServerSecretStealer
         $string14 = /aes.{0,100}83fb558645767abb199755eafb4fbc5167113da8ee69f13267388dc3adcdb088/ nocase ascii wide
         // Description: Powershell script that decrypts the data stored within a Thycotic Secret Server
         // Reference: https://github.com/denandz/SecretServerSecretStealer
-        $string15 = /denandz\/SecretServerSecretStealer/ nocase ascii wide
+        $string15 = "denandz/SecretServerSecretStealer" nocase ascii wide
         // Description: Powershell script that decrypts the data stored within a Thycotic Secret Server
         // Reference: https://github.com/denandz/SecretServerSecretStealer
         $string16 = /Encryption\.config\svalues\sare\sencrypted\swith\sDPAPI\,\sdecrypting/ nocase ascii wide
         // Description: Powershell script that decrypts the data stored within a Thycotic Secret Server
         // Reference: https://github.com/denandz/SecretServerSecretStealer
-        $string17 = /Invoke\-SecretDecrypt/ nocase ascii wide
+        $string17 = "Invoke-SecretDecrypt" nocase ascii wide
         // Description: Powershell script that decrypts the data stored within a Thycotic Secret Server
         // Reference: https://github.com/denandz/SecretServerSecretStealer
-        $string18 = /Invoke\-SecretStealer/ nocase ascii wide
+        $string18 = "Invoke-SecretStealer" nocase ascii wide
         // Description: Powershell script that decrypts the data stored within a Thycotic Secret Server
         // Reference: https://github.com/denandz/SecretServerSecretStealer
         $string19 = /xor.{0,100}8200ab18b1a1965f1759c891e87bc32f208843331d83195c21ee03148b531a0e/ nocase ascii wide

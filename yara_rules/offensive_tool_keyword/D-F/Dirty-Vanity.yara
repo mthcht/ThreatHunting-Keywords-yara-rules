@@ -10,7 +10,7 @@ rule Dirty_Vanity
     strings:
         // Description: injection technique abusing windows fork API to evade EDRs
         // Reference: https://github.com/deepinstinct/Dirty-Vanity
-        $string1 = /\#include\s\"DirtyVanity\.h\"/ nocase ascii wide
+        $string1 = /\#include\s\\"DirtyVanity\.h\\"/ nocase ascii wide
         // Description: injection technique abusing windows fork API to evade EDRs
         // Reference: https://github.com/deepinstinct/Dirty-Vanity
         $string2 = /\/Dirty\-Vanity\.git/ nocase ascii wide
@@ -43,22 +43,22 @@ rule Dirty_Vanity
         $string11 = /\\vanity\.exe/ nocase ascii wide
         // Description: injection technique abusing windows fork API to evade EDRs
         // Reference: https://github.com/deepinstinct/Dirty-Vanity
-        $string12 = /2C809982\-78A1\-4F1C\-B0E8\-C957C93B242F/ nocase ascii wide
+        $string12 = "2C809982-78A1-4F1C-B0E8-C957C93B242F" nocase ascii wide
         // Description: injection technique abusing windows fork API to evade EDRs
         // Reference: https://github.com/deepinstinct/Dirty-Vanity
-        $string13 = /2d837b6c7343aec8123077db07d3fb8f9f7e44c5b108bf713380b17dac7569b9/ nocase ascii wide
+        $string13 = "2d837b6c7343aec8123077db07d3fb8f9f7e44c5b108bf713380b17dac7569b9" nocase ascii wide
         // Description: injection technique abusing windows fork API to evade EDRs
         // Reference: https://github.com/deepinstinct/Dirty-Vanity
-        $string14 = /53891DF6\-3F6D\-DE4B\-A8CD\-D89E94D0C8CD/ nocase ascii wide
+        $string14 = "53891DF6-3F6D-DE4B-A8CD-D89E94D0C8CD" nocase ascii wide
         // Description: injection technique abusing windows fork API to evade EDRs
         // Reference: https://github.com/deepinstinct/Dirty-Vanity
-        $string15 = /deepinstinct\/Dirty\-Vanity/ nocase ascii wide
+        $string15 = "deepinstinct/Dirty-Vanity" nocase ascii wide
         // Description: injection technique abusing windows fork API to evade EDRs
         // Reference: https://github.com/deepinstinct/Dirty-Vanity
         $string16 = /DirtyVanity\.exe/ nocase ascii wide
         // Description: injection technique abusing windows fork API to evade EDRs
         // Reference: https://github.com/deepinstinct/Dirty-Vanity
-        $string17 = /e977ee0a5a2f0063f34b0b744b0753e65990e9467843b0dec3c281a6d4a2e009/ nocase ascii wide
+        $string17 = "e977ee0a5a2f0063f34b0b744b0753e65990e9467843b0dec3c281a6d4a2e009" nocase ascii wide
 
     condition:
         any of them

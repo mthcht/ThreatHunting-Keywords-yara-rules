@@ -70,25 +70,25 @@ rule OffensiveCpp
         $string20 = /\]\sInjecting\sinto\sremote\sprocess\susing\sdirect\ssyscalls/ nocase ascii wide
         // Description: C/C++ snippets that can be handy in specific offensive scenarios
         // Reference: https://github.com/lsecqt/OffensiveCpp
-        $string21 = /a8944d1ff8c72e68ca1bb55dad84aae6cb7d4cbcc92d442dc8497c8949a96adc/ nocase ascii wide
+        $string21 = "a8944d1ff8c72e68ca1bb55dad84aae6cb7d4cbcc92d442dc8497c8949a96adc" nocase ascii wide
         // Description: C/C++ snippets that can be handy in specific offensive scenarios
         // Reference: https://github.com/lsecqt/OffensiveCpp
-        $string22 = /d3366dc09c1ec4e93c9a40f4de0f96088786b6fb44b3fafb3d648a4b6342b596/ nocase ascii wide
+        $string22 = "d3366dc09c1ec4e93c9a40f4de0f96088786b6fb44b3fafb3d648a4b6342b596" nocase ascii wide
         // Description: C/C++ snippets that can be handy in specific offensive scenarios
         // Reference: https://github.com/lsecqt/OffensiveCpp
-        $string23 = /fbb4a1a49a0683247e83da8d2ccd4bdab51516a0a5cacbf6ff759213792e58e2/ nocase ascii wide
+        $string23 = "fbb4a1a49a0683247e83da8d2ccd4bdab51516a0a5cacbf6ff759213792e58e2" nocase ascii wide
         // Description: C/C++ snippets that can be handy in specific offensive scenarios
         // Reference: https://github.com/lsecqt/OffensiveCpp
         $string24 = /If\sno\sprocess\sprovided\,\sit\swill\sattempt\sto\sinject\sinto\sexplorer\.exe/ nocase ascii wide
         // Description: C/C++ snippets that can be handy in specific offensive scenarios
         // Reference: https://github.com/lsecqt/OffensiveCpp
-        $string25 = /JohnWoodman\/stealthInjector/ nocase ascii wide
+        $string25 = "JohnWoodman/stealthInjector" nocase ascii wide
         // Description: C/C++ snippets that can be handy in specific offensive scenarios
         // Reference: https://github.com/lsecqt/OffensiveCpp
-        $string26 = /lsecqt\/OffensiveCpp/ nocase ascii wide
+        $string26 = "lsecqt/OffensiveCpp" nocase ascii wide
         // Description: C/C++ snippets that can be handy in specific offensive scenarios
         // Reference: https://github.com/lsecqt/OffensiveCpp
-        $string27 = /No\ssandbox\-indicative\sDLLs\swere\sdiscovered\sloaded\sin\sany\saccessible\srunning\sprocess/ nocase ascii wide
+        $string27 = "No sandbox-indicative DLLs were discovered loaded in any accessible running process" nocase ascii wide
         // Description: C/C++ snippets that can be handy in specific offensive scenarios
         // Reference: https://github.com/lsecqt/OffensiveCpp
         $string28 = /thread\-injector\.exe\s/ nocase ascii wide

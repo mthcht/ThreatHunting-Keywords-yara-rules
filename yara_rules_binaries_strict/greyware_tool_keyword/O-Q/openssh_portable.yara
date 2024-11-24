@@ -25,10 +25,10 @@ rule openssh_portable
         $string5 = /install\-sshd\.ps1/ nocase ascii wide
         // Description: monitoring openssh usage
         // Reference: https://github.com/PowerShell/openssh-portable
-        $string6 = /net\sstart\sssh\-agent/ nocase ascii wide
+        $string6 = "net start ssh-agent" nocase ascii wide
         // Description: monitoring openssh usage
         // Reference: https://github.com/PowerShell/openssh-portable
-        $string7 = /New\-Service\s\-Name\ssshd/ nocase ascii wide
+        $string7 = "New-Service -Name sshd" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

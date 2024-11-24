@@ -22,7 +22,7 @@ rule Zloader
         $string4 = /powershell\sInvoke\-WebRequest\shttp.{0,1000}\.bat\s/ nocase ascii wide
         // Description: Zloader Installs Remote Access Backdoors and Delivers Cobalt Strike
         // Reference: https://www.mcafee.com/blogs/other-blogs/mcafee-labs/zloader-with-a-new-infection-technique/
-        $string5 = /Zloader\-FCVP/ nocase ascii wide
+        $string5 = "Zloader-FCVP" nocase ascii wide
         // Description: Zloader Installs Remote Access Backdoors and Delivers Cobalt Strike
         // Reference: https://news.sophos.com/en-us/2022/01/19/zloader-installs-remote-access-backdoors-and-delivers-cobalt-strike/
         $string6 = /zoom1\.msi\.gpg/ nocase ascii wide

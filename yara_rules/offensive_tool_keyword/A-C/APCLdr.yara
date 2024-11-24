@@ -16,7 +16,7 @@ rule APCLdr
         $string2 = /\\APCLdr\./ nocase ascii wide
         // Description: APCLdr: Payload Loader With Evasion Features
         // Reference: https://github.com/NUL0x4C/APCLdr
-        $string3 = /NUL0x4C\/APCLdr/ nocase ascii wide
+        $string3 = "NUL0x4C/APCLdr" nocase ascii wide
 
     condition:
         any of them

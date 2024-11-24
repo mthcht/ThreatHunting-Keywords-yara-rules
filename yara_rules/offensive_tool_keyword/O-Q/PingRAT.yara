@@ -22,7 +22,7 @@ rule PingRAT
         $string4 = /PingRAT\.exe/ nocase ascii wide
         // Description: secretly passes Command and Control (C2) traffic through firewalls using ICMP payloads
         // Reference: https://github.com/umutcamliyurt/PingRAT
-        $string5 = /umutcamliyurt\/PingRAT/ nocase ascii wide
+        $string5 = "umutcamliyurt/PingRAT" nocase ascii wide
 
     condition:
         any of them

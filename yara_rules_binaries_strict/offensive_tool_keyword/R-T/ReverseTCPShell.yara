@@ -10,19 +10,19 @@ rule ReverseTCPShell
     strings:
         // Description: PowerShell ReverseTCP Shell - Framework
         // Reference: https://github.com/ZHacker13/ReverseTCPShell
-        $string1 = /\/ReverseTCPShell/ nocase ascii wide
+        $string1 = "/ReverseTCPShell" nocase ascii wide
         // Description: PowerShell ReverseTCP Shell - Framework
         // Reference: https://github.com/ZHacker13/ReverseTCPShell
-        $string2 = /function\sBase64_Obfuscation/ nocase ascii wide
+        $string2 = "function Base64_Obfuscation" nocase ascii wide
         // Description: PowerShell ReverseTCP Shell - Framework
         // Reference: https://github.com/ZHacker13/ReverseTCPShell
-        $string3 = /function\sBXOR_Obfuscation/ nocase ascii wide
+        $string3 = "function BXOR_Obfuscation" nocase ascii wide
         // Description: PowerShell ReverseTCP Shell - Framework
         // Reference: https://github.com/ZHacker13/ReverseTCPShell
         $string4 = /ReverseTCP\.ps1/ nocase ascii wide
         // Description: PowerShell ReverseTCP Shell - Framework
         // Reference: https://github.com/ZHacker13/ReverseTCPShell
-        $string5 = /ReverseTCPShell\-main/ nocase ascii wide
+        $string5 = "ReverseTCPShell-main" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

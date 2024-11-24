@@ -10,7 +10,7 @@ rule SilentHound
     strings:
         // Description: Quietly enumerate an Active Directory Domain via LDAP parsing users + admins + groups...
         // Reference: https://github.com/layer8secure/SilentHound
-        $string1 = /\s\-k\s\-\-kerberoast/ nocase ascii wide
+        $string1 = " -k --kerberoast" nocase ascii wide
         // Description: Quietly enumerate an Active Directory Domain via LDAP parsing users + admins + groups...
         // Reference: https://github.com/layer8secure/SilentHound
         $string2 = /\/SilentHound\.git/ nocase ascii wide
@@ -19,16 +19,16 @@ rule SilentHound
         $string3 = /\-domain_admins\.txt/ nocase ascii wide
         // Description: Quietly enumerate an Active Directory Domain via LDAP parsing users + admins + groups...
         // Reference: https://github.com/layer8secure/SilentHound
-        $string4 = /layer8secure\/SilentHound/ nocase ascii wide
+        $string4 = "layer8secure/SilentHound" nocase ascii wide
         // Description: Quietly enumerate an Active Directory Domain via LDAP parsing users + admins + groups...
         // Reference: https://github.com/layer8secure/SilentHound
-        $string5 = /Nick\sSwink\saka\sc0rnbread/ nocase ascii wide
+        $string5 = "Nick Swink aka c0rnbread" nocase ascii wide
         // Description: Quietly enumerate an Active Directory Domain via LDAP parsing users + admins + groups...
         // Reference: https://github.com/layer8secure/SilentHound
         $string6 = /silenthound\.py/ nocase ascii wide
         // Description: Quietly enumerate an Active Directory Domain via LDAP parsing users + admins + groups...
         // Reference: https://github.com/layer8secure/SilentHound
-        $string7 = /SilentHound\-main/ nocase ascii wide
+        $string7 = "SilentHound-main" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

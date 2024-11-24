@@ -13,19 +13,19 @@ rule NimExec
         $string1 = /\/NimExec\.git/ nocase ascii wide
         // Description: Fileless Command Execution for Lateral Movement in Nim
         // Reference: https://github.com/frkngksl/NimExec
-        $string2 = /123abcbde966780cef8d9ec24523acac/ nocase ascii wide
+        $string2 = "123abcbde966780cef8d9ec24523acac" nocase ascii wide
         // Description: Fileless Command Execution for Lateral Movement in Nim
         // Reference: https://github.com/frkngksl/NimExec
         $string3 = /cmd\.exe\s\/c\s.{0,100}echo\stest\s\>\sC\:\\Users\\Public\\test\.txt/ nocase ascii wide
         // Description: Fileless Command Execution for Lateral Movement in Nim
         // Reference: https://github.com/frkngksl/NimExec
-        $string4 = /frkngksl\/NimExec/ nocase ascii wide
+        $string4 = "frkngksl/NimExec" nocase ascii wide
         // Description: Fileless Command Execution for Lateral Movement in Nim
         // Reference: https://github.com/frkngksl/NimExec
         $string5 = /NimExec\.exe/ nocase ascii wide
         // Description: Fileless Command Execution for Lateral Movement in Nim
         // Reference: https://github.com/frkngksl/NimExec
-        $string6 = /NimExec\-master/ nocase ascii wide
+        $string6 = "NimExec-master" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

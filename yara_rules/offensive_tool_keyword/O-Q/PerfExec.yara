@@ -19,7 +19,7 @@ rule PerfExec
         $string3 = /\\PerfExec\.exe/ nocase ascii wide
         // Description: PerfExec - an example performance dll that will run CMD.exe and a .NET assembly that will execute the DLL or gather performance data locally or remotely.
         // Reference: https://github.com/0xthirteen/PerfExec
-        $string4 = /0xthirteen\/PerfExec/ nocase ascii wide
+        $string4 = "0xthirteen/PerfExec" nocase ascii wide
         // Description: PerfExec - an example performance dll that will run CMD.exe and a .NET assembly that will execute the DLL or gather performance data locally or remotely.
         // Reference: https://github.com/0xthirteen/PerfExec
         $string5 = /PerfExec\.sln/ nocase ascii wide

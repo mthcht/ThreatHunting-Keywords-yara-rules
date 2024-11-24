@@ -10,7 +10,7 @@ rule RecycledInjector
     strings:
         // Description: Native Syscalls Shellcode Injector
         // Reference: https://github.com/florylsk/RecycledInjector
-        $string1 = /\/RecycledInjector/ nocase ascii wide
+        $string1 = "/RecycledInjector" nocase ascii wide
         // Description: Native Syscalls Shellcode Injector
         // Reference: https://github.com/florylsk/RecycledInjector
         $string2 = /\/RecycledInjector\.git/ nocase ascii wide
@@ -31,10 +31,10 @@ rule RecycledInjector
         $string7 = /RecycledInjector\.exe/ nocase ascii wide
         // Description: Native Syscalls Shellcode Injector
         // Reference: https://github.com/florylsk/RecycledInjector
-        $string8 = /RecycledInjector\-main/ nocase ascii wide
+        $string8 = "RecycledInjector-main" nocase ascii wide
         // Description: Native Syscalls Shellcode Injector
         // Reference: https://github.com/florylsk/RecycledInjector
-        $string9 = /RecycledInjector\-main/ nocase ascii wide
+        $string9 = "RecycledInjector-main" nocase ascii wide
 
     condition:
         any of them

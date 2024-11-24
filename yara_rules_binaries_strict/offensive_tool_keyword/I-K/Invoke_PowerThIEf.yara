@@ -10,7 +10,7 @@ rule Invoke_PowerThIEf
     strings:
         // Description: An IE Post Exploitation Library released at Steelcon in Sheffield 7th July 2018.
         // Reference: https://github.com/nettitude/Invoke-PowerThIEf
-        $string1 = /Invoke\-PowerThIEf/ nocase ascii wide
+        $string1 = "Invoke-PowerThIEf" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

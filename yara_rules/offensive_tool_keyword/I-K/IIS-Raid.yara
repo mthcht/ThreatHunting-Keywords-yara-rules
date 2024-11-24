@@ -13,7 +13,7 @@ rule IIS_Raid
         $string1 = /\siis_controller\.py/ nocase ascii wide
         // Description: A native backdoor module for Microsoft IIS
         // Reference: https://github.com/0x09AL/IIS-Raid
-        $string2 = /\s\-\-url\s\-\-password\sSIMPLEPASS/ nocase ascii wide
+        $string2 = " --url --password SIMPLEPASS" nocase ascii wide
         // Description: A native backdoor module for Microsoft IIS
         // Reference: https://github.com/0x09AL/IIS-Raid
         $string3 = /\/iis_controller\.py/ nocase ascii wide
@@ -31,16 +31,16 @@ rule IIS_Raid
         $string7 = /\\Windows\\Temp\\creds\.db/ nocase ascii wide
         // Description: A native backdoor module for Microsoft IIS
         // Reference: https://github.com/0x09AL/IIS-Raid
-        $string8 = /0x09AL\/IIS\-Raid/ nocase ascii wide
+        $string8 = "0x09AL/IIS-Raid" nocase ascii wide
         // Description: A native backdoor module for Microsoft IIS
         // Reference: https://github.com/0x09AL/IIS-Raid
-        $string9 = /B5E39D15\-9678\-474A\-9838\-4C720243968B/ nocase ascii wide
+        $string9 = "B5E39D15-9678-474A-9838-4C720243968B" nocase ascii wide
         // Description: A native backdoor module for Microsoft IIS
         // Reference: https://github.com/0x09AL/IIS-Raid
         $string10 = /IIS\-Backdoor\./ nocase ascii wide
         // Description: A native backdoor module for Microsoft IIS
         // Reference: https://github.com/0x09AL/IIS-Raid
-        $string11 = /IIS\-Raid\-master/ nocase ascii wide
+        $string11 = "IIS-Raid-master" nocase ascii wide
         // Description: A native backdoor module for Microsoft IIS
         // Reference: https://github.com/0x09AL/IIS-Raid
         $string12 = /Inject\sshellcode\son\sthe\sserver\.\\\\nUsage\:\sinject/ nocase ascii wide

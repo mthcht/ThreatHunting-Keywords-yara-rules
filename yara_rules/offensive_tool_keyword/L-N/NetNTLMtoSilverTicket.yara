@@ -25,7 +25,7 @@ rule NetNTLMtoSilverTicket
         $string5 = /\/dementor\.py/ nocase ascii wide
         // Description: Obtaining NetNTLMv1 Challenge/Response authentication - cracking those to NTLM Hashes and using that NTLM Hash to sign a Kerberos Silver ticket.
         // Reference: https://github.com/NotMedic/NetNTLMtoSilverTicket
-        $string6 = /\/NetNTLMtoSilverTicket/ nocase ascii wide
+        $string6 = "/NetNTLMtoSilverTicket" nocase ascii wide
         // Description: Obtaining NetNTLMv1 Challenge/Response authentication - cracking those to NTLM Hashes and using that NTLM Hash to sign a Kerberos Silver ticket.
         // Reference: https://github.com/NotMedic/NetNTLMtoSilverTicket
         $string7 = /\/rpcdump\.py/ nocase ascii wide
@@ -43,10 +43,10 @@ rule NetNTLMtoSilverTicket
         $string11 = /\\rpcdump\.py/ nocase ascii wide
         // Description: Obtaining NetNTLMv1 Challenge/Response authentication - cracking those to NTLM Hashes and using that NTLM Hash to sign a Kerberos Silver ticket.
         // Reference: https://github.com/NotMedic/NetNTLMtoSilverTicket
-        $string12 = /a8421a872b4c4eccc02a0ebb623f9ecc2991e949e4134fc184ca1822da0e5c4c/ nocase ascii wide
+        $string12 = "a8421a872b4c4eccc02a0ebb623f9ecc2991e949e4134fc184ca1822da0e5c4c" nocase ascii wide
         // Description: Obtaining NetNTLMv1 Challenge/Response authentication - cracking those to NTLM Hashes and using that NTLM Hash to sign a Kerberos Silver ticket.
         // Reference: https://github.com/NotMedic/NetNTLMtoSilverTicket
-        $string13 = /dementor\s\-\srough\sPoC\sto\sconnect\sto\sspoolss\sto\selicit\smachine\saccount\sauthentication\s/ nocase ascii wide
+        $string13 = "dementor - rough PoC to connect to spoolss to elicit machine account authentication " nocase ascii wide
         // Description: Obtaining NetNTLMv1 Challenge/Response authentication - cracking those to NTLM Hashes and using that NTLM Hash to sign a Kerberos Silver ticket.
         // Reference: https://github.com/NotMedic/NetNTLMtoSilverTicket
         $string14 = /dementor\.py\s\-d\s.{0,1000}\s\-u\s.{0,1000}\s\-p\s/ nocase ascii wide
@@ -61,7 +61,7 @@ rule NetNTLMtoSilverTicket
         $string17 = /NetNTLMtoSilverTicket\.git/ nocase ascii wide
         // Description: Obtaining NetNTLMv1 Challenge/Response authentication - cracking those to NTLM Hashes and using that NTLM Hash to sign a Kerberos Silver ticket.
         // Reference: https://github.com/NotMedic/NetNTLMtoSilverTicket
-        $string18 = /NetNTLMtoSilverTicket\-master/ nocase ascii wide
+        $string18 = "NetNTLMtoSilverTicket-master" nocase ascii wide
         // Description: Obtaining NetNTLMv1 Challenge/Response authentication - cracking those to NTLM Hashes and using that NTLM Hash to sign a Kerberos Silver ticket.
         // Reference: https://github.com/NotMedic/NetNTLMtoSilverTicket
         $string19 = /ntlmv1\.py\s\-\-ntlmv1\s.{0,1000}\:\:/ nocase ascii wide

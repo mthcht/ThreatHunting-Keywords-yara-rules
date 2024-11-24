@@ -52,7 +52,7 @@ rule Supernova
         $string14 = /build\sSupernova\.go/ nocase ascii wide
         // Description: securely encrypt raw shellcodes
         // Reference: https://github.com/nickvourd/Supernova
-        $string15 = /nickvourd\/Supernova/ nocase ascii wide
+        $string15 = "nickvourd/Supernova" nocase ascii wide
         // Description: securely encrypt raw shellcodes
         // Reference: https://github.com/nickvourd/Supernova
         $string16 = /Supernova\.exe\s\-/ nocase ascii wide

@@ -40,37 +40,37 @@ rule RDP_Recognizer
         $string10 = /\>1047\@exploit\.im\</ nocase ascii wide
         // Description: could be used to brute force RDP passwords or check for RDP vulnerabilities
         // Reference: https://www.virustotal.com/gui/file/74788c34f3606e482ad28752c14550dc469bb0c04fa72e184a1e457613c2e4f6/details
-        $string11 = /\>Penetration\stest\stool\</ nocase ascii wide
+        $string11 = ">Penetration test tool<" nocase ascii wide
         // Description: could be used to brute force RDP passwords or check for RDP vulnerabilities
         // Reference: https://www.virustotal.com/gui/file/74788c34f3606e482ad28752c14550dc469bb0c04fa72e184a1e457613c2e4f6/details
-        $string12 = /\>RDP\sRecognizer\</ nocase ascii wide
+        $string12 = ">RDP Recognizer<" nocase ascii wide
         // Description: could be used to brute force RDP passwords or check for RDP vulnerabilities
         // Reference: https://www.virustotal.com/gui/file/74788c34f3606e482ad28752c14550dc469bb0c04fa72e184a1e457613c2e4f6/details
-        $string13 = /1e05c9543989d8f9034dcd87f662ef8319c624a1988b800ad77676f55a2bc538/ nocase ascii wide
+        $string13 = "1e05c9543989d8f9034dcd87f662ef8319c624a1988b800ad77676f55a2bc538" nocase ascii wide
         // Description: could be used to brute force RDP passwords or check for RDP vulnerabilities
         // Reference: https://www.virustotal.com/gui/file/74788c34f3606e482ad28752c14550dc469bb0c04fa72e184a1e457613c2e4f6/details
-        $string14 = /491919ffbf3bf3ba309a98d7dce8c3b04e4f269faedd59f57ec1943efe668254/ nocase ascii wide
+        $string14 = "491919ffbf3bf3ba309a98d7dce8c3b04e4f269faedd59f57ec1943efe668254" nocase ascii wide
         // Description: could be used to brute force RDP passwords or check for RDP vulnerabilities
         // Reference: https://www.virustotal.com/gui/file/74788c34f3606e482ad28752c14550dc469bb0c04fa72e184a1e457613c2e4f6/details
-        $string15 = /55d8c97ec4476f7ada4f2991de85f6ddb973ac4634dc0a08e2c731d75c5700b3/ nocase ascii wide
+        $string15 = "55d8c97ec4476f7ada4f2991de85f6ddb973ac4634dc0a08e2c731d75c5700b3" nocase ascii wide
         // Description: could be used to brute force RDP passwords or check for RDP vulnerabilities
         // Reference: https://www.virustotal.com/gui/file/74788c34f3606e482ad28752c14550dc469bb0c04fa72e184a1e457613c2e4f6/details
-        $string16 = /74788c34f3606e482ad28752c14550dc469bb0c04fa72e184a1e457613c2e4f6/ nocase ascii wide
+        $string16 = "74788c34f3606e482ad28752c14550dc469bb0c04fa72e184a1e457613c2e4f6" nocase ascii wide
         // Description: could be used to brute force RDP passwords or check for RDP vulnerabilities
         // Reference: https://www.virustotal.com/gui/file/74788c34f3606e482ad28752c14550dc469bb0c04fa72e184a1e457613c2e4f6/details
-        $string17 = /ac0eb86fafd0ca2e1450238cfb023c1c82b6d24fec249623ff1d0e161b7727c6/ nocase ascii wide
+        $string17 = "ac0eb86fafd0ca2e1450238cfb023c1c82b6d24fec249623ff1d0e161b7727c6" nocase ascii wide
         // Description: could be used to brute force RDP passwords or check for RDP vulnerabilities
         // Reference: https://www.virustotal.com/gui/file/74788c34f3606e482ad28752c14550dc469bb0c04fa72e184a1e457613c2e4f6/details
-        $string18 = /ac0eb86fafd0ca2e1450238cfb023c1c82b6d24fec249623ff1d0e161b7727c6/ nocase ascii wide
+        $string18 = "ac0eb86fafd0ca2e1450238cfb023c1c82b6d24fec249623ff1d0e161b7727c6" nocase ascii wide
         // Description: could be used to brute force RDP passwords or check for RDP vulnerabilities
         // Reference: https://www.virustotal.com/gui/file/74788c34f3606e482ad28752c14550dc469bb0c04fa72e184a1e457613c2e4f6/details
-        $string19 = /attrib\s\+r\s\+a\s\+s\s\+h\s\"\%PROGRAMFILES\%\\Media\splayer\"\s\/S\s\/D/ nocase ascii wide
+        $string19 = /attrib\s\+r\s\+a\s\+s\s\+h\s\\"\%PROGRAMFILES\%\\Media\splayer\\"\s\/S\s\/D/ nocase ascii wide
         // Description: could be used to brute force RDP passwords or check for RDP vulnerabilities
         // Reference: https://www.virustotal.com/gui/file/74788c34f3606e482ad28752c14550dc469bb0c04fa72e184a1e457613c2e4f6/details
-        $string20 = /RDP\sRecognizer\sLogin\sParser/ nocase ascii wide
+        $string20 = "RDP Recognizer Login Parser" nocase ascii wide
         // Description: could be used to brute force RDP passwords or check for RDP vulnerabilities
         // Reference: https://www.virustotal.com/gui/file/74788c34f3606e482ad28752c14550dc469bb0c04fa72e184a1e457613c2e4f6/details
-        $string21 = /reg\sdelete\s\"HKLM\\SYSTEM\\Remote\sManipulator\sSystem\"\s\/f/ nocase ascii wide
+        $string21 = /reg\sdelete\s\\"HKLM\\SYSTEM\\Remote\sManipulator\sSystem\\"\s\/f/ nocase ascii wide
         // Description: could be used to brute force RDP passwords or check for RDP vulnerabilities
         // Reference: https://www.virustotal.com/gui/file/74788c34f3606e482ad28752c14550dc469bb0c04fa72e184a1e457613c2e4f6/details
         $string22 = /taskkill\s\/f\s\/im\srfusclient\.exe/ nocase ascii wide

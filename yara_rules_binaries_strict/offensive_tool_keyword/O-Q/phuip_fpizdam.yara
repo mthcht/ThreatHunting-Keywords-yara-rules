@@ -10,7 +10,7 @@ rule phuip_fpizdam
     strings:
         // Description: This is an exploit for a bug in php-fpm (CVE-2019-11043). In certain nginx + php-fpm configurations. the bug is possible to trigger from the outside. This means that a web user may get code execution if you have vulnerable config (see below).
         // Reference: https://github.com/neex/phuip-fpizdam
-        $string1 = /phuip\-fpizdam/ nocase ascii wide
+        $string1 = "phuip-fpizdam" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

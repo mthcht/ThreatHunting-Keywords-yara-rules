@@ -10,7 +10,7 @@ rule ridrelay
     strings:
         // Description: Quick and easy way to get domain usernames while on an internal network.
         // Reference: https://github.com/skorov/ridrelay
-        $string1 = /ridrelay/ nocase ascii wide
+        $string1 = "ridrelay" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

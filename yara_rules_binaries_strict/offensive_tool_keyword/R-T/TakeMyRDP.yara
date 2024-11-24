@@ -10,13 +10,13 @@ rule TakeMyRDP
     strings:
         // Description: A keystroke logger targeting the Remote Desktop Protocol (RDP) related processes
         // Reference: https://github.com/TheD1rkMtr/TakeMyRDP
-        $string1 = /\/TakeMyRDP/ nocase ascii wide
+        $string1 = "/TakeMyRDP" nocase ascii wide
         // Description: A keystroke logger targeting the Remote Desktop Protocol (RDP) related processes
         // Reference: https://github.com/TheD1rkMtr/TakeMyRDP
         $string2 = /\\TakeMyRDP/ nocase ascii wide
         // Description: A keystroke logger targeting the Remote Desktop Protocol (RDP) related processes
         // Reference: https://github.com/TheD1rkMtr/TakeMyRDP
-        $string3 = /3C601672\-7389\-42B2\-B5C9\-059846E1DA88/ nocase ascii wide
+        $string3 = "3C601672-7389-42B2-B5C9-059846E1DA88" nocase ascii wide
         // Description: An updated version of keystroke logger targeting the Remote Desktop Protocol (RDP) related processes
         // Reference: https://github.com/nocerainfosec/TakeMyRDP2.0
         $string4 = /TakeMyRDP.{0,100}logfile\.txt/ nocase ascii wide
@@ -43,7 +43,7 @@ rule TakeMyRDP
         $string11 = /TakeMyRDP2\.0/ nocase ascii wide
         // Description: A keystroke logger targeting the Remote Desktop Protocol (RDP) related processes
         // Reference: https://github.com/TheD1rkMtr/TakeMyRDP
-        $string12 = /TakeMyRDP\-main/ nocase ascii wide
+        $string12 = "TakeMyRDP-main" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

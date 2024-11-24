@@ -13,7 +13,7 @@ rule sccmhunter
         $string1 = /\.sccmhunter/ nocase ascii wide
         // Description: SCCMHunter is a post-ex tool built to streamline identifying profiling and attacking SCCM related assets in an Active Directory domain
         // Reference: https://github.com/garrettfoster13/sccmhunter
-        $string2 = /\/sccmhunter/ nocase ascii wide
+        $string2 = "/sccmhunter" nocase ascii wide
         // Description: SCCMHunter is a post-ex tool built to streamline identifying profiling and attacking SCCM related assets in an Active Directory domain
         // Reference: https://github.com/garrettfoster13/sccmhunter
         $string3 = /cmpivot\.py/ nocase ascii wide

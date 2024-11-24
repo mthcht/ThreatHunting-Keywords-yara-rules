@@ -19,10 +19,10 @@ rule linux_pam_backdoor
         $string3 = /backdoor\.sh\s\-v\s.{0,100}\s\-p\s/ nocase ascii wide
         // Description: Linux PAM Backdoor
         // Reference: https://github.com/zephrax/linux-pam-backdoor
-        $string4 = /linux\-pam\-backdoor\-master/ nocase ascii wide
+        $string4 = "linux-pam-backdoor-master" nocase ascii wide
         // Description: Linux PAM Backdoor
         // Reference: https://github.com/zephrax/linux-pam-backdoor
-        $string5 = /zephrax\/linux\-pam\-backdoor/ nocase ascii wide
+        $string5 = "zephrax/linux-pam-backdoor" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

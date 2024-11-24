@@ -10,7 +10,7 @@ rule Ghostpack_CompiledBinaries
     strings:
         // Description: Compiled Binaries for Ghostpack
         // Reference: https://github.com/r3motecontrol/Ghostpack-CompiledBinaries
-        $string1 = /Ghostpack\-CompiledBinaries/ nocase ascii wide
+        $string1 = "Ghostpack-CompiledBinaries" nocase ascii wide
         // Description: Compiled Binaries for Ghostpack
         // Reference: https://github.com/r3motecontrol/Ghostpack-CompiledBinaries
         $string2 = /RestrictedAdmin\.exe/ nocase ascii wide

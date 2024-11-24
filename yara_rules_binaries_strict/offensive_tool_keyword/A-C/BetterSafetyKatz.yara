@@ -10,52 +10,52 @@ rule BetterSafetyKatz
     strings:
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string1 = /aHR0cDovL3BpbmdjYXN0bGUuY29t/ nocase ascii wide
+        $string1 = "aHR0cDovL3BpbmdjYXN0bGUuY29t" nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
         $string2 = /BetterSafetyKatz\.exe/ nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string3 = /bG9nb25QYXNzd29yZHM\=/ nocase ascii wide
+        $string3 = "bG9nb25QYXNzd29yZHM=" nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string4 = /bWltaWthdHo\=/ nocase ascii wide
+        $string4 = "bWltaWthdHo=" nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string5 = /dmluY2VudC5sZXRvdXhAZ21haWwuY29t/ nocase ascii wide
+        $string5 = "dmluY2VudC5sZXRvdXhAZ21haWwuY29t" nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string6 = /eDY0L21pbWlrYXR6LmV4ZQ\=\=/ nocase ascii wide
+        $string6 = "eDY0L21pbWlrYXR6LmV4ZQ==" nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string7 = /L3NhbSBvciAvc2lkIHRvIHRhcmdldCB0aGUgYWNjb3VudCBpcyBuZWVkZWQ\=/ nocase ascii wide
+        $string7 = "L3NhbSBvciAvc2lkIHRvIHRhcmdldCB0aGUgYWNjb3VudCBpcyBuZWVkZWQ=" nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string8 = /Process\sis\snot\s64\-bit\,\sthis\sversion\sof\skatz\swon\'t\swork\syo\'\!/ nocase ascii wide
+        $string8 = "Process is not 64-bit, this version of katz won't work yo'!" nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string9 = /QmVuamFtaW4gREVMUFk\=/ nocase ascii wide
+        $string9 = "QmVuamFtaW4gREVMUFk=" nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string10 = /QSBMYSBWaWUsIEEgTCdBbW91cg\=\=/ nocase ascii wide
+        $string10 = "QSBMYSBWaWUsIEEgTCdBbW91cg==" nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string11 = /RHVtcENyZWRz/ nocase ascii wide
+        $string11 = "RHVtcENyZWRz" nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string12 = /S2l3aUFuZENNRA\=\=/ nocase ascii wide
+        $string12 = "S2l3aUFuZENNRA==" nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string13 = /TGlzdHMgYWxsIGF2YWlsYWJsZSBwcm92aWRlcnMgY3JlZGVudGlhbHM\=/ nocase ascii wide
+        $string13 = "TGlzdHMgYWxsIGF2YWlsYWJsZSBwcm92aWRlcnMgY3JlZGVudGlhbHM=" nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string14 = /U3dpdGNoIChvciByZWluaXQpIHRvIExTQVNTIHByb2Nlc3MgIGNvbnRleHQ\=/ nocase ascii wide
+        $string14 = "U3dpdGNoIChvciByZWluaXQpIHRvIExTQVNTIHByb2Nlc3MgIGNvbnRleHQ=" nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string15 = /W2V4cGVyaW1lbnRhbF0gcGF0Y2ggVGVybWluYWwgU2VydmVyIHNlcnZpY2UgdG8gYWxsb3cgbXVsdGlwbGVzIHVzZXJz/ nocase ascii wide
+        $string15 = "W2V4cGVyaW1lbnRhbF0gcGF0Y2ggVGVybWluYWwgU2VydmVyIHNlcnZpY2UgdG8gYWxsb3cgbXVsdGlwbGVzIHVzZXJz" nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string16 = /Z2VudGlsa2l3aQ\=\=/ nocase ascii wide
+        $string16 = "Z2VudGlsa2l3aQ==" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

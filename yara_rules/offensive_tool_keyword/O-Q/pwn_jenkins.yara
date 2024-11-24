@@ -10,7 +10,7 @@ rule pwn_jenkins
     strings:
         // Description: Remote Code Execution for jenkins
         // Reference: https://github.com/gquere/pwn_jenkins
-        $string1 = /pwn_jenkins/ nocase ascii wide
+        $string1 = "pwn_jenkins" nocase ascii wide
 
     condition:
         any of them

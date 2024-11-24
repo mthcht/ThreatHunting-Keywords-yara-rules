@@ -13,7 +13,7 @@ rule nopowershell
         $string1 = /\/nopowershell\.git/ nocase ascii wide
         // Description: NoPowerShell is a tool implemented in C# which supports executing PowerShell-like commands while remaining invisible to any PowerShell logging mechanisms. This .NET Framework 2 compatible binary can be loaded in Cobalt Strike to execute commands in-memory. No System.Management.Automation.dll is used. only native .NET libraries. An alternative usecase for NoPowerShell is to launch it as a DLL via rundll32.exe: rundll32 NoPowerShell.dll.main.
         // Reference: https://github.com/bitsadmin/nopowershell
-        $string2 = /\/NoPowerShell\// nocase ascii wide
+        $string2 = "/NoPowerShell/" nocase ascii wide
         // Description: NoPowerShell is a tool implemented in C# which supports executing PowerShell-like commands while remaining invisible to any PowerShell logging mechanisms. This .NET Framework 2 compatible binary can be loaded in Cobalt Strike to execute commands in-memory. No System.Management.Automation.dll is used. only native .NET libraries. An alternative usecase for NoPowerShell is to launch it as a DLL via rundll32.exe: rundll32 NoPowerShell.dll.main.
         // Reference: https://github.com/bitsadmin/nopowershell
         $string3 = /\\CompressArchiveCommand\.cs/ nocase ascii wide
@@ -184,13 +184,13 @@ rule nopowershell
         $string58 = /\=\=\sNoPowerShell\sv.{0,1000}\s\=\=/ nocase ascii wide
         // Description: NoPowerShell is a tool implemented in C# which supports executing PowerShell-like commands while remaining invisible to any PowerShell logging mechanisms. This .NET Framework 2 compatible binary can be loaded in Cobalt Strike to execute commands in-memory. No System.Management.Automation.dll is used. only native .NET libraries. An alternative usecase for NoPowerShell is to launch it as a DLL via rundll32.exe: rundll32 NoPowerShell.dll.main.
         // Reference: https://github.com/bitsadmin/nopowershell
-        $string59 = /555AD0AC\-1FDB\-4016\-8257\-170A74CB2F55/ nocase ascii wide
+        $string59 = "555AD0AC-1FDB-4016-8257-170A74CB2F55" nocase ascii wide
         // Description: NoPowerShell is a tool implemented in C# which supports executing PowerShell-like commands while remaining invisible to any PowerShell logging mechanisms. This .NET Framework 2 compatible binary can be loaded in Cobalt Strike to execute commands in-memory. No System.Management.Automation.dll is used. only native .NET libraries. An alternative usecase for NoPowerShell is to launch it as a DLL via rundll32.exe: rundll32 NoPowerShell.dll.main.
         // Reference: https://github.com/bitsadmin/nopowershell
-        $string60 = /555AD0AC\-1FDB\-4016\-8257\-170A74CB2F55/ nocase ascii wide
+        $string60 = "555AD0AC-1FDB-4016-8257-170A74CB2F55" nocase ascii wide
         // Description: NoPowerShell is a tool implemented in C# which supports executing PowerShell-like commands while remaining invisible to any PowerShell logging mechanisms. This .NET Framework 2 compatible binary can be loaded in Cobalt Strike to execute commands in-memory. No System.Management.Automation.dll is used. only native .NET libraries. An alternative usecase for NoPowerShell is to launch it as a DLL via rundll32.exe: rundll32 NoPowerShell.dll.main.
         // Reference: https://github.com/bitsadmin/nopowershell
-        $string61 = /bitsadmin\/nopowershell/ nocase ascii wide
+        $string61 = "bitsadmin/nopowershell" nocase ascii wide
         // Description: NoPowerShell is a tool implemented in C# which supports executing PowerShell-like commands while remaining invisible to any PowerShell logging mechanisms. This .NET Framework 2 compatible binary can be loaded in Cobalt Strike to execute commands in-memory. No System.Management.Automation.dll is used. only native .NET libraries. An alternative usecase for NoPowerShell is to launch it as a DLL via rundll32.exe: rundll32 NoPowerShell.dll.main.
         // Reference: https://github.com/bitsadmin/nopowershell
         $string62 = /BOFNET\.Bofs\.Jobs/ nocase ascii wide
@@ -202,7 +202,7 @@ rule nopowershell
         $string64 = /BOFNET\.dll/ nocase ascii wide
         // Description: NoPowerShell is a tool implemented in C# which supports executing PowerShell-like commands while remaining invisible to any PowerShell logging mechanisms. This .NET Framework 2 compatible binary can be loaded in Cobalt Strike to execute commands in-memory. No System.Management.Automation.dll is used. only native .NET libraries. An alternative usecase for NoPowerShell is to launch it as a DLL via rundll32.exe: rundll32 NoPowerShell.dll.main.
         // Reference: https://github.com/bitsadmin/nopowershell
-        $string65 = /bofnet_execute\s/ nocase ascii wide
+        $string65 = "bofnet_execute " nocase ascii wide
         // Description: NoPowerShell is a tool implemented in C# which supports executing PowerShell-like commands while remaining invisible to any PowerShell logging mechanisms. This .NET Framework 2 compatible binary can be loaded in Cobalt Strike to execute commands in-memory. No System.Management.Automation.dll is used. only native .NET libraries. An alternative usecase for NoPowerShell is to launch it as a DLL via rundll32.exe: rundll32 NoPowerShell.dll.main.
         // Reference: https://github.com/bitsadmin/nopowershell
         $string66 = /bofnet_execute\.cpp/ nocase ascii wide
@@ -220,7 +220,7 @@ rule nopowershell
         $string70 = /bofnet_execute\.cpp\.x86\.obj/ nocase ascii wide
         // Description: NoPowerShell is a tool implemented in C# which supports executing PowerShell-like commands while remaining invisible to any PowerShell logging mechanisms. This .NET Framework 2 compatible binary can be loaded in Cobalt Strike to execute commands in-memory. No System.Management.Automation.dll is used. only native .NET libraries. An alternative usecase for NoPowerShell is to launch it as a DLL via rundll32.exe: rundll32 NoPowerShell.dll.main.
         // Reference: https://github.com/bitsadmin/nopowershell
-        $string71 = /bofnet_load\s/ nocase ascii wide
+        $string71 = "bofnet_load " nocase ascii wide
         // Description: NoPowerShell is a tool implemented in C# which supports executing PowerShell-like commands while remaining invisible to any PowerShell logging mechanisms. This .NET Framework 2 compatible binary can be loaded in Cobalt Strike to execute commands in-memory. No System.Management.Automation.dll is used. only native .NET libraries. An alternative usecase for NoPowerShell is to launch it as a DLL via rundll32.exe: rundll32 NoPowerShell.dll.main.
         // Reference: https://github.com/bitsadmin/nopowershell
         $string72 = /GetWhoamiCommand\.cs/ nocase ascii wide
@@ -262,10 +262,10 @@ rule nopowershell
         $string84 = /NoPowerShellDll\./ nocase ascii wide
         // Description: NoPowerShell is a tool implemented in C# which supports executing PowerShell-like commands while remaining invisible to any PowerShell logging mechanisms. This .NET Framework 2 compatible binary can be loaded in Cobalt Strike to execute commands in-memory. No System.Management.Automation.dll is used. only native .NET libraries. An alternative usecase for NoPowerShell is to launch it as a DLL via rundll32.exe: rundll32 NoPowerShell.dll.main.
         // Reference: https://github.com/bitsadmin/nopowershell
-        $string85 = /nps\swhoami/ nocase ascii wide
+        $string85 = "nps whoami" nocase ascii wide
         // Description: NoPowerShell is a tool implemented in C# which supports executing PowerShell-like commands while remaining invisible to any PowerShell logging mechanisms. This .NET Framework 2 compatible binary can be loaded in Cobalt Strike to execute commands in-memory. No System.Management.Automation.dll is used. only native .NET libraries. An alternative usecase for NoPowerShell is to launch it as a DLL via rundll32.exe: rundll32 NoPowerShell.dll.main.
         // Reference: https://github.com/bitsadmin/nopowershell
-        $string86 = /PublicKeyToken\=8337224c9ad9e356/ nocase ascii wide
+        $string86 = "PublicKeyToken=8337224c9ad9e356" nocase ascii wide
 
     condition:
         any of them

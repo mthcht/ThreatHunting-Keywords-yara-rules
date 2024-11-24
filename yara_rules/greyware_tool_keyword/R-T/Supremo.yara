@@ -10,7 +10,7 @@ rule Supremo
     strings:
         // Description: Supremo - Remote access software
         // Reference: https://www.supremocontrol.com
-        $string1 = /\sstart\sSupremoService/ nocase ascii wide
+        $string1 = " start SupremoService" nocase ascii wide
         // Description: Supremo - Remote access software
         // Reference: https://www.supremocontrol.com
         $string2 = /\sSupremo\.exe/ nocase ascii wide
@@ -70,13 +70,13 @@ rule Supremo
         $string20 = /\\Temp\\SupremoRemoteDesktop/ nocase ascii wide
         // Description: Supremo - Remote access software
         // Reference: https://www.supremocontrol.com
-        $string21 = /application\/x\-supremo/ nocase ascii wide
+        $string21 = "application/x-supremo" nocase ascii wide
         // Description: Supremo - Remote access software
         // Reference: https://www.supremocontrol.com
         $string22 = /HKCR\\supremo\\shell\\/ nocase ascii wide
         // Description: Supremo - Remote access software
         // Reference: https://www.supremocontrol.com
-        $string23 = /supremo\sremote\scontrol/ nocase ascii wide
+        $string23 = "supremo remote control" nocase ascii wide
         // Description: Supremo - Remote access software
         // Reference: https://www.supremocontrol.com
         $string24 = /Supremo\.00\.Client\.log/ nocase ascii wide

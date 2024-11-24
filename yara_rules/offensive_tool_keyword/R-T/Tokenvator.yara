@@ -16,16 +16,16 @@ rule Tokenvator
         $string2 = /\ssteal_token\s\/process\:.{0,1000}\s\/command\:/ nocase ascii wide
         // Description: A tool to elevate privilege with Windows Tokens
         // Reference: https://github.com/0xbadjuju/Tokenvator
-        $string3 = /\stokenvator\s/ nocase ascii wide
+        $string3 = " tokenvator " nocase ascii wide
         // Description: A tool to elevate privilege with Windows Tokens
         // Reference: https://github.com/0xbadjuju/Tokenvator
         $string4 = /\/MonkeyWorks\.git/ nocase ascii wide
         // Description: A tool to elevate privilege with Windows Tokens
         // Reference: https://github.com/0xbadjuju/Tokenvator
-        $string5 = /\/ServiceName\:TokenDriver/ nocase ascii wide
+        $string5 = "/ServiceName:TokenDriver" nocase ascii wide
         // Description: A tool to elevate privilege with Windows Tokens
         // Reference: https://github.com/0xbadjuju/Tokenvator
-        $string6 = /\/Tokenvator\// nocase ascii wide
+        $string6 = "/Tokenvator/" nocase ascii wide
         // Description: A tool to elevate privilege with Windows Tokens
         // Reference: https://github.com/0xbadjuju/Tokenvator
         $string7 = /\\KernelTokens\.sys/ nocase ascii wide
@@ -34,7 +34,7 @@ rule Tokenvator
         $string8 = /\\Tokenvator\\/ nocase ascii wide
         // Description: A tool to elevate privilege with Windows Tokens
         // Reference: https://github.com/0xbadjuju/Tokenvator
-        $string9 = /0xbadjuju\/Tokenvator/ nocase ascii wide
+        $string9 = "0xbadjuju/Tokenvator" nocase ascii wide
         // Description: A tool to elevate privilege with Windows Tokens
         // Reference: https://github.com/0xbadjuju/Tokenvator
         $string10 = /Add_Privilege\s\/Process\:.{0,1000}\s\/Privilege\:/ nocase ascii wide
@@ -49,16 +49,16 @@ rule Tokenvator
         $string13 = /Enable_Privilege\s\/Process\:.{0,1000}\s\/Privilege\:/ nocase ascii wide
         // Description: A tool to elevate privilege with Windows Tokens
         // Reference: https://github.com/0xbadjuju/Tokenvator
-        $string14 = /Enumeration\/DesktopACL/ nocase ascii wide
+        $string14 = "Enumeration/DesktopACL" nocase ascii wide
         // Description: A tool to elevate privilege with Windows Tokens
         // Reference: https://github.com/0xbadjuju/Tokenvator
         $string15 = /Enumeration\\DesktopAC/ nocase ascii wide
         // Description: A tool to elevate privilege with Windows Tokens
         // Reference: https://github.com/0xbadjuju/Tokenvator
-        $string16 = /List_Privileges\s\/Process\:powershell/ nocase ascii wide
+        $string16 = "List_Privileges /Process:powershell" nocase ascii wide
         // Description: A tool to elevate privilege with Windows Tokens
         // Reference: https://github.com/0xbadjuju/Tokenvator
-        $string17 = /Nuke_Privileges\s\/Process\:/ nocase ascii wide
+        $string17 = "Nuke_Privileges /Process:" nocase ascii wide
         // Description: A tool to elevate privilege with Windows Tokens
         // Reference: https://github.com/0xbadjuju/Tokenvator
         $string18 = /Plugins\\AccessTokens\\TokenDriver/ nocase ascii wide
@@ -73,10 +73,10 @@ rule Tokenvator
         $string21 = /Remove_Privilege\s\/Process\:.{0,1000}\s\/Privilege\:/ nocase ascii wide
         // Description: A tool to elevate privilege with Windows Tokens
         // Reference: https://github.com/0xbadjuju/Tokenvator
-        $string22 = /Steal_Pipe_Token\s\/PipeName/ nocase ascii wide
+        $string22 = "Steal_Pipe_Token /PipeName" nocase ascii wide
         // Description: A tool to alter privilege with Windows Tokens
         // Reference: https://github.com/0xbadjuju/Tokenvator
-        $string23 = /Tokenvator/ nocase ascii wide
+        $string23 = "Tokenvator" nocase ascii wide
         // Description: A tool to elevate privilege with Windows Tokens
         // Reference: https://github.com/0xbadjuju/Tokenvator
         $string24 = /Tokenvator.{0,1000}\.exe/ nocase ascii wide
@@ -103,7 +103,7 @@ rule Tokenvator
         $string31 = /Tokenvator\.sln/ nocase ascii wide
         // Description: A tool to elevate privilege with Windows Tokens
         // Reference: https://github.com/0xbadjuju/Tokenvator
-        $string32 = /Tokenvator\/MonkeyWorks/ nocase ascii wide
+        $string32 = "Tokenvator/MonkeyWorks" nocase ascii wide
 
     condition:
         any of them

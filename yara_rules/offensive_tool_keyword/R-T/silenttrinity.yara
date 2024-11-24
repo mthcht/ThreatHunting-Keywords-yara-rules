@@ -13,10 +13,10 @@ rule silenttrinity
         $string1 = /\ssilenttrinity\./ nocase ascii wide
         // Description: SILENTTRINITY is modern. asynchronous. multiplayer & multiserver C2/post-exploitation framework powered by Python 3 and .NETs DLR. Its the culmination of an extensive amount of research into using embedded third-party .NET scripting languages to dynamically call .NET APIs. a technique the author coined as BYOI (Bring Your Own Interpreter). The aim of this tool and the BYOI concept is to shift the paradigm back to PowerShell style like attacks (as it offers much more flexibility over traditional C# tradecraft) only without using PowerShell in anyway.
         // Reference: https://github.com/byt3bl33d3r/SILENTTRINITY
-        $string2 = /\sst\sclient\swss\:\/\// nocase ascii wide
+        $string2 = " st client wss://" nocase ascii wide
         // Description: SILENTTRINITY is modern. asynchronous. multiplayer & multiserver C2/post-exploitation framework powered by Python 3 and .NETs DLR. Its the culmination of an extensive amount of research into using embedded third-party .NET scripting languages to dynamically call .NET APIs. a technique the author coined as BYOI (Bring Your Own Interpreter). The aim of this tool and the BYOI concept is to shift the paradigm back to PowerShell style like attacks (as it offers much more flexibility over traditional C# tradecraft) only without using PowerShell in anyway.
         // Reference: https://github.com/byt3bl33d3r/SILENTTRINITY
-        $string3 = /\sst\steamserver\s/ nocase ascii wide
+        $string3 = " st teamserver " nocase ascii wide
         // Description: SILENTTRINITY is modern. asynchronous. multiplayer & multiserver C2/post-exploitation framework powered by Python 3 and .NETs DLR. Its the culmination of an extensive amount of research into using embedded third-party .NET scripting languages to dynamically call .NET APIs. a technique the author coined as BYOI (Bring Your Own Interpreter). The aim of this tool and the BYOI concept is to shift the paradigm back to PowerShell style like attacks (as it offers much more flexibility over traditional C# tradecraft) only without using PowerShell in anyway.
         // Reference: https://github.com/byt3bl33d3r/SILENTTRINITY
         $string4 = /\.\\stager\.ps1/ nocase ascii wide
@@ -43,7 +43,7 @@ rule silenttrinity
         $string11 = /bypassUAC.{0,1000}\.py/ nocase ascii wide
         // Description: SILENTTRINITY is modern. asynchronous. multiplayer & multiserver C2/post-exploitation framework powered by Python 3 and .NETs DLR. Its the culmination of an extensive amount of research into using embedded third-party .NET scripting languages to dynamically call .NET APIs. a technique the author coined as BYOI (Bring Your Own Interpreter). The aim of this tool and the BYOI concept is to shift the paradigm back to PowerShell style like attacks (as it offers much more flexibility over traditional C# tradecraft) only without using PowerShell in anyway.
         // Reference: https://github.com/byt3bl33d3r/SILENTTRINITY
-        $string12 = /core\/teamserver\/stagers\// nocase ascii wide
+        $string12 = "core/teamserver/stagers/" nocase ascii wide
         // Description: SILENTTRINITY is modern. asynchronous. multiplayer & multiserver C2/post-exploitation framework powered by Python 3 and .NETs DLR. Its the culmination of an extensive amount of research into using embedded third-party .NET scripting languages to dynamically call .NET APIs. a technique the author coined as BYOI (Bring Your Own Interpreter). The aim of this tool and the BYOI concept is to shift the paradigm back to PowerShell style like attacks (as it offers much more flexibility over traditional C# tradecraft) only without using PowerShell in anyway.
         // Reference: https://github.com/byt3bl33d3r/SILENTTRINITY
         $string13 = /credphisher\.py/ nocase ascii wide
@@ -88,19 +88,19 @@ rule silenttrinity
         $string26 = /posh_stageless\.py/ nocase ascii wide
         // Description: SILENTTRINITY is modern. asynchronous. multiplayer & multiserver C2/post-exploitation framework powered by Python 3 and .NETs DLR. Its the culmination of an extensive amount of research into using embedded third-party .NET scripting languages to dynamically call .NET APIs. a technique the author coined as BYOI (Bring Your Own Interpreter). The aim of this tool and the BYOI concept is to shift the paradigm back to PowerShell style like attacks (as it offers much more flexibility over traditional C# tradecraft) only without using PowerShell in anyway.
         // Reference: https://github.com/byt3bl33d3r/SILENTTRINITY
-        $string27 = /python\s3\sst\steamserver\s/ nocase ascii wide
+        $string27 = "python 3 st teamserver " nocase ascii wide
         // Description: SILENTTRINITY is modern. asynchronous. multiplayer & multiserver C2/post-exploitation framework powered by Python 3 and .NETs DLR. Its the culmination of an extensive amount of research into using embedded third-party .NET scripting languages to dynamically call .NET APIs. a technique the author coined as BYOI (Bring Your Own Interpreter). The aim of this tool and the BYOI concept is to shift the paradigm back to PowerShell style like attacks (as it offers much more flexibility over traditional C# tradecraft) only without using PowerShell in anyway.
         // Reference: https://github.com/byt3bl33d3r/SILENTTRINITY
         $string28 = /python\sst\.py/ nocase ascii wide
         // Description: SILENTTRINITY is modern. asynchronous. multiplayer & multiserver C2/post-exploitation framework powered by Python 3 and .NETs DLR. Its the culmination of an extensive amount of research into using embedded third-party .NET scripting languages to dynamically call .NET APIs. a technique the author coined as BYOI (Bring Your Own Interpreter). The aim of this tool and the BYOI concept is to shift the paradigm back to PowerShell style like attacks (as it offers much more flexibility over traditional C# tradecraft) only without using PowerShell in anyway.
         // Reference: https://github.com/byt3bl33d3r/SILENTTRINITY
-        $string29 = /python3\sst\sclient\swss\:\/\// nocase ascii wide
+        $string29 = "python3 st client wss://" nocase ascii wide
         // Description: SILENTTRINITY is modern. asynchronous. multiplayer & multiserver C2/post-exploitation framework powered by Python 3 and .NETs DLR. Its the culmination of an extensive amount of research into using embedded third-party .NET scripting languages to dynamically call .NET APIs. a technique the author coined as BYOI (Bring Your Own Interpreter). The aim of this tool and the BYOI concept is to shift the paradigm back to PowerShell style like attacks (as it offers much more flexibility over traditional C# tradecraft) only without using PowerShell in anyway.
         // Reference: https://github.com/byt3bl33d3r/SILENTTRINITY
         $string30 = /python3\sst\.py/ nocase ascii wide
         // Description: SILENTTRINITY is modern. asynchronous. multiplayer & multiserver C2/post-exploitation framework powered by Python 3 and .NETs DLR. Its the culmination of an extensive amount of research into using embedded third-party .NET scripting languages to dynamically call .NET APIs. a technique the author coined as BYOI (Bring Your Own Interpreter). The aim of this tool and the BYOI concept is to shift the paradigm back to PowerShell style like attacks (as it offers much more flexibility over traditional C# tradecraft) only without using PowerShell in anyway.
         // Reference: https://github.com/byt3bl33d3r/SILENTTRINITY
-        $string31 = /SILENTTRINITY/ nocase ascii wide
+        $string31 = "SILENTTRINITY" nocase ascii wide
         // Description: SILENTTRINITY is modern. asynchronous. multiplayer & multiserver C2/post-exploitation framework powered by Python 3 and .NETs DLR. Its the culmination of an extensive amount of research into using embedded third-party .NET scripting languages to dynamically call .NET APIs. a technique the author coined as BYOI (Bring Your Own Interpreter). The aim of this tool and the BYOI concept is to shift the paradigm back to PowerShell style like attacks (as it offers much more flexibility over traditional C# tradecraft) only without using PowerShell in anyway.
         // Reference: https://github.com/byt3bl33d3r/SILENTTRINITY
         $string32 = /silenttrinity.{0,1000}\.dll/ nocase ascii wide
@@ -112,10 +112,10 @@ rule silenttrinity
         $string34 = /startupfolderperistence\.py/ nocase ascii wide
         // Description: SILENTTRINITY is modern. asynchronous. multiplayer & multiserver C2/post-exploitation framework powered by Python 3 and .NETs DLR. Its the culmination of an extensive amount of research into using embedded third-party .NET scripting languages to dynamically call .NET APIs. a technique the author coined as BYOI (Bring Your Own Interpreter). The aim of this tool and the BYOI concept is to shift the paradigm back to PowerShell style like attacks (as it offers much more flexibility over traditional C# tradecraft) only without using PowerShell in anyway.
         // Reference: https://github.com/byt3bl33d3r/SILENTTRINITY
-        $string35 = /use\spowershell_stageless/ nocase ascii wide
+        $string35 = "use powershell_stageless" nocase ascii wide
         // Description: SILENTTRINITY is modern. asynchronous. multiplayer & multiserver C2/post-exploitation framework powered by Python 3 and .NETs DLR. Its the culmination of an extensive amount of research into using embedded third-party .NET scripting languages to dynamically call .NET APIs. a technique the author coined as BYOI (Bring Your Own Interpreter). The aim of this tool and the BYOI concept is to shift the paradigm back to PowerShell style like attacks (as it offers much more flexibility over traditional C# tradecraft) only without using PowerShell in anyway.
         // Reference: https://github.com/byt3bl33d3r/SILENTTRINITY
-        $string36 = /use\ssafetykatz/ nocase ascii wide
+        $string36 = "use safetykatz" nocase ascii wide
         // Description: SILENTTRINITY is modern. asynchronous. multiplayer & multiserver C2/post-exploitation framework powered by Python 3 and .NETs DLR. Its the culmination of an extensive amount of research into using embedded third-party .NET scripting languages to dynamically call .NET APIs. a technique the author coined as BYOI (Bring Your Own Interpreter). The aim of this tool and the BYOI concept is to shift the paradigm back to PowerShell style like attacks (as it offers much more flexibility over traditional C# tradecraft) only without using PowerShell in anyway.
         // Reference: https://github.com/byt3bl33d3r/SILENTTRINITY
         $string37 = /vnperistence\.py/ nocase ascii wide

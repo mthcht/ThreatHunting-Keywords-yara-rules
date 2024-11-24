@@ -70,13 +70,13 @@ rule ScreenConnect
         $string20 = /\\Windows\\Temp\\ScreenConnect\\.{0,1000}\.ps1/ nocase ascii wide
         // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
         // Reference: https://screenconnect.connectwise.com/download
-        $string21 = /\<Data\>ScreenConnect\sSoftware\<\/Data\>/ nocase ascii wide
+        $string21 = "<Data>ScreenConnect Software</Data>" nocase ascii wide
         // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
         // Reference: https://screenconnect.connectwise.com/download
-        $string22 = /\<Provider\sName\=\'ScreenConnect\sSecurity\sManager\'\/\>/ nocase ascii wide
+        $string22 = "<Provider Name='ScreenConnect Security Manager'/>" nocase ascii wide
         // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
         // Reference: https://screenconnect.connectwise.com/download
-        $string23 = /\<Provider\sName\=\'ScreenConnect\sWeb\sServer\'\/\>/ nocase ascii wide
+        $string23 = "<Provider Name='ScreenConnect Web Server'/>" nocase ascii wide
         // Description: control remote servers - abused by threat actors
         // Reference: screenconnect.com
         $string24 = /cmd\.exe.{0,1000}\\TEMP\\ScreenConnect\\.{0,1000}\.cmd/ nocase ascii wide
@@ -97,7 +97,7 @@ rule ScreenConnect
         $string29 = /\-relay\.screenconnect\.com/ nocase ascii wide
         // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
         // Reference: https://screenconnect.connectwise.com/download
-        $string30 = /ScreenConnect\sSoftware/ nocase ascii wide
+        $string30 = "ScreenConnect Software" nocase ascii wide
         // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
         // Reference: https://screenconnect.connectwise.com/download
         $string31 = /ScreenConnect\.Client\.dll/ nocase ascii wide

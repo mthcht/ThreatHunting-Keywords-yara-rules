@@ -73,22 +73,22 @@ rule InflativeLoading
         $string21 = /DumpPEFromMemoryMemory\.exe/ nocase ascii wide
         // Description: Dynamically convert a native EXE to PIC shellcode by prepending a shellcode stub
         // Reference: https://github.com/senzee1984/InflativeLoading
-        $string22 = /Dynamically\sconvert\sa\snative\sPE\sto\sPIC\sshellcode/ nocase ascii wide
+        $string22 = "Dynamically convert a native PE to PIC shellcode" nocase ascii wide
         // Description: Dynamically convert a native EXE to PIC shellcode by prepending a shellcode stub
         // Reference: https://github.com/senzee1984/InflativeLoading
-        $string23 = /EEC48565\-5B42\-491A\-8BBB\-16AC0C40C367/ nocase ascii wide
+        $string23 = "EEC48565-5B42-491A-8BBB-16AC0C40C367" nocase ascii wide
         // Description: Dynamically convert a native EXE to PIC shellcode by prepending a shellcode stub
         // Reference: https://github.com/senzee1984/InflativeLoading
-        $string24 = /Generated\sshellcode\ssuccessfully\ssaved\sin\sfile\s/ nocase ascii wide
+        $string24 = "Generated shellcode successfully saved in file " nocase ascii wide
         // Description: Dynamically convert a native EXE to PIC shellcode by prepending a shellcode stub
         // Reference: https://github.com/senzee1984/InflativeLoading
         $string25 = /InflativeLoading\.py\s/ nocase ascii wide
         // Description: Dynamically convert a native EXE to PIC shellcode by prepending a shellcode stub
         // Reference: https://github.com/senzee1984/InflativeLoading
-        $string26 = /InflativeLoading\-DumpPEFromMemory/ nocase ascii wide
+        $string26 = "InflativeLoading-DumpPEFromMemory" nocase ascii wide
         // Description: Dynamically convert a native EXE to PIC shellcode by prepending a shellcode stub
         // Reference: https://github.com/senzee1984/InflativeLoading
-        $string27 = /senzee1984\/InflativeLoading/ nocase ascii wide
+        $string27 = "senzee1984/InflativeLoading" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

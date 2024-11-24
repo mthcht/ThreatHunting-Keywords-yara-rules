@@ -10,7 +10,7 @@ rule ntlmquic
     strings:
         // Description: POC tools for exploring SMB over QUIC protocol
         // Reference: https://github.com/xpn/ntlmquic
-        $string1 = /\/ntlmquic/ nocase ascii wide
+        $string1 = "/ntlmquic" nocase ascii wide
         // Description: POC tools for exploring SMB over QUIC protocol
         // Reference: https://github.com/xpn/ntlmquic
         $string2 = /\/quicserver\.exe/ nocase ascii wide
@@ -25,10 +25,10 @@ rule ntlmquic
         $string5 = /ntlmquic\./ nocase ascii wide
         // Description: POC tools for exploring SMB over QUIC protocol
         // Reference: https://github.com/xpn/ntlmquic
-        $string6 = /ntlmquic\-go/ nocase ascii wide
+        $string6 = "ntlmquic-go" nocase ascii wide
         // Description: POC tools for exploring SMB over QUIC protocol
         // Reference: https://github.com/xpn/ntlmquic
-        $string7 = /ntlmquic\-master/ nocase ascii wide
+        $string7 = "ntlmquic-master" nocase ascii wide
         // Description: POC tools for exploring SMB over QUIC protocol
         // Reference: https://github.com/xpn/ntlmquic
         $string8 = /xcopy\s\/y\s\/d\s\s.{0,1000}\\msquic_schannel\\msquic\.dll/ nocase ascii wide

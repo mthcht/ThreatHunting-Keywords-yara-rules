@@ -10,7 +10,7 @@ rule Infoga
     strings:
         // Description: Email Information Gathering.
         // Reference: https://github.com/m4ll0k/Infoga
-        $string1 = /\/Infoga/ nocase ascii wide
+        $string1 = "/Infoga" nocase ascii wide
 
     condition:
         any of them

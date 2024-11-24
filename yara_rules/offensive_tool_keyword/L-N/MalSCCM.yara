@@ -22,22 +22,22 @@ rule MalSCCM
         $string4 = /\/MalSCCM\.sln/ nocase ascii wide
         // Description: This tool allows you to abuse local or remote SCCM servers to deploy malicious applications to hosts they manage
         // Reference: https://github.com/nettitude/MalSCCM
-        $string5 = /5439CECD\-3BB3\-4807\-B33F\-E4C299B71CA2/ nocase ascii wide
+        $string5 = "5439CECD-3BB3-4807-B33F-E4C299B71CA2" nocase ascii wide
         // Description: This tool allows you to abuse local or remote SCCM servers to deploy malicious applications to hosts they manage
         // Reference: https://github.com/nettitude/MalSCCM
-        $string6 = /Action\:\sLocating\sSCCM\sManagement\sServers/ nocase ascii wide
+        $string6 = "Action: Locating SCCM Management Servers" nocase ascii wide
         // Description: This tool allows you to abuse local or remote SCCM servers to deploy malicious applications to hosts they manage
         // Reference: https://github.com/nettitude/MalSCCM
-        $string7 = /Action\:\sLocating\sSCCM\sServers\sin\sRegistry/ nocase ascii wide
+        $string7 = "Action: Locating SCCM Servers in Registry" nocase ascii wide
         // Description: This tool allows you to abuse local or remote SCCM servers to deploy malicious applications to hosts they manage
         // Reference: https://github.com/nettitude/MalSCCM
         $string8 = /MalSCCM\.exe/ nocase ascii wide
         // Description: This tool allows you to abuse local or remote SCCM servers to deploy malicious applications to hosts they manage
         // Reference: https://github.com/nettitude/MalSCCM
-        $string9 = /MalSCCM\-main/ nocase ascii wide
+        $string9 = "MalSCCM-main" nocase ascii wide
         // Description: This tool allows you to abuse local or remote SCCM servers to deploy malicious applications to hosts they manage
         // Reference: https://github.com/nettitude/MalSCCM
-        $string10 = /nettitude\/MalSCCM/ nocase ascii wide
+        $string10 = "nettitude/MalSCCM" nocase ascii wide
 
     condition:
         any of them

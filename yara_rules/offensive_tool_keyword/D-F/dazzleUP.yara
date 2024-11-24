@@ -31,16 +31,16 @@ rule dazzleUP
         $string7 = /dazzleUP\.x64\.exe/ nocase ascii wide
         // Description: A tool that detects the privilege escalation vulnerabilities caused by misconfigurations and missing updates in the Windows operating systems.
         // Reference: https://github.com/hlldz/dazzleUP
-        $string8 = /dazzleUP_Reflective_DLL/ nocase ascii wide
+        $string8 = "dazzleUP_Reflective_DLL" nocase ascii wide
         // Description: A tool that detects the privilege escalation vulnerabilities caused by misconfigurations and missing updates in the Windows operating systems.
         // Reference: https://github.com/hlldz/dazzleUP
-        $string9 = /dazzleUP\-master/ nocase ascii wide
+        $string9 = "dazzleUP-master" nocase ascii wide
         // Description: A tool that detects the privilege escalation vulnerabilities caused by misconfigurations and missing updates in the Windows operating systems.
         // Reference: https://github.com/hlldz/dazzleUP
-        $string10 = /FE8F0D23\-BDD1\-416D\-8285\-F947BA86D155/ nocase ascii wide
+        $string10 = "FE8F0D23-BDD1-416D-8285-F947BA86D155" nocase ascii wide
         // Description: A tool that detects the privilege escalation vulnerabilities caused by misconfigurations and missing updates in the Windows operating systems.
         // Reference: https://github.com/hlldz/dazzleUP
-        $string11 = /hlldz\/dazzleUP/ nocase ascii wide
+        $string11 = "hlldz/dazzleUP" nocase ascii wide
         // Description: A tool that detects the privilege escalation vulnerabilities caused by misconfigurations and missing updates in the Windows operating systems.
         // Reference: https://github.com/hlldz/dazzleUP
         $string12 = /path_dll_hijack\.h/ nocase ascii wide

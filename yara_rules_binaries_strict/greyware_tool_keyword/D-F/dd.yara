@@ -10,10 +10,10 @@ rule dd
     strings:
         // Description: Detects overwriting (effectively wiping/deleting) the file
         // Reference: https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1485/T1485.yaml
-        $string1 = /dd\sif\=\/dev\/nul/ nocase ascii wide
+        $string1 = "dd if=/dev/nul" nocase ascii wide
         // Description: Detects overwriting (effectively wiping/deleting) the file
         // Reference: https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1485/T1485.yaml
-        $string2 = /dd\sif\=\/dev\/zero/ nocase ascii wide
+        $string2 = "dd if=/dev/zero" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -16,7 +16,7 @@ rule Earth_Lusca_Operations_Tools_
         $string2 = /badpotato\.exe/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf https://github.com/winscripting/UAC-bypass/blob/master/FodhelperBypass.ps1
-        $string3 = /fodhelperUACBypass/ nocase ascii wide
+        $string3 = "fodhelperUACBypass" nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf https://github.com/RickGeex/ProxyLogon
         $string4 = /proxyLogon\.py/ nocase ascii wide
@@ -31,10 +31,10 @@ rule Earth_Lusca_Operations_Tools_
         $string7 = /proxyshell\-enumerate\.py/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf https://github.com/dmaasland/proxyshell-poc
-        $string8 = /proxyshell\-poc/ nocase ascii wide
+        $string8 = "proxyshell-poc" nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf https://github.com/winscripting/UAC-bypass/blob/master/FodhelperBypass.ps1
-        $string9 = /UAC\-bypass/ nocase ascii wide
+        $string9 = "UAC-bypass" nocase ascii wide
 
     condition:
         any of them

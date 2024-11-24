@@ -10,7 +10,7 @@ rule sslstrip
     strings:
         // Description: sslstrip is a MITM tool that implements Moxie Marlinspikes SSL stripping attacks.
         // Reference: https://github.com/moxie0/sslstrip
-        $string1 = /sslstrip/ nocase ascii wide
+        $string1 = "sslstrip" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

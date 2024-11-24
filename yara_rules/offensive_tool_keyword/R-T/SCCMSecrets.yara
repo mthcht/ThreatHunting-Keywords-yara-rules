@@ -10,7 +10,7 @@ rule SCCMSecrets
     strings:
         // Description: SCCMSecrets.py aims at exploiting SCCM policies distribution for credentials harvesting - initial access and lateral movement.
         // Reference: https://github.com/synacktiv/SCCMSecrets
-        $string1 = /\s\-\-bruteforce\-range\s/ nocase ascii wide
+        $string1 = " --bruteforce-range " nocase ascii wide
         // Description: SCCMSecrets.py aims at exploiting SCCM policies distribution for credentials harvesting - initial access and lateral movement.
         // Reference: https://github.com/synacktiv/SCCMSecrets
         $string2 = /\/SCCMSecrets\.git/ nocase ascii wide
@@ -19,13 +19,13 @@ rule SCCMSecrets
         $string3 = /bruteforcePackageIDs\(/ nocase ascii wide
         // Description: SCCMSecrets.py aims at exploiting SCCM policies distribution for credentials harvesting - initial access and lateral movement.
         // Reference: https://github.com/synacktiv/SCCMSecrets
-        $string4 = /e3f71f6245226059b306c744af8038d045104c2a12aef8f6b6a254d963927e68/ nocase ascii wide
+        $string4 = "e3f71f6245226059b306c744af8038d045104c2a12aef8f6b6a254d963927e68" nocase ascii wide
         // Description: SCCMSecrets.py aims at exploiting SCCM policies distribution for credentials harvesting - initial access and lateral movement.
         // Reference: https://github.com/synacktiv/SCCMSecrets
         $string5 = /SCCMSecrets\.py/ nocase ascii wide
         // Description: SCCMSecrets.py aims at exploiting SCCM policies distribution for credentials harvesting - initial access and lateral movement.
         // Reference: https://github.com/synacktiv/SCCMSecrets
-        $string6 = /synacktiv\/SCCMSecrets/ nocase ascii wide
+        $string6 = "synacktiv/SCCMSecrets" nocase ascii wide
 
     condition:
         any of them

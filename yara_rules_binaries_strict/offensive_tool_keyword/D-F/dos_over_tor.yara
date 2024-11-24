@@ -10,7 +10,7 @@ rule dos_over_tor
     strings:
         // Description: Proof of concept denial of service over TOR stress test tool. Is multi-threaded and supports multiple attack vectors.
         // Reference: https://github.com/skizap/dos-over-tor
-        $string1 = /dos\-over\-tor/ nocase ascii wide
+        $string1 = "dos-over-tor" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

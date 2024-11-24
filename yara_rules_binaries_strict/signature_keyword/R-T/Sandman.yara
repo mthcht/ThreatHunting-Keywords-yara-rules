@@ -10,7 +10,7 @@ rule Sandman
     strings:
         // Description: Sandman is a NTP based backdoor for red team engagements in hardened networks.
         // Reference: https://github.com/Idov31/Sandman
-        $string1 = /ATK\/Sandman\-A/ nocase ascii wide
+        $string1 = "ATK/Sandman-A" nocase ascii wide
         // Description: Sandman is a NTP based backdoor for red team engagements in hardened networks.
         // Reference: https://github.com/Idov31/Sandman
         $string2 = /Backdoor\.MSIL\.Sandman/ nocase ascii wide

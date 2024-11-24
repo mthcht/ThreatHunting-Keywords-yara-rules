@@ -10,7 +10,7 @@ rule logman
     strings:
         // Description: disables Microsoft-Windows-PowerShell event logging until a reboot occurs or the attacker restores the ETW provider
         // Reference: N/A
-        $string1 = /logman\supdate\strace\sEventLog\-Application\s\-\-p\sMicrosoft\-Windows\-PowerShell\s\-ets/ nocase ascii wide
+        $string1 = "logman update trace EventLog-Application --p Microsoft-Windows-PowerShell -ets" nocase ascii wide
 
     condition:
         any of them

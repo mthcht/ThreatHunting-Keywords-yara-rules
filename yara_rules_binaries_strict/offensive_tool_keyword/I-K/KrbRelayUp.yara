@@ -10,10 +10,10 @@ rule KrbRelayUp
     strings:
         // Description: a universal no-fix local privilege escalation in windows domain environments where LDAP signing is not enforced (the default settings).
         // Reference: https://github.com/Dec0ne/KrbRelayUp
-        $string1 = /\s\=\s\\"KRBRELAYUP\\"/ nocase ascii wide
+        $string1 = " = \"KRBRELAYUP\"" nocase ascii wide
         // Description: a universal no-fix local privilege escalation in windows domain environments where LDAP signing is not enforced (the default settings).
         // Reference: https://github.com/Dec0ne/KrbRelayUp
-        $string2 = /\s\-\-ForceShadowCred/ nocase ascii wide
+        $string2 = " --ForceShadowCred" nocase ascii wide
         // Description: a universal no-fix local privilege escalation in windows domain environments where LDAP signing is not enforced (the default settings).
         // Reference: https://github.com/Dec0ne/KrbRelayUp
         $string3 = /\sMakeMeEnterpriseAdmin\.ps1/ nocase ascii wide
@@ -25,7 +25,7 @@ rule KrbRelayUp
         $string5 = /\sspawn\s\-m\sadcs\s\-d\s.{0,100}\s\-dc\s/ nocase ascii wide
         // Description: a universal no-fix local privilege escalation in windows domain environments where LDAP signing is not enforced (the default settings).
         // Reference: https://github.com/Dec0ne/KrbRelayUp
-        $string6 = /\sspawn\s\-m\sshadowcred\s\-d\s/ nocase ascii wide
+        $string6 = " spawn -m shadowcred -d " nocase ascii wide
         // Description: a universal no-fix local privilege escalation in windows domain environments where LDAP signing is not enforced (the default settings).
         // Reference: https://github.com/Dec0ne/KrbRelayUp
         $string7 = /\.exe\srelay\s\-Domain\s.{0,100}\s\-CreateNewComputerAccount\s/ nocase ascii wide
@@ -118,22 +118,22 @@ rule KrbRelayUp
         $string36 = /\\Relay\\Attacks\\ShadowCred\.cs/ nocase ascii wide
         // Description: a universal no-fix local privilege escalation in windows domain environments where LDAP signing is not enforced (the default settings).
         // Reference: https://github.com/Dec0ne/KrbRelayUp
-        $string37 = /3aa113440e9f684df0d0f889c69ae914a40b07c10a340d1fad4f8365286fe19d/ nocase ascii wide
+        $string37 = "3aa113440e9f684df0d0f889c69ae914a40b07c10a340d1fad4f8365286fe19d" nocase ascii wide
         // Description: a universal no-fix local privilege escalation in windows domain environments where LDAP signing is not enforced (the default settings).
         // Reference: https://github.com/Dec0ne/KrbRelayUp
-        $string38 = /Dec0ne\/KrbRelayUp/ nocase ascii wide
+        $string38 = "Dec0ne/KrbRelayUp" nocase ascii wide
         // Description: a universal no-fix local privilege escalation in windows domain environments where LDAP signing is not enforced (the default settings).
         // Reference: https://github.com/Dec0ne/KrbRelayUp
-        $string39 = /ED83E265\-D48E\-4B0D\-8C22\-D9D0A67C78F2/ nocase ascii wide
+        $string39 = "ED83E265-D48E-4B0D-8C22-D9D0A67C78F2" nocase ascii wide
         // Description: a universal no-fix local privilege escalation in windows domain environments where LDAP signing is not enforced (the default settings).
         // Reference: https://github.com/Dec0ne/KrbRelayUp
-        $string40 = /KRB_CRED\skirbi\s/ nocase ascii wide
+        $string40 = "KRB_CRED kirbi " nocase ascii wide
         // Description: a universal no-fix local privilege escalation in windows domain environments where LDAP signing is not enforced (the default settings).
         // Reference: https://github.com/Dec0ne/KrbRelayUp
         $string41 = /KRB_CRED\(kirbiBytes\)/ nocase ascii wide
         // Description: a universal no-fix local privilege escalation in windows domain environments where LDAP signing is not enforced (the default settings).
         // Reference: https://github.com/Dec0ne/KrbRelayUp
-        $string42 = /KrbRelayUp\s\-\sRelaying\syou\sto\sSYSTEM/ nocase ascii wide
+        $string42 = "KrbRelayUp - Relaying you to SYSTEM" nocase ascii wide
         // Description: a universal no-fix local privilege escalation in windows domain environments where LDAP signing is not enforced (the default settings).
         // Reference: https://github.com/Dec0ne/KrbRelayUp
         $string43 = /KrbRelayUp\.csproj/ nocase ascii wide
@@ -148,10 +148,10 @@ rule KrbRelayUp
         $string46 = /KrbRelayUp\/1\.0/ nocase ascii wide
         // Description: a universal no-fix local privilege escalation in windows domain environments where LDAP signing is not enforced (the default settings).
         // Reference: https://github.com/Dec0ne/KrbRelayUp
-        $string47 = /KRBSCM\:\sWill\suse\sthe\scurrently\sloaded\sKerberos\sService\sTicket\sto\screate\sa\snew\sservice\srunning\sas\sSYSTEM/ nocase ascii wide
+        $string47 = "KRBSCM: Will use the currently loaded Kerberos Service Ticket to create a new service running as SYSTEM" nocase ascii wide
         // Description: a universal no-fix local privilege escalation in windows domain environments where LDAP signing is not enforced (the default settings).
         // Reference: https://github.com/Dec0ne/KrbRelayUp
-        $string48 = /namespace\sKrbRelayUp/ nocase ascii wide
+        $string48 = "namespace KrbRelayUp" nocase ascii wide
         // Description: a universal no-fix local privilege escalation in windows domain environments where LDAP signing is not enforced (the default settings).
         // Reference: https://github.com/Dec0ne/KrbRelayUp
         $string49 = /Perform\sfull\sattack\schain\.\sOptions\sare\sidentical\sto\sRELAY\.\sTool\smust\sbe\son\sdisk/ nocase ascii wide
@@ -160,7 +160,7 @@ rule KrbRelayUp
         $string50 = /serviceName\s\=\s.{0,100}\\"KrbSCM\\"/ nocase ascii wide
         // Description: a universal no-fix local privilege escalation in windows domain environments where LDAP signing is not enforced (the default settings).
         // Reference: https://github.com/Dec0ne/KrbRelayUp
-        $string51 = /ServiceName\'\>KrbSCM/ nocase ascii wide
+        $string51 = "ServiceName'>KrbSCM" nocase ascii wide
         // Description: a universal no-fix local privilege escalation in windows domain environments where LDAP signing is not enforced (the default settings).
         // Reference: https://github.com/Dec0ne/KrbRelayUp
         $string52 = /using\sKrbRelayUp\./ nocase ascii wide

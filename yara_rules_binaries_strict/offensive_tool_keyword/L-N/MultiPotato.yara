@@ -22,10 +22,10 @@ rule MultiPotato
         $string4 = /\\\\\.\\pipe\\pwned\/pipe\/srvsvc/ nocase ascii wide
         // Description: get SYSTEM via SeImpersonate privileges
         // Reference: https://github.com/S3cur3Th1sSh1t/MultiPotato
-        $string5 = /61CE6716\-E619\-483C\-B535\-8694F7617548/ nocase ascii wide
+        $string5 = "61CE6716-E619-483C-B535-8694F7617548" nocase ascii wide
         // Description: get SYSTEM via SeImpersonate privileges
         // Reference: https://github.com/S3cur3Th1sSh1t/MultiPotato
-        $string6 = /localhost\/pipe\/pwned/ nocase ascii wide
+        $string6 = "localhost/pipe/pwned" nocase ascii wide
         // Description: get SYSTEM via SeImpersonate privileges
         // Reference: https://github.com/S3cur3Th1sSh1t/MultiPotato
         $string7 = /MS\-RPRN\.exe\s\\\\.{0,100}\s\\\\.{0,100}\/pipe\/pwned/ nocase ascii wide
@@ -37,16 +37,16 @@ rule MultiPotato
         $string9 = /MultiPotato\.exe/ nocase ascii wide
         // Description: get SYSTEM via SeImpersonate privileges
         // Reference: https://github.com/S3cur3Th1sSh1t/MultiPotato
-        $string10 = /MultiPotato\-main/ nocase ascii wide
+        $string10 = "MultiPotato-main" nocase ascii wide
         // Description: get SYSTEM via SeImpersonate privileges
         // Reference: https://github.com/S3cur3Th1sSh1t/MultiPotato
         $string11 = /PetitPotamModified\.exe/ nocase ascii wide
         // Description: get SYSTEM via SeImpersonate privileges
         // Reference: https://github.com/S3cur3Th1sSh1t/MultiPotato
-        $string12 = /S3cretP4ssw0rd\!/ nocase ascii wide
+        $string12 = "S3cretP4ssw0rd!" nocase ascii wide
         // Description: get SYSTEM via SeImpersonate privileges
         // Reference: https://github.com/S3cur3Th1sSh1t/MultiPotato
-        $string13 = /S3cur3Th1sSh1t\/MultiPotato/ nocase ascii wide
+        $string13 = "S3cur3Th1sSh1t/MultiPotato" nocase ascii wide
         // Description: get SYSTEM via SeImpersonate privileges
         // Reference: https://github.com/S3cur3Th1sSh1t/MultiPotato
         $string14 = /TokenKidnapping\.cpp/ nocase ascii wide

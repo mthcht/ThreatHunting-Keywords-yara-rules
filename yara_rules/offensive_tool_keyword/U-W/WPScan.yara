@@ -13,13 +13,13 @@ rule WPScan
         $string1 = /\/\.wpscan\// nocase ascii wide
         // Description: WPScan is a black box WordPress vulnerability scanner.
         // Reference: https://github.com/wpscanteam/wpscan
-        $string2 = /wpscan\s\-\-url\s/ nocase ascii wide
+        $string2 = "wpscan --url " nocase ascii wide
         // Description: WPScan is a black box WordPress vulnerability scanner.
         // Reference: https://github.com/wpscanteam/wpscan
-        $string3 = /wpscanteam\/tap\/wpscan/ nocase ascii wide
+        $string3 = "wpscanteam/tap/wpscan" nocase ascii wide
         // Description: WPScan is a black box WordPress vulnerability scanner.
         // Reference: https://github.com/wpscanteam/wpscan
-        $string4 = /wpscanteam\/wpscan/ nocase ascii wide
+        $string4 = "wpscanteam/wpscan" nocase ascii wide
 
     condition:
         any of them

@@ -28,16 +28,16 @@ rule ForgeCert
         $string6 = /\\ForgeCert\.pdb/ nocase ascii wide
         // Description: ForgeCert uses the BouncyCastle C# API and a stolen Certificate Authority (CA) certificate + private key to forge certificates for arbitrary users capable of authentication to Active Directory.
         // Reference: https://github.com/GhostPack/ForgeCert
-        $string7 = /bd346689\-8ee6\-40b3\-858b\-4ed94f08d40a/ nocase ascii wide
+        $string7 = "bd346689-8ee6-40b3-858b-4ed94f08d40a" nocase ascii wide
         // Description: ForgeCert uses the BouncyCastle C# API and a stolen Certificate Authority (CA) certificate + private key to forge certificates for arbitrary users capable of authentication to Active Directory.
         // Reference: https://github.com/GhostPack/ForgeCert
-        $string8 = /ForgeCert\-main/ nocase ascii wide
+        $string8 = "ForgeCert-main" nocase ascii wide
         // Description: ForgeCert uses the BouncyCastle C# API and a stolen Certificate Authority (CA) certificate + private key to forge certificates for arbitrary users capable of authentication to Active Directory.
         // Reference: https://github.com/GhostPack/ForgeCert
-        $string9 = /GhostPack\/ForgeCert/ nocase ascii wide
+        $string9 = "GhostPack/ForgeCert" nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string10 = /\'Product\'\>ForgeCert/ nocase ascii wide
+        $string10 = "'Product'>ForgeCert" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

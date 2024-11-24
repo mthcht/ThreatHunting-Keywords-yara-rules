@@ -10,7 +10,7 @@ rule Invoke_TmpDavFS
     strings:
         // Description: Memory Backed Powershell WebDav Server - Creates a memory backed webdav server using powershell that can be mounted as a filesystem. Note: Mounting the remote filesystem on windows implies local caching of accessed files in the C:\Windows\ServiceProfiles\LocalService\AppData\Local\Temp\TfsStore\Tfs_DAV system directory.
         // Reference: https://github.com/p3nt4/Invoke-TmpDavFS
-        $string1 = /Invoke\-TmpDavFS/ nocase ascii wide
+        $string1 = "Invoke-TmpDavFS" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

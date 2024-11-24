@@ -43,16 +43,16 @@ rule find
         $string11 = /find\s\/\s\-name\sauthorized_keys\s.{0,1000}\>\s\/dev\/null/ nocase ascii wide
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
-        $string12 = /find\s\/\s\-name\sid_dsa\s2\>/ nocase ascii wide
+        $string12 = "find / -name id_dsa 2>" nocase ascii wide
         // Description: Find sensitive files
         // Reference: N/A
         $string13 = /find\s\/\s\-name\sid_rsa\s.{0,1000}\>\s\/dev\/null/ nocase ascii wide
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
-        $string14 = /find\s\/\s\-name\sid_rsa\s2\>/ nocase ascii wide
+        $string14 = "find / -name id_rsa 2>" nocase ascii wide
         // Description: Find SGID enabled files
         // Reference: N/A
-        $string15 = /find\s\/\s\-perm\s\/2000\s\-ls\s2\>\/dev\/null/ nocase ascii wide
+        $string15 = "find / -perm /2000 -ls 2>/dev/null" nocase ascii wide
         // Description: Find SUID enabled files
         // Reference: N/A
         $string16 = /find\s\/\s\-perm\s\+4000\s\-type\sf\s2\>\/dev\/null/ nocase ascii wide
@@ -61,25 +61,25 @@ rule find
         $string17 = /find\s\/\s\-perm\s\+8000\s\-ls\s2\>\/dev\/null/ nocase ascii wide
         // Description: find commands used by the wso php webshell
         // Reference: https://github.com/mIcHyAmRaNe/wso-webshell
-        $string18 = /find\s\/\s\-perm\s\-2\s\-ls/ nocase ascii wide
+        $string18 = "find / -perm -2 -ls" nocase ascii wide
         // Description: Detects suspicious shell commands indicating the information gathering phase as preparation for the Privilege Escalation.# sticky bits
         // Reference: https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/
-        $string19 = /find\s\/\s\-perm\s\-2000/ nocase ascii wide
+        $string19 = "find / -perm -2000" nocase ascii wide
         // Description: Detects suspicious shell commands indicating the information gathering phase as preparation for the Privilege Escalation.# sticky bits
         // Reference: https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/
-        $string20 = /find\s\/\s\-perm\s\-4000/ nocase ascii wide
+        $string20 = "find / -perm -4000" nocase ascii wide
         // Description: Find SUID enabled files
         // Reference: N/A
-        $string21 = /find\s\/\s\-perm\s\-4000\s\-type\sf\s/ nocase ascii wide
+        $string21 = "find / -perm -4000 -type f " nocase ascii wide
         // Description: Detects suspicious shell commands indicating the information gathering phase as preparation for the Privilege Escalation. # sticky bits
         // Reference: https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/
-        $string22 = /find\s\/\s\-perm\s\-g\=s/ nocase ascii wide
+        $string22 = "find / -perm -g=s" nocase ascii wide
         // Description: Detects suspicious shell commands indicating the information gathering phase as preparation for the Privilege Escalation. sticky bits
         // Reference: https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/
-        $string23 = /find\s\/\s\-perm\s\-u\=s/ nocase ascii wide
+        $string23 = "find / -perm -u=s" nocase ascii wide
         // Description: Find SUID enabled files
         // Reference: N/A
-        $string24 = /find\s\/\s\-perm\s\-u\=s\s\-type\sf\s2\>\/dev\/null/ nocase ascii wide
+        $string24 = "find / -perm -u=s -type f 2>/dev/null" nocase ascii wide
         // Description: Find SUID enabled files
         // Reference: N/A
         $string25 = /find\s\/\s\-perm\s\-u\=s\s\-type\sf\s\-group\s.{0,1000}\/dev\/null/ nocase ascii wide
@@ -100,16 +100,16 @@ rule find
         $string30 = /find\s\/\s\-type\sf\s\-name\sservice\.pwd/ nocase ascii wide
         // Description: find commands used by the wso php webshell
         // Reference: https://github.com/mIcHyAmRaNe/wso-webshell
-        $string31 = /find\s\/\s\-type\sf\s\-perm\s\-02000\s\-ls/ nocase ascii wide
+        $string31 = "find / -type f -perm -02000 -ls" nocase ascii wide
         // Description: find commands used by the wso php webshell
         // Reference: https://github.com/mIcHyAmRaNe/wso-webshell
-        $string32 = /find\s\/\s\-type\sf\s\-perm\s\-04000\s\-ls/ nocase ascii wide
+        $string32 = "find / -type f -perm -04000 -ls" nocase ascii wide
         // Description: Find SUID enabled files
         // Reference: N/A
-        $string33 = /find\s\/\s\-uid\s0\s\-perm\s\-4000\s\-type\sf\s/ nocase ascii wide
+        $string33 = "find / -uid 0 -perm -4000 -type f " nocase ascii wide
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
-        $string34 = /find\s\/\s\-user\sroot\s\-perm\s\-6000\s\-type\sf\s2\>/ nocase ascii wide
+        $string34 = "find / -user root -perm -6000 -type f 2>" nocase ascii wide
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
         $string35 = /find\s\/.{0,1000}\s\-perm\s\-04000\s\-o\s\-perm\s\-02000/ nocase ascii wide

@@ -19,7 +19,7 @@ rule Neo4j
         $string3 = /MATCH\sp\=\(u\:User\)\-\[\:SQLAdmin\].{0,1000}\(c\:Computer\)\sreturn\sp/ nocase ascii wide
         // Description: Neo4j queries - Computers AllowedToDelegate to other computers
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string4 = /neo4j\sstart/ nocase ascii wide
+        $string4 = "neo4j start" nocase ascii wide
 
     condition:
         any of them

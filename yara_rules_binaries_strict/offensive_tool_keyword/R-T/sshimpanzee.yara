@@ -28,7 +28,7 @@ rule sshimpanzee
         $string6 = /git\sreset\seb88d07c43afe407094e7d609248d85a15e148ef\s\-\-hard.{0,100}\srm\s\-f\ssshd/ nocase ascii wide
         // Description: SSHD Based implant supporting tunneling mecanisms to reach the C2 (DNS - ICMP - HTTP Encapsulation - HTTP/Socks Proxies - UDP
         // Reference: https://github.com/lexfo/sshimpanzee
-        $string7 = /lexfo\/sshimpanzee/ nocase ascii wide
+        $string7 = "lexfo/sshimpanzee" nocase ascii wide
         // Description: SSHD Based implant supporting tunneling mecanisms to reach the C2 (DNS - ICMP - HTTP Encapsulation - HTTP/Socks Proxies - UDP
         // Reference: https://github.com/lexfo/sshimpanzee
         $string8 = /MODE\=.{0,100}\sREMOTE\=.{0,100}sshimpanzee/ nocase ascii wide
@@ -37,7 +37,7 @@ rule sshimpanzee
         $string9 = /ProxyCommand\=nc\s\-lp\s8080\s\-s\s127\.0\.0\.1/ nocase ascii wide
         // Description: SSHD Based implant supporting tunneling mecanisms to reach the C2 (DNS - ICMP - HTTP Encapsulation - HTTP/Socks Proxies - UDP
         // Reference: https://github.com/lexfo/sshimpanzee
-        $string10 = /sshimpanzee\s\-\-/ nocase ascii wide
+        $string10 = "sshimpanzee --" nocase ascii wide
         // Description: SSHD Based implant supporting tunneling mecanisms to reach the C2 (DNS - ICMP - HTTP Encapsulation - HTTP/Socks Proxies - UDP
         // Reference: https://github.com/lexfo/sshimpanzee
         $string11 = /sshimpanzee\:127\.0\.0\.1\:/ nocase ascii wide
@@ -46,7 +46,7 @@ rule sshimpanzee
         $string12 = /sshimpanzee\-1\.1\-exp/ nocase ascii wide
         // Description: SSHD Based implant supporting tunneling mecanisms to reach the C2 (DNS - ICMP - HTTP Encapsulation - HTTP/Socks Proxies - UDP
         // Reference: https://github.com/lexfo/sshimpanzee
-        $string13 = /sshimpanzee\-main/ nocase ascii wide
+        $string13 = "sshimpanzee-main" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

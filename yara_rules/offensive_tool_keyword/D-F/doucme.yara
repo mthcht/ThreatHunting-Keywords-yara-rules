@@ -10,7 +10,7 @@ rule doucme
     strings:
         // Description: leverages the NetUserAdd Win32 API to create a new computer account
         // Reference: https://github.com/Ben0xA/DoUCMe
-        $string1 = /\"NSA0XF\$\"/ nocase ascii wide
+        $string1 = /\\"NSA0XF\$\\"/ nocase ascii wide
         // Description: leverages the NetUserAdd Win32 API to create a new computer account
         // Reference: https://github.com/Ben0xA/DoUCMe
         $string2 = /\/DoUCMe\.git/ nocase ascii wide
@@ -25,25 +25,25 @@ rule doucme
         $string5 = /\\doucme\.sln/ nocase ascii wide
         // Description: leverages the NetUserAdd Win32 API to create a new computer account
         // Reference: https://github.com/Ben0xA/DoUCMe
-        $string6 = /A11E7DAE\-21F2\-46A8\-991E\-D38DEBE1650F/ nocase ascii wide
+        $string6 = "A11E7DAE-21F2-46A8-991E-D38DEBE1650F" nocase ascii wide
         // Description: leverages the NetUserAdd Win32 API to create a new computer account
         // Reference: https://github.com/Ben0xA/DoUCMe
-        $string7 = /All\sDone\!\sHack\sthe\splanet\!/ nocase ascii wide
+        $string7 = "All Done! Hack the planet!" nocase ascii wide
         // Description: leverages the NetUserAdd Win32 API to create a new computer account
         // Reference: https://github.com/Ben0xA/DoUCMe
-        $string8 = /Ben0xA\/DoUCMe/ nocase ascii wide
+        $string8 = "Ben0xA/DoUCMe" nocase ascii wide
         // Description: leverages the NetUserAdd Win32 API to create a new computer account
         // Reference: https://github.com/Ben0xA/DoUCMe
         $string9 = /DoUCMe\-main\\/ nocase ascii wide
         // Description: leverages the NetUserAdd Win32 API to create a new computer account
         // Reference: https://github.com/Ben0xA/DoUCMe
-        $string10 = /Enumerating\sAdministrators\sgroup\,\splease\swait/ nocase ascii wide
+        $string10 = "Enumerating Administrators group, please wait" nocase ascii wide
         // Description: leverages the NetUserAdd Win32 API to create a new computer account
         // Reference: https://github.com/Ben0xA/DoUCMe
-        $string11 = /Enumerating\snew\suser\,\splease\swait/ nocase ascii wide
+        $string11 = "Enumerating new user, please wait" nocase ascii wide
         // Description: leverages the NetUserAdd Win32 API to create a new computer account
         // Reference: https://github.com/Ben0xA/DoUCMe
-        $string12 = /PASSWORD\s\=\s\"Letmein123\!/ nocase ascii wide
+        $string12 = "PASSWORD = \"Letmein123!" nocase ascii wide
 
     condition:
         any of them

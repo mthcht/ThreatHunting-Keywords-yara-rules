@@ -13,10 +13,10 @@ rule RuralBishop
         $string1 = /\/RuralBishop\.git/ nocase ascii wide
         // Description: creates a local RW section in UrbanBishop and then maps that section as RX into a remote process
         // Reference: https://github.com/rasta-mouse/RuralBishop
-        $string2 = /FE4414D9\-1D7E\-4EEB\-B781\-D278FE7A5619/ nocase ascii wide
+        $string2 = "FE4414D9-1D7E-4EEB-B781-D278FE7A5619" nocase ascii wide
         // Description: creates a local RW section in UrbanBishop and then maps that section as RX into a remote process
         // Reference: https://github.com/rasta-mouse/RuralBishop
-        $string3 = /rasta\-mouse\/RuralBishop/ nocase ascii wide
+        $string3 = "rasta-mouse/RuralBishop" nocase ascii wide
         // Description: creates a local RW section in UrbanBishop and then maps that section as RX into a remote process
         // Reference: https://github.com/rasta-mouse/RuralBishop
         $string4 = /RuralBishop\.csproj/ nocase ascii wide
@@ -28,7 +28,7 @@ rule RuralBishop
         $string6 = /RuralBishop\.sln/ nocase ascii wide
         // Description: creates a local RW section in UrbanBishop and then maps that section as RX into a remote process
         // Reference: https://github.com/rasta-mouse/RuralBishop
-        $string7 = /RuralBishop\-master/ nocase ascii wide
+        $string7 = "RuralBishop-master" nocase ascii wide
 
     condition:
         any of them

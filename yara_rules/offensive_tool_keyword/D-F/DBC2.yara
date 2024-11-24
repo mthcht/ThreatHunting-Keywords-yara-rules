@@ -13,7 +13,7 @@ rule DBC2
         $string1 = /\s\-DestHost\s.{0,1000}\s\-DestPort\s5555\s\-UseDefaultProxy/ nocase ascii wide
         // Description: DBC2 (DropboxC2) is a modular post-exploitation tool composed of an agent running on the victim's machine - a controler running on any machine - powershell modules and Dropbox servers as a means of communication.
         // Reference: https://github.com/Arno0x/DBC2
-        $string2 = /\/dbc2Loader/ nocase ascii wide
+        $string2 = "/dbc2Loader" nocase ascii wide
         // Description: DBC2 (DropboxC2) is a modular post-exploitation tool composed of an agent running on the victim's machine - a controler running on any machine - powershell modules and Dropbox servers as a means of communication.
         // Reference: https://github.com/Arno0x/DBC2
         $string3 = /\/MailRaider\.ps1/ nocase ascii wide
@@ -31,7 +31,7 @@ rule DBC2
         $string7 = /\/posh\.tpl/ nocase ascii wide
         // Description: DBC2 (DropboxC2) is a modular post-exploitation tool composed of an agent running on the victim's machine - a controler running on any machine - powershell modules and Dropbox servers as a means of communication.
         // Reference: https://github.com/Arno0x/DBC2
-        $string8 = /Arno0x\/DBC2/ nocase ascii wide
+        $string8 = "Arno0x/DBC2" nocase ascii wide
         // Description: DBC2 (DropboxC2) is a modular post-exploitation tool composed of an agent running on the victim's machine - a controler running on any machine - powershell modules and Dropbox servers as a means of communication.
         // Reference: https://github.com/Arno0x/DBC2
         $string9 = /ConvertTo\-Shellcode\.ps1/ nocase ascii wide
@@ -79,25 +79,25 @@ rule DBC2
         $string23 = /Invoke\-NTLMAuth\.ps1/ nocase ascii wide
         // Description: DBC2 (DropboxC2) is a modular post-exploitation tool composed of an agent running on the victim's machine - a controler running on any machine - powershell modules and Dropbox servers as a means of communication.
         // Reference: https://github.com/Arno0x/DBC2
-        $string24 = /Invoke\-PowerDump/ nocase ascii wide
+        $string24 = "Invoke-PowerDump" nocase ascii wide
         // Description: DBC2 (DropboxC2) is a modular post-exploitation tool composed of an agent running on the victim's machine - a controler running on any machine - powershell modules and Dropbox servers as a means of communication.
         // Reference: https://github.com/Arno0x/DBC2
-        $string25 = /Invoke\-ReflectivePEInjection/ nocase ascii wide
+        $string25 = "Invoke-ReflectivePEInjection" nocase ascii wide
         // Description: DBC2 (DropboxC2) is a modular post-exploitation tool composed of an agent running on the victim's machine - a controler running on any machine - powershell modules and Dropbox servers as a means of communication.
         // Reference: https://github.com/Arno0x/DBC2
-        $string26 = /Invoke\-SendMail\s\-Targets/ nocase ascii wide
+        $string26 = "Invoke-SendMail -Targets" nocase ascii wide
         // Description: DBC2 (DropboxC2) is a modular post-exploitation tool composed of an agent running on the victim's machine - a controler running on any machine - powershell modules and Dropbox servers as a means of communication.
         // Reference: https://github.com/Arno0x/DBC2
-        $string27 = /Invoke\-SendReverseShell/ nocase ascii wide
+        $string27 = "Invoke-SendReverseShell" nocase ascii wide
         // Description: DBC2 (DropboxC2) is a modular post-exploitation tool composed of an agent running on the victim's machine - a controler running on any machine - powershell modules and Dropbox servers as a means of communication.
         // Reference: https://github.com/Arno0x/DBC2
-        $string28 = /Invoke\-Shellcode\s\-Shellcode/ nocase ascii wide
+        $string28 = "Invoke-Shellcode -Shellcode" nocase ascii wide
         // Description: DBC2 (DropboxC2) is a modular post-exploitation tool composed of an agent running on the victim's machine - a controler running on any machine - powershell modules and Dropbox servers as a means of communication.
         // Reference: https://github.com/Arno0x/DBC2
         $string29 = /powercat\s\-c\s.{0,1000}\s\-p\s/ nocase ascii wide
         // Description: DBC2 (DropboxC2) is a modular post-exploitation tool composed of an agent running on the victim's machine - a controler running on any machine - powershell modules and Dropbox servers as a means of communication.
         // Reference: https://github.com/Arno0x/DBC2
-        $string30 = /powercat\s\-l\s\-p\s4444/ nocase ascii wide
+        $string30 = "powercat -l -p 4444" nocase ascii wide
         // Description: DBC2 (DropboxC2) is a modular post-exploitation tool composed of an agent running on the victim's machine - a controler running on any machine - powershell modules and Dropbox servers as a means of communication.
         // Reference: https://github.com/Arno0x/DBC2
         $string31 = /Powercat\.ps1/ nocase ascii wide

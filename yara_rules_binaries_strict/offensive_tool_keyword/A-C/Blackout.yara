@@ -52,7 +52,7 @@ rule Blackout
         $string14 = /Blackout\.exe\s/ nocase ascii wide
         // Description: kill anti-malware protected processes using BYOVD
         // Reference: https://github.com/ZeroMemoryEx/Blackout
-        $string15 = /ZeroMemoryEx\/Blackout/ nocase ascii wide
+        $string15 = "ZeroMemoryEx/Blackout" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

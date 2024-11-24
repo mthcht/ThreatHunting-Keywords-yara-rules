@@ -13,7 +13,7 @@ rule SharpDXWebcam
         $string1 = /Get\-DXWebcamVideo\.ps1/ nocase ascii wide
         // Description: Utilizing DirectX and DShowNET assemblies to record video from a host's webcam
         // Reference: https://github.com/snovvcrash/SharpDXWebcam
-        $string2 = /SharpDXWebcam/ nocase ascii wide
+        $string2 = "SharpDXWebcam" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

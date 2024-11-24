@@ -16,7 +16,7 @@ rule PWDumpX
         $string2 = /PSWTool\.Win32\.PWDump/ nocase ascii wide
         // Description: PWDumpX tool allows a user with administrative privileges to retrieve the encrypted password hashes and LSA secrets from a Windows system. This tool can be used on the local system or on one or more remote systems.
         // Reference: https://packetstormsecurity.com/files/download/52580/PWDumpX.zip
-        $string3 = /PWCrack\-PWDump/ nocase ascii wide
+        $string3 = "PWCrack-PWDump" nocase ascii wide
         // Description: PWDumpX tool allows a user with administrative privileges to retrieve the encrypted password hashes and LSA secrets from a Windows system. This tool can be used on the local system or on one or more remote systems.
         // Reference: https://packetstormsecurity.com/files/download/52580/PWDumpX.zip
         $string4 = /PWDumpX\s\(PUA\)/ nocase ascii wide

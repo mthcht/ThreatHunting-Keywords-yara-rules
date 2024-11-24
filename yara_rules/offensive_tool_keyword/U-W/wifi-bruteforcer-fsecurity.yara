@@ -10,7 +10,7 @@ rule wifi_bruteforcer_fsecurity
     strings:
         // Description: Wifi bruteforcer
         // Reference: https://github.com/faizann24/wifi-bruteforcer-fsecurify
-        $string1 = /wifi\-bruteforcer/ nocase ascii wide
+        $string1 = "wifi-bruteforcer" nocase ascii wide
 
     condition:
         any of them

@@ -25,16 +25,16 @@ rule EDRSilencer
         $string5 = /\\EDRSilencer\.c/ nocase ascii wide
         // Description: A tool uses Windows Filtering Platform (WFP) to block Endpoint Detection and Response (EDR) agents from reporting security events to the server
         // Reference: https://github.com/netero1010/EDRSilencer
-        $string6 = /Add\sWFP\sfilters\sto\sblock\sthe\sIPv4\sand\sIPv6\soutbound\straffic\sof\sa\sspecific\sprocess/ nocase ascii wide
+        $string6 = "Add WFP filters to block the IPv4 and IPv6 outbound traffic of a specific process" nocase ascii wide
         // Description: A tool uses Windows Filtering Platform (WFP) to block Endpoint Detection and Response (EDR) agents from reporting security events to the server
         // Reference: https://github.com/netero1010/EDRSilencer
-        $string7 = /Add\sWFP\sfilters\sto\sblock\sthe\sIPv4\sand\sIPv6\soutbound\straffic\sof\sall\sdetected\sEDR\sprocesses/ nocase ascii wide
+        $string7 = "Add WFP filters to block the IPv4 and IPv6 outbound traffic of all detected EDR processes" nocase ascii wide
         // Description: A tool uses Windows Filtering Platform (WFP) to block Endpoint Detection and Response (EDR) agents from reporting security events to the server
         // Reference: https://github.com/netero1010/EDRSilencer
         $string8 = /EDRSilencer\.exe/ nocase ascii wide
         // Description: A tool uses Windows Filtering Platform (WFP) to block Endpoint Detection and Response (EDR) agents from reporting security events to the server
         // Reference: https://github.com/netero1010/EDRSilencer
-        $string9 = /netero1010\/EDRSilencer/ nocase ascii wide
+        $string9 = "netero1010/EDRSilencer" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

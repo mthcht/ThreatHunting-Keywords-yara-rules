@@ -10,7 +10,7 @@ rule stowaway
     strings:
         // Description: Stowaway -- Multi-hop Proxy Tool for pentesters
         // Reference: https://github.com/ph4ntonn/Stowaway
-        $string1 = /\sAuthor\:ph4ntom/ nocase ascii wide
+        $string1 = " Author:ph4ntom" nocase ascii wide
         // Description: Stowaway -- Multi-hop Proxy Tool for pentesters
         // Reference: https://github.com/ph4ntonn/Stowaway
         $string2 = /\s\-c\s.{0,100}\s\-s\s.{0,100}\s\-\-proxy\s.{0,100}\s\-\-proxyu\s.{0,100}\s\-\-proxyp\s.{0,100}\s\-\-reconnect\s/ nocase ascii wide
@@ -25,10 +25,10 @@ rule stowaway
         $string5 = /\/Stowaway\.git/ nocase ascii wide
         // Description: Stowaway -- Multi-hop Proxy Tool for pentesters
         // Reference: https://github.com/ph4ntonn/Stowaway
-        $string6 = /\/stowaway_admin/ nocase ascii wide
+        $string6 = "/stowaway_admin" nocase ascii wide
         // Description: Stowaway -- Multi-hop Proxy Tool for pentesters
         // Reference: https://github.com/ph4ntonn/Stowaway
-        $string7 = /\/stowaway_agent/ nocase ascii wide
+        $string7 = "/stowaway_agent" nocase ascii wide
         // Description: Stowaway -- Multi-hop Proxy Tool for pentesters
         // Reference: https://github.com/ph4ntonn/Stowaway
         $string8 = /\/windows_x64_admin\.exe/ nocase ascii wide
@@ -70,40 +70,40 @@ rule stowaway
         $string20 = /\]\sStarting\sagent\snode\sactively\.Connecting\sto\s.{0,100}Reconnecting\severy\s.{0,100}\sseconds/ nocase ascii wide
         // Description: Stowaway -- Multi-hop Proxy Tool for pentesters
         // Reference: https://github.com/ph4ntonn/Stowaway
-        $string21 = /1df8bc4fb468ccc0fd85b553411d9b3eb7a2ba4c4a4469ae41913eef9a9e65f6/ nocase ascii wide
+        $string21 = "1df8bc4fb468ccc0fd85b553411d9b3eb7a2ba4c4a4469ae41913eef9a9e65f6" nocase ascii wide
         // Description: Stowaway -- Multi-hop Proxy Tool for pentesters
         // Reference: https://github.com/ph4ntonn/Stowaway
-        $string22 = /a78d737f30e03d166d4e3e3b2dca71d54f1cbf582206dfe16a1e717ce3dc0ef7/ nocase ascii wide
+        $string22 = "a78d737f30e03d166d4e3e3b2dca71d54f1cbf582206dfe16a1e717ce3dc0ef7" nocase ascii wide
         // Description: Stowaway -- Multi-hop Proxy Tool for pentesters
         // Reference: https://github.com/ph4ntonn/Stowaway
-        $string23 = /ac9215db682509ab2bdcba7fe924d84dafa1d8aade87172c1c6328b2cb6c9e52/ nocase ascii wide
+        $string23 = "ac9215db682509ab2bdcba7fe924d84dafa1d8aade87172c1c6328b2cb6c9e52" nocase ascii wide
         // Description: Stowaway -- Multi-hop Proxy Tool for pentesters
         // Reference: https://github.com/ph4ntonn/Stowaway
         $string24 = /linux_x64_agent\s\-\-report\s.{0,100}\s\-l\s.{0,100}\s\-s\sph4ntom/ nocase ascii wide
         // Description: Stowaway -- Multi-hop Proxy Tool for pentesters
         // Reference: https://github.com/ph4ntonn/Stowaway
-        $string25 = /ph4ntonn\/Stowaway/ nocase ascii wide
+        $string25 = "ph4ntonn/Stowaway" nocase ascii wide
         // Description: Stowaway -- Multi-hop Proxy Tool for pentesters
         // Reference: https://github.com/ph4ntonn/Stowaway
         $string26 = /python\sreuse\.py\s\-\-start\s\-\-rhost\s.{0,100}\s\-\-rport\s/ nocase ascii wide
         // Description: Stowaway -- Multi-hop Proxy Tool for pentesters
         // Reference: https://github.com/ph4ntonn/Stowaway
-        $string27 = /release\/mipsel_agent/ nocase ascii wide
+        $string27 = "release/mipsel_agent" nocase ascii wide
         // Description: Stowaway -- Multi-hop Proxy Tool for pentesters
         // Reference: https://github.com/ph4ntonn/Stowaway
-        $string28 = /\-\-socks5\-proxy\ssocks5/ nocase ascii wide
+        $string28 = "--socks5-proxy socks5" nocase ascii wide
         // Description: Stowaway -- Multi-hop Proxy Tool for pentesters
         // Reference: https://github.com/ph4ntonn/Stowaway
-        $string29 = /\-\-socks5\-proxyp\ssocks5/ nocase ascii wide
+        $string29 = "--socks5-proxyp socks5" nocase ascii wide
         // Description: Stowaway -- Multi-hop Proxy Tool for pentesters
         // Reference: https://github.com/ph4ntonn/Stowaway
-        $string30 = /\-\-socks5\-proxyu\ssocks5/ nocase ascii wide
+        $string30 = "--socks5-proxyu socks5" nocase ascii wide
         // Description: Stowaway -- Multi-hop Proxy Tool for pentesters
         // Reference: https://github.com/ph4ntonn/Stowaway
-        $string31 = /\'start\/stop\siptables\sport\sreuse\'/ nocase ascii wide
+        $string31 = "'start/stop iptables port reuse'" nocase ascii wide
         // Description: Stowaway -- Multi-hop Proxy Tool for pentesters
         // Reference: https://github.com/ph4ntonn/Stowaway
-        $string32 = /Stowaway\/admin\/process/ nocase ascii wide
+        $string32 = "Stowaway/admin/process" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

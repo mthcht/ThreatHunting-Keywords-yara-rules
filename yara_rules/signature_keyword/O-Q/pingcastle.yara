@@ -10,7 +10,7 @@ rule pingcastle
     strings:
         // Description: active directory weakness scan Vulnerability scanner
         // Reference: https://github.com/netwrix/pingcastle
-        $string1 = /HackTool\:Win32\/SmbAgent/ nocase ascii wide
+        $string1 = "HackTool:Win32/SmbAgent" nocase ascii wide
 
     condition:
         any of them

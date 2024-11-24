@@ -22,13 +22,13 @@ rule SharpLAPS
         $string4 = /\\SharpLAPS\.pdb/ nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string5 = /\>SharpLAPS\</ nocase ascii wide
+        $string5 = ">SharpLAPS<" nocase ascii wide
         // Description: Retrieve LAPS password from LDAP
         // Reference: https://github.com/swisskyrepo/SharpLAPS
-        $string6 = /1E0986B4\-4BF3\-4CEA\-A885\-347B6D232D46/ nocase ascii wide
+        $string6 = "1E0986B4-4BF3-4CEA-A885-347B6D232D46" nocase ascii wide
         // Description: Retrieve LAPS password from LDAP
         // Reference: https://github.com/swisskyrepo/SharpLAPS
-        $string7 = /a0e17777243f0190053238f503971fc85321ffa8dc12b80bc50b93a2c0d3ea23/ nocase ascii wide
+        $string7 = "a0e17777243f0190053238f503971fc85321ffa8dc12b80bc50b93a2c0d3ea23" nocase ascii wide
         // Description: Retrieve LAPS password from LDAP
         // Reference: https://github.com/swisskyrepo/SharpLAPS
         $string8 = /SharpLAPS\.csproj/ nocase ascii wide
@@ -40,10 +40,10 @@ rule SharpLAPS
         $string10 = /SharpLAPS\.sln/ nocase ascii wide
         // Description: Retrieve LAPS password from LDAP
         // Reference: https://github.com/swisskyrepo/SharpLAPS
-        $string11 = /SharpLAPS\-main/ nocase ascii wide
+        $string11 = "SharpLAPS-main" nocase ascii wide
         // Description: Retrieve LAPS password from LDAP
         // Reference: https://github.com/swisskyrepo/SharpLAPS
-        $string12 = /swisskyrepo\/SharpLAPS/ nocase ascii wide
+        $string12 = "swisskyrepo/SharpLAPS" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

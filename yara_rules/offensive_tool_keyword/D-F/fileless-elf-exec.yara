@@ -28,13 +28,13 @@ rule fileless_elf_exec
         $string6 = /fee\s\-c\s.{0,1000}\/.{0,1000}\s\-w\s64\s\|\s/ nocase ascii wide
         // Description: Execute ELF files without dropping them on disk
         // Reference: https://github.com/nnsee/fileless-elf-exec
-        $string7 = /fileless\-elf\-exec/ nocase ascii wide
+        $string7 = "fileless-elf-exec" nocase ascii wide
         // Description: Execute ELF files without dropping them on disk
         // Reference: https://github.com/nnsee/fileless-elf-exec
-        $string8 = /pip\sinstall\s\-\-user\sfee/ nocase ascii wide
+        $string8 = "pip install --user fee" nocase ascii wide
         // Description: Execute ELF files without dropping them on disk
         // Reference: https://github.com/nnsee/fileless-elf-exec
-        $string9 = /pipx\sinstall\sfee/ nocase ascii wide
+        $string9 = "pipx install fee" nocase ascii wide
         // Description: Execute ELF files without dropping them on disk
         // Reference: https://github.com/nnsee/fileless-elf-exec
         $string10 = /python3\sfee\.py/ nocase ascii wide

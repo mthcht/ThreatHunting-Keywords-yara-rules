@@ -10,7 +10,7 @@ rule RITM
     strings:
         // Description: python Man in the middle 
         // Reference: https://github.com/Tw1sm/RITM
-        $string1 = /\simport\sSpoofer\,\sSniffer\,\sRoaster/ nocase ascii wide
+        $string1 = " import Spoofer, Sniffer, Roaster" nocase ascii wide
         // Description: python Man in the middle 
         // Reference: https://github.com/Tw1sm/RITM
         $string2 = /\sroaster\.py/ nocase ascii wide
@@ -43,13 +43,13 @@ rule RITM
         $string11 = /\\spoofer\.py/ nocase ascii wide
         // Description: python Man in the middle 
         // Reference: https://github.com/Tw1sm/RITM
-        $string12 = /387e21adbabeddf80db5d2868f93d6bdba8443dc26fdb964ec6e279f3d02310c/ nocase ascii wide
+        $string12 = "387e21adbabeddf80db5d2868f93d6bdba8443dc26fdb964ec6e279f3d02310c" nocase ascii wide
         // Description: python Man in the middle 
         // Reference: https://github.com/Tw1sm/RITM
-        $string13 = /ad393f135cc101f7897812ad3183775a89853e89cab5f31ae89eef3240ca9c4f/ nocase ascii wide
+        $string13 = "ad393f135cc101f7897812ad3183775a89853e89cab5f31ae89eef3240ca9c4f" nocase ascii wide
         // Description: python Man in the middle 
         // Reference: https://github.com/Tw1sm/RITM
-        $string14 = /f1525ffa97500a9aa64138541d1e91f403e494d8a6eef7bcb1f1de7e8261755e/ nocase ascii wide
+        $string14 = "f1525ffa97500a9aa64138541d1e91f403e494d8a6eef7bcb1f1de7e8261755e" nocase ascii wide
         // Description: python Man in the middle 
         // Reference: https://github.com/Tw1sm/RITM
         $string15 = /from\sritm\.lib\simport\s/ nocase ascii wide
@@ -64,22 +64,22 @@ rule RITM
         $string18 = /impacket\.krb5\./ nocase ascii wide
         // Description: python Man in the middle 
         // Reference: https://github.com/Tw1sm/RITM
-        $string19 = /poetry\srun\sritm\s/ nocase ascii wide
+        $string19 = "poetry run ritm " nocase ascii wide
         // Description: python Man in the middle 
         // Reference: https://github.com/Tw1sm/RITM
-        $string20 = /\'Roasted\sSPN\s/ nocase ascii wide
+        $string20 = "'Roasted SPN " nocase ascii wide
         // Description: python Man in the middle 
         // Reference: https://github.com/Tw1sm/RITM
-        $string21 = /Sniffed\sAS\-REQ\sfrom\s/ nocase ascii wide
+        $string21 = "Sniffed AS-REQ from " nocase ascii wide
         // Description: python Man in the middle 
         // Reference: https://github.com/Tw1sm/RITM
-        $string22 = /Sniffer\swaiting\sfor\sAS\-REQ/ nocase ascii wide
+        $string22 = "Sniffer waiting for AS-REQ" nocase ascii wide
         // Description: python Man in the middle 
         // Reference: https://github.com/Tw1sm/RITM
-        $string23 = /The\sAS\-REQ\sis\svalid\!\sAttempting\sto\sroast\s/ nocase ascii wide
+        $string23 = "The AS-REQ is valid! Attempting to roast " nocase ascii wide
         // Description: python Man in the middle 
         // Reference: https://github.com/Tw1sm/RITM
-        $string24 = /Tw1sm\/RITM/ nocase ascii wide
+        $string24 = "Tw1sm/RITM" nocase ascii wide
 
     condition:
         any of them

@@ -10,7 +10,7 @@ rule dns_black_cat
     strings:
         // Description: Multi platform toolkit for an interactive DNS shell commands exfiltration - by using DNS-Cat you will be able to execute system commands in shell mode over DNS protocol
         // Reference: https://github.com/lawrenceamer/dns-black-cat
-        $string1 = /\sDNS\-Black\-CAT\sServer\s/ nocase ascii wide
+        $string1 = " DNS-Black-CAT Server " nocase ascii wide
         // Description: Multi platform toolkit for an interactive DNS shell commands exfiltration - by using DNS-Cat you will be able to execute system commands in shell mode over DNS protocol
         // Reference: https://github.com/lawrenceamer/dns-black-cat
         $string2 = /\/DBC\-Server\.py/ nocase ascii wide
@@ -31,13 +31,13 @@ rule dns_black_cat
         $string7 = /dns_server\.py\s\-d\s/ nocase ascii wide
         // Description: Multi platform toolkit for an interactive DNS shell commands exfiltration - by using DNS-Cat you will be able to execute system commands in shell mode over DNS protocol
         // Reference: https://github.com/lawrenceamer/dns-black-cat
-        $string8 = /dns\-black\-cat\-main/ nocase ascii wide
+        $string8 = "dns-black-cat-main" nocase ascii wide
         // Description: Multi platform toolkit for an interactive DNS shell commands exfiltration - by using DNS-Cat you will be able to execute system commands in shell mode over DNS protocol
         // Reference: https://github.com/lawrenceamer/dns-black-cat
         $string9 = /dns\-cat\.exe\s\-/ nocase ascii wide
         // Description: Multi platform toolkit for an interactive DNS shell commands exfiltration - by using DNS-Cat you will be able to execute system commands in shell mode over DNS protocol
         // Reference: https://github.com/lawrenceamer/dns-black-cat
-        $string10 = /lawrenceamer\/dns\-black\-cat/ nocase ascii wide
+        $string10 = "lawrenceamer/dns-black-cat" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -10,7 +10,7 @@ rule spraycharles
     strings:
         // Description: Low and slow password spraying tool
         // Reference: https://github.com/Tw1sm/spraycharles
-        $string1 = /\sinstall\sspraycharles/ nocase ascii wide
+        $string1 = " install spraycharles" nocase ascii wide
         // Description: Low and slow password spraying tool
         // Reference: https://github.com/Tw1sm/spraycharles
         $string2 = /\sspray\s\-u\s.{0,100}\s\-H\s.{0,100}\s\-p\s.{0,100}\s\-m\sowa/ nocase ascii wide
@@ -49,25 +49,25 @@ rule spraycharles
         $string13 = /\\spraycharles\.py/ nocase ascii wide
         // Description: Low and slow password spraying tool
         // Reference: https://github.com/Tw1sm/spraycharles
-        $string14 = /a89da438ecbe2e8c5f65e2bcbf5d82a84d26ba56dff46eb180c9de213f5a1871/ nocase ascii wide
+        $string14 = "a89da438ecbe2e8c5f65e2bcbf5d82a84d26ba56dff46eb180c9de213f5a1871" nocase ascii wide
         // Description: Low and slow password spraying tool
         // Reference: https://github.com/Tw1sm/spraycharles
         $string15 = /docker\sbuild\s\.\s\-t\sspraycharles/ nocase ascii wide
         // Description: Low and slow password spraying tool
         // Reference: https://github.com/Tw1sm/spraycharles
-        $string16 = /from\sspraycharles\simport\s/ nocase ascii wide
+        $string16 = "from spraycharles import " nocase ascii wide
         // Description: Low and slow password spraying tool
         // Reference: https://github.com/Tw1sm/spraycharles
-        $string17 = /spraycharles\sanalyze\s/ nocase ascii wide
+        $string17 = "spraycharles analyze " nocase ascii wide
         // Description: Low and slow password spraying tool
         // Reference: https://github.com/Tw1sm/spraycharles
-        $string18 = /spraycharles\sgen\sextras/ nocase ascii wide
+        $string18 = "spraycharles gen extras" nocase ascii wide
         // Description: Low and slow password spraying tool
         // Reference: https://github.com/Tw1sm/spraycharles
-        $string19 = /spraycharles\sspray/ nocase ascii wide
+        $string19 = "spraycharles spray" nocase ascii wide
         // Description: Low and slow password spraying tool
         // Reference: https://github.com/Tw1sm/spraycharles
-        $string20 = /Tw1sm\/spraycharles/ nocase ascii wide
+        $string20 = "Tw1sm/spraycharles" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

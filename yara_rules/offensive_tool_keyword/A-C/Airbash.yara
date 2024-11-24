@@ -10,7 +10,7 @@ rule Airbash
     strings:
         // Description: A POSIX-compliant fully automated WPA PSK handshake capture script aimed at penetration testing.
         // Reference: https://github.com/tehw0lf/airbash
-        $string1 = /Airbash/ nocase ascii wide
+        $string1 = "Airbash" nocase ascii wide
 
     condition:
         any of them

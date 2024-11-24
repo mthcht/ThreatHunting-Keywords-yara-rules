@@ -10,7 +10,7 @@ rule NetworkMiner
     strings:
         // Description: A Network Forensic Analysis Tool (NFAT)
         // Reference: http://www.netresec.com/?page=NetworkMiner
-        $string1 = /NetworkMiner/ nocase ascii wide
+        $string1 = "NetworkMiner" nocase ascii wide
 
     condition:
         any of them

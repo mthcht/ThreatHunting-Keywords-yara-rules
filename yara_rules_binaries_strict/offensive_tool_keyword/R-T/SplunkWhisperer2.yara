@@ -22,25 +22,25 @@ rule SplunkWhisperer2
         $string4 = /\/SplunkWhisperer2\.git/ nocase ascii wide
         // Description: Local privilege escalation or remote code execution through Splunk Universal Forwarder (UF) misconfigurations
         // Reference: https://github.com/cnotin/SplunkWhisperer2
-        $string5 = /airman604\/splunk_whisperer/ nocase ascii wide
+        $string5 = "airman604/splunk_whisperer" nocase ascii wide
         // Description: Local privilege escalation or remote code execution through Splunk Universal Forwarder (UF) misconfigurations
         // Reference: https://github.com/cnotin/SplunkWhisperer2
-        $string6 = /cnotin\/SplunkWhisperer2/ nocase ascii wide
+        $string6 = "cnotin/SplunkWhisperer2" nocase ascii wide
         // Description: Local privilege escalation or remote code execution through Splunk Universal Forwarder (UF) misconfigurations
         // Reference: https://github.com/cnotin/SplunkWhisperer2
-        $string7 = /PySplunkWhisperer2/ nocase ascii wide
+        $string7 = "PySplunkWhisperer2" nocase ascii wide
         // Description: Local privilege escalation or remote code execution through Splunk Universal Forwarder (UF) misconfigurations
         // Reference: https://github.com/cnotin/SplunkWhisperer2
-        $string8 = /SharpSplunkWhisperer2/ nocase ascii wide
+        $string8 = "SharpSplunkWhisperer2" nocase ascii wide
         // Description: Local privilege escalation or remote code execution through Splunk Universal Forwarder (UF) misconfigurations
         // Reference: https://github.com/cnotin/SplunkWhisperer2
         $string9 = /splunk_whisperer\.py/ nocase ascii wide
         // Description: Local privilege escalation or remote code execution through Splunk Universal Forwarder (UF) misconfigurations
         // Reference: https://github.com/cnotin/SplunkWhisperer2
-        $string10 = /splunk_whisperer\-master/ nocase ascii wide
+        $string10 = "splunk_whisperer-master" nocase ascii wide
         // Description: Local privilege escalation or remote code execution through Splunk Universal Forwarder (UF) misconfigurations
         // Reference: https://github.com/cnotin/SplunkWhisperer2
-        $string11 = /SplunkWhisperer2\-master/ nocase ascii wide
+        $string11 = "SplunkWhisperer2-master" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

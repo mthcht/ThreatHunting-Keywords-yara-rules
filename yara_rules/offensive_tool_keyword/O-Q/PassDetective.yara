@@ -10,7 +10,7 @@ rule PassDetective
     strings:
         // Description: PassDetective is a command-line tool that scans shell command history to detect mistakenly written passwords - API keys and secrets
         // Reference: https://github.com/aydinnyunus/PassDetective
-        $string1 = /\sextract\s\-\-secrets\s\-\-zsh/ nocase ascii wide
+        $string1 = " extract --secrets --zsh" nocase ascii wide
         // Description: PassDetective is a command-line tool that scans shell command history to detect mistakenly written passwords - API keys and secrets
         // Reference: https://github.com/aydinnyunus/PassDetective
         $string2 = /\.\/Passdetective/ nocase ascii wide
@@ -19,10 +19,10 @@ rule PassDetective
         $string3 = /\/PassDetective\.git/ nocase ascii wide
         // Description: PassDetective is a command-line tool that scans shell command history to detect mistakenly written passwords - API keys and secrets
         // Reference: https://github.com/aydinnyunus/PassDetective
-        $string4 = /aydinnyunus\/PassDetective/ nocase ascii wide
+        $string4 = "aydinnyunus/PassDetective" nocase ascii wide
         // Description: PassDetective is a command-line tool that scans shell command history to detect mistakenly written passwords - API keys and secrets
         // Reference: https://github.com/aydinnyunus/PassDetective
-        $string5 = /PassDetective\sextract/ nocase ascii wide
+        $string5 = "PassDetective extract" nocase ascii wide
         // Description: PassDetective is a command-line tool that scans shell command history to detect mistakenly written passwords - API keys and secrets
         // Reference: https://github.com/aydinnyunus/PassDetective
         $string6 = /PassDetective\-main\./ nocase ascii wide

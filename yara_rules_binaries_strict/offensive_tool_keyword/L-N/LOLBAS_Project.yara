@@ -10,7 +10,7 @@ rule LOLBAS_Project
     strings:
         // Description: Living Off The Land Binaries and Scripts (and also Libraries) malicious use of  legitimate tool
         // Reference: https://lolbas-project.github.io/
-        $string1 = /LOLBAS\-Project/ nocase ascii wide
+        $string1 = "LOLBAS-Project" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

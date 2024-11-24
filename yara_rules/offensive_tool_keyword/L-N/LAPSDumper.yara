@@ -28,10 +28,10 @@ rule LAPSDumper
         $string6 = /\\LAPSDumper\\/ nocase ascii wide
         // Description: Dumping LAPS from Python
         // Reference: https://github.com/n00py/LAPSDumper
-        $string7 = /LAPSDumper\-main/ nocase ascii wide
+        $string7 = "LAPSDumper-main" nocase ascii wide
         // Description: Dumping LAPS from Python
         // Reference: https://github.com/n00py/LAPSDumper
-        $string8 = /n00py\/LAPSDumper/ nocase ascii wide
+        $string8 = "n00py/LAPSDumper" nocase ascii wide
 
     condition:
         any of them

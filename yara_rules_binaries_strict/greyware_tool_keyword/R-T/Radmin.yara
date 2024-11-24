@@ -88,16 +88,16 @@ rule Radmin
         $string26 = /HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Radmin\\/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string27 = /netsh\sadvfirewall\sfirewall\sadd\srule\sname\=\\"Radmin\sServer\s/ nocase ascii wide
+        $string27 = "netsh advfirewall firewall add rule name=\"Radmin Server " nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
         $string28 = /Program\sFiles\s\(x86\)\\Radmin\sViewer\s3\\/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string29 = /radmin\s\/connect\:/ nocase ascii wide
+        $string29 = "radmin /connect:" nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string30 = /Radmin\sServer\sV3/ nocase ascii wide
+        $string30 = "Radmin Server V3" nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
         $string31 = /Radmin\sViewer\s3\\CHATLOGS\\/ nocase ascii wide
@@ -109,10 +109,10 @@ rule Radmin
         $string33 = /radmin\.exe.{0,100}\s\/connect\:/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string34 = /rserver3\s\/start/ nocase ascii wide
+        $string34 = "rserver3 /start" nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string35 = /rserver3\s\/stop/ nocase ascii wide
+        $string35 = "rserver3 /stop" nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
         $string36 = /rserver3\.exe.{0,100}\/start/ nocase ascii wide

@@ -13,7 +13,7 @@ rule LightsOut
         $string1 = /\/LightsOut\.git/ nocase ascii wide
         // Description: Generate an obfuscated DLL that will disable AMSI & ETW
         // Reference: https://github.com/icyguider/LightsOut
-        $string2 = /icyguider\/LightsOut/ nocase ascii wide
+        $string2 = "icyguider/LightsOut" nocase ascii wide
         // Description: Generate an obfuscated DLL that will disable AMSI & ETW
         // Reference: https://github.com/icyguider/LightsOut
         $string3 = /lightsout\.py/ nocase ascii wide

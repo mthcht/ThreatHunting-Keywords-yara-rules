@@ -13,16 +13,16 @@ rule HTMLSmuggler
         $string1 = /\/HTMLSmuggler\.git/ nocase ascii wide
         // Description: HTML Smuggling generator&obfuscator for your Red Team operations
         // Reference: https://github.com/D00Movenok/HTMLSmuggler
-        $string2 = /\/HTMLSmuggler\// nocase ascii wide
+        $string2 = "/HTMLSmuggler/" nocase ascii wide
         // Description: HTML Smuggling generator&obfuscator for your Red Team operations
         // Reference: https://github.com/D00Movenok/HTMLSmuggler
         $string3 = /\\HTMLSmuggler\\/ nocase ascii wide
         // Description: HTML Smuggling generator&obfuscator for your Red Team operations
         // Reference: https://github.com/D00Movenok/HTMLSmuggler
-        $string4 = /D00Movenok\/HTMLSmuggler/ nocase ascii wide
+        $string4 = "D00Movenok/HTMLSmuggler" nocase ascii wide
         // Description: HTML Smuggling generator&obfuscator for your Red Team operations
         // Reference: https://github.com/D00Movenok/HTMLSmuggler
-        $string5 = /HTMLSmuggler\-main/ nocase ascii wide
+        $string5 = "HTMLSmuggler-main" nocase ascii wide
 
     condition:
         any of them

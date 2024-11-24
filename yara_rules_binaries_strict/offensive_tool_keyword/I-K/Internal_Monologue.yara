@@ -16,10 +16,10 @@ rule Internal_Monologue
         $string2 = /Internal\-Monologue\.exe/ nocase ascii wide
         // Description: Internal Monologue Attack: Retrieving NTLM Hashes without Touching LSASS
         // Reference: https://github.com/eladshamir/Internal-Monologue
-        $string3 = /InternalMonologueDll/ nocase ascii wide
+        $string3 = "InternalMonologueDll" nocase ascii wide
         // Description: Internal Monologue Attack: Retrieving NTLM Hashes without Touching LSASS
         // Reference: https://github.com/eladshamir/Internal-Monologue
-        $string4 = /InternalMonologueExe/ nocase ascii wide
+        $string4 = "InternalMonologueExe" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -10,7 +10,7 @@ rule ssh_mitm
     strings:
         // Description: An SSH/SFTP man-in-the-middle tool that logs interactive sessions and passwords.
         // Reference: https://github.com/jtesta/ssh-mitm
-        $string1 = /ssh\-mitm/ nocase ascii wide
+        $string1 = "ssh-mitm" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

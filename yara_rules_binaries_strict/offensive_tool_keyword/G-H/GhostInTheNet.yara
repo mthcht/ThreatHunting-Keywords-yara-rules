@@ -16,7 +16,7 @@ rule GhostInTheNet
         $string2 = /\/GhostInTheNet\.sh/ nocase ascii wide
         // Description: Ultimate Network Stealther that makes Linux a Ghost In The Net and protects from MITM/DOS/scan
         // Reference: https://github.com/cryptolok/GhostInTheNet
-        $string3 = /\/GhostInTheNet\-master/ nocase ascii wide
+        $string3 = "/GhostInTheNet-master" nocase ascii wide
         // Description: Ultimate Network Stealther that makes Linux a Ghost In The Net and protects from MITM/DOS/scan
         // Reference: https://github.com/cryptolok/GhostInTheNet
         $string4 = /\/tmp\/host\.ghost/ nocase ascii wide
@@ -25,10 +25,10 @@ rule GhostInTheNet
         $string5 = /\/tmp\/mac\.ghost/ nocase ascii wide
         // Description: Ultimate Network Stealther that makes Linux a Ghost In The Net and protects from MITM/DOS/scan
         // Reference: https://github.com/cryptolok/GhostInTheNet
-        $string6 = /GhostInTheNet\soff/ nocase ascii wide
+        $string6 = "GhostInTheNet off" nocase ascii wide
         // Description: Ultimate Network Stealther that makes Linux a Ghost In The Net and protects from MITM/DOS/scan
         // Reference: https://github.com/cryptolok/GhostInTheNet
-        $string7 = /GhostInTheNet\son/ nocase ascii wide
+        $string7 = "GhostInTheNet on" nocase ascii wide
         // Description: Ultimate Network Stealther that makes Linux a Ghost In The Net and protects from MITM/DOS/scan
         // Reference: https://github.com/cryptolok/GhostInTheNet
         $string8 = /GhostInTheNet\.sh\s/ nocase ascii wide

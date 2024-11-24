@@ -13,7 +13,7 @@ rule privexchange
         $string1 = /\/PrivExchange\.git/ nocase ascii wide
         // Description: Exchange your privileges for Domain Admin privs by abusing Exchange
         // Reference: https://github.com/dirkjanm/PrivExchange
-        $string2 = /dirkjanm\/PrivExchange/ nocase ascii wide
+        $string2 = "dirkjanm/PrivExchange" nocase ascii wide
         // Description: Exchange your privileges for Domain Admin privs by abusing Exchange
         // Reference: https://github.com/dirkjanm/PrivExchange
         $string3 = /httpattack\.py/ nocase ascii wide

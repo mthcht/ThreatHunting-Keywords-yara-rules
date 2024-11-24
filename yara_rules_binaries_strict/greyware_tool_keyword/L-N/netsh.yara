@@ -13,25 +13,25 @@ rule netsh
         $string1 = /for\s\/L\s\%i\sin\s\(2\,1\,254\)\sdo\s\(netsh\sinterface\sip\sset\saddress\slocal\sstatic/ nocase ascii wide
         // Description: gathering information about network configurations
         // Reference: N/A
-        $string2 = /netsh\sadvfirewall\sfirewall\sshow\srule\sname\=all/ nocase ascii wide
+        $string2 = "netsh advfirewall firewall show rule name=all" nocase ascii wide
         // Description: script to dismantle complete windows defender protection and even bypass tamper protection  - Disable Windows-Defender Permanently.
         // Reference: https://github.com/swagkarna/Defeat-Defender-V1.2.0
-        $string3 = /netsh\sadvfirewall\sset\sallprofiles\sstate\soff/ nocase ascii wide
+        $string3 = "netsh advfirewall set allprofiles state off" nocase ascii wide
         // Description: Disable Windows Firewall
         // Reference: N/A
-        $string4 = /NetSh\sAdvfirewall\sset\sallprofiles\sstate\soff/ nocase ascii wide
+        $string4 = "NetSh Advfirewall set allprofiles state off" nocase ascii wide
         // Description: adding a executable in user appdata folder to the allowed programs
         // Reference: https://tria.ge/231006-ydmxjsfe5s/behavioral1/analog?proc=66
         $string5 = /netsh\sfirewall\sadd\sallowedprogram\s\\"C\:\\Users\\.{0,100}\\AppData\\.{0,100}\.exe\\"\s\\".{0,100}\.exe\\"\sENABLE/ nocase ascii wide
         // Description: delete a item from firewall allowedprogram Whitelist
         // Reference: N/A
-        $string6 = /netsh\sfirewall\sdelete\sallowedprogram\s/ nocase ascii wide
+        $string6 = "netsh firewall delete allowedprogram " nocase ascii wide
         // Description: Disable Windows Firewall
         // Reference: N/A
-        $string7 = /netsh\sfirewall\sset\sopmode\sdisable/ nocase ascii wide
+        $string7 = "netsh firewall set opmode disable" nocase ascii wide
         // Description: show all firewall rules config
         // Reference: N/A
-        $string8 = /netsh\sfirewall\sshow\sconfig/ nocase ascii wide
+        $string8 = "netsh firewall show config" nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
         $string9 = /netsh\sinterface\sportproxy\sadd\sv4tov4\slistenport\=.{0,100}\sconnectaddress\=/ nocase ascii wide
@@ -43,16 +43,16 @@ rule netsh
         $string11 = /netsh\sinterface\sportproxy\sdelete\sv4tov4\slistenaddress\=0\.0\.0\.0\slistenport\=/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string12 = /netsh\sinterface\sportproxy\sdelete\sv4tov4\slistenport\=/ nocase ascii wide
+        $string12 = "netsh interface portproxy delete v4tov4 listenport=" nocase ascii wide
         // Description: display all current TCP port redirections configured on the system
         // Reference: N/A
-        $string13 = /netsh\sinterface\sportproxy\sshow\sall/ nocase ascii wide
+        $string13 = "netsh interface portproxy show all" nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string14 = /netsh\sinterface\sportproxy\sshow\sv4tov4/ nocase ascii wide
+        $string14 = "netsh interface portproxy show v4tov4" nocase ascii wide
         // Description: display saved Wi-Fi profiles including plaintext passwords on a Windows system
         // Reference: N/A
-        $string15 = /netsh\swlan\sshow\sprofiles\skey\=clear/ nocase ascii wide
+        $string15 = "netsh wlan show profiles key=clear" nocase ascii wide
         // Description: Adds a new rule to the Windows firewall that allows incoming RDP traffic.
         // Reference: https://www.cisa.gov/sites/default/files/2023-05/aa23-136a_stopransomware_bianlian_ransomware_group_1.pdf
         $string16 = /netsh\.exe\sadvfirewall\sfirewall\sadd\srule\s\\"name\=allow\sRemoteDesktop\\"\sdir\=in\s.{0,100}\slocalport\=.{0,100}\saction\=allow/ nocase ascii wide

@@ -10,7 +10,7 @@ rule BetterBackdoor
     strings:
         // Description: A backdoor is a tool used to gain remote access to a machine.
         // Reference: https://github.com/thatcherclough/BetterBackdoor
-        $string1 = /BetterBackdoor/ nocase ascii wide
+        $string1 = "BetterBackdoor" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

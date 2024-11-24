@@ -10,7 +10,7 @@ rule ldapminer
     strings:
         // Description: This is a tool I wrote to collect information from different LDAP Server implementation. This was written in C with the Netscape C
         // Reference: https://sourceforge.net/projects/ldapminer/
-        $string1 = /LdapMiner/ nocase ascii wide
+        $string1 = "LdapMiner" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

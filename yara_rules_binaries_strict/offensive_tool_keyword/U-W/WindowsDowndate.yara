@@ -25,10 +25,10 @@ rule WindowsDowndate
         $string5 = /\\WindowsDowndate\-main/ nocase ascii wide
         // Description: A tool that takes over Windows Updates to craft custom downgrades and expose past fixed vulnerabilities
         // Reference: https://github.com/SafeBreach-Labs/WindowsDowndate
-        $string6 = /0a0be178cd014f569eac8697ce355c7ceb59b7e1a3aaa18673a7ffde4a044c88/ nocase ascii wide
+        $string6 = "0a0be178cd014f569eac8697ce355c7ceb59b7e1a3aaa18673a7ffde4a044c88" nocase ascii wide
         // Description: A tool that takes over Windows Updates to craft custom downgrades and expose past fixed vulnerabilities
         // Reference: https://github.com/SafeBreach-Labs/WindowsDowndate
-        $string7 = /50eb54d0976374701c6051c23b993708\,4d67d3d82b1adcc1b96e743e9b0efaaa8a566e3d\,a34e71ededf334d3d6a480e3738c91fccbb4d2c1fbeec7192db9793a2541e8ca/ nocase ascii wide
+        $string7 = "50eb54d0976374701c6051c23b993708,4d67d3d82b1adcc1b96e743e9b0efaaa8a566e3d,a34e71ededf334d3d6a480e3738c91fccbb4d2c1fbeec7192db9793a2541e8ca" nocase ascii wide
         // Description: A tool that takes over Windows Updates to craft custom downgrades and expose past fixed vulnerabilities
         // Reference: https://github.com/SafeBreach-Labs/WindowsDowndate
         $string8 = /CVE\-2021\-27090\-Secure\-Kernel\-EoP\-Patch\-Downgrade\/Config\.xml/ nocase ascii wide
@@ -40,7 +40,7 @@ rule WindowsDowndate
         $string10 = /CVE\-2023\-21768\-AFD\-Driver\-EoP\-Patch\-Downgrade\/Config\.xml/ nocase ascii wide
         // Description: A tool that takes over Windows Updates to craft custom downgrades and expose past fixed vulnerabilities
         // Reference: https://github.com/SafeBreach-Labs/WindowsDowndate
-        $string11 = /dab858feab4506727059fda4645865e2029892c6560704a7077433bab5d5ca0e/ nocase ascii wide
+        $string11 = "dab858feab4506727059fda4645865e2029892c6560704a7077433bab5d5ca0e" nocase ascii wide
         // Description: A tool that takes over Windows Updates to craft custom downgrades and expose past fixed vulnerabilities
         // Reference: https://github.com/SafeBreach-Labs/WindowsDowndate
         $string12 = /from\swindows_downdate\./ nocase ascii wide
@@ -55,22 +55,22 @@ rule WindowsDowndate
         $string15 = /PPLFault\-Patch\-Downgrade\/Config\.xml/ nocase ascii wide
         // Description: A tool that takes over Windows Updates to craft custom downgrades and expose past fixed vulnerabilities
         // Reference: https://github.com/SafeBreach-Labs/WindowsDowndate
-        $string16 = /SafeBreach\-Labs\/WindowsDowndate/ nocase ascii wide
+        $string16 = "SafeBreach-Labs/WindowsDowndate" nocase ascii wide
         // Description: A tool that takes over Windows Updates to craft custom downgrades and expose past fixed vulnerabilities
         // Reference: https://github.com/SafeBreach-Labs/WindowsDowndate
-        $string17 = /Starting\sWindows\-Downdate/ nocase ascii wide
+        $string17 = "Starting Windows-Downdate" nocase ascii wide
         // Description: A tool that takes over Windows Updates to craft custom downgrades and expose past fixed vulnerabilities
         // Reference: https://github.com/SafeBreach-Labs/WindowsDowndate
         $string18 = /VBS\-UEFI\-Locks\-Bypass\/Config\.xml/ nocase ascii wide
         // Description: A tool that takes over Windows Updates to craft custom downgrades and expose past fixed vulnerabilities
         // Reference: https://github.com/SafeBreach-Labs/WindowsDowndate
-        $string19 = /Windows\sDowndate\:\sCraft\sany\sdowngrading\sWindows\sUpdates/ nocase ascii wide
+        $string19 = "Windows Downdate: Craft any downgrading Windows Updates" nocase ascii wide
         // Description: A tool that takes over Windows Updates to craft custom downgrades and expose past fixed vulnerabilities
         // Reference: https://github.com/SafeBreach-Labs/WindowsDowndate
         $string20 = /windows_downdate\.exe/ nocase ascii wide
         // Description: A tool that takes over Windows Updates to craft custom downgrades and expose past fixed vulnerabilities
         // Reference: https://github.com/SafeBreach-Labs/WindowsDowndate
-        $string21 = /Windows\-Downdate\smust\sbe\srun\sas\san\sAdministrator/ nocase ascii wide
+        $string21 = "Windows-Downdate must be run as an Administrator" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -31,22 +31,22 @@ rule SharpElevator
         $string7 = /\\SharpElevator\.sln/ nocase ascii wide
         // Description: SharpElevator is a C# implementation of Elevator for UAC bypass
         // Reference: https://github.com/eladshamir/SharpElevator
-        $string8 = /378f6e87219651f96e607e40c229e5f17df4ad71836409881fe3cc77c6780ac7/ nocase ascii wide
+        $string8 = "378f6e87219651f96e607e40c229e5f17df4ad71836409881fe3cc77c6780ac7" nocase ascii wide
         // Description: SharpElevator is a C# implementation of Elevator for UAC bypass
         // Reference: https://github.com/eladshamir/SharpElevator
-        $string9 = /42BDEFC0\-0BAE\-43DF\-97BB\-C805ABFBD078/ nocase ascii wide
+        $string9 = "42BDEFC0-0BAE-43DF-97BB-C805ABFBD078" nocase ascii wide
         // Description: SharpElevator is a C# implementation of Elevator for UAC bypass
         // Reference: https://github.com/eladshamir/SharpElevator
-        $string10 = /6a31601415f4b02531aa031b1f246cec9f652f62927bc9b3c4443aac9c2ff625/ nocase ascii wide
+        $string10 = "6a31601415f4b02531aa031b1f246cec9f652f62927bc9b3c4443aac9c2ff625" nocase ascii wide
         // Description: SharpElevator is a C# implementation of Elevator for UAC bypass
         // Reference: https://github.com/eladshamir/SharpElevator
-        $string11 = /a36ffb4f22598b5e983ef16251df49deb94ad0c41a8a1768503efe4d7e16ea40/ nocase ascii wide
+        $string11 = "a36ffb4f22598b5e983ef16251df49deb94ad0c41a8a1768503efe4d7e16ea40" nocase ascii wide
         // Description: SharpElevator is a C# implementation of Elevator for UAC bypass
         // Reference: https://github.com/eladshamir/SharpElevator
-        $string12 = /a67edb34ce2c10bb5c170445344da4ad809932ff8e82e2b6c45a260d5a47a859/ nocase ascii wide
+        $string12 = "a67edb34ce2c10bb5c170445344da4ad809932ff8e82e2b6c45a260d5a47a859" nocase ascii wide
         // Description: SharpElevator is a C# implementation of Elevator for UAC bypass
         // Reference: https://github.com/eladshamir/SharpElevator
-        $string13 = /eladshamir\/SharpElevator/ nocase ascii wide
+        $string13 = "eladshamir/SharpElevator" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

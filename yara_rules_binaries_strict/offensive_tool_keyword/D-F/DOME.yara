@@ -25,7 +25,7 @@ rule DOME
         $string5 = /\-m\s.{0,100}\s\-d\s.{0,100}\s\-w\s.{0,100}\s\-\-top\-web\-ports/ nocase ascii wide
         // Description: DOME - A subdomain enumeration tool
         // Reference: https://github.com/v4d1/Dome
-        $string6 = /v4d1\/Dome/ nocase ascii wide
+        $string6 = "v4d1/Dome" nocase ascii wide
         // Description: DOME - A subdomain enumeration tool
         // Reference: https://github.com/v4d1/Dome
         $string7 = /wordlists\/subdomains\-5000\.txt/ nocase ascii wide

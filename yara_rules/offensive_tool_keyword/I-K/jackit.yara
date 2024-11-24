@@ -10,7 +10,7 @@ rule jackit
     strings:
         // Description: Wireless Mouse and Keyboard Vulnerability This is a partial implementation of Bastilles MouseJack exploit. See mousejack.com for more details. Full credit goes to Bastilles team for discovering this issue and writing the libraries to work with the CrazyRadio PA dongle. Also. thanks to Samy Kamkar for KeySweeper. to Thorsten Schroeder and Max Moser for their work on KeyKeriki and to Travis Goodspeed. We stand on the shoulders of giants
         // Reference: https://github.com/insecurityofthings/jackit
-        $string1 = /\/jackit/ nocase ascii wide
+        $string1 = "/jackit" nocase ascii wide
         // Description: This is a partial implementation of Bastilles MouseJack exploit. See mousejack.com for more details. Full credit goes to Bastilles team for discovering this issue and writing the libraries to work with the CrazyRadio PA dongle. Also. thanks to Samy Kamkar for KeySweeper. to Thorsten Schroeder and Max Moser for their work on KeyKeriki and to Travis Goodspeed. We stand on the shoulders of giants.
         // Reference: https://github.com/insecurityofthings/jackit
         $string2 = /insecurityofthings.{0,1000}jackit/ nocase ascii wide

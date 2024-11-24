@@ -25,7 +25,7 @@ rule stunnel
         $string5 = /\/stunnel\-latest\-win64\-installer\.exe/ nocase ascii wide
         // Description: Stunnel is a proxy designed to add TLS encryption functionality to existing clients and servers without any changes in the programs
         // Reference: https://www.stunnel.org/index.html
-        $string6 = /\/tmp\/stunnel/ nocase ascii wide
+        $string6 = "/tmp/stunnel" nocase ascii wide
         // Description: Stunnel is a proxy designed to add TLS encryption functionality to existing clients and servers without any changes in the programs
         // Reference: https://www.stunnel.org/index.html
         $string7 = /\\CurrentVersion\\Uninstall\\stunnel/ nocase ascii wide
@@ -49,13 +49,13 @@ rule stunnel
         $string13 = /\\tstunnel\.exe/ nocase ascii wide
         // Description: Stunnel is a proxy designed to add TLS encryption functionality to existing clients and servers without any changes in the programs
         // Reference: https://www.stunnel.org/index.html
-        $string14 = /719e6b5eedc0d4b178d6f0f999555fc3292a22747f3ed2238d529604ee1a5532/ nocase ascii wide
+        $string14 = "719e6b5eedc0d4b178d6f0f999555fc3292a22747f3ed2238d529604ee1a5532" nocase ascii wide
         // Description: Stunnel is a proxy designed to add TLS encryption functionality to existing clients and servers without any changes in the programs
         // Reference: https://www.stunnel.org/index.html
-        $string15 = /bc917c3bcd943a4d632360c067977a31e85e385f5f4845f69749bce88183cb38/ nocase ascii wide
+        $string15 = "bc917c3bcd943a4d632360c067977a31e85e385f5f4845f69749bce88183cb38" nocase ascii wide
         // Description: Stunnel is a proxy designed to add TLS encryption functionality to existing clients and servers without any changes in the programs
         // Reference: https://www.stunnel.org/index.html
-        $string16 = /d686b1a4135947718e7a8157a8cb6694ed50e2267713de1972941148a8859789/ nocase ascii wide
+        $string16 = "d686b1a4135947718e7a8157a8cb6694ed50e2267713de1972941148a8859789" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

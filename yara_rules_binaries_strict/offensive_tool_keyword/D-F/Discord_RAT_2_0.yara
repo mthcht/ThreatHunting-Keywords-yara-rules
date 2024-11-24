@@ -67,43 +67,43 @@ rule Discord_RAT_2_0
         $string19 = /\\unrootkit\.dll/ nocase ascii wide
         // Description: Discord Remote Administration Tool fully written in c#, stub size of ~75kb with over 40 post exploitations modules
         // Reference: https://github.com/moom825/Discord-RAT-2.0
-        $string20 = /10804539a495e0fcc79a6c2ab03e34d4b5c2bce1e134060839ff9b58dcfc1cf7/ nocase ascii wide
+        $string20 = "10804539a495e0fcc79a6c2ab03e34d4b5c2bce1e134060839ff9b58dcfc1cf7" nocase ascii wide
         // Description: Discord Remote Administration Tool fully written in c#, stub size of ~75kb with over 40 post exploitations modules
         // Reference: https://github.com/moom825/Discord-RAT-2.0
-        $string21 = /121e18a8ad050f1a9510c6c32c0f4bb9adac3436170e2d1966788da4dc14c751/ nocase ascii wide
+        $string21 = "121e18a8ad050f1a9510c6c32c0f4bb9adac3436170e2d1966788da4dc14c751" nocase ascii wide
         // Description: Discord Remote Administration Tool fully written in c#, stub size of ~75kb with over 40 post exploitations modules
         // Reference: https://github.com/moom825/Discord-RAT-2.0
-        $string22 = /4350a69f2630214a7b079e41e3ac2d7c5759a622a0cd1227ba12eee06d758d9a/ nocase ascii wide
+        $string22 = "4350a69f2630214a7b079e41e3ac2d7c5759a622a0cd1227ba12eee06d758d9a" nocase ascii wide
         // Description: Discord Remote Administration Tool fully written in c#, stub size of ~75kb with over 40 post exploitations modules
         // Reference: https://github.com/moom825/Discord-RAT-2.0
-        $string23 = /8fdae5b4490183c9057a684f0ac2f82dd5c8911cb2f43a54ff47a9ad6e93952a/ nocase ascii wide
+        $string23 = "8fdae5b4490183c9057a684f0ac2f82dd5c8911cb2f43a54ff47a9ad6e93952a" nocase ascii wide
         // Description: Discord Remote Administration Tool fully written in c#, stub size of ~75kb with over 40 post exploitations modules
         // Reference: https://github.com/moom825/Discord-RAT-2.0
-        $string24 = /a3ca8d72edaf4ffb84a38e88a31f9e537d7d7b76f7cc7966583c7b4b4a811c74/ nocase ascii wide
+        $string24 = "a3ca8d72edaf4ffb84a38e88a31f9e537d7d7b76f7cc7966583c7b4b4a811c74" nocase ascii wide
         // Description: Discord Remote Administration Tool fully written in c#, stub size of ~75kb with over 40 post exploitations modules
         // Reference: https://github.com/moom825/Discord-RAT-2.0
-        $string25 = /Advfirewall\sset\sallprofiles\sstate\soff/ nocase ascii wide
+        $string25 = "Advfirewall set allprofiles state off" nocase ascii wide
         // Description: Discord Remote Administration Tool fully written in c#, stub size of ~75kb with over 40 post exploitations modules
         // Reference: https://github.com/moom825/Discord-RAT-2.0
-        $string26 = /ae8abf10e555cee9769abea0e2d3379b11bc6a817f75a0b6038d294fa3d6a136/ nocase ascii wide
+        $string26 = "ae8abf10e555cee9769abea0e2d3379b11bc6a817f75a0b6038d294fa3d6a136" nocase ascii wide
         // Description: Discord Remote Administration Tool fully written in c#, stub size of ~75kb with over 40 post exploitations modules
         // Reference: https://github.com/moom825/Discord-RAT-2.0
-        $string27 = /c13a0cd7c2c2fd577703bff026b72ed81b51266afa047328c8ff1c4a4d965c97/ nocase ascii wide
+        $string27 = "c13a0cd7c2c2fd577703bff026b72ed81b51266afa047328c8ff1c4a4d965c97" nocase ascii wide
         // Description: Discord Remote Administration Tool fully written in c#, stub size of ~75kb with over 40 post exploitations modules
         // Reference: https://github.com/moom825/Discord-RAT-2.0
-        $string28 = /CC12258F\-AF24\-4773\-A8E3\-45D365BCBDE9/ nocase ascii wide
+        $string28 = "CC12258F-AF24-4773-A8E3-45D365BCBDE9" nocase ascii wide
         // Description: Discord Remote Administration Tool fully written in c#, stub size of ~75kb with over 40 post exploitations modules
         // Reference: https://github.com/moom825/Discord-RAT-2.0
-        $string29 = /cd075baa8305d9767316d5a2cc0ee60daf1f194a3c4b0d3386d1f8bd80f44907/ nocase ascii wide
+        $string29 = "cd075baa8305d9767316d5a2cc0ee60daf1f194a3c4b0d3386d1f8bd80f44907" nocase ascii wide
         // Description: Discord Remote Administration Tool fully written in c#, stub size of ~75kb with over 40 post exploitations modules
         // Reference: https://github.com/moom825/Discord-RAT-2.0
-        $string30 = /DBAE6A6E\-AE23\-4DE9\-9AB2\-6A8D2CD59DEF/ nocase ascii wide
+        $string30 = "DBAE6A6E-AE23-4DE9-9AB2-6A8D2CD59DEF" nocase ascii wide
         // Description: Discord Remote Administration Tool fully written in c#, stub size of ~75kb with over 40 post exploitations modules
         // Reference: https://github.com/moom825/Discord-RAT-2.0
-        $string31 = /de314bd66c919dbd7b5e6614583f44a6461a1663f880873bc6746eed3a149457/ nocase ascii wide
+        $string31 = "de314bd66c919dbd7b5e6614583f44a6461a1663f880873bc6746eed3a149457" nocase ascii wide
         // Description: Discord Remote Administration Tool fully written in c#, stub size of ~75kb with over 40 post exploitations modules
         // Reference: https://github.com/moom825/Discord-RAT-2.0
-        $string32 = /df78d4f9127039231844797c38428df24a80bd49eb11a5ee9a4dcf43f31573a9/ nocase ascii wide
+        $string32 = "df78d4f9127039231844797c38428df24a80bd49eb11a5ee9a4dcf43f31573a9" nocase ascii wide
         // Description: Discord Remote Administration Tool fully written in c#, stub size of ~75kb with over 40 post exploitations modules
         // Reference: https://github.com/moom825/Discord-RAT-2.0
         $string33 = /Discord\-RAT\-2\.0\-discordrat\.zip/ nocase ascii wide
@@ -112,13 +112,13 @@ rule Discord_RAT_2_0
         $string34 = /Discord\-RAT\-2\.0\-master\.zip/ nocase ascii wide
         // Description: Discord Remote Administration Tool fully written in c#, stub size of ~75kb with over 40 post exploitations modules
         // Reference: https://github.com/moom825/Discord-RAT-2.0
-        $string35 = /Discord\-RAT\-by\-Biscuit\-main/ nocase ascii wide
+        $string35 = "Discord-RAT-by-Biscuit-main" nocase ascii wide
         // Description: Discord Remote Administration Tool fully written in c#, stub size of ~75kb with over 40 post exploitations modules
         // Reference: https://github.com/moom825/Discord-RAT-2.0
-        $string36 = /E776B801\-614D\-4E3C\-A446\-5A35B0CF3D08/ nocase ascii wide
+        $string36 = "E776B801-614D-4E3C-A446-5A35B0CF3D08" nocase ascii wide
         // Description: Discord Remote Administration Tool fully written in c#, stub size of ~75kb with over 40 post exploitations modules
         // Reference: https://github.com/moom825/Discord-RAT-2.0
-        $string37 = /FAA8C7E2\-4409\-44F5\-B2CA\-EBBA4D4F41F0/ nocase ascii wide
+        $string37 = "FAA8C7E2-4409-44F5-B2CA-EBBA4D4F41F0" nocase ascii wide
         // Description: Discord Remote Administration Tool fully written in c#, stub size of ~75kb with over 40 post exploitations modules
         // Reference: https://github.com/moom825/Discord-RAT-2.0
         $string38 = /httpClient\.PostAsync\(\\"https\:\/\/file\.io\// nocase ascii wide
@@ -127,7 +127,7 @@ rule Discord_RAT_2_0
         $string39 = /moom825\/Discord\-RAT\-2\.0/ nocase ascii wide
         // Description: Discord Remote Administration Tool fully written in c#, stub size of ~75kb with over 40 post exploitations modules
         // Reference: https://github.com/moom825/Discord-RAT-2.0
-        $string40 = /namespace\sDiscord_rat/ nocase ascii wide
+        $string40 = "namespace Discord_rat" nocase ascii wide
         // Description: Discord Remote Administration Tool fully written in c#, stub size of ~75kb with over 40 post exploitations modules
         // Reference: https://github.com/moom825/Discord-RAT-2.0
         $string41 = /SOFTWARE\\\$77config\\/ nocase ascii wide

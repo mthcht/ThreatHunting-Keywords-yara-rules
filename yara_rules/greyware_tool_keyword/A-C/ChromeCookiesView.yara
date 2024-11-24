@@ -13,7 +13,7 @@ rule ChromeCookiesView
         $string1 = /\\ChromeCookiesView\.cfg/ nocase ascii wide
         // Description: displays the list of all cookies stored by Google Chrome Web browser - abused by attackers
         // Reference: https://www.nirsoft.net/utils/chrome_cookies_view.html
-        $string2 = /5b992399231bc699bda60ec893e9c5af0ccded956ebfe5d02eaa41cb91fea9c8/ nocase ascii wide
+        $string2 = "5b992399231bc699bda60ec893e9c5af0ccded956ebfe5d02eaa41cb91fea9c8" nocase ascii wide
         // Description: displays the list of all cookies stored by Google Chrome Web browser - abused by attackers
         // Reference: https://www.nirsoft.net/utils/chrome_cookies_view.html
         $string3 = /ChromeCookiesView\.exe/ nocase ascii wide

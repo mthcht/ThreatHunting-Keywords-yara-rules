@@ -10,7 +10,7 @@ rule mitm6
     strings:
         // Description: performs MiTM for IPv6
         // Reference: https://github.com/fox-it/mitm6
-        $string1 = /mitm6\s\-d\s/ nocase ascii wide
+        $string1 = "mitm6 -d " nocase ascii wide
         // Description: performs MiTM for IPv6
         // Reference: https://github.com/fox-it/mitm6
         $string2 = /mitm6\.py/ nocase ascii wide

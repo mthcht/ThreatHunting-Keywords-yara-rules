@@ -13,10 +13,10 @@ rule HellsGate
         $string1 = /\/HellsGate\.git/ nocase ascii wide
         // Description: The Hell's Gate technique is a method employed by malware to hide its malicious behavior and avoid detection. This technique involves executing system calls directly thus bypassing the Windows API (Application Programming Interface) which is typically monitored by EDRs
         // Reference: https://github.com/am0nsec/HellsGate
-        $string2 = /am0nsec\/HellsGate/ nocase ascii wide
+        $string2 = "am0nsec/HellsGate" nocase ascii wide
         // Description: The Hell's Gate technique is a method employed by malware to hide its malicious behavior and avoid detection. This technique involves executing system calls directly thus bypassing the Windows API (Application Programming Interface) which is typically monitored by EDRs
         // Reference: https://github.com/am0nsec/HellsGate
-        $string3 = /DC6187CB\-D5DF\-4973\-84A2\-F92AAE90CDA9/ nocase ascii wide
+        $string3 = "DC6187CB-D5DF-4973-84A2-F92AAE90CDA9" nocase ascii wide
         // Description: The Hell's Gate technique is a method employed by malware to hide its malicious behavior and avoid detection. This technique involves executing system calls directly thus bypassing the Windows API (Application Programming Interface) which is typically monitored by EDRs
         // Reference: https://github.com/am0nsec/HellsGate
         $string4 = /hellsgate\.asm/ nocase ascii wide

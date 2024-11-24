@@ -10,7 +10,7 @@ rule fiddler
     strings:
         // Description: fiddler - capture https requests
         // Reference: https://www.telerik.com/
-        $string1 = /\/download\/fiddler\/fiddler\-everywhere\-windows/ nocase ascii wide
+        $string1 = "/download/fiddler/fiddler-everywhere-windows" nocase ascii wide
         // Description: fiddler - capture https requests
         // Reference: https://www.telerik.com/
         $string2 = /\/Fiddler\sEverywhere\s.{0,1000}\..{0,1000}\..{0,1000}\.exe/ nocase ascii wide

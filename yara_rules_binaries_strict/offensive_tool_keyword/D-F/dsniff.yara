@@ -19,7 +19,7 @@ rule dsniff
         $string3 = /\/dsniff\.services/ nocase ascii wide
         // Description: password sniffer. handles FTP. Telnet. SMTP. HTTP. POP. poppass. NNTP. IMAP. SNMP. LDAP. Rlogin. RIP. OSPF. PPTP MS-CHAP. NFS. VRRP. YP/NIS. SOCKS. X11. CVS. IRC. AIM. ICQ. Napster. PostgreSQL. Meeting Maker. Citrix ICA. Symantec  pcAnywhere. NAI Sniffer. Microsoft SMB. Oracle SQL*Net. Sybase and Microsoft SQL auth info. dsniff automatically detects and minimally parses each application protocol. only saving the interesting bits. and uses Berkeley DB as its output file format. only logging unique authentication attempts. full TCP/IP reassembly is provided by libnids(3) (likewise for the following tools as well)
         // Reference: https://github.com/tecknicaltom/dsniff
-        $string4 = /tecknicaltom\/dsniff/ nocase ascii wide
+        $string4 = "tecknicaltom/dsniff" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

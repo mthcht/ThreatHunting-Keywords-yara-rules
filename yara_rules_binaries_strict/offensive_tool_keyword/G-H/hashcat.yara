@@ -16,7 +16,7 @@ rule hashcat
         $string2 = /\sntlm\.wordlist\s.{0,100}\-\-hex\-wordlist/ nocase ascii wide
         // Description: Worlds fastest and most advanced password recovery utility.
         // Reference: https://github.com/hashcat/hashcat
-        $string3 = /hashcat/ nocase ascii wide
+        $string3 = "hashcat" nocase ascii wide
         // Description: Worlds fastest and most advanced password recovery utility.
         // Reference: https://github.com/hashcat/hashcat
         $string4 = /hashcat\-.{0,100}\.7z/ nocase ascii wide
@@ -25,7 +25,7 @@ rule hashcat
         $string5 = /hashcat\.git/ nocase ascii wide
         // Description: Worlds fastest and most advanced password recovery utility.
         // Reference: https://github.com/hashcat/hashcat
-        $string6 = /hashcat\/hashcat/ nocase ascii wide
+        $string6 = "hashcat/hashcat" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

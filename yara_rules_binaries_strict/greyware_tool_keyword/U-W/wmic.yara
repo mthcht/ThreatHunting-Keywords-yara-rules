@@ -49,7 +49,7 @@ rule wmic
         $string13 = /cmd\.exe\s\/C\swmic\s\/node\:.{0,100}\s\/user\:.{0,100}\s\/password\:.{0,100}\sos\sget\scaption/ nocase ascii wide
         // Description: Enable WinRM remotely with wmic
         // Reference: N/A
-        $string14 = /process\scall\screate\s\\"powershell\senable\-psremoting\s\-force\\"/ nocase ascii wide
+        $string14 = "process call create \"powershell enable-psremoting -force\"" nocase ascii wide
         // Description: WMIC suspicious transfer 
         // Reference: N/A
         $string15 = /start\swmic\s\/node\:\@C\:\\.{0,100}\.txt\s\/user\:.{0,100}\/password\:.{0,100}\sprocess\scall\screate\s.{0,100}cmd\.exe\s\/c\sbitsadmin\s\/transfer\s.{0,100}\.exe\s/ nocase ascii wide
@@ -73,88 +73,88 @@ rule wmic
         $string21 = /wmic\s\/node\:.{0,100}localhost.{0,100}computersystem\sget\susername/ nocase ascii wide
         // Description: get domain name with wmic
         // Reference: N/A
-        $string22 = /wmic\scomputersystem\sget\sdomain/ nocase ascii wide
+        $string22 = "wmic computersystem get domain" nocase ascii wide
         // Description: The actor has executed WMIC commands [T1047] to create a copy of the ntds.dit file and SYSTEM registry hive using ntdsutil.exe
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
         $string23 = /wmic\sprocess\scall\screate.{0,100}ntdsutil\s.{0,100}ac\si\sntds.{0,100}\sifm.{0,100}create\sfull/ nocase ascii wide
         // Description: list all running processes and their command lines on a Windows system
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
-        $string24 = /wmic\sprocess\sget\scommandline\s\-all/ nocase ascii wide
+        $string24 = "wmic process get commandline -all" nocase ascii wide
         // Description: uninstall Malwarebytes
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string25 = /wmic\sproduct\swhere\s\\"name\slike\s\'\%Malwarebytes\%\'\\"\scall\suninstall\s\/nointeractive/ nocase ascii wide
+        $string25 = "wmic product where \"name like '%Malwarebytes%'\" call uninstall /nointeractive" nocase ascii wide
         // Description: uninstall Malwarebytes
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string26 = /wmic\sproduct\swhere\s\\"name\slike\s\'Malwarebytes\%\'\\"\scall\suninstall\s\/nointeractive/ nocase ascii wide
+        $string26 = "wmic product where \"name like 'Malwarebytes%'\" call uninstall /nointeractive" nocase ascii wide
         // Description: wmic discovery commands abused by attackers
         // Reference: N/A
-        $string27 = /wmic\sservice\sbrief/ nocase ascii wide
+        $string27 = "wmic service brief" nocase ascii wide
         // Description: stopping backup service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string28 = /wmic\sservice\swhere\s\\"name\slike\s\'\%veeam\%\'\\"\scall\sstopservice/ nocase ascii wide
+        $string28 = "wmic service where \"name like '%veeam%'\" call stopservice" nocase ascii wide
         // Description: stopping backup service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string29 = /wmic\sservice\swhere\s\\"name\slike\s\'acronisagent\%\'\\"\scall\sstopservice/ nocase ascii wide
+        $string29 = "wmic service where \"name like 'acronisagent%'\" call stopservice" nocase ascii wide
         // Description: stopping backup service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string30 = /wmic\sservice\swhere\s\\"name\slike\s\'acrsch2svc\%\'\\"\scall\sstopservice/ nocase ascii wide
+        $string30 = "wmic service where \"name like 'acrsch2svc%'\" call stopservice" nocase ascii wide
         // Description: stopping backup service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string31 = /wmic\sservice\swhere\s\\"name\slike\s\'agntsvc\%\'\\"\scall\sstopservice/ nocase ascii wide
+        $string31 = "wmic service where \"name like 'agntsvc%'\" call stopservice" nocase ascii wide
         // Description: stopping backup service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string32 = /wmic\sservice\swhere\s\\"name\slike\s\'arsm\%\'\\"\scall\sstopservice/ nocase ascii wide
+        $string32 = "wmic service where \"name like 'arsm%'\" call stopservice" nocase ascii wide
         // Description: stopping backup service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string33 = /wmic\sservice\swhere\s\\"name\slike\s\'backp\%\'\\"\scall\sstopservice/ nocase ascii wide
+        $string33 = "wmic service where \"name like 'backp%'\" call stopservice" nocase ascii wide
         // Description: stopping backup service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string34 = /wmic\sservice\swhere\s\\"name\slike\s\'backup\%\'\\"\scall\sstopservice/ nocase ascii wide
+        $string34 = "wmic service where \"name like 'backup%'\" call stopservice" nocase ascii wide
         // Description: stopping backup service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string35 = /wmic\sservice\swhere\s\\"name\slike\s\'cbservi\%\'\\"\scall\sstopservice/ nocase ascii wide
+        $string35 = "wmic service where \"name like 'cbservi%'\" call stopservice" nocase ascii wide
         // Description: stopping backup service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string36 = /wmic\sservice\swhere\s\\"name\slike\s\'cbvscserv\%\'\\"\scall\sstopservice/ nocase ascii wide
+        $string36 = "wmic service where \"name like 'cbvscserv%'\" call stopservice" nocase ascii wide
         // Description: stopping backup service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string37 = /wmic\sservice\swhere\s\\"name\slike\s\'shadowprotectsvc\%\'\\"\scall\sstopservice/ nocase ascii wide
+        $string37 = "wmic service where \"name like 'shadowprotectsvc%'\" call stopservice" nocase ascii wide
         // Description: stopping backup service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string38 = /wmic\sservice\swhere\s\\"name\slike\s\'spxservice\%\'\\"\scall\sstopservice/ nocase ascii wide
+        $string38 = "wmic service where \"name like 'spxservice%'\" call stopservice" nocase ascii wide
         // Description: stopping backup service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string39 = /wmic\sservice\swhere\s\\"name\slike\s\'sqbcoreservice\%\'\\"\scall\sstopservice/ nocase ascii wide
+        $string39 = "wmic service where \"name like 'sqbcoreservice%'\" call stopservice" nocase ascii wide
         // Description: stopping backup service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string40 = /wmic\sservice\swhere\s\\"name\slike\s\'stc_endpt_svc\%\'\\"\scall\sstopservice/ nocase ascii wide
+        $string40 = "wmic service where \"name like 'stc_endpt_svc%'\" call stopservice" nocase ascii wide
         // Description: stopping backup service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string41 = /wmic\sservice\swhere\s\\"name\slike\s\'storagecraft\simagemanager\%\'\\"\scall\sstopservice/ nocase ascii wide
+        $string41 = "wmic service where \"name like 'storagecraft imagemanager%'\" call stopservice" nocase ascii wide
         // Description: stopping backup service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string42 = /wmic\sservice\swhere\s\\"name\slike\s\'veeam\%\'\\"\scall\sstopservice/ nocase ascii wide
+        $string42 = "wmic service where \"name like 'veeam%'\" call stopservice" nocase ascii wide
         // Description: stopping backup service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string43 = /wmic\sservice\swhere\s\\"name\slike\s\'vsnapvss\%\'\\"\scall\sstopservice/ nocase ascii wide
+        $string43 = "wmic service where \"name like 'vsnapvss%'\" call stopservice" nocase ascii wide
         // Description: stopping backup service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string44 = /wmic\sservice\swhere\s\\"name\slike\s\'vssvc\%\'\\"\scall\sstopservice/ nocase ascii wide
+        $string44 = "wmic service where \"name like 'vssvc%'\" call stopservice" nocase ascii wide
         // Description: stopping backup service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string45 = /wmic\sservice\swhere\s\\"name\slike\s\'wbengine\%\'\\"\scall\sstopservice/ nocase ascii wide
+        $string45 = "wmic service where \"name like 'wbengine%'\" call stopservice" nocase ascii wide
         // Description: VSS is a feature in Windows that allows for the creation of snapshots of a volume capturing its state at a specific point in time. Adversaries may abuse the wmic shadowcopy command to interact with these shadow copies for defense evasion purposes.
         // Reference: N/A
-        $string46 = /wmic\sSHADOWCOPY\s\/nointeractive/ nocase ascii wide
+        $string46 = "wmic SHADOWCOPY /nointeractive" nocase ascii wide
         // Description: VSS is a feature in Windows that allows for the creation of snapshots of a volume capturing its state at a specific point in time. Adversaries may abuse the wmic shadowcopy command to interact with these shadow copies for defense evasion purposes.
         // Reference: N/A
-        $string47 = /wmic\sshadowcopy\sdelete/ nocase ascii wide
+        $string47 = "wmic shadowcopy delete" nocase ascii wide
         // Description: User Enumeration
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
-        $string48 = /wmic\suseraccount\sget\s\/ALL\s\/format\:csv/ nocase ascii wide
+        $string48 = "wmic useraccount get /ALL /format:csv" nocase ascii wide
         // Description: wmic discovery commands abused by attackers
         // Reference: N/A
-        $string49 = /wmic\svolume\slist\sbrief/ nocase ascii wide
+        $string49 = "wmic volume list brief" nocase ascii wide
         // Description: list AV products with wmic
         // Reference: N/A
         $string50 = /wmic.{0,100}\/Namespace\:\\\\root\\SecurityCenter2\sPath\sAntiVirusProduct\sGet\sdisplayName/ nocase ascii wide

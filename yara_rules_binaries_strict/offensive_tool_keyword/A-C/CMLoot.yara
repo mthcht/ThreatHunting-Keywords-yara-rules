@@ -25,25 +25,25 @@ rule CMLoot
         $string5 = /\\CMLoot\.ps1/ nocase ascii wide
         // Description: Find interesting files stored on (System Center) Configuration Manager (SCCM/CM) SMB shares
         // Reference: https://github.com/1njected/CMLoot
-        $string6 = /1njected\/CMLoot/ nocase ascii wide
+        $string6 = "1njected/CMLoot" nocase ascii wide
         // Description: Find interesting files stored on (System Center) Configuration Manager (SCCM/CM) SMB shares
         // Reference: https://github.com/1njected/CMLoot
         $string7 = /CMLoot\.psm1/ nocase ascii wide
         // Description: Find interesting files stored on (System Center) Configuration Manager (SCCM/CM) SMB shares
         // Reference: https://github.com/1njected/CMLoot
-        $string8 = /CMLoot\-main/ nocase ascii wide
+        $string8 = "CMLoot-main" nocase ascii wide
         // Description: Find interesting files stored on (System Center) Configuration Manager (SCCM/CM) SMB shares
         // Reference: https://github.com/1njected/CMLoot
-        $string9 = /Invoke\-CMLootDownload/ nocase ascii wide
+        $string9 = "Invoke-CMLootDownload" nocase ascii wide
         // Description: Find interesting files stored on (System Center) Configuration Manager (SCCM/CM) SMB shares
         // Reference: https://github.com/1njected/CMLoot
-        $string10 = /Invoke\-CMLootExtract/ nocase ascii wide
+        $string10 = "Invoke-CMLootExtract" nocase ascii wide
         // Description: Find interesting files stored on (System Center) Configuration Manager (SCCM/CM) SMB shares
         // Reference: https://github.com/1njected/CMLoot
-        $string11 = /Invoke\-CMLootHunt\s/ nocase ascii wide
+        $string11 = "Invoke-CMLootHunt " nocase ascii wide
         // Description: Find interesting files stored on (System Center) Configuration Manager (SCCM/CM) SMB shares
         // Reference: https://github.com/1njected/CMLoot
-        $string12 = /Invoke\-CMLootInventory/ nocase ascii wide
+        $string12 = "Invoke-CMLootInventory" nocase ascii wide
         // Description: Find interesting files stored on (System Center) Configuration Manager (SCCM/CM) SMB shares
         // Reference: https://github.com/1njected/CMLoot
         $string13 = /src\\CMLootOut\\/ nocase ascii wide

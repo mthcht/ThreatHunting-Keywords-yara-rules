@@ -31,7 +31,7 @@ rule Vajra
         $string7 = /\/spraying\.py/ nocase ascii wide
         // Description: Vajra is a UI based tool with multiple techniques for attacking and enumerating in target's Azure environment
         // Reference: https://github.com/TROUBLE-1/Vajra
-        $string8 = /\/TROUBLE\-1\/Vajra/ nocase ascii wide
+        $string8 = "/TROUBLE-1/Vajra" nocase ascii wide
         // Description: Vajra is a UI based tool with multiple techniques for attacking and enumerating in target's Azure environment
         // Reference: https://github.com/TROUBLE-1/Vajra
         $string9 = /\/vajra\/phishApp\.py/ nocase ascii wide

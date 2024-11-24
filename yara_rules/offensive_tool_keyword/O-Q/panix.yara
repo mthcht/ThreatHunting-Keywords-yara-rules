@@ -10,10 +10,10 @@ rule panix
     strings:
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string1 = /\s\-\-backdoor\-user\s/ nocase ascii wide
+        $string1 = " --backdoor-user " nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string2 = /\s\-\-malicious\-package\s/ nocase ascii wide
+        $string2 = " --malicious-package " nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
         $string3 = /\spanix\.sh\s\-\-/ nocase ascii wide
@@ -28,7 +28,7 @@ rule panix
         $string6 = /\spanix\.sh\s\-\-systemd/ nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string7 = /\s\-\-sudoers\-backdoor/ nocase ascii wide
+        $string7 = " --sudoers-backdoor" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
         $string8 = /\#\!\/bin\/bash\\n\/bin\/bash\s\-c\s\'sh\s\-i\s\>\&\s\/dev\/tcp\/.{0,1000}\/.{0,1000}\s0\>\&1/ nocase ascii wide
@@ -85,10 +85,10 @@ rule panix
         $string25 = /\/releases\/download\/panix\-v.{0,1000}\/panix\.sh/ nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string26 = /\/usr\/bin\/at\s\-M\s\-f\s\/tmp\/payload/ nocase ascii wide
+        $string26 = "/usr/bin/at -M -f /tmp/payload" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string27 = /\/usr\/bin\/at\s\-M\s\-f\s\/usr\/bin\/atest/ nocase ascii wide
+        $string27 = "/usr/bin/at -M -f /usr/bin/atest" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
         $string28 = /\/usr\/bin\/bash\s\-c\s\'bash\s\-i\s\>\&\s\/dev\/tcp\/\$ip\/\$port\s0\>\&1/ nocase ascii wide
@@ -97,7 +97,7 @@ rule panix
         $string29 = /\/usr\/local\/bin\/escape\.sh/ nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string30 = /\:0\:0\:root\:\/root\:\/bin\/bash\"\s\>\>\s\/etc\/passwd/ nocase ascii wide
+        $string30 = ":0:0:root:/root:/bin/bash\" >> /etc/passwd" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
         $string31 = /\[\-\]\sFailed\sto\screate\ssudoers\sbackdoor\sfor\suser\s/ nocase ascii wide
@@ -232,127 +232,127 @@ rule panix
         $string74 = /\]\sCleaning\sXDG\spersistence\smethods/ nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string75 = /7cd720218d9cf22a1143274f4904f30bcef18bfc00ebb54de45bedfeb12d1535/ nocase ascii wide
+        $string75 = "7cd720218d9cf22a1143274f4904f30bcef18bfc00ebb54de45bedfeb12d1535" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string76 = /8c842d7dfb5c081a394e645377db303da5228ee78ff9467c4f00534ba8e0c389/ nocase ascii wide
+        $string76 = "8c842d7dfb5c081a394e645377db303da5228ee78ff9467c4f00534ba8e0c389" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string77 = /974cf826367e6b3bd96006f325a549d892da924bf76afc7df546e31ede536696/ nocase ascii wide
+        $string77 = "974cf826367e6b3bd96006f325a549d892da924bf76afc7df546e31ede536696" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string78 = /add_malicious_pager/ nocase ascii wide
+        $string78 = "add_malicious_pager" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string79 = /add_malicious_pre_commit/ nocase ascii wide
+        $string79 = "add_malicious_pre_commit" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string80 = /Aegrah\/PANIX/ nocase ascii wide
+        $string80 = "Aegrah/PANIX" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string81 = /c3663dba552ca6aa8d2c0f36fccc553d728b37464944080398f72f487430710f/ nocase ascii wide
+        $string81 = "c3663dba552ca6aa8d2c0f36fccc553d728b37464944080398f72f487430710f" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
         $string82 = /cat\s.{0,1000}\.pub\s\>\>\s.{0,1000}\/authorized_keys/ nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string83 = /cat\s\<\<\-EOF\s\>\s\/usr\/lib\/systemd\/system\-generators\/generator/ nocase ascii wide
+        $string83 = "cat <<-EOF > /usr/lib/systemd/system-generators/generator" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
         $string84 = /chmod\s\+x\s\/usr\/lib\/systemd\/system\-generators\/makecon/ nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string85 = /echo\s\"\@RFGroenewoud\"/ nocase ascii wide
+        $string85 = "echo \"@RFGroenewoud\"" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string86 = /f0VMRgEBAQAAAAAAAAAAAAIAAwABAAAAVIAECDQAAAAAAAAAAAAAADQAIAABAAAAAAAAAAEAAAAAAAAAAIAECACABAiiAAAA8AAAAAcAAAAAEAAAMdv341NDU2oCieGwZs2AW15SaAIAIylqEFFQieFqZljNgIlBBLMEsGbNgEOwZs2Ak1lqP1jNgEl5/ nocase ascii wide
+        $string86 = "f0VMRgEBAQAAAAAAAAAAAAIAAwABAAAAVIAECDQAAAAAAAAAAAAAADQAIAABAAAAAAAAAAEAAAAAAAAAAIAECACABAiiAAAA8AAAAAcAAAAAEAAAMdv341NDU2oCieGwZs2AW15SaAIAIylqEFFQieFqZljNgIlBBLMEsGbNgEOwZs2Ak1lqP1jNgEl5" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string87 = /f0VMRgIBAQAAAAAAAAAAAAIAPgABAAAAeABAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAEAAOAABAAAAAAAAAAEAAAAHAAAAAAAAAAAAAAAAAEAAAAAAAAAAQAAAAAAAzgAAAAAAAAAkAQAAAAAAAAAQAAAAAAAAailYmWoCX2oBXg8FSJdSxwQkAgAjKUiJ5moQWmoxWA8FajJYDwVIMfZqK1gPBUiXagNeSP/ nocase ascii wide
+        $string87 = "f0VMRgIBAQAAAAAAAAAAAAIAPgABAAAAeABAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAEAAOAABAAAAAAAAAAEAAAAHAAAAAAAAAAAAAAAAAEAAAAAAAAAAQAAAAAAAzgAAAAAAAAAkAQAAAAAAAAAQAAAAAAAAailYmWoCX2oBXg8FSJdSxwQkAgAjKUiJ5moQWmoxWA8FajJYDwVIMfZqK1gPBUiXagNeSP" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
         $string88 = /ln\s\-s\s\/run\/systemd\/system\/generator\.service\s\/run\/systemd\/system\/multi\-user\.target\.wants\/generator\.service/ nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string89 = /nohup\sbash\s\-c\s\"while\s\:\;\sdo\sbash\s\-i\s\>\&\s\/dev\/tcp\/.{0,1000}\/.{0,1000}\s0\>\&1\;\ssleep\s10\;\sdone/ nocase ascii wide
+        $string89 = /nohup\sbash\s\-c\s\\"while\s\:\;\sdo\sbash\s\-i\s\>\&\s\/dev\/tcp\/.{0,1000}\/.{0,1000}\s0\>\&1\;\ssleep\s10\;\sdone/ nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
         $string90 = /panix\.sh\s\-\-ssh\-key\s/ nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string91 = /setup_backdoor_user/ nocase ascii wide
+        $string91 = "setup_backdoor_user" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string92 = /setup_cap_backdoor/ nocase ascii wide
+        $string92 = "setup_cap_backdoor" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string93 = /setup_generator_persistence/ nocase ascii wide
+        $string93 = "setup_generator_persistence" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string94 = /setup_git_persistence/ nocase ascii wide
+        $string94 = "setup_git_persistence" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string95 = /setup_initd_backdoor/ nocase ascii wide
+        $string95 = "setup_initd_backdoor" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string96 = /setup_malicious_docker_container/ nocase ascii wide
+        $string96 = "setup_malicious_docker_container" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string97 = /setup_malicious_package/ nocase ascii wide
+        $string97 = "setup_malicious_package" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string98 = /setup_motd_backdoor/ nocase ascii wide
+        $string98 = "setup_motd_backdoor" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string99 = /setup_rc_local_backdoor/ nocase ascii wide
+        $string99 = "setup_rc_local_backdoor" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string100 = /setup_sudoers_backdoor/ nocase ascii wide
+        $string100 = "setup_sudoers_backdoor" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string101 = /setup_suid_backdoor/ nocase ascii wide
+        $string101 = "setup_suid_backdoor" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string102 = /setup_system_binary_backdoor/ nocase ascii wide
+        $string102 = "setup_system_binary_backdoor" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
         $string103 = /sh\s\-i\s\>\&\s\/dev\/tcp\/.{0,1000}\/1337\s0\>\&1/ nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string104 = /sudo\snsenter\s\-t\s1\s\-m\s\-u\s\-i\s\-n\s\-p\s\-\-\ssu\s\-/ nocase ascii wide
+        $string104 = "sudo nsenter -t 1 -m -u -i -n -p -- su -" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string105 = /usage_backdoor_user/ nocase ascii wide
+        $string105 = "usage_backdoor_user" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string106 = /usage_initd_backdoor/ nocase ascii wide
+        $string106 = "usage_initd_backdoor" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string107 = /usage_malicious_docker_container/ nocase ascii wide
+        $string107 = "usage_malicious_docker_container" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string108 = /usage_malicious_package/ nocase ascii wide
+        $string108 = "usage_malicious_package" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string109 = /usage_motd_backdoor/ nocase ascii wide
+        $string109 = "usage_motd_backdoor" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string110 = /usage_package_manager_persistence/ nocase ascii wide
+        $string110 = "usage_package_manager_persistence" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string111 = /usage_rc_local_backdoor/ nocase ascii wide
+        $string111 = "usage_rc_local_backdoor" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string112 = /usage_sudoers_backdoor/ nocase ascii wide
+        $string112 = "usage_sudoers_backdoor" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string113 = /usage_suid_backdoor/ nocase ascii wide
+        $string113 = "usage_suid_backdoor" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string114 = /usage_system_binary_backdoor/ nocase ascii wide
+        $string114 = "usage_system_binary_backdoor" nocase ascii wide
         // Description: PANIX is a highly customizable Linux persistence tool
         // Reference: https://github.com/Aegrah/PANIX
-        $string115 = /usermod\s\-u\s0\s\-o\s/ nocase ascii wide
+        $string115 = "usermod -u 0 -o " nocase ascii wide
 
     condition:
         any of them

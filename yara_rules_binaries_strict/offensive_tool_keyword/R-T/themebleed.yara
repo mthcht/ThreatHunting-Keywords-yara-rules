@@ -19,7 +19,7 @@ rule themebleed
         $string3 = /\\ThemeBleed\.sln/ nocase ascii wide
         // Description: Proof-of-Concept for CVE-2023-38146
         // Reference: https://github.com/gabe-k/themebleed
-        $string4 = /1BACEDDC\-CD87\-41DC\-948C\-1C12F960BECB/ nocase ascii wide
+        $string4 = "1BACEDDC-CD87-41DC-948C-1C12F960BECB" nocase ascii wide
         // Description: Proof-of-Concept for CVE-2023-38146
         // Reference: https://github.com/gabe-k/themebleed
         $string5 = /ThemeBleed\.exe\s\s/ nocase ascii wide

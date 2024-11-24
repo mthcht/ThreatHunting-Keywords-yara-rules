@@ -10,13 +10,13 @@ rule Spring4Shell
     strings:
         // Description: Spring4Shell Proof Of Concept/Information CVE-2022-22965
         // Reference: https://github.com/BobTheShoplifter/Spring4Shell-POC
-        $string1 = /\/Spring4Shell\-POC/ nocase ascii wide
+        $string1 = "/Spring4Shell-POC" nocase ascii wide
         // Description: Dockerized Spring4Shell (CVE-2022-22965) PoC application and exploit
         // Reference: https://github.com/reznok/Spring4Shell-POC
-        $string2 = /\/Spring4Shell\-POC/ nocase ascii wide
+        $string2 = "/Spring4Shell-POC" nocase ascii wide
         // Description: CVE-2022-22965 - CVE-2010-1622 redux
         // Reference: https://github.com/DDuarte/springshell-rce-poc
-        $string3 = /\/springshell\-rce\-poc/ nocase ascii wide
+        $string3 = "/springshell-rce-poc" nocase ascii wide
         // Description: Dockerized Spring4Shell (CVE-2022-22965) PoC application and exploit
         // Reference: https://github.com/reznok/Spring4Shell-POC
         $string4 = /curl\shttp.{0,100}\/handling\-form\-submission\-complete\/rce\.jsp/ nocase ascii wide
@@ -28,7 +28,7 @@ rule Spring4Shell
         $string6 = /find\s\.\s\-name\sspring\-beans.{0,100}\.jar/ nocase ascii wide
         // Description: Spring4Shell Proof Of Concept/Information CVE-2022-22965
         // Reference: https://github.com/TheGejr/SpringShell
-        $string7 = /TheGejr\/SpringShell/ nocase ascii wide
+        $string7 = "TheGejr/SpringShell" nocase ascii wide
         // Description: CVE-2022-22965 - CVE-2010-1622 redux
         // Reference: https://github.com/DDuarte/springshell-rce-poc
         $string8 = /webshell\shttp.{0,100}\/tomcatwar\.jsp\?cmd\=/ nocase ascii wide

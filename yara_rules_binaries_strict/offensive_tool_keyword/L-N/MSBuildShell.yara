@@ -10,7 +10,7 @@ rule MSBuildShell
     strings:
         // Description: a Powershell Host running within MSBuild.exe This code lets you Bypass Application Whitelisting and Powershell.exe restrictions and gives you a shell that almost looks and feels like a normal Powershell session (Get-Credential. PSSessions -> Works. Tab Completion -> Unfortunately not). It will also bypass the Antimalware Scan Interface (AMSI). which provides enhanced malware protection for Powershell scripts
         // Reference: https://github.com/Cn33liz/MSBuildShell
-        $string1 = /MSBuildShell/ nocase ascii wide
+        $string1 = "MSBuildShell" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

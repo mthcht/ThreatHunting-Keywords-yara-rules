@@ -10,7 +10,7 @@ rule Whisker
     strings:
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string1 = /\sis\sa\sC\#\stool\sfor\staking\sover\sActive\sDirectory\suser\sand\scomputer\saccounts\sby\smanipulating\stheir\s/ nocase ascii wide
+        $string1 = " is a C# tool for taking over Active Directory user and computer accounts by manipulating their " nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
         $string2 = /\/Whisker\.exe/ nocase ascii wide

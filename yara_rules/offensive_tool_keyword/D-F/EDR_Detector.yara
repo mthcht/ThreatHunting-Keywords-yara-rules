@@ -19,7 +19,7 @@ rule EDR_Detector
         $string3 = /\\EDR_Detector\.rs/ nocase ascii wide
         // Description: detect EDR agents on a machine
         // Reference: https://github.com/trickster0/EDR_Detector
-        $string4 = /EDR\sDetector\sby\strickster0/ nocase ascii wide
+        $string4 = "EDR Detector by trickster0" nocase ascii wide
         // Description: detect EDR agents on a machine
         // Reference: https://github.com/trickster0/EDR_Detector
         $string5 = /EDR_Detection\.exe/ nocase ascii wide
@@ -28,10 +28,10 @@ rule EDR_Detector
         $string6 = /EDR_Detector\.7z/ nocase ascii wide
         // Description: detect EDR agents on a machine
         // Reference: https://github.com/trickster0/EDR_Detector
-        $string7 = /EDR_Detector\-master/ nocase ascii wide
+        $string7 = "EDR_Detector-master" nocase ascii wide
         // Description: detect EDR agents on a machine
         // Reference: https://github.com/trickster0/EDR_Detector
-        $string8 = /trickster0\/EDR_Detector/ nocase ascii wide
+        $string8 = "trickster0/EDR_Detector" nocase ascii wide
 
     condition:
         any of them

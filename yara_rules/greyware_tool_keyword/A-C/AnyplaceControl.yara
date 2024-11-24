@@ -34,10 +34,10 @@ rule AnyplaceControl
         $string8 = /\\ProgramData\\Anyplace\sControl\s/ nocase ascii wide
         // Description: access your unattended PC from anywhere
         // Reference: www.anyplace-control[.]com
-        $string9 = /\>Anyplace\sControl\sSoftware\</ nocase ascii wide
+        $string9 = ">Anyplace Control Software<" nocase ascii wide
         // Description: access your unattended PC from anywhere
         // Reference: www.anyplace-control[.]com
-        $string10 = /a2fa034d006bdbc3ee2a15e55eb647f8097355c288a858da1e309fe8ac1cf0a3/ nocase ascii wide
+        $string10 = "a2fa034d006bdbc3ee2a15e55eb647f8097355c288a858da1e309fe8ac1cf0a3" nocase ascii wide
         // Description: access your unattended PC from anywhere
         // Reference: www.anyplace-control[.]com
         $string11 = /AnyplaceControlInstall\.exe/ nocase ascii wide

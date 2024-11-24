@@ -40,10 +40,10 @@ rule DragonCastle
         $string10 = /\\pwned\.txt/ nocase ascii wide
         // Description: A PoC that combines AutodialDLL Lateral Movement technique and SSP to scrape NTLM hashes from LSASS process.
         // Reference: https://github.com/mdsecactivebreach/DragonCastle
-        $string11 = /274F19EC\-7CBA\-4FC7\-80E6\-BB41C1FE6728/ nocase ascii wide
+        $string11 = "274F19EC-7CBA-4FC7-80E6-BB41C1FE6728" nocase ascii wide
         // Description: A PoC that combines AutodialDLL Lateral Movement technique and SSP to scrape NTLM hashes from LSASS process.
         // Reference: https://github.com/mdsecactivebreach/DragonCastle
-        $string12 = /DragonCastle\s\-\s\@TheXC3LL/ nocase ascii wide
+        $string12 = "DragonCastle - @TheXC3LL" nocase ascii wide
         // Description: A PoC that combines AutodialDLL Lateral Movement technique and SSP to scrape NTLM hashes from LSASS process.
         // Reference: https://github.com/mdsecactivebreach/DragonCastle
         $string13 = /DragonCastle\.dll/ nocase ascii wide
@@ -52,7 +52,7 @@ rule DragonCastle
         $string14 = /dragoncastle\.py\s\-/ nocase ascii wide
         // Description: A PoC that combines AutodialDLL Lateral Movement technique and SSP to scrape NTLM hashes from LSASS process.
         // Reference: https://github.com/mdsecactivebreach/DragonCastle
-        $string15 = /mdsecactivebreach\/DragonCastle/ nocase ascii wide
+        $string15 = "mdsecactivebreach/DragonCastle" nocase ascii wide
 
     condition:
         any of them

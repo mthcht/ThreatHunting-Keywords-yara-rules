@@ -10,7 +10,7 @@ rule dcipher_cli
     strings:
         // Description: Crack hashes using online rainbow & lookup table attack services. right from your terminal.
         // Reference: https://github.com/k4m4/dcipher-cli
-        $string1 = /dcipher\-cli/ nocase ascii wide
+        $string1 = "dcipher-cli" nocase ascii wide
 
     condition:
         any of them

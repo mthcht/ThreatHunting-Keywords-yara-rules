@@ -10,7 +10,7 @@ rule Shoggoth
     strings:
         // Description: Shoggoth: Asmjit Based Polymorphic Encryptor
         // Reference: https://github.com/frkngksl/Shoggoth
-        $string1 = /\s\-\-coff\-arg\s/ nocase ascii wide
+        $string1 = " --coff-arg " nocase ascii wide
         // Description: Shoggoth: Asmjit Based Polymorphic Encryptor
         // Reference: https://github.com/frkngksl/Shoggoth
         $string2 = /\sCOFFLoader\.exe/ nocase ascii wide
@@ -67,28 +67,28 @@ rule Shoggoth
         $string19 = /\\ShoggothEngine\.cpp/ nocase ascii wide
         // Description: Shoggoth: Asmjit Based Polymorphic Encryptor
         // Reference: https://github.com/frkngksl/Shoggoth
-        $string20 = /1bc3fc0ecdae8f404c33942914e6f442ea91400bdea77322b318ab576d4050a9/ nocase ascii wide
+        $string20 = "1bc3fc0ecdae8f404c33942914e6f442ea91400bdea77322b318ab576d4050a9" nocase ascii wide
         // Description: Shoggoth: Asmjit Based Polymorphic Encryptor
         // Reference: https://github.com/frkngksl/Shoggoth
-        $string21 = /44D5BE95\-F34D\-4CC5\-846F\-C7758943B8FA/ nocase ascii wide
+        $string21 = "44D5BE95-F34D-4CC5-846F-C7758943B8FA" nocase ascii wide
         // Description: Shoggoth: Asmjit Based Polymorphic Encryptor
         // Reference: https://github.com/frkngksl/Shoggoth
-        $string22 = /9cbbb2ac103af9b7940ec72a8e430427d86f5099f7a537e4fe2b72d69e05bdfd/ nocase ascii wide
+        $string22 = "9cbbb2ac103af9b7940ec72a8e430427d86f5099f7a537e4fe2b72d69e05bdfd" nocase ascii wide
         // Description: Shoggoth: Asmjit Based Polymorphic Encryptor
         // Reference: https://github.com/frkngksl/Shoggoth
-        $string23 = /\'B\'\,\'e\'\,\'a\'\,\'c\'\,\'o\'\,\'n\'/ nocase ascii wide
+        $string23 = "'B','e','a','c','o','n'" nocase ascii wide
         // Description: Shoggoth: Asmjit Based Polymorphic Encryptor
         // Reference: https://github.com/frkngksl/Shoggoth
         $string24 = /bin\/PELoader\.exe/ nocase ascii wide
         // Description: Shoggoth: Asmjit Based Polymorphic Encryptor
         // Reference: https://github.com/frkngksl/Shoggoth
-        $string25 = /d67630a3210bfcdd4b2fa2d48cdcdba0034710fd5ead616d9d5e4ce38e3c9809/ nocase ascii wide
+        $string25 = "d67630a3210bfcdd4b2fa2d48cdcdba0034710fd5ead616d9d5e4ce38e3c9809" nocase ascii wide
         // Description: Shoggoth: Asmjit Based Polymorphic Encryptor
         // Reference: https://github.com/frkngksl/Shoggoth
-        $string26 = /frkngksl\/Shoggoth/ nocase ascii wide
+        $string26 = "frkngksl/Shoggoth" nocase ascii wide
         // Description: Shoggoth: Asmjit Based Polymorphic Encryptor
         // Reference: https://github.com/frkngksl/Shoggoth
-        $string27 = /Shoggoth\sdoesn\'t\ssupport\sx86\sPE\syet/ nocase ascii wide
+        $string27 = "Shoggoth doesn't support x86 PE yet" nocase ascii wide
         // Description: Shoggoth: Asmjit Based Polymorphic Encryptor
         // Reference: https://github.com/frkngksl/Shoggoth
         $string28 = /ShoggothPolyEngine\(/ nocase ascii wide

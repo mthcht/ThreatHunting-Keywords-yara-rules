@@ -16,7 +16,7 @@ rule S4UTomato
         $string2 = /\sYou\sneed\sto\shave\san\selevated\scontext\sto\sdump\sother\susers\'\sKerberos\stickets\s\:\(/ nocase ascii wide
         // Description: Escalate Service Account To LocalSystem via Kerberos
         // Reference: https://github.com/wh0amitz/S4UTomato
-        $string3 = /\\"UACBypassedService\\"/ nocase ascii wide
+        $string3 = "\"UACBypassedService\"" nocase ascii wide
         // Description: Escalate Service Account To LocalSystem via Kerberos
         // Reference: https://github.com/wh0amitz/S4UTomato
         $string4 = /\(msds\-supportedencryptiontypes\=0\)\(msds\-supportedencryptiontypes\:1\.2\.840\.113556\.1\.4\.803\:\=4\)\)\)/ nocase ascii wide
@@ -79,25 +79,25 @@ rule S4UTomato
         $string23 = /\]\sSending\sS4U2proxy\srequest\s/ nocase ascii wide
         // Description: Escalate Service Account To LocalSystem via Kerberos
         // Reference: https://github.com/wh0amitz/S4UTomato
-        $string24 = /\>UACBypassedService\</ nocase ascii wide
+        $string24 = ">UACBypassedService<" nocase ascii wide
         // Description: Escalate Service Account To LocalSystem via Kerberos
         // Reference: https://github.com/wh0amitz/S4UTomato
-        $string25 = /0cf16d4d70941be216c787a44a7401c9c9547016952a2c699579d4e4bb9c8110/ nocase ascii wide
+        $string25 = "0cf16d4d70941be216c787a44a7401c9c9547016952a2c699579d4e4bb9c8110" nocase ascii wide
         // Description: Escalate Service Account To LocalSystem via Kerberos
         // Reference: https://github.com/wh0amitz/S4UTomato
-        $string26 = /3c3a96d02e34589d314b230c417b122970e492282767211866c8ac042e8bd556/ nocase ascii wide
+        $string26 = "3c3a96d02e34589d314b230c417b122970e492282767211866c8ac042e8bd556" nocase ascii wide
         // Description: Escalate Service Account To LocalSystem via Kerberos
         // Reference: https://github.com/wh0amitz/S4UTomato
-        $string27 = /881D4D67\-46DD\-4F40\-A813\-C9D3C8BE0965/ nocase ascii wide
+        $string27 = "881D4D67-46DD-4F40-A813-C9D3C8BE0965" nocase ascii wide
         // Description: Escalate Service Account To LocalSystem via Kerberos
         // Reference: https://github.com/wh0amitz/S4UTomato
-        $string28 = /bc25b38d07d2dbc8c7d9491a0779dcfaf87ea69ce078900ed61d307f45da33c3/ nocase ascii wide
+        $string28 = "bc25b38d07d2dbc8c7d9491a0779dcfaf87ea69ce078900ed61d307f45da33c3" nocase ascii wide
         // Description: Escalate Service Account To LocalSystem via Kerberos
         // Reference: https://github.com/wh0amitz/S4UTomato
         $string29 = /localS4U2Proxy\.tickets/ nocase ascii wide
         // Description: Escalate Service Account To LocalSystem via Kerberos
         // Reference: https://github.com/wh0amitz/S4UTomato
-        $string30 = /Run\sthe\skrbscm\smethod\sfor\sSYSTEM\sshell/ nocase ascii wide
+        $string30 = "Run the krbscm method for SYSTEM shell" nocase ascii wide
         // Description: Escalate Service Account To LocalSystem via Kerberos
         // Reference: https://github.com/wh0amitz/S4UTomato
         $string31 = /S4UTomato\s1\.0\.0\-beta/ nocase ascii wide
@@ -115,7 +115,7 @@ rule S4UTomato
         $string35 = /S4UTomato\.sln/ nocase ascii wide
         // Description: Escalate Service Account To LocalSystem via Kerberos
         // Reference: https://github.com/wh0amitz/S4UTomato
-        $string36 = /S4UTomato\-master/ nocase ascii wide
+        $string36 = "S4UTomato-master" nocase ascii wide
         // Description: Escalate Service Account To LocalSystem via Kerberos
         // Reference: https://github.com/wh0amitz/S4UTomato
         $string37 = /ShadowCredentials\.Execute\(/ nocase ascii wide
@@ -124,7 +124,7 @@ rule S4UTomato
         $string38 = /UserAgent\s\=\s\\"Rubeus\/1\.0\\"/ nocase ascii wide
         // Description: Escalate Service Account To LocalSystem via Kerberos
         // Reference: https://github.com/wh0amitz/S4UTomato
-        $string39 = /wh0amitz\/S4UTomato/ nocase ascii wide
+        $string39 = "wh0amitz/S4UTomato" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

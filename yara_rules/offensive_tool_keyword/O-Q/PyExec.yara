@@ -22,7 +22,7 @@ rule PyExec
         $string4 = /\\adm2sys\.py/ nocase ascii wide
         // Description: This is a very simple privilege escalation technique from admin to System. This is the same technique PSExec uses.
         // Reference: https://github.com/OlivierLaflamme/PyExec
-        $string5 = /OlivierLaflamme\/PyExec/ nocase ascii wide
+        $string5 = "OlivierLaflamme/PyExec" nocase ascii wide
         // Description: This is a very simple privilege escalation technique from admin to System. This is the same technique PSExec uses.
         // Reference: https://github.com/OlivierLaflamme/PyExec
         $string6 = /PyExec\-main\./ nocase ascii wide

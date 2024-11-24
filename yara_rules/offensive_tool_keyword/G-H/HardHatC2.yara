@@ -10,10 +10,10 @@ rule HardHatC2
     strings:
         // Description: A C# Command & Control framework
         // Reference: https://github.com/DragoQCC/HardHatC2
-        $string1 = /\/Donut_Linux/ nocase ascii wide
+        $string1 = "/Donut_Linux" nocase ascii wide
         // Description: A C# Command & Control framework
         // Reference: https://github.com/DragoQCC/HardHatC2
-        $string2 = /\/Donut_Windows/ nocase ascii wide
+        $string2 = "/Donut_Windows" nocase ascii wide
         // Description: A C# Command & Control framework
         // Reference: https://github.com/DragoQCC/HardHatC2
         $string3 = /C2TaskMessage\./ nocase ascii wide
@@ -34,13 +34,13 @@ rule HardHatC2
         $string8 = /Engineer_super\.exe/ nocase ascii wide
         // Description: A C# Command & Control framework
         // Reference: https://github.com/DragoQCC/HardHatC2
-        $string9 = /HardHatC2/ nocase ascii wide
+        $string9 = "HardHatC2" nocase ascii wide
         // Description: A C# Command & Control framework
         // Reference: https://github.com/DragoQCC/HardHatC2
         $string10 = /hardhatc2\.com/ nocase ascii wide
         // Description: A C# Command & Control framework
         // Reference: https://github.com/DragoQCC/HardHatC2
-        $string11 = /HardHatC2Client/ nocase ascii wide
+        $string11 = "HardHatC2Client" nocase ascii wide
         // Description: A C# Command & Control framework
         // Reference: https://github.com/DragoQCC/HardHatC2
         $string12 = /http.{0,1000}127\.0\.0\.1\:21802/ nocase ascii wide
@@ -88,10 +88,10 @@ rule HardHatC2
         $string26 = /inlineDll.{0,1000}\/dll/ nocase ascii wide
         // Description: A C# Command & Control framework
         // Reference: https://github.com/DragoQCC/HardHatC2
-        $string27 = /InlineShellcode/ nocase ascii wide
+        $string27 = "InlineShellcode" nocase ascii wide
         // Description: A C# Command & Control framework
         // Reference: https://github.com/DragoQCC/HardHatC2
-        $string28 = /jtee43gt\-6543\-2iur\-9422\-83r5w27hgzaq/ nocase ascii wide
+        $string28 = "jtee43gt-6543-2iur-9422-83r5w27hgzaq" nocase ascii wide
         // Description: A C# Command & Control framework
         // Reference: https://github.com/DragoQCC/HardHatC2
         $string29 = /Patch\-AMSI\./ nocase ascii wide

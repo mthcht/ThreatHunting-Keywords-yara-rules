@@ -19,7 +19,7 @@ rule DllProxy
         $string3 = /dllproxy\.py/ nocase ascii wide
         // Description: Proxy your dll exports and add some spicy content at the same time
         // Reference: https://github.com/Iansus/DllProxy/
-        $string4 = /DllProxy\-main/ nocase ascii wide
+        $string4 = "DllProxy-main" nocase ascii wide
 
     condition:
         any of them

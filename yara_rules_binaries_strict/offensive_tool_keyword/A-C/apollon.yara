@@ -10,13 +10,13 @@ rule apollon
     strings:
         // Description: evade auditd by writing /proc/PID/mem
         // Reference: https://github.com/codewhitesec/apollon
-        $string1 = /\/apollon\-all\-x64/ nocase ascii wide
+        $string1 = "/apollon-all-x64" nocase ascii wide
         // Description: evade auditd by writing /proc/PID/mem
         // Reference: https://github.com/codewhitesec/apollon
         $string2 = /\/apollon\-main\.zip/ nocase ascii wide
         // Description: evade auditd by writing /proc/PID/mem
         // Reference: https://github.com/codewhitesec/apollon
-        $string3 = /\/apollon\-selective\-x64/ nocase ascii wide
+        $string3 = "/apollon-selective-x64" nocase ascii wide
         // Description: evade auditd by writing /proc/PID/mem
         // Reference: https://github.com/codewhitesec/apollon
         $string4 = /\[\-\]\sSeems\slike\swe\skilled\sauditd\.\sOoopsie\s\:D/ nocase ascii wide
@@ -25,7 +25,7 @@ rule apollon
         $string5 = /\[\+\]\sauditd\spatched\ssuccessfully/ nocase ascii wide
         // Description: evade auditd by writing /proc/PID/mem
         // Reference: https://github.com/codewhitesec/apollon
-        $string6 = /codewhitesec\/apollon/ nocase ascii wide
+        $string6 = "codewhitesec/apollon" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

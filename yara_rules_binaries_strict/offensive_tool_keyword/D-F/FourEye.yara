@@ -28,7 +28,7 @@ rule FourEye
         $string6 = /\/FourEye\.git/ nocase ascii wide
         // Description: AV Evasion Tool
         // Reference: https://github.com/lengjibo/FourEye
-        $string7 = /\/module\/darkexe\// nocase ascii wide
+        $string7 = "/module/darkexe/" nocase ascii wide
         // Description: AV Evasion Tool
         // Reference: https://github.com/lengjibo/FourEye
         $string8 = /\/root\/shellcode\.c/ nocase ascii wide
@@ -52,10 +52,10 @@ rule FourEye
         $string14 = /FourEye\(shellcode_bypass/ nocase ascii wide
         // Description: AV Evasion Tool
         // Reference: https://github.com/lengjibo/FourEye
-        $string15 = /FourEye\-main/ nocase ascii wide
+        $string15 = "FourEye-main" nocase ascii wide
         // Description: AV Evasion Tool
         // Reference: https://github.com/lengjibo/FourEye
-        $string16 = /lengjibo\/FourEye/ nocase ascii wide
+        $string16 = "lengjibo/FourEye" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

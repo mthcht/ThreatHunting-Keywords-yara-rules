@@ -28,25 +28,25 @@ rule SharpView
         $string6 = /\\SharpView\.pdb/ nocase ascii wide
         // Description: C# implementation of harmj0y's PowerView
         // Reference: https://github.com/tevora-threat/SharpView/
-        $string7 = /\>SharpView\</ nocase ascii wide
+        $string7 = ">SharpView<" nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string8 = /\>SharpView\</ nocase ascii wide
+        $string8 = ">SharpView<" nocase ascii wide
         // Description: C# implementation of harmj0y's PowerView
         // Reference: https://github.com/tevora-threat/SharpView/
-        $string9 = /22A156EA\-2623\-45C7\-8E50\-E864D9FC44D3/ nocase ascii wide
+        $string9 = "22A156EA-2623-45C7-8E50-E864D9FC44D3" nocase ascii wide
         // Description: C# implementation of harmj0y's PowerView
         // Reference: https://github.com/tevora-threat/SharpView/
-        $string10 = /Args_Invoke_Kerberoast/ nocase ascii wide
+        $string10 = "Args_Invoke_Kerberoast" nocase ascii wide
         // Description: C# implementation of harmj0y's PowerView
         // Reference: https://github.com/tevora-threat/SharpView/
-        $string11 = /c0621954bd329b5cabe45e92b31053627c27fa40853beb2cce2734fa677ffd93/ nocase ascii wide
+        $string11 = "c0621954bd329b5cabe45e92b31053627c27fa40853beb2cce2734fa677ffd93" nocase ascii wide
         // Description: C# implementation of harmj0y's PowerView
         // Reference: https://github.com/tevora-threat/SharpView/
-        $string12 = /e42e5cf9\-be25\-4011\-9623\-8565b193a506/ nocase ascii wide
+        $string12 = "e42e5cf9-be25-4011-9623-8565b193a506" nocase ascii wide
         // Description: C# implementation of harmj0y's PowerView
         // Reference: https://github.com/tevora-threat/SharpView/
-        $string13 = /hackbuildrepeat\/SharpView/ nocase ascii wide
+        $string13 = "hackbuildrepeat/SharpView" nocase ascii wide
         // Description: C# implementation of harmj0y's PowerView
         // Reference: https://github.com/tevora-threat/SharpView/
         $string14 = /SharpView\.exe/ nocase ascii wide
@@ -55,10 +55,10 @@ rule SharpView
         $string15 = /SharpView\\SharpView/ nocase ascii wide
         // Description: C# implementation of harmj0y's PowerView
         // Reference: https://github.com/tevora-threat/SharpView/
-        $string16 = /SharpView\-master/ nocase ascii wide
+        $string16 = "SharpView-master" nocase ascii wide
         // Description: C# implementation of harmj0y's PowerView
         // Reference: https://github.com/tevora-threat/SharpView/
-        $string17 = /tevora\-threat\/SharpView\// nocase ascii wide
+        $string17 = "tevora-threat/SharpView/" nocase ascii wide
         // Description: C# implementation of harmj0y's PowerView
         // Reference: https://github.com/tevora-threat/SharpView/
         $string18 = /using\sSharpView\.Enums/ nocase ascii wide

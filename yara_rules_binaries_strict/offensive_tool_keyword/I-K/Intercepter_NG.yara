@@ -25,7 +25,7 @@ rule Intercepter_NG
         $string5 = /https\:\/\/sniff\.su\/.{0,100}\.zip/ nocase ascii wide
         // Description: android wifi sniffer
         // Reference: https://github.com/intercepter-ng
-        $string6 = /Intercepter\-NG/ nocase ascii wide
+        $string6 = "Intercepter-NG" nocase ascii wide
         // Description: android wifi sniffer
         // Reference: https://github.com/intercepter-ng
         $string7 = /Intercepter\-NG\-1\.0\.zip/ nocase ascii wide

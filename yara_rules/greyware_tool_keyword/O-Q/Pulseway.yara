@@ -52,10 +52,10 @@ rule Pulseway
         $string14 = /\/systemd\/system\/pulseway\.service/ nocase ascii wide
         // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
         // Reference: https://www.pulseway.com/
-        $string15 = /\/usr\/sbin\/pulseway/ nocase ascii wide
+        $string15 = "/usr/sbin/pulseway" nocase ascii wide
         // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
         // Reference: https://www.pulseway.com/
-        $string16 = /\/usr\/sbin\/pulsewayd/ nocase ascii wide
+        $string16 = "/usr/sbin/pulsewayd" nocase ascii wide
         // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
         // Reference: https://www.pulseway.com/
         $string17 = /\\AppData\\Roaming\\.{0,1000}\\RemoteDesktop\.exe/ nocase ascii wide
@@ -121,7 +121,7 @@ rule Pulseway
         $string37 = /\\Tasks\\PulsewayServiceCheck/ nocase ascii wide
         // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
         // Reference: https://www.pulseway.com/
-        $string38 = /\<Data\>Pulseway\sRemote\sControl\<\/Data\>/ nocase ascii wide
+        $string38 = "<Data>Pulseway Remote Control</Data>" nocase ascii wide
         // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
         // Reference: https://www.pulseway.com/
         $string39 = /\<Data\>Received\sRequest\sExecute\sautomation\s.{0,1000}\sscript\s.{0,1000}\sfrom\sdevice\sId/ nocase ascii wide
@@ -130,22 +130,22 @@ rule Pulseway
         $string40 = /\<Data\>Received\sRequest\sGet\sRD\spool\sscore\s.{0,1000}pulseway\.com\/remote/ nocase ascii wide
         // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
         // Reference: https://www.pulseway.com/
-        $string41 = /\<Provider\sName\=\"PC\sMonitor\"\s\/\>/ nocase ascii wide
+        $string41 = "<Provider Name=\"PC Monitor\" />" nocase ascii wide
         // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
         // Reference: https://www.pulseway.com/
-        $string42 = /\<Provider\sName\=\"Pulseway\"\s\/\>/ nocase ascii wide
+        $string42 = "<Provider Name=\"Pulseway\" />" nocase ascii wide
         // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
         // Reference: https://www.pulseway.com/
         $string43 = /https\:\/\/.{0,1000}\.pulseway\.com\/app\/main\// nocase ascii wide
         // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
         // Reference: https://www.pulseway.com/
-        $string44 = /Pulseway\s\-\-\sInstallation\scompleted\ssuccessfully/ nocase ascii wide
+        $string44 = "Pulseway -- Installation completed successfully" nocase ascii wide
         // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
         // Reference: https://www.pulseway.com/
-        $string45 = /Pulseway\s\-\-\sRemoval\scompleted\ssuccessfully/ nocase ascii wide
+        $string45 = "Pulseway -- Removal completed successfully" nocase ascii wide
         // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
         // Reference: https://www.pulseway.com/
-        $string46 = /Pulseway\sRemote\sControl\s\-\-\sInstallation\scompleted\ssuccessfully/ nocase ascii wide
+        $string46 = "Pulseway Remote Control -- Installation completed successfully" nocase ascii wide
         // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
         // Reference: https://www.pulseway.com/
         $string47 = /Pulseway\sRemote\sControl\.lnk/ nocase ascii wide
@@ -181,25 +181,25 @@ rule Pulseway
         $string57 = /RemoteDesktop\.exe.{0,1000}pwy\-rd\:\?token\=/ nocase ascii wide
         // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
         // Reference: https://www.pulseway.com/
-        $string58 = /SC\s\sQUERYEX\s\"PC\sMonitor\"/ nocase ascii wide
+        $string58 = "SC  QUERYEX \"PC Monitor\"" nocase ascii wide
         // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
         // Reference: https://www.pulseway.com/
-        $string59 = /service\spulseway\sstart/ nocase ascii wide
+        $string59 = "service pulseway start" nocase ascii wide
         // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
         // Reference: https://www.pulseway.com/
-        $string60 = /service\spulseway\sstop/ nocase ascii wide
+        $string60 = "service pulseway stop" nocase ascii wide
         // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
         // Reference: https://www.pulseway.com/
-        $string61 = /ServiceName\"\>Pulseway\<\/Data\>/ nocase ascii wide
+        $string61 = "ServiceName\">Pulseway</Data>" nocase ascii wide
         // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
         // Reference: https://www.pulseway.com/
-        $string62 = /systemctl\sstart\spulseway/ nocase ascii wide
+        $string62 = "systemctl start pulseway" nocase ascii wide
         // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
         // Reference: https://www.pulseway.com/
-        $string63 = /systemctl\sstatus\spulseway/ nocase ascii wide
+        $string63 = "systemctl status pulseway" nocase ascii wide
         // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
         // Reference: https://www.pulseway.com/
-        $string64 = /systemctl\sstop\spulseway/ nocase ascii wide
+        $string64 = "systemctl stop pulseway" nocase ascii wide
         // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
         // Reference: https://www.pulseway.com/
         $string65 = /systemprofile\\AppData\\Roaming\\freerdp\\server/ nocase ascii wide

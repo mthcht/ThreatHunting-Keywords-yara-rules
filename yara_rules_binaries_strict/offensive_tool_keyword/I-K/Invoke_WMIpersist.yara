@@ -10,10 +10,10 @@ rule Invoke_WMIpersist
     strings:
         // Description: A powershell script to create WMI Event subscription persistence
         // Reference: https://github.com/bspence7337/Invoke-WMIpersist
-        $string1 = /8d3945448815d156c064445585aa7cf51a5c30e9f96d7598e8ca323815f9aee3/ nocase ascii wide
+        $string1 = "8d3945448815d156c064445585aa7cf51a5c30e9f96d7598e8ca323815f9aee3" nocase ascii wide
         // Description: A powershell script to create WMI Event subscription persistence
         // Reference: https://github.com/bspence7337/Invoke-WMIpersist
-        $string2 = /Invoke\-WMIpersist/ nocase ascii wide
+        $string2 = "Invoke-WMIpersist" nocase ascii wide
         // Description: A powershell script to create WMI Event subscription persistence
         // Reference: https://github.com/bspence7337/Invoke-WMIpersist
         $string3 = /Invoke\-WMIpersist\.ps1/ nocase ascii wide

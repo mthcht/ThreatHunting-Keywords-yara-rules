@@ -10,10 +10,10 @@ rule requests_ntlm
     strings:
         // Description: HTTP NTLM Authentication for Requests Library
         // Reference: https://pypi.org/project/requests-ntlm/
-        $string1 = /\sinstall\srequests_ntlm/ nocase ascii wide
+        $string1 = " install requests_ntlm" nocase ascii wide
         // Description: HTTP NTLM Authentication for Requests Library
         // Reference: https://pypi.org/project/requests-ntlm/
-        $string2 = /from\srequests_ntlm\simport\sHttpNtlmAuth/ nocase ascii wide
+        $string2 = "from requests_ntlm import HttpNtlmAuth" nocase ascii wide
 
     condition:
         any of them

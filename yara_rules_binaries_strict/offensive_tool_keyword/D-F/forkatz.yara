@@ -25,7 +25,7 @@ rule forkatz
         $string5 = /forkatz\.vcxproj/ nocase ascii wide
         // Description: credential dump using foreshaw technique using SeTrustedCredmanAccessPrivilege
         // Reference: https://github.com/Barbarisch/forkatz
-        $string6 = /forkatz\-main/ nocase ascii wide
+        $string6 = "forkatz-main" nocase ascii wide
         // Description: credential dump using foreshaw technique using SeTrustedCredmanAccessPrivilege
         // Reference: https://github.com/Barbarisch/forkatz
         $string7 = /users\\public\\example\.bin/ nocase ascii wide

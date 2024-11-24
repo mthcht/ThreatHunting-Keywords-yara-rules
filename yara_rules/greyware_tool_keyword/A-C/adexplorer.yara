@@ -16,13 +16,13 @@ rule adexplorer
         $string2 = /\\Software\\Sysinternals\\Active\sDirectory\sExplorer/ nocase ascii wide
         // Description: Active Directory Explorer (AD Explorer) is an advanced Active Directory (AD) viewer and editor. You can use AD Explorer to easily navigate an AD database. It can be abused by malicious actors
         // Reference: https://learn.microsoft.com/en-us/sysinternals/downloads/adexplorer
-        $string3 = /\<Data\sName\=\'OriginalFileName\'\>AdExp\</ nocase ascii wide
+        $string3 = "<Data Name='OriginalFileName'>AdExp<" nocase ascii wide
         // Description: Active Directory Explorer (AD Explorer) is an advanced Active Directory (AD) viewer and editor. You can use AD Explorer to easily navigate an AD database. It can be abused by malicious actors
         // Reference: https://learn.microsoft.com/en-us/sysinternals/downloads/adexplorer
-        $string4 = /\>Active\sDirectory\sEditor\</ nocase ascii wide
+        $string4 = ">Active Directory Editor<" nocase ascii wide
         // Description: Active Directory Explorer (AD Explorer) is an advanced Active Directory (AD) viewer and editor. You can use AD Explorer to easily navigate an AD database. It can be abused by malicious actors
         // Reference: https://learn.microsoft.com/en-us/sysinternals/downloads/adexplorer
-        $string5 = /\>Sysinternals\sADExplorer\</ nocase ascii wide
+        $string5 = ">Sysinternals ADExplorer<" nocase ascii wide
         // Description: Active Directory Explorer (AD Explorer) is an advanced Active Directory (AD) viewer and editor. You can use AD Explorer to easily navigate an AD database. It can be abused by malicious actors
         // Reference: https://learn.microsoft.com/en-us/sysinternals/downloads/adexplorer
         $string6 = /adexplorer\.exe/ nocase ascii wide

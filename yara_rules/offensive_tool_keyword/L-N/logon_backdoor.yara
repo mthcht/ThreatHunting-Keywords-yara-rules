@@ -49,16 +49,16 @@ rule logon_backdoor
         $string13 = /\'1\.\sSet\sthe\sbackdoor\'/ nocase ascii wide
         // Description: automated sticky keys backdoor
         // Reference: https://github.com/szymon1118/logon_backdoor
-        $string14 = /59a64374f430585117c385edce4ac8ff536cb2710a0037384f9f869601752af1/ nocase ascii wide
+        $string14 = "59a64374f430585117c385edce4ac8ff536cb2710a0037384f9f869601752af1" nocase ascii wide
         // Description: automated sticky keys backdoor
         // Reference: https://github.com/szymon1118/logon_backdoor
-        $string15 = /6e0055eba5cf62d9ac7b129e55d3f230fef2dd432d88313ae08d85d9ff5c2329/ nocase ascii wide
+        $string15 = "6e0055eba5cf62d9ac7b129e55d3f230fef2dd432d88313ae08d85d9ff5c2329" nocase ascii wide
         // Description: automated sticky keys backdoor
         // Reference: https://github.com/szymon1118/logon_backdoor
-        $string16 = /a93f02549ee6f5a59d0472755b8719284f64e0ac451906a42d8eb9f5738add67/ nocase ascii wide
+        $string16 = "a93f02549ee6f5a59d0472755b8719284f64e0ac451906a42d8eb9f5738add67" nocase ascii wide
         // Description: automated sticky keys backdoor
         // Reference: https://github.com/szymon1118/logon_backdoor
-        $string17 = /Backdoor\shas\sbeen\sset\sup\ssuccessfully/ nocase ascii wide
+        $string17 = "Backdoor has been set up successfully" nocase ascii wide
         // Description: automated sticky keys backdoor
         // Reference: https://github.com/szymon1118/logon_backdoor
         $string18 = /Backdoor\sis\salready\sremoved\s\:\)/ nocase ascii wide
@@ -67,13 +67,13 @@ rule logon_backdoor
         $string19 = /Backdoor\sis\salready\sset\sup\s\;\)/ nocase ascii wide
         // Description: automated sticky keys backdoor
         // Reference: https://github.com/szymon1118/logon_backdoor
-        $string20 = /REG\sDELETE\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\sNT\\CurrentVersion\\Image\sFile\sExecution\sOptions\\sethc\.exe\"/ nocase ascii wide
+        $string20 = /REG\sDELETE\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\sNT\\CurrentVersion\\Image\sFile\sExecution\sOptions\\sethc\.exe\\"/ nocase ascii wide
         // Description: automated sticky keys backdoor
         // Reference: https://github.com/szymon1118/logon_backdoor
-        $string21 = /szymon1118\/logon_backdoor/ nocase ascii wide
+        $string21 = "szymon1118/logon_backdoor" nocase ascii wide
         // Description: automated sticky keys backdoor
         // Reference: https://github.com/szymon1118/logon_backdoor
-        $string22 = /title\slogon\sbackdoor/ nocase ascii wide
+        $string22 = "title logon backdoor" nocase ascii wide
 
     condition:
         any of them

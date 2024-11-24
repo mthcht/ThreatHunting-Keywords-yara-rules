@@ -10,7 +10,7 @@ rule DoubleDrive
     strings:
         // Description: A fully-undetectable ransomware that utilizes OneDrive & Google Drive to encrypt target local files
         // Reference: https://github.com/SafeBreach-Labs/DoubleDrive
-        $string1 = /\s\-\-command\-uac\-bypass/ nocase ascii wide
+        $string1 = " --command-uac-bypass" nocase ascii wide
         // Description: A fully-undetectable ransomware that utilizes OneDrive & Google Drive to encrypt target local files
         // Reference: https://github.com/SafeBreach-Labs/DoubleDrive
         $string2 = /\sendpoint_takeover\.py/ nocase ascii wide
@@ -25,22 +25,22 @@ rule DoubleDrive
         $string5 = /\sRANSOM_NOTE\.txt/ nocase ascii wide
         // Description: A fully-undetectable ransomware that utilizes OneDrive & Google Drive to encrypt target local files
         // Reference: https://github.com/SafeBreach-Labs/DoubleDrive
-        $string6 = /\s\-\-ransom\-note\-name\s/ nocase ascii wide
+        $string6 = " --ransom-note-name " nocase ascii wide
         // Description: A fully-undetectable ransomware that utilizes OneDrive & Google Drive to encrypt target local files
         // Reference: https://github.com/SafeBreach-Labs/DoubleDrive
-        $string7 = /\s\-\-remote\-ransomware/ nocase ascii wide
+        $string7 = " --remote-ransomware" nocase ascii wide
         // Description: A fully-undetectable ransomware that utilizes OneDrive & Google Drive to encrypt target local files
         // Reference: https://github.com/SafeBreach-Labs/DoubleDrive
-        $string8 = /\s\-\-sharepoint\-replacement\-exe\-path\s/ nocase ascii wide
+        $string8 = " --sharepoint-replacement-exe-path " nocase ascii wide
         // Description: A fully-undetectable ransomware that utilizes OneDrive & Google Drive to encrypt target local files
         // Reference: https://github.com/SafeBreach-Labs/DoubleDrive
-        $string9 = /\s\-\-temp\-email\s\-\-target\-paths\s/ nocase ascii wide
+        $string9 = " --temp-email --target-paths " nocase ascii wide
         // Description: A fully-undetectable ransomware that utilizes OneDrive & Google Drive to encrypt target local files
         // Reference: https://github.com/SafeBreach-Labs/DoubleDrive
         $string10 = /\svictim_info_key\.py/ nocase ascii wide
         // Description: A fully-undetectable ransomware that utilizes OneDrive & Google Drive to encrypt target local files
         // Reference: https://github.com/SafeBreach-Labs/DoubleDrive
-        $string11 = /\\"PAY\sME\sMONEY\\"/ nocase ascii wide
+        $string11 = "\"PAY ME MONEY\"" nocase ascii wide
         // Description: A fully-undetectable ransomware that utilizes OneDrive & Google Drive to encrypt target local files
         // Reference: https://github.com/SafeBreach-Labs/DoubleDrive
         $string12 = /\\"RANSOM_NOTE\.txt\\"/ nocase ascii wide
@@ -82,16 +82,16 @@ rule DoubleDrive
         $string24 = /\\victim_info_key\.py/ nocase ascii wide
         // Description: A fully-undetectable ransomware that utilizes OneDrive & Google Drive to encrypt target local files
         // Reference: https://github.com/SafeBreach-Labs/DoubleDrive
-        $string25 = /055d93807dbb92adac4bfd63349ac634e7a214712115656f00d9a1750d98da52/ nocase ascii wide
+        $string25 = "055d93807dbb92adac4bfd63349ac634e7a214712115656f00d9a1750d98da52" nocase ascii wide
         // Description: A fully-undetectable ransomware that utilizes OneDrive & Google Drive to encrypt target local files
         // Reference: https://github.com/SafeBreach-Labs/DoubleDrive
-        $string26 = /4d7424482e96e9326182ad86bbe68a0f7b9da63d7508552649f05a18848d4bad/ nocase ascii wide
+        $string26 = "4d7424482e96e9326182ad86bbe68a0f7b9da63d7508552649f05a18848d4bad" nocase ascii wide
         // Description: A fully-undetectable ransomware that utilizes OneDrive & Google Drive to encrypt target local files
         // Reference: https://github.com/SafeBreach-Labs/DoubleDrive
-        $string27 = /5eb8024e00c244de2646f2b338be02e7a6475637fd04894a3e13d37783b0d693/ nocase ascii wide
+        $string27 = "5eb8024e00c244de2646f2b338be02e7a6475637fd04894a3e13d37783b0d693" nocase ascii wide
         // Description: A fully-undetectable ransomware that utilizes OneDrive & Google Drive to encrypt target local files
         // Reference: https://github.com/SafeBreach-Labs/DoubleDrive
-        $string28 = /b310173eac2770b78f821900614fc900502e4cbe506daa55cd1baae3f22fa4cf/ nocase ascii wide
+        $string28 = "b310173eac2770b78f821900614fc900502e4cbe506daa55cd1baae3f22fa4cf" nocase ascii wide
         // Description: A fully-undetectable ransomware that utilizes OneDrive & Google Drive to encrypt target local files
         // Reference: https://github.com/SafeBreach-Labs/DoubleDrive
         $string29 = /cloud_drive_ransomware\.py/ nocase ascii wide
@@ -106,13 +106,13 @@ rule DoubleDrive
         $string32 = /doubledrive\.endpoint_takeover_utils/ nocase ascii wide
         // Description: A fully-undetectable ransomware that utilizes OneDrive & Google Drive to encrypt target local files
         // Reference: https://github.com/SafeBreach-Labs/DoubleDrive
-        $string33 = /eb2bcc1bc9b6802b3869f6343b0fcbe72f3d1642abbc34e0758122e6510c2f4a/ nocase ascii wide
+        $string33 = "eb2bcc1bc9b6802b3869f6343b0fcbe72f3d1642abbc34e0758122e6510c2f4a" nocase ascii wide
         // Description: A fully-undetectable ransomware that utilizes OneDrive & Google Drive to encrypt target local files
         // Reference: https://github.com/SafeBreach-Labs/DoubleDrive
         $string34 = /endpoint_takeover\.exe/ nocase ascii wide
         // Description: A fully-undetectable ransomware that utilizes OneDrive & Google Drive to encrypt target local files
         // Reference: https://github.com/SafeBreach-Labs/DoubleDrive
-        $string35 = /f3b57e4b17458688b689824705327c1e854a796a4e027b6e34855627e79454c0/ nocase ascii wide
+        $string35 = "f3b57e4b17458688b689824705327c1e854a796a4e027b6e34855627e79454c0" nocase ascii wide
         // Description: A fully-undetectable ransomware that utilizes OneDrive & Google Drive to encrypt target local files
         // Reference: https://github.com/SafeBreach-Labs/DoubleDrive
         $string36 = /follow_attacker_commands\.exe/ nocase ascii wide
@@ -151,13 +151,13 @@ rule DoubleDrive
         $string47 = /OneDriveRansomware\(CloudDriveRansomware\)/ nocase ascii wide
         // Description: A fully-undetectable ransomware that utilizes OneDrive & Google Drive to encrypt target local files
         // Reference: https://github.com/SafeBreach-Labs/DoubleDrive
-        $string48 = /SafeBreach\-Labs\/DoubleDrive/ nocase ascii wide
+        $string48 = "SafeBreach-Labs/DoubleDrive" nocase ascii wide
         // Description: A fully-undetectable ransomware that utilizes OneDrive & Google Drive to encrypt target local files
         // Reference: https://github.com/SafeBreach-Labs/DoubleDrive
-        $string49 = /save\sthe\sFernet\sencryption\/decryption\skey\s/ nocase ascii wide
+        $string49 = "save the Fernet encryption/decryption key " nocase ascii wide
         // Description: A fully-undetectable ransomware that utilizes OneDrive & Google Drive to encrypt target local files
         // Reference: https://github.com/SafeBreach-Labs/DoubleDrive
-        $string50 = /vssadmin\sdelete\sshadows\s\/all\s\/quiet/ nocase ascii wide
+        $string50 = "vssadmin delete shadows /all /quiet" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -10,7 +10,7 @@ rule dnsteal
     strings:
         // Description: This is a fake DNS server that allows you to stealthily extract files from a victim machine through DNS requests.
         // Reference: https://github.com/m57/dnsteal
-        $string1 = /\/dnsteal/ nocase ascii wide
+        $string1 = "/dnsteal" nocase ascii wide
         // Description: This is a fake DNS server that allows you to stealthily extract files from a victim machine through DNS requests.
         // Reference: https://github.com/m57/dnsteal
         $string2 = /dnsteal\.git/ nocase ascii wide
@@ -19,7 +19,7 @@ rule dnsteal
         $string3 = /dnsteal\.py/ nocase ascii wide
         // Description: This is a fake DNS server that allows you to stealthily extract files from a victim machine through DNS requests.
         // Reference: https://github.com/m57/dnsteal
-        $string4 = /dnsteal\-master/ nocase ascii wide
+        $string4 = "dnsteal-master" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

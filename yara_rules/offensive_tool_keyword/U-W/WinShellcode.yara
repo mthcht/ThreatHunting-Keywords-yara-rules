@@ -10,7 +10,7 @@ rule WinShellcode
     strings:
         // Description: It's a C code project created in Visual Studio that helps you generate shellcode from your C code.
         // Reference: https://github.com/DallasFR/WinShellcode
-        $string1 = /DallasFR\/WinShellcode/ nocase ascii wide
+        $string1 = "DallasFR/WinShellcode" nocase ascii wide
         // Description: It's a C code project created in Visual Studio that helps you generate shellcode from your C code.
         // Reference: https://github.com/DallasFR/WinShellcode
         $string2 = /shellcode_dll\.dll/ nocase ascii wide
@@ -28,7 +28,7 @@ rule WinShellcode
         $string6 = /WinShellcode\.git/ nocase ascii wide
         // Description: It's a C code project created in Visual Studio that helps you generate shellcode from your C code.
         // Reference: https://github.com/DallasFR/WinShellcode
-        $string7 = /WinShellcode\-main/ nocase ascii wide
+        $string7 = "WinShellcode-main" nocase ascii wide
 
     condition:
         any of them

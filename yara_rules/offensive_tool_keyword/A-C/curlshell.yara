@@ -37,7 +37,7 @@ rule curlshell
         $string9 = /\/curlshell\-main\./ nocase ascii wide
         // Description: reverse shell using curl
         // Reference: https://github.com/irsl/curlshell
-        $string10 = /\/curlshell\-main\// nocase ascii wide
+        $string10 = "/curlshell-main/" nocase ascii wide
         // Description: reverse shell using curl
         // Reference: https://github.com/irsl/curlshell
         $string11 = /\\curlshell\.py/ nocase ascii wide
@@ -49,25 +49,25 @@ rule curlshell
         $string13 = /\\curlshell\-main\\/ nocase ascii wide
         // Description: reverse shell using curl
         // Reference: https://github.com/irsl/curlshell
-        $string14 = /b8285e421d702738eab45670ecae439a7228994e7068b04cb51740e47efbfb41/ nocase ascii wide
+        $string14 = "b8285e421d702738eab45670ecae439a7228994e7068b04cb51740e47efbfb41" nocase ascii wide
         // Description: reverse shell using curl
         // Reference: https://github.com/irsl/curlshell
-        $string15 = /curl\shttps\:\/\/curlshell/ nocase ascii wide
+        $string15 = "curl https://curlshell" nocase ascii wide
         // Description: reverse shell using curl
         // Reference: https://github.com/irsl/curlshell
         $string16 = /curlshell\.py/ nocase ascii wide
         // Description: reverse shell using curl
         // Reference: https://github.com/irsl/curlshell
-        $string17 = /https\:\/\/curlshell\:/ nocase ascii wide
+        $string17 = "https://curlshell:" nocase ascii wide
         // Description: reverse shell using curl
         // Reference: https://github.com/irsl/curlshell
         $string18 = /https\:\/\/curlshell\:.{0,1000}\s\|\sbash/ nocase ascii wide
         // Description: reverse shell using curl
         // Reference: https://github.com/irsl/curlshell
-        $string19 = /irsl\/curlshell/ nocase ascii wide
+        $string19 = "irsl/curlshell" nocase ascii wide
         // Description: reverse shell using curl
         // Reference: https://github.com/irsl/curlshell
-        $string20 = /irsl\/curlshell/ nocase ascii wide
+        $string20 = "irsl/curlshell" nocase ascii wide
 
     condition:
         any of them

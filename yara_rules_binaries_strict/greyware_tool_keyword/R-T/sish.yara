@@ -10,10 +10,10 @@ rule sish
     strings:
         // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
         // Reference: https://github.com/antoniomika/sish
-        $string1 = /\ssish\s\-c\sdate/ nocase ascii wide
+        $string1 = " sish -c date" nocase ascii wide
         // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
         // Reference: https://github.com/antoniomika/sish
-        $string2 = /\/_sish\/console/ nocase ascii wide
+        $string2 = "/_sish/console" nocase ascii wide
         // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
         // Reference: https://github.com/antoniomika/sish
         $string3 = /\/sish\.git/ nocase ascii wide
@@ -22,13 +22,13 @@ rule sish
         $string4 = /\/sish\.log/ nocase ascii wide
         // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
         // Reference: https://github.com/antoniomika/sish
-        $string5 = /\/sish\/cmd\// nocase ascii wide
+        $string5 = "/sish/cmd/" nocase ascii wide
         // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
         // Reference: https://github.com/antoniomika/sish
         $string6 = /\\sish\.log/ nocase ascii wide
         // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
         // Reference: https://github.com/antoniomika/sish
-        $string7 = /eb0d8e4273608c13b5957ac047f911442b3d55527e20097cd038e120f01df5ae/ nocase ascii wide
+        $string7 = "eb0d8e4273608c13b5957ac047f911442b3d55527e20097cd038e120f01df5ae" nocase ascii wide
         // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
         // Reference: https://github.com/antoniomika/sish
         $string8 = /http\:\/\/.{0,100}\.ssi\.sh/ nocase ascii wide
@@ -37,7 +37,7 @@ rule sish
         $string9 = /https\:\/\/.{0,100}\.ssi\.sh/ nocase ascii wide
         // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
         // Reference: https://github.com/antoniomika/sish
-        $string10 = /sish\s\-x/ nocase ascii wide
+        $string10 = "sish -x" nocase ascii wide
         // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
         // Reference: https://github.com/antoniomika/sish
         $string11 = /ssh\s\-L\s.{0,100}\stuns\.sh/ nocase ascii wide

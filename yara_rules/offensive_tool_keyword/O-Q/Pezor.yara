@@ -10,37 +10,37 @@ rule Pezor
     strings:
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string1 = /\s\-64\s\-format\=bof\s/ nocase ascii wide
+        $string1 = " -64 -format=bof " nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string2 = /\s\-64\s\-format\=dll\s/ nocase ascii wide
+        $string2 = " -64 -format=dll " nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string3 = /\s\-64\s\-format\=service\-dll\s/ nocase ascii wide
+        $string3 = " -64 -format=service-dll " nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string4 = /\s\-fluctuate\=NA\s\-sleep\=/ nocase ascii wide
+        $string4 = " -fluctuate=NA -sleep=" nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string5 = /\s\-fluctuate\=RW\s\-sleep\=/ nocase ascii wide
+        $string5 = " -fluctuate=RW -sleep=" nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
         $string6 = /\s\-format\=bof\s.{0,1000}\.exe/ nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string7 = /\s\-format\=bof\s\-cleanup\s/ nocase ascii wide
+        $string7 = " -format=bof -cleanup " nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string8 = /\s\-format\=dotnet\s\-sleep\=/ nocase ascii wide
+        $string8 = " -format=dotnet -sleep=" nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string9 = /\s\-format\=dotnet\-pinvoke\s/ nocase ascii wide
+        $string9 = " -format=dotnet-pinvoke " nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
         $string10 = /\s\-format\=dotnet\-pinvoke\s.{0,1000}\.exe/ nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string11 = /\s\-format\=reflective\-dll\s/ nocase ascii wide
+        $string11 = " -format=reflective-dll " nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
         $string12 = /\s\-format\=reflective\-dll\s.{0,1000}\.exe/ nocase ascii wide
@@ -52,7 +52,7 @@ rule Pezor
         $string14 = /\s\-format\=service\-exe\s.{0,1000}\.exe/ nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string15 = /\skalilinux\/kali\-rolling/ nocase ascii wide
+        $string15 = " kalilinux/kali-rolling" nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
         $string16 = /\s\-p\s.{0,1000}\\mimi\.out/ nocase ascii wide
@@ -67,22 +67,22 @@ rule Pezor
         $string19 = /\sPEzor\.sh\s/ nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string20 = /\s\-sgn\s\-syscalls\s/ nocase ascii wide
+        $string20 = " -sgn -syscalls " nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string21 = /\s\-sgn\s\-unhook\s\-antidebug\s/ nocase ascii wide
+        $string21 = " -sgn -unhook -antidebug " nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
         $string22 = /\s\-syscalls\s\-sleep\=.{0,1000}\.exe/ nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string23 = /\s\-unhook\s\-antidebug\s/ nocase ascii wide
+        $string23 = " -unhook -antidebug " nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
         $string24 = /\s\-unhook\s\-antidebug\s.{0,1000}\s\-self\s\-sleep/ nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string25 = /\s\-unhook\s\-syscalls\s\-obfuscate\s/ nocase ascii wide
+        $string25 = " -unhook -syscalls -obfuscate " nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
         $string26 = /\.\/PEzor\.sh/ nocase ascii wide
@@ -133,7 +133,7 @@ rule Pezor
         $string41 = /\/ReflectiveDll\.c/ nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string42 = /\/ReflectiveDLLInjection\// nocase ascii wide
+        $string42 = "/ReflectiveDLLInjection/" nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
         $string43 = /\/ReflectiveLoader\.c/ nocase ascii wide
@@ -172,52 +172,52 @@ rule Pezor
         $string54 = /\\shellcode\.hpp/ nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string55 = /_prefix_PEzor_/ nocase ascii wide
+        $string55 = "_prefix_PEzor_" nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string56 = /_REFLECTIVEDLLINJECTION_/ nocase ascii wide
+        $string56 = "_REFLECTIVEDLLINJECTION_" nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string57 = /\-64\s\-format\=reflective\-dll\s/ nocase ascii wide
+        $string57 = "-64 -format=reflective-dll " nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string58 = /cannot\sencode\sthe\sshellcode\swhen\sself\-executing\sthe\spayload/ nocase ascii wide
+        $string58 = "cannot encode the shellcode when self-executing the payload" nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
         $string59 = /Console\.WriteLine.{0,1000}self\sexecuting\sthe\spayload/ nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string60 = /cowsay\s\-f\sdragon\s\'PEzor\!\!/ nocase ascii wide
+        $string60 = "cowsay -f dragon 'PEzor!!" nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
         $string61 = /\-dll\-sideload\=.{0,1000}\.dll/ nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string62 = /echo\s\'PEzor\!\!/ nocase ascii wide
+        $string62 = "echo 'PEzor!!" nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string63 = /execute_Pezor/ nocase ascii wide
+        $string63 = "execute_Pezor" nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string64 = /execute\-Pezor/ nocase ascii wide
+        $string64 = "execute-Pezor" nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string65 = /\-format\=dotnet\-createsection\s\-sleep/ nocase ascii wide
+        $string65 = "-format=dotnet-createsection -sleep" nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string66 = /generate_raw_payload/ nocase ascii wide
+        $string66 = "generate_raw_payload" nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string67 = /inject_shellcode_self/ nocase ascii wide
+        $string67 = "inject_shellcode_self" nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
         $string68 = /iwantmore\.pizza\/posts\/PEzor\.html/ nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string69 = /PEzor\sgenerated\sBeacon\sObject\sFile/ nocase ascii wide
+        $string69 = "PEzor generated Beacon Object File" nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string70 = /PEzor\!\!\sv/ nocase ascii wide
+        $string70 = "PEzor!! v" nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
         $string71 = /PEzor.{0,1000}\/Inject\.c/ nocase ascii wide
@@ -247,13 +247,13 @@ rule Pezor
         $string79 = /PEzor\\inject\.cpp/ nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string80 = /phra\/Pezor/ nocase ascii wide
+        $string80 = "phra/Pezor" nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string81 = /phra\/Pezor\// nocase ascii wide
+        $string81 = "phra/Pezor/" nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string82 = /ReflectiveDLLInjection\/dll/ nocase ascii wide
+        $string82 = "ReflectiveDLLInjection/dll" nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
         $string83 = /shellcode\.bin\.donut/ nocase ascii wide

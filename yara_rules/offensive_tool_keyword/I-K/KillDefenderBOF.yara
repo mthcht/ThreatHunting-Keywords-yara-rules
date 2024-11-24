@@ -10,7 +10,7 @@ rule KillDefenderBOF
     strings:
         // Description: KillDefenderBOF is a Beacon Object File PoC implementation of pwn1sher/KillDefender - kill defender
         // Reference: https://github.com/Cerbersec/KillDefenderBOF
-        $string1 = /\/KillDefenderBOF/ nocase ascii wide
+        $string1 = "/KillDefenderBOF" nocase ascii wide
         // Description: KillDefenderBOF is a Beacon Object File PoC implementation of pwn1sher/KillDefender - kill defender
         // Reference: https://github.com/Cerbersec/KillDefenderBOF
         $string2 = /\\KillDefender\.c/ nocase ascii wide
@@ -22,7 +22,7 @@ rule KillDefenderBOF
         $string4 = /KillDefender\.h/ nocase ascii wide
         // Description: KillDefenderBOF is a Beacon Object File PoC implementation of pwn1sher/KillDefender - kill defender
         // Reference: https://github.com/Cerbersec/KillDefenderBOF
-        $string5 = /KillDefenderBOF\-main/ nocase ascii wide
+        $string5 = "KillDefenderBOF-main" nocase ascii wide
         // Description: KillDefenderBOF is a Beacon Object File PoC implementation of pwn1sher/KillDefender - kill defender
         // Reference: https://github.com/Cerbersec/KillDefenderBOF
         $string6 = /temp.{0,1000}KillDefender/ nocase ascii wide

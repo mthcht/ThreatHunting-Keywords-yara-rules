@@ -31,10 +31,10 @@ rule LocalShellExtParse
         $string7 = /\\LocalShellExtParse\-master/ nocase ascii wide
         // Description: Script to parse first load time for Shell Extensions loaded by user. Also enumerates all loaded Shell Extensions that are only installed for the Current User.
         // Reference: https://github.com/herrcore/LocalShellExtParse
-        $string8 = /c3a499f047b670e888a41b33749ffc9227b7b0bcc4e9f0882d272918ee3a17d1/ nocase ascii wide
+        $string8 = "c3a499f047b670e888a41b33749ffc9227b7b0bcc4e9f0882d272918ee3a17d1" nocase ascii wide
         // Description: Script to parse first load time for Shell Extensions loaded by user. Also enumerates all loaded Shell Extensions that are only installed for the Current User.
         // Reference: https://github.com/herrcore/LocalShellExtParse
-        $string9 = /herrcore\/LocalShellExtParse/ nocase ascii wide
+        $string9 = "herrcore/LocalShellExtParse" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

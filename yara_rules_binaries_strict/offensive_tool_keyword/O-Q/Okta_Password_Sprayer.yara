@@ -16,10 +16,10 @@ rule Okta_Password_Sprayer
         $string2 = /\\oSpray\.py/ nocase ascii wide
         // Description: This script is a multi-threaded Okta password sprayer.
         // Reference: https://github.com/Rhynorater/Okta-Password-Sprayer
-        $string3 = /02024fe8246f659fb6dd07eaf93379e8a8011420d10b83e6bb422b66e53c4292/ nocase ascii wide
+        $string3 = "02024fe8246f659fb6dd07eaf93379e8a8011420d10b83e6bb422b66e53c4292" nocase ascii wide
         // Description: This script is a multi-threaded Okta password sprayer.
         // Reference: https://github.com/Rhynorater/Okta-Password-Sprayer
-        $string4 = /Okta\-Password\-Sprayer/ nocase ascii wide
+        $string4 = "Okta-Password-Sprayer" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

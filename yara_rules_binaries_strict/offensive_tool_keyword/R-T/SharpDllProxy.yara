@@ -13,13 +13,13 @@ rule SharpDllProxy
         $string1 = /\s\-\-dll\s.{0,100}\s\-\-payload\s/ nocase ascii wide
         // Description: Retrieves exported functions from a legitimate DLL and generates a proxy DLL source code/template for DLL proxy loading or sideloading
         // Reference: https://github.com/Flangvik/SharpDllProxy
-        $string2 = /676E89F3\-4785\-477A\-BA1C\-B30340F598D5/ nocase ascii wide
+        $string2 = "676E89F3-4785-477A-BA1C-B30340F598D5" nocase ascii wide
         // Description: Retrieves exported functions from a legitimate DLL and generates a proxy DLL source code/template for DLL proxy loading or sideloading
         // Reference: https://github.com/Flangvik/SharpDllProxy
-        $string3 = /7a8cabbb37d569b2d9af56a4a11bb83dc5bb839c3d4a3ea05252e20e2d0c3a45/ nocase ascii wide
+        $string3 = "7a8cabbb37d569b2d9af56a4a11bb83dc5bb839c3d4a3ea05252e20e2d0c3a45" nocase ascii wide
         // Description: Retrieves exported functions from a legitimate DLL and generates a proxy DLL source code/template for DLL proxy loading or sideloading
         // Reference: https://github.com/Flangvik/SharpDllProxy
-        $string4 = /SharpDllProxy/ nocase ascii wide
+        $string4 = "SharpDllProxy" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

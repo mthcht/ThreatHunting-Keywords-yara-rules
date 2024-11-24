@@ -19,7 +19,7 @@ rule htshells
         $string3 = /\/prepare\.sh\sshell\/mod_.{0,1000}\.htaccess/ nocase ascii wide
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
-        $string4 = /htshells\-master/ nocase ascii wide
+        $string4 = "htshells-master" nocase ascii wide
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
         $string5 = /http\:\/\/.{0,1000}\/\.htaccess\?c\=cmd/ nocase ascii wide
@@ -88,7 +88,7 @@ rule htshells
         $string26 = /mod_sendmail\.rce\.htaccess/ nocase ascii wide
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
-        $string27 = /wireghoul\/htshells/ nocase ascii wide
+        $string27 = "wireghoul/htshells" nocase ascii wide
 
     condition:
         any of them

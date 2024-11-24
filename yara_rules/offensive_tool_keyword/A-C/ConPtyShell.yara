@@ -10,19 +10,19 @@ rule ConPtyShell
     strings:
         // Description: ConPtyShell - Fully Interactive Reverse Shell for Windows
         // Reference: https://github.com/antonioCoco/ConPtyShell
-        $string1 = /\sConPtyShell/ nocase ascii wide
+        $string1 = " ConPtyShell" nocase ascii wide
         // Description: ConPtyShell - Fully Interactive Reverse Shell for Windows
         // Reference: https://github.com/antonioCoco/ConPtyShell
         $string2 = /\$parametersConPtyShell/ nocase ascii wide
         // Description: ConPtyShell - Fully Interactive Reverse Shell for Windows
         // Reference: https://github.com/antonioCoco/ConPtyShell
-        $string3 = /\/ConPtyShell\// nocase ascii wide
+        $string3 = "/ConPtyShell/" nocase ascii wide
         // Description: ConPtyShell - Fully Interactive Reverse Shell for Windows
         // Reference: https://github.com/antonioCoco/ConPtyShell
-        $string4 = /376713183026ccc822e9c1dead28cc81c7cfa7ad1c88e368ada6c31ce3909a2e/ nocase ascii wide
+        $string4 = "376713183026ccc822e9c1dead28cc81c7cfa7ad1c88e368ada6c31ce3909a2e" nocase ascii wide
         // Description: ConPtyShell - Fully Interactive Reverse Shell for Windows
         // Reference: https://github.com/antonioCoco/ConPtyShell
-        $string5 = /antonioCoco\/ConPtyShell/ nocase ascii wide
+        $string5 = "antonioCoco/ConPtyShell" nocase ascii wide
         // Description: ConPtyShell - Fully Interactive Reverse Shell for Windows
         // Reference: https://github.com/antonioCoco/ConPtyShell
         $string6 = /ConPtyShell\.cs/ nocase ascii wide
@@ -43,13 +43,13 @@ rule ConPtyShell
         $string11 = /ConPtyShell_dotnet2\.exe/ nocase ascii wide
         // Description: ConPtyShell - Fully Interactive Reverse Shell for Windows
         // Reference: https://github.com/antonioCoco/ConPtyShell
-        $string12 = /CreatePseudoConsole\sfunction\sfound\!\sSpawning\sa\sfully\sinteractive\sshell/ nocase ascii wide
+        $string12 = "CreatePseudoConsole function found! Spawning a fully interactive shell" nocase ascii wide
         // Description: ConPtyShell - Fully Interactive Reverse Shell for Windows
         // Reference: https://github.com/antonioCoco/ConPtyShell
-        $string13 = /CreatePseudoConsole\sfunction\snot\sfound\!\sSpawning\sa\snetcat\-like\sinteractive\sshell/ nocase ascii wide
+        $string13 = "CreatePseudoConsole function not found! Spawning a netcat-like interactive shell" nocase ascii wide
         // Description: ConPtyShell - Fully Interactive Reverse Shell for Windows
         // Reference: https://github.com/antonioCoco/ConPtyShell
-        $string14 = /Invoke\-ConPtyShell/ nocase ascii wide
+        $string14 = "Invoke-ConPtyShell" nocase ascii wide
         // Description: ConPtyShell - Fully Interactive Reverse Shell for Windows
         // Reference: https://github.com/antonioCoco/ConPtyShell
         $string15 = /Invoke\-ConPtyShell\.ps1/ nocase ascii wide

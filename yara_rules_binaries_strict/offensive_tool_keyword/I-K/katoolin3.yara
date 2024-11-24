@@ -10,13 +10,13 @@ rule katoolin3
     strings:
         // Description: Katoolin3 brings all programs available in Kali Linux to Debian and Ubuntu.
         // Reference: https://github.com/s-h-3-l-l/katoolin3
-        $string1 = /\/katoolin3/ nocase ascii wide
+        $string1 = "/katoolin3" nocase ascii wide
         // Description: Katoolin3 brings all programs available in Kali Linux to Debian and Ubuntu.
         // Reference: https://github.com/s-h-3-l-l/katoolin3
-        $string2 = /\/s\-h\-3\-l\-l\// nocase ascii wide
+        $string2 = "/s-h-3-l-l/" nocase ascii wide
         // Description: Katoolin3 brings all programs available in Kali Linux to Debian and Ubuntu.
         // Reference: https://github.com/s-h-3-l-l/katoolin3
-        $string3 = /cd\skatoolin3/ nocase ascii wide
+        $string3 = "cd katoolin3" nocase ascii wide
         // Description: Katoolin3 brings all programs available in Kali Linux to Debian and Ubuntu.
         // Reference: https://github.com/s-h-3-l-l/katoolin3
         $string4 = /katoolin.{0,100}toollist\.py/ nocase ascii wide

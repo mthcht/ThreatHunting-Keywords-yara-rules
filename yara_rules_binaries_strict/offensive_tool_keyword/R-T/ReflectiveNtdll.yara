@@ -37,10 +37,10 @@ rule ReflectiveNtdll
         $string9 = /POC2.{0,100}implant\.cpp/ nocase ascii wide
         // Description: A Dropper POC with a focus on aiding in EDR evasion - NTDLL Unhooking followed by loading ntdll in-memory which is present as shellcode
         // Reference: https://github.com/reveng007/ReflectiveNtdll
-        $string10 = /ReflectiveNtdll\-main/ nocase ascii wide
+        $string10 = "ReflectiveNtdll-main" nocase ascii wide
         // Description: A Dropper POC with a focus on aiding in EDR evasion - NTDLL Unhooking followed by loading ntdll in-memory which is present as shellcode
         // Reference: https://github.com/reveng007/ReflectiveNtdll
-        $string11 = /reveng007\/ReflectiveNtdll/ nocase ascii wide
+        $string11 = "reveng007/ReflectiveNtdll" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

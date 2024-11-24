@@ -10,7 +10,7 @@ rule rshijack
     strings:
         // Description: tcp connection hijacker. rust rewrite of shijack from 2001. This was written for TAMUctf 2018. brick house 100. The target was a telnet server that was protected by 2FA. Since the challenge wasn't authenticated. there have been multiple solutions for this. Our solution (cyclopropenylidene) was waiting until the authentication was done. then inject a tcp packet into the telnet connection:
         // Reference: https://github.com/kpcyrd/rshijack
-        $string1 = /rshijack/ nocase ascii wide
+        $string1 = "rshijack" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

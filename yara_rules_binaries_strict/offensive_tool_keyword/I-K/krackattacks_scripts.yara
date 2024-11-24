@@ -10,7 +10,7 @@ rule krackattacks_scripts
     strings:
         // Description: This project contains scripts to test if clients or access points (APs) are affected by the KRACK attack against WPA2. For details behind this attack see our website and the research paper.
         // Reference: https://github.com/vanhoefm/krackattacks-scripts
-        $string1 = /krackattacks/ nocase ascii wide
+        $string1 = "krackattacks" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

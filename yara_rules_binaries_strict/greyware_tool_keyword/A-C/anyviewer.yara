@@ -22,16 +22,16 @@ rule anyviewer
         $string4 = /\\logs\\RCService\.txt/ nocase ascii wide
         // Description: access your unattended PC from anywhere
         // Reference: www.anyviewer.com
-        $string5 = /\>AnyViewer\sSetup\</ nocase ascii wide
+        $string5 = ">AnyViewer Setup<" nocase ascii wide
         // Description: access your unattended PC from anywhere
         // Reference: www.anyviewer.com
-        $string6 = /\>AnyViewer\</ nocase ascii wide
+        $string6 = ">AnyViewer<" nocase ascii wide
         // Description: access your unattended PC from anywhere
         // Reference: www.anyviewer.com
-        $string7 = /0de968ffd4a6c60413cac739dccb1b162f8f93f3db754728fde8738e52706fa4/ nocase ascii wide
+        $string7 = "0de968ffd4a6c60413cac739dccb1b162f8f93f3db754728fde8738e52706fa4" nocase ascii wide
         // Description: access your unattended PC from anywhere
         // Reference: www.anyviewer.com
-        $string8 = /334ec9e7d937c42e8ef12f9d4ec90862ecc5410c06442393a38390b34886aa59/ nocase ascii wide
+        $string8 = "334ec9e7d937c42e8ef12f9d4ec90862ecc5410c06442393a38390b34886aa59" nocase ascii wide
         // Description: access your unattended PC from anywhere
         // Reference: www.anyviewer.com
         $string9 = /a\.aomeisoftware\.com/ nocase ascii wide

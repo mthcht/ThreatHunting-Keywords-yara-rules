@@ -10,13 +10,13 @@ rule gpp_decrypt
     strings:
         // Description: Decrypt the given Group Policy Preferences
         // Reference: https://gitlab.com/kalilinux/packages/gpp-decrypt
-        $string1 = /\/gpp\-decrypt/ nocase ascii wide
+        $string1 = "/gpp-decrypt" nocase ascii wide
         // Description: Decrypt the given Group Policy Preferences
         // Reference: https://gitlab.com/kalilinux/packages/gpp-decrypt
-        $string2 = /apt\sinstall\sgpp\-decrypt/ nocase ascii wide
+        $string2 = "apt install gpp-decrypt" nocase ascii wide
         // Description: Decrypt the given Group Policy Preferences
         // Reference: https://gitlab.com/kalilinux/packages/gpp-decrypt
-        $string3 = /gpp\-decrypt\s/ nocase ascii wide
+        $string3 = "gpp-decrypt " nocase ascii wide
         // Description: Decrypt the given Group Policy Preferences
         // Reference: https://gitlab.com/kalilinux/packages/gpp-decrypt
         $string4 = /gpp\-decrypt\.rb/ nocase ascii wide

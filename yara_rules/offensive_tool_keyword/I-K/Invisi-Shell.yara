@@ -19,22 +19,22 @@ rule Invisi_Shell
         $string3 = /\\RunWithRegistryNonAdmin\.bat/ nocase ascii wide
         // Description: Hide your powershell script in plain sight! Invisi-Shell bypasses all of Powershell security features (ScriptBlock logging. Module logging. Transcription. AMSI) by hooking .Net assemblies. The hook is performed via CLR Profiler API.
         // Reference: https://github.com/OmerYa/Invisi-Shell
-        $string4 = /18A66118\-B98D\-4FFC\-AABE\-DAFF5779F14C/ nocase ascii wide
+        $string4 = "18A66118-B98D-4FFC-AABE-DAFF5779F14C" nocase ascii wide
         // Description: Hide your powershell script in plain sight! Invisi-Shell bypasses all of Powershell security features (ScriptBlock logging. Module logging. Transcription. AMSI) by hooking .Net assemblies. The hook is performed via CLR Profiler API.
         // Reference: https://github.com/OmerYa/Invisi-Shell
-        $string5 = /4a8e184ca9e1ccc775b224a48d344ce13dde26a86a634df2853ce7a27c17765c/ nocase ascii wide
+        $string5 = "4a8e184ca9e1ccc775b224a48d344ce13dde26a86a634df2853ce7a27c17765c" nocase ascii wide
         // Description: Hide your powershell script in plain sight! Invisi-Shell bypasses all of Powershell security features (ScriptBlock logging. Module logging. Transcription. AMSI) by hooking .Net assemblies. The hook is performed via CLR Profiler API.
         // Reference: https://github.com/OmerYa/Invisi-Shell
-        $string6 = /833d68452ea956b5d23bcb243cd327bd05dfd79fb5a4a34064783749eafa1ddf/ nocase ascii wide
+        $string6 = "833d68452ea956b5d23bcb243cd327bd05dfd79fb5a4a34064783749eafa1ddf" nocase ascii wide
         // Description: Hide your powershell script in plain sight! Invisi-Shell bypasses all of Powershell security features (ScriptBlock logging. Module logging. Transcription. AMSI) by hooking .Net assemblies. The hook is performed via CLR Profiler API.
         // Reference: https://github.com/OmerYa/Invisi-Shell
-        $string7 = /835747f27a37aa3fab9a116d7480701b813c16eba6b903eb82b96fa230aa992e/ nocase ascii wide
+        $string7 = "835747f27a37aa3fab9a116d7480701b813c16eba6b903eb82b96fa230aa992e" nocase ascii wide
         // Description: Hide your powershell script in plain sight! Invisi-Shell bypasses all of Powershell security features (ScriptBlock logging. Module logging. Transcription. AMSI) by hooking .Net assemblies. The hook is performed via CLR Profiler API.
         // Reference: https://github.com/OmerYa/Invisi-Shell
-        $string8 = /835747f27a37aa3fab9a116d7480701b813c16eba6b903eb82b96fa230aa992e/ nocase ascii wide
+        $string8 = "835747f27a37aa3fab9a116d7480701b813c16eba6b903eb82b96fa230aa992e" nocase ascii wide
         // Description: Hide your powershell script in plain sight! Invisi-Shell bypasses all of Powershell security features (ScriptBlock logging. Module logging. Transcription. AMSI) by hooking .Net assemblies. The hook is performed via CLR Profiler API.
         // Reference: https://github.com/OmerYa/Invisi-Shell
-        $string9 = /Invisi\-Shell/ nocase ascii wide
+        $string9 = "Invisi-Shell" nocase ascii wide
         // Description: Hide your powershell script in plain sight! Invisi-Shell bypasses all of Powershell security features (ScriptBlock logging. Module logging. Transcription. AMSI) by hooking .Net assemblies. The hook is performed via CLR Profiler API.
         // Reference: https://github.com/OmerYa/Invisi-Shell
         $string10 = /InvisiShellProfiler\.cpp/ nocase ascii wide
@@ -55,7 +55,7 @@ rule Invisi_Shell
         $string15 = /InvisiShellProfiler\.vcxproj/ nocase ascii wide
         // Description: Hide your powershell script in plain sight! Invisi-Shell bypasses all of Powershell security features (ScriptBlock logging. Module logging. Transcription. AMSI) by hooking .Net assemblies. The hook is performed via CLR Profiler API.
         // Reference: https://github.com/OmerYa/Invisi-Shell
-        $string16 = /OmerYa\/Invisi\-Shell/ nocase ascii wide
+        $string16 = "OmerYa/Invisi-Shell" nocase ascii wide
 
     condition:
         any of them

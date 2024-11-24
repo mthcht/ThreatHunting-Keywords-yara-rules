@@ -13,7 +13,7 @@ rule monkey
         $string1 = /\.\/monkey\.sh/ nocase ascii wide
         // Description: Infection Monkey - An automated pentest tool
         // Reference: https://github.com/guardicore/monkey
-        $string2 = /\/infection_monkey\// nocase ascii wide
+        $string2 = "/infection_monkey/" nocase ascii wide
         // Description: Infection Monkey - An automated pentest tool
         // Reference: https://github.com/guardicore/monkey
         $string3 = /\/log4shell\.py/ nocase ascii wide
@@ -61,7 +61,7 @@ rule monkey
         $string17 = /dump_secrets\.py/ nocase ascii wide
         // Description: Infection Monkey - An automated pentest tool
         // Reference: https://github.com/guardicore/monkey
-        $string18 = /guardicore\/monkey/ nocase ascii wide
+        $string18 = "guardicore/monkey" nocase ascii wide
         // Description: Infection Monkey - An automated pentest tool
         // Reference: https://github.com/guardicore/monkey
         $string19 = /hook\-infection_monkey\.exploit\.py/ nocase ascii wide
@@ -115,10 +115,10 @@ rule monkey
         $string35 = /monkey64\.exe\s/ nocase ascii wide
         // Description: Infection Monkey - An automated pentest tool
         // Reference: https://github.com/guardicore/monkey
-        $string36 = /monkey\-linux\-32/ nocase ascii wide
+        $string36 = "monkey-linux-32" nocase ascii wide
         // Description: Infection Monkey - An automated pentest tool
         // Reference: https://github.com/guardicore/monkey
-        $string37 = /monkey\-linux\-64/ nocase ascii wide
+        $string37 = "monkey-linux-64" nocase ascii wide
         // Description: Infection Monkey - An automated pentest tool
         // Reference: https://github.com/guardicore/monkey
         $string38 = /monkey\-windows\-32\.exe/ nocase ascii wide

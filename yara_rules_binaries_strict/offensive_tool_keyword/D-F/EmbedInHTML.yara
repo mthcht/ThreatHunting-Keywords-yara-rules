@@ -61,10 +61,10 @@ rule EmbedInHTML
         $string17 = /\/EmbedInHTML\.git/ nocase ascii wide
         // Description: What this tool does is taking a file (any type of file). encrypt it. and embed it into an HTML file as ressource. along with an automatic download routine simulating a user clicking on the embedded ressource.
         // Reference: https://github.com/Arno0x/EmbedInHTML
-        $string18 = /\/EmbedInHTML\// nocase ascii wide
+        $string18 = "/EmbedInHTML/" nocase ascii wide
         // Description: What this tool does is taking a file (any type of file). encrypt it. and embed it into an HTML file as ressource. along with an automatic download routine simulating a user clicking on the embedded ressource.
         // Reference: https://github.com/Arno0x/EmbedInHTML
-        $string19 = /Arno0x\/EmbedInHTML/ nocase ascii wide
+        $string19 = "Arno0x/EmbedInHTML" nocase ascii wide
         // Description: What this tool does is taking a file (any type of file). encrypt it. and embed it into an HTML file as ressource. along with an automatic download routine simulating a user clicking on the embedded ressource.
         // Reference: https://github.com/Arno0x/EmbedInHTML
         $string20 = /embedInHTML\.html/ nocase ascii wide
@@ -73,7 +73,7 @@ rule EmbedInHTML
         $string21 = /embedInHTML\.py/ nocase ascii wide
         // Description: What this tool does is taking a file (any type of file). encrypt it. and embed it into an HTML file as ressource. along with an automatic download routine simulating a user clicking on the embedded ressource.
         // Reference: https://github.com/Arno0x/EmbedInHTML
-        $string22 = /EmbedInHTML\-master/ nocase ascii wide
+        $string22 = "EmbedInHTML-master" nocase ascii wide
         // Description: What this tool does is taking a file (any type of file). encrypt it. and embed it into an HTML file as ressource. along with an automatic download routine simulating a user clicking on the embedded ressource.
         // Reference: https://github.com/Arno0x/EmbedInHTML
         $string23 = /\-f\spayloads_examples\/calc\./ nocase ascii wide

@@ -10,7 +10,7 @@ rule GIUDA
     strings:
         // Description: Ask a TGS on behalf of another user without password
         // Reference: https://github.com/foxlox/GIUDA
-        $string1 = /\s\-runaslsass/ nocase ascii wide
+        $string1 = " -runaslsass" nocase ascii wide
         // Description: Ask a TGS on behalf of another user without password
         // Reference: https://github.com/foxlox/GIUDA
         $string2 = /\.exe\s\-gettgs\s\-luid\:/ nocase ascii wide

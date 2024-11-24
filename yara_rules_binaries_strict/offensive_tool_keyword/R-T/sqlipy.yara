@@ -13,7 +13,7 @@ rule sqlipy
         $string1 = /\/sqlmap\.zip/ nocase ascii wide
         // Description: SQLiPy is a Python plugin for Burp Suite that integrates SQLMap using the SQLMap API.
         // Reference: https://github.com/codewatchorg/sqlipy
-        $string2 = /codewatchorg\/sqlipy/ nocase ascii wide
+        $string2 = "codewatchorg/sqlipy" nocase ascii wide
         // Description: SQLiPy is a Python plugin for Burp Suite that integrates SQLMap using the SQLMap API.
         // Reference: https://github.com/codewatchorg/sqlipy
         $string3 = /SQLiPy\.py/ nocase ascii wide

@@ -25,16 +25,16 @@ rule psgetsystem
         $string5 = /\\psgetsys\.ps1/ nocase ascii wide
         // Description: getsystem via parent process using ps1 & embeded c#
         // Reference: https://github.com/decoder-it/psgetsystem
-        $string6 = /decoder\-it\/psgetsystem/ nocase ascii wide
+        $string6 = "decoder-it/psgetsystem" nocase ascii wide
         // Description: getsystem via parent process using ps1 & embeded c#
         // Reference: https://github.com/decoder-it/psgetsystem
-        $string7 = /function\sImpersonateFromParentPid/ nocase ascii wide
+        $string7 = "function ImpersonateFromParentPid" nocase ascii wide
         // Description: getsystem via parent process using ps1 & embeded c#
         // Reference: https://github.com/decoder-it/psgetsystem
-        $string8 = /ImpersonateFromParentPid\s\-ppid/ nocase ascii wide
+        $string8 = "ImpersonateFromParentPid -ppid" nocase ascii wide
         // Description: getsystem via parent process using ps1 & embeded c#
         // Reference: https://github.com/decoder-it/psgetsystem
-        $string9 = /Simple\spowershell\/C\#\sto\sspawn\sa\sprocess\sunder\sa\sdifferent\sparent\sprocess/ nocase ascii wide
+        $string9 = "Simple powershell/C# to spawn a process under a different parent process" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

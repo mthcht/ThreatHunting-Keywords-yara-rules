@@ -13,7 +13,7 @@ rule StealDhcpSecrets
         $string1 = /Can\'t\sfind\sDHCP\sServer\sPID\.\sExiting\./ nocase ascii wide
         // Description: DHCP Server DNS Password Stealer
         // Reference: https://github.com/gtworek/PSBits/tree/master/PasswordStealing/DHCP
-        $string2 = /define\sDHCP_KEY\s_T\(\"SYSTEM\\\\CurrentControlSet\\\\Services\\\\DHCPServer\\\\ServicePrivateData\"/ nocase ascii wide
+        $string2 = /define\sDHCP_KEY\s_T\(\\"SYSTEM\\\\CurrentControlSet\\\\Services\\\\DHCPServer\\\\ServicePrivateData\\"/ nocase ascii wide
         // Description: DHCP Server DNS Password Stealer
         // Reference: https://github.com/gtworek/PSBits/tree/master/PasswordStealing/DHCP
         $string3 = /Impersonation\s\#1\sdone\./ nocase ascii wide

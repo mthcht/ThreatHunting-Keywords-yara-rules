@@ -10,22 +10,22 @@ rule ropfuscator
     strings:
         // Description: ROPfuscator is a fine-grained code obfuscation framework for C/C++ programs using ROP (return-oriented programming).
         // Reference: https://github.com/ropfuscator/ropfuscator
-        $string1 = /\sropfuscator/ nocase ascii wide
+        $string1 = " ropfuscator" nocase ascii wide
         // Description: ROPfuscator is a fine-grained code obfuscation framework for C/C++ programs using ROP (return-oriented programming).
         // Reference: https://github.com/ropfuscator/ropfuscator
-        $string2 = /\/ropfuscator/ nocase ascii wide
+        $string2 = "/ropfuscator" nocase ascii wide
         // Description: ROPfuscator is a fine-grained code obfuscation framework for C/C++ programs using ROP (return-oriented programming).
         // Reference: https://github.com/ropfuscator/ropfuscator
         $string3 = /ROPEngine\.cpp/ nocase ascii wide
         // Description: ROPfuscator is a fine-grained code obfuscation framework for C/C++ programs using ROP (return-oriented programming).
         // Reference: https://github.com/ropfuscator/ropfuscator
-        $string4 = /ropfuscator\s/ nocase ascii wide
+        $string4 = "ropfuscator " nocase ascii wide
         // Description: ROPfuscator is a fine-grained code obfuscation framework for C/C++ programs using ROP (return-oriented programming).
         // Reference: https://github.com/ropfuscator/ropfuscator
-        $string5 = /ROPfuscator/ nocase ascii wide
+        $string5 = "ROPfuscator" nocase ascii wide
         // Description: ROPfuscator is a fine-grained code obfuscation framework for C/C++ programs using ROP (return-oriented programming).
         // Reference: https://github.com/ropfuscator/ropfuscator
-        $string6 = /ropfuscator\-/ nocase ascii wide
+        $string6 = "ropfuscator-" nocase ascii wide
         // Description: ROPfuscator is a fine-grained code obfuscation framework for C/C++ programs using ROP (return-oriented programming).
         // Reference: https://github.com/ropfuscator/ropfuscator
         $string7 = /ropfuscator\./ nocase ascii wide

@@ -13,10 +13,10 @@ rule _0d1n
         $string1 = /\/0d1n\.c/ nocase ascii wide
         // Description: Tool for automating customized attacks against web applications. Fully made in C language with pthreads it has fast performance.
         // Reference: https://github.com/CoolerVoid/0d1n
-        $string2 = /\/0d1n_view/ nocase ascii wide
+        $string2 = "/0d1n_view" nocase ascii wide
         // Description: Tool for automating customized attacks against web applications. Fully made in C language with pthreads it has fast performance.
         // Reference: https://github.com/CoolerVoid/0d1n
-        $string3 = /\/bin\/0d1n/ nocase ascii wide
+        $string3 = "/bin/0d1n" nocase ascii wide
         // Description: Tool for automating customized attacks against web applications. Fully made in C language with pthreads it has fast performance.
         // Reference: https://github.com/CoolerVoid/0d1n
         $string4 = /\/crlfinjection\.txt/ nocase ascii wide
@@ -64,13 +64,13 @@ rule _0d1n
         $string18 = /0d1n\s.{0,100}\s\-\-post\s.{0,100}\s\-\-payloads\s/ nocase ascii wide
         // Description: Tool for automating customized attacks against web applications. Fully made in C language with pthreads it has fast performance.
         // Reference: https://github.com/CoolerVoid/0d1n
-        $string19 = /0d1n\s\-\-host/ nocase ascii wide
+        $string19 = "0d1n --host" nocase ascii wide
         // Description: Tool for automating customized attacks against web applications. Fully made in C language with pthreads it has fast performance.
         // Reference: https://github.com/CoolerVoid/0d1n
         $string20 = /0d1n.{0,100}kill_listener\.sh/ nocase ascii wide
         // Description: Tool for automating customized attacks against web applications. Fully made in C language with pthreads it has fast performance.
         // Reference: https://github.com/CoolerVoid/0d1n
-        $string21 = /CoolerVoid\/0d1n/ nocase ascii wide
+        $string21 = "CoolerVoid/0d1n" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

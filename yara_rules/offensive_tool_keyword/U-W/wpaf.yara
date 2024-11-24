@@ -13,7 +13,7 @@ rule wpaf
         $string1 = /\/wpaf\/finder\.py/ nocase ascii wide
         // Description: WordPress admin finder
         // Reference: https://github.com/kancotdiq/wpaf
-        $string2 = /kancotdiq\/wpaf/ nocase ascii wide
+        $string2 = "kancotdiq/wpaf" nocase ascii wide
 
     condition:
         any of them

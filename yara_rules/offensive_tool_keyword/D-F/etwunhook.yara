@@ -31,7 +31,7 @@ rule etwunhook
         $string7 = /\\etwunhook\.exe/ nocase ascii wide
         // Description: Simple ETW unhook PoC. Overwrites NtTraceEvent opcode to disable ETW at Nt-function level.
         // Reference: https://github.com/Meowmycks/etwunhook
-        $string8 = /Meowmycks\/etwunhook/ nocase ascii wide
+        $string8 = "Meowmycks/etwunhook" nocase ascii wide
 
     condition:
         any of them

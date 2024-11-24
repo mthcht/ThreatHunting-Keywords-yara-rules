@@ -25,13 +25,13 @@ rule wfuzz
         $string5 = /\scommon_pass\.txt/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string6 = /\sFUZZ\:FUZZ\s/ nocase ascii wide
+        $string6 = " FUZZ:FUZZ " nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string7 = /\sinstall\swfuzz/ nocase ascii wide
+        $string7 = " install wfuzz" nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string8 = /\s\-u\sFUZZ\s/ nocase ascii wide
+        $string8 = " -u FUZZ " nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
         $string9 = /\s\-w\swordlist\/.{0,100}\.txt.{0,100}http/ nocase ascii wide
@@ -43,10 +43,10 @@ rule wfuzz
         $string11 = /\sws\-files\.txt/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string12 = /\s\-X\sFUZZ\shttp/ nocase ascii wide
+        $string12 = " -X FUZZ http" nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string13 = /\s\-z\sburplog/ nocase ascii wide
+        $string13 = " -z burplog" nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
         $string14 = /\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/etc\/passwd/ nocase ascii wide
@@ -70,7 +70,7 @@ rule wfuzz
         $string20 = /\/sql_inj\.txt/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string21 = /\/wfuzz\s/ nocase ascii wide
+        $string21 = "/wfuzz " nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
         $string22 = /\/ws\-dirs\.txt/ nocase ascii wide
@@ -142,7 +142,7 @@ rule wfuzz
         $string44 = /https\:\/\/wfuzz\.readthedocs\.io/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string45 = /import\swfuzz/ nocase ascii wide
+        $string45 = "import wfuzz" nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
         $string46 = /Injections\/Traversal\.txt/ nocase ascii wide
@@ -154,13 +154,13 @@ rule wfuzz
         $string48 = /shodanp\.py/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string49 = /site\-packages\/wfuzz/ nocase ascii wide
+        $string49 = "site-packages/wfuzz" nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
         $string50 = /subdomains\-top1million\-20000\.txt/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string51 = /uname\=FUZZ\&pass\=FUZZ/ nocase ascii wide
+        $string51 = "uname=FUZZ&pass=FUZZ" nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
         $string52 = /vulns\/apache\.txt/ nocase ascii wide
@@ -178,10 +178,10 @@ rule wfuzz
         $string56 = /vulnweb\.com\/FUZZ/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string57 = /wfencode\s\-/ nocase ascii wide
+        $string57 = "wfencode -" nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string58 = /wfencode\s\-e\s/ nocase ascii wide
+        $string58 = "wfencode -e " nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
         $string59 = /wfencode\.bat/ nocase ascii wide
@@ -190,7 +190,7 @@ rule wfuzz
         $string60 = /wfencode\.py/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string61 = /wfpayload\s\-/ nocase ascii wide
+        $string61 = "wfpayload -" nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
         $string62 = /wfpayload\.bat/ nocase ascii wide
@@ -226,7 +226,7 @@ rule wfuzz
         $string72 = /wxfuzz\.py/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string73 = /xmendez\/wfuzz/ nocase ascii wide
+        $string73 = "xmendez/wfuzz" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

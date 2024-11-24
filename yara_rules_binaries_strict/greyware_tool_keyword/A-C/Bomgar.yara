@@ -67,13 +67,13 @@ rule Bomgar
         $string19 = /\\programdata\\bomgar\-scc\-/ nocase ascii wide
         // Description: Bomgar beyoundtrust Remote access software - abused by attackers
         // Reference: https://www.beyondtrust.com/
-        $string20 = /\>Bomgar\sCorporation\<\/Data\>/ nocase ascii wide
+        $string20 = ">Bomgar Corporation</Data>" nocase ascii wide
         // Description: Bomgar beyoundtrust Remote access software - abused by attackers
         // Reference: https://www.beyondtrust.com/
-        $string21 = /\>Remote\sSupport\sCustomer\sClient\<\/Data\>/ nocase ascii wide
+        $string21 = ">Remote Support Customer Client</Data>" nocase ascii wide
         // Description: Bomgar beyoundtrust Remote access software - abused by attackers
         // Reference: https://www.beyondtrust.com/
-        $string22 = /\>Representative\sConsole\<\/Data\>/ nocase ascii wide
+        $string22 = ">Representative Console</Data>" nocase ascii wide
         // Description: Bomgar beyoundtrust Remote access software - abused by attackers
         // Reference: https://www.beyondtrust.com/
         $string23 = /beyondtrustcloud\.com\\Software\\Qt6/ nocase ascii wide
@@ -82,10 +82,10 @@ rule Bomgar
         $string24 = /bomgar\-rdp\.exe/ nocase ascii wide
         // Description: Bomgar beyoundtrust Remote access software - abused by attackers
         // Reference: https://www.beyondtrust.com/
-        $string25 = /\'Company\'\>BeyondTrust\<\/Data\>/ nocase ascii wide
+        $string25 = "'Company'>BeyondTrust</Data>" nocase ascii wide
         // Description: Bomgar beyoundtrust Remote access software - abused by attackers
         // Reference: https://www.beyondtrust.com/
-        $string26 = /\'Company\'\>bomgar\<\/Data\>/ nocase ascii wide
+        $string26 = "'Company'>bomgar</Data>" nocase ascii wide
         // Description: Bomgar beyoundtrust Remote access software - abused by attackers
         // Reference: https://www.beyondtrust.com/
         $string27 = /eval\-.{0,100}\.beyondtrustcloud\.com/ nocase ascii wide

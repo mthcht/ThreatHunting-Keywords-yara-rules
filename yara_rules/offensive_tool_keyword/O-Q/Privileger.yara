@@ -13,7 +13,7 @@ rule Privileger
         $string1 = /\/Privileger\.git/ nocase ascii wide
         // Description: Privileger is a tool to work with Windows Privileges
         // Reference: https://github.com/MzHmO/Privileger
-        $string2 = /MzHmO\/Privileger/ nocase ascii wide
+        $string2 = "MzHmO/Privileger" nocase ascii wide
         // Description: Privileger is a tool to work with Windows Privileges
         // Reference: https://github.com/MzHmO/Privileger
         $string3 = /Privileger\.cpp/ nocase ascii wide

@@ -31,7 +31,7 @@ rule DcRat
         $string7 = /127\.0\.0\.1\:8848/ nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
-        $string8 = /AsyncRAT\/DCRat/ nocase ascii wide
+        $string8 = "AsyncRAT/DCRat" nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
         $string9 = /CN\=DcRat\sServer.{0,100}OU\=qwqdanchun.{0,100}O\=DcRat\sBy\sqwqdanchun/ nocase ascii wide
@@ -64,7 +64,7 @@ rule DcRat
         $string18 = /Keylogger\.pdb/ nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
-        $string19 = /localhost\:8848/ nocase ascii wide
+        $string19 = "localhost:8848" nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
         $string20 = /Plugins\\SendFile\.dll/ nocase ascii wide
@@ -73,10 +73,10 @@ rule DcRat
         $string21 = /Plugins\\SendMemory\.dll/ nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
-        $string22 = /qwqdanchun/ nocase ascii wide
+        $string22 = "qwqdanchun" nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
-        $string23 = /qwqdanchun\/DcRat/ nocase ascii wide
+        $string23 = "qwqdanchun/DcRat" nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
         $string24 = /Ransomware\.dll/ nocase ascii wide

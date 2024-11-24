@@ -28,28 +28,28 @@ rule rsocx
         $string6 = /\/rsocx\.git/ nocase ascii wide
         // Description: A bind/reverse Socks5 proxy server.
         // Reference: https://github.com/b23r0/rsocx
-        $string7 = /\/rsocx\/releases\/download\// nocase ascii wide
+        $string7 = "/rsocx/releases/download/" nocase ascii wide
         // Description: A bind/reverse Socks5 proxy server.
         // Reference: https://github.com/b23r0/rsocx
         $string8 = /\\rsocx\.exe/ nocase ascii wide
         // Description: A bind/reverse Socks5 proxy server.
         // Reference: https://github.com/b23r0/rsocx
-        $string9 = /0908e1cfbd62968eea9ae9a3c772b6f134770c72b503affde0d551c8a55447c5/ nocase ascii wide
+        $string9 = "0908e1cfbd62968eea9ae9a3c772b6f134770c72b503affde0d551c8a55447c5" nocase ascii wide
         // Description: A bind/reverse Socks5 proxy server.
         // Reference: https://github.com/b23r0/rsocx
-        $string10 = /79ba1aa3b1b83aeb4db3fcf649b4acffce02a559a39b10905b4eb6676a646538/ nocase ascii wide
+        $string10 = "79ba1aa3b1b83aeb4db3fcf649b4acffce02a559a39b10905b4eb6676a646538" nocase ascii wide
         // Description: A bind/reverse Socks5 proxy server.
         // Reference: https://github.com/b23r0/rsocx
-        $string11 = /b23r0\/rsocx/ nocase ascii wide
+        $string11 = "b23r0/rsocx" nocase ascii wide
         // Description: A bind/reverse Socks5 proxy server.
         // Reference: https://github.com/b23r0/rsocx
-        $string12 = /cargo\sinstall\srsocx/ nocase ascii wide
+        $string12 = "cargo install rsocx" nocase ascii wide
         // Description: A bind/reverse Socks5 proxy server.
         // Reference: https://github.com/b23r0/rsocx
-        $string13 = /f3ba88e3c7410a48b8a15edccc2ededc4468d3babf5b9c07c4166cf58606f7d2/ nocase ascii wide
+        $string13 = "f3ba88e3c7410a48b8a15edccc2ededc4468d3babf5b9c07c4166cf58606f7d2" nocase ascii wide
         // Description: A bind/reverse Socks5 proxy server.
         // Reference: https://github.com/b23r0/rsocx
-        $string14 = /f81c31e5e8218f50da67495708f52079f59c0d96071f553086660fb47ff78e1c/ nocase ascii wide
+        $string14 = "f81c31e5e8218f50da67495708f52079f59c0d96071f553086660fb47ff78e1c" nocase ascii wide
         // Description: A bind/reverse Socks5 proxy server.
         // Reference: https://github.com/b23r0/rsocx
         $string15 = /rsocx\s\-l\s0\.0\.0\.0/ nocase ascii wide

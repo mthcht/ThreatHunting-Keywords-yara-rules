@@ -10,7 +10,7 @@ rule GONET_Scanner
     strings:
         // Description: port scanner and arp discover in go
         // Reference: https://github.com/luijait/GONET-Scanner
-        $string1 = /\/GONET\-Scanner\// nocase ascii wide
+        $string1 = "/GONET-Scanner/" nocase ascii wide
         // Description: port scanner and arp discover in go
         // Reference: https://github.com/luijait/GONET-Scanner
         $string2 = /\/scannerPort\.go/ nocase ascii wide

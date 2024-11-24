@@ -10,7 +10,7 @@ rule tplmap
     strings:
         // Description: Tplmap assists the exploitation of Code Injection and Server-Side Template Injection vulnerabilities with a number of sandbox escape techniques to get access to the underlying operating system. The sandbox break-out techniques came from James Ketts Server-Side Template Injection: RCE For The Modern Web App. other public researches [1] [2]. and original contributions to this tool  It can exploit several code context and blind injection scenarios. It also supports eval()-like code injections in Python. Ruby. PHP. Java and generic unsandboxed template engines.
         // Reference: https://github.com/epinna/tplmap
-        $string1 = /tplmap/ nocase ascii wide
+        $string1 = "tplmap" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

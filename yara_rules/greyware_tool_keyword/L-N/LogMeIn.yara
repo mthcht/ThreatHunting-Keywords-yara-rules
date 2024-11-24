@@ -130,7 +130,7 @@ rule LogMeIn
         $string40 = /\<Data\>LogMeIn\,\sInc\.\<\/Data\>/ nocase ascii wide
         // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
         // Reference: https://www.logmein.com
-        $string41 = /9d2ce0345f4ee5798a49a8a13e33c7502a2ac655/ nocase ascii wide
+        $string41 = "9d2ce0345f4ee5798a49a8a13e33c7502a2ac655" nocase ascii wide
         // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
         // Reference: https://www.logmein.com
         $string42 = /control\..{0,1000}\.logmeinrescue\.com/ nocase ascii wide

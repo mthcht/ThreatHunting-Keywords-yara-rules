@@ -22,7 +22,7 @@ rule NtlmRelayToEWS
         $string4 = /\/NtlmRelayToEWS\.git/ nocase ascii wide
         // Description: ntlmRelayToEWS is a tool for performing ntlm relay attacks on Exchange Web Services (EWS)
         // Reference: https://github.com/Arno0x/NtlmRelayToEWS
-        $string5 = /\/NtlmRelayToEWS\// nocase ascii wide
+        $string5 = "/NtlmRelayToEWS/" nocase ascii wide
         // Description: ntlmRelayToEWS is a tool for performing ntlm relay attacks on Exchange Web Services (EWS)
         // Reference: https://github.com/Arno0x/NtlmRelayToEWS
         $string6 = /\/smbrelayserver\.py/ nocase ascii wide
@@ -37,16 +37,16 @@ rule NtlmRelayToEWS
         $string9 = /\\smbrelayserver\.py/ nocase ascii wide
         // Description: ntlmRelayToEWS is a tool for performing ntlm relay attacks on Exchange Web Services (EWS)
         // Reference: https://github.com/Arno0x/NtlmRelayToEWS
-        $string10 = /Arno0x\/NtlmRelayToEWS/ nocase ascii wide
+        $string10 = "Arno0x/NtlmRelayToEWS" nocase ascii wide
         // Description: ntlmRelayToEWS is a tool for performing ntlm relay attacks on Exchange Web Services (EWS)
         // Reference: https://github.com/Arno0x/NtlmRelayToEWS
-        $string11 = /ntlmRelayToEWS\s\-/ nocase ascii wide
+        $string11 = "ntlmRelayToEWS -" nocase ascii wide
         // Description: ntlmRelayToEWS is a tool for performing ntlm relay attacks on Exchange Web Services (EWS)
         // Reference: https://github.com/Arno0x/NtlmRelayToEWS
         $string12 = /ntlmRelayToEWS\.py/ nocase ascii wide
         // Description: ntlmRelayToEWS is a tool for performing ntlm relay attacks on Exchange Web Services (EWS)
         // Reference: https://github.com/Arno0x/NtlmRelayToEWS
-        $string13 = /NtlmRelayToEWS\-master/ nocase ascii wide
+        $string13 = "NtlmRelayToEWS-master" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

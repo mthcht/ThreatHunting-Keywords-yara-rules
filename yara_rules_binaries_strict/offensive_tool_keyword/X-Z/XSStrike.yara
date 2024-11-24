@@ -10,7 +10,7 @@ rule XSStrike
     strings:
         // Description: Advanced XSS detection and exploitation suite.
         // Reference: https://github.com/UltimateHackers/XSStrike
-        $string1 = /XSStrike/ nocase ascii wide
+        $string1 = "XSStrike" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

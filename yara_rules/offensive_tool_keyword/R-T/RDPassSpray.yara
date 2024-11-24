@@ -13,10 +13,10 @@ rule RDPassSpray
         $string1 = /\/RDPassSpray\.git/ nocase ascii wide
         // Description: Python3 tool to perform password spraying using RDP
         // Reference: https://github.com/xFreed0m/RDPassSpray
-        $string2 = /62db3e73826eb5cd8b14f3b54e7c476d423f28c0d4e467632fcacf338c250301/ nocase ascii wide
+        $string2 = "62db3e73826eb5cd8b14f3b54e7c476d423f28c0d4e467632fcacf338c250301" nocase ascii wide
         // Description: Python3 tool to perform password spraying using RDP
         // Reference: https://github.com/xFreed0m/RDPassSpray
-        $string3 = /dafthack\/RDPSpray/ nocase ascii wide
+        $string3 = "dafthack/RDPSpray" nocase ascii wide
         // Description: Python3 tool to perform password spraying using RDP
         // Reference: https://github.com/xFreed0m/RDPassSpray
         $string4 = /fake_hostnames\(hostnames_list\)/ nocase ascii wide
@@ -31,13 +31,13 @@ rule RDPassSpray
         $string7 = /RDPassSpray\.py/ nocase ascii wide
         // Description: Python3 tool to perform password spraying using RDP
         // Reference: https://github.com/xFreed0m/RDPassSpray
-        $string8 = /RDPassSpray\-main/ nocase ascii wide
+        $string8 = "RDPassSpray-main" nocase ascii wide
         // Description: Python3 tool to perform password spraying using RDP
         // Reference: https://github.com/xFreed0m/RDPassSpray
-        $string9 = /RDPassSpray\-master/ nocase ascii wide
+        $string9 = "RDPassSpray-master" nocase ascii wide
         // Description: Python3 tool to perform password spraying using RDP
         // Reference: https://github.com/xFreed0m/RDPassSpray
-        $string10 = /xFreed0m\/RDPassSpray/ nocase ascii wide
+        $string10 = "xFreed0m/RDPassSpray" nocase ascii wide
         // Description: Python3 tool to perform password spraying using RDP
         // Reference: https://github.com/xFreed0m/RDPassSpray
         $string11 = /xfreerdp\s\/v.{0,1000}SOCtest.{0,1000}AllLegitHere/ nocase ascii wide

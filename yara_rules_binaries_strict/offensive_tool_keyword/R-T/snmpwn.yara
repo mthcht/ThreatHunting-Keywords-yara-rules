@@ -16,7 +16,7 @@ rule snmpwn
         $string2 = /\/snmpwn\.rb/ nocase ascii wide
         // Description: SNMPwn is an SNMPv3 user enumerator and attack tool. It is a legitimate security tool designed to be used by security professionals and penetration testers against hosts you have permission to test. It takes advantage of the fact that SNMPv3 systems will respond with  Unknown user name  when an SNMP user does not exist. allowing us to cycle through large lists of users to find the ones that do
         // Reference: https://github.com/hatlord/snmpwn
-        $string3 = /hatlord\/snmpwn/ nocase ascii wide
+        $string3 = "hatlord/snmpwn" nocase ascii wide
         // Description: SNMPwn is an SNMPv3 user enumerator and attack tool. It is a legitimate security tool designed to be used by security professionals and penetration testers against hosts you have permission to test. It takes advantage of the fact that SNMPv3 systems will respond with  Unknown user name  when an SNMP user does not exist. allowing us to cycle through large lists of users to find the ones that do
         // Reference: https://github.com/hatlord/snmpwn
         $string4 = /snmpwn\s.{0,100}passwords\.txt/ nocase ascii wide

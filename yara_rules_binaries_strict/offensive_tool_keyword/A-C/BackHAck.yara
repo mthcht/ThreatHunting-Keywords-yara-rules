@@ -22,16 +22,16 @@ rule BackHAck
         $string4 = /\\backhack\.py/ nocase ascii wide
         // Description: Backdoor Generator with C2 server - Linux & Windows - FUD AV .py .exe
         // Reference: https://github.com/AngelSecurityTeam/BackHAck
-        $string5 = /48c4df943d19bc547c6cab3a3c802dbcf13af3b7880b3977aef74f452c831a95/ nocase ascii wide
+        $string5 = "48c4df943d19bc547c6cab3a3c802dbcf13af3b7880b3977aef74f452c831a95" nocase ascii wide
         // Description: Backdoor Generator with C2 server - Linux & Windows - FUD AV .py .exe
         // Reference: https://github.com/AngelSecurityTeam/BackHAck
-        $string6 = /93df885410ce2b2ea1428127077bcf574e56838ce8ccf4ea410a1f120544f9b8/ nocase ascii wide
+        $string6 = "93df885410ce2b2ea1428127077bcf574e56838ce8ccf4ea410a1f120544f9b8" nocase ascii wide
         // Description: Backdoor Generator with C2 server - Linux & Windows - FUD AV .py .exe
         // Reference: https://github.com/AngelSecurityTeam/BackHAck
-        $string7 = /AngelSecurityTeam\/BackHAck/ nocase ascii wide
+        $string7 = "AngelSecurityTeam/BackHAck" nocase ascii wide
         // Description: Backdoor Generator with C2 server - Linux & Windows - FUD AV .py .exe
         // Reference: https://github.com/AngelSecurityTeam/BackHAck
-        $string8 = /AngelSecurityTeam\-BackdoorLinux/ nocase ascii wide
+        $string8 = "AngelSecurityTeam-BackdoorLinux" nocase ascii wide
         // Description: Backdoor Generator with C2 server - Linux & Windows - FUD AV .py .exe
         // Reference: https://github.com/AngelSecurityTeam/BackHAck
         $string9 = /AngelSecurityTeam\-BackdoorWindows\.exe/ nocase ascii wide

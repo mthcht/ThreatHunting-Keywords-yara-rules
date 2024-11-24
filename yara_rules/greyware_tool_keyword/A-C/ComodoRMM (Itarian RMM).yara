@@ -97,10 +97,10 @@ rule ComodoRMM__Itarian_RMM_
         $string29 = /\\SOFTWARE\\WOW6432Node\\ITarian\\ITSM\\/ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string30 = /\>Remote\sControl\sby\sItarian\</ nocase ascii wide
+        $string30 = ">Remote Control by Itarian<" nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string31 = /\>RmmService\</ nocase ascii wide
+        $string31 = ">RmmService<" nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
         $string32 = /cwn\-log\-collector\-production\-clone\..{0,1000}\.elasticbeanstalk\.com/ nocase ascii wide

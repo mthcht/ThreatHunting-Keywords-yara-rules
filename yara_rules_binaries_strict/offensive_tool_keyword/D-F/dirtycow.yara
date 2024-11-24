@@ -10,7 +10,7 @@ rule dirtycow
     strings:
         // Description: Linux vulnerability name to go root CVE-2016-5195) Dirty COW est une vulnrabilit de scurit du noyau Linux qui affecte tous les systmes d'exploitation Linux. y compris Android. C'est un dfaut d'lvation de privilge qui exploite une condition de concurrence dans la mise en uvre de la copie sur criture dans le noyau de gestion de la mmoire
         // Reference: multiple pocs on github and others places 
-        $string1 = /dirtycow/ nocase ascii wide
+        $string1 = "dirtycow" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

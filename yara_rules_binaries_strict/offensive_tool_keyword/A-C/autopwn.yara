@@ -10,7 +10,7 @@ rule autopwn
     strings:
         // Description: tools for pentester. autopwn is designed to make a pentesters life easier and more consistent by allowing them to specify tools they would like to run against targets. without having to type them in a shell or write a script. This tool will probably be useful during certain exams as well..
         // Reference: https://github.com/nccgroup/autopwn
-        $string1 = /autopwn/ nocase ascii wide
+        $string1 = "autopwn" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -10,7 +10,7 @@ rule PowerMemory
     strings:
         // Description: Exploit the credentials present in files and memory
         // Reference: https://github.com/giMini/PowerMemory
-        $string1 = /PowerMemory/ nocase ascii wide
+        $string1 = "PowerMemory" nocase ascii wide
 
     condition:
         any of them

@@ -10,7 +10,7 @@ rule sudoSnatch
     strings:
         // Description: sudoSnatch payload grabs sudo password in plain text and imediately after target uses sudo command and sends it back to attacker remotely/locally.
         // Reference: https://github.com/hak5/omg-payloads/tree/master/payloads/library/credentials/SudoSnatch
-        $string1 = /\/credentials\/SudoSnatch/ nocase ascii wide
+        $string1 = "/credentials/SudoSnatch" nocase ascii wide
         // Description: sudoSnatch payload grabs sudo password in plain text and imediately after target uses sudo command and sends it back to attacker remotely/locally.
         // Reference: https://github.com/hak5/omg-payloads/tree/master/payloads/library/credentials/SudoSnatch
         $string2 = /nIFS\=.{0,100}\sread\s\-s\spass\\necho\s\-e\s.{0,100}User\=.{0,100}\$\(whoami\).{0,100}Password\=.{0,100}\$pass.{0,100}\>\s\/var\/tmp/ nocase ascii wide

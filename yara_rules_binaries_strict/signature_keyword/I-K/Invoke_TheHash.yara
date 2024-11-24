@@ -10,7 +10,7 @@ rule Invoke_TheHash
     strings:
         // Description: Invoke-TheHash contains PowerShell functions for performing pass the hash WMI and SMB tasks. WMI and SMB connections are accessed through the .NET TCPClient. Authentication is performed by passing an NTLM hash into the NTLMv2 authentication protocol. Local administrator privilege is not required client-side. -signature observed with Invoke-SMBExec.ps1
         // Reference: https://github.com/Kevin-Robertson/Invoke-TheHash
-        $string1 = /Trojan\:Win32\/Ceevee/ nocase ascii wide
+        $string1 = "Trojan:Win32/Ceevee" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

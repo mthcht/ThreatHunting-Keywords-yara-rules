@@ -10,13 +10,13 @@ rule EDRSandblast_GodFault
     strings:
         // Description: Integrates GodFault into EDR Sandblast achieving the same result without the use of any vulnerable drivers.
         // Reference: https://github.com/gabriellandau/EDRSandblast-GodFault
-        $string1 = /\sConfiguring\sWindows\sFirewall\srules\sto\sblock\sEDR\snetwork\saccess/ nocase ascii wide
+        $string1 = " Configuring Windows Firewall rules to block EDR network access" nocase ascii wide
         // Description: Integrates GodFault into EDR Sandblast achieving the same result without the use of any vulnerable drivers.
         // Reference: https://github.com/gabriellandau/EDRSandblast-GodFault
         $string2 = /\s\-\-unhook\-method\s.{0,1000}\s\-\-dont\-unload\-driver\s.{0,1000}\s\-\-dump\-output\s/ nocase ascii wide
         // Description: Integrates GodFault into EDR Sandblast achieving the same result without the use of any vulnerable drivers.
         // Reference: https://github.com/gabriellandau/EDRSandblast-GodFault
-        $string3 = /\/EDRSandblast\// nocase ascii wide
+        $string3 = "/EDRSandblast/" nocase ascii wide
         // Description: Integrates GodFault into EDR Sandblast achieving the same result without the use of any vulnerable drivers.
         // Reference: https://github.com/gabriellandau/EDRSandblast-GodFault
         $string4 = /\/LSASSProtectionBypass\/CredGuard\.c/ nocase ascii wide
@@ -34,25 +34,25 @@ rule EDRSandblast_GodFault
         $string8 = /\\WdigestOffsets\.csv/ nocase ascii wide
         // Description: Integrates GodFault into EDR Sandblast achieving the same result without the use of any vulnerable drivers.
         // Reference: https://github.com/gabriellandau/EDRSandblast-GodFault
-        $string9 = /04DFB6E4\-809E\-4C35\-88A1\-2CC5F1EBFEBD/ nocase ascii wide
+        $string9 = "04DFB6E4-809E-4C35-88A1-2CC5F1EBFEBD" nocase ascii wide
         // Description: Integrates GodFault into EDR Sandblast achieving the same result without the use of any vulnerable drivers.
         // Reference: https://github.com/gabriellandau/EDRSandblast-GodFault
-        $string10 = /3A2FCB56\-01A3\-41B3\-BDAA\-B25F45784B23/ nocase ascii wide
+        $string10 = "3A2FCB56-01A3-41B3-BDAA-B25F45784B23" nocase ascii wide
         // Description: Integrates GodFault into EDR Sandblast achieving the same result without the use of any vulnerable drivers.
         // Reference: https://github.com/gabriellandau/EDRSandblast-GodFault
-        $string11 = /7E3E2ECE\-D1EB\-43C6\-8C83\-B52B7571954B/ nocase ascii wide
+        $string11 = "7E3E2ECE-D1EB-43C6-8C83-B52B7571954B" nocase ascii wide
         // Description: Integrates GodFault into EDR Sandblast achieving the same result without the use of any vulnerable drivers.
         // Reference: https://github.com/gabriellandau/EDRSandblast-GodFault
-        $string12 = /All\sEDR\sdrivers\swere\ssuccessfully\sremoved\sfrom\sKernel\scallbacks\!/ nocase ascii wide
+        $string12 = "All EDR drivers were successfully removed from Kernel callbacks!" nocase ascii wide
         // Description: Integrates GodFault into EDR Sandblast achieving the same result without the use of any vulnerable drivers.
         // Reference: https://github.com/gabriellandau/EDRSandblast-GodFault
-        $string13 = /and\sCredential\sGuard\swill\snot\sbe\sbypassed/ nocase ascii wide
+        $string13 = "and Credential Guard will not be bypassed" nocase ascii wide
         // Description: Integrates GodFault into EDR Sandblast achieving the same result without the use of any vulnerable drivers.
         // Reference: https://github.com/gabriellandau/EDRSandblast-GodFault
         $string14 = /C\:\\temp\\tmp\.tmp/ nocase ascii wide
         // Description: Integrates GodFault into EDR Sandblast achieving the same result without the use of any vulnerable drivers.
         // Reference: https://github.com/gabriellandau/EDRSandblast-GodFault
-        $string15 = /Credential\sGuard\sbypass\smight\sfail\sif\sRunAsPPL\sis\senabled/ nocase ascii wide
+        $string15 = "Credential Guard bypass might fail if RunAsPPL is enabled" nocase ascii wide
         // Description: Integrates GodFault into EDR Sandblast achieving the same result without the use of any vulnerable drivers.
         // Reference: https://github.com/gabriellandau/EDRSandblast-GodFault
         $string16 = /EDRSandblast\.exe/ nocase ascii wide
@@ -82,13 +82,13 @@ rule EDRSandblast_GodFault
         $string24 = /EDRSandblast_LsassDump\.exe/ nocase ascii wide
         // Description: Integrates GodFault into EDR Sandblast achieving the same result without the use of any vulnerable drivers.
         // Reference: https://github.com/gabriellandau/EDRSandblast-GodFault
-        $string25 = /EDRSandblast\-GodFault/ nocase ascii wide
+        $string25 = "EDRSandblast-GodFault" nocase ascii wide
         // Description: Integrates GodFault into EDR Sandblast achieving the same result without the use of any vulnerable drivers.
         // Reference: https://github.com/gabriellandau/EDRSandblast-GodFault
-        $string26 = /FFA0FDDE\-BE70\-49E4\-97DE\-753304EF1113/ nocase ascii wide
+        $string26 = "FFA0FDDE-BE70-49E4-97DE-753304EF1113" nocase ascii wide
         // Description: Integrates GodFault into EDR Sandblast achieving the same result without the use of any vulnerable drivers.
         // Reference: https://github.com/gabriellandau/EDRSandblast-GodFault
-        $string27 = /LSASS\sdump\smight\sfail\sif\sRunAsPPL\sis\senabled/ nocase ascii wide
+        $string27 = "LSASS dump might fail if RunAsPPL is enabled" nocase ascii wide
 
     condition:
         any of them

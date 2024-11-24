@@ -22,16 +22,16 @@ rule Offensive_Netsh_Helper
         $string4 = /\\Offensive\-Netsh\-Helper\-master/ nocase ascii wide
         // Description: Maintain Windows Persistence with an evil Netshell Helper DLL
         // Reference: https://github.com/rtcrowley/Offensive-Netsh-Helper
-        $string5 = /486d59732d2c346aa2cbaffff0d290b0e5fc0a967e0878240fd29df65525dfc8/ nocase ascii wide
+        $string5 = "486d59732d2c346aa2cbaffff0d290b0e5fc0a967e0878240fd29df65525dfc8" nocase ascii wide
         // Description: Maintain Windows Persistence with an evil Netshell Helper DLL
         // Reference: https://github.com/rtcrowley/Offensive-Netsh-Helper
-        $string6 = /cwB0AGEAcgB0ACAAYwBhAGwAYwA\=/ nocase ascii wide
+        $string6 = "cwB0AGEAcgB0ACAAYwBhAGwAYwA=" nocase ascii wide
         // Description: Maintain Windows Persistence with an evil Netshell Helper DLL
         // Reference: https://github.com/rtcrowley/Offensive-Netsh-Helper
         $string7 = /netsh\sadd\shelper\snetshBad\.DLL/ nocase ascii wide
         // Description: Maintain Windows Persistence with an evil Netshell Helper DLL
         // Reference: https://github.com/rtcrowley/Offensive-Netsh-Helper
-        $string8 = /rtcrowley\/Offensive\-Netsh\-Helper/ nocase ascii wide
+        $string8 = "rtcrowley/Offensive-Netsh-Helper" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

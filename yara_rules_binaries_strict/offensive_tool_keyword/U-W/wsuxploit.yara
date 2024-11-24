@@ -10,7 +10,7 @@ rule wsuxploit
     strings:
         // Description: This is a MiTM weaponized exploit script to inject 'fake' updates into non-SSL WSUS traffic. It is based on the WSUSpect Proxy application that was introduced to public on the Black Hat USA 2015 presentation. 'WSUSpect  Compromising the Windows Enterprise via Windows Update
         // Reference: https://github.com/pimps/wsuxploit
-        $string1 = /wsuxploit/ nocase ascii wide
+        $string1 = "wsuxploit" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

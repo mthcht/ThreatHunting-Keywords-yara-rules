@@ -10,7 +10,7 @@ rule Dr0p1t_Framework
     strings:
         // Description: Have you ever heard about trojan droppers ? In short dropper is type of malware that downloads other malwares and Dr0p1t gives you the chance to create a stealthy dropper that bypass most AVs and have a lot of tricks ( Trust me :D ) .)
         // Reference: https://github.com/D4Vinci/Dr0p1t-Framework
-        $string1 = /Dr0p1t\-Framework/ nocase ascii wide
+        $string1 = "Dr0p1t-Framework" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

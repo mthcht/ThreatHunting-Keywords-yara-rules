@@ -13,13 +13,13 @@ rule htran
         $string1 = /Hacktool\.HTran\./ nocase ascii wide
         // Description: proxies connections through intermediate hops and aids users in disguising their true geographical location. It can be used by adversaries to hide their location when interacting with the victim networks
         // Reference: https://github.com/HiwinCN/Htran
-        $string2 = /HackTool\:Win32\/Htran/ nocase ascii wide
+        $string2 = "HackTool:Win32/Htran" nocase ascii wide
         // Description: proxies connections through intermediate hops and aids users in disguising their true geographical location. It can be used by adversaries to hide their location when interacting with the victim networks
         // Reference: https://github.com/HiwinCN/Htran
-        $string3 = /HKTL_HTRAN/ nocase ascii wide
+        $string3 = "HKTL_HTRAN" nocase ascii wide
         // Description: proxies connections through intermediate hops and aids users in disguising their true geographical location. It can be used by adversaries to hide their location when interacting with the victim networks
         // Reference: https://github.com/HiwinCN/Htran
-        $string4 = /Riskware\/Htran/ nocase ascii wide
+        $string4 = "Riskware/Htran" nocase ascii wide
         // Description: proxies connections through intermediate hops and aids users in disguising their true geographical location. It can be used by adversaries to hide their location when interacting with the victim networks
         // Reference: https://github.com/HiwinCN/Htran
         $string5 = /Win32\/HackTool\.Hucline\.F/ nocase ascii wide

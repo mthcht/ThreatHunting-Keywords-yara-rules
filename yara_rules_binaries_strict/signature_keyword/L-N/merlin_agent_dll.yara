@@ -13,7 +13,7 @@ rule merlin_agent_dll
         $string1 = /Backdoor\.Merlin/ nocase ascii wide
         // Description: Merlin is a post-exploit Command & Control (C2) tool also known as a Remote Access Tool (RAT)
         // Reference: https://github.com/Ne0nd0g/merlin-agent-dll
-        $string2 = /Win64\:MerlinAgent/ nocase ascii wide
+        $string2 = "Win64:MerlinAgent" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

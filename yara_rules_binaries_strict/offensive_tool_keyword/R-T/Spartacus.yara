@@ -25,7 +25,7 @@ rule Spartacus
         $string5 = /\\tmp\\dll\-collection/ nocase ascii wide
         // Description: Spartacus DLL/COM Hijacking Toolkit
         // Reference: https://github.com/Accenture/Spartacus
-        $string6 = /Accenture\/Spartacus/ nocase ascii wide
+        $string6 = "Accenture/Spartacus" nocase ascii wide
         // Description: Spartacus DLL/COM Hijacking Toolkit
         // Reference: https://github.com/Accenture/Spartacus
         $string7 = /Assets\/solution\/dllmain\.cpp/ nocase ascii wide
@@ -40,16 +40,16 @@ rule Spartacus
         $string10 = /help\\dll\.txt/ nocase ascii wide
         // Description: Spartacus DLL/COM Hijacking Toolkit
         // Reference: https://github.com/Accenture/Spartacus
-        $string11 = /\-\-mode\scom\s\-\-acl\s\-\-csv\s/ nocase ascii wide
+        $string11 = "--mode com --acl --csv " nocase ascii wide
         // Description: Spartacus DLL/COM Hijacking Toolkit
         // Reference: https://github.com/Accenture/Spartacus
-        $string12 = /\-\-mode\scom\s\-\-procmon\s/ nocase ascii wide
+        $string12 = "--mode com --procmon " nocase ascii wide
         // Description: Spartacus DLL/COM Hijacking Toolkit
         // Reference: https://github.com/Accenture/Spartacus
-        $string13 = /\-\-mode\sdll\s\-\-existing\s\-\-pml\s/ nocase ascii wide
+        $string13 = "--mode dll --existing --pml " nocase ascii wide
         // Description: Spartacus DLL/COM Hijacking Toolkit
         // Reference: https://github.com/Accenture/Spartacus
-        $string14 = /\-\-mode\sdll\s\-\-procmon\s/ nocase ascii wide
+        $string14 = "--mode dll --procmon " nocase ascii wide
         // Description: Spartacus DLL/COM Hijacking Toolkit
         // Reference: https://github.com/Accenture/Spartacus
         $string15 = /\-\-mode\sproxy\s\-\-action\sprototypes\s\-\-path\s.{0,100}prototypes\.csv/ nocase ascii wide

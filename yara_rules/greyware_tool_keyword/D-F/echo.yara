@@ -34,10 +34,10 @@ rule echo
         $string8 = /echo\s\'\'\s\>\s\~\/\.bash_history/ nocase ascii wide
         // Description: covering history tracks on linux system
         // Reference: https://rosesecurity.gitbook.io/red-teaming-ttps/linux
-        $string9 = /echo\s\"\"\s\>\s\/var\/log\/auth\.log\s/ nocase ascii wide
+        $string9 = /echo\s\\"\\"\s\>\s\/var\/log\/auth\.log\s/ nocase ascii wide
         // Description: This command disables kprobes by writing '0' to the enabled file. Kprobes are dynamic breakpoints in the Linux kernel that can be used to intercept functions and gather information for debugging or monitoring.
         // Reference: N/A
-        $string10 = /echo\s0\s\>\s\/sys\/kernel\/debug\/kprobes\/enabled/ nocase ascii wide
+        $string10 = "echo 0 > /sys/kernel/debug/kprobes/enabled" nocase ascii wide
         // Description: This command turns off tracing for a specific instance
         // Reference: N/A
         $string11 = /echo\s0\s\>\s\/sys\/kernel\/debug\/tracing\/instances\/\$.{0,1000}\/tracing_on/ nocase ascii wide

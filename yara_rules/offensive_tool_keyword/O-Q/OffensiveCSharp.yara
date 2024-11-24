@@ -13,13 +13,13 @@ rule OffensiveCSharp
         $string1 = /\/OffensiveCSharp\.git/ nocase ascii wide
         // Description: Collection of Offensive C# Tooling
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master
-        $string2 = /\/OffensiveCSharp\// nocase ascii wide
+        $string2 = "/OffensiveCSharp/" nocase ascii wide
         // Description: Collection of Offensive C# Tooling
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master
         $string3 = /\\OffensiveCSharp\\/ nocase ascii wide
         // Description: Collection of Offensive C# Tooling
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master
-        $string4 = /OffensiveCSharp\-master/ nocase ascii wide
+        $string4 = "OffensiveCSharp-master" nocase ascii wide
 
     condition:
         any of them

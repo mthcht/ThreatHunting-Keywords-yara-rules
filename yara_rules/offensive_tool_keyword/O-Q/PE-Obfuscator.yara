@@ -10,7 +10,7 @@ rule PE_Obfuscator
     strings:
         // Description: PE obfuscator with Evasion in mind
         // Reference: https://github.com/TheD1rkMtr/PE-Obfuscator
-        $string1 = /\/PE\-Obfuscator/ nocase ascii wide
+        $string1 = "/PE-Obfuscator" nocase ascii wide
         // Description: PE obfuscator with Evasion in mind
         // Reference: https://github.com/TheD1rkMtr/PE-Obfuscator
         $string2 = /\\out_pe\.exe/ nocase ascii wide
@@ -22,7 +22,7 @@ rule PE_Obfuscator
         $string4 = /PE\-Obfuscator\.git/ nocase ascii wide
         // Description: PE obfuscator with Evasion in mind
         // Reference: https://github.com/TheD1rkMtr/PE-Obfuscator
-        $string5 = /PE\-Obfuscator\-main/ nocase ascii wide
+        $string5 = "PE-Obfuscator-main" nocase ascii wide
         // Description: PE obfuscator with Evasion in mind
         // Reference: https://github.com/TheD1rkMtr/PE-Obfuscator
         $string6 = /script\/xor\-bin\.py/ nocase ascii wide

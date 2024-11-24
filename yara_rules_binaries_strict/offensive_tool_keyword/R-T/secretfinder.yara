@@ -16,16 +16,16 @@ rule secretfinder
         $string2 = /\/SecretFinder\.git/ nocase ascii wide
         // Description: SecretFinder is a python script based on LinkFinder written to discover sensitive data like apikeys - accesstoken - authorizations - jwt..etc in JavaScript files
         // Reference: https://github.com/m4ll0k/SecretFinder
-        $string3 = /BurpSuite\-SecretFinder/ nocase ascii wide
+        $string3 = "BurpSuite-SecretFinder" nocase ascii wide
         // Description: SecretFinder is a python script based on LinkFinder written to discover sensitive data like apikeys - accesstoken - authorizations - jwt..etc in JavaScript files
         // Reference: https://github.com/m4ll0k/SecretFinder
-        $string4 = /from\sburp\simport/ nocase ascii wide
+        $string4 = "from burp import" nocase ascii wide
         // Description: SecretFinder is a python script based on LinkFinder written to discover sensitive data like apikeys - accesstoken - authorizations - jwt..etc in JavaScript files
         // Reference: https://github.com/m4ll0k/SecretFinder
-        $string5 = /import\sIBurpExtender/ nocase ascii wide
+        $string5 = "import IBurpExtender" nocase ascii wide
         // Description: SecretFinder is a python script based on LinkFinder written to discover sensitive data like apikeys - accesstoken - authorizations - jwt..etc in JavaScript files
         // Reference: https://github.com/m4ll0k/SecretFinder
-        $string6 = /m4ll0k\/SecretFinder/ nocase ascii wide
+        $string6 = "m4ll0k/SecretFinder" nocase ascii wide
         // Description: SecretFinder is a python script based on LinkFinder written to discover sensitive data like apikeys - accesstoken - authorizations - jwt..etc in JavaScript files
         // Reference: https://github.com/m4ll0k/SecretFinder
         $string7 = /SecretFinder\.py/ nocase ascii wide

@@ -10,7 +10,7 @@ rule dnsmorph
     strings:
         // Description: DNSMORPH is a domain name permutation engine. inspired by dnstwist. It is written in Go making for a compact and very fast tool. It robustly handles any domain or subdomain supplied and provides a number of configuration options to tune permutation runs.
         // Reference: https://github.com/netevert/dnsmorph
-        $string1 = /dnsmorph/ nocase ascii wide
+        $string1 = "dnsmorph" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

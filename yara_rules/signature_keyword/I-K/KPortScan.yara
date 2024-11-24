@@ -10,7 +10,7 @@ rule KPortScan
     strings:
         // Description: port scanner used by attackers
         // Reference: https://github.com/stardust50578/rdp_brute
-        $string1 = /Win32\/Kportscan/ nocase ascii wide
+        $string1 = "Win32/Kportscan" nocase ascii wide
 
     condition:
         any of them

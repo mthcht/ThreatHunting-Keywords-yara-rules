@@ -25,19 +25,19 @@ rule TokenStealer
         $string5 = /\]\sToken\sdoes\sNOT\shave\sSE_ASSIGN_PRIMARY_NAME.{0,1000}\susing\sCreateProcessAsWithToken\(\)\sfor\slaunching\:/ nocase ascii wide
         // Description: stealing Windows tokens
         // Reference: https://github.com/decoder-it/TokenStealer
-        $string6 = /\<SessionId\>\:\slist\/steal\stoken\sfrom\sspecific\ssession/ nocase ascii wide
+        $string6 = "<SessionId>: list/steal token from specific session" nocase ascii wide
         // Description: stealing Windows tokens
         // Reference: https://github.com/decoder-it/TokenStealer
-        $string7 = /ABC32DBD\-B697\-482D\-A763\-7BA82FE9CEA2/ nocase ascii wide
+        $string7 = "ABC32DBD-B697-482D-A763-7BA82FE9CEA2" nocase ascii wide
         // Description: stealing Windows tokens
         // Reference: https://github.com/decoder-it/TokenStealer
-        $string8 = /decoder\-it\/TokenStealer/ nocase ascii wide
+        $string8 = "decoder-it/TokenStealer" nocase ascii wide
         // Description: stealing Windows tokens
         // Reference: https://github.com/decoder-it/TokenStealer
         $string9 = /list\/steal\stoken\sof\suser\s\<user\>.{0,1000}default\sNT\sAUTHORITY\\\\SYSTEM\sfor\scomamnd\sexecution/ nocase ascii wide
         // Description: stealing Windows tokens
         // Reference: https://github.com/decoder-it/TokenStealer
-        $string10 = /\-t\:\sforce\suse\sof\sImpersonation\sPrivilege/ nocase ascii wide
+        $string10 = "-t: force use of Impersonation Privilege" nocase ascii wide
         // Description: stealing Windows tokens
         // Reference: https://github.com/decoder-it/TokenStealer
         $string11 = /TokenStealer\.cpp/ nocase ascii wide
@@ -52,7 +52,7 @@ rule TokenStealer
         $string14 = /TokenStealer\.vcxproj/ nocase ascii wide
         // Description: stealing Windows tokens
         // Reference: https://github.com/decoder-it/TokenStealer
-        $string15 = /TokenStealer\-master/ nocase ascii wide
+        $string15 = "TokenStealer-master" nocase ascii wide
 
     condition:
         any of them

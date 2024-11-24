@@ -40,10 +40,10 @@ rule RemoteUtilities
         $string10 = /\/rutview\.exe/ nocase ascii wide
         // Description: RemoteUtilities Remote Access softwares
         // Reference: https://www.remoteutilities.com/
-        $string11 = /\/usr\/bin\/r\-agent/ nocase ascii wide
+        $string11 = "/usr/bin/r-agent" nocase ascii wide
         // Description: RemoteUtilities Remote Access softwares
         // Reference: https://www.remoteutilities.com/
-        $string12 = /\/usr\/bin\/r\-viewer/ nocase ascii wide
+        $string12 = "/usr/bin/r-viewer" nocase ascii wide
         // Description: RemoteUtilities Remote Access softwares
         // Reference: https://www.remoteutilities.com/
         $string13 = /\/usr\/share\/applications\/r\-agent\.desktop/ nocase ascii wide
@@ -172,16 +172,16 @@ rule RemoteUtilities
         $string54 = /\\VPDAgent\.exe/ nocase ascii wide
         // Description: RemoteUtilities Remote Access softwares
         // Reference: https://www.remoteutilities.com/
-        $string55 = /\<a\shref\=\\"rutils\:/ nocase ascii wide
+        $string55 = "<a href=\"rutils:" nocase ascii wide
         // Description: RemoteUtilities Remote Access softwares
         // Reference: https://www.remoteutilities.com/
-        $string56 = /\<Data\>Product\:\sRemote\sUtilities\s\-\sHost\s\-\-\s/ nocase ascii wide
+        $string56 = "<Data>Product: Remote Utilities - Host -- " nocase ascii wide
         // Description: RemoteUtilities Remote Access softwares
         // Reference: https://www.remoteutilities.com/
-        $string57 = /\<Data\>Remote\sUtilities\s\-\sHost\<\/Data\>/ nocase ascii wide
+        $string57 = "<Data>Remote Utilities - Host</Data>" nocase ascii wide
         // Description: RemoteUtilities Remote Access softwares
         // Reference: https://www.remoteutilities.com/
-        $string58 = /\<Data\>Remote\sUtilities\sServer\</ nocase ascii wide
+        $string58 = "<Data>Remote Utilities Server<" nocase ascii wide
         // Description: RemoteUtilities Remote Access softwares
         // Reference: https://www.remoteutilities.com/
         $string59 = /\<Data\>Removed\sRemote\sUtilities\s\-\sHost\.\<\/Data\>/ nocase ascii wide
@@ -193,13 +193,13 @@ rule RemoteUtilities
         $string61 = /\>Installed\sRemote\sUtilities\sServer\.\<\// nocase ascii wide
         // Description: RemoteUtilities Remote Access softwares
         // Reference: https://www.remoteutilities.com/
-        $string62 = /\>Product\:\sRemote\sUtilities\s\-\sViewer\s\-\-\s/ nocase ascii wide
+        $string62 = ">Product: Remote Utilities - Viewer -- " nocase ascii wide
         // Description: RemoteUtilities Remote Access softwares
         // Reference: https://www.remoteutilities.com/
-        $string63 = /\>Product\:\sRemote\sUtilities\sServer\s\-\-\s/ nocase ascii wide
+        $string63 = ">Product: Remote Utilities Server -- " nocase ascii wide
         // Description: RemoteUtilities Remote Access softwares
         // Reference: https://www.remoteutilities.com/
-        $string64 = /\>Remote\sUtilities\s\-\sViewer\<\// nocase ascii wide
+        $string64 = ">Remote Utilities - Viewer</" nocase ascii wide
         // Description: RemoteUtilities Remote Access softwares
         // Reference: https://www.remoteutilities.com/
         $string65 = /InternetIdService\.exe/ nocase ascii wide

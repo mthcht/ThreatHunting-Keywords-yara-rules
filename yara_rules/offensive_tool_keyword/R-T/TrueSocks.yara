@@ -16,7 +16,7 @@ rule TrueSocks
         $string2 = /api\.truesocks\.net/ nocase ascii wide
         // Description: Simple API for buying renting and managing proxies
         // Reference: https://github.com/c0dn/truesocks_rs
-        $string3 = /c0dn\/truesocks_rs/ nocase ascii wide
+        $string3 = "c0dn/truesocks_rs" nocase ascii wide
 
     condition:
         any of them

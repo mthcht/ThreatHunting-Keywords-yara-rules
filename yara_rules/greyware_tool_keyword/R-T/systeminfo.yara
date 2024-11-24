@@ -10,7 +10,7 @@ rule systeminfo
     strings:
         // Description: gathering details about the local system
         // Reference: https://thedfirreport.com/2024/08/26/blacksuit-ransomware/
-        $string1 = /cmd\s\/c\ssysteminfo/ nocase ascii wide
+        $string1 = "cmd /c systeminfo" nocase ascii wide
         // Description: gathering details about the local system
         // Reference: https://thedfirreport.com/2024/08/26/blacksuit-ransomware/
         $string2 = /cmd\.exe\s\/c\ssysteminfo/ nocase ascii wide

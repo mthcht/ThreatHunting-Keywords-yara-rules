@@ -10,7 +10,7 @@ rule AsyncRAT_C_Sharp
     strings:
         // Description: Open-Source Remote Administration Tool For Windows C# (RAT)
         // Reference: https://github.com/NYAN-x-CAT/AsyncRAT-C-Sharp
-        $string1 = /RemoteAccess\:MSIL\/AsyncRAT/ nocase ascii wide
+        $string1 = "RemoteAccess:MSIL/AsyncRAT" nocase ascii wide
 
     condition:
         any of them

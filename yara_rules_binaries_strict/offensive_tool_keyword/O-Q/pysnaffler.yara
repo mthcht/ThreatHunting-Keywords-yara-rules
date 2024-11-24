@@ -43,7 +43,7 @@ rule pysnaffler
         $string11 = /from\spysnaffler\.snaffler\simport\s/ nocase ascii wide
         // Description: This project is a Python version of the well-known Snaffler project. Not a full implementation of that project - only focusing on SMB share/dir/file enumeration and download and parse.
         // Reference: https://github.com/skelsec/pysnaffler
-        $string12 = /pysnaffler\s\-/ nocase ascii wide
+        $string12 = "pysnaffler -" nocase ascii wide
         // Description: This project is a Python version of the well-known Snaffler project. Not a full implementation of that project - only focusing on SMB share/dir/file enumeration and download and parse.
         // Reference: https://github.com/skelsec/pysnaffler
         $string13 = /pysnaffler\s\'smb2\+kerberos\+password\:/ nocase ascii wide
@@ -61,10 +61,10 @@ rule pysnaffler
         $string17 = /pysnaffler\/_version\.py/ nocase ascii wide
         // Description: This project is a Python version of the well-known Snaffler project. Not a full implementation of that project - only focusing on SMB share/dir/file enumeration and download and parse.
         // Reference: https://github.com/skelsec/pysnaffler
-        $string18 = /pysnaffler\-main/ nocase ascii wide
+        $string18 = "pysnaffler-main" nocase ascii wide
         // Description: This project is a Python version of the well-known Snaffler project. Not a full implementation of that project - only focusing on SMB share/dir/file enumeration and download and parse.
         // Reference: https://github.com/skelsec/pysnaffler
-        $string19 = /skelsec\/pysnaffler/ nocase ascii wide
+        $string19 = "skelsec/pysnaffler" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

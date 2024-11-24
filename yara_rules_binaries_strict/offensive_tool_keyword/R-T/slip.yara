@@ -40,7 +40,7 @@ rule slip
         $string10 = /\\slip\-main\.zip/ nocase ascii wide
         // Description: Slip is a CLI tool to create malicious archive files containing path traversal payloads
         // Reference: https://github.com/0xless/slip
-        $string11 = /0xless\/slip/ nocase ascii wide
+        $string11 = "0xless/slip" nocase ascii wide
         // Description: Slip is a CLI tool to create malicious archive files containing path traversal payloads
         // Reference: https://github.com/0xless/slip
         $string12 = /python3\sslip\.py/ nocase ascii wide

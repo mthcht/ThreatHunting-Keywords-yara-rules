@@ -10,7 +10,7 @@ rule dtd_finder
     strings:
         // Description: Identify DTDs on filesystem snapshot and build XXE payloads using those local DTDs.
         // Reference: https://github.com/GoSecure/dtd-finder
-        $string1 = /dtd\-finder/ nocase ascii wide
+        $string1 = "dtd-finder" nocase ascii wide
 
     condition:
         any of them

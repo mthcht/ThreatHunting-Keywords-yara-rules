@@ -10,10 +10,10 @@ rule UltraVNC
     strings:
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string1 = /\sstart\suvnc_service/ nocase ascii wide
+        $string1 = " start uvnc_service" nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string2 = /\sstop\suvnc_service/ nocase ascii wide
+        $string2 = " stop uvnc_service" nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
         $string3 = /\sultravnc\.ini\s/ nocase ascii wide
@@ -22,7 +22,7 @@ rule UltraVNC
         $string4 = /\svnc\.ini\s/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string5 = /\\"publisher\\"\:\\"uvnc\sbvba/ nocase ascii wide
+        $string5 = "\"publisher\":\"uvnc bvba" nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
         $string6 = /\/downloads\/ultravnc\.html/ nocase ascii wide
@@ -94,10 +94,10 @@ rule UltraVNC
         $string28 = /certutil\.exe.{0,100}\s\-addstore\s\\"TrustedPublisher\\".{0,100}ultravnc\.cer/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string29 = /\'Company\'\>UltraVNC\<\/Data\>/ nocase ascii wide
+        $string29 = "'Company'>UltraVNC</Data>" nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string30 = /\'Description\'\>VNC\sserver\<\/Data\>/ nocase ascii wide
+        $string30 = "'Description'>VNC server</Data>" nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
         $string31 = /firewall\sadd\sallowedprogram\s.{0,100}vncviewer\.exe.{0,100}\sENABLE\sALL/ nocase ascii wide
@@ -106,10 +106,10 @@ rule UltraVNC
         $string32 = /firewall\sadd\sallowedprogram\s.{0,100}winvnc\.exe.{0,100}\sENABLE\sALL/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string33 = /firewall\sadd\sportopening\sTCP\s5800\svnc5800/ nocase ascii wide
+        $string33 = "firewall add portopening TCP 5800 vnc5800" nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string34 = /firewall\sadd\sportopening\sTCP\s5900\svnc5900/ nocase ascii wide
+        $string34 = "firewall add portopening TCP 5900 vnc5900" nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
         $string35 = /HKCR\\\.vnc/ nocase ascii wide
@@ -121,7 +121,7 @@ rule UltraVNC
         $string37 = /UltraVNC\sLauncher\.lnk/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string38 = /ultravnc\smslogonacl/ nocase ascii wide
+        $string38 = "ultravnc mslogonacl" nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
         $string39 = /UltraVNC\sRepeater\.lnk/ nocase ascii wide
@@ -133,7 +133,7 @@ rule UltraVNC
         $string41 = /UltraVNC\sServer\.lnk/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string42 = /ultravnc\stestauth/ nocase ascii wide
+        $string42 = "ultravnc testauth" nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
         $string43 = /UltraVNC\sViewer\.lnk/ nocase ascii wide
@@ -145,16 +145,16 @@ rule UltraVNC
         $string45 = /ULTRAVNC_1.{0,100}_X86_SETUP\.EXE\-.{0,100}\.pf/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string46 = /ultravnc_repeater/ nocase ascii wide
+        $string46 = "ultravnc_repeater" nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string47 = /ultravnc_server/ nocase ascii wide
+        $string47 = "ultravnc_server" nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string48 = /ultravnc_viewer/ nocase ascii wide
+        $string48 = "ultravnc_viewer" nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string49 = /VNCviewer\sConfig\sFile/ nocase ascii wide
+        $string49 = "VNCviewer Config File" nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
         $string50 = /VncViewer\.Config/ nocase ascii wide

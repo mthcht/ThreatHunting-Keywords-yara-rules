@@ -10,10 +10,10 @@ rule ldeep
     strings:
         // Description: In-depth ldap enumeration utility
         // Reference: https://github.com/franc-pentest/ldeep
-        $string1 = /\sldeep_dump\s/ nocase ascii wide
+        $string1 = " ldeep_dump " nocase ascii wide
         // Description: In-depth ldap enumeration utility
         // Reference: https://github.com/franc-pentest/ldeep
-        $string2 = /\/ldeep\// nocase ascii wide
+        $string2 = "/ldeep/" nocase ascii wide
         // Description: In-depth ldap enumeration utility
         // Reference: https://github.com/franc-pentest/ldeep
         $string3 = /_dump_users\.lst/ nocase ascii wide
@@ -22,10 +22,10 @@ rule ldeep
         $string4 = /cache_activedirectory\.py/ nocase ascii wide
         // Description: In-depth ldap enumeration utility
         // Reference: https://github.com/franc-pentest/ldeep
-        $string5 = /ldeep\scache\s/ nocase ascii wide
+        $string5 = "ldeep cache " nocase ascii wide
         // Description: In-depth ldap enumeration utility
         // Reference: https://github.com/franc-pentest/ldeep
-        $string6 = /ldeep\sldap\s\-u\s/ nocase ascii wide
+        $string6 = "ldeep ldap -u " nocase ascii wide
         // Description: In-depth ldap enumeration utility
         // Reference: https://github.com/franc-pentest/ldeep
         $string7 = /ldeep.{0,1000}activedirectory\.py/ nocase ascii wide

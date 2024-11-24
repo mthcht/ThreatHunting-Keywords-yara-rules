@@ -19,13 +19,13 @@ rule invoke_piper
         $string3 = /\-destPipe\s.{0,1000}\s\-pipeHost\s.{0,1000}\s\-bindPort\s/ nocase ascii wide
         // Description: Forward local or remote tcp ports through SMB pipes.
         // Reference: https://github.com/p3nt4/Invoke-Piper
-        $string4 = /Invoke\-Piper/ nocase ascii wide
+        $string4 = "Invoke-Piper" nocase ascii wide
         // Description: Forward local or remote tcp ports through SMB pipes.
         // Reference: https://github.com/p3nt4/Invoke-Piper
-        $string5 = /Invoke\-PiperClient/ nocase ascii wide
+        $string5 = "Invoke-PiperClient" nocase ascii wide
         // Description: Forward local or remote tcp ports through SMB pipes.
         // Reference: https://github.com/p3nt4/Invoke-Piper
-        $string6 = /Invoke\-PiperServer/ nocase ascii wide
+        $string6 = "Invoke-PiperServer" nocase ascii wide
         // Description: Forward local or remote tcp ports through SMB pipes.
         // Reference: https://github.com/p3nt4/Invoke-Piper
         $string7 = /\-remote\s\-destPipe\s.{0,1000}\s\-pipeHost\s.{0,1000}\s\-destHost\s/ nocase ascii wide

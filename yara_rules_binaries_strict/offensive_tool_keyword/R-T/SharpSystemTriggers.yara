@@ -10,10 +10,10 @@ rule SharpSystemTriggers
     strings:
         // Description: Collection of remote authentication triggers in C#
         // Reference: https://github.com/cube0x0/SharpSystemTriggers
-        $string1 = /\/SharpSpoolTrigger/ nocase ascii wide
+        $string1 = "/SharpSpoolTrigger" nocase ascii wide
         // Description: Collection of remote authentication triggers in C#
         // Reference: https://github.com/cube0x0/SharpSystemTriggers
-        $string2 = /\/SharpSystemTriggers/ nocase ascii wide
+        $string2 = "/SharpSystemTriggers" nocase ascii wide
         // Description: Collection of remote authentication triggers in C#
         // Reference: https://github.com/cube0x0/SharpSystemTriggers
         $string3 = /Midl2Bytes\.exe/ nocase ascii wide
@@ -34,7 +34,7 @@ rule SharpSystemTriggers
         $string8 = /SharpSystemTriggers\.sln/ nocase ascii wide
         // Description: Collection of remote authentication triggers in C#
         // Reference: https://github.com/cube0x0/SharpSystemTriggers
-        $string9 = /SharpSystemTriggers\-main/ nocase ascii wide
+        $string9 = "SharpSystemTriggers-main" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -22,7 +22,7 @@ rule ntpescape
         $string4 = /\/ntpescape\.git/ nocase ascii wide
         // Description: ntpescape is a tool that can stealthily (but slowly) exfiltrate data from a computer using the Network Time Protocol (NTP).
         // Reference: https://github.com/evallen/ntpescape
-        $string5 = /evallen\/ntpescape/ nocase ascii wide
+        $string5 = "evallen/ntpescape" nocase ascii wide
         // Description: ntpescape is a tool that can stealthily (but slowly) exfiltrate data from a computer using the Network Time Protocol (NTP).
         // Reference: https://github.com/evallen/ntpescape
         $string6 = /ntpescape.{0,100}recv/ nocase ascii wide

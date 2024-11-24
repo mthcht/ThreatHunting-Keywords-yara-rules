@@ -10,7 +10,7 @@ rule evilgrade
     strings:
         // Description: Evilgrade is a modular framework that allows the user to take advantage of poor upgrade implementations by injecting fake updates. It comes with pre-made binaries (agents). a working default configuration for fast pentests. and has its own WebServer and DNSServer modules. Easy to set up new settings. and has an autoconfiguration when new binary agents are set
         // Reference: https://github.com/infobyte/evilgrade
-        $string1 = /evilgrade/ nocase ascii wide
+        $string1 = "evilgrade" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

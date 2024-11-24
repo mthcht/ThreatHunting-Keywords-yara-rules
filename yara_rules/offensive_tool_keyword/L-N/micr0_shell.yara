@@ -28,13 +28,13 @@ rule micr0_shell
         $string6 = /micr0\sshell\.py/ nocase ascii wide
         // Description: micr0shell is a Python script that dynamically generates Windows X64 PIC Null-Free reverse shell shellcode.
         // Reference: https://github.com/senzee1984/micr0_shell
-        $string7 = /micr0_shell\-main/ nocase ascii wide
+        $string7 = "micr0_shell-main" nocase ascii wide
         // Description: micr0shell is a Python script that dynamically generates Windows X64 PIC Null-Free reverse shell shellcode.
         // Reference: https://github.com/senzee1984/micr0_shell
         $string8 = /micr0shell\.py\s/ nocase ascii wide
         // Description: micr0shell is a Python script that dynamically generates Windows X64 PIC Null-Free reverse shell shellcode.
         // Reference: https://github.com/senzee1984/micr0_shell
-        $string9 = /senzee1984\/micr0_shell/ nocase ascii wide
+        $string9 = "senzee1984/micr0_shell" nocase ascii wide
 
     condition:
         any of them

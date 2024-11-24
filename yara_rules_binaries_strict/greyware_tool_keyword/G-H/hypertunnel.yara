@@ -19,10 +19,10 @@ rule hypertunnel
         $string3 = /\/hypertunnel\-tcp\-relay.{0,100}\.zip/ nocase ascii wide
         // Description: Expose any local TCP/IP service on the internet
         // Reference: https://github.com/berstend/hypertunnel
-        $string4 = /23fe91b0f562494d22d23a02a05f35847520170930ceb92cffa6783229b46d78/ nocase ascii wide
+        $string4 = "23fe91b0f562494d22d23a02a05f35847520170930ceb92cffa6783229b46d78" nocase ascii wide
         // Description: Expose any local TCP/IP service on the internet
         // Reference: https://github.com/berstend/hypertunnel
-        $string5 = /berstend\/hypertunnel/ nocase ascii wide
+        $string5 = "berstend/hypertunnel" nocase ascii wide
         // Description: Expose any local TCP/IP service on the internet
         // Reference: https://github.com/berstend/hypertunnel
         $string6 = /https\:\/\/hypertunnel\.ga/ nocase ascii wide
@@ -31,7 +31,7 @@ rule hypertunnel
         $string7 = /hypertunnel\.lvh\.me/ nocase ascii wide
         // Description: Expose any local TCP/IP service on the internet
         // Reference: https://github.com/berstend/hypertunnel
-        $string8 = /hypertunnel\-server\@latest/ nocase ascii wide
+        $string8 = "hypertunnel-server@latest" nocase ascii wide
         // Description: Expose any local TCP/IP service on the internet
         // Reference: https://github.com/berstend/hypertunnel
         $string9 = /local\.hypertunnel\.lvh\.me/ nocase ascii wide
@@ -40,16 +40,16 @@ rule hypertunnel
         $string10 = /MIIJKgIBAAKCAgEAuvAs1YNtpCaqyG3Rkyutst3uIjzYLQTPWf1v\+OLi3GgzshUB/ nocase ascii wide
         // Description: Expose any local TCP/IP service on the internet
         // Reference: https://github.com/berstend/hypertunnel
-        $string11 = /npm\sinstall\shypertunnel\-server/ nocase ascii wide
+        $string11 = "npm install hypertunnel-server" nocase ascii wide
         // Description: Expose any local TCP/IP service on the internet
         // Reference: https://github.com/berstend/hypertunnel
-        $string12 = /packages\/hypertunnel\// nocase ascii wide
+        $string12 = "packages/hypertunnel/" nocase ascii wide
         // Description: Expose any local TCP/IP service on the internet
         // Reference: https://github.com/berstend/hypertunnel
-        $string13 = /packages\/hypertunnel\-server/ nocase ascii wide
+        $string13 = "packages/hypertunnel-server" nocase ascii wide
         // Description: Expose any local TCP/IP service on the internet
         // Reference: https://github.com/berstend/hypertunnel
-        $string14 = /packages\/hypertunnel\-tcp\-relay/ nocase ascii wide
+        $string14 = "packages/hypertunnel-tcp-relay" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -85,10 +85,10 @@ rule Ouned
         $string25 = /\]\sSpoofing\sgPLink\sto\s/ nocase ascii wide
         // Description: The OUned project automating Active Directory Organizational Units ACL exploitation through gPLink poisoning
         // Reference: https://github.com/synacktiv/Ouned
-        $string26 = /\=\=\=\sLAUNCHING\sSMB\sSERVER\sAND\sWAITING\sFOR\sGPT\sREQUESTS\s\=\=\=/ nocase ascii wide
+        $string26 = "=== LAUNCHING SMB SERVER AND WAITING FOR GPT REQUESTS ===" nocase ascii wide
         // Description: The OUned project automating Active Directory Organizational Units ACL exploitation through gPLink poisoning
         // Reference: https://github.com/synacktiv/Ouned
-        $string27 = /\=\=\=\sSPOOFING\sTHE\sGPLINK\sATTRIBUTE\sOF\sTHE\sTARGET\sOU\s\=\=\=/ nocase ascii wide
+        $string27 = "=== SPOOFING THE GPLINK ATTRIBUTE OF THE TARGET OU ===" nocase ascii wide
         // Description: The OUned project automating Active Directory Organizational Units ACL exploitation through gPLink poisoning
         // Reference: https://github.com/synacktiv/Ouned
         $string28 = /\=\=\=\sWAITING\s\(GPT\sREQUESTS\sWILL\sBE\sFORWARDED\sTO\sSMB\sSERVER\)\s\=\=\=/ nocase ascii wide
@@ -97,25 +97,25 @@ rule Ouned
         $string29 = /\=\=\=\sWAITING\s\(SMB\sNTLM\sAUTHENTICATION\sCOERCED\sTO\s/ nocase ascii wide
         // Description: The OUned project automating Active Directory Organizational Units ACL exploitation through gPLink poisoning
         // Reference: https://github.com/synacktiv/Ouned
-        $string30 = /92bc6c12e5ead3c0c0069b53bcca9c2f21b9f2e10f1e4a05ef1efcd25bcc70e9/ nocase ascii wide
+        $string30 = "92bc6c12e5ead3c0c0069b53bcca9c2f21b9f2e10f1e4a05ef1efcd25bcc70e9" nocase ascii wide
         // Description: The OUned project automating Active Directory Organizational Units ACL exploitation through gPLink poisoning
         // Reference: https://github.com/synacktiv/Ouned
-        $string31 = /99b685e2a57dbbdb0b53689aec5eef525a632c9ea00a5a16adb939387bf5a4da/ nocase ascii wide
+        $string31 = "99b685e2a57dbbdb0b53689aec5eef525a632c9ea00a5a16adb939387bf5a4da" nocase ascii wide
         // Description: The OUned project automating Active Directory Organizational Units ACL exploitation through gPLink poisoning
         // Reference: https://github.com/synacktiv/Ouned
-        $string32 = /Could\snot\swrite\sNTLM\sHashes\sto\sthe\sspecified\sJTR_Dump_Path/ nocase ascii wide
+        $string32 = "Could not write NTLM Hashes to the specified JTR_Dump_Path" nocase ascii wide
         // Description: The OUned project automating Active Directory Organizational Units ACL exploitation through gPLink poisoning
         // Reference: https://github.com/synacktiv/Ouned
         $string33 = /https\:\/\/www\.synacktiv\.com\/publications\/ounedpy\-exploiting\-hidden\-organizational\-units\-acl\-attack\-vectors\-in\-active\-directory/ nocase ascii wide
         // Description: The OUned project automating Active Directory Organizational Units ACL exploitation through gPLink poisoning
         // Reference: https://github.com/synacktiv/Ouned
-        $string34 = /net\suser\sjohn\sH4x00r123/ nocase ascii wide
+        $string34 = "net user john H4x00r123" nocase ascii wide
         // Description: The OUned project automating Active Directory Organizational Units ACL exploitation through gPLink poisoning
         // Reference: https://github.com/synacktiv/Ouned
         $string35 = /Successfully\scloned\sGPO\s.{0,100}\sfrom\sSYSVOL/ nocase ascii wide
         // Description: The OUned project automating Active Directory Organizational Units ACL exploitation through gPLink poisoning
         // Reference: https://github.com/synacktiv/Ouned
-        $string36 = /synacktiv\/OUned/ nocase ascii wide
+        $string36 = "synacktiv/OUned" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

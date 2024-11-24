@@ -10,7 +10,7 @@ rule XSStrike
     strings:
         // Description: Advanced XSS detection and exploitation suite.
         // Reference: https://github.com/UltimateHackers/XSStrike
-        $string1 = /XSStrike/ nocase ascii wide
+        $string1 = "XSStrike" nocase ascii wide
 
     condition:
         any of them

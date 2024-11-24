@@ -10,7 +10,7 @@ rule xcopy
     strings:
         // Description: command used by Doina trojan
         // Reference: N/A
-        $string1 = /cmd\s\/c\sxcopy\s\/s\s\/i\s\/h\s\/e\s\/q\s\/y\s\/d/ nocase ascii wide
+        $string1 = "cmd /c xcopy /s /i /h /e /q /y /d" nocase ascii wide
         // Description: command abused by attackers - exfiltraiton to remote host with xcopy
         // Reference: N/A
         $string2 = /xcopy\sc\:\\.{0,1000}\s\\\\.{0,1000}\\c\$/ nocase ascii wide

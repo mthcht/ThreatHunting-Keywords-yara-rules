@@ -10,7 +10,7 @@ rule TotalRecall
     strings:
         // Description: extracts and displays data from the Recall feature in Windows 11
         // Reference: https://github.com/xaitax/TotalRecall
-        $string1 = /\sRecall\sfolder\sfound\:\s/ nocase ascii wide
+        $string1 = " Recall folder found: " nocase ascii wide
         // Description: extracts and displays data from the Recall feature in Windows 11
         // Reference: https://github.com/xaitax/TotalRecall
         $string2 = /\s\-\-search\spassword\s\-\-from_date\s.{0,100}\s\-\-to_date\s/ nocase ascii wide
@@ -49,7 +49,7 @@ rule TotalRecall
         $string13 = /\\TotalRecall\\.{0,100}_Recall_Extraction/ nocase ascii wide
         // Description: extracts and displays data from the Recall feature in Windows 11
         // Reference: https://github.com/xaitax/TotalRecall
-        $string14 = /353f18e314f024ceea013bd97c140e09fd4ac715bf9ac7c965d0b89845dffcf0/ nocase ascii wide
+        $string14 = "353f18e314f024ceea013bd97c140e09fd4ac715bf9ac7c965d0b89845dffcf0" nocase ascii wide
         // Description: extracts and displays data from the Recall feature in Windows 11
         // Reference: https://github.com/xaitax/TotalRecall
         $string15 = /C\:\\\\Users\\\\\{username\}\\\\AppData\\\\Local\\\\CoreAIPlatform\.00\\\\UKP/ nocase ascii wide
@@ -61,7 +61,7 @@ rule TotalRecall
         $string17 = /SELECT\sWindowTitle\,\sTimeStamp\,\sImageToken\s.{0,100}FROM\sWindowCapture/ nocase ascii wide
         // Description: extracts and displays data from the Recall feature in Windows 11
         // Reference: https://github.com/xaitax/TotalRecall
-        $string18 = /xaitax\/TotalRecall/ nocase ascii wide
+        $string18 = "xaitax/TotalRecall" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

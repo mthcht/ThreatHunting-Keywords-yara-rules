@@ -19,10 +19,10 @@ rule KeeThiefSyscalls
         $string3 = /\\KeeTheft\.exe/ nocase ascii wide
         // Description: Patch GhostPack/KeeThief for it to use DInvoke and syscalls
         // Reference: https://github.com/Metro-Holografix/KeeThiefSyscalls
-        $string4 = /KeeTheft\/Dinvoke/ nocase ascii wide
+        $string4 = "KeeTheft/Dinvoke" nocase ascii wide
         // Description: Patch GhostPack/KeeThief for it to use DInvoke and syscalls
         // Reference: https://github.com/Metro-Holografix/KeeThiefSyscalls
-        $string5 = /KeeThiefSyscalls/ nocase ascii wide
+        $string5 = "KeeThiefSyscalls" nocase ascii wide
 
     condition:
         any of them

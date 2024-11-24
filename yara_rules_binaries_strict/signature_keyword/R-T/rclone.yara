@@ -16,7 +16,7 @@ rule rclone
         $string2 = /Behavior\:Linux\/SuspRcloneSpawn\.B/ nocase ascii wide
         // Description: Rclone is a command line program for syncing files with cloud storage services - abused by a lot of ransomware groups
         // Reference: https://github.com/rclone/rclone
-        $string3 = /Behavior\:Win32\/OFNRclone/ nocase ascii wide
+        $string3 = "Behavior:Win32/OFNRclone" nocase ascii wide
         // Description: Rclone is a command line program for syncing files with cloud storage services - abused by a lot of ransomware groups
         // Reference: https://github.com/rclone/rclone
         $string4 = /Behavior\:Win32\/PShellRclone\.SA/ nocase ascii wide
@@ -61,7 +61,7 @@ rule rclone
         $string17 = /Behavior\:Win32\/SuspRclone\.D/ nocase ascii wide
         // Description: Rclone is a command line program for syncing files with cloud storage services - abused by a lot of ransomware groups
         // Reference: https://github.com/rclone/rclone
-        $string18 = /HackTool\:Win64\/FakeRclone/ nocase ascii wide
+        $string18 = "HackTool:Win64/FakeRclone" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

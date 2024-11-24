@@ -10,7 +10,7 @@ rule Venom
     strings:
         // Description: Venom - A Multi-hop Proxy for Penetration Testers
         // Reference: https://github.com/Dliv3/Venom
-        $string1 = /Trojan\:Win32\/Casdet\!rfn/ nocase ascii wide
+        $string1 = "Trojan:Win32/Casdet!rfn" nocase ascii wide
 
     condition:
         any of them

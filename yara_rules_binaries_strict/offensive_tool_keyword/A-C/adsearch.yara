@@ -40,7 +40,7 @@ rule adsearch
         $string10 = /adsearch\-master\.zip/ nocase ascii wide
         // Description: A tool to help query AD via the LDAP protocol
         // Reference: https://github.com/tomcarver16/ADSearch
-        $string11 = /tomcarver16\/ADSearch/ nocase ascii wide
+        $string11 = "tomcarver16/ADSearch" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

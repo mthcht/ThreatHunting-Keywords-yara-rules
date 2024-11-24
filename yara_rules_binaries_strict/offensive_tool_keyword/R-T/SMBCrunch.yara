@@ -52,7 +52,7 @@ rule SMBCrunch
         $string14 = /No\scredentials\ssupplied.{0,100}\slooking\sfor\snull\ssession\sshares\!/ nocase ascii wide
         // Description: SMBCrunch allows a red teamer to quickly identify Windows File Shares in a network - performs a recursive directory listing of the provided shares  and can even grab a file from the remote share if it looks like a juicy target.
         // Reference: https://github.com/Raikia/SMBCrunch
-        $string15 = /Raikia\/SMBCrunch/ nocase ascii wide
+        $string15 = "Raikia/SMBCrunch" nocase ascii wide
         // Description: SMBCrunch allows a red teamer to quickly identify Windows File Shares in a network - performs a recursive directory listing of the provided shares  and can even grab a file from the remote share if it looks like a juicy target.
         // Reference: https://github.com/Raikia/SMBCrunch
         $string16 = /share_listing\/ALL_COMBINED_RESULTS\.TXT/ nocase ascii wide
@@ -61,10 +61,10 @@ rule SMBCrunch
         $string17 = /smbclient\s\-N\s\-A\s.{0,100}\\\\\\\\.{0,100}\\\\.{0,100}temp_out\.txt/ nocase ascii wide
         // Description: SMBCrunch allows a red teamer to quickly identify Windows File Shares in a network - performs a recursive directory listing of the provided shares  and can even grab a file from the remote share if it looks like a juicy target.
         // Reference: https://github.com/Raikia/SMBCrunch
-        $string18 = /SMBCrunch\-master/ nocase ascii wide
+        $string18 = "SMBCrunch-master" nocase ascii wide
         // Description: SMBCrunch allows a red teamer to quickly identify Windows File Shares in a network - performs a recursive directory listing of the provided shares  and can even grab a file from the remote share if it looks like a juicy target.
         // Reference: https://github.com/Raikia/SMBCrunch
-        $string19 = /Starting\senumerating\sfile\sshares\susing\sdomain\scredential\sfor\s/ nocase ascii wide
+        $string19 = "Starting enumerating file shares using domain credential for " nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

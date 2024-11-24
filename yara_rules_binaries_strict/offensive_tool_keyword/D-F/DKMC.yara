@@ -37,16 +37,16 @@ rule DKMC
         $string9 = /exec\-sc\-rand\.ps1/ nocase ascii wide
         // Description: Malicious payload evasion tool
         // Reference: https://github.com/Mr-Un1k0d3r/DKMC
-        $string10 = /JABzAD0ATgBlAHcALQBPAGIAagBlAGMAdAAgAEkATwAuAE0AZQBtAG8AcgB5AFMAdAByAGUAYQBtACgALABbAEMAbwBuAHYAZQByAHQAXQA6ADoARgByAG8AbQBCAGEAcwBlADYANABTAHQAcgBpAG4AZwAoACIASAA0AHMASQBDAEYAVABUAEwAVgBrAEMALwB6AEUAMABPAFQAWQB/ nocase ascii wide
+        $string10 = "JABzAD0ATgBlAHcALQBPAGIAagBlAGMAdAAgAEkATwAuAE0AZQBtAG8AcgB5AFMAdAByAGUAYQBtACgALABbAEMAbwBuAHYAZQByAHQAXQA6ADoARgByAG8AbQBCAGEAcwBlADYANABTAHQAcgBpAG4AZwAoACIASAA0AHMASQBDAEYAVABUAEwAVgBrAEMALwB6AEUAMABPAFQAWQB" nocase ascii wide
         // Description: Malicious payload evasion tool
         // Reference: https://github.com/Mr-Un1k0d3r/DKMC
-        $string11 = /MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC9ZoKnCHwsOdxe/ nocase ascii wide
+        $string11 = "MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC9ZoKnCHwsOdxe" nocase ascii wide
         // Description: Malicious payload evasion tool
         // Reference: https://github.com/Mr-Un1k0d3r/DKMC
-        $string12 = /Module\sto\sgenerate\sshellcode\sout\sof\sraw\smetasploit\sshellcode\sfile/ nocase ascii wide
+        $string12 = "Module to generate shellcode out of raw metasploit shellcode file" nocase ascii wide
         // Description: Malicious payload evasion tool
         // Reference: https://github.com/Mr-Un1k0d3r/DKMC
-        $string13 = /Mr\-Un1k0d3r\/DKMC/ nocase ascii wide
+        $string13 = "Mr-Un1k0d3r/DKMC" nocase ascii wide
         // Description: Malicious payload evasion tool
         // Reference: https://github.com/Mr-Un1k0d3r/DKMC
         $string14 = /python\sdkmc\.py/ nocase ascii wide

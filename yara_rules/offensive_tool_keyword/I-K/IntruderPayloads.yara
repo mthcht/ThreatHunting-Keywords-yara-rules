@@ -10,7 +10,7 @@ rule IntruderPayloads
     strings:
         // Description: A collection of Burpsuite Intruder payloads. BurpBounty payloads (https://github.com/wagiro/BurpBounty). fuzz lists and pentesting methodologies. To pull down all 3rd party repos. run install.sh in the same directory of the IntruderPayloads folder.
         // Reference: https://github.com/1N3/IntruderPayloads
-        $string1 = /IntruderPayloads/ nocase ascii wide
+        $string1 = "IntruderPayloads" nocase ascii wide
 
     condition:
         any of them

@@ -22,19 +22,19 @@ rule ShuckNT
         $string4 = /99\$1a7F1qr2HihoXfs\/56u5XMdpDZ83N6hW\/HI\=/ nocase ascii wide
         // Description: ShuckNT is the script of Shuck.sh online service for on-premise use. It is design to dowgrade - convert - dissect and shuck authentication token based on Data Encryption Standard (DES)
         // Reference: https://github.com/yanncam/ShuckNT
-        $string5 = /pwned\-passwords\-ntlm/ nocase ascii wide
+        $string5 = "pwned-passwords-ntlm" nocase ascii wide
         // Description: ShuckNT is the script of Shuck.sh online service for on-premise use. It is design to dowgrade - convert - dissect and shuck authentication token based on Data Encryption Standard (DES)
         // Reference: https://github.com/yanncam/ShuckNT
         $string6 = /shucknt\.php/ nocase ascii wide
         // Description: ShuckNT is the script of Shuck.sh online service for on-premise use. It is design to dowgrade - convert - dissect and shuck authentication token based on Data Encryption Standard (DES)
         // Reference: https://github.com/yanncam/ShuckNT
-        $string7 = /ShuckNT\-main/ nocase ascii wide
+        $string7 = "ShuckNT-main" nocase ascii wide
         // Description: ShuckNT is the script of Shuck.sh online service for on-premise use. It is design to dowgrade - convert - dissect and shuck authentication token based on Data Encryption Standard (DES)
         // Reference: https://github.com/yanncam/ShuckNT
-        $string8 = /wordlist\-nthash\-reversed/ nocase ascii wide
+        $string8 = "wordlist-nthash-reversed" nocase ascii wide
         // Description: ShuckNT is the script of Shuck.sh online service for on-premise use. It is design to dowgrade - convert - dissect and shuck authentication token based on Data Encryption Standard (DES)
         // Reference: https://github.com/yanncam/ShuckNT
-        $string9 = /yanncam\/ShuckNT/ nocase ascii wide
+        $string9 = "yanncam/ShuckNT" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

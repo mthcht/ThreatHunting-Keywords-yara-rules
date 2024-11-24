@@ -19,7 +19,7 @@ rule EQGR
         $string3 = /abopscript\.txt/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file elgingamble
         // Reference: https://fdik.org/EQGRP/Linux/doc/old/etc/user.tool.elgingamble.COMMON
-        $string4 = /chown\sroot\s\%s\s\schmod\s4755\s\%s\s\s\%s/ nocase ascii wide
+        $string4 = "chown root %s  chmod 4755 %s  %s" nocase ascii wide
         // Description: Equation Group scripts and tools
         // Reference: https://fdik.org/EQGRP/Linux/doc/old/etc/abopscript.txt
         $string5 = /cp\s\/etc\/shadow\s\/tmp\/\./ nocase ascii wide

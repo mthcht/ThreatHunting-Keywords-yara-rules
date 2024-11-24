@@ -13,7 +13,7 @@ rule twittor
         $string1 = /\/twittor\.git/ nocase ascii wide
         // Description: A fully featured backdoor that uses Twitter as a C&C server 
         // Reference: https://github.com/PaulSec/twittor
-        $string2 = /PaulSec\/twittor/ nocase ascii wide
+        $string2 = "PaulSec/twittor" nocase ascii wide
         // Description: A fully featured backdoor that uses Twitter as a C&C server 
         // Reference: https://github.com/PaulSec/twittor
         $string3 = /twittor\.py/ nocase ascii wide

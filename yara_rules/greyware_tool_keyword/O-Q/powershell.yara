@@ -16,10 +16,10 @@ rule powershell
         $string2 = /\s\-ep\sUnrestricted\s\-nop\sfunction\s.{0,1000}\[System\.Security\.Cryptography\.Aes\]\:\:Create\(\).{0,1000}\.CreateDecryptor\(\).{0,1000}\.TransformFinalBlock.{0,1000}\[System\.Text\.Encoding\]\:\:Utf8\.GetString/ nocase ascii wide
         // Description: Defense evasion technique In order to avoid detection at any point of the kill chain. attackers use several ways to disable anti-virus. disable Microsoft firewall and clear logs.
         // Reference: N/A
-        $string3 = /\s\-Name\sDisableAntiSpyware\s\-Value\s1\s\-PropertyType\sDWORD\s\-Force/ nocase ascii wide
+        $string3 = " -Name DisableAntiSpyware -Value 1 -PropertyType DWORD -Force" nocase ascii wide
         // Description: suspicious powershell arguments order used by many exploitation tools
         // Reference: N/A
-        $string4 = /\s\-NOP\s\-WIND\sHIDDeN\s\-eXeC\sBYPASS\s\-NONI\s/ nocase ascii wide
+        $string4 = " -NOP -WIND HIDDeN -eXeC BYPASS -NONI " nocase ascii wide
         // Description: alternativeto whoami
         // Reference: N/A
         $string5 = /\[System\.Environment\]\:\:GetEnvironmentVariable\(\'username\'\)/ nocase ascii wide
@@ -61,13 +61,13 @@ rule powershell
         $string17 = /Add\-WindowsCapability\s\-Online\s\-Name\sOpenSSH\.Server/ nocase ascii wide
         // Description: backs up all Group Policy Objects (GPOs) to a specified path
         // Reference: N/A
-        $string18 = /Backup\-GPO\s\-All\s\-Path\s/ nocase ascii wide
+        $string18 = "Backup-GPO -All -Path " nocase ascii wide
         // Description: clearing security logs with powershell
         // Reference: N/A
-        $string19 = /Clear\-EventLog\s\-LogName\sSecurity/ nocase ascii wide
+        $string19 = "Clear-EventLog -LogName Security" nocase ascii wide
         // Description: Deletes contents of recycle bin
         // Reference: https://github.com/hak5/omg-payloads/tree/master/payloads/library/credentials/-OMG-Credz-Plz
-        $string20 = /Clear\-RecycleBin\s\-Force\s\-ErrorAction\sSilentlyContinue/ nocase ascii wide
+        $string20 = "Clear-RecycleBin -Force -ErrorAction SilentlyContinue" nocase ascii wide
         // Description: Jenkins Abuse Without admin access
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
         $string21 = /cmd\.exe\s\/c\sPowerShell\.exe\s\-Exec\sByPass\s\-Nol\s\-Enc\s/ nocase ascii wide
@@ -76,25 +76,25 @@ rule powershell
         $string22 = /copy\-item\s.{0,1000}\\roaming\\microsoft\\windows\\start\smenu\\programs\\startup/ nocase ascii wide
         // Description: enable the PowerShell Web Access featur which could be used for remote access and potential
         // Reference: https://www.cisa.gov/sites/default/files/2024-08/aa24-241a-iran-based-cyber-actors-enabling-ransomware-attacks-on-us-organizations_0.pdf
-        $string23 = /dism\s\s\/online\s\/enable\-feature\s\/featurename\:IIS\-WebServerRole\s\/all/ nocase ascii wide
+        $string23 = "dism  /online /enable-feature /featurename:IIS-WebServerRole /all" nocase ascii wide
         // Description: enable the PowerShell Web Access featur which could be used for remote access and potential
         // Reference: https://www.cisa.gov/sites/default/files/2024-08/aa24-241a-iran-based-cyber-actors-enabling-ransomware-attacks-on-us-organizations_0.pdf
-        $string24 = /dism\s\s\/online\s\/enable\-feature\s\/featurename\:WindowsPowerShellWebAccess\s\/all/ nocase ascii wide
+        $string24 = "dism  /online /enable-feature /featurename:WindowsPowerShellWebAccess /all" nocase ascii wide
         // Description: enable the PowerShell Web Access featur which could be used for remote access and potential
         // Reference: https://www.cisa.gov/sites/default/files/2024-08/aa24-241a-iran-based-cyber-actors-enabling-ransomware-attacks-on-us-organizations_0.pdf
         $string25 = /dism\.exe.{0,1000}\/enable\-feature.{0,1000}WindowsPowerShellWebAccess\s/ nocase ascii wide
         // Description: enables WinRM
         // Reference: https://github.com/alperenugurlu/AD_Enumeration_Hunt/blob/alperen_ugurlu_hack/AD_Enumeration_Hunt.ps1
-        $string26 = /enable\-psremoting\s\-force/ nocase ascii wide
+        $string26 = "enable-psremoting -force" nocase ascii wide
         // Description: Enabling PowerShell 2.0 Engine - downgrading to powershell version 2
         // Reference: N/A
-        $string27 = /Enable\-WindowsOptionalFeature\s\-Online\s\-FeatureName\sMicrosoftWindowsPowerShellV2Root\s\-All/ nocase ascii wide
+        $string27 = "Enable-WindowsOptionalFeature -Online -FeatureName MicrosoftWindowsPowerShellV2Root -All" nocase ascii wide
         // Description: Find machine where the user has admin privs
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string28 = /Find\-LocalAdminAccess\s\-Verbose/ nocase ascii wide
+        $string28 = "Find-LocalAdminAccess -Verbose" nocase ascii wide
         // Description: alternativeto whoami
         // Reference: N/A
-        $string29 = /gci\senv\:USERNAME/ nocase ascii wide
+        $string29 = "gci env:USERNAME" nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
         $string30 = /gci\s\-h\sC\:\\pagefile\.sys/ nocase ascii wide
@@ -106,7 +106,7 @@ rule powershell
         $string32 = /Get\-ADGroup\s\-Filter\s.{0,1000}Name\s\-like\s.{0,1000}admin/ nocase ascii wide
         // Description: List the members of the "Domain Admins" group within Active Directory
         // Reference: N/A
-        $string33 = /Get\-ADGroupMember\s\-Identity\s\"Domain\sAdmins\"/ nocase ascii wide
+        $string33 = "Get-ADGroupMember -Identity \"Domain Admins\"" nocase ascii wide
         // Description: AD Module Enumerate principals with Constrained Delegation enabled
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
         $string34 = /Get\-ADObject\s\-Filter\s\{msDS\-AllowedToDelegateTo\s.{0,1000}\s\-Properties\smsDS\-AllowedToDelegateTo/ nocase ascii wide
@@ -121,7 +121,7 @@ rule powershell
         $string37 = /Get\-ADUser\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True\}/ nocase ascii wide
         // Description: AppLocker Get AppLocker policy
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string38 = /Get\-AppLockerPolicy\s\-Effective\s/ nocase ascii wide
+        $string38 = "Get-AppLockerPolicy -Effective " nocase ascii wide
         // Description: Find Potential Credential in Files - This directory often contains encrypted credentials or other sensitive files related to user accounts
         // Reference: N/A
         $string39 = /Get\-ChildItem\s\-Hidden\sC\:\\Users\\.{0,1000}\\AppData\\Local\\Microsoft\\Credentials\\/ nocase ascii wide
@@ -133,31 +133,31 @@ rule powershell
         $string41 = /Get\-DhcpServerv4Scope\s\|\sSet\-DhcpServerv4OptionValue\s\-DnsServer\s/ nocase ascii wide
         // Description: AD Module Enumerate principals with Constrained Delegation enabled
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string42 = /Get\-DomainComputer\s\-TrustedToAuth/ nocase ascii wide
+        $string42 = "Get-DomainComputer -TrustedToAuth" nocase ascii wide
         // Description: Powerview Enumerate users
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string43 = /Get\-DomainUser\s\-KerberosPreuthNotRequired\s\-Verbose/ nocase ascii wide
+        $string43 = "Get-DomainUser -KerberosPreuthNotRequired -Verbose" nocase ascii wide
         // Description: AD Module GroupPolicy - List of GPO in the domain
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string44 = /Get\-GPO\s\-All/ nocase ascii wide
+        $string44 = "Get-GPO -All" nocase ascii wide
         // Description: PowerView get Locally logged users on a machine
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string45 = /Get\-LoggedonLocal\s\-ComputerName\s/ nocase ascii wide
+        $string45 = "Get-LoggedonLocal -ComputerName " nocase ascii wide
         // Description: Gets the status of antimalware software on the computer.
         // Reference: https://thedfirreport.com/2023/02/06/collect-exfiltrate-sleep-repeat/
-        $string46 = /Get\-MpComputerStatus/ nocase ascii wide
+        $string46 = "Get-MpComputerStatus" nocase ascii wide
         // Description: get defender AV exclusions
         // Reference: N/A
         $string47 = /Get\-MpPreference\s\|\sSelect\-Object\s\-ExpandProperty\sExclusionPath/ nocase ascii wide
         // Description: Find groups in the current domain (PowerView)
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string48 = /Get\-NetGroup\s\-FullData/ nocase ascii wide
+        $string48 = "Get-NetGroup -FullData" nocase ascii wide
         // Description: the command is used to discover the members of a specific domain group DNSAdmins which can provide an adversary with valuable information about the target environment. The knowledge of group members can be exploited by attackers to identify potential targets for privilege escalation or Lateral Movement within the network.
         // Reference: N/A
         $string49 = /Get\-NetGroupMember\s\-GroupName\s.{0,1000}DNSAdmins/ nocase ascii wide
         // Description: PowerView Find users with SPN
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string50 = /Get\-NetUser\s\-SPN/ nocase ascii wide
+        $string50 = "Get-NetUser -SPN" nocase ascii wide
         // Description: delete shadow copies
         // Reference: https://rexorvc0.com/2024/06/19/Akira-The-Old-New-Style-Crime/
         $string51 = /Get\-WmiObject\sWin32_ShadowCopy\s\|\sRemove\-WmiObject/ nocase ascii wide
@@ -166,34 +166,34 @@ rule powershell
         $string52 = /HostVersion\=2\.0.{0,1000}EngineVersion\=2\.0/ nocase ascii wide
         // Description: download from github from memory
         // Reference: N/A
-        $string53 = /IEX\(New\-Object\sSystem\.Net\.WebClient\)\.DownloadString\(\"https\:\/\/raw\.githubusercontent\.com\// nocase ascii wide
+        $string53 = /IEX\(New\-Object\sSystem\.Net\.WebClient\)\.DownloadString\(\\"https\:\/\/raw\.githubusercontent\.com\// nocase ascii wide
         // Description: enable the PowerShell Web Access featur which could be used for remote access and potential
         // Reference: https://www.cisa.gov/sites/default/files/2024-08/aa24-241a-iran-based-cyber-actors-enabling-ransomware-attacks-on-us-organizations_0.pdf
-        $string54 = /Install\-PswaWebApplication\s\-UseTestCertificate/ nocase ascii wide
+        $string54 = "Install-PswaWebApplication -UseTestCertificate" nocase ascii wide
         // Description: enable the PowerShell Web Access featur which could be used for remote access and potential
         // Reference: https://www.cisa.gov/sites/default/files/2024-08/aa24-241a-iran-based-cyber-actors-enabling-ransomware-attacks-on-us-organizations_0.pdf
-        $string55 = /Install\-PswaWebApplication/ nocase ascii wide
+        $string55 = "Install-PswaWebApplication" nocase ascii wide
         // Description: enable the PowerShell Web Access featur which could be used for remote access and potential
         // Reference: https://www.cisa.gov/sites/default/files/2024-08/aa24-241a-iran-based-cyber-actors-enabling-ransomware-attacks-on-us-organizations_0.pdf
-        $string56 = /Install\-WindowsFeature\s\-Name\sWeb\-Server\s\-IncludeManagementTools/ nocase ascii wide
+        $string56 = "Install-WindowsFeature -Name Web-Server -IncludeManagementTools" nocase ascii wide
         // Description: enable the PowerShell Web Access featur which could be used for remote access and potential
         // Reference: https://www.cisa.gov/sites/default/files/2024-08/aa24-241a-iran-based-cyber-actors-enabling-ransomware-attacks-on-us-organizations_0.pdf
-        $string57 = /Install\-WindowsFeature\sWindowsPowerShellWebAccess/ nocase ascii wide
+        $string57 = "Install-WindowsFeature WindowsPowerShellWebAccess" nocase ascii wide
         // Description: Find local admins on the domain machines
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string58 = /Invoke\-EnumerateLocalAdmin\s\-Verbose/ nocase ascii wide
+        $string58 = "Invoke-EnumerateLocalAdmin -Verbose" nocase ascii wide
         // Description: Check local admin access for the current user where the targets are found
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string59 = /Invoke\-UserHunter\s\-CheckAccess/ nocase ascii wide
+        $string59 = "Invoke-UserHunter -CheckAccess" nocase ascii wide
         // Description: C2 server to connect to a victim machine via reverse shell
         // Reference: https://github.com/reveng007/C2_Server
         $string60 = /Invoke\-WebRequest\sifconfig\.me\/ip.{0,1000}Content\.Trim\(\)/ nocase ascii wide
         // Description: alternativeto whoami
         // Reference: N/A
-        $string61 = /ls\senv\:USERNAME/ nocase ascii wide
+        $string61 = "ls env:USERNAME" nocase ascii wide
         // Description: hiding a user from the login screen by modifying a specific registry key
         // Reference: N/A
-        $string62 = /New\-ItemProperty\s\-Path\s\"HKLM\:\\Software\\Microsoft\\Windows\sNT\\CurrentVersion\\Winlogon\\SpecialAccounts\\Userlist\"\s\-Name\s.{0,1000}\s\-Value\s0\s\-PropertyType\sDword/ nocase ascii wide
+        $string62 = /New\-ItemProperty\s\-Path\s\\"HKLM\:\\Software\\Microsoft\\Windows\sNT\\CurrentVersion\\Winlogon\\SpecialAccounts\\Userlist\\"\s\-Name\s.{0,1000}\s\-Value\s0\s\-PropertyType\sDword/ nocase ascii wide
         // Description: allowing SSH incoming connections (critical on DC)
         // Reference: N/A
         $string63 = /New\-NetFirewallRule\s.{0,1000}\s\-Enabled\sTrue\s\-Direction\sInbound\s\-Protocol\sTCP\s\-Action\sAllow\s\-LocalPort\s22/ nocase ascii wide
@@ -202,7 +202,7 @@ rule powershell
         $string64 = /New\-Object\sSystem\.Net\.Sockets\.TCPClient\(.{0,1000}\$stream\s\=\s\$client\.GetStream\(\).{0,1000}\[byte\[\]\]\$bytes\s\=\s0\.\.65535/ nocase ascii wide
         // Description: Execution Policy Bypass evasion
         // Reference: N/A
-        $string65 = /powershell\s\?encodedcommand\s\$env\:PSExecutionPolicyPreference\=\"bypass\"/ nocase ascii wide
+        $string65 = /powershell\s\?encodedcommand\s\$env\:PSExecutionPolicyPreference\=\\"bypass\\"/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
         $string66 = /powershell\s\-c\s.{0,1000}\\windows\\system32\\inetsrv\\appcmd\.exe\slist\sapppool\s\/\@t\:/ nocase ascii wide
@@ -211,13 +211,13 @@ rule powershell
         $string67 = /powershell\sNew\-ItemProperty\s\-Path\s.{0,1000}HKLM\:\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender.{0,1000}\s\-Name\sDisableAntiSpyware\s\-Value\s1\s\-PropertyType\sDWORD\s\-Force/ nocase ascii wide
         // Description: uninstalls Windows Defender
         // Reference: https://github.com/spicy-bear/Threat-Hunting/blob/2c89b519862672e29547b4db4796caa923044595/95.213.145.101/%D1%81%D0%B8%D1%80/bat/defendermalwar.bat#L7
-        $string68 = /powershell\sUninstall\-WindowsFeature\s\-Name\sWindows\-Defender/ nocase ascii wide
+        $string68 = "powershell Uninstall-WindowsFeature -Name Windows-Defender" nocase ascii wide
         // Description: PowerShell Downgrade Attacks - forces PowerShell to run in version 2.0
         // Reference: N/A
-        $string69 = /PowerShell\s\-Version\s2\s\-Command\s/ nocase ascii wide
+        $string69 = "PowerShell -Version 2 -Command " nocase ascii wide
         // Description: downgrading to powershell version 2
         // Reference: N/A
-        $string70 = /powershell\s\-Version\s2/ nocase ascii wide
+        $string70 = "powershell -Version 2" nocase ascii wide
         // Description: Windows Defender tampering technique 
         // Reference: https://thedfirreport.com/2023/04/03/malicious-iso-file-leads-to-domain-wide-ransomware/
         $string71 = /powershell.{0,1000}Uninstall\-WindowsFeature\s\-Name\sWindows\-Defender\-GUI/ nocase ascii wide
@@ -247,7 +247,7 @@ rule powershell
         $string79 = /powershell\.exe\s\-NoP\s\-NoL\s\-sta\s\-NonI\s\-W\sHidden\s\-Exec\sBypass\s\-Enc\s/ nocase ascii wide
         // Description: downloading from IP without domain name
         // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
-        $string80 = /powershell\.exe\s\-nop\s\-w\shidden\s\-c\s\"IEX\s\(\(new\-object\snet\.webclient\)\.downloadstring\(\'http\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
+        $string80 = /powershell\.exe\s\-nop\s\-w\shidden\s\-c\s\\"IEX\s\(\(new\-object\snet\.webclient\)\.downloadstring\(\'http\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
         // Description: PowerShell Downgrade Attacks - forces PowerShell to run in version 2.0
         // Reference: N/A
         $string81 = /PowerShell\.exe\s\-Version\s2\s\-Command\s/ nocase ascii wide
@@ -259,7 +259,7 @@ rule powershell
         $string83 = /powershell\.exe\swget\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
         // Description: downgrading to powershell version 2
         // Reference: N/A
-        $string84 = /powershell\.exe\"\s\-Version\s2/ nocase ascii wide
+        $string84 = /powershell\.exe\\"\s\-Version\s2/ nocase ascii wide
         // Description: attempts to evade defenses or remove traces of activity by deleting MRUList registry keys
         // Reference: N/A
         $string85 = /reg\sdelete\s.{0,1000}\s\/v\sMRUList\s\/f/ nocase ascii wide
@@ -277,10 +277,10 @@ rule powershell
         $string89 = /Set\-ADObject\s\-SamAccountName\s.{0,1000}\s\-PropertyName\sscriptpath\s\-PropertyValue\s.{0,1000}\\.{0,1000}\.exe/ nocase ascii wide
         // Description: Clearing the clipboard is a deliberate attempt to cover tracks and make the attack less detectable
         // Reference: https://github.com/PaloAltoNetworks/Unit42-timely-threat-intel/blob/main/2024-05-14-IOCs-for-DarkGate-activity.txt
-        $string90 = /Set\-Clipboard\s\-Value\s\'\s\'/ nocase ascii wide
+        $string90 = "Set-Clipboard -Value ' '" nocase ascii wide
         // Description: Clearing the clipboard is a deliberate attempt to cover tracks and make the attack less detectable
         // Reference: https://github.com/PaloAltoNetworks/Unit42-timely-threat-intel/blob/main/2024-05-14-IOCs-for-DarkGate-activity.txt
-        $string91 = /Set\-Clipboard\s\-Value\s\'\'/ nocase ascii wide
+        $string91 = "Set-Clipboard -Value ''" nocase ascii wide
         // Description: Disable IPS
         // Reference: N/A
         $string92 = /Set\-MPPreference\s\-DisableIntrusionPreventionSystem\s\$true/ nocase ascii wide
@@ -292,94 +292,94 @@ rule powershell
         $string94 = /Set\-MpPreference\s\-DisableRealtimeMonitoring\s\$true/ nocase ascii wide
         // Description: Disable AMSI (set to 0 to enable)
         // Reference: N/A
-        $string95 = /Set\-MpPreference\s\-DisableScriptScanning\s1\s/ nocase ascii wide
+        $string95 = "Set-MpPreference -DisableScriptScanning 1 " nocase ascii wide
         // Description: exclude exe file extensions from AV detections
         // Reference: https://github.com/Akabanwa-toma/hacke/blob/aaebb5cb188eb3a17bebfedfbde6b354e5522b92/installer.bat#L29C21-L29C63
-        $string96 = /Set\-MpPreference\s\-ExclusionExtension\sexe/ nocase ascii wide
+        $string96 = "Set-MpPreference -ExclusionExtension exe" nocase ascii wide
         // Description: openssh server is used (critical on DC - must not be installed)
         // Reference: N/A
-        $string97 = /Set\-Service\s\-Name\ssshd\s\-StartupType\s\'Automatic\'/ nocase ascii wide
+        $string97 = "Set-Service -Name sshd -StartupType 'Automatic'" nocase ascii wide
         // Description: openssh server is used (critical on DC - must not be installed)
         // Reference: N/A
-        $string98 = /Start\-Service\ssshd/ nocase ascii wide
+        $string98 = "Start-Service sshd" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string99 = /Stop\-Process\s\-Name\s\"Sophos\s/ nocase ascii wide
+        $string99 = "Stop-Process -Name \"Sophos " nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string100 = /Stop\-Process\s\-Name\s\"SQL\sBackups\"/ nocase ascii wide
+        $string100 = "Stop-Process -Name \"SQL Backups\"" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string101 = /Stop\-Process\s\-Name\s\"SQLsafe\sBackup\sService\"/ nocase ascii wide
+        $string101 = "Stop-Process -Name \"SQLsafe Backup Service\"" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string102 = /Stop\-Process\s\-Name\s\"storagecraft\simagemanager.{0,1000}\"/ nocase ascii wide
+        $string102 = /Stop\-Process\s\-Name\s\\"storagecraft\simagemanager.{0,1000}\\"/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string103 = /Stop\-Process\s\-Name\s\"Symantec\sSystem\sRecovery\"/ nocase ascii wide
+        $string103 = "Stop-Process -Name \"Symantec System Recovery\"" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string104 = /Stop\-Process\s\-Name\s\"Veeam\sBackup\sCatalog\sData\sService\"/ nocase ascii wide
+        $string104 = "Stop-Process -Name \"Veeam Backup Catalog Data Service\"" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string105 = /Stop\-Process\s\-Name\s\"Zoolz\s2\sService\"/ nocase ascii wide
+        $string105 = "Stop-Process -Name \"Zoolz 2 Service\"" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string106 = /Stop\-Process\s\-Name\sacronisagent/ nocase ascii wide
+        $string106 = "Stop-Process -Name acronisagent" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string107 = /Stop\-Process\s\-Name\sAcronisAgent/ nocase ascii wide
+        $string107 = "Stop-Process -Name AcronisAgent" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string108 = /Stop\-Process\s\-Name\sacrsch2svc/ nocase ascii wide
+        $string108 = "Stop-Process -Name acrsch2svc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string109 = /Stop\-Process\s\-Name\sAcrSch2Svc/ nocase ascii wide
+        $string109 = "Stop-Process -Name AcrSch2Svc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string110 = /Stop\-Process\s\-Name\sagntsvc/ nocase ascii wide
+        $string110 = "Stop-Process -Name agntsvc" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string111 = /Stop\-Process\s\-Name\sAntivirus/ nocase ascii wide
+        $string111 = "Stop-Process -Name Antivirus" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string112 = /Stop\-Process\s\-Name\sARSM\s\/y/ nocase ascii wide
+        $string112 = "Stop-Process -Name ARSM /y" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string113 = /Stop\-Process\s\-Name\sarsm/ nocase ascii wide
+        $string113 = "Stop-Process -Name arsm" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string114 = /Stop\-Process\s\-Name\sAVP/ nocase ascii wide
+        $string114 = "Stop-Process -Name AVP" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string115 = /Stop\-Process\s\-Name\sbackp/ nocase ascii wide
+        $string115 = "Stop-Process -Name backp" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string116 = /Stop\-Process\s\-Name\sbackup/ nocase ascii wide
+        $string116 = "Stop-Process -Name backup" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string117 = /Stop\-Process\s\-Name\sBackupExec/ nocase ascii wide
+        $string117 = "Stop-Process -Name BackupExec" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string118 = /Stop\-Process\s\-Name\sBackupExecAgent/ nocase ascii wide
+        $string118 = "Stop-Process -Name BackupExecAgent" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string119 = /Stop\-Process\s\-Name\sbedbg\s\/y/ nocase ascii wide
+        $string119 = "Stop-Process -Name bedbg /y" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string120 = /Stop\-Process\s\-Name\scbservi/ nocase ascii wide
+        $string120 = "Stop-Process -Name cbservi" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string121 = /Stop\-Process\s\-Name\scbvscserv/ nocase ascii wide
+        $string121 = "Stop-Process -Name cbvscserv" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string122 = /Stop\-Process\s\-Name\sDCAgent/ nocase ascii wide
+        $string122 = "Stop-Process -Name DCAgent" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string123 = /Stop\-Process\s\-Name\sEhttpSrv/ nocase ascii wide
+        $string123 = "Stop-Process -Name EhttpSrv" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string124 = /Stop\-Process\s\-Name\sekrn/ nocase ascii wide
+        $string124 = "Stop-Process -Name ekrn" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
         $string125 = /Stop\-Process\s\-Name\sEPSecurityService.{0,1000}\s\s\s\s/ nocase ascii wide
@@ -388,37 +388,37 @@ rule powershell
         $string126 = /Stop\-Process\s\-Name\sEPUpdateService.{0,1000}\s\s\s\s\s\s\s/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string127 = /Stop\-Process\s\-Name\sEsgShKernel/ nocase ascii wide
+        $string127 = "Stop-Process -Name EsgShKernel" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string128 = /Stop\-Process\s\-Name\sESHASRV/ nocase ascii wide
+        $string128 = "Stop-Process -Name ESHASRV" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string129 = /Stop\-Process\s\-Name\sFA_Scheduler/ nocase ascii wide
+        $string129 = "Stop-Process -Name FA_Scheduler" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string130 = /Stop\-Process\s\-Name\sIMAP4Svc/ nocase ascii wide
+        $string130 = "Stop-Process -Name IMAP4Svc" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string131 = /Stop\-Process\s\-Name\sKAVFS/ nocase ascii wide
+        $string131 = "Stop-Process -Name KAVFS" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string132 = /Stop\-Process\s\-Name\sKAVFSGT/ nocase ascii wide
+        $string132 = "Stop-Process -Name KAVFSGT" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string133 = /Stop\-Process\s\-Name\skavfsslp/ nocase ascii wide
+        $string133 = "Stop-Process -Name kavfsslp" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string134 = /Stop\-Process\s\-Name\sklnagent/ nocase ascii wide
+        $string134 = "Stop-Process -Name klnagent" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string135 = /Stop\-Process\s\-Name\smacmnsvc/ nocase ascii wide
+        $string135 = "Stop-Process -Name macmnsvc" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string136 = /Stop\-Process\s\-Name\smasvc/ nocase ascii wide
+        $string136 = "Stop-Process -Name masvc" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string137 = /Stop\-Process\s\-Name\sMBAMService/ nocase ascii wide
+        $string137 = "Stop-Process -Name MBAMService" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
         $string138 = /Stop\-Process\s\-Name\sMBEndpointAgent.{0,1000}\s\s\s\s/ nocase ascii wide
@@ -427,34 +427,34 @@ rule powershell
         $string139 = /Stop\-Process\s\-Name\sMcAfeeEngineService.{0,1000}\s\s\s\s/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string140 = /Stop\-Process\s\-Name\sMcAfeeFramework/ nocase ascii wide
+        $string140 = "Stop-Process -Name McAfeeFramework" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string141 = /Stop\-Process\s\-Name\sMcAfeeFrameworkMcAfeeFramework/ nocase ascii wide
+        $string141 = "Stop-Process -Name McAfeeFrameworkMcAfeeFramework" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string142 = /Stop\-Process\s\-Name\sMcShield/ nocase ascii wide
+        $string142 = "Stop-Process -Name McShield" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string143 = /Stop\-Process\s\-Name\smfefire/ nocase ascii wide
+        $string143 = "Stop-Process -Name mfefire" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string144 = /Stop\-Process\s\-Name\smfemms/ nocase ascii wide
+        $string144 = "Stop-Process -Name mfemms" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string145 = /Stop\-Process\s\-Name\smfevtp/ nocase ascii wide
+        $string145 = "Stop-Process -Name mfevtp" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string146 = /Stop\-Process\s\-Name\smozyprobackup/ nocase ascii wide
+        $string146 = "Stop-Process -Name mozyprobackup" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string147 = /Stop\-Process\s\-Name\sMsDtsServer/ nocase ascii wide
+        $string147 = "Stop-Process -Name MsDtsServer" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string148 = /Stop\-Process\s\-Name\sMsDtsServer100/ nocase ascii wide
+        $string148 = "Stop-Process -Name MsDtsServer100" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string149 = /Stop\-Process\s\-Name\sMsDtsServer110/ nocase ascii wide
+        $string149 = "Stop-Process -Name MsDtsServer110" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
         $string150 = /Stop\-Process\s\-Name\smsftesql\$PROD/ nocase ascii wide
@@ -520,40 +520,40 @@ rule powershell
         $string170 = /Stop\-Process\s\-Name\sMSSQL\$VEEAMSQL/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string171 = /Stop\-Process\s\-Name\ssacsvr/ nocase ascii wide
+        $string171 = "Stop-Process -Name sacsvr" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string172 = /Stop\-Process\s\-Name\sSAVAdminService/ nocase ascii wide
+        $string172 = "Stop-Process -Name SAVAdminService" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string173 = /Stop\-Process\s\-Name\sSAVService/ nocase ascii wide
+        $string173 = "Stop-Process -Name SAVService" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string174 = /Stop\-Process\s\-Name\sshadowprotectsvc/ nocase ascii wide
+        $string174 = "Stop-Process -Name shadowprotectsvc" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string175 = /Stop\-Process\s\-Name\sShMonitor/ nocase ascii wide
+        $string175 = "Stop-Process -Name ShMonitor" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string176 = /Stop\-Process\s\-Name\sSmcinst/ nocase ascii wide
+        $string176 = "Stop-Process -Name Smcinst" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string177 = /Stop\-Process\s\-Name\sSmcService/ nocase ascii wide
+        $string177 = "Stop-Process -Name SmcService" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string178 = /Stop\-Process\s\-Name\ssms_site_sql_backup/ nocase ascii wide
+        $string178 = "Stop-Process -Name sms_site_sql_backup" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
         $string179 = /Stop\-Process\s\-Name\sSntpService.{0,1000}\s\s\s\s/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string180 = /Stop\-Process\s\-Name\ssophossps/ nocase ascii wide
+        $string180 = "Stop-Process -Name sophossps" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string181 = /Stop\-Process\s\-Name\sspxservice/ nocase ascii wide
+        $string181 = "Stop-Process -Name spxservice" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string182 = /Stop\-Process\s\-Name\ssqbcoreservice/ nocase ascii wide
+        $string182 = "Stop-Process -Name sqbcoreservice" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
         $string183 = /Stop\-Process\s\-Name\sSQLAgent\$SOPH/ nocase ascii wide
@@ -565,97 +565,97 @@ rule powershell
         $string185 = /Stop\-Process\s\-Name\sSQLAgent\$VEEAMSQL/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string186 = /Stop\-Process\s\-Name\sstc_endpt_svc/ nocase ascii wide
+        $string186 = "Stop-Process -Name stc_endpt_svc" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string187 = /Stop\-Process\s\-Name\sstop\sSepMasterService/ nocase ascii wide
+        $string187 = "Stop-Process -Name stop SepMasterService" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string188 = /Stop\-Process\s\-Name\ssvcGenericHost/ nocase ascii wide
+        $string188 = "Stop-Process -Name svcGenericHost" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string189 = /Stop\-Process\s\-Name\sswi_filter/ nocase ascii wide
+        $string189 = "Stop-Process -Name swi_filter" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string190 = /Stop\-Process\s\-Name\sswi_service/ nocase ascii wide
+        $string190 = "Stop-Process -Name swi_service" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string191 = /Stop\-Process\s\-Name\sswi_update/ nocase ascii wide
+        $string191 = "Stop-Process -Name swi_update" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string192 = /Stop\-Process\s\-Name\sswi_update_64/ nocase ascii wide
+        $string192 = "Stop-Process -Name swi_update_64" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string193 = /Stop\-Process\s\-Name\sTmCCSF/ nocase ascii wide
+        $string193 = "Stop-Process -Name TmCCSF" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string194 = /Stop\-Process\s\-Name\stmlisten/ nocase ascii wide
+        $string194 = "Stop-Process -Name tmlisten" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string195 = /Stop\-Process\s\-Name\sTrueKey/ nocase ascii wide
+        $string195 = "Stop-Process -Name TrueKey" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
         $string196 = /Stop\-Process\s\-Name\sTrueKeyScheduler.{0,1000}\s\s\s\s/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string197 = /Stop\-Process\s\-Name\sTrueKeyServiceHel/ nocase ascii wide
+        $string197 = "Stop-Process -Name TrueKeyServiceHel" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
         $string198 = /Stop\-Process\s\-Name\svapiendpoint.{0,1000}\s\s\s\s\s\s\s/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string199 = /Stop\-Process\s\-Name\sVeeamBackupSvc/ nocase ascii wide
+        $string199 = "Stop-Process -Name VeeamBackupSvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string200 = /Stop\-Process\s\-Name\sVeeamBrokerSvc\s/ nocase ascii wide
+        $string200 = "Stop-Process -Name VeeamBrokerSvc " nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string201 = /Stop\-Process\s\-Name\sVeeamCatalogSvc/ nocase ascii wide
+        $string201 = "Stop-Process -Name VeeamCatalogSvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string202 = /Stop\-Process\s\-Name\sVeeamCloudSvc/ nocase ascii wide
+        $string202 = "Stop-Process -Name VeeamCloudSvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string203 = /Stop\-Process\s\-Name\sVeeamDeploymentService/ nocase ascii wide
+        $string203 = "Stop-Process -Name VeeamDeploymentService" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string204 = /Stop\-Process\s\-Name\sVeeamDeploySvc/ nocase ascii wide
+        $string204 = "Stop-Process -Name VeeamDeploySvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
         $string205 = /Stop\-Process\s\-Name\sVeeamDeploySvc.{0,1000}\s\s\s\s/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string206 = /Stop\-Process\s\-Name\sVeeamEnterpriseManagerSvc/ nocase ascii wide
+        $string206 = "Stop-Process -Name VeeamEnterpriseManagerSvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string207 = /Stop\-Process\s\-Name\sVeeamHvIntegrationSvc/ nocase ascii wide
+        $string207 = "Stop-Process -Name VeeamHvIntegrationSvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string208 = /Stop\-Process\s\-Name\sVeeamMountSvc/ nocase ascii wide
+        $string208 = "Stop-Process -Name VeeamMountSvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string209 = /Stop\-Process\s\-Name\sVeeamNFSSvc/ nocase ascii wide
+        $string209 = "Stop-Process -Name VeeamNFSSvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string210 = /Stop\-Process\s\-Name\sVeeamRESTSvc/ nocase ascii wide
+        $string210 = "Stop-Process -Name VeeamRESTSvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string211 = /Stop\-Process\s\-Name\sVeeamTransportSvc/ nocase ascii wide
+        $string211 = "Stop-Process -Name VeeamTransportSvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string212 = /Stop\-Process\s\-Name\svsnapvss/ nocase ascii wide
+        $string212 = "Stop-Process -Name vsnapvss" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string213 = /Stop\-Process\s\-Name\svssvc/ nocase ascii wide
+        $string213 = "Stop-Process -Name vssvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string214 = /Stop\-Process\s\-Name\swbengine/ nocase ascii wide
+        $string214 = "Stop-Process -Name wbengine" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string215 = /Stop\-Process\s\-Name\swbengine/ nocase ascii wide
+        $string215 = "Stop-Process -Name wbengine" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string216 = /Stop\-Process\s\-Name\sWRSVC/ nocase ascii wide
+        $string216 = "Stop-Process -Name WRSVC" nocase ascii wide
 
     condition:
         any of them

@@ -28,7 +28,7 @@ rule tunnelmole_client
         $string6 = /\/tunnelmole\-client\.git/ nocase ascii wide
         // Description: tmole - Share your local server with a Public URL
         // Reference: https://github.com/robbie-cahill/tunnelmole-client/
-        $string7 = /\/tunnelmole\-service/ nocase ascii wide
+        $string7 = "/tunnelmole-service" nocase ascii wide
         // Description: tmole - Share your local server with a Public URL
         // Reference: https://github.com/robbie-cahill/tunnelmole-client/
         $string8 = /\/tunnelmole\-service\.git/ nocase ascii wide
@@ -43,10 +43,10 @@ rule tunnelmole_client
         $string11 = /\\tunnelmole\.bundle\.js/ nocase ascii wide
         // Description: tmole - Share your local server with a Public URL
         // Reference: https://github.com/robbie-cahill/tunnelmole-client/
-        $string12 = /25191b226ad7ef139f81890c531b0c606c5645bbca6f149b3679b06c73e6cddc/ nocase ascii wide
+        $string12 = "25191b226ad7ef139f81890c531b0c606c5645bbca6f149b3679b06c73e6cddc" nocase ascii wide
         // Description: tmole - Share your local server with a Public URL
         // Reference: https://github.com/robbie-cahill/tunnelmole-client/
-        $string13 = /2b4328c30b58ecaf6febe1d7225b543b8886dcb4d8295be5973e6dc36f62c0f2/ nocase ascii wide
+        $string13 = "2b4328c30b58ecaf6febe1d7225b543b8886dcb4d8295be5973e6dc36f62c0f2" nocase ascii wide
         // Description: tmole - Share your local server with a Public URL
         // Reference: https://github.com/robbie-cahill/tunnelmole-client/
         $string14 = /dashboard\.tunnelmole\.com/ nocase ascii wide
@@ -73,7 +73,7 @@ rule tunnelmole_client
         $string21 = /node\stunnelmole\.js/ nocase ascii wide
         // Description: tmole - Share your local server with a Public URL
         // Reference: https://github.com/robbie-cahill/tunnelmole-client/
-        $string22 = /npm\sinstall\s\-g\stunnelmole/ nocase ascii wide
+        $string22 = "npm install -g tunnelmole" nocase ascii wide
         // Description: tmole - Share your local server with a Public URL
         // Reference: https://github.com/robbie-cahill/tunnelmole-client/
         $string23 = /npm\sinstall.{0,100}\stunnelmole/ nocase ascii wide
@@ -82,28 +82,28 @@ rule tunnelmole_client
         $string24 = /\-\-output\stmole\.exe/ nocase ascii wide
         // Description: tmole - Share your local server with a Public URL
         // Reference: https://github.com/robbie-cahill/tunnelmole-client/
-        $string25 = /robbie\-cahill\/tunnelmole\-client/ nocase ascii wide
+        $string25 = "robbie-cahill/tunnelmole-client" nocase ascii wide
         // Description: tmole - Share your local server with a Public URL
         // Reference: https://github.com/robbie-cahill/tunnelmole-client/
         $string26 = /service\.tunnelmole\.com/ nocase ascii wide
         // Description: tmole - Share your local server with a Public URL
         // Reference: https://github.com/robbie-cahill/tunnelmole-client/
-        $string27 = /tmole\s\-\sShare\syour\slocal\sserver\swith\sa\sPublic\sURL/ nocase ascii wide
+        $string27 = "tmole - Share your local server with a Public URL" nocase ascii wide
         // Description: tmole - Share your local server with a Public URL
         // Reference: https://github.com/robbie-cahill/tunnelmole-client/
-        $string28 = /tmole\s\-\-set\-api\-key\s/ nocase ascii wide
+        $string28 = "tmole --set-api-key " nocase ascii wide
         // Description: tmole - Share your local server with a Public URL
         // Reference: https://github.com/robbie-cahill/tunnelmole-client/
-        $string29 = /\'Tunnelmole\sService\slistening\son\shttp\sport\s/ nocase ascii wide
+        $string29 = "'Tunnelmole Service listening on http port " nocase ascii wide
         // Description: tmole - Share your local server with a Public URL
         // Reference: https://github.com/robbie-cahill/tunnelmole-client/
-        $string30 = /Tunnelmole\sService\slistening\son\swebsocket\sport\s/ nocase ascii wide
+        $string30 = "Tunnelmole Service listening on websocket port " nocase ascii wide
         // Description: tmole - Share your local server with a Public URL
         // Reference: https://github.com/robbie-cahill/tunnelmole-client/
-        $string31 = /tunnelmole\/cjs/ nocase ascii wide
+        $string31 = "tunnelmole/cjs" nocase ascii wide
         // Description: tmole - Share your local server with a Public URL
         // Reference: https://github.com/robbie-cahill/tunnelmole-client/
-        $string32 = /TUNNELMOLE_TELEMETRY/ nocase ascii wide
+        $string32 = "TUNNELMOLE_TELEMETRY" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

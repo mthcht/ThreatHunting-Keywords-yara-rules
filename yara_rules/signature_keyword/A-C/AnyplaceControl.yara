@@ -10,7 +10,7 @@ rule AnyplaceControl
     strings:
         // Description: access your unattended PC from anywhere
         // Reference: www.anyplace-control[.]com
-        $string1 = /RemoteAccess\:Win32\/AnyplaceControl/ nocase ascii wide
+        $string1 = "RemoteAccess:Win32/AnyplaceControl" nocase ascii wide
 
     condition:
         any of them

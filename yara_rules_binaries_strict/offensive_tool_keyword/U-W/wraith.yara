@@ -19,10 +19,10 @@ rule wraith
         $string3 = /\swraith\-server_v.{0,100}\.py/ nocase ascii wide
         // Description: A free and open-source, modular Remote Administration Tool (RAT) / Payload Dropper written in Go(lang) with a flexible command and control (C2) system.
         // Reference: https://github.com/wraith-labs/wraith
-        $string4 = /\\"active_wraith_clients\\"/ nocase ascii wide
+        $string4 = "\"active_wraith_clients\"" nocase ascii wide
         // Description: A free and open-source, modular Remote Administration Tool (RAT) / Payload Dropper written in Go(lang) with a flexible command and control (C2) system.
         // Reference: https://github.com/wraith-labs/wraith
-        $string5 = /\/assets\/wraith\-scripts\// nocase ascii wide
+        $string5 = "/assets/wraith-scripts/" nocase ascii wide
         // Description: A free and open-source, modular Remote Administration Tool (RAT) / Payload Dropper written in Go(lang) with a flexible command and control (C2) system.
         // Reference: https://github.com/wraith-labs/wraith
         $string6 = /\/wraith\.git/ nocase ascii wide
@@ -34,7 +34,7 @@ rule wraith
         $string8 = /\/wraith\-master\.zip/ nocase ascii wide
         // Description: A free and open-source, modular Remote Administration Tool (RAT) / Payload Dropper written in Go(lang) with a flexible command and control (C2) system.
         // Reference: https://github.com/wraith-labs/wraith
-        $string9 = /\/wraith\-RAT\-payloads/ nocase ascii wide
+        $string9 = "/wraith-RAT-payloads" nocase ascii wide
         // Description: A free and open-source, modular Remote Administration Tool (RAT) / Payload Dropper written in Go(lang) with a flexible command and control (C2) system.
         // Reference: https://github.com/wraith-labs/wraith
         $string10 = /\/wraith\-RAT\-payloads\.git/ nocase ascii wide
@@ -61,19 +61,19 @@ rule wraith
         $string17 = /\\wraith\-server_v.{0,100}\.py/ nocase ascii wide
         // Description: A free and open-source, modular Remote Administration Tool (RAT) / Payload Dropper written in Go(lang) with a flexible command and control (C2) system.
         // Reference: https://github.com/wraith-labs/wraith
-        $string18 = /\<h1\>Wraith\sLogin/ nocase ascii wide
+        $string18 = "<h1>Wraith Login" nocase ascii wide
         // Description: A free and open-source, modular Remote Administration Tool (RAT) / Payload Dropper written in Go(lang) with a flexible command and control (C2) system.
         // Reference: https://github.com/wraith-labs/wraith
-        $string19 = /\<title\>Wraith\sLogin\<\/title\>/ nocase ascii wide
+        $string19 = "<title>Wraith Login</title>" nocase ascii wide
         // Description: A free and open-source, modular Remote Administration Tool (RAT) / Payload Dropper written in Go(lang) with a flexible command and control (C2) system.
         // Reference: https://github.com/wraith-labs/wraith
-        $string20 = /04eb0f500553c9d58de8f5a8bb102cba7dcb0d1e9a77baa4227237c49a5e81d8/ nocase ascii wide
+        $string20 = "04eb0f500553c9d58de8f5a8bb102cba7dcb0d1e9a77baa4227237c49a5e81d8" nocase ascii wide
         // Description: A free and open-source, modular Remote Administration Tool (RAT) / Payload Dropper written in Go(lang) with a flexible command and control (C2) system.
         // Reference: https://github.com/wraith-labs/wraith
-        $string21 = /309c23d800972611948a5980921fdf6e78bdda2fc4d30f4dba3bd8c970a17e94/ nocase ascii wide
+        $string21 = "309c23d800972611948a5980921fdf6e78bdda2fc4d30f4dba3bd8c970a17e94" nocase ascii wide
         // Description: A free and open-source, modular Remote Administration Tool (RAT) / Payload Dropper written in Go(lang) with a flexible command and control (C2) system.
         // Reference: https://github.com/wraith-labs/wraith
-        $string22 = /76b70dcbcb1d45935f1b12eef38162b812f88bb4ff89a07a46609d879019103e/ nocase ascii wide
+        $string22 = "76b70dcbcb1d45935f1b12eef38162b812f88bb4ff89a07a46609d879019103e" nocase ascii wide
         // Description: A free and open-source, modular Remote Administration Tool (RAT) / Payload Dropper written in Go(lang) with a flexible command and control (C2) system.
         // Reference: https://github.com/wraith-labs/wraith
         $string23 = /dev\.l1qu1d\.net\/wraith\-labs\/wraith/ nocase ascii wide
@@ -85,13 +85,13 @@ rule wraith
         $string25 = /script_main\(wraith\,\scmdline\)/ nocase ascii wide
         // Description: A free and open-source, modular Remote Administration Tool (RAT) / Payload Dropper written in Go(lang) with a flexible command and control (C2) system.
         // Reference: https://github.com/wraith-labs/wraith
-        $string26 = /Successfully\sinstalled\swraith\sto\srun\son\sstartup\s/ nocase ascii wide
+        $string26 = "Successfully installed wraith to run on startup " nocase ascii wide
         // Description: A free and open-source, modular Remote Administration Tool (RAT) / Payload Dropper written in Go(lang) with a flexible command and control (C2) system.
         // Reference: https://github.com/wraith-labs/wraith
-        $string27 = /TR\-SLimey\/wraith\-RAT/ nocase ascii wide
+        $string27 = "TR-SLimey/wraith-RAT" nocase ascii wide
         // Description: A free and open-source, modular Remote Administration Tool (RAT) / Payload Dropper written in Go(lang) with a flexible command and control (C2) system.
         // Reference: https://github.com/wraith-labs/wraith
-        $string28 = /wraith\-labs\/wraith/ nocase ascii wide
+        $string28 = "wraith-labs/wraith" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

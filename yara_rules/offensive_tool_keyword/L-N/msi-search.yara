@@ -31,13 +31,13 @@ rule msi_search
         $string7 = /\\msi_search\.x86\.o/ nocase ascii wide
         // Description: This tool simplifies the task for red team operators and security teams to identify which MSI files correspond to which software and enables them to download the relevant file to investigate local privilege escalation vulnerabilities through MSI repairs
         // Reference: https://github.com/mandiant/msi-search
-        $string8 = /mandiant\/msi\-search/ nocase ascii wide
+        $string8 = "mandiant/msi-search" nocase ascii wide
         // Description: This tool simplifies the task for red team operators and security teams to identify which MSI files correspond to which software and enables them to download the relevant file to investigate local privilege escalation vulnerabilities through MSI repairs
         // Reference: https://github.com/mandiant/msi-search
         $string9 = /msi\-search\-main\.zip/ nocase ascii wide
         // Description: This tool simplifies the task for red team operators and security teams to identify which MSI files correspond to which software and enables them to download the relevant file to investigate local privilege escalation vulnerabilities through MSI repairs
         // Reference: https://github.com/mandiant/msi-search
-        $string10 = /Search\scached\sMSI\sfiles\sin\sC\:\/Windows\/Installer\// nocase ascii wide
+        $string10 = "Search cached MSI files in C:/Windows/Installer/" nocase ascii wide
 
     condition:
         any of them

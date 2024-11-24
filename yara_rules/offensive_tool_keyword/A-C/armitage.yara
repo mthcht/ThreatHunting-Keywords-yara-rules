@@ -10,7 +10,7 @@ rule armitage
     strings:
         // Description: Armitage is a graphical cyber attack management tool for Metasploit that visualizes your targets. recommends exploits and exposes the advanced capabilities of the framework 
         // Reference: https://github.com/r00t0v3rr1d3/armitage
-        $string1 = /\sinstall\sarmitage/ nocase ascii wide
+        $string1 = " install armitage" nocase ascii wide
         // Description: Armitage is a graphical cyber attack management tool for Metasploit that visualizes your targets. recommends exploits and exposes the advanced capabilities of the framework 
         // Reference: https://github.com/r00t0v3rr1d3/armitage
         $string2 = /\.\/teamserver\s/ nocase ascii wide

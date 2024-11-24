@@ -10,7 +10,7 @@ rule XXEinjector
     strings:
         // Description: XXEinjector automates retrieving files using direct and out of band methods. Directory listing only works in Java applications. Bruteforcing method needs to be used for other applications.
         // Reference: https://github.com/enjoiz/XXEinjector
-        $string1 = /XXEinjector/ nocase ascii wide
+        $string1 = "XXEinjector" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

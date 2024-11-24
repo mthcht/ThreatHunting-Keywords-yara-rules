@@ -16,7 +16,7 @@ rule wmiexec2
         $string2 = /\/wmiexec2\.git/ nocase ascii wide
         // Description: wmiexec2.0 is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string3 = /ice\-wzl\/wmiexec2/ nocase ascii wide
+        $string3 = "ice-wzl/wmiexec2" nocase ascii wide
         // Description: wmiexec2.0 is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
         $string4 = /wmiexec2\.0\.py/ nocase ascii wide
@@ -25,7 +25,7 @@ rule wmiexec2
         $string5 = /wmiexec2\.py/ nocase ascii wide
         // Description: wmiexec2.0 is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string6 = /wmiexec2\-main/ nocase ascii wide
+        $string6 = "wmiexec2-main" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

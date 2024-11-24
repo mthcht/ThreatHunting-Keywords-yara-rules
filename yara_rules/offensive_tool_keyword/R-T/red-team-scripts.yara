@@ -16,7 +16,7 @@ rule red_team_scripts
         $string2 = /HostEnum\.ps1/ nocase ascii wide
         // Description: script comprised of multiple system enumeration / situational awareness techniques collected over time. If system is a member of a Windows domain. it can also perform limited domain enumeration with the -Domain switch
         // Reference: https://github.com/threatexpress/red-team-scripts
-        $string3 = /Invoke\-HostEnum/ nocase ascii wide
+        $string3 = "Invoke-HostEnum" nocase ascii wide
 
     condition:
         any of them

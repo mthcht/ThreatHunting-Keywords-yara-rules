@@ -10,7 +10,7 @@ rule ssh_auditor
     strings:
         // Description: The best way to scan for weak ssh passwords on your network.
         // Reference: https://github.com/ncsa/ssh-auditor
-        $string1 = /ssh\-auditor/ nocase ascii wide
+        $string1 = "ssh-auditor" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

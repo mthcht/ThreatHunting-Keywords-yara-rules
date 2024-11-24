@@ -31,7 +31,7 @@ rule dirdevil
         $string7 = /\/dirdevil_decoder_only\.ps1/ nocase ascii wide
         // Description: PowerShell to hide data in directory structures
         // Reference: https://github.com/nyxgeek/dirdevil
-        $string8 = /\@2024\snyxgeek\s\-\sTrustedSec/ nocase ascii wide
+        $string8 = "@2024 nyxgeek - TrustedSec" nocase ascii wide
         // Description: PowerShell to hide data in directory structures
         // Reference: https://github.com/nyxgeek/dirdevil
         $string9 = /\\dirdevil\.ps1/ nocase ascii wide
@@ -46,19 +46,19 @@ rule dirdevil
         $string12 = /\\trustedsec\\Downloads\\putty\.exe/ nocase ascii wide
         // Description: PowerShell to hide data in directory structures
         // Reference: https://github.com/nyxgeek/dirdevil
-        $string13 = /0ad1f9bb7c3b296339d3c3f9bb4338b79bfb9f051fbb8749c411c44195e68d35/ nocase ascii wide
+        $string13 = "0ad1f9bb7c3b296339d3c3f9bb4338b79bfb9f051fbb8749c411c44195e68d35" nocase ascii wide
         // Description: PowerShell to hide data in directory structures
         // Reference: https://github.com/nyxgeek/dirdevil
-        $string14 = /3e6740a3e67c207dc53df0daf1c5717def2b267119c75ff0cf6e36585efc332a/ nocase ascii wide
+        $string14 = "3e6740a3e67c207dc53df0daf1c5717def2b267119c75ff0cf6e36585efc332a" nocase ascii wide
         // Description: PowerShell to hide data in directory structures
         // Reference: https://github.com/nyxgeek/dirdevil
-        $string15 = /41f73755bc80ff028571e3496dd851447cc69f428045223deb717173e5c44e69/ nocase ascii wide
+        $string15 = "41f73755bc80ff028571e3496dd851447cc69f428045223deb717173e5c44e69" nocase ascii wide
         // Description: PowerShell to hide data in directory structures
         // Reference: https://github.com/nyxgeek/dirdevil
-        $string16 = /dirdevil\s\-\sPowerShell\sto\shide\sdata\sin\sdirectory\sstructures/ nocase ascii wide
+        $string16 = "dirdevil - PowerShell to hide data in directory structures" nocase ascii wide
         // Description: PowerShell to hide data in directory structures
         // Reference: https://github.com/nyxgeek/dirdevil
-        $string17 = /nyxgeek\/dirdevil/ nocase ascii wide
+        $string17 = "nyxgeek/dirdevil" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

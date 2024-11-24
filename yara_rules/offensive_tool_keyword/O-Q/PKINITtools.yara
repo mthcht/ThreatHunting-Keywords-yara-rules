@@ -13,16 +13,16 @@ rule PKINITtools
         $string1 = /\/httpattack\.py/ nocase ascii wide
         // Description: Tools for Kerberos PKINIT and relaying to AD CS
         // Reference: https://github.com/dirkjanm/PKINITtools
-        $string2 = /\/ntlmrelayx\// nocase ascii wide
+        $string2 = "/ntlmrelayx/" nocase ascii wide
         // Description: Tools for Kerberos PKINIT and relaying to AD CS
         // Reference: https://github.com/dirkjanm/PKINITtools
-        $string3 = /\/PKINITtools/ nocase ascii wide
+        $string3 = "/PKINITtools" nocase ascii wide
         // Description: Tools for Kerberos PKINIT and relaying to AD CS
         // Reference: https://github.com/dirkjanm/PKINITtools
         $string4 = /\=Administrator\.ccache/ nocase ascii wide
         // Description: Tools for Kerberos PKINIT and relaying to AD CS
         // Reference: https://github.com/dirkjanm/PKINITtools
-        $string5 = /dirkjanm\/PKINITtools/ nocase ascii wide
+        $string5 = "dirkjanm/PKINITtools" nocase ascii wide
         // Description: Tools for Kerberos PKINIT and relaying to AD CS
         // Reference: https://github.com/dirkjanm/PKINITtools
         $string6 = /export\sKRB5CCNAME\=.{0,1000}\.ccache/ nocase ascii wide
@@ -37,7 +37,7 @@ rule PKINITtools
         $string9 = /gettgtpkinit\.py/ nocase ascii wide
         // Description: Tools for Kerberos PKINIT and relaying to AD CS
         // Reference: https://github.com/dirkjanm/PKINITtools
-        $string10 = /impacket\sminikerberos/ nocase ascii wide
+        $string10 = "impacket minikerberos" nocase ascii wide
         // Description: Tools for Kerberos PKINIT and relaying to AD CS
         // Reference: https://github.com/dirkjanm/PKINITtools
         $string11 = /PKINITtools\.git/ nocase ascii wide

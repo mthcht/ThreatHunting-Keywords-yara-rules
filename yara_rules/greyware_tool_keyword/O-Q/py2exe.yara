@@ -10,16 +10,16 @@ rule py2exe
     strings:
         // Description: py2exe allows you to convert Python scripts into standalone executable files for Windows othen used by attacker
         // Reference: https://github.com/py2exe/py2exe
-        $string1 = /\spy2exe/ nocase ascii wide
+        $string1 = " py2exe" nocase ascii wide
         // Description: py2exe allows you to convert Python scripts into standalone executable files for Windows othen used by attacker
         // Reference: https://github.com/py2exe/py2exe
-        $string2 = /\/py2exe\// nocase ascii wide
+        $string2 = "/py2exe/" nocase ascii wide
         // Description: py2exe allows you to convert Python scripts into standalone executable files for Windows othen used by attacker
         // Reference: https://github.com/py2exe/py2exe
         $string3 = /\\py2exe/ nocase ascii wide
         // Description: py2exe allows you to convert Python scripts into standalone executable files for Windows othen used by attacker
         // Reference: https://github.com/py2exe/py2exe
-        $string4 = /py2exe\s/ nocase ascii wide
+        $string4 = "py2exe " nocase ascii wide
         // Description: py2exe allows you to convert Python scripts into standalone executable files for Windows othen used by attacker
         // Reference: https://github.com/py2exe/py2exe
         $string5 = /py2exe.{0,1000}\.exe\s/ nocase ascii wide

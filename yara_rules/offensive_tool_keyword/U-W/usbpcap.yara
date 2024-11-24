@@ -10,7 +10,7 @@ rule usbpcap
     strings:
         // Description: USB capture for Windows.
         // Reference: https://github.com/s-h-3-l-l/katoolin3
-        $string1 = /USBPcap/ nocase ascii wide
+        $string1 = "USBPcap" nocase ascii wide
 
     condition:
         any of them

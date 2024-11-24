@@ -64,7 +64,7 @@ rule weakpass
         $string18 = /weakpass\.com\/wordlist\// nocase ascii wide
         // Description: Weakpass collection of tools for bruteforce and hashcracking
         // Reference: https://github.com/zzzteph/weakpass
-        $string19 = /weakpass\/crack\-js/ nocase ascii wide
+        $string19 = "weakpass/crack-js" nocase ascii wide
         // Description: Weakpass collection of tools for bruteforce and hashcracking
         // Reference: https://github.com/zzzteph/weakpass
         $string20 = /weakpass_3\.7z/ nocase ascii wide
@@ -82,7 +82,7 @@ rule weakpass
         $string24 = /xsukax\-Wordlist\-All\.7z/ nocase ascii wide
         // Description: Weakpass collection of tools for bruteforce and hashcracking
         // Reference: https://github.com/zzzteph/weakpass
-        $string25 = /zzzteph\/weakpass/ nocase ascii wide
+        $string25 = "zzzteph/weakpass" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

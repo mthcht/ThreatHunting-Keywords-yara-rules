@@ -10,16 +10,16 @@ rule _
     strings:
         // Description: reversed string for obfuscation
         // Reference: N/A
-        $string1 = /\secivreS\-potS/ nocase ascii wide
+        $string1 = " ecivreS-potS" nocase ascii wide
         // Description: reversed string for obfuscation
         // Reference: N/A
-        $string2 = /\sgifnoc\scs/ nocase ascii wide
+        $string2 = " gifnoc cs" nocase ascii wide
         // Description: reversed string for obfuscation
         // Reference: N/A
-        $string3 = /\snoitcetorPAUP/ nocase ascii wide
+        $string3 = " noitcetorPAUP" nocase ascii wide
         // Description: reversed string for obfuscation
         // Reference: N/A
-        $string4 = /\%tooRmetsyS\%/ nocase ascii wide
+        $string4 = "%tooRmetsyS%" nocase ascii wide
         // Description: attempt to bypass security controls or execute commands from an unexpected location
         // Reference: https://twitter.com/malwrhunterteam/status/1737220172220620854/photo/1
         $string5 = /\.\.\\\.\.\\\.\.\\\.\.\\\.\.\\\.\.\\Windows\\System32\\cmd\.exe/ nocase ascii wide
@@ -145,13 +145,13 @@ rule _
         $string45 = /c\:\\.{0,1000}\\\\u0.{0,1000}\\\\u0.{0,1000}\\\\u0.{0,1000}\\\\u0/ nocase ascii wide
         // Description: reversed string for obfuscation
         // Reference: N/A
-        $string46 = /delbasiD\sepyTputratS\-\s/ nocase ascii wide
+        $string46 = "delbasiD epyTputratS- " nocase ascii wide
         // Description: reversed string for obfuscation
         // Reference: N/A
-        $string47 = /ecnereferPpM\-teS/ nocase ascii wide
+        $string47 = "ecnereferPpM-teS" nocase ascii wide
         // Description: reversed string for obfuscation
         // Reference: N/A
-        $string48 = /eliforPllaweriFteN\-teS/ nocase ascii wide
+        $string48 = "eliforPllaweriFteN-teS" nocase ascii wide
         // Description: reversed string rundll32.exe obfuscation
         // Reference: N/A
         $string49 = /exe\.23lldnur/ nocase ascii wide
@@ -169,19 +169,19 @@ rule _
         $string53 = /exe\.tsohcvs/ nocase ascii wide
         // Description: reversed string for obfuscation
         // Reference: N/A
-        $string54 = /gnirotinoMemitlaeRelbasiD/ nocase ascii wide
+        $string54 = "gnirotinoMemitlaeRelbasiD" nocase ascii wide
         // Description: allows users to create a unique URL to collect and inspect HTTP requests. It is commonly used for debugging webhooks - it can also be abused by attackers for verifying the reachability and effectiveness of their payloads
         // Reference: http://requestbin.net
         $string55 = /https\:\/\/requestbin\.net\/r\// nocase ascii wide
         // Description: reversed string for obfuscation
         // Reference: N/A
-        $string56 = /llawerifvda\shsten/ nocase ascii wide
+        $string56 = "llawerifvda hsten" nocase ascii wide
         // Description: reversed string for obfuscation
         // Reference: N/A
         $string57 = /niB\.elcyceR\$/ nocase ascii wide
         // Description: reversed string for obfuscation
         // Reference: N/A
-        $string58 = /teSlortnoCtnerruC/ nocase ascii wide
+        $string58 = "teSlortnoCtnerruC" nocase ascii wide
         // Description: Suspicious tlds with suspicious file types
         // Reference: N/A
         $string59 = /https\:\/\/.{0,1000}\.xyz\/.{0,1000}\.ps1/ nocase ascii wide

@@ -37,7 +37,7 @@ rule hackingtool
         $string9 = /wireless_attack_tools\.py/ nocase ascii wide
         // Description: ALL IN ONE Hacking Tool For Hackers
         // Reference: https://github.com/Z4nzu/hackingtool
-        $string10 = /Z4nzu\/hackingtool/ nocase ascii wide
+        $string10 = "Z4nzu/hackingtool" nocase ascii wide
 
     condition:
         any of them

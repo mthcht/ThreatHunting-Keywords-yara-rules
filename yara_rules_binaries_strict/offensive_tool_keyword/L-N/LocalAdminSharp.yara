@@ -10,7 +10,7 @@ rule LocalAdminSharp
     strings:
         // Description: .NET executable to use when dealing with privilege escalation on Windows to gain local administrator access
         // Reference: https://github.com/notdodo/LocalAdminSharp
-        $string1 = /\\"localadmin123\!\\"/ nocase ascii wide
+        $string1 = "\"localadmin123!\"" nocase ascii wide
         // Description: .NET executable to use when dealing with privilege escalation on Windows to gain local administrator access
         // Reference: https://github.com/notdodo/LocalAdminSharp
         $string2 = /\/LocalAdminSharp\.git/ nocase ascii wide
@@ -22,7 +22,7 @@ rule LocalAdminSharp
         $string4 = /\\LocalAdminSharp\.sln/ nocase ascii wide
         // Description: .NET executable to use when dealing with privilege escalation on Windows to gain local administrator access
         // Reference: https://github.com/notdodo/LocalAdminSharp
-        $string5 = /07628592\-5A22\-4C0A\-9330\-6C90BD7A94B6/ nocase ascii wide
+        $string5 = "07628592-5A22-4C0A-9330-6C90BD7A94B6" nocase ascii wide
         // Description: .NET executable to use when dealing with privilege escalation on Windows to gain local administrator access
         // Reference: https://github.com/notdodo/LocalAdminSharp
         $string6 = /LocalAdminSharp\.csproj/ nocase ascii wide
@@ -34,7 +34,7 @@ rule LocalAdminSharp
         $string8 = /LocalAdminSharp\-main.{0,100}\'/ nocase ascii wide
         // Description: .NET executable to use when dealing with privilege escalation on Windows to gain local administrator access
         // Reference: https://github.com/notdodo/LocalAdminSharp
-        $string9 = /notdodo\/LocalAdminSharp/ nocase ascii wide
+        $string9 = "notdodo/LocalAdminSharp" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

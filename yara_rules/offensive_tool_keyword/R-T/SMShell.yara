@@ -13,13 +13,13 @@ rule SMShell
         $string1 = /\/SMShell\.git/ nocase ascii wide
         // Description: PoC for a SMS-based shell. Send commands and receive responses over SMS from mobile broadband capable computers
         // Reference: https://github.com/persistent-security/SMShell
-        $string2 = /\/SMShell\// nocase ascii wide
+        $string2 = "/SMShell/" nocase ascii wide
         // Description: PoC for a SMS-based shell. Send commands and receive responses over SMS from mobile broadband capable computers
         // Reference: https://github.com/persistent-security/SMShell
         $string3 = /\-\-mifi\-username\s.{0,1000}\s\-\-mifi\-password\s.{0,1000}\s\-\-number\s\+/ nocase ascii wide
         // Description: PoC for a SMS-based shell. Send commands and receive responses over SMS from mobile broadband capable computers
         // Reference: https://github.com/persistent-security/SMShell
-        $string4 = /persistent\-security\/SMShell/ nocase ascii wide
+        $string4 = "persistent-security/SMShell" nocase ascii wide
         // Description: PoC for a SMS-based shell. Send commands and receive responses over SMS from mobile broadband capable computers
         // Reference: https://github.com/persistent-security/SMShell
         $string5 = /server\-console\.exe\s\+/ nocase ascii wide

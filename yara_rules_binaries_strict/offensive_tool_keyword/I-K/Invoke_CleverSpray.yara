@@ -25,22 +25,22 @@ rule Invoke_CleverSpray
         $string5 = /\[\!\]\sThe\spassword\s.{0,100}\swill\sbe\ssprayed\son\stargeted\suser\saccounts\shaving/ nocase ascii wide
         // Description: Password Spraying Script detecting current and previous passwords of Active Directory User
         // Reference: https://github.com/wavestone-cdt/Invoke-CleverSpray
-        $string6 = /fdb1df0047a31328f0796bd07caf642efc35651ad78389025eb5afa2748bcd04/ nocase ascii wide
+        $string6 = "fdb1df0047a31328f0796bd07caf642efc35651ad78389025eb5afa2748bcd04" nocase ascii wide
         // Description: Password Spraying Script detecting current and previous passwords of Active Directory User
         // Reference: https://github.com/wavestone-cdt/Invoke-CleverSpray
-        $string7 = /Invoke\-CleverSpray/ nocase ascii wide
+        $string7 = "Invoke-CleverSpray" nocase ascii wide
         // Description: Password Spraying Script detecting current and previous passwords of Active Directory User
         // Reference: https://github.com/wavestone-cdt/Invoke-CleverSpray
         $string8 = /Invoke\-CleverSpray\.ps1/ nocase ascii wide
         // Description: Password Spraying Script detecting current and previous passwords of Active Directory User
         // Reference: https://github.com/wavestone-cdt/Invoke-CleverSpray
-        $string9 = /Please\suse\sthe\s\-Password\soption\sto\sspecify\sa\sunique\spassword\sto\sspray/ nocase ascii wide
+        $string9 = "Please use the -Password option to specify a unique password to spray" nocase ascii wide
         // Description: Password Spraying Script detecting current and previous passwords of Active Directory User
         // Reference: https://github.com/wavestone-cdt/Invoke-CleverSpray
-        $string10 = /Please\suse\sthe\s\-User\soption\sto\sspecify\sa\sunique\susername\sto\sspray/ nocase ascii wide
+        $string10 = "Please use the -User option to specify a unique username to spray" nocase ascii wide
         // Description: Password Spraying Script detecting current and previous passwords of Active Directory User
         // Reference: https://github.com/wavestone-cdt/Invoke-CleverSpray
-        $string11 = /wavestone\-cdt\/Invoke\-CleverSpray/ nocase ascii wide
+        $string11 = "wavestone-cdt/Invoke-CleverSpray" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

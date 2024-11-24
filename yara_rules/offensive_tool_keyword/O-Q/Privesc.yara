@@ -25,10 +25,10 @@ rule Privesc
         $string5 = /\\Privesc\-master/ nocase ascii wide
         // Description: Windows PowerShell script that finds misconfiguration issues which can lead to privilege escalation
         // Reference: https://github.com/enjoiz/Privesc
-        $string6 = /enjoiz\/Privesc/ nocase ascii wide
+        $string6 = "enjoiz/Privesc" nocase ascii wide
         // Description: Windows PowerShell script that finds misconfiguration issues which can lead to privilege escalation
         // Reference: https://github.com/enjoiz/Privesc
-        $string7 = /Invoke\-Privesc/ nocase ascii wide
+        $string7 = "Invoke-Privesc" nocase ascii wide
 
     condition:
         any of them

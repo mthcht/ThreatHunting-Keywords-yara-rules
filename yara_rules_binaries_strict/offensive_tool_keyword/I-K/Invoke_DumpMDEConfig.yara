@@ -43,13 +43,13 @@ rule Invoke_DumpMDEConfig
         $string11 = /\\ExploitGuardProtectionHistory\.csv/ nocase ascii wide
         // Description: PowerShell script to dump Microsoft Defender Config, protection history and Exploit Guard Protection History (no admin privileges required )
         // Reference: https://github.com/BlackSnufkin/Invoke-DumpMDEConfig
-        $string12 = /78a098cf3b91a354d6425bb5c08af4a0cc137a71bec4ad44707d864e263a4384/ nocase ascii wide
+        $string12 = "78a098cf3b91a354d6425bb5c08af4a0cc137a71bec4ad44707d864e263a4384" nocase ascii wide
         // Description: PowerShell script to dump Microsoft Defender Config, protection history and Exploit Guard Protection History (no admin privileges required )
         // Reference: https://github.com/BlackSnufkin/Invoke-DumpMDEConfig
-        $string13 = /Invoke\-DumpMDEConfig/ nocase ascii wide
+        $string13 = "Invoke-DumpMDEConfig" nocase ascii wide
         // Description: PowerShell script to dump Microsoft Defender Config, protection history and Exploit Guard Protection History (no admin privileges required )
         // Reference: https://github.com/BlackSnufkin/Invoke-DumpMDEConfig
-        $string14 = /Query\-ExploitGuardProtectionHistory\s/ nocase ascii wide
+        $string14 = "Query-ExploitGuardProtectionHistory " nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

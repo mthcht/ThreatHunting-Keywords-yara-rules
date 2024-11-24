@@ -19,13 +19,13 @@ rule GhostMapper
         $string3 = /\\GhostMapper\.sln/ nocase ascii wide
         // Description: GhostMapper involves modifying Windows system "dump_" prefix drivers to exploit crash handling mechanisms for malicious purposes.
         // Reference: https://github.com/Oliver-1-1/GhostMapper
-        $string4 = /4D7BA537\-54EC\-4005\-9CC2\-AE134B4526F9/ nocase ascii wide
+        $string4 = "4D7BA537-54EC-4005-9CC2-AE134B4526F9" nocase ascii wide
         // Description: GhostMapper involves modifying Windows system "dump_" prefix drivers to exploit crash handling mechanisms for malicious purposes.
         // Reference: https://github.com/Oliver-1-1/GhostMapper
         $string5 = /GhostMapper\-main\./ nocase ascii wide
         // Description: GhostMapper involves modifying Windows system "dump_" prefix drivers to exploit crash handling mechanisms for malicious purposes.
         // Reference: https://github.com/Oliver-1-1/GhostMapper
-        $string6 = /Oliver\-1\-1\/GhostMapper/ nocase ascii wide
+        $string6 = "Oliver-1-1/GhostMapper" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

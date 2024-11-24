@@ -16,7 +16,7 @@ rule DueDLLigence
         $string2 = /\\duedlligence\.dll/ nocase ascii wide
         // Description: Shellcode runner framework for application whitelisting bypasses and DLL side-loading
         // Reference: https://github.com/mandiant/DueDLLigence
-        $string3 = /73948912\-CEBD\-48ED\-85E2\-85FCD1D4F560/ nocase ascii wide
+        $string3 = "73948912-CEBD-48ED-85E2-85FCD1D4F560" nocase ascii wide
         // Description: Shellcode runner framework for application whitelisting bypasses and DLL side-loading
         // Reference: https://github.com/mandiant/DueDLLigence
         $string4 = /DueDLLigence\.cs/ nocase ascii wide
@@ -25,10 +25,10 @@ rule DueDLLigence
         $string5 = /DueDLLigence\.sln/ nocase ascii wide
         // Description: Shellcode runner framework for application whitelisting bypasses and DLL side-loading
         // Reference: https://github.com/mandiant/DueDLLigence
-        $string6 = /DueDLLigence\-master/ nocase ascii wide
+        $string6 = "DueDLLigence-master" nocase ascii wide
         // Description: Shellcode runner framework for application whitelisting bypasses and DLL side-loading
         // Reference: https://github.com/mandiant/DueDLLigence
-        $string7 = /mandiant\/DueDLLigence/ nocase ascii wide
+        $string7 = "mandiant/DueDLLigence" nocase ascii wide
 
     condition:
         any of them

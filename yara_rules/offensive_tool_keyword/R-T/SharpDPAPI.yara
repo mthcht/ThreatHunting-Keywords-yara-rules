@@ -19,10 +19,10 @@ rule SharpDPAPI
         $string3 = /\sblob\s\/target\:.{0,1000}\.bin.{0,1000}\s\/unprotect/ nocase ascii wide
         // Description: SharpDPAPI is a C# port of some Mimikatz DPAPI functionality.
         // Reference: https://github.com/GhostPack/SharpDPAPI
-        $string4 = /\scredentials\s\/pvk\:/ nocase ascii wide
+        $string4 = " credentials /pvk:" nocase ascii wide
         // Description: SharpDPAPI is a C# port of some Mimikatz DPAPI functionality.
         // Reference: https://github.com/GhostPack/SharpDPAPI
-        $string5 = /\skeepass\s\/unprotect/ nocase ascii wide
+        $string5 = " keepass /unprotect" nocase ascii wide
         // Description: SharpDPAPI is a C# port of some Mimikatz DPAPI functionality.
         // Reference: https://github.com/GhostPack/SharpDPAPI
         $string6 = /\sps\s\/target\:.{0,1000}\.xml\s\/unprotect/ nocase ascii wide
@@ -88,7 +88,7 @@ rule SharpDPAPI
         $string26 = /\/SharpDPAPI\.git/ nocase ascii wide
         // Description: SharpDPAPI is a C# port of some Mimikatz DPAPI functionality.
         // Reference: https://github.com/GhostPack/SharpDPAPI
-        $string27 = /\[SharpDPAPI\.Program\]\:\:Main\(\"machinemasterkeys\"\)/ nocase ascii wide
+        $string27 = /\[SharpDPAPI\.Program\]\:\:Main\(\\"machinemasterkeys\\"\)/ nocase ascii wide
         // Description: SharpDPAPI is a C# port of some Mimikatz DPAPI functionality.
         // Reference: https://github.com/GhostPack/SharpDPAPI
         $string28 = /\[X\]\sMust\sbe\selevated\sto\striage\sSYSTEM\scredentials\!/ nocase ascii wide
@@ -112,22 +112,22 @@ rule SharpDPAPI
         $string34 = /\]\sWill\sdecrypt\suser\smasterkeys\swith\sNTLM\shash\:\s/ nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string35 = /\>SharpDPAPI\</ nocase ascii wide
+        $string35 = ">SharpDPAPI<" nocase ascii wide
         // Description: SharpDPAPI is a C# port of some Mimikatz DPAPI functionality.
         // Reference: https://github.com/GhostPack/SharpDPAPI
-        $string36 = /2F00A05B\-263D\-4FCC\-846B\-DA82BD684603/ nocase ascii wide
+        $string36 = "2F00A05B-263D-4FCC-846B-DA82BD684603" nocase ascii wide
         // Description: SharpDPAPI is a C# port of some Mimikatz DPAPI functionality.
         // Reference: https://github.com/GhostPack/SharpDPAPI
-        $string37 = /5d975e81c68574849bb0fec4c6d2116a4ba7dd58bdd1710463ab75d9a8054bc3/ nocase ascii wide
+        $string37 = "5d975e81c68574849bb0fec4c6d2116a4ba7dd58bdd1710463ab75d9a8054bc3" nocase ascii wide
         // Description: SharpDPAPI is a C# port of some Mimikatz DPAPI functionality.
         // Reference: https://github.com/GhostPack/SharpDPAPI
-        $string38 = /5F026C27\-F8E6\-4052\-B231\-8451C6A73838/ nocase ascii wide
+        $string38 = "5F026C27-F8E6-4052-B231-8451C6A73838" nocase ascii wide
         // Description: SharpDPAPI is a C# port of some Mimikatz DPAPI functionality.
         // Reference: https://github.com/GhostPack/SharpDPAPI
-        $string39 = /d907d7686b725441db1deb645a7079ca79f4dd1d8a18ca4b2bb98c12622603ef/ nocase ascii wide
+        $string39 = "d907d7686b725441db1deb645a7079ca79f4dd1d8a18ca4b2bb98c12622603ef" nocase ascii wide
         // Description: SharpDPAPI is a C# port of some Mimikatz DPAPI functionality.
         // Reference: https://github.com/GhostPack/SharpDPAPI
-        $string40 = /GhostPack\/SharpDPAPI/ nocase ascii wide
+        $string40 = "GhostPack/SharpDPAPI" nocase ascii wide
         // Description: SharpDPAPI is a C# port of some Mimikatz DPAPI functionality.
         // Reference: https://github.com/GhostPack/SharpDPAPI
         $string41 = /MakeMeEnterpriseAdmin\.ps1/ nocase ascii wide
@@ -136,13 +136,13 @@ rule SharpDPAPI
         $string42 = /SharpChrome.{0,1000}\sbackupkey\s.{0,1000}\.pvk/ nocase ascii wide
         // Description: SharpDPAPI is a C# port of some Mimikatz DPAPI functionality.
         // Reference: https://github.com/GhostPack/SharpDPAPI
-        $string43 = /SharpDPAPI\sbackupkey/ nocase ascii wide
+        $string43 = "SharpDPAPI backupkey" nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string44 = /SharpDPAPI\sbackupkey/ nocase ascii wide
+        $string44 = "SharpDPAPI backupkey" nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string45 = /SharpDPAPI\scompleted\sin\s/ nocase ascii wide
+        $string45 = "SharpDPAPI completed in " nocase ascii wide
         // Description: SharpDPAPI is a C# port of some Mimikatz DPAPI functionality.
         // Reference: https://github.com/GhostPack/SharpDPAPI
         $string46 = /SharpDPAPI.{0,1000}\scredentias\s/ nocase ascii wide
@@ -172,7 +172,7 @@ rule SharpDPAPI
         $string54 = /SharpDPAPI\.txt/ nocase ascii wide
         // Description: SharpDPAPI is a C# port of some Mimikatz DPAPI functionality.
         // Reference: https://github.com/GhostPack/SharpDPAPI
-        $string55 = /SharpDPAPI\-master/ nocase ascii wide
+        $string55 = "SharpDPAPI-master" nocase ascii wide
 
     condition:
         any of them

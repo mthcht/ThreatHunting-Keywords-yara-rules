@@ -13,13 +13,13 @@ rule portscan
         $string1 = /\/portscan\.git/ nocase ascii wide
         // Description: A simple TCP and UDP portscanner written in Go
         // Reference: https://github.com/zs5460/portscan
-        $string2 = /\/portscan\/releases\// nocase ascii wide
+        $string2 = "/portscan/releases/" nocase ascii wide
         // Description: A simple TCP and UDP portscanner written in Go
         // Reference: https://github.com/zs5460/portscan
-        $string3 = /57c646df3c07792d9c6e479b7faa5ccd7802dc03dc49e477534e2322cb753bf9/ nocase ascii wide
+        $string3 = "57c646df3c07792d9c6e479b7faa5ccd7802dc03dc49e477534e2322cb753bf9" nocase ascii wide
         // Description: A simple TCP and UDP portscanner written in Go
         // Reference: https://github.com/zs5460/portscan
-        $string4 = /zs5460\/portscan/ nocase ascii wide
+        $string4 = "zs5460/portscan" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

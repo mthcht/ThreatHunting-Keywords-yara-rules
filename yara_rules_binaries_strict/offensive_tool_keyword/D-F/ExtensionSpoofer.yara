@@ -37,10 +37,10 @@ rule ExtensionSpoofer
         $string9 = /ExtensionSpoofer\-1\.zip/ nocase ascii wide
         // Description: Spoof file icons and extensions in Windows
         // Reference: https://github.com/henriksb/ExtensionSpoofer
-        $string10 = /FCD5E13D\-1663\-4226\-8280\-1C6A97933AB7/ nocase ascii wide
+        $string10 = "FCD5E13D-1663-4226-8280-1C6A97933AB7" nocase ascii wide
         // Description: Spoof file icons and extensions in Windows
         // Reference: https://github.com/henriksb/ExtensionSpoofer
-        $string11 = /henriksb\/ExtensionSpoofer/ nocase ascii wide
+        $string11 = "henriksb/ExtensionSpoofer" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

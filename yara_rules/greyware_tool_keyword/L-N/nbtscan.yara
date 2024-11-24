@@ -16,7 +16,7 @@ rule nbtscan
         $string2 = /nbtscan\s\-r\s.{0,1000}\/24/ nocase ascii wide
         // Description: Identify Potential Points for Man-in-the-Middle Attacks
         // Reference: N/A
-        $string3 = /nbtscan\s\-s\s\:\s/ nocase ascii wide
+        $string3 = "nbtscan -s : " nocase ascii wide
 
     condition:
         any of them

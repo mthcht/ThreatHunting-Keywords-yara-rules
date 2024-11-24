@@ -10,7 +10,7 @@ rule Red_Baron
     strings:
         // Description: Red Baron is a set of modules and custom/third-party providers for Terraform which tries to automate creating resilient. disposable. secure and agile infrastructure for Red Teams.
         // Reference: https://github.com/byt3bl33d3r/Red-Baron
-        $string1 = /Red\-Baron/ nocase ascii wide
+        $string1 = "Red-Baron" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

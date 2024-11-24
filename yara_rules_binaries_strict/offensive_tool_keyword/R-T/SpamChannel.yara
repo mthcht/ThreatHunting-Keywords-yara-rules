@@ -13,7 +13,7 @@ rule SpamChannel
         $string1 = /\/SpamChannel\.git/ nocase ascii wide
         // Description: poof emails from any of the +2 Million domains using MailChannels
         // Reference: https://github.com/byt3bl33d3r/SpamChannel
-        $string2 = /byt3bl33d3r\/SpamChannel/ nocase ascii wide
+        $string2 = "byt3bl33d3r/SpamChannel" nocase ascii wide
         // Description: poof emails from any of the +2 Million domains using MailChannels
         // Reference: https://github.com/byt3bl33d3r/SpamChannel
         $string3 = /SpamChannel\-main\.zip/ nocase ascii wide

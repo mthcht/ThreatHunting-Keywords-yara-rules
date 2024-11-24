@@ -31,10 +31,10 @@ rule bropper
         $string7 = /Bropper\-main\.zip/ nocase ascii wide
         // Description: An automatic Blind ROP exploitation tool 
         // Reference: https://github.com/Hakumarachi/Bropper
-        $string8 = /\-\-expected\sBad\s\-\-expected\-stop\sWelcome/ nocase ascii wide
+        $string8 = "--expected Bad --expected-stop Welcome" nocase ascii wide
         // Description: An automatic Blind ROP exploitation tool 
         // Reference: https://github.com/Hakumarachi/Bropper
-        $string9 = /Hakumarachi\/Bropper/ nocase ascii wide
+        $string9 = "Hakumarachi/Bropper" nocase ascii wide
 
     condition:
         any of them

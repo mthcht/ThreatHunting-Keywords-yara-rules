@@ -13,10 +13,10 @@ rule SharpSword
         $string1 = /\/SharpSword\.git/ nocase ascii wide
         // Description: Read the contents of MS Word Documents using Cobalt Strike's Execute-Assembly
         // Reference: https://github.com/OG-Sadpanda/SharpSword
-        $string2 = /9E357027\-8AA6\-4376\-8146\-F5AF610E14BB/ nocase ascii wide
+        $string2 = "9E357027-8AA6-4376-8146-F5AF610E14BB" nocase ascii wide
         // Description: Read the contents of MS Word Documents using Cobalt Strike's Execute-Assembly
         // Reference: https://github.com/OG-Sadpanda/SharpSword
-        $string3 = /OG\-Sadpanda\/SharpSword/ nocase ascii wide
+        $string3 = "OG-Sadpanda/SharpSword" nocase ascii wide
         // Description: Read the contents of MS Word Documents using Cobalt Strike's Execute-Assembly
         // Reference: https://github.com/OG-Sadpanda/SharpSword
         $string4 = /SharpSword\.csproj/ nocase ascii wide

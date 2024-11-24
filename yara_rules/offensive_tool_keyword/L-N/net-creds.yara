@@ -10,7 +10,7 @@ rule net_creds
     strings:
         // Description: Thoroughly sniff passwords and hashes from an interface or pcap file. Concatenates fragmented packets and does not rely on ports for service identification.
         // Reference: https://github.com/DanMcInerney/net-creds
-        $string1 = /DanMcInerney\/net\-creds/ nocase ascii wide
+        $string1 = "DanMcInerney/net-creds" nocase ascii wide
 
     condition:
         any of them

@@ -10,16 +10,16 @@ rule parrot_os
     strings:
         // Description: Parrot OS is a Debian-based. security-oriented Linux distribution that is designed for ethical hacking. penetration testing and digital forensics.
         // Reference: https://www.parrotsec.org/download/
-        $string1 = /\sparrot\smain\s/ nocase ascii wide
+        $string1 = " parrot main " nocase ascii wide
         // Description: Parrot OS is a Debian-based. security-oriented Linux distribution that is designed for ethical hacking. penetration testing and digital forensics.
         // Reference: https://www.parrotsec.org/download/
         $string2 = /\sparrot\.run\// nocase ascii wide
         // Description: Parrot OS is a Debian-based. security-oriented Linux distribution that is designed for ethical hacking. penetration testing and digital forensics.
         // Reference: https://www.parrotsec.org/download/
-        $string3 = /\sparrot\-backports\s/ nocase ascii wide
+        $string3 = " parrot-backports " nocase ascii wide
         // Description: Parrot OS is a Debian-based. security-oriented Linux distribution that is designed for ethical hacking. penetration testing and digital forensics.
         // Reference: https://www.parrotsec.org/download/
-        $string4 = /\sparrot\-security\s/ nocase ascii wide
+        $string4 = " parrot-security " nocase ascii wide
         // Description: Parrot OS is a Debian-based. security-oriented Linux distribution that is designed for ethical hacking. penetration testing and digital forensics.
         // Reference: https://www.parrotsec.org/download/
         $string5 = /\/deb\.parrot\.sh\// nocase ascii wide
@@ -28,13 +28,13 @@ rule parrot_os
         $string6 = /\/parrot\/iso\/.{0,100}\.iso/ nocase ascii wide
         // Description: Parrot OS is a Debian-based. security-oriented Linux distribution that is designed for ethical hacking. penetration testing and digital forensics.
         // Reference: https://www.parrotsec.org/download/
-        $string7 = /\/parrot\-mirror\// nocase ascii wide
+        $string7 = "/parrot-mirror/" nocase ascii wide
         // Description: Parrot OS is a Debian-based. security-oriented Linux distribution that is designed for ethical hacking. penetration testing and digital forensics.
         // Reference: https://www.parrotsec.org/download/
-        $string8 = /\/parrot\-on\-docker\// nocase ascii wide
+        $string8 = "/parrot-on-docker/" nocase ascii wide
         // Description: Parrot OS is a Debian-based. security-oriented Linux distribution that is designed for ethical hacking. penetration testing and digital forensics.
         // Reference: https://www.parrotsec.org/download/
-        $string9 = /\/parrotsec\// nocase ascii wide
+        $string9 = "/parrotsec/" nocase ascii wide
         // Description: Parrot OS is a Debian-based. security-oriented Linux distribution that is designed for ethical hacking. penetration testing and digital forensics.
         // Reference: https://www.parrotsec.org/download/
         $string10 = /bunny\.deb\.parrot\.sh\// nocase ascii wide

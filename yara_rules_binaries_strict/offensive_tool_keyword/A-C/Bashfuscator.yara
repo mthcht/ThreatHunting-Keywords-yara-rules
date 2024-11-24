@@ -13,19 +13,19 @@ rule Bashfuscator
         $string1 = /\s\-c\s.{0,100}\s\-\-choose\-mutators\s.{0,100}\s\-s\s1/ nocase ascii wide
         // Description: A fully configurable and extendable Bash obfuscation framework
         // Reference: https://github.com/Bashfuscator/Bashfuscator
-        $string2 = /\/Bashfuscator/ nocase ascii wide
+        $string2 = "/Bashfuscator" nocase ascii wide
         // Description: A fully configurable and extendable Bash obfuscation framework
         // Reference: https://github.com/Bashfuscator/Bashfuscator
-        $string3 = /bashfuscator\s\-/ nocase ascii wide
+        $string3 = "bashfuscator -" nocase ascii wide
         // Description: A fully configurable and extendable Bash obfuscation framework
         // Reference: https://github.com/Bashfuscator/Bashfuscator
-        $string4 = /Bashfuscator\sTeam/ nocase ascii wide
+        $string4 = "Bashfuscator Team" nocase ascii wide
         // Description: A fully configurable and extendable Bash obfuscation framework
         // Reference: https://github.com/Bashfuscator/Bashfuscator
         $string5 = /bashfuscator\.py/ nocase ascii wide
         // Description: A fully configurable and extendable Bash obfuscation framework
         // Reference: https://github.com/Bashfuscator/Bashfuscator
-        $string6 = /Bashfuscator\-master/ nocase ascii wide
+        $string6 = "Bashfuscator-master" nocase ascii wide
         // Description: A fully configurable and extendable Bash obfuscation framework
         // Reference: https://github.com/Bashfuscator/Bashfuscator
         $string7 = /command_obfuscator\.py/ nocase ascii wide

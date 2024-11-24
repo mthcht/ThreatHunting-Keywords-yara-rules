@@ -10,7 +10,7 @@ rule ridrelay
     strings:
         // Description: Quick and easy way to get domain usernames while on an internal network.
         // Reference: https://github.com/skorov/ridrelay
-        $string1 = /ridrelay/ nocase ascii wide
+        $string1 = "ridrelay" nocase ascii wide
 
     condition:
         any of them

@@ -31,13 +31,13 @@ rule clickjack
         $string7 = /\\ClickJack\.exe/ nocase ascii wide
         // Description: automate abuse of clickonce applications
         // Reference: https://github.com/trustedsec/The_Shelf
-        $string8 = /02FAF312\-BF2A\-466B\-8AD2\-1339A31C303B/ nocase ascii wide
+        $string8 = "02FAF312-BF2A-466B-8AD2-1339A31C303B" nocase ascii wide
         // Description: automate abuse of clickonce applications
         // Reference: https://github.com/trustedsec/The_Shelf
-        $string9 = /40e8b756d0f996d7127ffc76d3fb122dd014455bc6b0c007e6d5d77e5bb6211b/ nocase ascii wide
+        $string9 = "40e8b756d0f996d7127ffc76d3fb122dd014455bc6b0c007e6d5d77e5bb6211b" nocase ascii wide
         // Description: automate abuse of clickonce applications
         // Reference: https://github.com/trustedsec/The_Shelf
-        $string10 = /88f333f2f21ca05e44a91c376022997c2bbec79b9d9982d59ee6d38183df86f3/ nocase ascii wide
+        $string10 = "88f333f2f21ca05e44a91c376022997c2bbec79b9d9982d59ee6d38183df86f3" nocase ascii wide
         // Description: automate abuse of clickonce applications
         // Reference: https://github.com/trustedsec/The_Shelf
         $string11 = /InjectApp\.InfectClickonceApp\(/ nocase ascii wide

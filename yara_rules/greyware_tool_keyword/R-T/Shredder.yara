@@ -16,7 +16,7 @@ rule Shredder
         $string2 = /\\Shredder\.exe/ nocase ascii wide
         // Description: File Shredder is FREE and powerfull aplication to shred and permanently remove unwanted files from your computer beyond recovery
         // Reference: https://www.fileshredder.org/
-        $string3 = /\>File\sShredder\sby\sPowTools\</ nocase ascii wide
+        $string3 = ">File Shredder by PowTools<" nocase ascii wide
         // Description: File Shredder is FREE and powerfull aplication to shred and permanently remove unwanted files from your computer beyond recovery
         // Reference: https://www.fileshredder.org/
         $string4 = /File\sShredder\ssetup\.exe/ nocase ascii wide

@@ -34,10 +34,10 @@ rule GraphSpy
         $string8 = /app\.config\[\'graph_spy_db_path\'\]/ nocase ascii wide
         // Description: Initial Access and Post-Exploitation Tool for AAD and O365 with a browser-based GUI
         // Reference: https://github.com/RedByte1337/GraphSpy
-        $string9 = /f0037d99bc3119fc613d304af20599e8c791b1c99208d5d452a01738777f7b49/ nocase ascii wide
+        $string9 = "f0037d99bc3119fc613d304af20599e8c791b1c99208d5d452a01738777f7b49" nocase ascii wide
         // Description: Initial Access and Post-Exploitation Tool for AAD and O365 with a browser-based GUI
         // Reference: https://github.com/RedByte1337/GraphSpy
-        $string10 = /graphspy\s\-i\s/ nocase ascii wide
+        $string10 = "graphspy -i " nocase ascii wide
         // Description: Initial Access and Post-Exploitation Tool for AAD and O365 with a browser-based GUI
         // Reference: https://github.com/RedByte1337/GraphSpy
         $string11 = /GraphSpy\.GraphSpy\:main/ nocase ascii wide
@@ -46,7 +46,7 @@ rule GraphSpy
         $string12 = /graphspy\.py\s\-i\s/ nocase ascii wide
         // Description: Initial Access and Post-Exploitation Tool for AAD and O365 with a browser-based GUI
         // Reference: https://github.com/RedByte1337/GraphSpy
-        $string13 = /RedByte1337\/GraphSpy/ nocase ascii wide
+        $string13 = "RedByte1337/GraphSpy" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

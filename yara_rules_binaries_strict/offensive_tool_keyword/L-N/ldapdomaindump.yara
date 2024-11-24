@@ -10,28 +10,28 @@ rule ldapdomaindump
     strings:
         // Description: Active Directory information dumper via LDAP
         // Reference: https://github.com/dirkjanm/ldapdomaindump
-        $string1 = /\sdomainDumper/ nocase ascii wide
+        $string1 = " domainDumper" nocase ascii wide
         // Description: Active Directory information dumper via LDAP
         // Reference: https://github.com/dirkjanm/ldapdomaindump
         $string2 = /\/john\.git/ nocase ascii wide
         // Description: Active Directory information dumper via LDAP
         // Reference: https://github.com/dirkjanm/ldapdomaindump
-        $string3 = /bin\/ldd2pretty/ nocase ascii wide
+        $string3 = "bin/ldd2pretty" nocase ascii wide
         // Description: Active Directory information dumper via LDAP
         // Reference: https://github.com/dirkjanm/ldapdomaindump
         $string4 = /dirkjan\@sanoweb\.nl/ nocase ascii wide
         // Description: Active Directory information dumper via LDAP
         // Reference: https://github.com/dirkjanm/ldapdomaindump
-        $string5 = /domainDumpConfig/ nocase ascii wide
+        $string5 = "domainDumpConfig" nocase ascii wide
         // Description: Active Directory information dumper via LDAP
         // Reference: https://github.com/dirkjanm/ldapdomaindump
-        $string6 = /getAllUserSpns/ nocase ascii wide
+        $string6 = "getAllUserSpns" nocase ascii wide
         // Description: Active Directory information dumper via LDAP
         // Reference: https://github.com/dirkjanm/ldapdomaindump
-        $string7 = /ldapdomaindump/ nocase ascii wide
+        $string7 = "ldapdomaindump" nocase ascii wide
         // Description: Active Directory information dumper via LDAP
         // Reference: https://github.com/dirkjanm/ldapdomaindump
-        $string8 = /ldd2bloodhound/ nocase ascii wide
+        $string8 = "ldd2bloodhound" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

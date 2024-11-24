@@ -13,10 +13,10 @@ rule ldapsearch_ad
         $string1 = /\s\-\-server\s.{0,100}\s\-\-type\spass\-pols/ nocase ascii wide
         // Description: Python3 script to quickly get various information from a domain controller through his LDAP service.
         // Reference: https://github.com/yaap7/ldapsearch-ad
-        $string2 = /\s\-\-type\sasreproast/ nocase ascii wide
+        $string2 = " --type asreproast" nocase ascii wide
         // Description: Python3 script to quickly get various information from a domain controller through his LDAP service.
         // Reference: https://github.com/yaap7/ldapsearch-ad
-        $string3 = /\s\-\-type\ssearch\-spn/ nocase ascii wide
+        $string3 = " --type search-spn" nocase ascii wide
         // Description: Python3 script to quickly get various information from a domain controller through his LDAP service.
         // Reference: https://github.com/yaap7/ldapsearch-ad
         $string4 = /\/ldapsearch\-ad\.git/ nocase ascii wide

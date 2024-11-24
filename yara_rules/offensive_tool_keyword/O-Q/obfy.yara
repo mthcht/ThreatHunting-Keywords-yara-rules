@@ -10,7 +10,7 @@ rule obfy
     strings:
         // Description: A tiny C++ obfuscation framework
         // Reference: https://github.com/fritzone/obfy
-        $string1 = /\/fritzone\/obfy/ nocase ascii wide
+        $string1 = "/fritzone/obfy" nocase ascii wide
         // Description: A tiny C++ obfuscation framework
         // Reference: https://github.com/fritzone/obfy
         $string2 = /\\obfy\-1\.0\.zip/ nocase ascii wide

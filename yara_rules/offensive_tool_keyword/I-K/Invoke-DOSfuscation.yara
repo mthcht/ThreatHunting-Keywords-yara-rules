@@ -10,10 +10,10 @@ rule Invoke_DOSfuscation
     strings:
         // Description: Invoke-DOSfuscation is a PowerShell v2.0+ compatible cmd.exe command obfuscation framework. (White paper: https://www.fireeye.com/blog/threat-research/2018/03/dosfuscation-exploring-obfuscation-and-detection-techniques.html)
         // Reference: https://github.com/danielbohannon/Invoke-DOSfuscation
-        $string1 = /Invoke\-DOSfuscation/ nocase ascii wide
+        $string1 = "Invoke-DOSfuscation" nocase ascii wide
         // Description: Revoke-Obfuscation is a PowerShell v3.0+ compatible PowerShell obfuscation detection framework. used for de obfuscating powershell scripts
         // Reference: https://github.com/danielbohannon/Revoke-Obfuscation
-        $string2 = /Revoke\-Obfuscation/ nocase ascii wide
+        $string2 = "Revoke-Obfuscation" nocase ascii wide
 
     condition:
         any of them

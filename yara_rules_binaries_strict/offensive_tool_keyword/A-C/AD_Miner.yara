@@ -19,16 +19,16 @@ rule AD_Miner
         $string3 = /ad_miner\.sources\.modules\./ nocase ascii wide
         // Description: AD Miner is an Active Directory audit tool that leverages cypher queries to crunch data from the #Bloodhound graph database to uncover security weaknesses
         // Reference: https://github.com/Mazars-Tech/AD_Miner
-        $string4 = /AD_Miner\-main/ nocase ascii wide
+        $string4 = "AD_Miner-main" nocase ascii wide
         // Description: AD Miner is an Active Directory audit tool that leverages cypher queries to crunch data from the #Bloodhound graph database to uncover security weaknesses
         // Reference: https://github.com/Mazars-Tech/AD_Miner
-        $string5 = /AD\-miner\s\-/ nocase ascii wide
+        $string5 = "AD-miner -" nocase ascii wide
         // Description: AD Miner is an Active Directory audit tool that leverages cypher queries to crunch data from the #Bloodhound graph database to uncover security weaknesses
         // Reference: https://github.com/Mazars-Tech/AD_Miner
         $string6 = /https\:\/\/discord\.com\/invite\/5Hpj4Gs5SS/ nocase ascii wide
         // Description: AD Miner is an Active Directory audit tool that leverages cypher queries to crunch data from the #Bloodhound graph database to uncover security weaknesses
         // Reference: https://github.com/Mazars-Tech/AD_Miner
-        $string7 = /Mazars\-Tech\/AD_Miner/ nocase ascii wide
+        $string7 = "Mazars-Tech/AD_Miner" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

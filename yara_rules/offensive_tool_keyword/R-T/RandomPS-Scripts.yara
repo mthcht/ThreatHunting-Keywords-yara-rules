@@ -19,13 +19,13 @@ rule RandomPS_Scripts
         $string3 = /Invoke\-CylanceDisarm\s\-ProcessID\s.{0,1000}\s\-DisableMemDef/ nocase ascii wide
         // Description: PowerShell Scripts focused on Post-Exploitation Capabilities
         // Reference: https://github.com/xorrior/RandomPS-Scripts
-        $string4 = /Invoke\-WindowsEnum/ nocase ascii wide
+        $string4 = "Invoke-WindowsEnum" nocase ascii wide
         // Description: PowerShell Scripts focused on Post-Exploitation Capabilities
         // Reference: https://github.com/xorrior/RandomPS-Scripts
         $string5 = /Invoke\-WmicDriveBy\./ nocase ascii wide
         // Description: create or remove a backdoor using WMI event subscriptions
         // Reference: https://github.com/xorrior/RandomPS-Scripts
-        $string6 = /Set\-WMIBackdoor\s\-URL\s/ nocase ascii wide
+        $string6 = "Set-WMIBackdoor -URL " nocase ascii wide
         // Description: create or remove a backdoor using WMI event subscriptions
         // Reference: https://github.com/xorrior/RandomPS-Scripts
         $string7 = /WMIBackdoor\.ps1/ nocase ascii wide

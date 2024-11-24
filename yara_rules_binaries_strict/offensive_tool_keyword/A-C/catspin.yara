@@ -16,13 +16,13 @@ rule catspin
         $string2 = /\sfile\:\/\/catspin\.yaml\s/ nocase ascii wide
         // Description: Catspin rotates the IP address of HTTP requests making IP based blocks or slowdown measures ineffective. It is based on AWS API Gateway and deployed via AWS Cloudformation.
         // Reference: https://github.com/rootcathacking/catspin
-        $string3 = /\s\-\-stack\-name\scatspin\s/ nocase ascii wide
+        $string3 = " --stack-name catspin " nocase ascii wide
         // Description: Catspin rotates the IP address of HTTP requests making IP based blocks or slowdown measures ineffective. It is based on AWS API Gateway and deployed via AWS Cloudformation.
         // Reference: https://github.com/rootcathacking/catspin
         $string4 = /\/catspin\.git/ nocase ascii wide
         // Description: Catspin rotates the IP address of HTTP requests making IP based blocks or slowdown measures ineffective. It is based on AWS API Gateway and deployed via AWS Cloudformation.
         // Reference: https://github.com/rootcathacking/catspin
-        $string5 = /\/catspin\-main\// nocase ascii wide
+        $string5 = "/catspin-main/" nocase ascii wide
         // Description: Catspin rotates the IP address of HTTP requests making IP based blocks or slowdown measures ineffective. It is based on AWS API Gateway and deployed via AWS Cloudformation.
         // Reference: https://github.com/rootcathacking/catspin
         $string6 = /\/execute\-api\.eu\-central\-1\.amazonaws\.com\/catspin_deployed/ nocase ascii wide
@@ -58,10 +58,10 @@ rule catspin
         $string16 = /catspin_poc_final\.mp4/ nocase ascii wide
         // Description: Catspin rotates the IP address of HTTP requests making IP based blocks or slowdown measures ineffective. It is based on AWS API Gateway and deployed via AWS Cloudformation.
         // Reference: https://github.com/rootcathacking/catspin
-        $string17 = /rootcathacking\/catspin/ nocase ascii wide
+        $string17 = "rootcathacking/catspin" nocase ascii wide
         // Description: Catspin rotates the IP address of HTTP requests making IP based blocks or slowdown measures ineffective. It is based on AWS API Gateway and deployed via AWS Cloudformation.
         // Reference: https://github.com/rootcathacking/catspin
-        $string18 = /Spins\sup\scatspin\susing\sApi\sGateway\sproxy/ nocase ascii wide
+        $string18 = "Spins up catspin using Api Gateway proxy" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

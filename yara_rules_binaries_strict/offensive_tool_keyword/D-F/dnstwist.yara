@@ -10,55 +10,55 @@ rule dnstwist
     strings:
         // Description: See what sort of trouble users can get in trying to type your domain name. Find lookalike domains that adversaries can use to attack you. Can detect typosquatters. phishing attacks. fraud. and brand impersonation. Useful as an additional source of targeted threat intelligence.
         // Reference: https://github.com/elceef/dnstwist
-        $string1 = /\s\-\-fuzzers\saddition/ nocase ascii wide
+        $string1 = " --fuzzers addition" nocase ascii wide
         // Description: See what sort of trouble users can get in trying to type your domain name. Find lookalike domains that adversaries can use to attack you. Can detect typosquatters. phishing attacks. fraud. and brand impersonation. Useful as an additional source of targeted threat intelligence.
         // Reference: https://github.com/elceef/dnstwist
-        $string2 = /\s\-\-fuzzers\sbitsquatting/ nocase ascii wide
+        $string2 = " --fuzzers bitsquatting" nocase ascii wide
         // Description: See what sort of trouble users can get in trying to type your domain name. Find lookalike domains that adversaries can use to attack you. Can detect typosquatters. phishing attacks. fraud. and brand impersonation. Useful as an additional source of targeted threat intelligence.
         // Reference: https://github.com/elceef/dnstwist
-        $string3 = /\s\-\-fuzzers\scyrillic/ nocase ascii wide
+        $string3 = " --fuzzers cyrillic" nocase ascii wide
         // Description: See what sort of trouble users can get in trying to type your domain name. Find lookalike domains that adversaries can use to attack you. Can detect typosquatters. phishing attacks. fraud. and brand impersonation. Useful as an additional source of targeted threat intelligence.
         // Reference: https://github.com/elceef/dnstwist
-        $string4 = /\s\-\-fuzzers\sdictionary/ nocase ascii wide
+        $string4 = " --fuzzers dictionary" nocase ascii wide
         // Description: See what sort of trouble users can get in trying to type your domain name. Find lookalike domains that adversaries can use to attack you. Can detect typosquatters. phishing attacks. fraud. and brand impersonation. Useful as an additional source of targeted threat intelligence.
         // Reference: https://github.com/elceef/dnstwist
-        $string5 = /\s\-\-fuzzers\shomoglyph/ nocase ascii wide
+        $string5 = " --fuzzers homoglyph" nocase ascii wide
         // Description: See what sort of trouble users can get in trying to type your domain name. Find lookalike domains that adversaries can use to attack you. Can detect typosquatters. phishing attacks. fraud. and brand impersonation. Useful as an additional source of targeted threat intelligence.
         // Reference: https://github.com/elceef/dnstwist
-        $string6 = /\s\-\-fuzzers\shyphenation/ nocase ascii wide
+        $string6 = " --fuzzers hyphenation" nocase ascii wide
         // Description: See what sort of trouble users can get in trying to type your domain name. Find lookalike domains that adversaries can use to attack you. Can detect typosquatters. phishing attacks. fraud. and brand impersonation. Useful as an additional source of targeted threat intelligence.
         // Reference: https://github.com/elceef/dnstwist
-        $string7 = /\s\-\-fuzzers\sinsertion/ nocase ascii wide
+        $string7 = " --fuzzers insertion" nocase ascii wide
         // Description: See what sort of trouble users can get in trying to type your domain name. Find lookalike domains that adversaries can use to attack you. Can detect typosquatters. phishing attacks. fraud. and brand impersonation. Useful as an additional source of targeted threat intelligence.
         // Reference: https://github.com/elceef/dnstwist
-        $string8 = /\s\-\-fuzzers\somission/ nocase ascii wide
+        $string8 = " --fuzzers omission" nocase ascii wide
         // Description: See what sort of trouble users can get in trying to type your domain name. Find lookalike domains that adversaries can use to attack you. Can detect typosquatters. phishing attacks. fraud. and brand impersonation. Useful as an additional source of targeted threat intelligence.
         // Reference: https://github.com/elceef/dnstwist
-        $string9 = /\s\-\-fuzzers\srepetition/ nocase ascii wide
+        $string9 = " --fuzzers repetition" nocase ascii wide
         // Description: See what sort of trouble users can get in trying to type your domain name. Find lookalike domains that adversaries can use to attack you. Can detect typosquatters. phishing attacks. fraud. and brand impersonation. Useful as an additional source of targeted threat intelligence.
         // Reference: https://github.com/elceef/dnstwist
-        $string10 = /\s\-\-fuzzers\sreplacement/ nocase ascii wide
+        $string10 = " --fuzzers replacement" nocase ascii wide
         // Description: See what sort of trouble users can get in trying to type your domain name. Find lookalike domains that adversaries can use to attack you. Can detect typosquatters. phishing attacks. fraud. and brand impersonation. Useful as an additional source of targeted threat intelligence.
         // Reference: https://github.com/elceef/dnstwist
-        $string11 = /\s\-\-fuzzers\ssubdomain/ nocase ascii wide
+        $string11 = " --fuzzers subdomain" nocase ascii wide
         // Description: See what sort of trouble users can get in trying to type your domain name. Find lookalike domains that adversaries can use to attack you. Can detect typosquatters. phishing attacks. fraud. and brand impersonation. Useful as an additional source of targeted threat intelligence.
         // Reference: https://github.com/elceef/dnstwist
-        $string12 = /\s\-\-fuzzers\stransposition/ nocase ascii wide
+        $string12 = " --fuzzers transposition" nocase ascii wide
         // Description: See what sort of trouble users can get in trying to type your domain name. Find lookalike domains that adversaries can use to attack you. Can detect typosquatters. phishing attacks. fraud. and brand impersonation. Useful as an additional source of targeted threat intelligence.
         // Reference: https://github.com/elceef/dnstwist
-        $string13 = /\s\-\-fuzzers\svowel\-swap/ nocase ascii wide
+        $string13 = " --fuzzers vowel-swap" nocase ascii wide
         // Description: See what sort of trouble users can get in trying to type your domain name. Find lookalike domains that adversaries can use to attack you. Can detect typosquatters. phishing attacks. fraud. and brand impersonation. Useful as an additional source of targeted threat intelligence.
         // Reference: https://github.com/elceef/dnstwist
-        $string14 = /dnstwist/ nocase ascii wide
+        $string14 = "dnstwist" nocase ascii wide
         // Description: See what sort of trouble users can get in trying to type your domain name. Find lookalike domains that adversaries can use to attack you. Can detect typosquatters. phishing attacks. fraud. and brand impersonation. Useful as an additional source of targeted threat intelligence.
         // Reference: https://github.com/elceef/dnstwist
         $string15 = /Mozilla\/5\.0\s\(.{0,100}\-bit\)\sdnstwist/ nocase ascii wide
         // Description: See what sort of trouble users can get in trying to type your domain name. Find lookalike domains that adversaries can use to attack you. Can detect typosquatters. phishing attacks. fraud. and brand impersonation. Useful as an additional source of targeted threat intelligence.
         // Reference: https://github.com/elceef/dnstwist
-        $string16 = /randomalice1986\@/ nocase ascii wide
+        $string16 = "randomalice1986@" nocase ascii wide
         // Description: See what sort of trouble users can get in trying to type your domain name. Find lookalike domains that adversaries can use to attack you. Can detect typosquatters. phishing attacks. fraud. and brand impersonation. Useful as an additional source of targeted threat intelligence.
         // Reference: https://github.com/elceef/dnstwist
-        $string17 = /randombob1986\@/ nocase ascii wide
+        $string17 = "randombob1986@" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

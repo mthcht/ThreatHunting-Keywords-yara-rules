@@ -28,7 +28,7 @@ rule atexec_pro
         $string6 = /\\atexec\-pro\-main/ nocase ascii wide
         // Description: Fileless atexec for lateral movement
         // Reference: https://github.com/Ridter/atexec-pro
-        $string7 = /10dbc6cb2d71505d7add5a2927228077142851657f2578b9c774656505338d32/ nocase ascii wide
+        $string7 = "10dbc6cb2d71505d7add5a2927228077142851657f2578b9c774656505338d32" nocase ascii wide
         // Description: Fileless atexec for lateral movement
         // Reference: https://github.com/Ridter/atexec-pro
         $string8 = /ATShell\s\(\%s\@\%s\)\>\s/ nocase ascii wide
@@ -40,7 +40,7 @@ rule atexec_pro
         $string10 = /impacket\.krb5/ nocase ascii wide
         // Description: Fileless atexec for lateral movement
         // Reference: https://github.com/Ridter/atexec-pro
-        $string11 = /Ridter\/atexec\-pro/ nocase ascii wide
+        $string11 = "Ridter/atexec-pro" nocase ascii wide
 
     condition:
         any of them

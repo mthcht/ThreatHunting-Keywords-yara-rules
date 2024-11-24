@@ -28,37 +28,37 @@ rule EQGRP_tools
         $string6 = /cat\s\>\s\/dev\/tcp\/127\.0\.0\.1.{0,100}\<\<END/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file  Anti forensic: Manipulate utmp
         // Reference: https://github.com/x0rz/EQGRP/blob/master/Linux/doc/old/etc/user.tool.dubmoat.COMMON
-        $string7 = /chmod\s666\s\/var\/run\/utmp\~/ nocase ascii wide
+        $string7 = "chmod 666 /var/run/utmp~" nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers - EncTelnet/Poptop To use Nopen over an existing connection
         // Reference: https://github.com/thePevertedSpartan/EQ1/blob/0c2354ff1073099b2aa417030b3167ec29d7279c/Linux/doc/old/etc/user.tool.poptop.COMMON
-        $string8 = /chmod\s700\snscd\scrond/ nocase ascii wide
+        $string8 = "chmod 700 nscd crond" nocase ascii wide
         // Description: Equation Group hack tool leaked note defense evasion
         // Reference: https://github.com/Artogn/EQGRP-1/blob/master/Linux/bin/Auditcleaner
         $string9 = /cp\s\/var\/log\/audit\/audit\.log\s\.tmp/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file  Anti forensic: Manipulate utmp
         // Reference: https://github.com/x0rz/EQGRP/blob/master/Linux/doc/old/etc/user.tool.dubmoat.COMMON
-        $string10 = /dubmoat/ nocase ascii wide
+        $string10 = "dubmoat" nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file  Anti forensic: Manipulate utmp
         // Reference: https://github.com/x0rz/EQGRP/blob/master/Linux/doc/old/etc/user.tool.dubmoat.COMMON
-        $string11 = /Dubmoat_ExtractData/ nocase ascii wide
+        $string11 = "Dubmoat_ExtractData" nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file  Anti forensic: Manipulate utmp
         // Reference: https://github.com/x0rz/EQGRP/blob/master/Linux/doc/old/etc/user.tool.dubmoat.COMMON
-        $string12 = /Dubmoat_PrintFilename/ nocase ascii wide
+        $string12 = "Dubmoat_PrintFilename" nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file  Anti forensic: Manipulate utmp
         // Reference: https://github.com/x0rz/EQGRP/blob/master/Linux/doc/old/etc/user.tool.dubmoat.COMMON
-        $string13 = /Dubmoat_TruncateFile/ nocase ascii wide
+        $string13 = "Dubmoat_TruncateFile" nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file echowrecker. samba 2.2 and 3.0.2a - 3.0.12-5 RCE (with DWARF symbols)  for FreeBSD  OpenBSD 3.1  OpenBSD 3.2 (with a non-executable stack  zomg)  and Linux. Likely CVE-2003-0201. There is also a Solaris version
         // Reference: https://github.com/x0rz/EQGRP/blob/master/Linux/bin/echowrecker
-        $string14 = /echowrecker/ nocase ascii wide
+        $string14 = "echowrecker" nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file emptybowl.py RCE for MailCenter Gateway (mcgate) - an application that comes with Asia Info Message Center mailserver  buffer overflow allows a string passed to popen() call to be controlled by an attacker  arbitraty cmd execute known to work only for AIMC Version 2.9.5.1
         // Reference: https://github.com/x0rz/EQGRP/blob/master/Linux/bin/emptybowl.py
         $string15 = /emptybowl\.py/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file ewok (snmpwalk like)
         // Reference: https://github.com/wolf-project/NSA-TOOLS-SHADOW-BROKERS
-        $string16 = /ewok\s\-t\s/ nocase ascii wide
+        $string16 = "ewok -t " nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- from files ftshell File transfer shell
         // Reference: https://github.com/Artogn/EQGRP-1/blob/master/Linux/bin/ftshell.v3.10.2.1
-        $string17 = /ftshell\s\-/ nocase ascii wide
+        $string17 = "ftshell -" nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- from files ftshell File transfer shell
         // Reference: https://github.com/Artogn/EQGRP-1/blob/master/Linux/bin/ftshell.v3.10.2.1
         $string18 = /ftshell\.v3/ nocase ascii wide
@@ -67,19 +67,19 @@ rule EQGRP_tools
         $string19 = /ghost_.{0,100}\s\-v/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file  ghost:statmon/tooltalk privesc
         // Reference: https://github.com/x0rz/EQGRP/tree/master/Linux/bin
-        $string20 = /ghost_sparc/ nocase ascii wide
+        $string20 = "ghost_sparc" nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file  ghost:statmon/tooltalk privesc
         // Reference: https://github.com/x0rz/EQGRP/tree/master/Linux/bin
-        $string21 = /ghost_x86/ nocase ascii wide
+        $string21 = "ghost_x86" nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file noclient CNC server for NOPEN*
         // Reference: https://github.com/x0rz/EQGRP/blob/master/Linux/bin/noclient-3.3.2.3-linux-i386
         $string22 = /iptables\s\-\%c\sOUTPUT\s\-p\stcp\s\-d\s127\.0\.0\.1\s\-\-tcp\-flags\sRST\sRST\s\-j\sDROP\s/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file noclient CNC server for NOPEN*
         // Reference: https://github.com/x0rz/EQGRP/blob/master/Linux/bin/noclient-3.3.2.3-linux-i386
-        $string23 = /noclient\:\sfailed\sto\sexecute\s\%s\:\s\%s/ nocase ascii wide
+        $string23 = "noclient: failed to execute %s: %s" nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- from files ftshell File transfer shell
         // Reference: https://github.com/Artogn/EQGRP-1/blob/master/Linux/bin/ftshell.v3.10.2.1
-        $string24 = /ourtn\-ftshell\-upcommand/ nocase ascii wide
+        $string24 = "ourtn-ftshell-upcommand" nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- from files ftshell File transfer shell
         // Reference: https://github.com/Artogn/EQGRP-1/blob/master/Linux/bin/ftshell.v3.10.2.1
         $string25 = /send\s\\.{0,100}\\\[\s\\\\.{0,100}\\\$BASH\\\\.{0,100}\s\=\s\\\\.{0,100}\/bin\/bash\\\\.{0,100}\s\-o\s\\\\.{0,100}\\\$SHELL\\\\.{0,100}\s\=\s\\\\.{0,100}\/bin\/bash\\\\.{0,100}\s\\\]/ nocase ascii wide

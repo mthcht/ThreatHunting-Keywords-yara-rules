@@ -10,7 +10,7 @@ rule openvas
     strings:
         // Description: Vulnerability scanner
         // Reference: https://www.openvas.org/
-        $string1 = /OpenVAS/ nocase ascii wide
+        $string1 = "OpenVAS" nocase ascii wide
 
     condition:
         any of them

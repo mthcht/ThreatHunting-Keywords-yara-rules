@@ -13,7 +13,7 @@ rule WheresMyImplant
         $string1 = /\/C2\/Beacon\/.{0,1000}\.cs/ nocase ascii wide
         // Description: A Bring Your Own Land Toolkit that Doubles as a WMI Provider
         // Reference: https://github.com/0xbadjuju/WheresMyImplant
-        $string2 = /\/Inject\/Dll\/LoadDll/ nocase ascii wide
+        $string2 = "/Inject/Dll/LoadDll" nocase ascii wide
         // Description: A Bring Your Own Land Toolkit that Doubles as a WMI Provider
         // Reference: https://github.com/0xbadjuju/WheresMyImplant
         $string3 = /\/Inject\/PE\/.{0,1000}\.cs/ nocase ascii wide
@@ -37,13 +37,13 @@ rule WheresMyImplant
         $string9 = /\/Persistence\/InstallUtil\./ nocase ascii wide
         // Description: A Bring Your Own Land Toolkit that Doubles as a WMI Provider
         // Reference: https://github.com/0xbadjuju/WheresMyImplant
-        $string10 = /\/WheresMyImplant\// nocase ascii wide
+        $string10 = "/WheresMyImplant/" nocase ascii wide
         // Description: A Bring Your Own Land Toolkit that Doubles as a WMI Provider
         // Reference: https://github.com/0xbadjuju/WheresMyImplant
         $string11 = /\\WheresMyImplant/ nocase ascii wide
         // Description: A Bring Your Own Land Toolkit that Doubles as a WMI Provider
         // Reference: https://github.com/0xbadjuju/WheresMyImplant
-        $string12 = /0xbadjuju\/WheresMyImplant/ nocase ascii wide
+        $string12 = "0xbadjuju/WheresMyImplant" nocase ascii wide
         // Description: A Bring Your Own Land Toolkit that Doubles as a WMI Provider
         // Reference: https://github.com/0xbadjuju/WheresMyImplant
         $string13 = /Collection\/MiniDumpWriteDump\./ nocase ascii wide
@@ -55,7 +55,7 @@ rule WheresMyImplant
         $string15 = /Credentials\/LSASecrets\./ nocase ascii wide
         // Description: A Bring Your Own Land Toolkit that Doubles as a WMI Provider
         // Reference: https://github.com/0xbadjuju/WheresMyImplant
-        $string16 = /DumpBrowserHistory/ nocase ascii wide
+        $string16 = "DumpBrowserHistory" nocase ascii wide
         // Description: A Bring Your Own Land Toolkit that Doubles as a WMI Provider
         // Reference: https://github.com/0xbadjuju/WheresMyImplant
         $string17 = /Empire\.Agent\.Coms\./ nocase ascii wide
@@ -73,7 +73,7 @@ rule WheresMyImplant
         $string21 = /InjectPERemote\.cs/ nocase ascii wide
         // Description: A Bring Your Own Land Toolkit that Doubles as a WMI Provider
         // Reference: https://github.com/0xbadjuju/WheresMyImplant
-        $string22 = /InjectPEWMIFSRemote/ nocase ascii wide
+        $string22 = "InjectPEWMIFSRemote" nocase ascii wide
         // Description: A Bring Your Own Land Toolkit that Doubles as a WMI Provider
         // Reference: https://github.com/0xbadjuju/WheresMyImplant
         $string23 = /InjectShellCode\.cs/ nocase ascii wide
@@ -82,7 +82,7 @@ rule WheresMyImplant
         $string24 = /InjectShellCodeRemote\.cs/ nocase ascii wide
         // Description: A Bring Your Own Land Toolkit that Doubles as a WMI Provider
         // Reference: https://github.com/0xbadjuju/WheresMyImplant
-        $string25 = /InjectShellCodeWMIFSB64/ nocase ascii wide
+        $string25 = "InjectShellCodeWMIFSB64" nocase ascii wide
         // Description: A Bring Your Own Land Toolkit that Doubles as a WMI Provider
         // Reference: https://github.com/0xbadjuju/WheresMyImplant
         $string26 = /Lateral\/DCom\.cs/ nocase ascii wide
@@ -106,34 +106,34 @@ rule WheresMyImplant
         $string32 = /Lateral\/WMIExec\.cs/ nocase ascii wide
         // Description: A Bring Your Own Land Toolkit that Doubles as a WMI Provider
         // Reference: https://github.com/0xbadjuju/WheresMyImplant
-        $string33 = /namespace\sWheresMyImplant/ nocase ascii wide
+        $string33 = "namespace WheresMyImplant" nocase ascii wide
         // Description: A Bring Your Own Land Toolkit that Doubles as a WMI Provider
         // Reference: https://github.com/0xbadjuju/WheresMyImplant
-        $string34 = /Persistence\/InstallWMI/ nocase ascii wide
+        $string34 = "Persistence/InstallWMI" nocase ascii wide
         // Description: A Bring Your Own Land Toolkit that Doubles as a WMI Provider
         // Reference: https://github.com/0xbadjuju/WheresMyImplant
-        $string35 = /PTHSMBClientDelete/ nocase ascii wide
+        $string35 = "PTHSMBClientDelete" nocase ascii wide
         // Description: A Bring Your Own Land Toolkit that Doubles as a WMI Provider
         // Reference: https://github.com/0xbadjuju/WheresMyImplant
-        $string36 = /PTHSMBClientGet/ nocase ascii wide
+        $string36 = "PTHSMBClientGet" nocase ascii wide
         // Description: A Bring Your Own Land Toolkit that Doubles as a WMI Provider
         // Reference: https://github.com/0xbadjuju/WheresMyImplant
-        $string37 = /PTHSMBClientList/ nocase ascii wide
+        $string37 = "PTHSMBClientList" nocase ascii wide
         // Description: A Bring Your Own Land Toolkit that Doubles as a WMI Provider
         // Reference: https://github.com/0xbadjuju/WheresMyImplant
-        $string38 = /PTHSMBClientPut/ nocase ascii wide
+        $string38 = "PTHSMBClientPut" nocase ascii wide
         // Description: A Bring Your Own Land Toolkit that Doubles as a WMI Provider
         // Reference: https://github.com/0xbadjuju/WheresMyImplant
-        $string39 = /PTHSMBExec/ nocase ascii wide
+        $string39 = "PTHSMBExec" nocase ascii wide
         // Description: A Bring Your Own Land Toolkit that Doubles as a WMI Provider
         // Reference: https://github.com/0xbadjuju/WheresMyImplant
-        $string40 = /PTHWMIExec/ nocase ascii wide
+        $string40 = "PTHWMIExec" nocase ascii wide
         // Description: A Bring Your Own Land Toolkit that Doubles as a WMI Provider
         // Reference: https://github.com/0xbadjuju/WheresMyImplant
         $string41 = /root\\cimv2\:Win32_Implant/ nocase ascii wide
         // Description: A Bring Your Own Land Toolkit that Doubles as a WMI Provider
         // Reference: https://github.com/0xbadjuju/WheresMyImplant
-        $string42 = /StartWebServiceBeacon/ nocase ascii wide
+        $string42 = "StartWebServiceBeacon" nocase ascii wide
         // Description: A Bring Your Own Land Toolkit that Doubles as a WMI Provider
         // Reference: https://github.com/0xbadjuju/WheresMyImplant
         $string43 = /WheresMyImplant\.cs/ nocase ascii wide

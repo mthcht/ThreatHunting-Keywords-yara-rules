@@ -10,7 +10,7 @@ rule sqli_labs
     strings:
         // Description: SQLI-LABS is a platform to learn SQLI Following labs are covered for GET and POST scenarios:
         // Reference: https://github.com/Audi-1/sqli-labs
-        $string1 = /Sqli\-lab/ nocase ascii wide
+        $string1 = "Sqli-lab" nocase ascii wide
 
     condition:
         any of them

@@ -10,7 +10,7 @@ rule al_khaser
     strings:
         // Description: al-khaser is a PoC malware application with good intentions that aims to stress your anti-malware system. It performs a bunch of common malware tricks with the goal of seeing if you stay under the radar
         // Reference: https://github.com/LordNoteworthy/al-khaser
-        $string1 = /al\-khaser/ nocase ascii wide
+        $string1 = "al-khaser" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

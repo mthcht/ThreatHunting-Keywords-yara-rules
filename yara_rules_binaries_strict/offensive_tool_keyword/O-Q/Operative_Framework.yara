@@ -10,7 +10,7 @@ rule Operative_Framework
     strings:
         // Description: Framework based on fingerprint action. this tool is used for get information on a website or a enterprise target with multiple modules.
         // Reference: https://github.com/graniet/operative-framework
-        $string1 = /Operative\sFramework/ nocase ascii wide
+        $string1 = "Operative Framework" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

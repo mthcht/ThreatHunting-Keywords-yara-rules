@@ -19,10 +19,10 @@ rule bloodhound_quickwin
         $string3 = /\/bloodhound\-quickwin\.git/ nocase ascii wide
         // Description: Simple script to extract useful informations from the combo BloodHound + Neo4j
         // Reference: https://github.com/kaluche/bloodhound-quickwin
-        $string4 = /bloodhound\-quickwin\-main/ nocase ascii wide
+        $string4 = "bloodhound-quickwin-main" nocase ascii wide
         // Description: Simple script to extract useful informations from the combo BloodHound + Neo4j
         // Reference: https://github.com/kaluche/bloodhound-quickwin
-        $string5 = /kaluche\/bloodhound\-quickwin/ nocase ascii wide
+        $string5 = "kaluche/bloodhound-quickwin" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

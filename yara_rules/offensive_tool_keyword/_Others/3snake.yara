@@ -25,10 +25,10 @@ rule _3snake
         $string5 = /\/tracers_fuzzer\.cc/ nocase ascii wide
         // Description: Tool for extracting information from newly spawned processes
         // Reference: https://github.com/blendin/3snake
-        $string6 = /3snake\-master/ nocase ascii wide
+        $string6 = "3snake-master" nocase ascii wide
         // Description: Tool for extracting information from newly spawned processes
         // Reference: https://github.com/blendin/3snake
-        $string7 = /blendin\/3snake/ nocase ascii wide
+        $string7 = "blendin/3snake" nocase ascii wide
 
     condition:
         any of them

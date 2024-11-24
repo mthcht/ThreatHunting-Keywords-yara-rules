@@ -10,7 +10,7 @@ rule UnquotedPath
     strings:
         // Description: Outputs a list of unquoted service paths that aren't in System32/SysWow64 to plant a PE into
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/UnquotedPath
-        $string1 = /master\/UnquotedPath/ nocase ascii wide
+        $string1 = "master/UnquotedPath" nocase ascii wide
         // Description: Outputs a list of unquoted service paths that aren't in System32/SysWow64 to plant a PE into
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/UnquotedPath
         $string2 = /UnquotedPath\.csproj/ nocase ascii wide

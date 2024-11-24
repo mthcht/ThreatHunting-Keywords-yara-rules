@@ -10,7 +10,7 @@ rule ADAPE_Script
     strings:
         // Description: Active Directory Assessment and Privilege Escalation Script
         // Reference: https://github.com/cjoan75/ADAPE-Script
-        $string1 = /\s\\"Sniffy\sboi\ssniffin\\"/ nocase ascii wide
+        $string1 = " \"Sniffy boi sniffin\"" nocase ascii wide
         // Description: Active Directory Assessment and Privilege Escalation Script
         // Reference: https://github.com/cjoan75/ADAPE-Script
         $string2 = /\sADAPE\.ps1/ nocase ascii wide
@@ -58,37 +58,37 @@ rule ADAPE_Script
         $string16 = /\\ShareFinder\.txt/ nocase ascii wide
         // Description: Active Directory Assessment and Privilege Escalation Script
         // Reference: https://github.com/cjoan75/ADAPE-Script
-        $string17 = /7f99e59cb3242638aa4967180674b98dd770fae51a85ff364238faf52e02a586/ nocase ascii wide
+        $string17 = "7f99e59cb3242638aa4967180674b98dd770fae51a85ff364238faf52e02a586" nocase ascii wide
         // Description: Active Directory Assessment and Privilege Escalation Script
         // Reference: https://github.com/cjoan75/ADAPE-Script
-        $string18 = /Attemping\sWPAD\,\sLLMNR\,\sand\sNBTNS\spoisoning/ nocase ascii wide
+        $string18 = "Attemping WPAD, LLMNR, and NBTNS poisoning" nocase ascii wide
         // Description: Active Directory Assessment and Privilege Escalation Script
         // Reference: https://github.com/cjoan75/ADAPE-Script
-        $string19 = /Author\:\s\@haus3c/ nocase ascii wide
+        $string19 = "Author: @haus3c" nocase ascii wide
         // Description: Active Directory Assessment and Privilege Escalation Script
         // Reference: https://github.com/cjoan75/ADAPE-Script
-        $string20 = /Collecting\sPrivesc\smethods/ nocase ascii wide
+        $string20 = "Collecting Privesc methods" nocase ascii wide
         // Description: Active Directory Assessment and Privilege Escalation Script
         // Reference: https://github.com/cjoan75/ADAPE-Script
-        $string21 = /function\sPrivEsc/ nocase ascii wide
+        $string21 = "function PrivEsc" nocase ascii wide
         // Description: Active Directory Assessment and Privilege Escalation Script
         // Reference: https://github.com/cjoan75/ADAPE-Script
-        $string22 = /Get\-ExploitableSystem\s\-Verbose/ nocase ascii wide
+        $string22 = "Get-ExploitableSystem -Verbose" nocase ascii wide
         // Description: Active Directory Assessment and Privilege Escalation Script
         // Reference: https://github.com/cjoan75/ADAPE-Script
         $string23 = /Get\-GPPPassword\.ps1/ nocase ascii wide
         // Description: Active Directory Assessment and Privilege Escalation Script
         // Reference: https://github.com/cjoan75/ADAPE-Script
-        $string24 = /hausec\/ADAPE\-Script/ nocase ascii wide
+        $string24 = "hausec/ADAPE-Script" nocase ascii wide
         // Description: Active Directory Assessment and Privilege Escalation Script
         // Reference: https://github.com/cjoan75/ADAPE-Script
         $string25 = /Import\-Module\s.{0,100}\/PView\.psm1/ nocase ascii wide
         // Description: Active Directory Assessment and Privilege Escalation Script
         // Reference: https://github.com/cjoan75/ADAPE-Script
-        $string26 = /Invoke\-Kerberoast/ nocase ascii wide
+        $string26 = "Invoke-Kerberoast" nocase ascii wide
         // Description: Active Directory Assessment and Privilege Escalation Script
         // Reference: https://github.com/cjoan75/ADAPE-Script
-        $string27 = /Invoke\-ShareFinder\s\-CheckShareAccess/ nocase ascii wide
+        $string27 = "Invoke-ShareFinder -CheckShareAccess" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

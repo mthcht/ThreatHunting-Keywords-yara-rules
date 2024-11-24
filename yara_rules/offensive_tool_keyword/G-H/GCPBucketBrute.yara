@@ -10,7 +10,7 @@ rule GCPBucketBrute
     strings:
         // Description: A script to enumerate Google Storage buckets. determine what access you have to them. and determine if they can be privilege escalated
         // Reference: https://github.com/RhinoSecurityLabs/GCPBucketBrute
-        $string1 = /GCPBucketBrute/ nocase ascii wide
+        $string1 = "GCPBucketBrute" nocase ascii wide
 
     condition:
         any of them

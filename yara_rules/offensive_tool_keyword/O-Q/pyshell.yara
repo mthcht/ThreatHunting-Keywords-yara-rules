@@ -13,7 +13,7 @@ rule pyshell
         $string1 = /\.\/PyShell\s/ nocase ascii wide
         // Description: PyShell is Multiplatform Python WebShell. This tool helps you to obtain a shell-like interface on a web server to be remotely accessed. Unlike other webshells the main goal of the tool is to use as little code as possible on the server side regardless of the language used or the operating system of the server.
         // Reference: https://github.com/JoelGMSec/PyShell
-        $string2 = /\/JoelGMSec\/PyShell/ nocase ascii wide
+        $string2 = "/JoelGMSec/PyShell" nocase ascii wide
         // Description: PyShell is Multiplatform Python WebShell. This tool helps you to obtain a shell-like interface on a web server to be remotely accessed. Unlike other webshells the main goal of the tool is to use as little code as possible on the server side regardless of the language used or the operating system of the server.
         // Reference: https://github.com/JoelGMSec/PyShell
         $string3 = /\/Shells\/shell\.aspx/ nocase ascii wide

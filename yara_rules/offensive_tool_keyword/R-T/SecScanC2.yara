@@ -25,25 +25,25 @@ rule SecScanC2
         $string5 = /\/startProxyPool\?k\=.{0,1000}\&random\=y\&number\=2/ nocase ascii wide
         // Description: SecScanC2 can manage assetment to create P2P network for security scanning & C2. The tool can assist security researchers in conducting penetration testing more efficiently - preventing scanning from being blocked - protecting themselves from being traced.
         // Reference: https://github.com/T1esh0u/SecScanC2
-        $string6 = /AE373FC4409EDA1B5F41D5CE3CA9290B3C7E8363/ nocase ascii wide
+        $string6 = "AE373FC4409EDA1B5F41D5CE3CA9290B3C7E8363" nocase ascii wide
         // Description: SecScanC2 can manage assetment to create P2P network for security scanning & C2. The tool can assist security researchers in conducting penetration testing more efficiently - preventing scanning from being blocked - protecting themselves from being traced.
         // Reference: https://github.com/T1esh0u/SecScanC2
-        $string7 = /SecScanC2_admin\s/ nocase ascii wide
+        $string7 = "SecScanC2_admin " nocase ascii wide
         // Description: SecScanC2 can manage assetment to create P2P network for security scanning & C2. The tool can assist security researchers in conducting penetration testing more efficiently - preventing scanning from being blocked - protecting themselves from being traced.
         // Reference: https://github.com/T1esh0u/SecScanC2
-        $string8 = /SecScanC2_admin_/ nocase ascii wide
+        $string8 = "SecScanC2_admin_" nocase ascii wide
         // Description: SecScanC2 can manage assetment to create P2P network for security scanning & C2. The tool can assist security researchers in conducting penetration testing more efficiently - preventing scanning from being blocked - protecting themselves from being traced.
         // Reference: https://github.com/T1esh0u/SecScanC2
-        $string9 = /SecScanC2_node\s/ nocase ascii wide
+        $string9 = "SecScanC2_node " nocase ascii wide
         // Description: SecScanC2 can manage assetment to create P2P network for security scanning & C2. The tool can assist security researchers in conducting penetration testing more efficiently - preventing scanning from being blocked - protecting themselves from being traced.
         // Reference: https://github.com/T1esh0u/SecScanC2
-        $string10 = /SecScanC2_node_/ nocase ascii wide
+        $string10 = "SecScanC2_node_" nocase ascii wide
         // Description: SecScanC2 can manage assetment to create P2P network for security scanning & C2. The tool can assist security researchers in conducting penetration testing more efficiently - preventing scanning from being blocked - protecting themselves from being traced.
         // Reference: https://github.com/T1esh0u/SecScanC2
-        $string11 = /SecScanC2\-main/ nocase ascii wide
+        $string11 = "SecScanC2-main" nocase ascii wide
         // Description: SecScanC2 can manage assetment to create P2P network for security scanning & C2. The tool can assist security researchers in conducting penetration testing more efficiently - preventing scanning from being blocked - protecting themselves from being traced.
         // Reference: https://github.com/T1esh0u/SecScanC2
-        $string12 = /T1esh0u\/SecScanC2/ nocase ascii wide
+        $string12 = "T1esh0u/SecScanC2" nocase ascii wide
 
     condition:
         any of them

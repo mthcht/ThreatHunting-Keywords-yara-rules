@@ -10,10 +10,10 @@ rule dns
     strings:
         // Description: Detects suspicious DNS error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
         // Reference: https://github.com/ossec/ossec-hids/blob/master/etc/rules/named_rules.xml
-        $string1 = /\sdenied\sAXFR\sfrom\s/ nocase ascii wide
+        $string1 = " denied AXFR from " nocase ascii wide
         // Description: Detects suspicious DNS error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
         // Reference: https://github.com/ossec/ossec-hids/blob/master/etc/rules/named_rules.xml
-        $string2 = /\sdropping\ssource\sport\szero\spacket\sfrom\s/ nocase ascii wide
+        $string2 = " dropping source port zero packet from " nocase ascii wide
         // Description: Detects suspicious DNS error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
         // Reference: https://github.com/ossec/ossec-hids/blob/master/etc/rules/named_rules.xml
         $string3 = /\sexiting\s\(due\sto\sfatal\serror\)/ nocase ascii wide

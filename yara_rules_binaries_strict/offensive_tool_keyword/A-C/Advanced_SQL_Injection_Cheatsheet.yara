@@ -10,7 +10,7 @@ rule Advanced_SQL_Injection_Cheatsheet
     strings:
         // Description: A cheat sheet that contains advanced queries for SQL Injection of all types.
         // Reference: https://github.com/kleiton0x00/Advanced-SQL-Injection-Cheatsheet
-        $string1 = /Advanced\-SQL\-Injection\-Cheatsheet/ nocase ascii wide
+        $string1 = "Advanced-SQL-Injection-Cheatsheet" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

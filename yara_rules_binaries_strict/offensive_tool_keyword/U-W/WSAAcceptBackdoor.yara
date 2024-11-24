@@ -19,16 +19,16 @@ rule WSAAcceptBackdoor
         $string3 = /\\WSAAcceptBackdoor\-main/ nocase ascii wide
         // Description: Winsock accept() Backdoor Implant
         // Reference: https://github.com/EgeBalci/WSAAcceptBackdoor
-        $string4 = /16edb60cec97590d754e99e2eb719bbc990d71dcf1bda7c8eebf3b517574846d/ nocase ascii wide
+        $string4 = "16edb60cec97590d754e99e2eb719bbc990d71dcf1bda7c8eebf3b517574846d" nocase ascii wide
         // Description: Winsock accept() Backdoor Implant
         // Reference: https://github.com/EgeBalci/WSAAcceptBackdoor
-        $string5 = /811683b1\-e01c\-4ef8\-82d1\-aa08293d3e7c/ nocase ascii wide
+        $string5 = "811683b1-e01c-4ef8-82d1-aa08293d3e7c" nocase ascii wide
         // Description: Winsock accept() Backdoor Implant
         // Reference: https://github.com/EgeBalci/WSAAcceptBackdoor
-        $string6 = /define\sBACKDOOR_PORT\s/ nocase ascii wide
+        $string6 = "define BACKDOOR_PORT " nocase ascii wide
         // Description: Winsock accept() Backdoor Implant
         // Reference: https://github.com/EgeBalci/WSAAcceptBackdoor
-        $string7 = /EgeBalci\/WSAAcceptBackdoor/ nocase ascii wide
+        $string7 = "EgeBalci/WSAAcceptBackdoor" nocase ascii wide
         // Description: Winsock accept() Backdoor Implant
         // Reference: https://github.com/EgeBalci/WSAAcceptBackdoor
         $string8 = /WSAAcceptBackdoor\-master\.zip/ nocase ascii wide

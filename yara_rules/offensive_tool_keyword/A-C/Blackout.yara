@@ -52,7 +52,7 @@ rule Blackout
         $string14 = /Blackout\.exe\s/ nocase ascii wide
         // Description: kill anti-malware protected processes using BYOVD
         // Reference: https://github.com/ZeroMemoryEx/Blackout
-        $string15 = /ZeroMemoryEx\/Blackout/ nocase ascii wide
+        $string15 = "ZeroMemoryEx/Blackout" nocase ascii wide
 
     condition:
         any of them

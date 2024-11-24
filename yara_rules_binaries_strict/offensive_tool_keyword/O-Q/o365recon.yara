@@ -46,19 +46,19 @@ rule o365recon
         $string12 = /\\.{0,100}\.O365\.Roles_Admins\.txt/ nocase ascii wide
         // Description: script to retrieve information via O365 and AzureAD with a valid cred 
         // Reference: https://github.com/nyxgeek/o365recon
-        $string13 = /49df12075c49bb956291cd11b2c53626174b4128309ada438d5d5e49265866f9/ nocase ascii wide
+        $string13 = "49df12075c49bb956291cd11b2c53626174b4128309ada438d5d5e49265866f9" nocase ascii wide
         // Description: script to retrieve information via O365 and AzureAD with a valid cred 
         // Reference: https://github.com/nyxgeek/o365recon
-        $string14 = /JOB\sCOMPLETE\:\sGO\sGET\sYOUR\sLOOT\!/ nocase ascii wide
+        $string14 = "JOB COMPLETE: GO GET YOUR LOOT!" nocase ascii wide
         // Description: script to retrieve information via O365 and AzureAD with a valid cred 
         // Reference: https://github.com/nyxgeek/o365recon
-        $string15 = /nyxgeek\/o365recon/ nocase ascii wide
+        $string15 = "nyxgeek/o365recon" nocase ascii wide
         // Description: script to retrieve information via O365 and AzureAD with a valid cred 
         // Reference: https://github.com/nyxgeek/o365recon
         $string16 = /o365recon\.ps1/ nocase ascii wide
         // Description: script to retrieve information via O365 and AzureAD with a valid cred 
         // Reference: https://github.com/nyxgeek/o365recon
-        $string17 = /o365recon\-master/ nocase ascii wide
+        $string17 = "o365recon-master" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -10,7 +10,7 @@ rule Invoke_BSOD
     strings:
         // Description: A PowerShell script to induce a Blue Screen of Death (BSOD) without admin privileges. Also enumeartes Windows crash dump settings.
         // Reference: https://github.com/peewpw/Invoke-BSOD
-        $string1 = /Invoke\-BSOD/ nocase ascii wide
+        $string1 = "Invoke-BSOD" nocase ascii wide
 
     condition:
         any of them

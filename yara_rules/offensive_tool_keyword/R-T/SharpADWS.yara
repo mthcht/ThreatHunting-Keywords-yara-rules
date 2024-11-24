@@ -13,10 +13,10 @@ rule SharpADWS
         $string1 = /\scan\snow\simpersonate\susers\son\s.{0,1000}\svia\sS4U2Proxy/ nocase ascii wide
         // Description: SharpADWS Active Directory reconnaissance and exploitation for Red Teams via the Active Directory Web Services (ADWS)
         // Reference: https://github.com/wh0amitz/SharpADWS
-        $string2 = /\sKerberoastable\s\-action\slist/ nocase ascii wide
+        $string2 = " Kerberoastable -action list" nocase ascii wide
         // Description: SharpADWS Active Directory reconnaissance and exploitation for Red Teams via the Active Directory Web Services (ADWS)
         // Reference: https://github.com/wh0amitz/SharpADWS
-        $string3 = /\sKerberoastable\s\-action\swrite\s\-target\s/ nocase ascii wide
+        $string3 = " Kerberoastable -action write -target " nocase ascii wide
         // Description: SharpADWS Active Directory reconnaissance and exploitation for Red Teams via the Active Directory Web Services (ADWS)
         // Reference: https://github.com/wh0amitz/SharpADWS
         $string4 = /\sRBCD\s\-action\swrite\s\-delegate\-to\s.{0,1000}\s\-delegate\-from\s/ nocase ascii wide
@@ -79,10 +79,10 @@ rule SharpADWS
         $string23 = /\]\sKerberoast\suser\s.{0,1000}\ssuccessfully\!/ nocase ascii wide
         // Description: SharpADWS Active Directory reconnaissance and exploitation for Red Teams via the Active Directory Web Services (ADWS)
         // Reference: https://github.com/wh0amitz/SharpADWS
-        $string24 = /70ef0d3588b87bd71c2774c1bb177f59ae31a99b1a4ef82f7d2a16175c3caaf6/ nocase ascii wide
+        $string24 = "70ef0d3588b87bd71c2774c1bb177f59ae31a99b1a4ef82f7d2a16175c3caaf6" nocase ascii wide
         // Description: SharpADWS Active Directory reconnaissance and exploitation for Red Teams via the Active Directory Web Services (ADWS)
         // Reference: https://github.com/wh0amitz/SharpADWS
-        $string25 = /AA488748\-3D0E\-4A52\-8747\-AB42A7143760/ nocase ascii wide
+        $string25 = "AA488748-3D0E-4A52-8747-AB42A7143760" nocase ascii wide
         // Description: SharpADWS Active Directory reconnaissance and exploitation for Red Teams via the Active Directory Web Services (ADWS)
         // Reference: https://github.com/wh0amitz/SharpADWS
         $string26 = /SharpADWS\s1\.0\.0\-beta\s\-\sCopyright/ nocase ascii wide
@@ -91,7 +91,7 @@ rule SharpADWS
         $string27 = /SharpADWS\.exe/ nocase ascii wide
         // Description: SharpADWS Active Directory reconnaissance and exploitation for Red Teams via the Active Directory Web Services (ADWS)
         // Reference: https://github.com/wh0amitz/SharpADWS
-        $string28 = /wh0amitz\/SharpADWS/ nocase ascii wide
+        $string28 = "wh0amitz/SharpADWS" nocase ascii wide
 
     condition:
         any of them

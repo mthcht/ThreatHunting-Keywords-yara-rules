@@ -46,58 +46,58 @@ rule adaudit
         $string12 = /\]\sCheck\sfor\sADCS\sVulnerabilities/ nocase ascii wide
         // Description: Powershell script to do domain auditing automation
         // Reference: https://github.com/phillips321/adaudit
-        $string13 = /5f871566a9113e31357e084743f12b74b7199019e66cd10847b61b5666ecf9b1/ nocase ascii wide
+        $string13 = "5f871566a9113e31357e084743f12b74b7199019e66cd10847b61b5666ecf9b1" nocase ascii wide
         // Description: Powershell script to do domain auditing automation
         // Reference: https://github.com/phillips321/adaudit
-        $string14 = /Find\-DangerousACLPermissions/ nocase ascii wide
+        $string14 = "Find-DangerousACLPermissions" nocase ascii wide
         // Description: Powershell script to do domain auditing automation
         // Reference: https://github.com/phillips321/adaudit
-        $string15 = /Get\-AccountPassDontExpire/ nocase ascii wide
+        $string15 = "Get-AccountPassDontExpire" nocase ascii wide
         // Description: Powershell script to do domain auditing automation
         // Reference: https://github.com/phillips321/adaudit
-        $string16 = /Get\-ADCSVulns/ nocase ascii wide
+        $string16 = "Get-ADCSVulns" nocase ascii wide
         // Description: Powershell script to do domain auditing automation
         // Reference: https://github.com/phillips321/adaudit
-        $string17 = /Get\-ADUsersWithoutPreAuth/ nocase ascii wide
+        $string17 = "Get-ADUsersWithoutPreAuth" nocase ascii wide
         // Description: Powershell script to do domain auditing automation
         // Reference: https://github.com/phillips321/adaudit
-        $string18 = /Get\-DCsNotOwnedByDA/ nocase ascii wide
+        $string18 = "Get-DCsNotOwnedByDA" nocase ascii wide
         // Description: Powershell script to do domain auditing automation
         // Reference: https://github.com/phillips321/adaudit
-        $string19 = /Get\-GPOEnum/ nocase ascii wide
+        $string19 = "Get-GPOEnum" nocase ascii wide
         // Description: Powershell script to do domain auditing automation
         // Reference: https://github.com/phillips321/adaudit
-        $string20 = /Get\-GPOsPerOU/ nocase ascii wide
+        $string20 = "Get-GPOsPerOU" nocase ascii wide
         // Description: Powershell script to do domain auditing automation
         // Reference: https://github.com/phillips321/adaudit
-        $string21 = /Get\-GPOtoFile/ nocase ascii wide
+        $string21 = "Get-GPOtoFile" nocase ascii wide
         // Description: Powershell script to do domain auditing automation
         // Reference: https://github.com/phillips321/adaudit
         $string22 = /Get\-GPPPassword\./ nocase ascii wide
         // Description: Powershell script to do domain auditing automation
         // Reference: https://github.com/phillips321/adaudit
-        $string23 = /Get\-NTDSdit/ nocase ascii wide
+        $string23 = "Get-NTDSdit" nocase ascii wide
         // Description: Powershell script to do domain auditing automation
         // Reference: https://github.com/phillips321/adaudit
-        $string24 = /Get\-PrivilegedGroupAccounts/ nocase ascii wide
+        $string24 = "Get-PrivilegedGroupAccounts" nocase ascii wide
         // Description: Powershell script to do domain auditing automation
         // Reference: https://github.com/phillips321/adaudit
-        $string25 = /Get\-PrivilegedGroupMembership/ nocase ascii wide
+        $string25 = "Get-PrivilegedGroupMembership" nocase ascii wide
         // Description: Powershell script to do domain auditing automation
         // Reference: https://github.com/phillips321/adaudit
-        $string26 = /Kerberoast\sAttack\s\-\sServices\sConfigured\sWith\sa\sWeak\sPassword/ nocase ascii wide
+        $string26 = "Kerberoast Attack - Services Configured With a Weak Password" nocase ascii wide
         // Description: Powershell script to do domain auditing automation
         // Reference: https://github.com/phillips321/adaudit
-        $string27 = /phillips321\/adaudit/ nocase ascii wide
+        $string27 = "phillips321/adaudit" nocase ascii wide
         // Description: Powershell script to do domain auditing automation
         // Reference: https://github.com/phillips321/adaudit
-        $string28 = /Write\-Nessus\-Finding/ nocase ascii wide
+        $string28 = "Write-Nessus-Finding" nocase ascii wide
         // Description: Powershell script to do domain auditing automation
         // Reference: https://github.com/phillips321/adaudit
-        $string29 = /Write\-Nessus\-Footer/ nocase ascii wide
+        $string29 = "Write-Nessus-Footer" nocase ascii wide
         // Description: Powershell script to do domain auditing automation
         // Reference: https://github.com/phillips321/adaudit
-        $string30 = /Write\-Nessus\-Header/ nocase ascii wide
+        $string30 = "Write-Nessus-Header" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

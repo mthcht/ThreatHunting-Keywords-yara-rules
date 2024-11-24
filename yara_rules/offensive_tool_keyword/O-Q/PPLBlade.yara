@@ -13,13 +13,13 @@ rule PPLBlade
         $string1 = /\s\-\-dumpmode\snetwork\s\-\-network\sraw\s\-\-ip\s.{0,1000}\s\-\-port\s/ nocase ascii wide
         // Description: Protected Process Dumper Tool that support obfuscating memory dump and transferring it on remote workstations without dropping it onto the disk.
         // Reference: https://github.com/tastypepperoni/PPLBlade
-        $string2 = /\s\-\-dumpmode\snetwork\s\-\-network\ssmb\s/ nocase ascii wide
+        $string2 = " --dumpmode network --network smb " nocase ascii wide
         // Description: Protected Process Dumper Tool that support obfuscating memory dump and transferring it on remote workstations without dropping it onto the disk.
         // Reference: https://github.com/tastypepperoni/PPLBlade
         $string3 = /\s\-\-dumpname\slsass\.dmp/ nocase ascii wide
         // Description: Protected Process Dumper Tool that support obfuscating memory dump and transferring it on remote workstations without dropping it onto the disk.
         // Reference: https://github.com/tastypepperoni/PPLBlade
-        $string4 = /\s\-\-key\sPPLBlade/ nocase ascii wide
+        $string4 = " --key PPLBlade" nocase ascii wide
         // Description: Protected Process Dumper Tool that support obfuscating memory dump and transferring it on remote workstations without dropping it onto the disk.
         // Reference: https://github.com/tastypepperoni/PPLBlade
         $string5 = /\s\-\-mode\sdecrypt\s\-\-dumpname\s.{0,1000}\.dmp\s\-\-key\s/ nocase ascii wide
@@ -46,7 +46,7 @@ rule PPLBlade
         $string12 = /\\PPLBlade\-main/ nocase ascii wide
         // Description: Protected Process Dumper Tool that support obfuscating memory dump and transferring it on remote workstations without dropping it onto the disk.
         // Reference: https://github.com/tastypepperoni/PPLBlade
-        $string13 = /dothatlsassthing/ nocase ascii wide
+        $string13 = "dothatlsassthing" nocase ascii wide
         // Description: Protected Process Dumper Tool that support obfuscating memory dump and transferring it on remote workstations without dropping it onto the disk.
         // Reference: https://github.com/tastypepperoni/PPLBlade
         $string14 = /PPLBlade\.dmp/ nocase ascii wide
@@ -58,7 +58,7 @@ rule PPLBlade
         $string16 = /PPLBlade\-main\./ nocase ascii wide
         // Description: Protected Process Dumper Tool that support obfuscating memory dump and transferring it on remote workstations without dropping it onto the disk.
         // Reference: https://github.com/tastypepperoni/PPLBlade
-        $string17 = /tastypepperoni\/PPLBlade/ nocase ascii wide
+        $string17 = "tastypepperoni/PPLBlade" nocase ascii wide
 
     condition:
         any of them

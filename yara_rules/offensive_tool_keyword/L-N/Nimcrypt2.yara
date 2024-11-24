@@ -10,19 +10,19 @@ rule Nimcrypt2
     strings:
         // Description: .NET PE & Raw Shellcode Packer/Loader Written in Nim
         // Reference: https://github.com/icyguider/Nimcrypt2
-        $string1 = /\s\-\-get\-syscallstub\s/ nocase ascii wide
+        $string1 = " --get-syscallstub " nocase ascii wide
         // Description: .NET PE & Raw Shellcode Packer/Loader Written in Nim
         // Reference: https://github.com/icyguider/Nimcrypt2
         $string2 = /\s\-\-llvm\-obfuscator\s.{0,1000}\s/ nocase ascii wide
         // Description: .NET PE & Raw Shellcode Packer/Loader Written in Nim
         // Reference: https://github.com/icyguider/Nimcrypt2
-        $string3 = /\/Nimcrypt2/ nocase ascii wide
+        $string3 = "/Nimcrypt2" nocase ascii wide
         // Description: .NET PE & Raw Shellcode Packer/Loader Written in Nim
         // Reference: https://github.com/icyguider/Nimcrypt2
         $string4 = /GetSyscallStub\.nim/ nocase ascii wide
         // Description: .NET PE & Raw Shellcode Packer/Loader Written in Nim
         // Reference: https://github.com/icyguider/Nimcrypt2
-        $string5 = /nimcrypt\s\-/ nocase ascii wide
+        $string5 = "nimcrypt -" nocase ascii wide
         // Description: .NET PE & Raw Shellcode Packer/Loader Written in Nim
         // Reference: https://github.com/icyguider/Nimcrypt2
         $string6 = /nimcrypt\.nim/ nocase ascii wide

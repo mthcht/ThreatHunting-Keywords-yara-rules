@@ -22,10 +22,10 @@ rule JumpSession_BOF
         $string4 = /\/JumpSession_BOF\.git/ nocase ascii wide
         // Description: Beacon Object File allowing creation of Beacons in different sessions
         // Reference: https://github.com/Octoberfest7/JumpSession_BOF
-        $string5 = /JumpSession_BOF\-main/ nocase ascii wide
+        $string5 = "JumpSession_BOF-main" nocase ascii wide
         // Description: Beacon Object File allowing creation of Beacons in different sessions
         // Reference: https://github.com/Octoberfest7/JumpSession_BOF
-        $string6 = /Octoberfest7\/JumpSession_BOF/ nocase ascii wide
+        $string6 = "Octoberfest7/JumpSession_BOF" nocase ascii wide
 
     condition:
         any of them

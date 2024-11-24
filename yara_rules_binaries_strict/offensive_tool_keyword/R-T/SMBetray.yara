@@ -10,7 +10,7 @@ rule SMBetray
     strings:
         // Description: PoC to demonstrate the ability of an attacker to intercept and modify insecure SMB connections. as well as compromise some secured SMB connections if credentials are known.
         // Reference: https://github.com/quickbreach/SMBetray
-        $string1 = /SMBetray/ nocase ascii wide
+        $string1 = "SMBetray" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

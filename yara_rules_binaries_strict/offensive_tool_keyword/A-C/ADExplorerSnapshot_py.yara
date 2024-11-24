@@ -16,7 +16,7 @@ rule ADExplorerSnapshot_py
         $string2 = /ADExplorerSnapshot\.py\.git/ nocase ascii wide
         // Description: ADExplorerSnapshot.py is an AD Explorer snapshot parser. It is made as an ingestor for BloodHound and also supports full-object dumping to NDJSON.
         // Reference: https://github.com/c3c/ADExplorerSnapshot.py
-        $string3 = /import\sadexpsnapshot/ nocase ascii wide
+        $string3 = "import adexpsnapshot" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

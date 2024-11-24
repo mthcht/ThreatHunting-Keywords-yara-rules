@@ -10,7 +10,7 @@ rule wcreddump
     strings:
         // Description: Fully automated windows credentials dumper from SAM (classic passwords) and WINHELLO (pins). Requires to be run from a linux machine with a mounted windows drive.
         // Reference: https://github.com/truerustyy/wcreddump
-        $string1 = /\sinstall\ssamdump2/ nocase ascii wide
+        $string1 = " install samdump2" nocase ascii wide
         // Description: Fully automated windows credentials dumper from SAM (classic passwords) and WINHELLO (pins). Requires to be run from a linux machine with a mounted windows drive.
         // Reference: https://github.com/truerustyy/wcreddump
         $string2 = /\swcreddump\s\(windows\scredentials\sdump\)/ nocase ascii wide
@@ -37,10 +37,10 @@ rule wcreddump
         $string9 = /\\WINHELLO2hashcat\.py/ nocase ascii wide
         // Description: Fully automated windows credentials dumper from SAM (classic passwords) and WINHELLO (pins). Requires to be run from a linux machine with a mounted windows drive.
         // Reference: https://github.com/truerustyy/wcreddump
-        $string10 = /0d33356f9addc458bf9fc3861d9cafef954a51b66412b1cfc435eede351733f1/ nocase ascii wide
+        $string10 = "0d33356f9addc458bf9fc3861d9cafef954a51b66412b1cfc435eede351733f1" nocase ascii wide
         // Description: Fully automated windows credentials dumper from SAM (classic passwords) and WINHELLO (pins). Requires to be run from a linux machine with a mounted windows drive.
         // Reference: https://github.com/truerustyy/wcreddump
-        $string11 = /samdump2\sSYSTEM\sSAM/ nocase ascii wide
+        $string11 = "samdump2 SYSTEM SAM" nocase ascii wide
         // Description: Fully automated windows credentials dumper from SAM (classic passwords) and WINHELLO (pins). Requires to be run from a linux machine with a mounted windows drive.
         // Reference: https://github.com/truerustyy/wcreddump
         $string12 = /succesfully\sdumped\sSAM\'s\shash\.es\sto\s/ nocase ascii wide
@@ -52,7 +52,7 @@ rule wcreddump
         $string14 = /succesfully\sdumped\sWINHELLO\spin\.s\sto\s/ nocase ascii wide
         // Description: Fully automated windows credentials dumper from SAM (classic passwords) and WINHELLO (pins). Requires to be run from a linux machine with a mounted windows drive.
         // Reference: https://github.com/truerustyy/wcreddump
-        $string15 = /truerustyy\/wcreddump/ nocase ascii wide
+        $string15 = "truerustyy/wcreddump" nocase ascii wide
 
     condition:
         any of them

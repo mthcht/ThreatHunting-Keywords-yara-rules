@@ -10,10 +10,10 @@ rule shellcodetester
     strings:
         // Description: This tools test generated ShellCodes
         // Reference: https://github.com/helviojunior/shellcodetester
-        $string1 = /\/shellcodetester/ nocase ascii wide
+        $string1 = "/shellcodetester" nocase ascii wide
         // Description: This tools test generated ShellCodes
         // Reference: https://github.com/helviojunior/shellcodetester
-        $string2 = /shellcodetester\s/ nocase ascii wide
+        $string2 = "shellcodetester " nocase ascii wide
         // Description: This tools test generated ShellCodes
         // Reference: https://github.com/helviojunior/shellcodetester
         $string3 = /ShellCodeTester\.csproj/ nocase ascii wide

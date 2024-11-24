@@ -13,58 +13,58 @@ rule SlinkyCat
         $string1 = /\/SlinkyCat\.git/ nocase ascii wide
         // Description: This script performs a series of AD enumeration tasks
         // Reference: https://github.com/LaresLLC/SlinkyCat
-        $string2 = /DNet\-EnumerateAllDomainUserAccounts/ nocase ascii wide
+        $string2 = "DNet-EnumerateAllDomainUserAccounts" nocase ascii wide
         // Description: This script performs a series of AD enumeration tasks
         // Reference: https://github.com/LaresLLC/SlinkyCat
-        $string3 = /DNet\-ListAccountsByDescription/ nocase ascii wide
+        $string3 = "DNet-ListAccountsByDescription" nocase ascii wide
         // Description: This script performs a series of AD enumeration tasks
         // Reference: https://github.com/LaresLLC/SlinkyCat
-        $string4 = /DNet\-ListDomainUserAccountsWithCompletedADDescription/ nocase ascii wide
+        $string4 = "DNet-ListDomainUserAccountsWithCompletedADDescription" nocase ascii wide
         // Description: This script performs a series of AD enumeration tasks
         // Reference: https://github.com/LaresLLC/SlinkyCat
-        $string5 = /DNet\-ListUsersInDomainAdminsGroup/ nocase ascii wide
+        $string5 = "DNet-ListUsersInDomainAdminsGroup" nocase ascii wide
         // Description: This script performs a series of AD enumeration tasks
         // Reference: https://github.com/LaresLLC/SlinkyCat
-        $string6 = /EnumerateAllDomainControllers/ nocase ascii wide
+        $string6 = "EnumerateAllDomainControllers" nocase ascii wide
         // Description: This script performs a series of AD enumeration tasks
         // Reference: https://github.com/LaresLLC/SlinkyCat
-        $string7 = /FindAdminAccessComputers/ nocase ascii wide
+        $string7 = "FindAdminAccessComputers" nocase ascii wide
         // Description: This script performs a series of AD enumeration tasks
         // Reference: https://github.com/LaresLLC/SlinkyCat
-        $string8 = /Invoke\-SlinkyCat/ nocase ascii wide
+        $string8 = "Invoke-SlinkyCat" nocase ascii wide
         // Description: This script performs a series of AD enumeration tasks
         // Reference: https://github.com/LaresLLC/SlinkyCat
-        $string9 = /LaresLLC\/SlinkyCat/ nocase ascii wide
+        $string9 = "LaresLLC/SlinkyCat" nocase ascii wide
         // Description: This script performs a series of AD enumeration tasks
         // Reference: https://github.com/LaresLLC/SlinkyCat
-        $string10 = /ListAccountsWithSPN/ nocase ascii wide
+        $string10 = "ListAccountsWithSPN" nocase ascii wide
         // Description: This script performs a series of AD enumeration tasks
         // Reference: https://github.com/LaresLLC/SlinkyCat
-        $string11 = /ListDescriptionContainsPass/ nocase ascii wide
+        $string11 = "ListDescriptionContainsPass" nocase ascii wide
         // Description: This script performs a series of AD enumeration tasks
         // Reference: https://github.com/LaresLLC/SlinkyCat
-        $string12 = /ListDomainAdmins/ nocase ascii wide
+        $string12 = "ListDomainAdmins" nocase ascii wide
         // Description: This script performs a series of AD enumeration tasks
         // Reference: https://github.com/LaresLLC/SlinkyCat
-        $string13 = /ListDomainGroupsLocalAdmin/ nocase ascii wide
+        $string13 = "ListDomainGroupsLocalAdmin" nocase ascii wide
         // Description: This script performs a series of AD enumeration tasks
         // Reference: https://github.com/LaresLLC/SlinkyCat
-        $string14 = /ListNeverLoggedInAccounts/ nocase ascii wide
+        $string14 = "ListNeverLoggedInAccounts" nocase ascii wide
         // Description: This script performs a series of AD enumeration tasks
         // Reference: https://github.com/LaresLLC/SlinkyCat
-        $string15 = /ListPasswordNeverExpire/ nocase ascii wide
+        $string15 = "ListPasswordNeverExpire" nocase ascii wide
         // Description: This script performs a series of AD enumeration tasks
         // Reference: https://github.com/LaresLLC/SlinkyCat
-        $string16 = /ListUsersLastPasswordChange/ nocase ascii wide
+        $string16 = "ListUsersLastPasswordChange" nocase ascii wide
         // Description: This script performs a series of AD enumeration tasks
         // Reference: https://github.com/LaresLLC/SlinkyCat
-        $string17 = /ListUsersNoPasswordRequired/ nocase ascii wide
+        $string17 = "ListUsersNoPasswordRequired" nocase ascii wide
         // Description: This script performs a series of AD enumeration tasks
         // Reference: https://github.com/LaresLLC/SlinkyCat
-        $string18 = /ListUsersPasswordMustChange/ nocase ascii wide
+        $string18 = "ListUsersPasswordMustChange" nocase ascii wide
         // Description: This script performs a series of AD enumeration tasks
         // Reference: https://github.com/LaresLLC/SlinkyCat
-        $string19 = /ListUsersPasswordNotChanged/ nocase ascii wide
+        $string19 = "ListUsersPasswordNotChanged" nocase ascii wide
         // Description: This script performs a series of AD enumeration tasks
         // Reference: https://github.com/LaresLLC/SlinkyCat
         $string20 = /output\/AccountsWithSPN\.txt/ nocase ascii wide
@@ -169,13 +169,13 @@ rule SlinkyCat
         $string53 = /SlinkyCat\.ps1/ nocase ascii wide
         // Description: This script performs a series of AD enumeration tasks
         // Reference: https://github.com/LaresLLC/SlinkyCat
-        $string54 = /SlinkyCat\-main/ nocase ascii wide
+        $string54 = "SlinkyCat-main" nocase ascii wide
         // Description: This script performs a series of AD enumeration tasks
         // Reference: https://github.com/LaresLLC/SlinkyCat
         $string55 = /System\.DirectoryServices\.AccountManagement\.GroupPrincipal.{0,1000}FindByIdentity.{0,1000}D/ nocase ascii wide
         // Description: This script performs a series of AD enumeration tasks
         // Reference: https://github.com/LaresLLC/SlinkyCat
-        $string56 = /TestWinRMMachines/ nocase ascii wide
+        $string56 = "TestWinRMMachines" nocase ascii wide
 
     condition:
         any of them

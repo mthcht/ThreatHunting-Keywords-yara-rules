@@ -28,16 +28,16 @@ rule Gecko
         $string6 = /\\gecko\-old\.php/ nocase ascii wide
         // Description: Gecko Backdoor is a  web php backdoor
         // Reference: https://github.com/MadExploits/Gecko
-        $string7 = /21c9869676708d67b55fe9f17c7c43fadaf3a9b27bf013b9bb0ba673d70da013/ nocase ascii wide
+        $string7 = "21c9869676708d67b55fe9f17c7c43fadaf3a9b27bf013b9bb0ba673d70da013" nocase ascii wide
         // Description: Gecko Backdoor is a  web php backdoor
         // Reference: https://github.com/MadExploits/Gecko
-        $string8 = /618eea76cd6f9ea8adcaa2e96236c352db4a034e52bd3d1a1140012d5510389b/ nocase ascii wide
+        $string8 = "618eea76cd6f9ea8adcaa2e96236c352db4a034e52bd3d1a1140012d5510389b" nocase ascii wide
         // Description: Gecko Backdoor is a  web php backdoor
         // Reference: https://github.com/MadExploits/Gecko
-        $string9 = /9f25da71d888618eb41ff007df64538c1f9a81a717701e66481ef9b14394e09d/ nocase ascii wide
+        $string9 = "9f25da71d888618eb41ff007df64538c1f9a81a717701e66481ef9b14394e09d" nocase ascii wide
         // Description: Gecko Backdoor is a  web php backdoor
         // Reference: https://github.com/MadExploits/Gecko
-        $string10 = /a0bf933c2db4c92515bd4bcbfd5e7e07baca998423bdc11056f5271e3b93aef5/ nocase ascii wide
+        $string10 = "a0bf933c2db4c92515bd4bcbfd5e7e07baca998423bdc11056f5271e3b93aef5" nocase ascii wide
         // Description: Gecko Backdoor is a  web php backdoor
         // Reference: https://github.com/MadExploits/Gecko
         $string11 = /chmod\s\+x\spwnkit/ nocase ascii wide
@@ -52,7 +52,7 @@ rule Gecko
         $string14 = /import\ssocket\,subprocess\,os\;s\=socket\.socket\(socket\.AF_INET\,socket\.SOCK_STREAM\)\;s\.connect\(.{0,100}subprocess\.call\(\[\\"\\"\/bin\/sh/ nocase ascii wide
         // Description: Gecko Backdoor is a  web php backdoor
         // Reference: https://github.com/MadExploits/Gecko
-        $string15 = /MadExploits\/Gecko/ nocase ascii wide
+        $string15 = "MadExploits/Gecko" nocase ascii wide
         // Description: Gecko Backdoor is a  web php backdoor
         // Reference: https://github.com/MadExploits/Gecko
         $string16 = /mkfifo\s\/tmp\/f\;cat\s\/tmp\/f\|\/bin\/sh\s\-i\s2\>\&1\|nc\s/ nocase ascii wide
@@ -61,7 +61,7 @@ rule Gecko
         $string17 = /pwnkit\s\\"id\\"\s\>\s\.mad\-root/ nocase ascii wide
         // Description: Gecko Backdoor is a  web php backdoor
         // Reference: https://github.com/MadExploits/Gecko
-        $string18 = /pwnkit\s\\"useradd\s/ nocase ascii wide
+        $string18 = "pwnkit \"useradd " nocase ascii wide
         // Description: Gecko Backdoor is a  web php backdoor
         // Reference: https://github.com/MadExploits/Gecko
         $string19 = /wget\shttp.{0,100}\s\-O\spwnkit/ nocase ascii wide

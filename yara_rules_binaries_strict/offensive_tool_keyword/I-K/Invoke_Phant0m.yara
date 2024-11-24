@@ -10,7 +10,7 @@ rule Invoke_Phant0m
     strings:
         // Description: This script walks thread stacks of Event Log Service process (spesific svchost.exe) and identify Event Log Threads to kill Event Log Service Threads. So the system will not be able to collect logs and at the same time the Event Log Service will appear to be running. I have made this script for two reasons. First. This script will help to Red Teams and Penetration Testers. Second. I want to learn Powershell and Low-Level things on Powershell for cyber security field
         // Reference: https://github.com/hlldz/Invoke-Phant0m
-        $string1 = /Invoke\-Phant0m/ nocase ascii wide
+        $string1 = "Invoke-Phant0m" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -28,7 +28,7 @@ rule SCMUACBypass
         $string6 = /\/SCMUACBypass\.git/ nocase ascii wide
         // Description: SCM UAC Bypass
         // Reference: https://github.com/rasta-mouse/SCMUACBypass
-        $string7 = /\/SCMUACBypass\// nocase ascii wide
+        $string7 = "/SCMUACBypass/" nocase ascii wide
         // Description: SCM UAC Bypass
         // Reference: https://github.com/rasta-mouse/SCMUACBypass
         $string8 = /\\scmuacbypass\.cpp/ nocase ascii wide

@@ -10,16 +10,16 @@ rule powershell
     strings:
         // Description: powershell obfuscations techniques observed by malwares - reversed net user
         // Reference: N/A
-        $string1 = /\simaohw/ nocase ascii wide
+        $string1 = " imaohw" nocase ascii wide
         // Description: powershell obfuscations techniques observed by malwares - reversed net user
         // Reference: N/A
-        $string2 = /\sresu\sten/ nocase ascii wide
+        $string2 = " resu ten" nocase ascii wide
         // Description: powershell obfuscations techniques observed by malwares - reversed http://
         // Reference: N/A
-        $string3 = /\/\/\:ptth/ nocase ascii wide
+        $string3 = "//:ptth" nocase ascii wide
         // Description: powershell obfuscations techniques observed by malwares - reversed https://
         // Reference: N/A
-        $string4 = /\/\/\:sptth/ nocase ascii wide
+        $string4 = "//:sptth" nocase ascii wide
         // Description: impair the defenses of the targeted system by disabling ETW logging for PowerShell. This can make it difficult for security teams to monitor and analyze PowerShell activities on the system potentially allowing adversaries to perform malicious actions without being detected
         // Reference: N/A
         $string5 = /\[Reflection\.Assembly\]\:\:LoadWithPartialName\(\'System\.Core\'\)\.GetType\(\'System\.Diagnostics\.Eventing\.EventProvider\'\)\.GetField\(\'m_enabled\'.{0,1000}\'NonPublic.{0,1000}Instance\'\)\.SetValue\(\[Ref\]\.Assembly\.GetType\(\'System\.Management\.Automation\.Tracing\.PSEtwLogProvider\'\)\.GetField\(\'etwProvider\'.{0,1000}\'NonPublic.{0,1000}Static\'\)\.GetValue\(\$null\).{0,1000}0\)/ nocase ascii wide
@@ -46,22 +46,22 @@ rule powershell
         $string12 = /\\swodniW\\\:C/ nocase ascii wide
         // Description: powershell obfuscations techniques observed by malwares - reversed whoami
         // Reference: N/A
-        $string13 = /\=imaohw/ nocase ascii wide
+        $string13 = "=imaohw" nocase ascii wide
         // Description: powershell obfuscations techniques observed by malwares - reversed net user
         // Reference: N/A
-        $string14 = /\=resu\sten/ nocase ascii wide
+        $string14 = "=resu ten" nocase ascii wide
         // Description: Windows defender disable protection
         // Reference: https://thedfirreport.com/2023/10/30/netsupport-intrusion-results-in-domain-compromise/
-        $string15 = /Add\-MpPreference\s\-DisableBehaviorMonitoring\sTrue/ nocase ascii wide
+        $string15 = "Add-MpPreference -DisableBehaviorMonitoring True" nocase ascii wide
         // Description: Windows defender disable protection
         // Reference: https://thedfirreport.com/2023/10/30/netsupport-intrusion-results-in-domain-compromise/
-        $string16 = /Add\-MpPreference\s\-DisableBehaviourMonitoring\sTrue/ nocase ascii wide
+        $string16 = "Add-MpPreference -DisableBehaviourMonitoring True" nocase ascii wide
         // Description: Windows defender disable protection
         // Reference: https://thedfirreport.com/2023/10/30/netsupport-intrusion-results-in-domain-compromise/
-        $string17 = /Add\-MpPreference\s\-DisDisableRealtimeMonitoring\sTrue/ nocase ascii wide
+        $string17 = "Add-MpPreference -DisDisableRealtimeMonitoring True" nocase ascii wide
         // Description: Windows Defender evasion add an exclusion directory for your shady stuff
         // Reference: https://casvancooten.com/posts/2020/11/windows-active-directory-exploitation-cheat-sheet-and-command-reference
-        $string18 = /Add\-MpPreference\s\-ExclusionPath\s/ nocase ascii wide
+        $string18 = "Add-MpPreference -ExclusionPath " nocase ascii wide
         // Description: Windows Defender evasion add an exclusion directory for your shady stuff
         // Reference: https://casvancooten.com/posts/2020/11/windows-active-directory-exploitation-cheat-sheet-and-command-reference
         $string19 = /Add\-MpPreference\s\-ExclustionPath\sc\:\\users\\public/ nocase ascii wide
@@ -91,19 +91,19 @@ rule powershell
         $string27 = /Import\-Module\s.{0,1000}Microsoft\.ActiveDirectory\.Management\.dll/ nocase ascii wide
         // Description: propagation of ACL changes on the 'AdminSDHolder' container. which can be used to maintain unauthorized access or escalate privileges in the targeted environment. The 'AdminSDHolder' container plays a crucial role in managing the security of protected groups in Active Directory. and forcing ACL changes to propagate may lead to unintended security consequences.
         // Reference: https://github.com/theyoge/AD-Pentesting-Tools/blob/main/Invoke-SDPropagator.ps1
-        $string28 = /Invoke\-SDPropagator/ nocase ascii wide
+        $string28 = "Invoke-SDPropagator" nocase ascii wide
         // Description: powershell obfuscations techniques observed by malwares - reversed powershell
         // Reference: N/A
-        $string29 = /llehsrewop/ nocase ascii wide
+        $string29 = "llehsrewop" nocase ascii wide
         // Description: disable powershell logging
         // Reference: N/A
-        $string30 = /New\-ItemProperty\s.{0,1000}\s\"EnableModuleLogging\"\s\-PropertyType\sDWord\s\-Value\s0/ nocase ascii wide
+        $string30 = /New\-ItemProperty\s.{0,1000}\s\\"EnableModuleLogging\\"\s\-PropertyType\sDWord\s\-Value\s0/ nocase ascii wide
         // Description: disable powershell logging
         // Reference: N/A
-        $string31 = /New\-ItemProperty\s.{0,1000}\s\"EnableScriptBlockLogging\"\s\-PropertyType\sDWord\s\-Value\s0/ nocase ascii wide
+        $string31 = /New\-ItemProperty\s.{0,1000}\s\\"EnableScriptBlockLogging\\"\s\-PropertyType\sDWord\s\-Value\s0/ nocase ascii wide
         // Description: deployment of a payload through a PowerShell stager using bits to download
         // Reference: https://thedfirreport.com/2023/09/25/from-screenconnect-to-hive-ransomware-in-61-hours/
-        $string32 = /powershell\.exe\s\-nop\s\-c\s\"start\-job\s.{0,1000}Import\-Module\sBitsTransfer.{0,1000}\$env\:temp.{0,1000}GetRandomFileName\(\).{0,1000}Start\-BitsTransfer\s\-Source\s\'http.{0,1000}Remove\-Item.{0,1000}Receive\-Job/ nocase ascii wide
+        $string32 = /powershell\.exe\s\-nop\s\-c\s\\"start\-job\s.{0,1000}Import\-Module\sBitsTransfer.{0,1000}\$env\:temp.{0,1000}GetRandomFileName\(\).{0,1000}Start\-BitsTransfer\s\-Source\s\'http.{0,1000}Remove\-Item.{0,1000}Receive\-Job/ nocase ascii wide
         // Description: disable powershell logging
         // Reference: N/A
         $string33 = /reg\sadd\s.{0,1000}\sEnableModuleLogging\s\/t\sREG_DWORD\s\/d\s0/ nocase ascii wide
@@ -118,7 +118,7 @@ rule powershell
         $string36 = /Remove\-ItemProperty\s.{0,1000}HKLM\:\\SOFTWARE\\YourSoftware\\Schedule\\TaskCache\\Tree\\.{0,1000}\s\-Name\s.{0,1000}SD/ nocase ascii wide
         // Description: removing powershell console logging to avoid detection
         // Reference: N/A
-        $string37 = /Remove\-Module\s\-Name\sPsReadline/ nocase ascii wide
+        $string37 = "Remove-Module -Name PsReadline" nocase ascii wide
         // Description: Defense evasion technique
         // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
         $string38 = /rundll32\.exe\sC\:\\Users\\Public\\/ nocase ascii wide
@@ -127,19 +127,19 @@ rule powershell
         $string39 = /rundll32\.exe\sC\:\\windows\\System32\\comsvcs\.dll\sMiniDump\s\(Get\-Process\slsass\)\.id/ nocase ascii wide
         // Description: disable powershell logging
         // Reference: N/A
-        $string40 = /Set\-ItemProperty\s.{0,1000}\s\"EnableModuleLogging\"\s\-Value\s0/ nocase ascii wide
+        $string40 = /Set\-ItemProperty\s.{0,1000}\s\\"EnableModuleLogging\\"\s\-Value\s0/ nocase ascii wide
         // Description: disable powershell logging
         // Reference: N/A
-        $string41 = /Set\-ItemProperty\s.{0,1000}\s\"EnableScriptBlockLogging\"\s\-Value\s0/ nocase ascii wide
+        $string41 = /Set\-ItemProperty\s.{0,1000}\s\\"EnableScriptBlockLogging\\"\s\-Value\s0/ nocase ascii wide
         // Description: disable powershell logging
         // Reference: N/A
-        $string42 = /Set\-ItemProperty\s\-Path\s\"HKLM\:\\SOFTWARE\\Policies\\Microsoft\\Windows\\PowerShell\\ModuleLogging\"\s\-Name\s\"EnableModuleLogging\"\s\-Value\s0/ nocase ascii wide
+        $string42 = /Set\-ItemProperty\s\-Path\s\\"HKLM\:\\SOFTWARE\\Policies\\Microsoft\\Windows\\PowerShell\\ModuleLogging\\"\s\-Name\s\\"EnableModuleLogging\\"\s\-Value\s0/ nocase ascii wide
         // Description: Windows Defender evasion add an exclusion directory for your shady stuff
         // Reference: https://casvancooten.com/posts/2020/11/windows-active-directory-exploitation-cheat-sheet-and-command-reference
         $string43 = /Set\-MpPreference\s\-ExclusionPath\s.{0,1000}\s\-DisableRealtimeMonitoring/ nocase ascii wide
         // Description: removing powershell console logging to avoid detection
         // Reference: N/A
-        $string44 = /Set\-PSReadlineOption\s\-HistorySaveStyle\sSaveNothing/ nocase ascii wide
+        $string44 = "Set-PSReadlineOption -HistorySaveStyle SaveNothing" nocase ascii wide
 
     condition:
         any of them

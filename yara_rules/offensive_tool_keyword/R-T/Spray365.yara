@@ -10,7 +10,7 @@ rule Spray365
     strings:
         // Description: Spray365 is a password spraying tool that identifies valid credentials for Microsoft accounts (Office 365 / Azure AD).
         // Reference: https://github.com/MarkoH17/Spray365
-        $string1 = /\s\-\-custom_user_agent/ nocase ascii wide
+        $string1 = " --custom_user_agent" nocase ascii wide
         // Description: Spray365 is a password spraying tool that identifies valid credentials for Microsoft accounts (Office 365 / Azure AD).
         // Reference: https://github.com/MarkoH17/Spray365
         $string2 = /\sgenerate\saudit\s\-ep\s.{0,1000}\-\-passwords_in_userfile/ nocase ascii wide
@@ -22,10 +22,10 @@ rule Spray365
         $string4 = /\sgenerate\snormal\s\-ep\sex\-plan\.s365\s/ nocase ascii wide
         // Description: Spray365 is a password spraying tool that identifies valid credentials for Microsoft accounts (Office 365 / Azure AD).
         // Reference: https://github.com/MarkoH17/Spray365
-        $string5 = /\s\-\-random_user_agent/ nocase ascii wide
+        $string5 = " --random_user_agent" nocase ascii wide
         // Description: Spray365 is a password spraying tool that identifies valid credentials for Microsoft accounts (Office 365 / Azure AD).
         // Reference: https://github.com/MarkoH17/Spray365
-        $string6 = /\s\-\-show_invalid_creds/ nocase ascii wide
+        $string6 = " --show_invalid_creds" nocase ascii wide
         // Description: Spray365 is a password spraying tool that identifies valid credentials for Microsoft accounts (Office 365 / Azure AD).
         // Reference: https://github.com/MarkoH17/Spray365
         $string7 = /\sspray\s\-ep\sex\-plan\.s365/ nocase ascii wide
@@ -37,7 +37,7 @@ rule Spray365
         $string9 = /\/spray\/spray\.py/ nocase ascii wide
         // Description: Spray365 is a password spraying tool that identifies valid credentials for Microsoft accounts (Office 365 / Azure AD).
         // Reference: https://github.com/MarkoH17/Spray365
-        $string10 = /\/Spray365/ nocase ascii wide
+        $string10 = "/Spray365" nocase ascii wide
         // Description: Spray365 is a password spraying tool that identifies valid credentials for Microsoft accounts (Office 365 / Azure AD).
         // Reference: https://github.com/MarkoH17/Spray365
         $string11 = /Spray365\.git/ nocase ascii wide

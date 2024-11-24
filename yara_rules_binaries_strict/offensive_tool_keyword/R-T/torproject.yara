@@ -40,7 +40,7 @@ rule torproject
         $string10 = /\/tor\-browser\-win64.{0,100}\./ nocase ascii wide
         // Description: Browse Privately. Explore Freely. Defend yourself against tracking and surveillance. Circumvent censorship.
         // Reference: torproject.org
-        $string11 = /\/tor\-package\-archive\// nocase ascii wide
+        $string11 = "/tor-package-archive/" nocase ascii wide
         // Description: Browse Privately. Explore Freely. Defend yourself against tracking and surveillance. Circumvent censorship.
         // Reference: torproject.org
         $string12 = /\\AppData\\Local\\Temp\\tor\s\-\-/ nocase ascii wide
@@ -70,7 +70,7 @@ rule torproject
         $string20 = /deb\.torproject\.org\/torproject\.org\/.{0,100}\.asc/ nocase ascii wide
         // Description: Browse Privately. Explore Freely. Defend yourself against tracking and surveillance. Circumvent censorship.
         // Reference: torproject.org
-        $string21 = /dnf\sinstall\stor\s\-y/ nocase ascii wide
+        $string21 = "dnf install tor -y" nocase ascii wide
         // Description: Detects suspicious TOR usage which anonymizes user's web traffic through a relay network
         // Reference: torproject.org
         $string22 = /http\:\/\/.{0,100}\.onion/ nocase ascii wide
@@ -100,7 +100,7 @@ rule torproject
         $string30 = /taskkill\s\/IM\stor\.exe\s\/F/ nocase ascii wide
         // Description: Browse Privately. Explore Freely. Defend yourself against tracking and surveillance. Circumvent censorship.
         // Reference: torproject.org
-        $string31 = /tor\s\-\-DataDirectory\s/ nocase ascii wide
+        $string31 = "tor --DataDirectory " nocase ascii wide
         // Description: Browse Privately. Explore Freely. Defend yourself against tracking and surveillance. Circumvent censorship.
         // Reference: torproject.org
         $string32 = /TorBrowser\-.{0,100}macos_ALL\.dmg/ nocase ascii wide
@@ -112,7 +112,7 @@ rule torproject
         $string34 = /torbrowser\-install\-win.{0,100}\.exe/ nocase ascii wide
         // Description: Browse Privately. Explore Freely. Defend yourself against tracking and surveillance. Circumvent censorship.
         // Reference: torproject.org
-        $string35 = /torbrowser\-install\-win64/ nocase ascii wide
+        $string35 = "torbrowser-install-win64" nocase ascii wide
         // Description: Browse Privately. Explore Freely. Defend yourself against tracking and surveillance. Circumvent censorship.
         // Reference: torproject.org
         $string36 = /tor\-browser\-linux.{0,100}_ALL\.tar\.xz/ nocase ascii wide

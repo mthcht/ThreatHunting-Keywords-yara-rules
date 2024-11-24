@@ -55,43 +55,43 @@ rule SocialBox_Termux
         $string15 = /\/SocialBox\.sh/ nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://github.com/samsesh/SocialBox-Termux
-        $string16 = /\/SocialBox\-Termux/ nocase ascii wide
+        $string16 = "/SocialBox-Termux" nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://raw.githubusercontent.com/Sup3r-Us3r/scripts/master/fb-brute.pl
-        $string17 = /\/Sup3r\-Us3r\/scripts\// nocase ascii wide
+        $string17 = "/Sup3r-Us3r/scripts/" nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://github.com/samsesh/SocialBox-Termux
         $string18 = /\/tweetshell\.sh/ nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://github.com/umeshshinde19/instainsane
-        $string19 = /\/umeshshinde19\/instainsane/ nocase ascii wide
+        $string19 = "/umeshshinde19/instainsane" nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://github.com/samsesh/SocialBox-Termux
-        $string20 = /apt\-get\s\-y\sinstall\stor\s/ nocase ascii wide
+        $string20 = "apt-get -y install tor " nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://github.com/samsesh/insta-bf
         $string21 = /Brute\-force\-Instagram\-.{0,1000}\.git/ nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://raw.githubusercontent.com/Sup3r-Us3r/scripts/master/fb-brute.pl
-        $string22 = /datr\=80ZzUfKqDOjwL8pauwqMjHTa/ nocase ascii wide
+        $string22 = "datr=80ZzUfKqDOjwL8pauwqMjHTa" nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://github.com/Ha3MrX/Gemail-Hack
         $string23 = /gemailhack\.py/ nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://github.com/Ha3MrX/Gemail-Hack
-        $string24 = /Ha3MrX\/Gemail\-Hack/ nocase ascii wide
+        $string24 = "Ha3MrX/Gemail-Hack" nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://raw.githubusercontent.com/Sup3r-Us3r/scripts/master/fb-brute.pl
         $string25 = /Ox\-Bruter\.pl/ nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://github.com/samsesh/SocialBox-Termux
-        $string26 = /thelinuxchoice\/tweetshell/ nocase ascii wide
+        $string26 = "thelinuxchoice/tweetshell" nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://raw.githubusercontent.com/Sup3r-Us3r/scripts/master/fb-brute.pl
-        $string27 = /Yuuup\!\!\sPass\sCracked/ nocase ascii wide
+        $string27 = "Yuuup!! Pass Cracked" nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://github.com/samsesh/insta-bf
-        $string28 = /ZxKmz4hXp6XKmTPg9lzgYxXN4sFr2pzo/ nocase ascii wide
+        $string28 = "ZxKmz4hXp6XKmTPg9lzgYxXN4sFr2pzo" nocase ascii wide
 
     condition:
         any of them

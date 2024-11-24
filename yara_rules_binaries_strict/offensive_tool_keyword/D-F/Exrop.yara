@@ -13,7 +13,7 @@ rule Exrop
         $string1 = /\sExrop\(.{0,100}\/bin\// nocase ascii wide
         // Description: Exrop is automatic ROP chains generator tool which can build gadget chain automatically from given binary and constraints
         // Reference: https://github.com/d4em0n/exrop
-        $string2 = /\simport\sExrop/ nocase ascii wide
+        $string2 = " import Exrop" nocase ascii wide
         // Description: Exrop is automatic ROP chains generator tool which can build gadget chain automatically from given binary and constraints
         // Reference: https://github.com/d4em0n/exrop
         $string3 = /\/avoid_badchars\.py/ nocase ascii wide
@@ -22,19 +22,19 @@ rule Exrop
         $string4 = /\/ChainBuilder\.py/ nocase ascii wide
         // Description: Exrop is automatic ROP chains generator tool which can build gadget chain automatically from given binary and constraints
         // Reference: https://github.com/d4em0n/exrop
-        $string5 = /\/d4em0n\/exrop/ nocase ascii wide
+        $string5 = "/d4em0n/exrop" nocase ascii wide
         // Description: Exrop is automatic ROP chains generator tool which can build gadget chain automatically from given binary and constraints
         // Reference: https://github.com/d4em0n/exrop
         $string6 = /\/exploit_orw\.py/ nocase ascii wide
         // Description: Exrop is automatic ROP chains generator tool which can build gadget chain automatically from given binary and constraints
         // Reference: https://github.com/d4em0n/exrop
-        $string7 = /\/rop_emporium/ nocase ascii wide
+        $string7 = "/rop_emporium" nocase ascii wide
         // Description: Exrop is automatic ROP chains generator tool which can build gadget chain automatically from given binary and constraints
         // Reference: https://github.com/d4em0n/exrop
-        $string8 = /from\sExrop\simport\s/ nocase ascii wide
+        $string8 = "from Exrop import " nocase ascii wide
         // Description: Exrop is automatic ROP chains generator tool which can build gadget chain automatically from given binary and constraints
         // Reference: https://github.com/d4em0n/exrop
-        $string9 = /from\spwn\simport\s/ nocase ascii wide
+        $string9 = "from pwn import " nocase ascii wide
         // Description: Exrop is automatic ROP chains generator tool which can build gadget chain automatically from given binary and constraints
         // Reference: https://github.com/d4em0n/exrop
         $string10 = /rop\.find_gadgets/ nocase ascii wide

@@ -13,7 +13,7 @@ rule PAExec
         $string1 = /\s\-csrc\sC\:\\\\Windows\\\\notepad\.exe\s\-c\scmd\.exe/ nocase ascii wide
         // Description: PAExec is a freely-redistributable re-implementation of SysInternal/Microsoft's popular PsExec program
         // Reference: https://github.com/poweradminllc/PAExec
-        $string2 = /\sPAExec\sservice/ nocase ascii wide
+        $string2 = " PAExec service" nocase ascii wide
         // Description: PAExec is a freely-redistributable re-implementation of SysInternal/Microsoft's popular PsExec program
         // Reference: https://github.com/poweradminllc/PAExec
         $string3 = /\%SYSTEMROOT\%\\PAExec\-/ nocase ascii wide
@@ -70,34 +70,34 @@ rule PAExec
         $string20 = /\\pipe\\PAExecOut/ nocase ascii wide
         // Description: PAExec is a freely-redistributable re-implementation of SysInternal/Microsoft's popular PsExec program
         // Reference: https://github.com/poweradminllc/PAExec
-        $string21 = /2FEB96F5\-08E6\-48A3\-B306\-794277650A08/ nocase ascii wide
+        $string21 = "2FEB96F5-08E6-48A3-B306-794277650A08" nocase ascii wide
         // Description: PAExec is a freely-redistributable re-implementation of SysInternal/Microsoft's popular PsExec program
         // Reference: https://github.com/poweradminllc/PAExec
-        $string22 = /2FEB96F5\-08E6\-48A3\-B306\-794277650A08/ nocase ascii wide
+        $string22 = "2FEB96F5-08E6-48A3-B306-794277650A08" nocase ascii wide
         // Description: PAExec is a freely-redistributable re-implementation of SysInternal/Microsoft's popular PsExec program
         // Reference: https://github.com/poweradminllc/PAExec
-        $string23 = /Description\'\>PAExec\sApplication/ nocase ascii wide
+        $string23 = "Description'>PAExec Application" nocase ascii wide
         // Description: PAExec is a freely-redistributable re-implementation of SysInternal/Microsoft's popular PsExec program
         // Reference: https://github.com/poweradminllc/PAExec
-        $string24 = /\'Details\'\>paexec\sapplication/ nocase ascii wide
+        $string24 = "'Details'>paexec application" nocase ascii wide
         // Description: PAExec is a freely-redistributable re-implementation of SysInternal/Microsoft's popular PsExec program
         // Reference: https://github.com/poweradminllc/PAExec
-        $string25 = /HINT\:\sPAExec\sprobably\sneeds\sto\sbe\s/ nocase ascii wide
+        $string25 = "HINT: PAExec probably needs to be " nocase ascii wide
         // Description: PAExec is a freely-redistributable re-implementation of SysInternal/Microsoft's popular PsExec program
         // Reference: https://github.com/poweradminllc/PAExec
         $string26 = /paexec\s\\\\/ nocase ascii wide
         // Description: PAExec is a freely-redistributable re-implementation of SysInternal/Microsoft's popular PsExec program
         // Reference: https://github.com/poweradminllc/PAExec
-        $string27 = /PAExec\serror\swaiting\sfor\sapp\sto\sexit/ nocase ascii wide
+        $string27 = "PAExec error waiting for app to exit" nocase ascii wide
         // Description: PAExec is a freely-redistributable re-implementation of SysInternal/Microsoft's popular PsExec program
         // Reference: https://github.com/poweradminllc/PAExec
-        $string28 = /PAExec\sservice\s/ nocase ascii wide
+        $string28 = "PAExec service " nocase ascii wide
         // Description: PAExec is a freely-redistributable re-implementation of SysInternal/Microsoft's popular PsExec program
         // Reference: https://github.com/poweradminllc/PAExec
-        $string29 = /PAExec\sstarting\sprocess/ nocase ascii wide
+        $string29 = "PAExec starting process" nocase ascii wide
         // Description: PAExec is a freely-redistributable re-implementation of SysInternal/Microsoft's popular PsExec program
         // Reference: https://github.com/poweradminllc/PAExec
-        $string30 = /PAExec\stimed\sout\swaiting\sfor\sapp\sto\sexit/ nocase ascii wide
+        $string30 = "PAExec timed out waiting for app to exit" nocase ascii wide
         // Description: PAExec is a freely-redistributable re-implementation of SysInternal/Microsoft's popular PsExec program
         // Reference: https://github.com/poweradminllc/PAExec
         $string31 = /paexec\.exe\s\\\\/ nocase ascii wide
@@ -112,7 +112,7 @@ rule PAExec
         $string34 = /poweradmin\.com\/PAExec/ nocase ascii wide
         // Description: PAExec is a freely-redistributable re-implementation of SysInternal/Microsoft's popular PsExec program
         // Reference: https://github.com/poweradminllc/PAExec
-        $string35 = /poweradminllc\/PAExec/ nocase ascii wide
+        $string35 = "poweradminllc/PAExec" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

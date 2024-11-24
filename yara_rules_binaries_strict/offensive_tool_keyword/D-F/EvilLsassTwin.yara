@@ -10,16 +10,16 @@ rule EvilLsassTwin
     strings:
         // Description: attempt to duplicate open handles to LSASS. If this fails it will obtain a handle to LSASS through the NtGetNextProcess function instead of OpenProcess/NtOpenProcess.
         // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
-        $string1 = /\sEvilTwinServer\s/ nocase ascii wide
+        $string1 = " EvilTwinServer " nocase ascii wide
         // Description: Dumping lsass
         // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
-        $string2 = /\/EvilLsassTwin/ nocase ascii wide
+        $string2 = "/EvilLsassTwin" nocase ascii wide
         // Description: attempt to duplicate open handles to LSASS. If this fails it will obtain a handle to LSASS through the NtGetNextProcess function instead of OpenProcess/NtOpenProcess.
         // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
-        $string3 = /\/EvilLsassTwin\// nocase ascii wide
+        $string3 = "/EvilLsassTwin/" nocase ascii wide
         // Description: attempt to duplicate open handles to LSASS. If this fails it will obtain a handle to LSASS through the NtGetNextProcess function instead of OpenProcess/NtOpenProcess.
         // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
-        $string4 = /\/EvilTwinServer/ nocase ascii wide
+        $string4 = "/EvilTwinServer" nocase ascii wide
         // Description: Dumping lsass
         // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
         $string5 = /\/malDll\.dll/ nocase ascii wide
@@ -46,22 +46,22 @@ rule EvilLsassTwin
         $string12 = /\\Nimperiments\-main/ nocase ascii wide
         // Description: Dumping lsass
         // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
-        $string13 = /40408670ce1d814a3283a625566334fa191580622adbd23effa6e3cdaaafc5d5/ nocase ascii wide
+        $string13 = "40408670ce1d814a3283a625566334fa191580622adbd23effa6e3cdaaafc5d5" nocase ascii wide
         // Description: Dumping lsass
         // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
-        $string14 = /5c177feedd58a6ccc8287dee8c767dd486f2b5c55c234360be17f85fcbaa4501/ nocase ascii wide
+        $string14 = "5c177feedd58a6ccc8287dee8c767dd486f2b5c55c234360be17f85fcbaa4501" nocase ascii wide
         // Description: Dumping lsass
         // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
         $string15 = /All\sgood\sin\sthe\shood\.\sCheck\sTemp\sfor\stest\.txt/ nocase ascii wide
         // Description: Dumping lsass
         // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
-        $string16 = /Attempting\sRisky\sOperation\:\sOpening\sHandle\sDirectly\sto\sLsass\sProcess/ nocase ascii wide
+        $string16 = "Attempting Risky Operation: Opening Handle Directly to Lsass Process" nocase ascii wide
         // Description: Dumping lsass
         // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
-        $string17 = /Build\sEvil\sLsass\sTwin/ nocase ascii wide
+        $string17 = "Build Evil Lsass Twin" nocase ascii wide
         // Description: Dumping lsass
         // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
-        $string18 = /Building\sEvil\sLsass\sTwin/ nocase ascii wide
+        $string18 = "Building Evil Lsass Twin" nocase ascii wide
         // Description: Dumping lsass
         // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
         $string19 = /CreateFile\(\\"twin\.txt\\"/ nocase ascii wide
@@ -97,7 +97,7 @@ rule EvilLsassTwin
         $string29 = /EvilTwinServer\.nim/ nocase ascii wide
         // Description: Dumping lsass
         // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
-        $string30 = /f6e16eee3494ad168fa124552fba957ba8ddf8e7d96eedeef33f9e2afe1e9257/ nocase ascii wide
+        $string30 = "f6e16eee3494ad168fa124552fba957ba8ddf8e7d96eedeef33f9e2afe1e9257" nocase ascii wide
         // Description: Dumping lsass
         // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
         $string31 = /from\shttps\:\/\/github\.com\/S3cur3Th1sSh1t\/Nim_Dinvoke/ nocase ascii wide
@@ -109,7 +109,7 @@ rule EvilLsassTwin
         $string33 = /http\:\/\/0hRIb4t1fWNPYBVA\.net\/index\.php/ nocase ascii wide
         // Description: attempt to duplicate open handles to LSASS. If this fails it will obtain a handle to LSASS through the NtGetNextProcess function instead of OpenProcess/NtOpenProcess.
         // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
-        $string34 = /Lsass\sDump\sFile\sCreated/ nocase ascii wide
+        $string34 = "Lsass Dump File Created" nocase ascii wide
         // Description: Dumping lsass
         // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
         $string35 = /msfcallback\.bin/ nocase ascii wide
@@ -118,7 +118,7 @@ rule EvilLsassTwin
         $string36 = /rastamouse\.me\/dumping\-lsass\-with\-duplicated\-handles/ nocase ascii wide
         // Description: Dumping lsass
         // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
-        $string37 = /RePRGM\/Nimperiments/ nocase ascii wide
+        $string37 = "RePRGM/Nimperiments" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

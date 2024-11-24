@@ -28,7 +28,7 @@ rule chimera
         $string6 = /\/chimera\.sh/ nocase ascii wide
         // Description: Chimera is a PowerShell obfuscation script designed to bypass AMSI and commercial antivirus solutions.
         // Reference: https://github.com/tokyoneon/Chimera/
-        $string7 = /\/opt\/chimera/ nocase ascii wide
+        $string7 = "/opt/chimera" nocase ascii wide
         // Description: Chimera is a PowerShell obfuscation script designed to bypass AMSI and commercial antivirus solutions.
         // Reference: https://github.com/tokyoneon/Chimera/
         $string8 = /\/tmp\/chimera\.ps1/ nocase ascii wide
@@ -52,10 +52,10 @@ rule chimera
         $string14 = /Get\-WLAN\-Keys\.ps1/ nocase ascii wide
         // Description: Chimera is a PowerShell obfuscation script designed to bypass AMSI and commercial antivirus solutions.
         // Reference: https://github.com/tokyoneon/Chimera/
-        $string15 = /Invoke\-PortScan/ nocase ascii wide
+        $string15 = "Invoke-PortScan" nocase ascii wide
         // Description: Chimera is a PowerShell obfuscation script designed to bypass AMSI and commercial antivirus solutions.
         // Reference: https://github.com/tokyoneon/Chimera/
-        $string16 = /Invoke\-PoshRatHttp/ nocase ascii wide
+        $string16 = "Invoke-PoshRatHttp" nocase ascii wide
         // Description: Chimera is a PowerShell obfuscation script designed to bypass AMSI and commercial antivirus solutions.
         // Reference: https://github.com/tokyoneon/Chimera/
         $string17 = /Invoke\-PowerShellIcmp\.ps1/ nocase ascii wide
@@ -79,7 +79,7 @@ rule chimera
         $string23 = /powershell_reverse_shell\.ps1/ nocase ascii wide
         // Description: Chimera is a PowerShell obfuscation script designed to bypass AMSI and commercial antivirus solutions.
         // Reference: https://github.com/tokyoneon/Chimera/
-        $string24 = /tokyoneon\/Chimera/ nocase ascii wide
+        $string24 = "tokyoneon/Chimera" nocase ascii wide
 
     condition:
         any of them

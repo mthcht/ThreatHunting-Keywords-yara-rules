@@ -10,7 +10,7 @@ rule exe2powershell
     strings:
         // Description: exe2powershell is used to convert any binary file to a bat/powershell file
         // Reference: https://github.com/yanncam/exe2powershell
-        $string1 = /\/exe2powershell/ nocase ascii wide
+        $string1 = "/exe2powershell" nocase ascii wide
         // Description: exe2powershell is used to convert any binary file to a bat/powershell file
         // Reference: https://github.com/yanncam/exe2powershell
         $string2 = /exe2bat\.cpp/ nocase ascii wide
@@ -25,7 +25,7 @@ rule exe2powershell
         $string5 = /exe2powershell\.exe/ nocase ascii wide
         // Description: exe2powershell is used to convert any binary file to a bat/powershell file
         // Reference: https://github.com/yanncam/exe2powershell
-        $string6 = /exe2powershell\-master/ nocase ascii wide
+        $string6 = "exe2powershell-master" nocase ascii wide
 
     condition:
         any of them

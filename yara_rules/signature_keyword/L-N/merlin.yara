@@ -10,7 +10,7 @@ rule merlin
     strings:
         // Description: Merlin is a post-exploit Command & Control (C2) tool also known as a Remote Access Tool (RAT)
         // Reference: https://github.com/Ne0nd0g/merlin
-        $string1 = /Trojan\:Win32\/TrickbotCrypt/ nocase ascii wide
+        $string1 = "Trojan:Win32/TrickbotCrypt" nocase ascii wide
 
     condition:
         any of them

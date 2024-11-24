@@ -31,10 +31,10 @@ rule PipeViewer_
         $string7 = /\\PipeViewer\\Program\.cs/ nocase ascii wide
         // Description: A tool that shows detailed information about named pipes in Windows
         // Reference: https://github.com/cyberark/PipeViewer
-        $string8 = /2419CEDC\-BF3A\-4D8D\-98F7\-6403415BEEA4/ nocase ascii wide
+        $string8 = "2419CEDC-BF3A-4D8D-98F7-6403415BEEA4" nocase ascii wide
         // Description: A tool that shows detailed information about named pipes in Windows
         // Reference: https://github.com/cyberark/PipeViewer
-        $string9 = /cyberark\/PipeViewer/ nocase ascii wide
+        $string9 = "cyberark/PipeViewer" nocase ascii wide
         // Description: A tool that shows detailed information about named pipes in Windows
         // Reference: https://github.com/cyberark/PipeViewer
         $string10 = /NamedPipeServer\.ps1/ nocase ascii wide
@@ -49,7 +49,7 @@ rule PipeViewer_
         $string13 = /PipeViewer_v1\.1\.zip/ nocase ascii wide
         // Description: A tool that shows detailed information about named pipes in Windows
         // Reference: https://github.com/cyberark/PipeViewer
-        $string14 = /PipeViewer\-main/ nocase ascii wide
+        $string14 = "PipeViewer-main" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

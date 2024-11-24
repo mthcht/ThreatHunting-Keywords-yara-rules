@@ -16,7 +16,7 @@ rule Kematian_Stealer
         $string2 = /\sencrypthub_steal\.ps1/ nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
-        $string3 = /\sEncryptHub\-WINRAR\-/ nocase ascii wide
+        $string3 = " EncryptHub-WINRAR-" nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
         $string4 = /\$ransomNoteBase64/ nocase ascii wide
@@ -79,67 +79,67 @@ rule Kematian_Stealer
         $string23 = /\\WinSCP\-sessions\.txt/ nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
-        $string24 = /078682e4de2e678702911508629fc3e0f293628720e67506340155091ce06ac5/ nocase ascii wide
+        $string24 = "078682e4de2e678702911508629fc3e0f293628720e67506340155091ce06ac5" nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
-        $string25 = /23b63ec6ec2a3d5addcf3d67c8ce01f913f5eaf3a77159606c6d28deff2c8d6e/ nocase ascii wide
+        $string25 = "23b63ec6ec2a3d5addcf3d67c8ce01f913f5eaf3a77159606c6d28deff2c8d6e" nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
-        $string26 = /2dd2927d0f421a78f9289bee0e47449780a13ff7686a9d29c6afb0fec4c22576/ nocase ascii wide
+        $string26 = "2dd2927d0f421a78f9289bee0e47449780a13ff7686a9d29c6afb0fec4c22576" nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
-        $string27 = /4192844c08997d6e198c0511821d0b6cdf8c87aa94cb0b2cd249c114e2c75bb6/ nocase ascii wide
+        $string27 = "4192844c08997d6e198c0511821d0b6cdf8c87aa94cb0b2cd249c114e2c75bb6" nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
-        $string28 = /54584005fc341d7306b10709e9daf7ab60fcb9c782b7c81aa59c667d41d065bc/ nocase ascii wide
+        $string28 = "54584005fc341d7306b10709e9daf7ab60fcb9c782b7c81aa59c667d41d065bc" nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
-        $string29 = /7484009227\:AAEvngzrIKFNFdfSqECzWAqbnB5IXk8pjVo/ nocase ascii wide
+        $string29 = "7484009227:AAEvngzrIKFNFdfSqECzWAqbnB5IXk8pjVo" nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
-        $string30 = /9f946bd0783019a56d2a6de29dd7a2ae1a2b62239396a99eca83b17e4010fc0d/ nocase ascii wide
+        $string30 = "9f946bd0783019a56d2a6de29dd7a2ae1a2b62239396a99eca83b17e4010fc0d" nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
-        $string31 = /b4ef4d10245cb81ac244e6fb545cc76a5fad1ac79eedbcec69b932765d5f29d8/ nocase ascii wide
+        $string31 = "b4ef4d10245cb81ac244e6fb545cc76a5fad1ac79eedbcec69b932765d5f29d8" nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
-        $string32 = /battle_net_stealer/ nocase ascii wide
+        $string32 = "battle_net_stealer" nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github.com/Pirate-Devs/Kematian
-        $string33 = /cb4406bc759bd471ac86d80678abd6dcec4934d8db7d92123ebd5960330699cf/ nocase ascii wide
+        $string33 = "cb4406bc759bd471ac86d80678abd6dcec4934d8db7d92123ebd5960330699cf" nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
-        $string34 = /cfafc9b2d6cbc65769074bab296c5fbacc676d298f7391a3ff787307eb1cbce0/ nocase ascii wide
+        $string34 = "cfafc9b2d6cbc65769074bab296c5fbacc676d298f7391a3ff787307eb1cbce0" nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
-        $string35 = /d08e48fbfffffa54fb689d612cfa21a1a0e906ade2bca23bd12f89ce827bc0df/ nocase ascii wide
+        $string35 = "d08e48fbfffffa54fb689d612cfa21a1a0e906ade2bca23bd12f89ce827bc0df" nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
-        $string36 = /da8ea1b2c9f697d582cbcf8ef9f61ecdfd4105643cc7da7b026c5333e4b6be58/ nocase ascii wide
+        $string36 = "da8ea1b2c9f697d582cbcf8ef9f61ecdfd4105643cc7da7b026c5333e4b6be58" nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
-        $string37 = /DecryptWinSCPPassword/ nocase ascii wide
+        $string37 = "DecryptWinSCPPassword" nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github.com/Pirate-Devs/Kematian
-        $string38 = /echo\s\%cmdcmdline\%\s\|\sfind\s\/i\s\"\%\~f0\"\>nul\s\|\|\sexit\s\/b\s1/ nocase ascii wide
+        $string38 = /echo\s\%cmdcmdline\%\s\|\sfind\s\/i\s\\"\%\~f0\\"\>nul\s\|\|\sexit\s\/b\s1/ nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
-        $string39 = /encrypthub_asseq2QSsxzc/ nocase ascii wide
+        $string39 = "encrypthub_asseq2QSsxzc" nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
-        $string40 = /epicgames_stealer/ nocase ascii wide
+        $string40 = "epicgames_stealer" nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
         $string41 = /\-ExecutionPolicy\sBypass\s\-WindowStyle\sHidden\s\-Command\s\&\s\{taskkill\s\/f\s\/im\smmc\.exe/ nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
-        $string42 = /filezilla_stealer/ nocase ascii wide
+        $string42 = "filezilla_stealer" nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
-        $string43 = /function\sKematianLoader/ nocase ascii wide
+        $string43 = "function KematianLoader" nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
-        $string44 = /Get\-InstalledAV\s/ nocase ascii wide
+        $string44 = "Get-InstalledAV " nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
         $string45 = /https\:\/\/mainstream\.ngrok\.app\/\?method\=UploadFile\&filename\=/ nocase ascii wide
@@ -154,52 +154,52 @@ rule Kematian_Stealer
         $string48 = /https\:\/\/www\.win\-rar\.co\/panel\// nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
-        $string49 = /Invoke\-WebRequest\s\-Uri\s\"http\:\/\/ip\-api\.com\/line\/\?/ nocase ascii wide
+        $string49 = /Invoke\-WebRequest\s\-Uri\s\\"http\:\/\/ip\-api\.com\/line\/\?/ nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
-        $string50 = /JGtlbWF0aWFuLlNldFZhbHVlKCRudWxsLCR0cnVlKQ\=\=/ nocase ascii wide
+        $string50 = "JGtlbWF0aWFuLlNldFZhbHVlKCRudWxsLCR0cnVlKQ==" nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
-        $string51 = /KioqUkFOU09NIE5PVEUqKgoKWW91ciBmaWxlcyBoYXZlIGJlZW4gZW5jcnlwdGVkLgoKQWxsIHlvdXIgaW1wb3J0YW50IGZpbGVzLCBpbmNsdWRpbm/ nocase ascii wide
+        $string51 = "KioqUkFOU09NIE5PVEUqKgoKWW91ciBmaWxlcyBoYXZlIGJlZW4gZW5jcnlwdGVkLgoKQWxsIHlvdXIgaW1wb3J0YW50IGZpbGVzLCBpbmNsdWRpbm" nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
         $string52 = /livevnc\.ngrok\.app/ nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
-        $string53 = /mshta\.exe\svbscript\:createobject\(\`\"wscript\.shell\`\"\)\.run\(\`\"powershell\s/ nocase ascii wide
+        $string53 = /mshta\.exe\svbscript\:createobject\(\`\\"wscript\.shell\`\\"\)\.run\(\`\\"powershell\s/ nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github.com/Pirate-Devs/Kematian
-        $string54 = /New\-NetFirewallRule\s\-DisplayName\s\"KematianC2\"\s/ nocase ascii wide
+        $string54 = "New-NetFirewallRule -DisplayName \"KematianC2\" " nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
-        $string55 = /openvpn_stealer/ nocase ascii wide
+        $string55 = "openvpn_stealer" nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github.com/Pirate-Devs/Kematian
-        $string56 = /Pirate\-Devs\/Kematian/ nocase ascii wide
+        $string56 = "Pirate-Devs/Kematian" nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
-        $string57 = /protonvpnstealer/ nocase ascii wide
+        $string57 = "protonvpnstealer" nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
         $string58 = /Remove\-Item\s\(Get\-PSreadlineOption\)\.HistorySavePath\s\-Force\s\-ErrorAction\sSilentlyContinue/ nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
-        $string59 = /sap3r\-encrypthub\/encrypthub/ nocase ascii wide
+        $string59 = "sap3r-encrypthub/encrypthub" nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
-        $string60 = /Send\-TelegramMessage\s\-message\s/ nocase ascii wide
+        $string60 = "Send-TelegramMessage -message " nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
         $string61 = /\'Sil\'\+\'ent\'\+\'l\'\+\'yContinu\'\+\'e\'/ nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
-        $string62 = /surfsharkvpnstealer/ nocase ascii wide
+        $string62 = "surfsharkvpnstealer" nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
-        $string63 = /UmVkIFRlYW1pbmcgYW5kIE9mZmVuc2l2ZSBTZWN1cml0eSAg/ nocase ascii wide
+        $string63 = "UmVkIFRlYW1pbmcgYW5kIE9mZmVuc2l2ZSBTZWN1cml0eSAg" nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
-        $string64 = /UmVtb3ZlLUl0ZW0gKEdldC1QU3JlYWRsaW5lT3B0aW9uKS5IaXN0b3J5U2F2ZVBhdGggLUZvcmNlIC1FcnJvckFjdGlvbiBTaWxlbnRseUNvbnRpbnVl/ nocase ascii wide
+        $string64 = "UmVtb3ZlLUl0ZW0gKEdldC1QU3JlYWRsaW5lT3B0aW9uKS5IaXN0b3J5U2F2ZVBhdGggLUZvcmNlIC1FcnJvckFjdGlvbiBTaWxlbnRseUNvbnRpbnVl" nocase ascii wide
 
     condition:
         any of them

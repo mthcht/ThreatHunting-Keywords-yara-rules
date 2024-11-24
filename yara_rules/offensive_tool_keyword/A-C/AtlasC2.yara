@@ -34,7 +34,7 @@ rule AtlasC2
         $string8 = /AtlasImplant\.yar/ nocase ascii wide
         // Description: C# C2 Framework centered around Stage 1 operations
         // Reference: https://github.com/Gr1mmie/AtlasC2
-        $string9 = /Gr1mmie\/AtlasC2/ nocase ascii wide
+        $string9 = "Gr1mmie/AtlasC2" nocase ascii wide
 
     condition:
         any of them

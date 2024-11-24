@@ -10,7 +10,7 @@ rule CertStealer
     strings:
         // Description: A .NET tool for exporting and importing certificates without touching disk.
         // Reference: https://github.com/TheWover/CertStealer
-        $string1 = /\/CertStealer/ nocase ascii wide
+        $string1 = "/CertStealer" nocase ascii wide
         // Description: A .NET tool for exporting and importing certificates without touching disk.
         // Reference: https://github.com/TheWover/CertStealer
         $string2 = /CertStealer\.csproj/ nocase ascii wide

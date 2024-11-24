@@ -10,7 +10,7 @@ rule DNSTracer
     strings:
         // Description: This is a python application that traces how a DNS query is performed from a client machine to the server.
         // Reference: https://github.com/pcoder/DNSTracer
-        $string1 = /dnstracer/ nocase ascii wide
+        $string1 = "dnstracer" nocase ascii wide
 
     condition:
         any of them

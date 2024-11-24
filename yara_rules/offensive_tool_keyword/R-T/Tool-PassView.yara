@@ -10,7 +10,7 @@ rule Tool_PassView
     strings:
         // Description: Password recovery or exploitation
         // Reference: https://www.nirsoft.net/password_recovery_tools.html
-        $string1 = /Tool\-PassView/ nocase ascii wide
+        $string1 = "Tool-PassView" nocase ascii wide
 
     condition:
         any of them

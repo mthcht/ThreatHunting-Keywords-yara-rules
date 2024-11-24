@@ -10,13 +10,13 @@ rule simplehttpserver
     strings:
         // Description: quick web server in python
         // Reference: https://docs.python.org/2/library/simplehttpserver.html
-        $string1 = /\s\-m\sSimpleHTTPServer\s/ nocase ascii wide
+        $string1 = " -m SimpleHTTPServer " nocase ascii wide
         // Description: quick web server in python
         // Reference: https://docs.python.org/2/library/simplehttpserver.html
-        $string2 = /import\sSimpleHTTPServer/ nocase ascii wide
+        $string2 = "import SimpleHTTPServer" nocase ascii wide
         // Description: quick web server in python
         // Reference: https://docs.python.org/2/library/simplehttpserver.html
-        $string3 = /python\s\-m\sSimpleHTTPServer/ nocase ascii wide
+        $string3 = "python -m SimpleHTTPServer" nocase ascii wide
         // Description: quick web server in python
         // Reference: https://docs.python.org/2/library/simplehttpserver.html
         $string4 = /SimpleHTTPServer\.SimpleHTTPRequestHandler/ nocase ascii wide

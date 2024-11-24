@@ -31,10 +31,10 @@ rule NLBrute
         $string7 = /\\NLBrute\.exe/ nocase ascii wide
         // Description: RDP Bruteforcer
         // Reference: https://github.com/amazond/NLBrute-1.2
-        $string8 = /2f40452382f378c481ce9622ea6f10cfb0275cad138c6a45fe16144111fdfa77/ nocase ascii wide
+        $string8 = "2f40452382f378c481ce9622ea6f10cfb0275cad138c6a45fe16144111fdfa77" nocase ascii wide
         // Description: RDP Bruteforcer
         // Reference: https://github.com/amazond/NLBrute-1.2
-        $string9 = /4781b10d0dae27a772518c9167b3a654c46017897bc73ce4540f4bfca33e9b58/ nocase ascii wide
+        $string9 = "4781b10d0dae27a772518c9167b3a654c46017897bc73ce4540f4bfca33e9b58" nocase ascii wide
 
     condition:
         any of them

@@ -22,13 +22,13 @@ rule MaliciousMacroMSBuild
         $string4 = /\/m3\-gen\.py\s/ nocase ascii wide
         // Description: Generates Malicious Macro and Execute Powershell or Shellcode via MSBuild Application Whitelisting Bypass.
         // Reference: https://github.com/infosecn1nja/MaliciousMacroMSBuild
-        $string5 = /\/MaliciousMacroMSBuild/ nocase ascii wide
+        $string5 = "/MaliciousMacroMSBuild" nocase ascii wide
         // Description: Generates Malicious Macro and Execute Powershell or Shellcode via MSBuild Application Whitelisting Bypass.
         // Reference: https://github.com/infosecn1nja/MaliciousMacroMSBuild
         $string6 = /\\m3\-gen\.py/ nocase ascii wide
         // Description: Generates Malicious Macro and Execute Powershell or Shellcode via MSBuild Application Whitelisting Bypass.
         // Reference: https://github.com/infosecn1nja/MaliciousMacroMSBuild
-        $string7 = /MaliciousMacroMSBuild\-master/ nocase ascii wide
+        $string7 = "MaliciousMacroMSBuild-master" nocase ascii wide
 
     condition:
         any of them

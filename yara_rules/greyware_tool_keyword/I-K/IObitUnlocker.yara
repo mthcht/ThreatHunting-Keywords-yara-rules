@@ -70,7 +70,7 @@ rule IObitUnlocker
         $string20 = /\\unlocker\-setup\.tmp/ nocase ascii wide
         // Description: unlocking locked files on Windows systems
         // Reference: https://www.iobit.com/en/iobit-unlocker.php#
-        $string21 = /2efdffd1cf3adab21ff760f009d8893d8c4cbcf63b2c3bfcc1139457c9cd430b/ nocase ascii wide
+        $string21 = "2efdffd1cf3adab21ff760f009d8893d8c4cbcf63b2c3bfcc1139457c9cd430b" nocase ascii wide
         // Description: unlocking locked files on Windows systems
         // Reference: https://www.iobit.com/en/iobit-unlocker.php#
         $string22 = /http\:\/\/update\.iobit\.com\/infofiles\/iobitunlocker\.upt/ nocase ascii wide

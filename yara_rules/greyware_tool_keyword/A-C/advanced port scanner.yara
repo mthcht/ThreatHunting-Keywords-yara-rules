@@ -25,10 +25,10 @@ rule advanced_port_scanner
         $string5 = /\\Temp\\2\\Advanced\sPort\sScanner\s2\\/ nocase ascii wide
         // Description: port scanner tool abused by ransomware actors
         // Reference: https://www.advanced-port-scanner.com/
-        $string6 = /\>Advanced\sPort\sScanner\sSetup\</ nocase ascii wide
+        $string6 = ">Advanced Port Scanner Setup<" nocase ascii wide
         // Description: port scanner tool abused by ransomware actors
         // Reference: https://www.advanced-port-scanner.com/
-        $string7 = /\>Advanced\sPort\sScanner\</ nocase ascii wide
+        $string7 = ">Advanced Port Scanner<" nocase ascii wide
         // Description: port scanner tool abused by ransomware actors
         // Reference: https://www.advanced-port-scanner.com/
         $string8 = /advanced_port_scanner\.exe/ nocase ascii wide
@@ -37,7 +37,7 @@ rule advanced_port_scanner
         $string9 = /advanced_port_scanner_console\.exe/ nocase ascii wide
         // Description: port scanner tool abused by ransomware actors
         // Reference: https://www.advanced-port-scanner.com/
-        $string10 = /d0c1662ce239e4d288048c0e3324ec52962f6ddda77da0cb7af9c1d9c2f1e2eb/ nocase ascii wide
+        $string10 = "d0c1662ce239e4d288048c0e3324ec52962f6ddda77da0cb7af9c1d9c2f1e2eb" nocase ascii wide
         // Description: port scanner tool abused by ransomware actors
         // Reference: https://www.advanced-port-scanner.com/
         $string11 = /http\:\/\/www\.advanced\-port\-scanner\.com\/checkupdate\.php/ nocase ascii wide

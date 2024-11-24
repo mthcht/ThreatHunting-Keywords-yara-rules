@@ -16,7 +16,7 @@ rule ntlmscan
         $string2 = /\/ntlmscan\.git/ nocase ascii wide
         // Description: scan for NTLM directories
         // Reference: https://github.com/nyxgeek/ntlmscan
-        $string3 = /\/ntlmscan\// nocase ascii wide
+        $string3 = "/ntlmscan/" nocase ascii wide
         // Description: scan for NTLM directories
         // Reference: https://github.com/nyxgeek/ntlmscan
         $string4 = /ntlmscan\.py/ nocase ascii wide
@@ -25,7 +25,7 @@ rule ntlmscan
         $string5 = /ntlmscan\-master\.zip/ nocase ascii wide
         // Description: scan for NTLM directories
         // Reference: https://github.com/nyxgeek/ntlmscan
-        $string6 = /nyxgeek\/ntlmscan/ nocase ascii wide
+        $string6 = "nyxgeek/ntlmscan" nocase ascii wide
 
     condition:
         any of them

@@ -10,7 +10,7 @@ rule fsutil
     strings:
         // Description: Disables antivirus filtering on the developer drive
         // Reference: https://x.com/0gtweet/status/1720532496847167784
-        $string1 = /fsutil\sdevdrv\senable\s\/disallowAv/ nocase ascii wide
+        $string1 = "fsutil devdrv enable /disallowAv" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

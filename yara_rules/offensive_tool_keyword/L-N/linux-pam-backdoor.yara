@@ -19,10 +19,10 @@ rule linux_pam_backdoor
         $string3 = /backdoor\.sh\s\-v\s.{0,1000}\s\-p\s/ nocase ascii wide
         // Description: Linux PAM Backdoor
         // Reference: https://github.com/zephrax/linux-pam-backdoor
-        $string4 = /linux\-pam\-backdoor\-master/ nocase ascii wide
+        $string4 = "linux-pam-backdoor-master" nocase ascii wide
         // Description: Linux PAM Backdoor
         // Reference: https://github.com/zephrax/linux-pam-backdoor
-        $string5 = /zephrax\/linux\-pam\-backdoor/ nocase ascii wide
+        $string5 = "zephrax/linux-pam-backdoor" nocase ascii wide
 
     condition:
         any of them

@@ -10,10 +10,10 @@ rule SharpGpo
     strings:
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string1 = /\s\-\-Action\sNewSecurityFiltering\s\-\-GPOName\s/ nocase ascii wide
+        $string1 = " --Action NewSecurityFiltering --GPOName " nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string2 = /\s\-\-Action\sRemoveSecurityFiltering\s\-\-GPOName\s/ nocase ascii wide
+        $string2 = " --Action RemoveSecurityFiltering --GPOName " nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
         $string3 = /\.exe\s\-\-Action\sGetGPLink\s\-\-/ nocase ascii wide
@@ -46,7 +46,7 @@ rule SharpGpo
         $string12 = /\\SharpGPOAbuse\-master/ nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string13 = /\>SharpGPO\</ nocase ascii wide
+        $string13 = ">SharpGPO<" nocase ascii wide
 
     condition:
         any of them

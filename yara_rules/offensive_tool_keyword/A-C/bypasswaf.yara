@@ -16,7 +16,7 @@ rule bypasswaf
         $string2 = /bypasswaf\.py/ nocase ascii wide
         // Description: Add headers to all Burp requests to bypass some WAF products
         // Reference: https://github.com/codewatchorg/bypasswaf
-        $string3 = /codewatchorg\/bypasswaf/ nocase ascii wide
+        $string3 = "codewatchorg/bypasswaf" nocase ascii wide
 
     condition:
         any of them

@@ -10,10 +10,10 @@ rule SillyRAT
     strings:
         // Description: A Cross Platform multifunctional (Windows/Linux/Mac) RAT.
         // Reference: https://github.com/hash3liZer/SillyRAT
-        $string1 = /hash3liZer\/SillyRAT/ nocase ascii wide
+        $string1 = "hash3liZer/SillyRAT" nocase ascii wide
         // Description: A Cross Platform multifunctional (Windows/Linux/Mac) RAT.
         // Reference: https://github.com/hash3liZer/SillyRAT
-        $string2 = /keylogger\sdump/ nocase ascii wide
+        $string2 = "keylogger dump" nocase ascii wide
         // Description: A Cross Platform multifunctional (Windows/Linux/Mac) RAT.
         // Reference: https://github.com/hash3liZer/SillyRAT
         $string3 = /server\.py\sgenerate\s\-\-address\s.{0,100}\s\-\-port\s.{0,100}\s\-\-output\s.{0,100}\s\-\-source/ nocase ascii wide

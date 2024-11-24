@@ -13,7 +13,7 @@ rule lsarelayx
         $string1 = /\/lsarelayx\.git/ nocase ascii wide
         // Description: lsarelayx is system wide NTLM relay tool designed to relay incoming NTLM based authentication to the host it is running on
         // Reference: https://github.com/CCob/lsarelayx
-        $string2 = /\/root\/lsarelayx/ nocase ascii wide
+        $string2 = "/root/lsarelayx" nocase ascii wide
         // Description: lsarelayx is system wide NTLM relay tool designed to relay incoming NTLM based authentication to the host it is running on
         // Reference: https://github.com/CCob/lsarelayx
         $string3 = /\\\\\.\\\\pipe\\\\lsarelayx/ nocase ascii wide
@@ -34,10 +34,10 @@ rule lsarelayx
         $string8 = /\\lsarelayx\.sln/ nocase ascii wide
         // Description: lsarelayx is system wide NTLM relay tool designed to relay incoming NTLM based authentication to the host it is running on
         // Reference: https://github.com/CCob/lsarelayx
-        $string9 = /CCob\/lsarelayx/ nocase ascii wide
+        $string9 = "CCob/lsarelayx" nocase ascii wide
         // Description: lsarelayx is system wide NTLM relay tool designed to relay incoming NTLM based authentication to the host it is running on
         // Reference: https://github.com/CCob/lsarelayx
-        $string10 = /Initialised\slsarelayx/ nocase ascii wide
+        $string10 = "Initialised lsarelayx" nocase ascii wide
         // Description: lsarelayx is system wide NTLM relay tool designed to relay incoming NTLM based authentication to the host it is running on
         // Reference: https://github.com/CCob/lsarelayx
         $string11 = /lsarelayx\sStarting\.\.\.\./ nocase ascii wide
@@ -52,7 +52,7 @@ rule lsarelayx
         $string14 = /ntlmrelayx\.py/ nocase ascii wide
         // Description: lsarelayx is system wide NTLM relay tool designed to relay incoming NTLM based authentication to the host it is running on
         // Reference: https://github.com/CCob/lsarelayx
-        $string15 = /\-smb2support\s\-\-no\-wcf\-server\s\-\-no\-smb\-server\s\-\-no\-http\-server/ nocase ascii wide
+        $string15 = "-smb2support --no-wcf-server --no-smb-server --no-http-server" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

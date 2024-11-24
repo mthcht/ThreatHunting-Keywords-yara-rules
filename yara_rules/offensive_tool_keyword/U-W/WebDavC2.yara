@@ -13,10 +13,10 @@ rule WebDavC2
         $string1 = /\/WebDavC2\.git/ nocase ascii wide
         // Description: WebDavC2 is a PoC of using the WebDAV protocol with PROPFIND only requests to serve as a C2 communication channel between an agent. running on the target system. and a controller acting as the actuel C2 server.
         // Reference: https://github.com/Arno0x/WebDavC2
-        $string2 = /Arno0x\/WebDavC2/ nocase ascii wide
+        $string2 = "Arno0x/WebDavC2" nocase ascii wide
         // Description: WebDavC2 is a PoC of using the WebDAV protocol with PROPFIND only requests to serve as a C2 communication channel between an agent. running on the target system. and a controller acting as the actuel C2 server.
         // Reference: https://github.com/Arno0x/WebDavC2
-        $string3 = /WebDavC2/ nocase ascii wide
+        $string3 = "WebDavC2" nocase ascii wide
         // Description: WebDavC2 is a PoC of using the WebDAV protocol with PROPFIND only requests to serve as a C2 communication channel between an agent. running on the target system. and a controller acting as the actuel C2 server.
         // Reference: https://github.com/Arno0x/WebDavC2
         $string4 = /webdavC2\.py/ nocase ascii wide

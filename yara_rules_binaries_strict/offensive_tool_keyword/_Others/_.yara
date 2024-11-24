@@ -265,10 +265,10 @@ rule _
         $string85 = /\.zip\.iso/ nocase ascii wide
         // Description: keyword observed in multiple backdoor tools
         // Reference: N/A
-        $string86 = /\/BackDoor/ nocase ascii wide
+        $string86 = "/BackDoor" nocase ascii wide
         // Description: pentest keyword detection. detect potential pentesters using this keyword in file name. repository or command line
         // Reference: N/A
-        $string87 = /\/pentest/ nocase ascii wide
+        $string87 = "/pentest" nocase ascii wide
         // Description: scripts in public user folder
         // Reference: N/A
         $string88 = /\:\\users\\public\\.{0,100}\.bat/ nocase ascii wide
@@ -304,7 +304,7 @@ rule _
         $string98 = /c\:\\users\\public\\.{0,100}\.dll/ nocase ascii wide
         // Description: pentest keyword detection. detect potential pentesters using this keyword in file name. repository or command line
         // Reference: N/A
-        $string99 = /\-pentest/ nocase ascii wide
+        $string99 = "-pentest" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

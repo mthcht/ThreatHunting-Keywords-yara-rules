@@ -13,22 +13,22 @@ rule recon_archy
         $string1 = /\/recon\-archy\.git/ nocase ascii wide
         // Description: Linkedin Tools to reconstruct a company hierarchy from scraping relations and jobs title
         // Reference: https://github.com/shadawck/recon-archy
-        $string2 = /recon\-archy\sanalyse/ nocase ascii wide
+        $string2 = "recon-archy analyse" nocase ascii wide
         // Description: Linkedin Tools to reconstruct a company hierarchy from scraping relations and jobs title
         // Reference: https://github.com/shadawck/recon-archy
-        $string3 = /recon\-archy\sbuild/ nocase ascii wide
+        $string3 = "recon-archy build" nocase ascii wide
         // Description: Linkedin Tools to reconstruct a company hierarchy from scraping relations and jobs title
         // Reference: https://github.com/shadawck/recon-archy
-        $string4 = /recon\-archy\scrawl/ nocase ascii wide
+        $string4 = "recon-archy crawl" nocase ascii wide
         // Description: Linkedin Tools to reconstruct a company hierarchy from scraping relations and jobs title
         // Reference: https://github.com/shadawck/recon-archy
-        $string5 = /recon\-archy\-master/ nocase ascii wide
+        $string5 = "recon-archy-master" nocase ascii wide
         // Description: Linkedin Tools to reconstruct a company hierarchy from scraping relations and jobs title
         // Reference: https://github.com/shadawck/recon-archy
-        $string6 = /remiflavien1\/recon\-archy/ nocase ascii wide
+        $string6 = "remiflavien1/recon-archy" nocase ascii wide
         // Description: Linkedin Tools to reconstruct a company hierarchy from scraping relations and jobs title
         // Reference: https://github.com/shadawck/recon-archy
-        $string7 = /shadawck\/recon\-archy/ nocase ascii wide
+        $string7 = "shadawck/recon-archy" nocase ascii wide
 
     condition:
         any of them

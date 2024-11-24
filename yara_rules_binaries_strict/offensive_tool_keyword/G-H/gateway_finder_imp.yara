@@ -10,7 +10,7 @@ rule gateway_finder_imp
     strings:
         // Description: This is an improved version of original Gateway-finder. New version rebuilt with python3 and support for files with MACs/IPs The homepage of original project is: http://pentestmonkey.net/tools/gateway-finder Gateway-finder is a scapy script that will help you determine which of the systems on the local LAN has IP forwarding enabled and which can reach the Internet.
         // Reference: https://github.com/whitel1st/gateway-finder-imp
-        $string1 = /gateway\-finder/ nocase ascii wide
+        $string1 = "gateway-finder" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

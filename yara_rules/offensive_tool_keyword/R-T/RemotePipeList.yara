@@ -16,25 +16,25 @@ rule RemotePipeList
         $string2 = /\[\+\]\sPipe\slisting\:/ nocase ascii wide
         // Description: A small tool that can list the named pipes bound on a remote system.
         // Reference: https://github.com/outflanknl/C2-Tool-Collection/tree/main/Other/RemotePipeList
-        $string3 = /70BCFFDB\-AE25\-4BEA\-BF0E\-09DF06B7DBC4/ nocase ascii wide
+        $string3 = "70BCFFDB-AE25-4BEA-BF0E-09DF06B7DBC4" nocase ascii wide
         // Description: A small tool that can list the named pipes bound on a remote system.
         // Reference: https://github.com/outflanknl/C2-Tool-Collection/tree/main/Other/RemotePipeList
-        $string4 = /beacon_command_detail\(\"remotepipelist\"/ nocase ascii wide
+        $string4 = /beacon_command_detail\(\\"remotepipelist\\"/ nocase ascii wide
         // Description: A small tool that can list the named pipes bound on a remote system.
         // Reference: https://github.com/outflanknl/C2-Tool-Collection/tree/main/Other/RemotePipeList
-        $string5 = /List\sthe\snamed\spipes\son\sa\sremote\ssystem/ nocase ascii wide
+        $string5 = "List the named pipes on a remote system" nocase ascii wide
         // Description: A small tool that can list the named pipes bound on a remote system.
         // Reference: https://github.com/outflanknl/C2-Tool-Collection/tree/main/Other/RemotePipeList
-        $string6 = /namespace\sRemotePipeList/ nocase ascii wide
+        $string6 = "namespace RemotePipeList" nocase ascii wide
         // Description: A small tool that can list the named pipes bound on a remote system.
         // Reference: https://github.com/outflanknl/C2-Tool-Collection/tree/main/Other/RemotePipeList
         $string7 = /outflank_stage1\.implant/ nocase ascii wide
         // Description: A small tool that can list the named pipes bound on a remote system.
         // Reference: https://github.com/outflanknl/C2-Tool-Collection/tree/main/Other/RemotePipeList
-        $string8 = /remotepipelist\s/ nocase ascii wide
+        $string8 = "remotepipelist " nocase ascii wide
         // Description: A small tool that can list the named pipes bound on a remote system.
         // Reference: https://github.com/outflanknl/C2-Tool-Collection/tree/main/Other/RemotePipeList
-        $string9 = /RemotePipeList\sis\sx64\sonly/ nocase ascii wide
+        $string9 = "RemotePipeList is x64 only" nocase ascii wide
         // Description: A small tool that can list the named pipes bound on a remote system.
         // Reference: https://github.com/outflanknl/C2-Tool-Collection/tree/main/Other/RemotePipeList
         $string10 = /RemotePipeList\.cna/ nocase ascii wide

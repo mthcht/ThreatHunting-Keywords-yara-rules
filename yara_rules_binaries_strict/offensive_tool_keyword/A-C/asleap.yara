@@ -16,7 +16,7 @@ rule asleap
         $string2 = /\\asleap\.exe/ nocase ascii wide
         // Description: Exploiting a serious deficiency in proprietary Cisco LEAP networks
         // Reference: https://github.com/joswr1ght/asleap
-        $string3 = /apt\sinstall\sasleap/ nocase ascii wide
+        $string3 = "apt install asleap" nocase ascii wide
         // Description: Exploiting a serious deficiency in proprietary Cisco LEAP networks
         // Reference: https://github.com/joswr1ght/asleap
         $string4 = /asleap\s\-C\s.{0,100}\s\-R\s/ nocase ascii wide

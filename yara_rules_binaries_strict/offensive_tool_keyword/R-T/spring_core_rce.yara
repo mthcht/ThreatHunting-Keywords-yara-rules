@@ -10,7 +10,7 @@ rule spring_core_rce
     strings:
         // Description: CVE-2022-22965 : about spring core rce
         // Reference: https://github.com/Mr-xn/spring-core-rce
-        $string1 = /\/spring\-core\-rce/ nocase ascii wide
+        $string1 = "/spring-core-rce" nocase ascii wide
         // Description: CVE-2022-22965 : about spring core rce
         // Reference: https://github.com/Mr-xn/spring-core-rce
         $string2 = /cat\s\.\/apache\-tomcat\-8\.5\.77\/webapps\/ROOT\/tomcatwar\.jsp/ nocase ascii wide

@@ -106,22 +106,22 @@ rule Recon_AD
         $string32 = /\\Src\\Recon\-AD\-Users\\/ nocase ascii wide
         // Description: AD recon tool based on ADSI and reflective DLL
         // Reference: https://github.com/outflanknl/Recon-AD
-        $string33 = /_REFLECTIVEDLLINJECTION_REFLECTIVEDLLINJECTION_H/ nocase ascii wide
+        $string33 = "_REFLECTIVEDLLINJECTION_REFLECTIVEDLLINJECTION_H" nocase ascii wide
         // Description: AD recon tool based on ADSI and reflective DLL
         // Reference: https://github.com/outflanknl/Recon-AD
-        $string34 = /D30C9D6B\-1F45\-47BD\-825B\-389FE8CC9069/ nocase ascii wide
+        $string34 = "D30C9D6B-1F45-47BD-825B-389FE8CC9069" nocase ascii wide
         // Description: AD recon tool based on ADSI and reflective DLL
         // Reference: https://github.com/outflanknl/Recon-AD
-        $string35 = /outflanknl\/Recon\-AD/ nocase ascii wide
+        $string35 = "outflanknl/Recon-AD" nocase ascii wide
         // Description: AD recon tool based on ADSI and reflective DLL
         // Reference: https://github.com/outflanknl/Recon-AD
-        $string36 = /Recon\-AD\-Computers\sAll/ nocase ascii wide
+        $string36 = "Recon-AD-Computers All" nocase ascii wide
         // Description: AD recon tool based on ADSI and reflective DLL
         // Reference: https://github.com/outflanknl/Recon-AD
-        $string37 = /Recon\-AD\-Groups\sAll/ nocase ascii wide
+        $string37 = "Recon-AD-Groups All" nocase ascii wide
         // Description: AD recon tool based on ADSI and reflective DLL
         // Reference: https://github.com/outflanknl/Recon-AD
-        $string38 = /Recon\-AD\-Users\sAll/ nocase ascii wide
+        $string38 = "Recon-AD-Users All" nocase ascii wide
 
     condition:
         any of them

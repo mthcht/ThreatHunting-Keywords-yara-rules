@@ -31,16 +31,16 @@ rule power_pwn
         $string7 = /Exfil\-EC266392\-D6BC\-4F7B\-A4D1\-410166D30B55\.json/ nocase ascii wide
         // Description: An offensive and defensive security toolset for Microsoft 365 Power Platform
         // Reference: https://github.com/mbrg/power-pwn
-        $string8 = /mbrg\/power\-pwn/ nocase ascii wide
+        $string8 = "mbrg/power-pwn" nocase ascii wide
         // Description: An offensive and defensive security toolset for Microsoft 365 Power Platform
         // Reference: https://github.com/mbrg/power-pwn
         $string9 = /powerpwn\.powerdump/ nocase ascii wide
         // Description: An offensive and defensive security toolset for Microsoft 365 Power Platform
         // Reference: https://github.com/mbrg/power-pwn
-        $string10 = /powerpwn_tests/ nocase ascii wide
+        $string10 = "powerpwn_tests" nocase ascii wide
         // Description: An offensive and defensive security toolset for Microsoft 365 Power Platform
         // Reference: https://github.com/mbrg/power-pwn
-        $string11 = /power\-pwn\-main/ nocase ascii wide
+        $string11 = "power-pwn-main" nocase ascii wide
         // Description: An offensive and defensive security toolset for Microsoft 365 Power Platform
         // Reference: https://github.com/mbrg/power-pwn
         $string12 = /Ransomware\-E20F7CED\-42AD\-485E\-BE4D\-DE21DCE58EC0\.json/ nocase ascii wide

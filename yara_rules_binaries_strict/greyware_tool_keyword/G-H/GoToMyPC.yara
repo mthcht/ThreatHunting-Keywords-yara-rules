@@ -118,7 +118,7 @@ rule GoToMyPC
         $string36 = /\\x64\\monblanking\.sys/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string37 = /\<Data\>Installed\sGoToMyPC\<\/Data\>/ nocase ascii wide
+        $string37 = "<Data>Installed GoToMyPC</Data>" nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
         $string38 = /\=http\:\/\/www\.gotomypc\.com\/downloads\/viewer\s/ nocase ascii wide
@@ -127,19 +127,19 @@ rule GoToMyPC
         $string39 = /api\-telemetry\.servers\.getgo\.com/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string40 = /ApplicationName\'\>GoTo\sOpener/ nocase ascii wide
+        $string40 = "ApplicationName'>GoTo Opener" nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string41 = /ApplicationName\'\>GoToMyPC\sCommunications/ nocase ascii wide
+        $string41 = "ApplicationName'>GoToMyPC Communications" nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string42 = /ApplicationName\'\>GoToMyPC\sHost\sLauncher/ nocase ascii wide
+        $string42 = "ApplicationName'>GoToMyPC Host Launcher" nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string43 = /ApplicationName\'\>GoToMyPC\sViewer/ nocase ascii wide
+        $string43 = "ApplicationName'>GoToMyPC Viewer" nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string44 = /cf3de8f800852490f39fdacbe74627564494235f/ nocase ascii wide
+        $string44 = "cf3de8f800852490f39fdacbe74627564494235f" nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
         $string45 = /G2MScrUtil64\.exe.{0,100}\/cr/ nocase ascii wide
@@ -184,7 +184,7 @@ rule GoToMyPC
         $string58 = /PollServer\spoll\.gotomypc\.com/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string59 = /ServiceName\'\>GoToMyPC/ nocase ascii wide
+        $string59 = "ServiceName'>GoToMyPC" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

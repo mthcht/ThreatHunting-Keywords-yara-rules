@@ -13,7 +13,7 @@ rule SharpTerminator
         $string1 = /\.exe.{0,1000}\\Terminator\.sys/ nocase ascii wide
         // Description: Terminate AV/EDR Processes using kernel driver
         // Reference: https://github.com/mertdas/SharpTerminator
-        $string2 = /\/SharpTerminator\// nocase ascii wide
+        $string2 = "/SharpTerminator/" nocase ascii wide
         // Description: Terminate AV/EDR Processes using kernel driver
         // Reference: https://github.com/mertdas/SharpTerminator
         $string3 = /\/terminate\/Terminator\.sys/ nocase ascii wide
@@ -25,7 +25,7 @@ rule SharpTerminator
         $string5 = /http.{0,1000}\:\/\/.{0,1000}\/Terminator\.sys/ nocase ascii wide
         // Description: Terminate AV/EDR Processes using kernel driver
         // Reference: https://github.com/mertdas/SharpTerminator
-        $string6 = /mertdas\/SharpTerminator/ nocase ascii wide
+        $string6 = "mertdas/SharpTerminator" nocase ascii wide
         // Description: Terminate AV/EDR Processes using kernel driver
         // Reference: https://github.com/mertdas/SharpTerminator
         $string7 = /sc\screate\sTerminator\s.{0,1000}\.sys/ nocase ascii wide

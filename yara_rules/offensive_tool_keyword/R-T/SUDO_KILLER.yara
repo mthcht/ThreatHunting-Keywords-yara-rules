@@ -10,7 +10,7 @@ rule SUDO_KILLER
     strings:
         // Description: sudo exploitation #Abusing sudo #Exploiting Sudo #Linux Privilege Escalation #OSCP If you like the tool and for my personal motivation so as to develop other tools please a +1 star The tool can be used by pentesters. system admins. CTF players. students. System Auditors and trolls :).
         // Reference: https://github.com/TH3xACE/SUDO_KILLER
-        $string1 = /SUDO_KILLER/ nocase ascii wide
+        $string1 = "SUDO_KILLER" nocase ascii wide
 
     condition:
         any of them

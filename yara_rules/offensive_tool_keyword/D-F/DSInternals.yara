@@ -43,19 +43,19 @@ rule DSInternals
         $string11 = /Get\-ADDBAccount.{0,1000}\s\-DataBasePath\s.{0,1000}\.ntds\.dit.{0,1000}\s\-BootKey/ nocase ascii wide
         // Description: Directory Services Internals (DSInternals) PowerShell Module and Framework - abused by attackers
         // Reference: https://github.com/MichaelGrafnetter/DSInternals
-        $string12 = /Get\-ADReplAccount\s\-All\s/ nocase ascii wide
+        $string12 = "Get-ADReplAccount -All " nocase ascii wide
         // Description: Directory Services Internals (DSInternals) PowerShell Module and Framework - abused by attackers
         // Reference: https://github.com/MichaelGrafnetter/DSInternals
-        $string13 = /Import\-Module\sDSInternals/ nocase ascii wide
+        $string13 = "Import-Module DSInternals" nocase ascii wide
         // Description: Directory Services Internals (DSInternals) PowerShell Module and Framework - abused by attackers
         // Reference: https://github.com/MichaelGrafnetter/DSInternals
-        $string14 = /Install\-Module\s\-Name\sDSInternals/ nocase ascii wide
+        $string14 = "Install-Module -Name DSInternals" nocase ascii wide
         // Description: Directory Services Internals (DSInternals) PowerShell Module and Framework - abused by attackers
         // Reference: https://github.com/MichaelGrafnetter/DSInternals
         $string15 = /Set\-SamAccountPasswordHash\s.{0,1000}\s\-NTHash\s/ nocase ascii wide
         // Description: Directory Services Internals (DSInternals) PowerShell Module and Framework - abused by attackers
         // Reference: https://github.com/MichaelGrafnetter/DSInternals
-        $string16 = /Test\-PasswordQuality\s\-WeakPasswordHashesSortedFile\s/ nocase ascii wide
+        $string16 = "Test-PasswordQuality -WeakPasswordHashesSortedFile " nocase ascii wide
 
     condition:
         any of them

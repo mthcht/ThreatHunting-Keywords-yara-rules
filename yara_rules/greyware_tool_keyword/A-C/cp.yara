@@ -10,10 +10,10 @@ rule cp
     strings:
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
-        $string1 = /cp\s\/etc\/passwd/ nocase ascii wide
+        $string1 = "cp /etc/passwd" nocase ascii wide
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
-        $string2 = /cp\s\/etc\/shadow/ nocase ascii wide
+        $string2 = "cp /etc/shadow" nocase ascii wide
 
     condition:
         any of them

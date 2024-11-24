@@ -10,7 +10,7 @@ rule Git_Scanner
     strings:
         // Description: A tool for bug hunting or pentesting for targeting websites that have open .git repositories available in public
         // Reference: https://github.com/HightechSec/git-scanner
-        $string1 = /Git\-Scanner/ nocase ascii wide
+        $string1 = "Git-Scanner" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -22,25 +22,25 @@ rule TeamFiltration
         $string4 = /\s\-\-config\s.{0,100}\.json\s\-\-exfil\s\-\-aad/ nocase ascii wide
         // Description: TeamFiltration is a cross-platform framework for enumerating, spraying, exfiltrating, and backdooring O365 AAD accounts
         // Reference: https://github.com/Flangvik/TeamFiltration
-        $string5 = /\s\-\-debug\s\-\-exfil\s\-\-onedrive/ nocase ascii wide
+        $string5 = " --debug --exfil --onedrive" nocase ascii wide
         // Description: TeamFiltration is a cross-platform framework for enumerating, spraying, exfiltrating, and backdooring O365 AAD accounts
         // Reference: https://github.com/Flangvik/TeamFiltration
-        $string6 = /\s\-\-enum\s\-\-validate\-msol\s/ nocase ascii wide
+        $string6 = " --enum --validate-msol " nocase ascii wide
         // Description: TeamFiltration is a cross-platform framework for enumerating, spraying, exfiltrating, and backdooring O365 AAD accounts
         // Reference: https://github.com/Flangvik/TeamFiltration
-        $string7 = /\s\-\-enum\s\-\-validate\-teams/ nocase ascii wide
+        $string7 = " --enum --validate-teams" nocase ascii wide
         // Description: TeamFiltration is a cross-platform framework for enumerating, spraying, exfiltrating, and backdooring O365 AAD accounts
         // Reference: https://github.com/Flangvik/TeamFiltration
         $string8 = /\s\-\-exfil\s\-\-cookie\-dump\s\s.{0,100}\s\-\-all/ nocase ascii wide
         // Description: TeamFiltration is a cross-platform framework for enumerating, spraying, exfiltrating, and backdooring O365 AAD accounts
         // Reference: https://github.com/Flangvik/TeamFiltration
-        $string9 = /\s\-\-exfil\s\-\-cookie\-dump\s/ nocase ascii wide
+        $string9 = " --exfil --cookie-dump " nocase ascii wide
         // Description: TeamFiltration is a cross-platform framework for enumerating, spraying, exfiltrating, and backdooring O365 AAD accounts
         // Reference: https://github.com/Flangvik/TeamFiltration
-        $string10 = /\s\-\-exfil\s\-\-teams\s\-\-owa\s\-\-owa\-limit/ nocase ascii wide
+        $string10 = " --exfil --teams --owa --owa-limit" nocase ascii wide
         // Description: TeamFiltration is a cross-platform framework for enumerating, spraying, exfiltrating, and backdooring O365 AAD accounts
         // Reference: https://github.com/Flangvik/TeamFiltration
-        $string11 = /\s\-\-exfil\s\-\-teams\s\-\-owa/ nocase ascii wide
+        $string11 = " --exfil --teams --owa" nocase ascii wide
         // Description: TeamFiltration is a cross-platform framework for enumerating, spraying, exfiltrating, and backdooring O365 AAD accounts
         // Reference: https://github.com/Flangvik/TeamFiltration
         $string12 = /\s\-\-exfil\s\-\-tokens\s.{0,100}\s\-\-onedrive\s\-\-owa/ nocase ascii wide
@@ -64,13 +64,13 @@ rule TeamFiltration
         $string18 = /\s\-\-spray\s.{0,100}\-\-shuffle\-users/ nocase ascii wide
         // Description: TeamFiltration is a cross-platform framework for enumerating, spraying, exfiltrating, and backdooring O365 AAD accounts
         // Reference: https://github.com/Flangvik/TeamFiltration
-        $string19 = /\s\-\-spray\s\-\-passwords\s/ nocase ascii wide
+        $string19 = " --spray --passwords " nocase ascii wide
         // Description: TeamFiltration is a cross-platform framework for enumerating, spraying, exfiltrating, and backdooring O365 AAD accounts
         // Reference: https://github.com/Flangvik/TeamFiltration
-        $string20 = /\s\-\-spray\s\-\-push\-locked\s\-\-months\-only\s\-\-exclude\s/ nocase ascii wide
+        $string20 = " --spray --push-locked --months-only --exclude " nocase ascii wide
         // Description: TeamFiltration is a cross-platform framework for enumerating, spraying, exfiltrating, and backdooring O365 AAD accounts
         // Reference: https://github.com/Flangvik/TeamFiltration
-        $string21 = /\s\-\-spray\s\-\-push\-locked\s\-\-months\-only/ nocase ascii wide
+        $string21 = " --spray --push-locked --months-only" nocase ascii wide
         // Description: TeamFiltration is a cross-platform framework for enumerating, spraying, exfiltrating, and backdooring O365 AAD accounts
         // Reference: https://github.com/Flangvik/TeamFiltration
         $string22 = /\sTeamFiltration\.dll/ nocase ascii wide
@@ -79,10 +79,10 @@ rule TeamFiltration
         $string23 = /\sTeamFiltration\.exe/ nocase ascii wide
         // Description: TeamFiltration is a cross-platform framework for enumerating, spraying, exfiltrating, and backdooring O365 AAD accounts
         // Reference: https://github.com/Flangvik/TeamFiltration
-        $string24 = /\\"sacrificialO365Passwords\\"\:\s/ nocase ascii wide
+        $string24 = "\"sacrificialO365Passwords\": " nocase ascii wide
         // Description: TeamFiltration is a cross-platform framework for enumerating, spraying, exfiltrating, and backdooring O365 AAD accounts
         // Reference: https://github.com/Flangvik/TeamFiltration
-        $string25 = /\\"sacrificialO365Username\\"\:\s/ nocase ascii wide
+        $string25 = "\"sacrificialO365Username\": " nocase ascii wide
         // Description: TeamFiltration is a cross-platform framework for enumerating, spraying, exfiltrating, and backdooring O365 AAD accounts
         // Reference: https://github.com/Flangvik/TeamFiltration
         $string26 = /\/loginAAD\.ps1/ nocase ascii wide
@@ -94,7 +94,7 @@ rule TeamFiltration
         $string28 = /\/TeamFiltration\.exe/ nocase ascii wide
         // Description: TeamFiltration is a cross-platform framework for enumerating, spraying, exfiltrating, and backdooring O365 AAD accounts
         // Reference: https://github.com/Flangvik/TeamFiltration
-        $string29 = /\/TeamFiltration\/releases\/latest/ nocase ascii wide
+        $string29 = "/TeamFiltration/releases/latest" nocase ascii wide
         // Description: TeamFiltration is a cross-platform framework for enumerating, spraying, exfiltrating, and backdooring O365 AAD accounts
         // Reference: https://github.com/Flangvik/TeamFiltration
         $string30 = /\[\!\]\sCould\snot\sextract\suseful\stoken\sfrom\sspecified\sTeams\sdatabase\!/ nocase ascii wide
@@ -151,19 +151,19 @@ rule TeamFiltration
         $string47 = /\>TeamFiltration\.dll\</ nocase ascii wide
         // Description: TeamFiltration is a cross-platform framework for enumerating, spraying, exfiltrating, and backdooring O365 AAD accounts
         // Reference: https://github.com/Flangvik/TeamFiltration
-        $string48 = /2659c2d40606e2b088c3bbd6fd6a293692ac7f219221844071abf434a638e1da/ nocase ascii wide
+        $string48 = "2659c2d40606e2b088c3bbd6fd6a293692ac7f219221844071abf434a638e1da" nocase ascii wide
         // Description: TeamFiltration is a cross-platform framework for enumerating, spraying, exfiltrating, and backdooring O365 AAD accounts
         // Reference: https://github.com/Flangvik/TeamFiltration
-        $string49 = /4e09f3d552d00f6ade653b2a9c289a411062b14fab2148f7accab8c8428c9bdb/ nocase ascii wide
+        $string49 = "4e09f3d552d00f6ade653b2a9c289a411062b14fab2148f7accab8c8428c9bdb" nocase ascii wide
         // Description: TeamFiltration is a cross-platform framework for enumerating, spraying, exfiltrating, and backdooring O365 AAD accounts
         // Reference: https://github.com/Flangvik/TeamFiltration
-        $string50 = /A0F044C5\-D910\-4720\-B082\-58824E372281/ nocase ascii wide
+        $string50 = "A0F044C5-D910-4720-B082-58824E372281" nocase ascii wide
         // Description: TeamFiltration is a cross-platform framework for enumerating, spraying, exfiltrating, and backdooring O365 AAD accounts
         // Reference: https://github.com/Flangvik/TeamFiltration
-        $string51 = /EF143476\-E53D\-4C39\-8DBB\-A6AC7883236C/ nocase ascii wide
+        $string51 = "EF143476-E53D-4C39-8DBB-A6AC7883236C" nocase ascii wide
         // Description: TeamFiltration is a cross-platform framework for enumerating, spraying, exfiltrating, and backdooring O365 AAD accounts
         // Reference: https://github.com/Flangvik/TeamFiltration
-        $string52 = /Flangvik\/TeamFiltration/ nocase ascii wide
+        $string52 = "Flangvik/TeamFiltration" nocase ascii wide
         // Description: TeamFiltration is a cross-platform framework for enumerating, spraying, exfiltrating, and backdooring O365 AAD accounts
         // Reference: https://github.com/Flangvik/TeamFiltration
         $string53 = /OutputTokens\.txt\s\-\-onedrive\s\-\-owa/ nocase ascii wide

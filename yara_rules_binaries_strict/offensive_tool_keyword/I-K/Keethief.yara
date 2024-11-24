@@ -55,106 +55,106 @@ rule Keethief
         $string15 = /\\MostPopularPasswords\.txt/ nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
-        $string16 = /\>KeeTheft\</ nocase ascii wide
+        $string16 = ">KeeTheft<" nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
-        $string17 = /211446645fa7a934da99f218cc049cd1c59c68ac2a5da2033eaceff80b1d1c0e/ nocase ascii wide
+        $string17 = "211446645fa7a934da99f218cc049cd1c59c68ac2a5da2033eaceff80b1d1c0e" nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
-        $string18 = /3d00518d63ef9b656fdef85621d8a4f3137569ea71b07d431da6b39704f54dee/ nocase ascii wide
+        $string18 = "3d00518d63ef9b656fdef85621d8a4f3137569ea71b07d431da6b39704f54dee" nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
-        $string19 = /3FCA8012\-3BAD\-41E4\-91F4\-534AA9A44F96/ nocase ascii wide
+        $string19 = "3FCA8012-3BAD-41E4-91F4-534AA9A44F96" nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
-        $string20 = /457cd41fbb528812aa51bc4b31fce042cdf736281b162181d91c47733d0e9e4b/ nocase ascii wide
+        $string20 = "457cd41fbb528812aa51bc4b31fce042cdf736281b162181d91c47733d0e9e4b" nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
-        $string21 = /4969b09ab7cae1ba1f02a509b9b7099195fab22321b73039fcce92e9974d7b93/ nocase ascii wide
+        $string21 = "4969b09ab7cae1ba1f02a509b9b7099195fab22321b73039fcce92e9974d7b93" nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
-        $string22 = /6FC09BDB\-365F\-4691\-BBD9\-CB7F69C9527A/ nocase ascii wide
+        $string22 = "6FC09BDB-365F-4691-BBD9-CB7F69C9527A" nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
-        $string23 = /80BA63A4\-7D41\-40E9\-A722\-6DD58B28BF7E/ nocase ascii wide
+        $string23 = "80BA63A4-7D41-40E9-A722-6DD58B28BF7E" nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
-        $string24 = /935D33C5\-62F1\-40FE\-8DB0\-46B6E01342FB/ nocase ascii wide
+        $string24 = "935D33C5-62F1-40FE-8DB0-46B6E01342FB" nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
-        $string25 = /a01a3fe8fd6c3ff03908efd3321438df49365d0f64fa0a862419e31112936e3e/ nocase ascii wide
+        $string25 = "a01a3fe8fd6c3ff03908efd3321438df49365d0f64fa0a862419e31112936e3e" nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
-        $string26 = /adbed7685fc512f48cf0edb1eb0df16fed97c52d5eab0fe70e88286c47d53e3d/ nocase ascii wide
+        $string26 = "adbed7685fc512f48cf0edb1eb0df16fed97c52d5eab0fe70e88286c47d53e3d" nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
-        $string27 = /Add\-KeePassConfigTrigger\s/ nocase ascii wide
+        $string27 = "Add-KeePassConfigTrigger " nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
-        $string28 = /Add\-KeePassConfigTrigger/ nocase ascii wide
+        $string28 = "Add-KeePassConfigTrigger" nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
-        $string29 = /b0cf4ccee3c06fe7d3c7ff2afbfefbe972f82008ec5b2f8a5e5d5cb9a58861a2/ nocase ascii wide
+        $string29 = "b0cf4ccee3c06fe7d3c7ff2afbfefbe972f82008ec5b2f8a5e5d5cb9a58861a2" nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
-        $string30 = /c0fdcce36afa206ce080c1b8602ecf18fdc23a207078cb437594d7f674b2a693/ nocase ascii wide
+        $string30 = "c0fdcce36afa206ce080c1b8602ecf18fdc23a207078cb437594d7f674b2a693" nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
-        $string31 = /C23B51C4\-2475\-4FC6\-9B3A\-27D0A2B99B0F/ nocase ascii wide
+        $string31 = "C23B51C4-2475-4FC6-9B3A-27D0A2B99B0F" nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
-        $string32 = /Could\snot\sfind\saddress\smarker\sin\sshellcode/ nocase ascii wide
+        $string32 = "Could not find address marker in shellcode" nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
-        $string33 = /dbed4217e61d4deba7cfb5aa97aef6687507d9bd990110cc31b0d35ee32acada/ nocase ascii wide
+        $string33 = "dbed4217e61d4deba7cfb5aa97aef6687507d9bd990110cc31b0d35ee32acada" nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
-        $string34 = /EA92F1E6\-3F34\-48F8\-8B0A\-F2BBC19220EF/ nocase ascii wide
+        $string34 = "EA92F1E6-3F34-48F8-8B0A-F2BBC19220EF" nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
-        $string35 = /Error\:\sCould\snot\screate\sa\sthread\sfor\sthe\sshellcode/ nocase ascii wide
+        $string35 = "Error: Could not create a thread for the shellcode" nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
-        $string36 = /Find\-KeePassconfig\s/ nocase ascii wide
+        $string36 = "Find-KeePassconfig " nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
-        $string37 = /Find\-KeePassconfig/ nocase ascii wide
+        $string37 = "Find-KeePassconfig" nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
-        $string38 = /function\sLocal\:Inject\-RemoteShellcode\s/ nocase ascii wide
+        $string38 = "function Local:Inject-RemoteShellcode " nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
-        $string39 = /GetKcpPasswordInfo/ nocase ascii wide
+        $string39 = "GetKcpPasswordInfo" nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
-        $string40 = /Get\-KeePassConfigTrigger\s/ nocase ascii wide
+        $string40 = "Get-KeePassConfigTrigger " nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
-        $string41 = /Get\-KeePassConfigTrigger/ nocase ascii wide
+        $string41 = "Get-KeePassConfigTrigger" nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
-        $string42 = /Get\-KeePassDatabaseKey\s/ nocase ascii wide
+        $string42 = "Get-KeePassDatabaseKey " nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
-        $string43 = /Get\-KeePassDatabaseKey/ nocase ascii wide
+        $string43 = "Get-KeePassDatabaseKey" nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
         $string44 = /Get\-PEHeader\.ps1/ nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
-        $string45 = /GhostPack\/KeeThief/ nocase ascii wide
+        $string45 = "GhostPack/KeeThief" nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
-        $string46 = /Injecting\sshellcode\sinto\sPID\:\s/ nocase ascii wide
+        $string46 = "Injecting shellcode into PID: " nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
-        $string47 = /Injecting\sshellcode\sinto\sPowerShell/ nocase ascii wide
+        $string47 = "Injecting shellcode into PowerShell" nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
         $string48 = /Interesting\?\sthere\sare\smultiple\s\.NET\sruntimes\sloaded\sin\sKeePass/ nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
-        $string49 = /Invoke\-Shellcode\s\-ProcessId\s/ nocase ascii wide
+        $string49 = "Invoke-Shellcode -ProcessId " nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
         $string50 = /KcpPassword\.cs/ nocase ascii wide
@@ -166,7 +166,7 @@ rule Keethief
         $string52 = /KeePassLib\.Keys\.KcpPassword/ nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
-        $string53 = /KeeThief/ nocase ascii wide
+        $string53 = "KeeThief" nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
         $string54 = /MSIL\/KeeThief\.A\!tr\.pws/ nocase ascii wide
@@ -181,7 +181,7 @@ rule Keethief
         $string57 = /ReleaseKeeTheft\.exe/ nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
-        $string58 = /Remove\-KeePassConfigTrigger/ nocase ascii wide
+        $string58 = "Remove-KeePassConfigTrigger" nocase ascii wide
         // Description: Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // Reference: https://github.com/GhostPack/KeeThief
         $string59 = /Spyware\.KeeThief/ nocase ascii wide

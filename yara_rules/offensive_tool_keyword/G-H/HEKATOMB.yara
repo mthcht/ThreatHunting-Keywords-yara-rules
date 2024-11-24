@@ -10,7 +10,7 @@ rule HEKATOMB
     strings:
         // Description: Hekatomb is a python script that connects to LDAP directory to retrieve all computers and users informations. Then it will download all DPAPI blob of all users from all computers and uses Domain backup keys to decrypt them
         // Reference: https://github.com/Processus-Thief/HEKATOMB
-        $string1 = /\sinstall\shekatomb/ nocase ascii wide
+        $string1 = " install hekatomb" nocase ascii wide
         // Description: Hekatomb is a python script that connects to LDAP directory to retrieve all computers and users informations. Then it will download all DPAPI blob of all users from all computers and uses Domain backup keys to decrypt them
         // Reference: https://github.com/Processus-Thief/HEKATOMB
         $string2 = /\.py\s.{0,1000}\s\-debug\s\-dnstcp/ nocase ascii wide
@@ -28,10 +28,10 @@ rule HEKATOMB
         $string6 = /\\exported_credentials\.csv/ nocase ascii wide
         // Description: Hekatomb is a python script that connects to LDAP directory to retrieve all computers and users informations. Then it will download all DPAPI blob of all users from all computers and uses Domain backup keys to decrypt them
         // Reference: https://github.com/ProcessusT/HEKATOMB
-        $string7 = /ed9d3ee993fe0a36bb7a7fce3940112ea29eccca58165738a758c58a3fe0ae54/ nocase ascii wide
+        $string7 = "ed9d3ee993fe0a36bb7a7fce3940112ea29eccca58165738a758c58a3fe0ae54" nocase ascii wide
         // Description: Hekatomb is a python script that connects to LDAP directory to retrieve all computers and users informations. Then it will download all DPAPI blob of all users from all computers and uses Domain backup keys to decrypt them
         // Reference: https://github.com/ProcessusT/HEKATOMB
-        $string8 = /hekatomb\s\-hashes\s/ nocase ascii wide
+        $string8 = "hekatomb -hashes " nocase ascii wide
         // Description: Hekatomb is a python script that connects to LDAP directory to retrieve all computers and users informations. Then it will download all DPAPI blob of all users from all computers and uses Domain backup keys to decrypt them
         // Reference: https://github.com/Processus-Thief/HEKATOMB
         $string9 = /hekatomb\-.{0,1000}\.tar\.gz/ nocase ascii wide
@@ -49,19 +49,19 @@ rule HEKATOMB
         $string13 = /hekatomb\@thiefin\.fr/ nocase ascii wide
         // Description: Hekatomb is a python script that connects to LDAP directory to retrieve all computers and users informations. Then it will download all DPAPI blob of all users from all computers and uses Domain backup keys to decrypt them
         // Reference: https://github.com/ProcessusT/HEKATOMB
-        $string14 = /it\swill\sextract\sdomain\scontroller\sprivate\skey\sthrough\sRPC\suses\sit\sto\sdecrypt\sall\scredentials/ nocase ascii wide
+        $string14 = "it will extract domain controller private key through RPC uses it to decrypt all credentials" nocase ascii wide
         // Description: Hekatomb is a python script that connects to LDAP directory to retrieve all computers and users informations. Then it will download all DPAPI blob of all users from all computers and uses Domain backup keys to decrypt them
         // Reference: https://github.com/ProcessusT/HEKATOMB
         $string15 = /New\scredentials\sfound\sfor\suser\s.{0,1000}\son\s/ nocase ascii wide
         // Description: Hekatomb is a python script that connects to LDAP directory to retrieve all computers and users informations. Then it will download all DPAPI blob of all users from all computers and uses Domain backup keys to decrypt them
         // Reference: https://github.com/ProcessusT/HEKATOMB
-        $string16 = /pacman\s\-S\shekatomb/ nocase ascii wide
+        $string16 = "pacman -S hekatomb" nocase ascii wide
         // Description: Hekatomb is a python script that connects to LDAP directory to retrieve all computers and users informations. Then it will download all DPAPI blob of all users from all computers and uses Domain backup keys to decrypt them
         // Reference: https://github.com/ProcessusT/HEKATOMB
-        $string17 = /poetry\srun\shekatomb/ nocase ascii wide
+        $string17 = "poetry run hekatomb" nocase ascii wide
         // Description: Hekatomb is a python script that connects to LDAP directory to retrieve all computers and users informations. Then it will download all DPAPI blob of all users from all computers and uses Domain backup keys to decrypt them
         // Reference: https://github.com/Processus-Thief/HEKATOMB
-        $string18 = /Processus\-Thief\/HEKATOMB/ nocase ascii wide
+        $string18 = "Processus-Thief/HEKATOMB" nocase ascii wide
 
     condition:
         any of them

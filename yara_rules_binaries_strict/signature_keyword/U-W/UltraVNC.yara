@@ -10,7 +10,7 @@ rule UltraVNC
     strings:
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string1 = /RemoteAccess\:Win32\/UltraVNC/ nocase ascii wide
+        $string1 = "RemoteAccess:Win32/UltraVNC" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

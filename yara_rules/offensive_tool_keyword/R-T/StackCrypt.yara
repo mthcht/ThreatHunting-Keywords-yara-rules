@@ -13,10 +13,10 @@ rule StackCrypt
         $string1 = /\/StackCrypt\.git/ nocase ascii wide
         // Description: Create a new thread that will suspend every thread and encrypt its stack then going to sleep then decrypt the stacks and resume threads
         // Reference: https://github.com/TheD1rkMtr/StackCrypt
-        $string2 = /5A6F942E\-888A\-4CE1\-A6FB\-1AB8AE22AFFA/ nocase ascii wide
+        $string2 = "5A6F942E-888A-4CE1-A6FB-1AB8AE22AFFA" nocase ascii wide
         // Description: Create a new thread that will suspend every thread and encrypt its stack then going to sleep then decrypt the stacks and resume threads
         // Reference: https://github.com/TheD1rkMtr/StackCrypt
-        $string3 = /StackCrypt\-main/ nocase ascii wide
+        $string3 = "StackCrypt-main" nocase ascii wide
         // Description: Create a new thread that will suspend every thread and encrypt its stack then going to sleep then decrypt the stacks and resume threads
         // Reference: https://github.com/TheD1rkMtr/StackCrypt
         $string4 = /StackEncrypt\.cpp/ nocase ascii wide
@@ -31,7 +31,7 @@ rule StackCrypt
         $string7 = /StackEncrypt\.vcxproj/ nocase ascii wide
         // Description: Create a new thread that will suspend every thread and encrypt its stack then going to sleep then decrypt the stacks and resume threads
         // Reference: https://github.com/TheD1rkMtr/StackCrypt
-        $string8 = /TheD1rkMtr\/StackCrypt/ nocase ascii wide
+        $string8 = "TheD1rkMtr/StackCrypt" nocase ascii wide
 
     condition:
         any of them

@@ -10,7 +10,7 @@ rule OWASP
     strings:
         // Description: resources and cheat sheet for web attacks techniques
         // Reference: https://github.com/OWASP
-        $string1 = /\/OWASP/ nocase ascii wide
+        $string1 = "/OWASP" nocase ascii wide
 
     condition:
         any of them

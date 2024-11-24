@@ -49,7 +49,7 @@ rule GhostTask
         $string13 = /\\GhostTask\-main/ nocase ascii wide
         // Description: Creates scheduled tasks with a restrictive security descriptor -  making them invisible to all users. - Establishes scheduled tasks directly via the registry -  bypassing the generation of standard Windows event logs. - Provides support to modify existing scheduled tasks without generating Windows event logs. - Supports remote scheduled task creation (by using specially crafted Silver Ticket). - Supports to run in C2 with in-memory PE execution module (e.g. -  BruteRatel's memexec)
         // Reference: https://github.com/netero1010/GhostTask
-        $string14 = /a7ab668cab3a63df4a03cc53c46eed13fbb13bf1/ nocase ascii wide
+        $string14 = "a7ab668cab3a63df4a03cc53c46eed13fbb13bf1" nocase ascii wide
         // Description: Creates scheduled tasks with a restrictive security descriptor -  making them invisible to all users. - Establishes scheduled tasks directly via the registry -  bypassing the generation of standard Windows event logs. - Provides support to modify existing scheduled tasks without generating Windows event logs. - Supports remote scheduled task creation (by using specially crafted Silver Ticket). - Supports to run in C2 with in-memory PE execution module (e.g. -  BruteRatel's memexec)
         // Reference: https://github.com/netero1010/GhostTask
         $string15 = /DeleteKey\(.{0,100}SOFTWARE\\\\Microsoft\\\\Windows\sNT\\\\CurrentVersion\\\\Schedule\\\\TaskCache\\\\Tree\\\\/ nocase ascii wide
@@ -64,10 +64,10 @@ rule GhostTask
         $string18 = /GhostTask\-1\.0\.zip/ nocase ascii wide
         // Description: Creates scheduled tasks with a restrictive security descriptor -  making them invisible to all users. - Establishes scheduled tasks directly via the registry -  bypassing the generation of standard Windows event logs. - Provides support to modify existing scheduled tasks without generating Windows event logs. - Supports remote scheduled task creation (by using specially crafted Silver Ticket). - Supports to run in C2 with in-memory PE execution module (e.g. -  BruteRatel's memexec)
         // Reference: https://github.com/netero1010/GhostTask
-        $string19 = /netero1010\/GhostTask/ nocase ascii wide
+        $string19 = "netero1010/GhostTask" nocase ascii wide
         // Description: Creates scheduled tasks with a restrictive security descriptor -  making them invisible to all users. - Establishes scheduled tasks directly via the registry -  bypassing the generation of standard Windows event logs. - Provides support to modify existing scheduled tasks without generating Windows event logs. - Supports remote scheduled task creation (by using specially crafted Silver Ticket). - Supports to run in C2 with in-memory PE execution module (e.g. -  BruteRatel's memexec)
         // Reference: https://github.com/netero1010/GhostTask
-        $string20 = /Successfully\sdeleted\sscheduled\stask\s/ nocase ascii wide
+        $string20 = "Successfully deleted scheduled task " nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

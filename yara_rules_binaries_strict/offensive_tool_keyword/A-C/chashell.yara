@@ -13,13 +13,13 @@ rule chashell
         $string1 = /\/chashell\.git/ nocase ascii wide
         // Description: Chashell is a Go reverse shell that communicates over DNS. It can be used to bypass firewalls or tightly restricted networks
         // Reference: https://github.com/sysdream/chashell
-        $string2 = /release\/chaserv/ nocase ascii wide
+        $string2 = "release/chaserv" nocase ascii wide
         // Description: Chashell is a Go reverse shell that communicates over DNS. It can be used to bypass firewalls or tightly restricted networks
         // Reference: https://github.com/sysdream/chashell
-        $string3 = /release\/chashell_/ nocase ascii wide
+        $string3 = "release/chashell_" nocase ascii wide
         // Description: Chashell is a Go reverse shell that communicates over DNS. It can be used to bypass firewalls or tightly restricted networks
         // Reference: https://github.com/sysdream/chashell
-        $string4 = /sysdream\/chashell/ nocase ascii wide
+        $string4 = "sysdream/chashell" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

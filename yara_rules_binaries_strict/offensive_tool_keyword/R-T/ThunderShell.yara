@@ -19,7 +19,7 @@ rule ThunderShell
         $string3 = /\-out.{0,100}\.exe\s\-r\:.{0,100}System\.Drawing\.dll.{0,100}System\.Management\.Automation.{0,100}\.dll/ nocase ascii wide
         // Description: ThunderShell is a C# RAT that communicates via HTTP requests. All the network traffic is encrypted using a second layer of RC4 to avoid SSL interception and defeat network detection on the target system. RC4 is a weak cipher and is used to help obfuscate the traffic. HTTPS options should be used to provide integrity and strong encryption.
         // Reference: https://github.com/Mr-Un1k0d3r/ThunderShell
-        $string4 = /PppEWCIgXbsepIwnuRIHtQLC/ nocase ascii wide
+        $string4 = "PppEWCIgXbsepIwnuRIHtQLC" nocase ascii wide
         // Description: ThunderShell is a C# RAT that communicates via HTTP requests. All the network traffic is encrypted using a second layer of RC4 to avoid SSL interception and defeat network detection on the target system. RC4 is a weak cipher and is used to help obfuscate the traffic. HTTPS options should be used to provide integrity and strong encryption.
         // Reference: https://github.com/Mr-Un1k0d3r/ThunderShell
         $string5 = /scripts.{0,100}Remote\-WmiExecute\./ nocase ascii wide
@@ -37,7 +37,7 @@ rule ThunderShell
         $string9 = /ThunderShell\-master\.zip/ nocase ascii wide
         // Description: ThunderShell is a C# RAT that communicates via HTTP requests. All the network traffic is encrypted using a second layer of RC4 to avoid SSL interception and defeat network detection on the target system. RC4 is a weak cipher and is used to help obfuscate the traffic. HTTPS options should be used to provide integrity and strong encryption.
         // Reference: https://github.com/Mr-Un1k0d3r/ThunderShell
-        $string10 = /YaWNdpwplLwycqWQDCyruhAFsYjWjnBA/ nocase ascii wide
+        $string10 = "YaWNdpwplLwycqWQDCyruhAFsYjWjnBA" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

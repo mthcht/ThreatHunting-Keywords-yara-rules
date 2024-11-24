@@ -25,10 +25,10 @@ rule ExtractBitlockerKeys
         $string5 = /ExtractBitlockerKeys\.py/ nocase ascii wide
         // Description: A system administration or post-exploitation script to automatically extract the bitlocker recovery keys from a domain.
         // Reference: https://github.com/p0dalirius/ExtractBitlockerKeys
-        $string6 = /ExtractBitlockerKeys\-main/ nocase ascii wide
+        $string6 = "ExtractBitlockerKeys-main" nocase ascii wide
         // Description: A system administration or post-exploitation script to automatically extract the bitlocker recovery keys from a domain.
         // Reference: https://github.com/p0dalirius/ExtractBitlockerKeys
-        $string7 = /p0dalirius\/ExtractBitlockerKeys/ nocase ascii wide
+        $string7 = "p0dalirius/ExtractBitlockerKeys" nocase ascii wide
 
     condition:
         any of them

@@ -19,7 +19,7 @@ rule whiskeysamlandfriends
         $string3 = /\sticketsplease\./ nocase ascii wide
         // Description: GoldenSAML Attack Libraries and Framework
         // Reference: https://github.com/secureworks/whiskeysamlandfriends
-        $string4 = /\/shocknawe\// nocase ascii wide
+        $string4 = "/shocknawe/" nocase ascii wide
         // Description: GoldenSAML Attack Libraries and Framework
         // Reference: https://github.com/secureworks/whiskeysamlandfriends
         $string5 = /\/ticketer\.py/ nocase ascii wide
@@ -34,10 +34,10 @@ rule whiskeysamlandfriends
         $string8 = /dcsync\.py/ nocase ascii wide
         // Description: GoldenSAML Attack Libraries and Framework
         // Reference: https://github.com/secureworks/whiskeysamlandfriends
-        $string9 = /generate_golden_saml/ nocase ascii wide
+        $string9 = "generate_golden_saml" nocase ascii wide
         // Description: GoldenSAML Attack Libraries and Framework
         // Reference: https://github.com/secureworks/whiskeysamlandfriends
-        $string10 = /import\sDCSYNC/ nocase ascii wide
+        $string10 = "import DCSYNC" nocase ascii wide
         // Description: GoldenSAML Attack Libraries and Framework
         // Reference: https://github.com/secureworks/whiskeysamlandfriends
         $string11 = /shocknawe\.py/ nocase ascii wide
@@ -46,22 +46,22 @@ rule whiskeysamlandfriends
         $string12 = /smb\.dcsync/ nocase ascii wide
         // Description: GoldenSAML Attack Libraries and Framework
         // Reference: https://github.com/secureworks/whiskeysamlandfriends
-        $string13 = /ticketsplease\sadfs\s/ nocase ascii wide
+        $string13 = "ticketsplease adfs " nocase ascii wide
         // Description: GoldenSAML Attack Libraries and Framework
         // Reference: https://github.com/secureworks/whiskeysamlandfriends
-        $string14 = /ticketsplease\sazure\s/ nocase ascii wide
+        $string14 = "ticketsplease azure " nocase ascii wide
         // Description: GoldenSAML Attack Libraries and Framework
         // Reference: https://github.com/secureworks/whiskeysamlandfriends
-        $string15 = /ticketsplease\sdcsync\s/ nocase ascii wide
+        $string15 = "ticketsplease dcsync " nocase ascii wide
         // Description: GoldenSAML Attack Libraries and Framework
         // Reference: https://github.com/secureworks/whiskeysamlandfriends
-        $string16 = /ticketsplease\sldap\s/ nocase ascii wide
+        $string16 = "ticketsplease ldap " nocase ascii wide
         // Description: GoldenSAML Attack Libraries and Framework
         // Reference: https://github.com/secureworks/whiskeysamlandfriends
-        $string17 = /ticketsplease\ssaml\s/ nocase ascii wide
+        $string17 = "ticketsplease saml " nocase ascii wide
         // Description: GoldenSAML Attack Libraries and Framework
         // Reference: https://github.com/secureworks/whiskeysamlandfriends
-        $string18 = /ticketsplease\sticket\s\-\-domain/ nocase ascii wide
+        $string18 = "ticketsplease ticket --domain" nocase ascii wide
         // Description: GoldenSAML Attack Libraries and Framework
         // Reference: https://github.com/secureworks/whiskeysamlandfriends
         $string19 = /ticketsplease\.modules\./ nocase ascii wide
@@ -70,7 +70,7 @@ rule whiskeysamlandfriends
         $string20 = /whiskeysaml\.py/ nocase ascii wide
         // Description: GoldenSAML Attack Libraries and Framework
         // Reference: https://github.com/secureworks/whiskeysamlandfriends
-        $string21 = /whiskeysamlandfriends/ nocase ascii wide
+        $string21 = "whiskeysamlandfriends" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -16,13 +16,13 @@ rule BOFMask
         $string2 = /\/bofmask\.h/ nocase ascii wide
         // Description: BOFMask is a proof-of-concept for masking Cobalt Strike's Beacon payload while executing a Beacon Object File (BOF)
         // Reference: https://github.com/passthehashbrowns/BOFMask
-        $string3 = /BOFMask\-main/ nocase ascii wide
+        $string3 = "BOFMask-main" nocase ascii wide
         // Description: BOFMask is a proof-of-concept for masking Cobalt Strike's Beacon payload while executing a Beacon Object File (BOF)
         // Reference: https://github.com/passthehashbrowns/BOFMask
         $string4 = /include.{0,1000}bofmask\.h/ nocase ascii wide
         // Description: BOFMask is a proof-of-concept for masking Cobalt Strike's Beacon payload while executing a Beacon Object File (BOF)
         // Reference: https://github.com/passthehashbrowns/BOFMask
-        $string5 = /passthehashbrowns\/BOFMask/ nocase ascii wide
+        $string5 = "passthehashbrowns/BOFMask" nocase ascii wide
 
     condition:
         any of them

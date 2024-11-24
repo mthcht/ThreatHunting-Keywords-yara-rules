@@ -13,49 +13,49 @@ rule gobuster
         $string1 = /\/gobuster\.git/ nocase ascii wide
         // Description: Directory/File DNS and VHost busting tool written in Go
         // Reference: https://github.com/OJ/gobuster
-        $string2 = /\/gobuster\// nocase ascii wide
+        $string2 = "/gobuster/" nocase ascii wide
         // Description: Directory/File DNS and VHost busting tool written in Go
         // Reference: https://github.com/OJ/gobuster
-        $string3 = /\/gobusterdir\// nocase ascii wide
+        $string3 = "/gobusterdir/" nocase ascii wide
         // Description: Directory/File DNS and VHost busting tool written in Go
         // Reference: https://github.com/OJ/gobuster
-        $string4 = /\/gobusterdns\// nocase ascii wide
+        $string4 = "/gobusterdns/" nocase ascii wide
         // Description: Directory/File DNS and VHost busting tool written in Go
         // Reference: https://github.com/OJ/gobuster
-        $string5 = /\/gobustergcs\// nocase ascii wide
+        $string5 = "/gobustergcs/" nocase ascii wide
         // Description: Directory/File DNS and VHost busting tool written in Go
         // Reference: https://github.com/OJ/gobuster
-        $string6 = /\/libgobuster/ nocase ascii wide
+        $string6 = "/libgobuster" nocase ascii wide
         // Description: Directory/File DNS and VHost busting tool written in Go
         // Reference: https://github.com/OJ/gobuster
-        $string7 = /\/OJ\/gobuster/ nocase ascii wide
+        $string7 = "/OJ/gobuster" nocase ascii wide
         // Description: Directory/File DNS and VHost busting tool written in Go
         // Reference: https://github.com/OJ/gobuster
-        $string8 = /gobuster\sdir\s/ nocase ascii wide
+        $string8 = "gobuster dir " nocase ascii wide
         // Description: Directory/File DNS and VHost busting tool written in Go
         // Reference: https://github.com/OJ/gobuster
-        $string9 = /gobuster\sdns/ nocase ascii wide
+        $string9 = "gobuster dns" nocase ascii wide
         // Description: Directory/File DNS and VHost busting tool written in Go
         // Reference: https://github.com/OJ/gobuster
-        $string10 = /gobuster\sfuzz\s\-/ nocase ascii wide
+        $string10 = "gobuster fuzz -" nocase ascii wide
         // Description: Directory/File DNS and VHost busting tool written in Go
         // Reference: https://github.com/OJ/gobuster
-        $string11 = /gobuster\sgcs\s/ nocase ascii wide
+        $string11 = "gobuster gcs " nocase ascii wide
         // Description: Directory/File DNS and VHost busting tool written in Go
         // Reference: https://github.com/OJ/gobuster
-        $string12 = /gobuster\ss3\s/ nocase ascii wide
+        $string12 = "gobuster s3 " nocase ascii wide
         // Description: Directory/File DNS and VHost busting tool written in Go
         // Reference: https://github.com/OJ/gobuster
-        $string13 = /gobuster\stftp\s/ nocase ascii wide
+        $string13 = "gobuster tftp " nocase ascii wide
         // Description: Directory/File DNS and VHost busting tool written in Go
         // Reference: https://github.com/OJ/gobuster
-        $string14 = /gobuster\svhost\s\-u\s/ nocase ascii wide
+        $string14 = "gobuster vhost -u " nocase ascii wide
         // Description: Directory/File DNS and VHost busting tool written in Go
         // Reference: https://github.com/OJ/gobuster
-        $string15 = /gobuster\svhost/ nocase ascii wide
+        $string15 = "gobuster vhost" nocase ascii wide
         // Description: Gobuster is a tool used to brute-force
         // Reference: https://github.com/OJ/gobuster
-        $string16 = /gobuster/ nocase ascii wide
+        $string16 = "gobuster" nocase ascii wide
         // Description: Directory/File DNS and VHost busting tool written in Go
         // Reference: https://github.com/OJ/gobuster
         $string17 = /gobuster_.{0,1000}\.tar\.gz/ nocase ascii wide
@@ -64,13 +64,13 @@ rule gobuster
         $string18 = /gobuster_.{0,1000}\.zip/ nocase ascii wide
         // Description: Directory/File DNS and VHost busting tool written in Go
         // Reference: https://github.com/OJ/gobuster
-        $string19 = /gobusterfuzz/ nocase ascii wide
+        $string19 = "gobusterfuzz" nocase ascii wide
         // Description: Directory/File DNS and VHost busting tool written in Go
         // Reference: https://github.com/OJ/gobuster
-        $string20 = /gobustertftp/ nocase ascii wide
+        $string20 = "gobustertftp" nocase ascii wide
         // Description: Directory/File DNS and VHost busting tool written in Go
         // Reference: https://github.com/OJ/gobuster
-        $string21 = /install\sgobuster/ nocase ascii wide
+        $string21 = "install gobuster" nocase ascii wide
         // Description: Directory/File DNS and VHost busting tool written in Go
         // Reference: https://github.com/OJ/gobuster
         $string22 = /\-w\s.{0,1000}wordlists.{0,1000}\.txt/ nocase ascii wide

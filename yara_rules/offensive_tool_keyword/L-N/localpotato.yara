@@ -55,16 +55,16 @@ rule localpotato
         $string15 = /\]\sReceived\sDCOM\sNTLM\stype\s3\sauthentication\sfrom\sthe\sprivileged\sclient/ nocase ascii wide
         // Description: The LocalPotato attack is a type of NTLM reflection attack that targets local authentication. This attack allows for arbitrary file read/write and elevation of privilege.
         // Reference: https://github.com/decoder-it/LocalPotato
-        $string16 = /1B3C96A3\-F698\-472B\-B786\-6FED7A205159/ nocase ascii wide
+        $string16 = "1B3C96A3-F698-472B-B786-6FED7A205159" nocase ascii wide
         // Description: The LocalPotato attack is a type of NTLM reflection attack that targets local authentication. This attack allows for arbitrary file read/write and elevation of privilege.
         // Reference: https://github.com/decoder-it/LocalPotato
-        $string17 = /\-c\s854A20FB\-2D44\-457D\-992F\-EF13785D2B51/ nocase ascii wide
+        $string17 = "-c 854A20FB-2D44-457D-992F-EF13785D2B51" nocase ascii wide
         // Description: The LocalPotato attack is a type of NTLM reflection attack that targets local authentication. This attack allows for arbitrary file read/write and elevation of privilege.
         // Reference: https://github.com/decoder-it/LocalPotato
         $string18 = /DCOMReflection\.cpp/ nocase ascii wide
         // Description: The LocalPotato attack is a type of NTLM reflection attack that targets local authentication. This attack allows for arbitrary file read/write and elevation of privilege.
         // Reference: https://github.com/decoder-it/LocalPotato
-        $string19 = /decoder\-it\/LocalPotato/ nocase ascii wide
+        $string19 = "decoder-it/LocalPotato" nocase ascii wide
         // Description: The LocalPotato attack is a type of NTLM reflection attack that targets local authentication. This attack allows for arbitrary file read/write and elevation of privilege.
         // Reference: https://github.com/decoder-it/LocalPotato
         $string20 = /IUnknownObj\.cpp/ nocase ascii wide
@@ -73,7 +73,7 @@ rule localpotato
         $string21 = /LocalPotato\s\(aka\sCVE\-2023\-21746\s\&\sHTTP\/WebDAV\)/ nocase ascii wide
         // Description: The LocalPotato attack is a type of NTLM reflection attack that targets local authentication. This attack allows for arbitrary file read/write and elevation of privilege.
         // Reference: https://github.com/decoder-it/LocalPotato
-        $string22 = /localpotato\s\-i/ nocase ascii wide
+        $string22 = "localpotato -i" nocase ascii wide
         // Description: The LocalPotato attack is a type of NTLM reflection attack that targets local authentication. This attack allows for arbitrary file read/write and elevation of privilege.
         // Reference: https://github.com/decoder-it/LocalPotato
         $string23 = /LocalPotato\.cpp/ nocase ascii wide
@@ -94,7 +94,7 @@ rule localpotato
         $string28 = /LocalPotato\.zip/ nocase ascii wide
         // Description: The LocalPotato attack is a type of NTLM reflection attack that targets local authentication. This attack allows for arbitrary file read/write and elevation of privilege.
         // Reference: https://github.com/decoder-it/LocalPotato
-        $string29 = /LocalPotato\-master/ nocase ascii wide
+        $string29 = "LocalPotato-master" nocase ascii wide
 
     condition:
         any of them

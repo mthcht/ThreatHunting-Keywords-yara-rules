@@ -49,7 +49,7 @@ rule Shhhloader
         $string13 = /\\Shhhavoc\.py/ nocase ascii wide
         // Description: shellcode loader that compiles a C++ stub to bypass AV/EDR
         // Reference: https://github.com/icyguider/Shhhloader
-        $string14 = /icyguider\/Shhhloader/ nocase ascii wide
+        $string14 = "icyguider/Shhhloader" nocase ascii wide
         // Description: shellcode loader that compiles a C++ stub to bypass AV/EDR
         // Reference: https://github.com/icyguider/Shhhloader
         $string15 = /Shhhavoc\.py\s/ nocase ascii wide

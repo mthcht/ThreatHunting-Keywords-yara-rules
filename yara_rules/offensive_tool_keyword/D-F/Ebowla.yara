@@ -31,7 +31,7 @@ rule Ebowla
         $string7 = /exe_dll_shellcode\sgenetic\.config/ nocase ascii wide
         // Description: Framework for Making Environmental Keyed Payloads
         // Reference: https://github.com/Genetic-Malware/Ebowla
-        $string8 = /Genetic\-Malware\/Ebowla/ nocase ascii wide
+        $string8 = "Genetic-Malware/Ebowla" nocase ascii wide
 
     condition:
         any of them

@@ -13,10 +13,10 @@ rule windapsearch
         $string1 = /\s\-d\s.{0,1000}\s\-u\s.{0,1000}\\.{0,1000}\s\-p\s.{0,1000}\s\-\-da/ nocase ascii wide
         // Description: Python script to enumerate users - groups and computers from a Windows domain through LDAP queries
         // Reference: https://github.com/ropnop/windapsearch
-        $string2 = /\s\-\-unconstrained\-users/ nocase ascii wide
+        $string2 = " --unconstrained-users" nocase ascii wide
         // Description: Python script to enumerate users - groups and computers from a Windows domain through LDAP queries
         // Reference: https://github.com/ropnop/windapsearch
-        $string3 = /\s\-\-user\-spns/ nocase ascii wide
+        $string3 = " --user-spns" nocase ascii wide
         // Description: Python script to enumerate users - groups and computers from a Windows domain through LDAP queries
         // Reference: https://github.com/ropnop/windapsearch
         $string4 = /\/windapsearch\.git/ nocase ascii wide
@@ -28,7 +28,7 @@ rule windapsearch
         $string6 = /windapsearch_py2\.py/ nocase ascii wide
         // Description: Python script to enumerate users - groups and computers from a Windows domain through LDAP queries
         // Reference: https://github.com/ropnop/windapsearch
-        $string7 = /windapsearch\-master/ nocase ascii wide
+        $string7 = "windapsearch-master" nocase ascii wide
 
     condition:
         any of them

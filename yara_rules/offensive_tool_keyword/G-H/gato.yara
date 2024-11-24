@@ -28,7 +28,7 @@ rule gato
         $string6 = /gato\s.{0,1000}\s\-\-socks\-proxy/ nocase ascii wide
         // Description: GitHub Self-Hosted Runner Enumeration and Attack Tool
         // Reference: https://github.com/praetorian-inc/gato
-        $string7 = /praetorian\-inc\/gato/ nocase ascii wide
+        $string7 = "praetorian-inc/gato" nocase ascii wide
 
     condition:
         any of them

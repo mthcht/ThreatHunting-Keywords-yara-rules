@@ -25,10 +25,10 @@ rule Lansweeper
         $string5 = /\\Program\sFiles\s\(x86\)\\Lansweeper/ nocase ascii wide
         // Description: Lansweeper discovers and inventories IT assets - gathering system - software and user data - abused by attackers
         // Reference: https://www.lansweeper.com/
-        $string6 = /\>Lansweeper\sSetup\</ nocase ascii wide
+        $string6 = ">Lansweeper Setup<" nocase ascii wide
         // Description: Lansweeper discovers and inventories IT assets - gathering system - software and user data - abused by attackers
         // Reference: https://www.lansweeper.com/
-        $string7 = /\>Lansweeper\</ nocase ascii wide
+        $string7 = ">Lansweeper<" nocase ascii wide
         // Description: Lansweeper discovers and inventories IT assets - gathering system - software and user data - abused by attackers
         // Reference: https://www.lansweeper.com/
         $string8 = /https\:\/\/update\.lansweeper\.com\/installation\.aspx/ nocase ascii wide

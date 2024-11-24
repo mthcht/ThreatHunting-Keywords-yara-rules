@@ -82,7 +82,7 @@ rule saint
         $string24 = /package\ssaint\.webcam/ nocase ascii wide
         // Description: (s)AINT is a Spyware Generator for Windows systems written in Java
         // Reference: https://github.com/tiagorlampert/sAINT
-        $string25 = /public\sclass\sKeylogger/ nocase ascii wide
+        $string25 = "public class Keylogger" nocase ascii wide
         // Description: (s)AINT is a Spyware Generator for Windows systems written in Java
         // Reference: https://github.com/tiagorlampert/sAINT
         $string26 = /REG\sADD\sHKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\s\/V.{0,100}saint\.jar/ nocase ascii wide
@@ -103,7 +103,7 @@ rule saint
         $string31 = /saint\-1\.0\-jar\-with\-dependencies\.jar/ nocase ascii wide
         // Description: (s)AINT is a Spyware Generator for Windows systems written in Java
         // Reference: https://github.com/tiagorlampert/sAINT
-        $string32 = /tiagorlampert\/sAINT/ nocase ascii wide
+        $string32 = "tiagorlampert/sAINT" nocase ascii wide
         // Description: (s)AINT is a Spyware Generator for Windows systems written in Java
         // Reference: https://github.com/tiagorlampert/sAINT
         $string33 = /ui\\sAINT\.java/ nocase ascii wide

@@ -31,7 +31,7 @@ rule freefilesync
         $string7 = /\/RealTimeSync\.exe/ nocase ascii wide
         // Description: freefilesync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://freefilesync.org/download.php
-        $string8 = /\/tmp\/FreeFileSync/ nocase ascii wide
+        $string8 = "/tmp/FreeFileSync" nocase ascii wide
         // Description: freefilesync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://freefilesync.org/download.php
         $string9 = /\\AppData\\Roaming\\FreeFileSync\\Logs\\/ nocase ascii wide
@@ -67,31 +67,31 @@ rule freefilesync
         $string19 = /\\WOW6432Node\\FreeFileSync/ nocase ascii wide
         // Description: freefilesync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://freefilesync.org/download.php
-        $string20 = /\>FreeFileSync\s\-\sFolder\sComparison\sand\sSynchronization\</ nocase ascii wide
+        $string20 = ">FreeFileSync - Folder Comparison and Synchronization<" nocase ascii wide
         // Description: freefilesync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://freefilesync.org/download.php
-        $string21 = /\>FreeFileSync\sSetup\</ nocase ascii wide
+        $string21 = ">FreeFileSync Setup<" nocase ascii wide
         // Description: freefilesync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://freefilesync.org/download.php
-        $string22 = /\>FreeFileSync\</ nocase ascii wide
+        $string22 = ">FreeFileSync<" nocase ascii wide
         // Description: freefilesync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://freefilesync.org/download.php
-        $string23 = /0b0977a047ea3397c83d19f0edeef003c98021a2f64b03503f67a7189aeab4bf/ nocase ascii wide
+        $string23 = "0b0977a047ea3397c83d19f0edeef003c98021a2f64b03503f67a7189aeab4bf" nocase ascii wide
         // Description: freefilesync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://freefilesync.org/download.php
-        $string24 = /13b6443f4e1f03bc7c37fe9d260435886ad80ee292c0a3b5b9cdeb763576e31b/ nocase ascii wide
+        $string24 = "13b6443f4e1f03bc7c37fe9d260435886ad80ee292c0a3b5b9cdeb763576e31b" nocase ascii wide
         // Description: freefilesync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://freefilesync.org/download.php
         $string25 = /api\.freefilesync\.org/ nocase ascii wide
         // Description: freefilesync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://freefilesync.org/download.php
-        $string26 = /c888fa7aadb304362df7bcb43164b6a07222739f5d2a90bf475817aa0e75013d/ nocase ascii wide
+        $string26 = "c888fa7aadb304362df7bcb43164b6a07222739f5d2a90bf475817aa0e75013d" nocase ascii wide
         // Description: freefilesync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://freefilesync.org/download.php
         $string27 = /\-Command\sAdd\-MpPreference\s\-ExclusionProcess\s.{0,1000}\\Program\sFiles\\FreeFileSync\\Bin\\/ nocase ascii wide
         // Description: freefilesync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://freefilesync.org/download.php
-        $string28 = /fb4d282f8d202006d682eef84a83757376c20929f62626e288a159d730fde3c9/ nocase ascii wide
+        $string28 = "fb4d282f8d202006d682eef84a83757376c20929f62626e288a159d730fde3c9" nocase ascii wide
         // Description: freefilesync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://freefilesync.org/download.php
         $string29 = /https\:\/\/api\.freefilesync\.org\/new_installation/ nocase ascii wide
@@ -100,10 +100,10 @@ rule freefilesync
         $string30 = /https\:\/\/freefilesync\.org\/donate/ nocase ascii wide
         // Description: freefilesync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://freefilesync.org/download.php
-        $string31 = /pkill\sFreeFileSync/ nocase ascii wide
+        $string31 = "pkill FreeFileSync" nocase ascii wide
         // Description: freefilesync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://freefilesync.org/download.php
-        $string32 = /pkill\sRealTimeSync/ nocase ascii wide
+        $string32 = "pkill RealTimeSync" nocase ascii wide
         // Description: freefilesync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://freefilesync.org/download.php
         $string33 = /SOFTWARE\\WOW6432Node\\FreeFileSync/ nocase ascii wide

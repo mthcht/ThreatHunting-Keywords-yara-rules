@@ -10,7 +10,7 @@ rule EarthWorm
     strings:
         // Description: SOCKS v5 proxy service used for data forwarding in complex network environments
         // Reference: https://github.com/rootkiter/Binary-files/tree/212c43b40e2e4c2e2703400caaa732557b6080a4
-        $string1 = /ELF\:Earthworm\-B/ nocase ascii wide
+        $string1 = "ELF:Earthworm-B" nocase ascii wide
         // Description: SOCKS v5 proxy service used for data forwarding in complex network environments
         // Reference: https://github.com/rootkiter/Binary-files/tree/212c43b40e2e4c2e2703400caaa732557b6080a4
         $string2 = /HackTool\.EarthWorm/ nocase ascii wide
@@ -28,7 +28,7 @@ rule EarthWorm
         $string6 = /HackTool\/Win32\.Earthworm/ nocase ascii wide
         // Description: SOCKS v5 proxy service used for data forwarding in complex network environments
         // Reference: https://github.com/rootkiter/Binary-files/tree/212c43b40e2e4c2e2703400caaa732557b6080a4
-        $string7 = /HackTool\:Linux\/EarthWorm/ nocase ascii wide
+        $string7 = "HackTool:Linux/EarthWorm" nocase ascii wide
         // Description: SOCKS v5 proxy service used for data forwarding in complex network environments
         // Reference: https://github.com/rootkiter/Binary-files/tree/212c43b40e2e4c2e2703400caaa732557b6080a4
         $string8 = /Linux\.Hacktool\.Earthworm/ nocase ascii wide

@@ -10,10 +10,10 @@ rule secretsdump
     strings:
         // Description: secretdump.py from impacket - https://github.com/fortra/impacket
         // Reference: https://github.com/fortra/impacket
-        $string1 = /\s\-just\-dc\-ntlm\s/ nocase ascii wide
+        $string1 = " -just-dc-ntlm " nocase ascii wide
         // Description: secretdump.py from impacket - https://github.com/fortra/impacket
         // Reference: https://github.com/fortra/impacket
-        $string2 = /\s\-just\-dc\-user\s/ nocase ascii wide
+        $string2 = " -just-dc-user " nocase ascii wide
         // Description: secretdump.py from impacket - https://github.com/fortra/impacket
         // Reference: https://github.com/fortra/impacket
         $string3 = /\/cached\-domain\-credentials\.html/ nocase ascii wide
@@ -28,16 +28,16 @@ rule secretsdump
         $string6 = /\]\sDumping\ssecrets\sfor\:\s.{0,100}Username\:\s/ nocase ascii wide
         // Description: secretdump.py from impacket - https://github.com/fortra/impacket
         // Reference: https://github.com/fortra/impacket
-        $string7 = /29cf4b68c34663281bebc94f62c92282ca351839032140fcb2b0266d44a8bc84/ nocase ascii wide
+        $string7 = "29cf4b68c34663281bebc94f62c92282ca351839032140fcb2b0266d44a8bc84" nocase ascii wide
         // Description: secretdump.py from impacket - https://github.com/fortra/impacket
         // Reference: https://github.com/fin3ss3g0d/secretsdump.py
-        $string8 = /fin3ss3g0d\/secretsdump/ nocase ascii wide
+        $string8 = "fin3ss3g0d/secretsdump" nocase ascii wide
         // Description: secretdump.py from impacket - https://github.com/fortra/impacket
         // Reference: https://github.com/fortra/impacket
         $string9 = /impacket\.examples\.secretsdump/ nocase ascii wide
         // Description: secretdump.py from impacket - https://github.com/fortra/impacket
         // Reference: https://github.com/fortra/impacket
-        $string10 = /Policy\sSPN\starget\sname\svalidation\smight\sbe\srestricting\sfull\sDRSUAPI\sdump/ nocase ascii wide
+        $string10 = "Policy SPN target name validation might be restricting full DRSUAPI dump" nocase ascii wide
         // Description: secretdump.py from impacket - https://github.com/fortra/impacket
         // Reference: https://github.com/fortra/impacket
         $string11 = /resuming\sa\sprevious\sNTDS\.DIT\sdump\ssession/ nocase ascii wide

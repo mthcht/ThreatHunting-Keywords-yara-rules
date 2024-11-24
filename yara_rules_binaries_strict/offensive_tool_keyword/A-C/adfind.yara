@@ -10,28 +10,28 @@ rule adfind
     strings:
         // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
         // Reference: https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Other/AdFind
-        $string1 = /adfind\s\-gcb\s\-sc\strustdmp/ nocase ascii wide
+        $string1 = "adfind -gcb -sc trustdmp" nocase ascii wide
         // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
         // Reference: https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Other/AdFind
-        $string2 = /adfind\s\-sc\sadinfo/ nocase ascii wide
+        $string2 = "adfind -sc adinfo" nocase ascii wide
         // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
         // Reference: https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Other/AdFind
-        $string3 = /adfind\s\-sc\scomputers_pwdnotreqd/ nocase ascii wide
+        $string3 = "adfind -sc computers_pwdnotreqd" nocase ascii wide
         // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
         // Reference: https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Other/AdFind
-        $string4 = /adfind\s\-sc\sdclist/ nocase ascii wide
+        $string4 = "adfind -sc dclist" nocase ascii wide
         // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
         // Reference: https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Other/AdFind
-        $string5 = /adfind\s\-sc\sdcmodes/ nocase ascii wide
+        $string5 = "adfind -sc dcmodes" nocase ascii wide
         // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
         // Reference: https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Other/AdFind
-        $string6 = /adfind\s\-sc\sdomainlist/ nocase ascii wide
+        $string6 = "adfind -sc domainlist" nocase ascii wide
         // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
         // Reference: https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Other/AdFind
-        $string7 = /adfind\s\-sc\strustdmp/ nocase ascii wide
+        $string7 = "adfind -sc trustdmp" nocase ascii wide
         // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
         // Reference: https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Other/AdFind
-        $string8 = /adfind\s\-subnets/ nocase ascii wide
+        $string8 = "adfind -subnets" nocase ascii wide
         // Description: attackers perform Active Directory collection using AdFind in batch scripts from C:\Windows\Temp\adf\ or C:\temp\ and store output in CSV files
         // Reference: http://www.joeware.net/freetools/tools/adfind/index.htm
         $string9 = /adfind\.exe\s\-f\s\(objectcategory\=organizationalUnit\)\s\>\s.{0,100}\.txt/ nocase ascii wide

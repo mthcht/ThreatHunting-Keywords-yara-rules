@@ -19,7 +19,7 @@ rule GMSAPasswordReader
         $string3 = /\\GMSAPasswordReader\./ nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string4 = /\>GMSAPasswordReader\</ nocase ascii wide
+        $string4 = ">GMSAPasswordReader<" nocase ascii wide
         // Description: Reads the password blob from a GMSA account using LDAP and parses the values into hashes for re-use.
         // Reference: https://github.com/rvazarkar/GMSAPasswordReader
         $string5 = /GMSAPasswordReader\.exe/ nocase ascii wide
@@ -28,16 +28,16 @@ rule GMSAPasswordReader
         $string6 = /GMSAPasswordReader\.exe/ nocase ascii wide
         // Description: Reads the password blob from a GMSA account using LDAP and parses the values into hashes for re-use.
         // Reference: https://github.com/rvazarkar/GMSAPasswordReader
-        $string7 = /GMSAPasswordReader\-master/ nocase ascii wide
+        $string7 = "GMSAPasswordReader-master" nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string8 = /Retrieve\spassword\sfor\sthe\saccount\sarobbins\sin\sthe\sdomain\stestlab/ nocase ascii wide
+        $string8 = "Retrieve password for the account arobbins in the domain testlab" nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string9 = /Retrieve\spassword\sfor\sthe\saccount\sjkohler\sin\syour\scurrent\sdomain/ nocase ascii wide
+        $string9 = "Retrieve password for the account jkohler in your current domain" nocase ascii wide
         // Description: Reads the password blob from a GMSA account using LDAP and parses the values into hashes for re-use.
         // Reference: https://github.com/rvazarkar/GMSAPasswordReader
-        $string10 = /rvazarkar\/GMSAPasswordReader/ nocase ascii wide
+        $string10 = "rvazarkar/GMSAPasswordReader" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

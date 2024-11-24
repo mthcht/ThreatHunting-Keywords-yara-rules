@@ -25,7 +25,7 @@ rule findstr
         $string5 = /findstr\s\/S\s\/I\scpassword\s.{0,1000}\\policies\\.{0,1000}\.xml/ nocase ascii wide
         // Description: findstr used to find lsass pid in order to dump lsass process
         // Reference: https://github.com/gabriellandau/PPLFault
-        $string6 = /findstr\slsass/ nocase ascii wide
+        $string6 = "findstr lsass" nocase ascii wide
 
     condition:
         any of them

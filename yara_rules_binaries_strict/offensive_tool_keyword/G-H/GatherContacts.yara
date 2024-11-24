@@ -10,7 +10,7 @@ rule GatherContacts
     strings:
         // Description: A Burp Suite Extension to pull Employee Names from Google and Bing LinkedIn Search Results.As part of reconnaissance when performing a penetration test. it is often useful to gather employee names that can then be massaged into email addresses and usernames. The usernames may come in handy for performing a password spraying attack for example. One easy way to gather employee names is to use the following Burp Suite Pro extension as described below.
         // Reference: https://github.com/clr2of8/GatherContacts
-        $string1 = /clr2of8\/GatherContacts/ nocase ascii wide
+        $string1 = "clr2of8/GatherContacts" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -10,10 +10,10 @@ rule bofhound
     strings:
         // Description: Generate BloodHound compatible JSON from logs written by ldapsearch BOF - pyldapsearch and Brute Ratel's LDAP Sentinel
         // Reference: https://github.com/fortalice/bofhound
-        $string1 = /\sBrc4LdapSentinelParser/ nocase ascii wide
+        $string1 = " Brc4LdapSentinelParser" nocase ascii wide
         // Description: Generate BloodHound compatible JSON from logs written by ldapsearch BOF - pyldapsearch and Brute Ratel's LDAP Sentinel
         // Reference: https://github.com/fortalice/bofhound
-        $string2 = /\s\-\-brute\-ratel/ nocase ascii wide
+        $string2 = " --brute-ratel" nocase ascii wide
         // Description: Generate BloodHound compatible JSON from logs written by ldapsearch BOF - pyldapsearch and Brute Ratel's LDAP Sentinel
         // Reference: https://github.com/fortalice/bofhound
         $string3 = /\/beacon_202_no_acl\.log/ nocase ascii wide
@@ -46,7 +46,7 @@ rule bofhound
         $string12 = /\/ldap_search_bof\.py/ nocase ascii wide
         // Description: Generate BloodHound compatible JSON from logs written by ldapsearch BOF - pyldapsearch and Brute Ratel's LDAP Sentinel
         // Reference: https://github.com/fortalice/bofhound
-        $string13 = /\/opt\/cobaltstrike\/logs/ nocase ascii wide
+        $string13 = "/opt/cobaltstrike/logs" nocase ascii wide
         // Description: Generate BloodHound compatible JSON from logs written by ldapsearch BOF - pyldapsearch and Brute Ratel's LDAP Sentinel
         // Reference: https://github.com/fortalice/bofhound
         $string14 = /\\ldap_search_bof\.py/ nocase ascii wide
@@ -55,37 +55,37 @@ rule bofhound
         $string15 = /badger_no_acl_1030_objects\.log/ nocase ascii wide
         // Description: Generate BloodHound compatible JSON from logs written by ldapsearch BOF - pyldapsearch and Brute Ratel's LDAP Sentinel
         // Reference: https://github.com/fortalice/bofhound
-        $string16 = /bofhound\s\-\-/ nocase ascii wide
+        $string16 = "bofhound --" nocase ascii wide
         // Description: Generate BloodHound compatible JSON from logs written by ldapsearch BOF - pyldapsearch and Brute Ratel's LDAP Sentinel
         // Reference: https://github.com/fortalice/bofhound
-        $string17 = /bofhound\s\-i\s/ nocase ascii wide
+        $string17 = "bofhound -i " nocase ascii wide
         // Description: Generate BloodHound compatible JSON from logs written by ldapsearch BOF - pyldapsearch and Brute Ratel's LDAP Sentinel
         // Reference: https://github.com/fortalice/bofhound
-        $string18 = /bofhound\s\-o\s/ nocase ascii wide
+        $string18 = "bofhound -o " nocase ascii wide
         // Description: Generate BloodHound compatible JSON from logs written by ldapsearch BOF - pyldapsearch and Brute Ratel's LDAP Sentinel
         // Reference: https://github.com/fortalice/bofhound
-        $string19 = /bofhound\-main/ nocase ascii wide
+        $string19 = "bofhound-main" nocase ascii wide
         // Description: Generate BloodHound compatible JSON from logs written by ldapsearch BOF - pyldapsearch and Brute Ratel's LDAP Sentinel
         // Reference: https://github.com/fortalice/bofhound
         $string20 = /brc4_ldap_sentinel\.py/ nocase ascii wide
         // Description: Generate BloodHound compatible JSON from logs written by ldapsearch BOF - pyldapsearch and Brute Ratel's LDAP Sentinel
         // Reference: https://github.com/fortalice/bofhound
-        $string21 = /fortalice\/bofhound/ nocase ascii wide
+        $string21 = "fortalice/bofhound" nocase ascii wide
         // Description: Generate BloodHound compatible JSON from logs written by ldapsearch BOF - pyldapsearch and Brute Ratel's LDAP Sentinel
         // Reference: https://github.com/fortalice/bofhound
-        $string22 = /from\sbofhound\simport\s/ nocase ascii wide
+        $string22 = "from bofhound import " nocase ascii wide
         // Description: Generate BloodHound compatible JSON from logs written by ldapsearch BOF - pyldapsearch and Brute Ratel's LDAP Sentinel
         // Reference: https://github.com/fortalice/bofhound
         $string23 = /from\sbofhound\.ad\simport/ nocase ascii wide
         // Description: Generate BloodHound compatible JSON from logs written by ldapsearch BOF - pyldapsearch and Brute Ratel's LDAP Sentinel
         // Reference: https://github.com/fortalice/bofhound
-        $string24 = /import\sLdapSearchBofParser/ nocase ascii wide
+        $string24 = "import LdapSearchBofParser" nocase ascii wide
         // Description: Generate BloodHound compatible JSON from logs written by ldapsearch BOF - pyldapsearch and Brute Ratel's LDAP Sentinel
         // Reference: https://github.com/fortalice/bofhound
-        $string25 = /pip3\sinstall\sbofhound/ nocase ascii wide
+        $string25 = "pip3 install bofhound" nocase ascii wide
         // Description: Generate BloodHound compatible JSON from logs written by ldapsearch BOF - pyldapsearch and Brute Ratel's LDAP Sentinel
         // Reference: https://github.com/fortalice/bofhound
-        $string26 = /poetry\srun\sbofhound/ nocase ascii wide
+        $string26 = "poetry run bofhound" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

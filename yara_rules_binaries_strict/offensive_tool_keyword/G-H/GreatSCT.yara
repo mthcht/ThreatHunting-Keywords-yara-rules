@@ -13,40 +13,40 @@ rule GreatSCT
         $string1 = /\s\-c\s.{0,100}OBFUSCATION\=.{0,100}\.ps1/ nocase ascii wide
         // Description: The project is called Great SCT (Great Scott). Great SCT is an open source project to generate application white list bypasses. This tool is intended for BOTH red and blue team.
         // Reference: https://github.com/GreatSCT/GreatSCT
-        $string2 = /\sGreatSCT\// nocase ascii wide
+        $string2 = " GreatSCT/" nocase ascii wide
         // Description: The project is called Great SCT (Great Scott). Great SCT is an open source project to generate application white list bypasses. This tool is intended for BOTH red and blue team.
         // Reference: https://github.com/GreatSCT/GreatSCT
-        $string3 = /\s\-\-list\-payloads/ nocase ascii wide
+        $string3 = " --list-payloads" nocase ascii wide
         // Description: The project is called Great SCT (Great Scott). Great SCT is an open source project to generate application white list bypasses. This tool is intended for BOTH red and blue team.
         // Reference: https://github.com/GreatSCT/GreatSCT
-        $string4 = /\s\-\-msfoptions\s/ nocase ascii wide
+        $string4 = " --msfoptions " nocase ascii wide
         // Description: The project is called Great SCT (Great Scott). Great SCT is an open source project to generate application white list bypasses. This tool is intended for BOTH red and blue team.
         // Reference: https://github.com/GreatSCT/GreatSCT
-        $string5 = /\/Bypass\/payloads/ nocase ascii wide
+        $string5 = "/Bypass/payloads" nocase ascii wide
         // Description: The project is called Great SCT (Great Scott). Great SCT is an open source project to generate application white list bypasses. This tool is intended for BOTH red and blue team.
         // Reference: https://github.com/GreatSCT/GreatSCT
-        $string6 = /\/GreatSCT\// nocase ascii wide
+        $string6 = "/GreatSCT/" nocase ascii wide
         // Description: GreatSCT is a tool designed to generate metasploit payloads that bypass common anti-virus solutions and application whitelisting solutions. GreatSCT is current under support by @ConsciousHacker
         // Reference: https://github.com/GreatSCT/GreatSCT
-        $string7 = /\/GreatSCT\/GreatSCT/ nocase ascii wide
+        $string7 = "/GreatSCT/GreatSCT" nocase ascii wide
         // Description: The project is called Great SCT (Great Scott). Great SCT is an open source project to generate application white list bypasses. This tool is intended for BOTH red and blue team.
         // Reference: https://github.com/GreatSCT/GreatSCT
-        $string8 = /\/greatsct\-output/ nocase ascii wide
+        $string8 = "/greatsct-output" nocase ascii wide
         // Description: The project is called Great SCT (Great Scott). Great SCT is an open source project to generate application white list bypasses. This tool is intended for BOTH red and blue team.
         // Reference: https://github.com/GreatSCT/GreatSCT
-        $string9 = /\/regsvcs\/meterpreter/ nocase ascii wide
+        $string9 = "/regsvcs/meterpreter" nocase ascii wide
         // Description: The project is called Great SCT (Great Scott). Great SCT is an open source project to generate application white list bypasses. This tool is intended for BOTH red and blue team.
         // Reference: https://github.com/GreatSCT/GreatSCT
-        $string10 = /\/regsvr32\/shellcode_inject/ nocase ascii wide
+        $string10 = "/regsvr32/shellcode_inject" nocase ascii wide
         // Description: The project is called Great SCT (Great Scott). Great SCT is an open source project to generate application white list bypasses. This tool is intended for BOTH red and blue team.
         // Reference: https://github.com/GreatSCT/GreatSCT
-        $string11 = /func_get_powershell_dll/ nocase ascii wide
+        $string11 = "func_get_powershell_dll" nocase ascii wide
         // Description: The project is called Great SCT (Great Scott). Great SCT is an open source project to generate application white list bypasses. This tool is intended for BOTH red and blue team.
         // Reference: https://github.com/GreatSCT/GreatSCT
-        $string12 = /func_install_wine_dotnettojscript/ nocase ascii wide
+        $string12 = "func_install_wine_dotnettojscript" nocase ascii wide
         // Description: GreatSCT is a tool designed to generate metasploit payloads that bypass common anti-virus solutions and application whitelisting solutions. GreatSCT is current under support by @ConsciousHacker
         // Reference: https://github.com/GreatSCT/GreatSCT
-        $string13 = /GreatSCT/ nocase ascii wide
+        $string13 = "GreatSCT" nocase ascii wide
         // Description: The project is called Great SCT (Great Scott). Great SCT is an open source project to generate application white list bypasses. This tool is intended for BOTH red and blue team.
         // Reference: https://github.com/GreatSCT/GreatSCT
         $string14 = /GreatSCT\.git/ nocase ascii wide
@@ -58,10 +58,10 @@ rule GreatSCT
         $string16 = /invoke_obfuscation\.py/ nocase ascii wide
         // Description: The project is called Great SCT (Great Scott). Great SCT is an open source project to generate application white list bypasses. This tool is intended for BOTH red and blue team.
         // Reference: https://github.com/GreatSCT/GreatSCT
-        $string17 = /\-\-msfvenom\s/ nocase ascii wide
+        $string17 = "--msfvenom " nocase ascii wide
         // Description: The project is called Great SCT (Great Scott). Great SCT is an open source project to generate application white list bypasses. This tool is intended for BOTH red and blue team.
         // Reference: https://github.com/GreatSCT/GreatSCT
-        $string18 = /mshta\/shellcode_inject/ nocase ascii wide
+        $string18 = "mshta/shellcode_inject" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -10,7 +10,7 @@ rule Hash_Buster
     strings:
         // Description: hash cracking tool 
         // Reference: https://github.com/s0md3v/Hash-Buster
-        $string1 = /Hash\-Buster/ nocase ascii wide
+        $string1 = "Hash-Buster" nocase ascii wide
 
     condition:
         any of them

@@ -22,7 +22,7 @@ rule Certify
         $string4 = /Certify\.exe\s/ nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string5 = /ImpersonateLoggedOnUser\sworked\,\sbut\sthread\sis\snot\srunning\sas\sSYSTEM/ nocase ascii wide
+        $string5 = "ImpersonateLoggedOnUser worked, but thread is not running as SYSTEM" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

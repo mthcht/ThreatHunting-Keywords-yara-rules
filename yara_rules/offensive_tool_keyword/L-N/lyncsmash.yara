@@ -22,7 +22,7 @@ rule lyncsmash
         $string4 = /\/find_domain\.sh/ nocase ascii wide
         // Description: a collection of tools to enumerate and attack self-hosted Skype for Business and Microsoft Lync installations 
         // Reference: https://github.com/nyxgeek/lyncsmash
-        $string5 = /\/lyncsmash\// nocase ascii wide
+        $string5 = "/lyncsmash/" nocase ascii wide
         // Description: a collection of tools to enumerate and attack self-hosted Skype for Business and Microsoft Lync installations 
         // Reference: https://github.com/nyxgeek/lyncsmash
         $string6 = /\/wordlists\/owa_directories\.txt/ nocase ascii wide
@@ -46,7 +46,7 @@ rule lyncsmash
         $string12 = /find_domain\.sh\s/ nocase ascii wide
         // Description: a collection of tools to enumerate and attack self-hosted Skype for Business and Microsoft Lync installations
         // Reference: https://github.com/nyxgeek/lyncsmash
-        $string13 = /lyncsmash/ nocase ascii wide
+        $string13 = "lyncsmash" nocase ascii wide
         // Description: a collection of tools to enumerate and attack self-hosted Skype for Business and Microsoft Lync installations 
         // Reference: https://github.com/nyxgeek/lyncsmash
         $string14 = /lyncsmash\.git/ nocase ascii wide
@@ -58,13 +58,13 @@ rule lyncsmash
         $string16 = /lyncsmash\.py/ nocase ascii wide
         // Description: a collection of tools to enumerate and attack self-hosted Skype for Business and Microsoft Lync installations 
         // Reference: https://github.com/nyxgeek/lyncsmash
-        $string17 = /lyncsmash\-master/ nocase ascii wide
+        $string17 = "lyncsmash-master" nocase ascii wide
         // Description: a collection of tools to enumerate and attack self-hosted Skype for Business and Microsoft Lync installations 
         // Reference: https://github.com/nyxgeek/lyncsmash
         $string18 = /ntlm\-info\.py/ nocase ascii wide
         // Description: a collection of tools to enumerate and attack self-hosted Skype for Business and Microsoft Lync installations 
         // Reference: https://github.com/nyxgeek/lyncsmash
-        $string19 = /nyxgeek\/lyncsmash/ nocase ascii wide
+        $string19 = "nyxgeek/lyncsmash" nocase ascii wide
 
     condition:
         any of them

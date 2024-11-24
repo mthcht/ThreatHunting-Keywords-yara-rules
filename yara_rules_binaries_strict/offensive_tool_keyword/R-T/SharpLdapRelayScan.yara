@@ -13,7 +13,7 @@ rule SharpLdapRelayScan
         $string1 = /\.exe\s\-d\s.{0,100}\s\-u\s.{0,100}\s\-p\s.{0,100}\s\-m\sLDAPS/ nocase ascii wide
         // Description: SharLdapRealyScan is a tool to check Domain Controllers for LDAP server protections regarding the relay of NTLM authenticationvand it's a C# port of?LdapRelayScan
         // Reference: https://github.com/klezVirus/SharpLdapRelayScan
-        $string2 = /SharpLdapRelayScan/ nocase ascii wide
+        $string2 = "SharpLdapRelayScan" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

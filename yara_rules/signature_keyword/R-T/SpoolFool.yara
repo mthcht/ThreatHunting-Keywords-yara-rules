@@ -10,10 +10,10 @@ rule SpoolFool
     strings:
         // Description: Exploit for CVE-2022-21999 - Windows Print Spooler Elevation of Privilege Vulnerability (LPE)
         // Reference: https://github.com/ly4k/SpoolFool
-        $string1 = /A\sVariant\sOf\sWin64\/AddUser/ nocase ascii wide
+        $string1 = "A Variant Of Win64/AddUser" nocase ascii wide
         // Description: Exploit for CVE-2022-21999 - Windows Print Spooler Elevation of Privilege Vulnerability (LPE)
         // Reference: https://github.com/ly4k/SpoolFool
-        $string2 = /ATK\/SpoolFool\-A/ nocase ascii wide
+        $string2 = "ATK/SpoolFool-A" nocase ascii wide
         // Description: Exploit for CVE-2022-21999 - Windows Print Spooler Elevation of Privilege Vulnerability (LPE)
         // Reference: https://github.com/ly4k/SpoolFool
         $string3 = /Exp\.CVE\-2022\-21999/ nocase ascii wide

@@ -67,16 +67,16 @@ rule RedPersist
         $string19 = /\]\sUserInitMprLogonScript\sPersistence\screated/ nocase ascii wide
         // Description: RedPersist is a Windows Persistence tool written in C#
         // Reference: https://github.com/mertdas/RedPersist
-        $string20 = /BD745A5E\-A1E9\-4FDD\-A15B\-E9F303A625AE/ nocase ascii wide
+        $string20 = "BD745A5E-A1E9-4FDD-A15B-E9F303A625AE" nocase ascii wide
         // Description: RedPersist is a Windows Persistence tool written in C#
         // Reference: https://github.com/mertdas/RedPersist
-        $string21 = /bd745a5e\-a1e9\-4fdd\-a15b\-e9f303a625ae/ nocase ascii wide
+        $string21 = "bd745a5e-a1e9-4fdd-a15b-e9f303a625ae" nocase ascii wide
         // Description: RedPersist is a Windows Persistence tool written in C#
         // Reference: https://github.com/mertdas/RedPersist
-        $string22 = /Hello\sFrom\ssadsad\sTeam/ nocase ascii wide
+        $string22 = "Hello From sadsad Team" nocase ascii wide
         // Description: RedPersist is a Windows Persistence tool written in C#
         // Reference: https://github.com/mertdas/RedPersist
-        $string23 = /mertdas\/RedPersist/ nocase ascii wide
+        $string23 = "mertdas/RedPersist" nocase ascii wide
         // Description: RedPersist is a Windows Persistence tool written in C#
         // Reference: https://github.com/mertdas/RedPersist
         $string24 = /namespace\sRedPersist\.Persist/ nocase ascii wide

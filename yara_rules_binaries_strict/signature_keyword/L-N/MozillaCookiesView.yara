@@ -10,7 +10,7 @@ rule MozillaCookiesView
     strings:
         // Description: nirsoft utility that displays the details of all cookies stored inside the cookies file (cookies.txt or cookies.sqlite) - abused by threat actors
         // Reference: https://www.nirsoft.net/utils/mzcv.html
-        $string1 = /Win64\/MozillaCookiesView/ nocase ascii wide
+        $string1 = "Win64/MozillaCookiesView" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

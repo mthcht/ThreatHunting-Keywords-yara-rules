@@ -19,7 +19,7 @@ rule Shell3er
         $string3 = /\/Shell3er\.ps1/ nocase ascii wide
         // Description: PowerShell Reverse Shell
         // Reference: https://github.com/yehia-mamdouh/Shell3er/blob/main/Shell3er.ps1
-        $string4 = /\/Shell3er\// nocase ascii wide
+        $string4 = "/Shell3er/" nocase ascii wide
         // Description: PowerShell Reverse Shell
         // Reference: https://github.com/yehia-mamdouh/Shell3er
         $string5 = /\\Shell3er\.ps1/ nocase ascii wide
@@ -28,28 +28,28 @@ rule Shell3er
         $string6 = /\\Shell3er\-main/ nocase ascii wide
         // Description: PowerShell Reverse Shell
         // Reference: https://github.com/yehia-mamdouh/Shell3er
-        $string7 = /6334665cbd227e91e2fe4517cc5bb0e6f4163aa4ae10430e034df836287dc339/ nocase ascii wide
+        $string7 = "6334665cbd227e91e2fe4517cc5bb0e6f4163aa4ae10430e034df836287dc339" nocase ascii wide
         // Description: PowerShell Reverse Shell
         // Reference: https://github.com/yehia-mamdouh/Shell3er
-        $string8 = /cABvAHcAZQByAHMAaABlAGwAbAAuAGUAeABlACAALQBFAHgAZQBjAHUAdABpAG8AbgBQAG8AbABpAGMAeQAgAEIAeQBwAGEAcwBzACAALQBGAGkAbABlACAAQwA6AFwAUAByAG8AZwByAGEAbQBEAGEAdABhAFwAUwBoAGUAbABsADMAZQByAC4AcABzADEA/ nocase ascii wide
+        $string8 = "cABvAHcAZQByAHMAaABlAGwAbAAuAGUAeABlACAALQBFAHgAZQBjAHUAdABpAG8AbgBQAG8AbABpAGMAeQAgAEIAeQBwAGEAcwBzACAALQBGAGkAbABlACAAQwA6AFwAUAByAG8AZwByAGEAbQBEAGEAdABhAFwAUwBoAGUAbABsADMAZQByAC4AcABzADEA" nocase ascii wide
         // Description: PowerShell Reverse Shell
         // Reference: https://github.com/yehia-mamdouh/Shell3er/blob/main/Shell3er.ps1
-        $string9 = /cABvAHcAZQByAHMAaABlAGwAbAAuAGUAeABlACAALQBFAHgAZQBjAHUAdABpAG8AbgBQAG8AbABpAGMAeQAgAEIAeQBwAGEAcwBzACAALQBGAGkAbABlACAAQwA6AFwAUAByAG8AZwByAGEAbQBEAGEAdABhAFwAUwBoAGUAbABsADMAZQByAC4AcABzADEA/ nocase ascii wide
+        $string9 = "cABvAHcAZQByAHMAaABlAGwAbAAuAGUAeABlACAALQBFAHgAZQBjAHUAdABpAG8AbgBQAG8AbABpAGMAeQAgAEIAeQBwAGEAcwBzACAALQBGAGkAbABlACAAQwA6AFwAUAByAG8AZwByAGEAbQBEAGEAdABhAFwAUwBoAGUAbABsADMAZQByAC4AcABzADEA" nocase ascii wide
         // Description: PowerShell Reverse Shell
         // Reference: https://github.com/yehia-mamdouh/Shell3er/blob/main/Shell3er.ps1
-        $string10 = /nc\s\-nlvp\s4444/ nocase ascii wide
+        $string10 = "nc -nlvp 4444" nocase ascii wide
         // Description: PowerShell Reverse Shell
         // Reference: https://github.com/yehia-mamdouh/Shell3er
-        $string11 = /SABLAEMAVQA6AFwAUwBPAEYAVABXAEEAUgBFAFwATQBpAGMAcgBvAHMAbwBmAHQAXABXAGkAbgBkAG8AdwBzAFwAQwB1AHIAcgBlAG4AdABWAGUAcgBzAGkAbwBuAFwAUgB1AG4A/ nocase ascii wide
+        $string11 = "SABLAEMAVQA6AFwAUwBPAEYAVABXAEEAUgBFAFwATQBpAGMAcgBvAHMAbwBmAHQAXABXAGkAbgBkAG8AdwBzAFwAQwB1AHIAcgBlAG4AdABWAGUAcgBzAGkAbwBuAFwAUgB1AG4A" nocase ascii wide
         // Description: PowerShell Reverse Shell
         // Reference: https://github.com/yehia-mamdouh/Shell3er/blob/main/Shell3er.ps1
         $string12 = /Shell3er\.ps1/ nocase ascii wide
         // Description: PowerShell Reverse Shell
         // Reference: https://github.com/yehia-mamdouh/Shell3er
-        $string13 = /Welcome\sto\sthe\sMrvar0x\sPowerShell\sRemote\sShell\!/ nocase ascii wide
+        $string13 = "Welcome to the Mrvar0x PowerShell Remote Shell!" nocase ascii wide
         // Description: PowerShell Reverse Shell
         // Reference: https://github.com/yehia-mamdouh/Shell3er
-        $string14 = /yehia\-mamdouh\/Shell3er/ nocase ascii wide
+        $string14 = "yehia-mamdouh/Shell3er" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

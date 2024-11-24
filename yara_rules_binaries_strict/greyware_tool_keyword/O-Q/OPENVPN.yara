@@ -10,7 +10,7 @@ rule OPENVPN
     strings:
         // Description: OpenVPN is a legitimate tool that might be used by an adversary to maintain persistence or exfiltrate data
         // Reference: https://openvpn.net/
-        $string1 = /\\"\-\-\-\-\-BEGIN\sOpenVPN\sStatic\skey/ nocase ascii wide
+        $string1 = "\"-----BEGIN OpenVPN Static key" nocase ascii wide
         // Description: OpenVPN is a legitimate tool that might be used by an adversary to maintain persistence or exfiltrate data
         // Reference: https://openvpn.net/
         $string2 = /\/openvpn\.exe/ nocase ascii wide
@@ -37,7 +37,7 @@ rule OPENVPN
         $string9 = /\\tap\-windows\-.{0,100}\.exe/ nocase ascii wide
         // Description: OpenVPN is a legitimate tool that might be used by an adversary to maintain persistence or exfiltrate data
         // Reference: https://openvpn.net/
-        $string10 = /\>the\sopenvpn\sproject\</ nocase ascii wide
+        $string10 = ">the openvpn project<" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

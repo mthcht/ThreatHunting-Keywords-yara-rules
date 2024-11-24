@@ -46,31 +46,31 @@ rule CyberGhost_VPN
         $string12 = /\\Windows\\Temp\\.{0,1000}\\wireguard\.sys/ nocase ascii wide
         // Description: External VPN usage within coporate network
         // Reference: https://www.cyberghostvpn.com/
-        $string13 = /\>CyberGhost\s6\sInstaller\</ nocase ascii wide
+        $string13 = ">CyberGhost 6 Installer<" nocase ascii wide
         // Description: External VPN usage within coporate network
         // Reference: https://www.cyberghostvpn.com/
-        $string14 = /\>CyberGhost\s7\sInstaller\</ nocase ascii wide
+        $string14 = ">CyberGhost 7 Installer<" nocase ascii wide
         // Description: External VPN usage within coporate network
         // Reference: https://www.cyberghostvpn.com/
-        $string15 = /\>CyberGhost\s8\sInstaller\</ nocase ascii wide
+        $string15 = ">CyberGhost 8 Installer<" nocase ascii wide
         // Description: External VPN usage within coporate network
         // Reference: https://www.cyberghostvpn.com/
         $string16 = /api\.cyberghostvpn\.com/ nocase ascii wide
         // Description: External VPN usage within coporate network
         // Reference: https://www.cyberghostvpn.com/
-        $string17 = /CyberGhost\s6\sService/ nocase ascii wide
+        $string17 = "CyberGhost 6 Service" nocase ascii wide
         // Description: External VPN usage within coporate network
         // Reference: https://www.cyberghostvpn.com/
-        $string18 = /CyberGhost\s7\sService/ nocase ascii wide
+        $string18 = "CyberGhost 7 Service" nocase ascii wide
         // Description: External VPN usage within coporate network
         // Reference: https://www.cyberghostvpn.com/
-        $string19 = /CyberGhost\s8\sService/ nocase ascii wide
+        $string19 = "CyberGhost 8 Service" nocase ascii wide
         // Description: External VPN usage within coporate network
         // Reference: https://www.cyberghostvpn.com/
         $string20 = /CyberGhost\sS\.R\.L\./ nocase ascii wide
         // Description: External VPN usage within coporate network
         // Reference: https://www.cyberghostvpn.com/
-        $string21 = /CyberGhost\sTunnel\sClient\:/ nocase ascii wide
+        $string21 = "CyberGhost Tunnel Client:" nocase ascii wide
         // Description: External VPN usage within coporate network
         // Reference: https://www.cyberghostvpn.com/
         $string22 = /cyberghost.{0,1000}\\Dashboard\.exe/ nocase ascii wide
@@ -103,13 +103,13 @@ rule CyberGhost_VPN
         $string31 = /CyberGhost\.VPNServices\.dll/ nocase ascii wide
         // Description: External VPN usage within coporate network
         // Reference: https://www.cyberghostvpn.com/
-        $string32 = /CyberGhost6Service/ nocase ascii wide
+        $string32 = "CyberGhost6Service" nocase ascii wide
         // Description: External VPN usage within coporate network
         // Reference: https://www.cyberghostvpn.com/
-        $string33 = /CyberGhost7Service/ nocase ascii wide
+        $string33 = "CyberGhost7Service" nocase ascii wide
         // Description: External VPN usage within coporate network
         // Reference: https://www.cyberghostvpn.com/
-        $string34 = /CyberGhost8Service/ nocase ascii wide
+        $string34 = "CyberGhost8Service" nocase ascii wide
         // Description: External VPN usage within coporate network
         // Reference: https://www.cyberghostvpn.com/
         $string35 = /CyberGhostTunnel\$CyberGhost\-WireGuard\-1/ nocase ascii wide
@@ -127,7 +127,7 @@ rule CyberGhost_VPN
         $string39 = /feedback\.cyberghostvpn\.com/ nocase ascii wide
         // Description: External VPN usage within coporate network
         // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
-        $string40 = /ffbkglfijbcbgblgflchnbphjdllaogb/ nocase ascii wide
+        $string40 = "ffbkglfijbcbgblgflchnbphjdllaogb" nocase ascii wide
         // Description: External VPN usage within coporate network
         // Reference: https://www.cyberghostvpn.com/
         $string41 = /payment\.cyberghostvpn\.com/ nocase ascii wide

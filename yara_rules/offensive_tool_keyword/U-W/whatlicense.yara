@@ -28,13 +28,13 @@ rule whatlicense
         $string6 = /\\wl\-lic\.pdb/ nocase ascii wide
         // Description: WinLicense key extraction via Intel PIN
         // Reference: https://github.com/charlesnathansmith/whatlicense
-        $string7 = /639EF517\-FCFC\-408E\-9500\-71F0DC0458DB/ nocase ascii wide
+        $string7 = "639EF517-FCFC-408E-9500-71F0DC0458DB" nocase ascii wide
         // Description: WinLicense key extraction via Intel PIN
         // Reference: https://github.com/charlesnathansmith/whatlicense
-        $string8 = /CC127443\-2519\-4E04\-8865\-A6887658CDE5/ nocase ascii wide
+        $string8 = "CC127443-2519-4E04-8865-A6887658CDE5" nocase ascii wide
         // Description: WinLicense key extraction via Intel PIN
         // Reference: https://github.com/charlesnathansmith/whatlicense
-        $string9 = /charlesnathansmith\/whatlicense/ nocase ascii wide
+        $string9 = "charlesnathansmith/whatlicense" nocase ascii wide
         // Description: WinLicense key extraction via Intel PIN
         // Reference: https://github.com/charlesnathansmith/whatlicense
         $string10 = /whatlicense\-main\.zip/ nocase ascii wide

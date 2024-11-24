@@ -10,34 +10,34 @@ rule cdn_proxy
     strings:
         // Description: cdn-proxy is a set of tools for bypassing IP allow listing intended to restrict origin access to requests originating from shared CDNs.
         // Reference: https://github.com/RyanJarv/cdn-proxy
-        $string1 = /cdn_proxy\scloudflare\s/ nocase ascii wide
+        $string1 = "cdn_proxy cloudflare " nocase ascii wide
         // Description: cdn-proxy is a set of tools for bypassing IP allow listing intended to restrict origin access to requests originating from shared CDNs.
         // Reference: https://github.com/RyanJarv/cdn-proxy
         $string2 = /cdn_proxy_burp_ext\.py/ nocase ascii wide
         // Description: cdn-proxy is a set of tools for bypassing IP allow listing intended to restrict origin access to requests originating from shared CDNs.
         // Reference: https://github.com/RyanJarv/cdn-proxy
-        $string3 = /cdn\-proxy\s\-/ nocase ascii wide
+        $string3 = "cdn-proxy -" nocase ascii wide
         // Description: cdn-proxy is a set of tools for bypassing IP allow listing intended to restrict origin access to requests originating from shared CDNs.
         // Reference: https://github.com/RyanJarv/cdn-proxy
-        $string4 = /cdn\-proxy\scloudfront\s/ nocase ascii wide
+        $string4 = "cdn-proxy cloudfront " nocase ascii wide
         // Description: cdn-proxy is a set of tools for bypassing IP allow listing intended to restrict origin access to requests originating from shared CDNs.
         // Reference: https://github.com/RyanJarv/cdn-proxy
         $string5 = /cdn\-proxy\.git/ nocase ascii wide
         // Description: cdn-proxy is a set of tools for bypassing IP allow listing intended to restrict origin access to requests originating from shared CDNs.
         // Reference: https://github.com/RyanJarv/cdn-proxy
-        $string6 = /cdn\-proxy\/burp_extension/ nocase ascii wide
+        $string6 = "cdn-proxy/burp_extension" nocase ascii wide
         // Description: cdn-proxy is a set of tools for bypassing IP allow listing intended to restrict origin access to requests originating from shared CDNs.
         // Reference: https://github.com/RyanJarv/cdn-proxy
-        $string7 = /Cdn\-Proxy\-Host/ nocase ascii wide
+        $string7 = "Cdn-Proxy-Host" nocase ascii wide
         // Description: cdn-proxy is a set of tools for bypassing IP allow listing intended to restrict origin access to requests originating from shared CDNs.
         // Reference: https://github.com/RyanJarv/cdn-proxy
-        $string8 = /Cdn\-Proxy\-Origin/ nocase ascii wide
+        $string8 = "Cdn-Proxy-Origin" nocase ascii wide
         // Description: cdn-proxy is a set of tools for bypassing IP allow listing intended to restrict origin access to requests originating from shared CDNs.
         // Reference: https://github.com/RyanJarv/cdn-proxy
-        $string9 = /cdn\-scanner\s\-/ nocase ascii wide
+        $string9 = "cdn-scanner -" nocase ascii wide
         // Description: cdn-proxy is a set of tools for bypassing IP allow listing intended to restrict origin access to requests originating from shared CDNs.
         // Reference: https://github.com/RyanJarv/cdn-proxy
-        $string10 = /install\scdn\-proxy/ nocase ascii wide
+        $string10 = "install cdn-proxy" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

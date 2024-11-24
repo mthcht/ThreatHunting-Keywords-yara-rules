@@ -13,7 +13,7 @@ rule arsenal
         $string1 = /\sarsenal\-master\.zip/ nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string2 = /\s\-\-asreproast/ nocase ascii wide
+        $string2 = " --asreproast" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
         $string3 = /\sGetNPUsers\.py/ nocase ascii wide
@@ -25,13 +25,13 @@ rule arsenal
         $string5 = /\sHostRecon\.ps1/ nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string6 = /\sinstall\sarsenal\-cli/ nocase ascii wide
+        $string6 = " install arsenal-cli" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
         $string7 = /\s\-jar\sysoserial\.jar/ nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string8 = /\s\-\-kerberoasting/ nocase ascii wide
+        $string8 = " --kerberoasting" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
         $string9 = /\sldapsearch\-ad\.py/ nocase ascii wide
@@ -40,7 +40,7 @@ rule arsenal
         $string10 = /\smsfstaged\.exe/ nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string11 = /\s\-\-no\-bruteforce\s/ nocase ascii wide
+        $string11 = " --no-bruteforce " nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
         $string12 = /\sprinterbug\.py/ nocase ascii wide
@@ -49,7 +49,7 @@ rule arsenal
         $string13 = /\sPrivescCheck\.ps1/ nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string14 = /\s\-\-rid\-brute\s/ nocase ascii wide
+        $string14 = " --rid-brute " nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
         $string15 = /\stheHarvester\.py/ nocase ascii wide
@@ -58,7 +58,7 @@ rule arsenal
         $string16 = /\sticketConverter\.py/ nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string17 = /\s\-\-trusted\-for\-delegation\s/ nocase ascii wide
+        $string17 = " --trusted-for-delegation " nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
         $string18 = /\.arsenal\.json/ nocase ascii wide
@@ -202,55 +202,55 @@ rule arsenal
         $string64 = /\\spray\-results\.txt/ nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string65 = /0aebcf5b97bf1ae6286c7aa7000f1ee68b063bd9ded6c871c708c8e639793c3f/ nocase ascii wide
+        $string65 = "0aebcf5b97bf1ae6286c7aa7000f1ee68b063bd9ded6c871c708c8e639793c3f" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string66 = /1372ebd0f43824ac646712ab9b47a28938e2b58eb1dce8337c1d905dea0f7523/ nocase ascii wide
+        $string66 = "1372ebd0f43824ac646712ab9b47a28938e2b58eb1dce8337c1d905dea0f7523" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string67 = /1753bd59904f52ea9be59524942fc98321472c6a91c7af8051ab397edee32e6a/ nocase ascii wide
+        $string67 = "1753bd59904f52ea9be59524942fc98321472c6a91c7af8051ab397edee32e6a" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string68 = /2366491D74D80C76F75A7F84ABF82C1E88518A615CB2332FDCC846181F60AEAE/ nocase ascii wide
+        $string68 = "2366491D74D80C76F75A7F84ABF82C1E88518A615CB2332FDCC846181F60AEAE" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string69 = /32A26CB8E0ECA88CA6116E467FC8BD5430E54133A5642ED1AFED8DCC2B9C9DFD/ nocase ascii wide
+        $string69 = "32A26CB8E0ECA88CA6116E467FC8BD5430E54133A5642ED1AFED8DCC2B9C9DFD" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string70 = /32ccdc0e660f56052d82e4e5788c7d555d7dfcf00d3949dfd98d69a9803619c0/ nocase ascii wide
+        $string70 = "32ccdc0e660f56052d82e4e5788c7d555d7dfcf00d3949dfd98d69a9803619c0" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string71 = /420e9c27a22ad9c6cb1535009bc23440b7a54fbef61d30e0702926e6a03502d3/ nocase ascii wide
+        $string71 = "420e9c27a22ad9c6cb1535009bc23440b7a54fbef61d30e0702926e6a03502d3" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string72 = /42d19694b284a82d02a8662edb4db86c22122ea981ca36aced94c4ba67fff072/ nocase ascii wide
+        $string72 = "42d19694b284a82d02a8662edb4db86c22122ea981ca36aced94c4ba67fff072" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string73 = /5bfec4da2bd86d19199d74b0b95f044a2dc4ef0fc40941315b0d0ac49e6fb890/ nocase ascii wide
+        $string73 = "5bfec4da2bd86d19199d74b0b95f044a2dc4ef0fc40941315b0d0ac49e6fb890" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string74 = /60de3c5fb9a9dcab760da4377992481cb707fb5c1a633be197c332163b37919b/ nocase ascii wide
+        $string74 = "60de3c5fb9a9dcab760da4377992481cb707fb5c1a633be197c332163b37919b" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string75 = /6b9093336ef9693a155bf5b514705424177b9d48679ddb809d18a75501c1041f/ nocase ascii wide
+        $string75 = "6b9093336ef9693a155bf5b514705424177b9d48679ddb809d18a75501c1041f" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string76 = /72b2d05cbbdea293859fc1a06651a3932c4b72675a0e014ad91a3b413cbd15c4/ nocase ascii wide
+        $string76 = "72b2d05cbbdea293859fc1a06651a3932c4b72675a0e014ad91a3b413cbd15c4" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string77 = /7734774a6bbb47e7c0f32f4903928df120887180ddae7bb2bd4d15cd17a4a7c1/ nocase ascii wide
+        $string77 = "7734774a6bbb47e7c0f32f4903928df120887180ddae7bb2bd4d15cd17a4a7c1" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string78 = /8c71bcc0680bd7c69fd58639a6748d26202caab6d639f9b92eb394e6648bce0e/ nocase ascii wide
+        $string78 = "8c71bcc0680bd7c69fd58639a6748d26202caab6d639f9b92eb394e6648bce0e" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string79 = /95dd437c805fb71cb3cda5f20ad9b212c44f14dc09194867125acb289af6301b/ nocase ascii wide
+        $string79 = "95dd437c805fb71cb3cda5f20ad9b212c44f14dc09194867125acb289af6301b" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string80 = /a43f8c6f567c0280ddb10660ab9a00f492741d3c4e668c2ca8ea171dc30cb083/ nocase ascii wide
+        $string80 = "a43f8c6f567c0280ddb10660ab9a00f492741d3c4e668c2ca8ea171dc30cb083" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string81 = /Arsenal\sneeds\sTIOCSTI\senable\sfor\srunning/ nocase ascii wide
+        $string81 = "Arsenal needs TIOCSTI enable for running" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
         $string82 = /arsenal\sv.{0,100}\s\-\sPentest\scommand\slauncher/ nocase ascii wide
@@ -259,46 +259,46 @@ rule arsenal
         $string83 = /ASREProastables\.txt/ nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string84 = /b1ba3cccf93baf069e6502bc75d033bcb519fd7209be70eec7f0743db81b6650/ nocase ascii wide
+        $string84 = "b1ba3cccf93baf069e6502bc75d033bcb519fd7209be70eec7f0743db81b6650" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string85 = /b55dd8b809ebb71681cb09b07d6def2ea453d36d25c2a74a4ecac7662c3ddbbd/ nocase ascii wide
+        $string85 = "b55dd8b809ebb71681cb09b07d6def2ea453d36d25c2a74a4ecac7662c3ddbbd" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string86 = /c0847034ecb624fde98700f4866d0a3fb799d3ff601ccd56df5bf31a9c065a53/ nocase ascii wide
+        $string86 = "c0847034ecb624fde98700f4866d0a3fb799d3ff601ccd56df5bf31a9c065a53" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string87 = /C2DAC5B0DBA2FC51AAA3FAF6AA1372E43D7A2B33F288FCEC5ADD4B7360440DBA/ nocase ascii wide
+        $string87 = "C2DAC5B0DBA2FC51AAA3FAF6AA1372E43D7A2B33F288FCEC5ADD4B7360440DBA" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string88 = /c5d484d2c6817bbf05a900cd6bced458311b72af57d14b29421816620769f4ac/ nocase ascii wide
+        $string88 = "c5d484d2c6817bbf05a900cd6bced458311b72af57d14b29421816620769f4ac" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string89 = /c730a89142b73d047b4387f6f3f0d8dfacef57a2e4945a0a942cc72f0bd05253/ nocase ascii wide
+        $string89 = "c730a89142b73d047b4387f6f3f0d8dfacef57a2e4945a0a942cc72f0bd05253" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string90 = /d3290c562ad2740c0ddfd8cee2c2239055cf1491f54127f48a4e64549145c6e5/ nocase ascii wide
+        $string90 = "d3290c562ad2740c0ddfd8cee2c2239055cf1491f54127f48a4e64549145c6e5" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string91 = /dc9eb5bb3d882cb0ee30fd21ecbbb030e4e0367dff16b06109bfcfc40fef112/ nocase ascii wide
+        $string91 = "dc9eb5bb3d882cb0ee30fd21ecbbb030e4e0367dff16b06109bfcfc40fef112" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string92 = /dd962b2de10f0a44beb1483ef05afce58151e471e9d0b79b7388f663292fd634/ nocase ascii wide
+        $string92 = "dd962b2de10f0a44beb1483ef05afce58151e471e9d0b79b7388f663292fd634" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string93 = /enumdomains\;quit/ nocase ascii wide
+        $string93 = "enumdomains;quit" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string94 = /enumdomgroups\;quit/ nocase ascii wide
+        $string94 = "enumdomgroups;quit" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string95 = /enumdomusers\;quit/ nocase ascii wide
+        $string95 = "enumdomusers;quit" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string96 = /f923e44f1665a3cbae86b73bc2d3dcd74e928a7f358b75bb6dc/ nocase ascii wide
+        $string96 = "f923e44f1665a3cbae86b73bc2d3dcd74e928a7f358b75bb6dc" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string97 = /fb4a9c6269ea58b893c6978105fd3e2b2bc6e72e24715c1824b45f40c87b850d/ nocase ascii wide
+        $string97 = "fb4a9c6269ea58b893c6978105fd3e2b2bc6e72e24715c1824b45f40c87b850d" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
         $string98 = /GetUserSPNs\.ps1/ nocase ascii wide
@@ -331,13 +331,13 @@ rule arsenal
         $string107 = /ntlmrelayx\.py/ nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string108 = /Orange\-Cyberdefense\/arsenal/ nocase ascii wide
+        $string108 = "Orange-Cyberdefense/arsenal" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
         $string109 = /PetitPotam\.py/ nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string110 = /post\/windows\/gather\/credentials\/vnc/ nocase ascii wide
+        $string110 = "post/windows/gather/credentials/vnc" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
         $string111 = /PrintSpooferNet\.exe/ nocase ascii wide
@@ -349,10 +349,10 @@ rule arsenal
         $string113 = /procdump\.exe\s\-accepteula\s\-ma\slsass\.exe/ nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string114 = /python\s\-m\speas\s\-u\s/ nocase ascii wide
+        $string114 = "python -m peas -u " nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string115 = /ruler\s\-k\s\-\-nocache\s\-\-url\s/ nocase ascii wide
+        $string115 = "ruler -k --nocache --url " nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
         $string116 = /SharpHound\.ps1/ nocase ascii wide
@@ -361,16 +361,16 @@ rule arsenal
         $string117 = /theHarvester\.py\s\-d\s/ nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string118 = /use\sexploit\/windows\// nocase ascii wide
+        $string118 = "use exploit/windows/" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string119 = /Use\snmap\s\-\-script\shttp\-ntlm\-info\s/ nocase ascii wide
+        $string119 = "Use nmap --script http-ntlm-info " nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string120 = /use\sscanner\/smb\/smb_enum_gpp/ nocase ascii wide
+        $string120 = "use scanner/smb/smb_enum_gpp" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string121 = /use\sscanner\/ssh\/ssh_enumusers/ nocase ascii wide
+        $string121 = "use scanner/ssh/ssh_enumusers" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
         $string122 = /VirTool\:PowerShell\/Scanpatch\.A/ nocase ascii wide

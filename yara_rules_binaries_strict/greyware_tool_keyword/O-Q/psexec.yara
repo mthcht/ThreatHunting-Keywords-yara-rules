@@ -37,7 +37,7 @@ rule psexec
         $string9 = /PsExec64\.exe/ nocase ascii wide
         // Description: PsExec is a legitimate Microsoft tool for remote administration. However. attackers can misuse it to execute malicious commands or software on other network machines. install persistent threats. and evade some security systems. 
         // Reference: https://learn.microsoft.com/fr-fr/sysinternals/downloads/psexec
-        $string10 = /PSEXECSVC/ nocase ascii wide
+        $string10 = "PSEXECSVC" nocase ascii wide
         // Description: prefetch - .key file created and deleted on the target system
         // Reference: https://learn.microsoft.com/fr-fr/sysinternals/downloads/psexec
         $string11 = /PSEXECSVC\.EXE\-.{0,100}\.pf/ nocase ascii wide

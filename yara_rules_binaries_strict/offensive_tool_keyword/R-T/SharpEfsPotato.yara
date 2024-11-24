@@ -13,10 +13,10 @@ rule SharpEfsPotato
         $string1 = /\sC\:\\temp\\w\.log/ nocase ascii wide
         // Description: Local privilege escalation from SeImpersonatePrivilege using EfsRpc.
         // Reference: https://github.com/bugch3ck/SharpEfsPotato
-        $string2 = /\sSharpEfsPotato/ nocase ascii wide
+        $string2 = " SharpEfsPotato" nocase ascii wide
         // Description: Local privilege escalation from SeImpersonatePrivilege using EfsRpc.
         // Reference: https://github.com/bugch3ck/SharpEfsPotato
-        $string3 = /\/SharpEfsPotato/ nocase ascii wide
+        $string3 = "/SharpEfsPotato" nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
         $string4 = /\[\+\]\sServer\sconnected\sto\sour\sevil\sRPC\spipe/ nocase ascii wide
@@ -31,16 +31,16 @@ rule SharpEfsPotato
         $string7 = /\\SharpEfsPotato\.pdb/ nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string8 = /\>SharpEfsPotato\</ nocase ascii wide
+        $string8 = ">SharpEfsPotato<" nocase ascii wide
         // Description: Local privilege escalation from SeImpersonatePrivilege using EfsRpc.
         // Reference: https://github.com/bugch3ck/SharpEfsPotato
-        $string9 = /AAB4D641\-C310\-4572\-A9C2\-6D12593AB28E/ nocase ascii wide
+        $string9 = "AAB4D641-C310-4572-A9C2-6D12593AB28E" nocase ascii wide
         // Description: Local privilege escalation from SeImpersonatePrivilege using EfsRpc.
         // Reference: https://github.com/bugch3ck/SharpEfsPotato
-        $string10 = /SharpEfsPotato\sby\s\@bugch3ck/ nocase ascii wide
+        $string10 = "SharpEfsPotato by @bugch3ck" nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string11 = /SharpEfsPotato\sby\s\@bugch3ck/ nocase ascii wide
+        $string11 = "SharpEfsPotato by @bugch3ck" nocase ascii wide
         // Description: Local privilege escalation from SeImpersonatePrivilege using EfsRpc.
         // Reference: https://github.com/bugch3ck/SharpEfsPotato
         $string12 = /SharpEfsPotato\.cs/ nocase ascii wide
@@ -55,7 +55,7 @@ rule SharpEfsPotato
         $string15 = /SharpEfsPotato\.sln/ nocase ascii wide
         // Description: Local privilege escalation from SeImpersonatePrivilege using EfsRpc.
         // Reference: https://github.com/bugch3ck/SharpEfsPotato
-        $string16 = /SharpEfsPotato\-master/ nocase ascii wide
+        $string16 = "SharpEfsPotato-master" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

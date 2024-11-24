@@ -22,22 +22,22 @@ rule SharpDomainSpray
         $string4 = /\\SharpSpray\.exe/ nocase ascii wide
         // Description: Basic password spraying tool for internal tests and red teaming
         // Reference: https://github.com/HunnicCyber/SharpDomainSpray
-        $string5 = /76FFA92B\-429B\-4865\-970D\-4E7678AC34EA/ nocase ascii wide
+        $string5 = "76FFA92B-429B-4865-970D-4E7678AC34EA" nocase ascii wide
         // Description: Basic password spraying tool for internal tests and red teaming
         // Reference: https://github.com/HunnicCyber/SharpDomainSpray
-        $string6 = /HunnicCyber\/SharpDomainSpray/ nocase ascii wide
+        $string6 = "HunnicCyber/SharpDomainSpray" nocase ascii wide
         // Description: Basic password spraying tool for internal tests and red teaming
         // Reference: https://github.com/HunnicCyber/SharpDomainSpray
-        $string7 = /Perform\spassword\sspraying\sfor\sall\sactive\susers\son\sa\sdomain/ nocase ascii wide
+        $string7 = "Perform password spraying for all active users on a domain" nocase ascii wide
         // Description: Basic password spraying tool for internal tests and red teaming
         // Reference: https://github.com/HunnicCyber/SharpDomainSpray
-        $string8 = /SharpDomainSpray/ nocase ascii wide
+        $string8 = "SharpDomainSpray" nocase ascii wide
         // Description: Basic password spraying tool for internal tests and red teaming
         // Reference: https://github.com/HunnicCyber/SharpDomainSpray
         $string9 = /SharpDomainSpray\./ nocase ascii wide
         // Description: Basic password spraying tool for internal tests and red teaming
         // Reference: https://github.com/HunnicCyber/SharpDomainSpray
-        $string10 = /SharpDomainSpray\-master/ nocase ascii wide
+        $string10 = "SharpDomainSpray-master" nocase ascii wide
         // Description: Basic password spraying tool for internal tests and red teaming
         // Reference: https://github.com/HunnicCyber/SharpDomainSpray
         $string11 = /SharpSpray\.exe\s/ nocase ascii wide

@@ -10,7 +10,7 @@ rule gtfobins
     strings:
         // Description: GTFOBins is a curated list of Unix binaries that can used to bypass local security restrictions in misconfigured systems malicious use of legitimate binaries
         // Reference: https://gtfobins.github.io/
-        $string1 = /gtfobins/ nocase ascii wide
+        $string1 = "gtfobins" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

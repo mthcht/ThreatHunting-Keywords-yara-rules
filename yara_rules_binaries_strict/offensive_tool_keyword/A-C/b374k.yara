@@ -10,7 +10,7 @@ rule b374k
     strings:
         // Description: This PHP Shell is a useful tool for system or web administrator to do remote management without using cpanel. connecting using ssh. ftp etc. All actions take place within a web browser
         // Reference: https://github.com/b374k/b374k
-        $string1 = /\/B374K/ nocase ascii wide
+        $string1 = "/B374K" nocase ascii wide
         // Description: This PHP Shell is a useful tool for system or web administrator to do remote management without using cpanel. connecting using ssh. ftp etc. All actions take place within a web browser
         // Reference: https://github.com/b374k/b374k
         $string2 = /B374K.{0,100}index\.php/ nocase ascii wide

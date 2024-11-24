@@ -10,7 +10,7 @@ rule UltraVNC
     strings:
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string1 = /RemoteAccess\:Win32\/UltraVNC/ nocase ascii wide
+        $string1 = "RemoteAccess:Win32/UltraVNC" nocase ascii wide
 
     condition:
         any of them

@@ -13,25 +13,25 @@ rule pivotnacci
         $string1 = /\/pivotnacci\.git/ nocase ascii wide
         // Description: A tool to make socks connections through HTTP agents
         // Reference: https://github.com/blackarrowsec/pivotnacci
-        $string2 = /\/pivotnaccilib/ nocase ascii wide
+        $string2 = "/pivotnaccilib" nocase ascii wide
         // Description: A tool to make socks connections through HTTP agents
         // Reference: https://github.com/blackarrowsec/pivotnacci
-        $string3 = /blackarrowsec\/pivotnacci/ nocase ascii wide
+        $string3 = "blackarrowsec/pivotnacci" nocase ascii wide
         // Description: A tool to make socks connections through HTTP agents
         // Reference: https://github.com/blackarrowsec/pivotnacci
         $string4 = /from\s\.socks\simport\sSocksNegotiator/ nocase ascii wide
         // Description: A tool to make socks connections through HTTP agents
         // Reference: https://github.com/blackarrowsec/pivotnacci
-        $string5 = /install\spivotnacci/ nocase ascii wide
+        $string5 = "install pivotnacci" nocase ascii wide
         // Description: A tool to make socks connections through HTTP agents
         // Reference: https://github.com/blackarrowsec/pivotnacci
-        $string6 = /install\spivotnacci/ nocase ascii wide
+        $string6 = "install pivotnacci" nocase ascii wide
         // Description: A tool to make socks connections through HTTP agents
         // Reference: https://github.com/blackarrowsec/pivotnacci
-        $string7 = /pivotnacci\s\shttp/ nocase ascii wide
+        $string7 = "pivotnacci  http" nocase ascii wide
         // Description: A tool to make socks connections through HTTP agents
         // Reference: https://github.com/blackarrowsec/pivotnacci
-        $string8 = /pivotnacci\s\-/ nocase ascii wide
+        $string8 = "pivotnacci -" nocase ascii wide
         // Description: A tool to make socks connections through HTTP agents
         // Reference: https://github.com/blackarrowsec/pivotnacci
         $string9 = /pivotnacci\s.{0,1000}\-\-polling\-interval/ nocase ascii wide
@@ -43,7 +43,7 @@ rule pivotnacci
         $string11 = /pivotnaccilib.{0,1000}socks/ nocase ascii wide
         // Description: A tool to make socks connections through HTTP agents
         // Reference: https://github.com/blackarrowsec/pivotnacci
-        $string12 = /pivotnacci\-master/ nocase ascii wide
+        $string12 = "pivotnacci-master" nocase ascii wide
 
     condition:
         any of them

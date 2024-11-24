@@ -10,7 +10,7 @@ rule Guru_VPN__and__Proxy
     strings:
         // Description: External VPN usage within coporate network
         // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
-        $string1 = /knajdeaocbpmfghhmijicidfcmdgbdpm/ nocase ascii wide
+        $string1 = "knajdeaocbpmfghhmijicidfcmdgbdpm" nocase ascii wide
 
     condition:
         any of them

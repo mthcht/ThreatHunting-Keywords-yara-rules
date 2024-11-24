@@ -10,7 +10,7 @@ rule ldapminer
     strings:
         // Description: This is a tool I wrote to collect information from different LDAP Server implementation. This was written in C with the Netscape C
         // Reference: https://sourceforge.net/projects/ldapminer/
-        $string1 = /LdapMiner/ nocase ascii wide
+        $string1 = "LdapMiner" nocase ascii wide
 
     condition:
         any of them

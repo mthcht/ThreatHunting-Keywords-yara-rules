@@ -55,19 +55,19 @@ rule rattler
         $string15 = /\]\sTARGET\sDLL\sIS\sNOT\sVULNERABLE\sTO\s/ nocase ascii wide
         // Description: Automated DLL Enumerator
         // Reference: https://github.com/sensepost/rattler
-        $string16 = /0de61f6d712f44fd8337794c3d933d3e0de24bae9235383904541997c604b47a/ nocase ascii wide
+        $string16 = "0de61f6d712f44fd8337794c3d933d3e0de24bae9235383904541997c604b47a" nocase ascii wide
         // Description: Automated DLL Enumerator
         // Reference: https://github.com/sensepost/rattler
-        $string17 = /2d00a5df9000f49c0b42ca0fe316103af9cc3bdf11bea4da5255690193d3ef21/ nocase ascii wide
+        $string17 = "2d00a5df9000f49c0b42ca0fe316103af9cc3bdf11bea4da5255690193d3ef21" nocase ascii wide
         // Description: Automated DLL Enumerator
         // Reference: https://github.com/sensepost/rattler
-        $string18 = /3df5882d88914a064cbba240e1b3615c69c432f807f949a80d0d4b5a9f44ef77/ nocase ascii wide
+        $string18 = "3df5882d88914a064cbba240e1b3615c69c432f807f949a80d0d4b5a9f44ef77" nocase ascii wide
         // Description: Automated DLL Enumerator
         // Reference: https://github.com/sensepost/rattler
-        $string19 = /cea27c53085b6cf1d9505957144aa23b794550da5746e6a38a212a03b505e157/ nocase ascii wide
+        $string19 = "cea27c53085b6cf1d9505957144aa23b794550da5746e6a38a212a03b505e157" nocase ascii wide
         // Description: Automated DLL Enumerator
         // Reference: https://github.com/sensepost/rattler
-        $string20 = /sensepost\/rattler/ nocase ascii wide
+        $string20 = "sensepost/rattler" nocase ascii wide
 
     condition:
         any of them

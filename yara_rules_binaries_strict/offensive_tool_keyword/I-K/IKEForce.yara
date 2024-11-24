@@ -10,7 +10,7 @@ rule IKEForce
     strings:
         // Description: IKEForce is a command line IPSEC VPN brute forcing tool for Linux that allows group name/ID enumeration and XAUTH brute forcing capabilities.
         // Reference: https://github.com/SpiderLabs/ikeforce
-        $string1 = /\/IKEForce/ nocase ascii wide
+        $string1 = "/IKEForce" nocase ascii wide
         // Description: IKEForce is a command line IPSEC VPN brute forcing tool for Linux that allows group name/ID enumeration and XAUTH brute forcing capabilities.
         // Reference: https://github.com/SpiderLabs/ikeforce
         $string2 = /ikeforce\.py/ nocase ascii wide

@@ -10,7 +10,7 @@ rule ThunderDNS
     strings:
         // Description: This tool can forward TCP traffic over DNS protocol
         // Reference: https://github.com/fbkcs/ThunderDNS
-        $string1 = /\/ThunderDNS/ nocase ascii wide
+        $string1 = "/ThunderDNS" nocase ascii wide
         // Description: This tool can forward TCP traffic over DNS protocol
         // Reference: https://github.com/fbkcs/ThunderDNS
         $string2 = /proxy\.py\s\-\-dns\s.{0,100}\s\-\-dns_port\s\s.{0,100}\s\-\-clients/ nocase ascii wide

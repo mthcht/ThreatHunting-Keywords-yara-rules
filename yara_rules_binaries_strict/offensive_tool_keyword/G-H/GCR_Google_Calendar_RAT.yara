@@ -13,10 +13,10 @@ rule GCR_Google_Calendar_RAT
         $string1 = /\.\/gcr\.py/ nocase ascii wide
         // Description: Google Calendar RAT is a PoC of Command&Control over Google Calendar Events
         // Reference: https://github.com/MrSaighnal/GCR-Google-Calendar-RAT
-        $string2 = /GCR\s\-\sGoogle\sCalendar\sRAT/ nocase ascii wide
+        $string2 = "GCR - Google Calendar RAT" nocase ascii wide
         // Description: Google Calendar RAT is a PoC of Command&Control over Google Calendar Events
         // Reference: https://github.com/MrSaighnal/GCR-Google-Calendar-RAT
-        $string3 = /GCR\-Google\-Calendar\-RAT/ nocase ascii wide
+        $string3 = "GCR-Google-Calendar-RAT" nocase ascii wide
         // Description: Google Calendar RAT is a PoC of Command&Control over Google Calendar Events
         // Reference: https://github.com/MrSaighnal/GCR-Google-Calendar-RAT
         $string4 = /main\/gcr\.py/ nocase ascii wide

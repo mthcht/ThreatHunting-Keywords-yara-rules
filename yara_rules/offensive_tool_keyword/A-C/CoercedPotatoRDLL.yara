@@ -37,19 +37,19 @@ rule CoercedPotatoRDLL
         $string9 = /\\CoercedPotato\.cpp/ nocase ascii wide
         // Description: Reflective DLL to privesc from NT Service to SYSTEM using SeImpersonateToken privilege
         // Reference: https://github.com/sokaRepo/CoercedPotatoRDLL
-        $string10 = /337ED7BE\-969A\-40C4\-A356\-BE99561F4633/ nocase ascii wide
+        $string10 = "337ED7BE-969A-40C4-A356-BE99561F4633" nocase ascii wide
         // Description: Reflective DLL to privesc from NT Service to SYSTEM using SeImpersonateToken privilege
         // Reference: https://github.com/sokaRepo/CoercedPotatoRDLL
-        $string11 = /CoercedPotato\sspawn\s/ nocase ascii wide
+        $string11 = "CoercedPotato spawn " nocase ascii wide
         // Description: Reflective DLL to privesc from NT Service to SYSTEM using SeImpersonateToken privilege
         // Reference: https://github.com/sokaRepo/CoercedPotatoRDLL
         $string12 = /CoercedPotato\.exe/ nocase ascii wide
         // Description: Reflective DLL to privesc from NT Service to SYSTEM using SeImpersonateToken privilege
         // Reference: https://github.com/sokaRepo/CoercedPotatoRDLL
-        $string13 = /CoercedPotatoRDLL\-main/ nocase ascii wide
+        $string13 = "CoercedPotatoRDLL-main" nocase ascii wide
         // Description: Reflective DLL to privesc from NT Service to SYSTEM using SeImpersonateToken privilege
         // Reference: https://github.com/sokaRepo/CoercedPotatoRDLL
-        $string14 = /CoercePotato\scoerce/ nocase ascii wide
+        $string14 = "CoercePotato coerce" nocase ascii wide
         // Description: Reflective DLL to privesc from NT Service to SYSTEM using SeImpersonateToken privilege
         // Reference: https://github.com/sokaRepo/CoercedPotatoRDLL
         $string15 = /dist\/coercedpotato\.cna/ nocase ascii wide
@@ -61,10 +61,10 @@ rule CoercedPotatoRDLL
         $string17 = /ReflectiveLoader\.cpp/ nocase ascii wide
         // Description: Reflective DLL to privesc from NT Service to SYSTEM using SeImpersonateToken privilege
         // Reference: https://github.com/sokaRepo/CoercedPotatoRDLL
-        $string18 = /sokaRepo\/CoercedPotatoRDLL/ nocase ascii wide
+        $string18 = "sokaRepo/CoercedPotatoRDLL" nocase ascii wide
         // Description: Reflective DLL to privesc from NT Service to SYSTEM using SeImpersonateToken privilege
         // Reference: https://github.com/sokaRepo/CoercedPotatoRDLL
-        $string19 = /Spawn\sCoercedPotato\sas\sa\sReflective\sDLL/ nocase ascii wide
+        $string19 = "Spawn CoercedPotato as a Reflective DLL" nocase ascii wide
 
     condition:
         any of them

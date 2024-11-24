@@ -10,25 +10,25 @@ rule C2concealer
     strings:
         // Description: C2concealer is a command line tool that generates randomized C2 malleable profiles for use in Cobalt Strike.
         // Reference: https://github.com/RedSiege/C2concealer
-        $string1 = /\s\-t\sC2concealer\s/ nocase ascii wide
+        $string1 = " -t C2concealer " nocase ascii wide
         // Description: C2concealer is a command line tool that generates randomized C2 malleable profiles for use in Cobalt Strike.
         // Reference: https://github.com/RedSiege/C2concealer
-        $string2 = /\/C2concealer/ nocase ascii wide
+        $string2 = "/C2concealer" nocase ascii wide
         // Description: C2concealer is a command line tool that generates randomized C2 malleable profiles for use in Cobalt Strike.
         // Reference: https://github.com/RedSiege/C2concealer
-        $string3 = /\/cobaltstrike\/c2lint/ nocase ascii wide
+        $string3 = "/cobaltstrike/c2lint" nocase ascii wide
         // Description: C2concealer is a command line tool that generates randomized C2 malleable profiles for use in Cobalt Strike.
         // Reference: https://github.com/RedSiege/C2concealer
-        $string4 = /\/usr\/share\/cobaltstrike\// nocase ascii wide
+        $string4 = "/usr/share/cobaltstrike/" nocase ascii wide
         // Description: C2concealer is a command line tool that generates randomized C2 malleable profiles for use in Cobalt Strike.
         // Reference: https://github.com/RedSiege/C2concealer
         $string5 = /\\C2concealer/ nocase ascii wide
         // Description: C2concealer is a command line tool that generates randomized C2 malleable profiles for use in Cobalt Strike.
         // Reference: https://github.com/RedSiege/C2concealer
-        $string6 = /C2concealer\s\-/ nocase ascii wide
+        $string6 = "C2concealer -" nocase ascii wide
         // Description: C2concealer is a command line tool that generates randomized C2 malleable profiles for use in Cobalt Strike.
         // Reference: https://github.com/RedSiege/C2concealer
-        $string7 = /C2concealer\-master/ nocase ascii wide
+        $string7 = "C2concealer-master" nocase ascii wide
         // Description: C2concealer is a command line tool that generates randomized C2 malleable profiles for use in Cobalt Strike.
         // Reference: https://github.com/RedSiege/C2concealer
         $string8 = /malleable\-c2\-randomizer\.py/ nocase ascii wide

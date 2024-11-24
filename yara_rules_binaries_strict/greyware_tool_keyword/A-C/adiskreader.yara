@@ -10,7 +10,7 @@ rule adiskreader
     strings:
         // Description: Async Python library to parse local and remote disk images
         // Reference: https://github.com/skelsec/adiskreader
-        $string1 = /\#\sadiskreader\s/ nocase ascii wide
+        $string1 = "# adiskreader " nocase ascii wide
         // Description: Async Python library to parse local and remote disk images
         // Reference: https://github.com/skelsec/adiskreader
         $string2 = /\\adiskreader\\/ nocase ascii wide

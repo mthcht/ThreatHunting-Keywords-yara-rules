@@ -43,7 +43,7 @@ rule elevationstation
         $string11 = /elevationstation\.sln/ nocase ascii wide
         // Description: elevate to SYSTEM any way we can! Metasploit and PSEXEC getsystem alternative
         // Reference: https://github.com/g3tsyst3m/elevationstation
-        $string12 = /elevationstation\-main/ nocase ascii wide
+        $string12 = "elevationstation-main" nocase ascii wide
         // Description: github user hosting multiple exploitation tools
         // Reference: https://github.com/g3tsyst3m/elevationstation
         $string13 = /github\.com\/g3tsyst3m/ nocase ascii wide
@@ -55,7 +55,7 @@ rule elevationstation
         $string15 = /sc\screate\splumber.{0,100}warpzoneclient/ nocase ascii wide
         // Description: elevate to SYSTEM any way we can! Metasploit and PSEXEC getsystem alternative
         // Reference: https://github.com/g3tsyst3m/elevationstation
-        $string16 = /sc\sdelete\splumber/ nocase ascii wide
+        $string16 = "sc delete plumber" nocase ascii wide
         // Description: elevate to SYSTEM any way we can! Metasploit and PSEXEC getsystem alternative
         // Reference: https://github.com/g3tsyst3m/elevationstation
         $string17 = /tokenprivs\.cpp/ nocase ascii wide
@@ -67,7 +67,7 @@ rule elevationstation
         $string19 = /uac_easinvoker\./ nocase ascii wide
         // Description: elevate to SYSTEM any way we can! Metasploit and PSEXEC getsystem alternative
         // Reference: https://github.com/g3tsyst3m/elevationstation
-        $string20 = /uacbypass_files/ nocase ascii wide
+        $string20 = "uacbypass_files" nocase ascii wide
         // Description: elevate to SYSTEM any way we can! Metasploit and PSEXEC getsystem alternative
         // Reference: https://github.com/g3tsyst3m/elevationstation
         $string21 = /users\\\\public\\\\elevationstation\.js/ nocase ascii wide

@@ -13,7 +13,7 @@ rule processhacker
         $string1 = /\/processhacker\-.{0,100}\-bin\.zip/ nocase ascii wide
         // Description: Interactions with a objects present in windows such as threads stack - handles - gpu - services ? can be used by attackers to dump process - create services  and process injection
         // Reference: https://processhacker.sourceforge.io/
-        $string2 = /\/processhacker\/files\/latest\/download/ nocase ascii wide
+        $string2 = "/processhacker/files/latest/download" nocase ascii wide
         // Description: Interactions with a objects present in windows such as threads stack - handles - gpu - services ? can be used by attackers to dump process - create services  and process injection
         // Reference: https://processhacker.sourceforge.io/
         $string3 = /\\Process\sHacker\s2\\/ nocase ascii wide

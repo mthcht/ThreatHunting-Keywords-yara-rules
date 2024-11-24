@@ -73,13 +73,13 @@ rule softperfect_networkscanner
         $string21 = /\\SoftPerfect\sNetwork\sScanner\\/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com.cach3.com/board/read.php%3F12,10134,12202.html
-        $string22 = /\<Data\sName\=\"RelativeTargetName\"\>delete\.me\</ nocase ascii wide
+        $string22 = /\<Data\sName\=\\"RelativeTargetName\\"\>delete\.me\</ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string23 = /\>SoftPerfect\sNetwork\sScanner\</ nocase ascii wide
+        $string23 = ">SoftPerfect Network Scanner<" nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string24 = /87e8486846df3005c1b481b1c5205f661b715addfda262f56d2a41892126b399/ nocase ascii wide
+        $string24 = "87e8486846df3005c1b481b1c5205f661b715addfda262f56d2a41892126b399" nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
         $string25 = /https\:\/\/www\.softperfect\.com\/download\/files\/netscan/ nocase ascii wide

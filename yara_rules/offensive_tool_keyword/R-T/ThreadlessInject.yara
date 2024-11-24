@@ -16,7 +16,7 @@ rule ThreadlessInject
         $string2 = /\/ThreadlessInject\.git/ nocase ascii wide
         // Description: Threadless Process Injection using remote function hooking.
         // Reference: https://github.com/CCob/ThreadlessInject
-        $string3 = /CCob\/ThreadlessInject/ nocase ascii wide
+        $string3 = "CCob/ThreadlessInject" nocase ascii wide
         // Description: Threadless Process Injection using remote function hooking.
         // Reference: https://github.com/CCob/ThreadlessInject
         $string4 = /Needles\swithout\sthe\sThread\.pptx/ nocase ascii wide
@@ -28,7 +28,7 @@ rule ThreadlessInject
         $string6 = /ThreadlessInject\.exe/ nocase ascii wide
         // Description: Threadless Process Injection using remote function hooking.
         // Reference: https://github.com/CCob/ThreadlessInject
-        $string7 = /ThreadlessInject\-master/ nocase ascii wide
+        $string7 = "ThreadlessInject-master" nocase ascii wide
 
     condition:
         any of them

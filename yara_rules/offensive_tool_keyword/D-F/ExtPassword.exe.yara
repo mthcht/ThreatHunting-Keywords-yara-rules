@@ -28,13 +28,13 @@ rule ExtPassword_exe
         $string6 = /\\ExtPassword_lng\.ini/ nocase ascii wide
         // Description: Nirsoft tool for Windows that allows you to recover passwords stored on external drive plugged to your computer
         // Reference: https://www.nirsoft.net/utils/external_drive_password_recovery.html
-        $string7 = /03a544b51ade8258a377800fda3237ce6f36ebae34e6787380c0a2f341b591e9/ nocase ascii wide
+        $string7 = "03a544b51ade8258a377800fda3237ce6f36ebae34e6787380c0a2f341b591e9" nocase ascii wide
         // Description: Nirsoft tool for Windows that allows you to recover passwords stored on external drive plugged to your computer
         // Reference: https://www.nirsoft.net/utils/external_drive_password_recovery.html
-        $string8 = /bd61c5daaad30b420817fb1fd2f0447c3b66a1900ba69fd4cd724d1e6897ab41/ nocase ascii wide
+        $string8 = "bd61c5daaad30b420817fb1fd2f0447c3b66a1900ba69fd4cd724d1e6897ab41" nocase ascii wide
         // Description: Nirsoft tool for Windows that allows you to recover passwords stored on external drive plugged to your computer
         // Reference: https://www.nirsoft.net/utils/external_drive_password_recovery.html
-        $string9 = /External\sDrive\sPassword\sRecovery/ nocase ascii wide
+        $string9 = "External Drive Password Recovery" nocase ascii wide
         // Description: Nirsoft tool for Windows that allows you to recover passwords stored on external drive plugged to your computer
         // Reference: https://www.nirsoft.net/utils/external_drive_password_recovery.html
         $string10 = /ExtPassword\.exe/ nocase ascii wide

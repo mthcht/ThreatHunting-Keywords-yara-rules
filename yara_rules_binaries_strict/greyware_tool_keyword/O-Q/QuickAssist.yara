@@ -61,10 +61,10 @@ rule QuickAssist
         $string17 = /\\WinSxS\\amd64_microsoft\-windows\-quickassist_/ nocase ascii wide
         // Description: Sharing remote desktop with Microsoft Quick assit
         // Reference: https://apps.microsoft.com/detail/9p7bp5vnwkx5
-        $string18 = /\<Provider\sName\=\'Quick\sAssist\'\/\>/ nocase ascii wide
+        $string18 = "<Provider Name='Quick Assist'/>" nocase ascii wide
         // Description: Sharing remote desktop with Microsoft Quick assit
         // Reference: https://apps.microsoft.com/detail/9p7bp5vnwkx5
-        $string19 = /\>Quick\sAssist\sComponent\</ nocase ascii wide
+        $string19 = ">Quick Assist Component<" nocase ascii wide
         // Description: Sharing remote desktop with Microsoft Quick assit
         // Reference: https://apps.microsoft.com/detail/9p7bp5vnwkx5
         $string20 = /Assistencia\sRapida\sInstaller\.exe/ nocase ascii wide

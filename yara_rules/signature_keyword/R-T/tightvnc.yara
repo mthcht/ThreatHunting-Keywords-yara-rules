@@ -10,7 +10,7 @@ rule tightvnc
     strings:
         // Description: TightVNC is a free and Open Source remote desktop software that lets you access and control a computer over the network - often abused by attackers
         // Reference: https://www.tightvnc.com
-        $string1 = /RemoteAccess\:Win32\/TightVNC/ nocase ascii wide
+        $string1 = "RemoteAccess:Win32/TightVNC" nocase ascii wide
 
     condition:
         any of them

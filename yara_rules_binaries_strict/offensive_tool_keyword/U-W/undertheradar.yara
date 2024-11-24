@@ -34,16 +34,16 @@ rule undertheradar
         $string8 = /c\:\\users\\public\\output\.txt/ nocase ascii wide
         // Description: scripts that afford the pentester AV bypass techniques
         // Reference: https://github.com/g3tsyst3m/undertheradar
-        $string9 = /g3tsyst3m\/undertheradar/ nocase ascii wide
+        $string9 = "g3tsyst3m/undertheradar" nocase ascii wide
         // Description: scripts that afford the pentester AV bypass techniques
         // Reference: https://github.com/g3tsyst3m/undertheradar
         $string10 = /simplekeylogger\./ nocase ascii wide
         // Description: scripts that afford the pentester AV bypass techniques
         // Reference: https://github.com/g3tsyst3m/undertheradar
-        $string11 = /Successfully\sdumped\sSAM\sand\sSYSTEM/ nocase ascii wide
+        $string11 = "Successfully dumped SAM and SYSTEM" nocase ascii wide
         // Description: scripts that afford the pentester AV bypass techniques
         // Reference: https://github.com/g3tsyst3m/undertheradar
-        $string12 = /undertheradar\-main/ nocase ascii wide
+        $string12 = "undertheradar-main" nocase ascii wide
         // Description: scripts that afford the pentester AV bypass techniques
         // Reference: https://github.com/g3tsyst3m/undertheradar
         $string13 = /users\/public\/troubleshooting_log\.log/ nocase ascii wide

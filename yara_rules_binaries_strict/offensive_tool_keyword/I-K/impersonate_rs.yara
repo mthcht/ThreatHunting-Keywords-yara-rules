@@ -16,7 +16,7 @@ rule impersonate_rs
         $string2 = /\sexec\s.{0,100}\s\-\-pid\s.{0,100}\s\-\-command\s/ nocase ascii wide
         // Description: Reimplementation of Defte Impersonate in plain Rust allow you to impersonate any user on the target computer as long as you have administrator privileges (No NT SYSTEM needed) and is usable with and without GUI
         // Reference: https://github.com/zblurx/impersonate-rs
-        $string3 = /\/impersonate\-rs/ nocase ascii wide
+        $string3 = "/impersonate-rs" nocase ascii wide
         // Description: Reimplementation of Defte Impersonate in plain Rust allow you to impersonate any user on the target computer as long as you have administrator privileges (No NT SYSTEM needed) and is usable with and without GUI
         // Reference: https://github.com/zblurx/impersonate-rs
         $string4 = /\/irs\.exe/ nocase ascii wide

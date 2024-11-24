@@ -22,13 +22,13 @@ rule DEDSEC_RANSOMWARE
         $string4 = /\\Documents\\.{0,100}\.dedsec/ nocase ascii wide
         // Description: dedsec ransomware
         // Reference: https://github.com/xelroth/DEDSEC-RANSOMWARE
-        $string5 = /1da0b2abfcc58713bc8dd18ab16d9b9a9885ff813535ccd1e462fe7b979fd7871da0b2abfcc58713bc8dd18ab16d9b9a9885ff813535ccd1e462fe7b979fd787/ nocase ascii wide
+        $string5 = "1da0b2abfcc58713bc8dd18ab16d9b9a9885ff813535ccd1e462fe7b979fd7871da0b2abfcc58713bc8dd18ab16d9b9a9885ff813535ccd1e462fe7b979fd787" nocase ascii wide
         // Description: dedsec ransomware
         // Reference: https://github.com/xelroth/DEDSEC-RANSOMWARE
-        $string6 = /8a2f2dcdf0a2f4b3bf2c7ac94205e769dfcdb7c161df5a8d9df52935dbaeb936/ nocase ascii wide
+        $string6 = "8a2f2dcdf0a2f4b3bf2c7ac94205e769dfcdb7c161df5a8d9df52935dbaeb936" nocase ascii wide
         // Description: dedsec ransomware
         // Reference: https://github.com/xelroth/DEDSEC-RANSOMWARE
-        $string7 = /dedsec1da0b2abfcc58713bc8dd18ab16d9b9a9885ff813535ccd1e462fe7b979fd7871da0b2abfcc58713bc8dd18ab16d9b9a9885ff813535ccd1e462fe7b979fd787/ nocase ascii wide
+        $string7 = "dedsec1da0b2abfcc58713bc8dd18ab16d9b9a9885ff813535ccd1e462fe7b979fd7871da0b2abfcc58713bc8dd18ab16d9b9a9885ff813535ccd1e462fe7b979fd787" nocase ascii wide
         // Description: dedsec ransomware
         // Reference: https://github.com/xelroth/DEDSEC-RANSOMWARE
         $string8 = /DEDSEC\-RANSOMWARE\.py/ nocase ascii wide
@@ -37,7 +37,7 @@ rule DEDSEC_RANSOMWARE
         $string9 = /endswith\(\'\.dedsec\'\)/ nocase ascii wide
         // Description: dedsec ransomware
         // Reference: https://github.com/xelroth/DEDSEC-RANSOMWARE
-        $string10 = /GludXhsb2NhbGhvc3Q2LjUuMC1rYWxpMi1hbWQ2NHg4Nc3Q2LjUuMC1rYWxpMi1hbWQ2NHg4Nc3Q2LjUuMC1rYWxpMi1hbWQ2NHg4Nc3Q2LjUuMC1rYWxpMi1hbWQ2NHg4Nl82NDE2MTM0ODExNjQ4NTAxMzg2MDQzMzky/ nocase ascii wide
+        $string10 = "GludXhsb2NhbGhvc3Q2LjUuMC1rYWxpMi1hbWQ2NHg4Nc3Q2LjUuMC1rYWxpMi1hbWQ2NHg4Nc3Q2LjUuMC1rYWxpMi1hbWQ2NHg4Nc3Q2LjUuMC1rYWxpMi1hbWQ2NHg4Nl82NDE2MTM0ODExNjQ4NTAxMzg2MDQzMzky" nocase ascii wide
         // Description: dedsec ransomware
         // Reference: https://github.com/xelroth/DEDSEC-RANSOMWARE
         $string11 = /https\:\/\/discord\.com\/api\/webhooks\/1172456340560560180\/KwaMHIPwjfbQIhVUB\-mOHNRiHoNnyAzzQcvgvjJHqGAfLSXahTDKwB1SVuq__NVlPbeQ/ nocase ascii wide
@@ -55,13 +55,13 @@ rule DEDSEC_RANSOMWARE
         $string15 = /t\.me\/dedsecransom/ nocase ascii wide
         // Description: dedsec ransomware
         // Reference: https://github.com/xelroth/DEDSEC-RANSOMWARE
-        $string16 = /UklGRjT7DwBXQVZFZm10IBAAAAABAAEAgD4AAAB9AAACABAAZGF0YRD7DwD/ nocase ascii wide
+        $string16 = "UklGRjT7DwBXQVZFZm10IBAAAAABAAEAgD4AAAB9AAACABAAZGF0YRD7DwD" nocase ascii wide
         // Description: dedsec ransomware
         // Reference: https://github.com/xelroth/DEDSEC-RANSOMWARE
-        $string17 = /xelroth\/DEDSEC\-RANSOMWARE/ nocase ascii wide
+        $string17 = "xelroth/DEDSEC-RANSOMWARE" nocase ascii wide
         // Description: dedsec ransomware
         // Reference: https://github.com/xelroth/DEDSEC-RANSOMWARE
-        $string18 = /YOUR\sFILES\sHAVE\sBEEN\sSUCCESSFULLY\sDECRYPTED/ nocase ascii wide
+        $string18 = "YOUR FILES HAVE BEEN SUCCESSFULLY DECRYPTED" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -16,7 +16,7 @@ rule RasmanPotato
         $string2 = /\/rasman\.exe/ nocase ascii wide
         // Description: using RasMan service for privilege escalation
         // Reference: https://github.com/crisprss/RasmanPotato
-        $string3 = /\/RasmanPotato/ nocase ascii wide
+        $string3 = "/RasmanPotato" nocase ascii wide
         // Description: using RasMan service for privilege escalation
         // Reference: https://github.com/crisprss/RasmanPotato
         $string4 = /\[\!\]\sRasman\sservice\sis\snot\srunning\!/ nocase ascii wide
@@ -40,7 +40,7 @@ rule RasmanPotato
         $string10 = /\\RasmanPotato/ nocase ascii wide
         // Description: using RasMan service for privilege escalation
         // Reference: https://github.com/crisprss/RasmanPotato
-        $string11 = /5AC309CE\-1223\-4FF5\-AF84\-24BCD0B9E4DC/ nocase ascii wide
+        $string11 = "5AC309CE-1223-4FF5-AF84-24BCD0B9E4DC" nocase ascii wide
         // Description: using RasMan service for privilege escalation
         // Reference: https://github.com/crisprss/RasmanPotato
         $string12 = /anypotato\.exe/ nocase ascii wide
@@ -49,13 +49,13 @@ rule RasmanPotato
         $string13 = /Choose\sThe\sRPC\sFunction\s\[1\]VpnProtEngWinRtConnect\s\[2\]VpnProtEngGetInterface/ nocase ascii wide
         // Description: using RasMan service for privilege escalation
         // Reference: https://github.com/crisprss/RasmanPotato
-        $string14 = /dae7d1a42b0bb178bff2ca9729c31d59db045cd65db817cc9eca7a1721bc4c57/ nocase ascii wide
+        $string14 = "dae7d1a42b0bb178bff2ca9729c31d59db045cd65db817cc9eca7a1721bc4c57" nocase ascii wide
         // Description: using RasMan service for privilege escalation
         // Reference: https://github.com/crisprss/RasmanPotato
-        $string15 = /magicRasMan/ nocase ascii wide
+        $string15 = "magicRasMan" nocase ascii wide
         // Description: using RasMan service for privilege escalation
         // Reference: https://github.com/crisprss/RasmanPotato
-        $string16 = /Provided\sthat\sthe\scurrent\suser\shas\sthe\sSeImpersonate\sprivilege\,\sthis\stool\swill\shave\san\sescalation\sto\sSYSTEM/ nocase ascii wide
+        $string16 = "Provided that the current user has the SeImpersonate privilege, this tool will have an escalation to SYSTEM" nocase ascii wide
         // Description: using RasMan service for privilege escalation
         // Reference: https://github.com/crisprss/RasmanPotato
         $string17 = /rasman.{0,100}whoami/ nocase ascii wide
@@ -70,7 +70,7 @@ rule RasmanPotato
         $string20 = /rasman_h\.h/ nocase ascii wide
         // Description: using RasMan service for privilege escalation
         // Reference: https://github.com/crisprss/RasmanPotato
-        $string21 = /RasmanPotato\-master/ nocase ascii wide
+        $string21 = "RasmanPotato-master" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

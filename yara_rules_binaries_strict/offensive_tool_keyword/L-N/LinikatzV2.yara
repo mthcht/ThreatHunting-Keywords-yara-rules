@@ -10,19 +10,19 @@ rule LinikatzV2
     strings:
         // Description: linikatz is a tool to attack AD on UNIX
         // Reference: https://github.com/Orange-Cyberdefense/LinikatzV2
-        $string1 = /\/LinikatzV2\// nocase ascii wide
+        $string1 = "/LinikatzV2/" nocase ascii wide
         // Description: linikatz is a tool to attack AD on UNIX
         // Reference: https://github.com/Orange-Cyberdefense/LinikatzV2
         $string2 = /\\LinikatzV2\\/ nocase ascii wide
         // Description: linikatz is a tool to attack AD on UNIX
         // Reference: https://github.com/Orange-Cyberdefense/LinikatzV2
-        $string3 = /kerberos_steal/ nocase ascii wide
+        $string3 = "kerberos_steal" nocase ascii wide
         // Description: linikatz is a tool to attack AD on UNIX
         // Reference: https://github.com/Orange-Cyberdefense/LinikatzV2
         $string4 = /linikatzV2\.sh/ nocase ascii wide
         // Description: linikatz is a tool to attack AD on UNIX
         // Reference: https://github.com/Orange-Cyberdefense/LinikatzV2
-        $string5 = /Orange\-Cyberdefense\/LinikatzV2/ nocase ascii wide
+        $string5 = "Orange-Cyberdefense/LinikatzV2" nocase ascii wide
         // Description: linikatz is a tool to attack AD on UNIX
         // Reference: https://github.com/Orange-Cyberdefense/LinikatzV2
         $string6 = /SSSDKCMExtractor\.py/ nocase ascii wide

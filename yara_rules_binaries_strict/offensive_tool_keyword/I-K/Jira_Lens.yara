@@ -13,16 +13,16 @@ rule Jira_Lens
         $string1 = /\/Jira\-Lens\.git/ nocase ascii wide
         // Description: Fast and customizable vulnerability scanner For JIRA written in Python
         // Reference: https://github.com/MayankPandey01/Jira-Lens
-        $string2 = /install\sJira\-Lens/ nocase ascii wide
+        $string2 = "install Jira-Lens" nocase ascii wide
         // Description: finds (non-standard) shares on hosts in the local domain
         // Reference: https://powersploit.readthedocs.io/en/stable/Recon/README/
-        $string3 = /Invoke\-ShareFinder/ nocase ascii wide
+        $string3 = "Invoke-ShareFinder" nocase ascii wide
         // Description: Fast and customizable vulnerability scanner For JIRA written in Python
         // Reference: https://github.com/MayankPandey01/Jira-Lens
         $string4 = /Jira\-Lens\.py/ nocase ascii wide
         // Description: Fast and customizable vulnerability scanner For JIRA written in Python
         // Reference: https://github.com/MayankPandey01/Jira-Lens
-        $string5 = /MayankPandey01\/Jira\-Lens/ nocase ascii wide
+        $string5 = "MayankPandey01/Jira-Lens" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -10,13 +10,13 @@ rule ptunnel_ng
     strings:
         // Description: Tunnel TCP connections through ICMP.
         // Reference: https://github.com/utoni/ptunnel-ng
-        $string1 = /\sptunnel\-ng/ nocase ascii wide
+        $string1 = " ptunnel-ng" nocase ascii wide
         // Description: Tunnel TCP connections through ICMP.
         // Reference: https://github.com/utoni/ptunnel-ng
-        $string2 = /\/ptunnel\-ng/ nocase ascii wide
+        $string2 = "/ptunnel-ng" nocase ascii wide
         // Description: Tunnel TCP connections through ICMP.
         // Reference: https://github.com/utoni/ptunnel-ng
-        $string3 = /\/var\/lib\/ptunnel/ nocase ascii wide
+        $string3 = "/var/lib/ptunnel" nocase ascii wide
         // Description: Tunnel TCP connections through ICMP.
         // Reference: https://github.com/utoni/ptunnel-ng
         $string4 = /nc\s127\.0\.0\.1\s4000/ nocase ascii wide
@@ -28,16 +28,16 @@ rule ptunnel_ng
         $string6 = /ptunnel\-client\.log/ nocase ascii wide
         // Description: Tunnel TCP connections through ICMP.
         // Reference: https://github.com/utoni/ptunnel-ng
-        $string7 = /ptunnel\-data\-recv/ nocase ascii wide
+        $string7 = "ptunnel-data-recv" nocase ascii wide
         // Description: Tunnel TCP connections through ICMP.
         // Reference: https://github.com/utoni/ptunnel-ng
-        $string8 = /ptunnel\-data\-send/ nocase ascii wide
+        $string8 = "ptunnel-data-send" nocase ascii wide
         // Description: Tunnel TCP connections through ICMP.
         // Reference: https://github.com/utoni/ptunnel-ng
-        $string9 = /ptunnel\-master/ nocase ascii wide
+        $string9 = "ptunnel-master" nocase ascii wide
         // Description: Tunnel TCP connections through ICMP.
         // Reference: https://github.com/utoni/ptunnel-ng
-        $string10 = /ptunnel\-ng\s/ nocase ascii wide
+        $string10 = "ptunnel-ng " nocase ascii wide
         // Description: Tunnel TCP connections through ICMP.
         // Reference: https://github.com/utoni/ptunnel-ng
         $string11 = /ptunnel\-ng\.conf/ nocase ascii wide

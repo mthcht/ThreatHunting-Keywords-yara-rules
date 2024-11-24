@@ -10,7 +10,7 @@ rule bof_collection
     strings:
         // Description: Collection of Beacon Object Files (BOF) for Cobalt Strike
         // Reference: https://github.com/crypt0p3g/bof-collection
-        $string1 = /chromiumkeydump\s/ nocase ascii wide
+        $string1 = "chromiumkeydump " nocase ascii wide
         // Description: Collection of Beacon Object Files (BOF) for Cobalt Strike
         // Reference: https://github.com/crypt0p3g/bof-collection
         $string2 = /ChromiumKeyDump\.cna/ nocase ascii wide
@@ -22,7 +22,7 @@ rule bof_collection
         $string4 = /ChromiumKeyDump\.exe/ nocase ascii wide
         // Description: Collection of Beacon Object Files (BOF) for Cobalt Strike
         // Reference: https://github.com/crypt0p3g/bof-collection
-        $string5 = /crypt0p3g\/bof\-collection/ nocase ascii wide
+        $string5 = "crypt0p3g/bof-collection" nocase ascii wide
         // Description: C# implementation of mimikatz/pypykatz minidump functionality to get credentials from LSASS dumps
         // Reference: https://github.com/cube0x0/MiniDump
         $string6 = /Minidump\.exe/ nocase ascii wide

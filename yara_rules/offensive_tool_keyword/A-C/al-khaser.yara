@@ -10,7 +10,7 @@ rule al_khaser
     strings:
         // Description: al-khaser is a PoC malware application with good intentions that aims to stress your anti-malware system. It performs a bunch of common malware tricks with the goal of seeing if you stay under the radar
         // Reference: https://github.com/LordNoteworthy/al-khaser
-        $string1 = /al\-khaser/ nocase ascii wide
+        $string1 = "al-khaser" nocase ascii wide
 
     condition:
         any of them

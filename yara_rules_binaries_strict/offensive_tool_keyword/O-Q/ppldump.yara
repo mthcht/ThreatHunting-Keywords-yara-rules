@@ -10,19 +10,19 @@ rule ppldump
     strings:
         // Description: Dump the memory of a PPL with a userland exploit
         // Reference: https://github.com/itm4n/PPLdump
-        $string1 = /6E8D2C12\-255B\-403C\-9EF3\-8A097D374DB2/ nocase ascii wide
+        $string1 = "6E8D2C12-255B-403C-9EF3-8A097D374DB2" nocase ascii wide
         // Description: Dump the memory of a PPL with a userland exploit
         // Reference: https://github.com/itm4n/PPLdump
         $string2 = /dllexploit\./ nocase ascii wide
         // Description: Dump the memory of a PPL with a userland exploit
         // Reference: https://github.com/itm4n/PPLdump
-        $string3 = /FCE81BDA\-ACAC\-4892\-969E\-0414E765593B/ nocase ascii wide
+        $string3 = "FCE81BDA-ACAC-4892-969E-0414E765593B" nocase ascii wide
         // Description: Dump the memory of a PPL with a userland exploit
         // Reference: https://github.com/itm4n/PPLdump
         $string4 = /lsass\.exe.{0,100}\.dmp/ nocase ascii wide
         // Description: Dump the memory of a PPL with a userland exploit
         // Reference: https://github.com/itm4n/PPLdump
-        $string5 = /PPLdump/ nocase ascii wide
+        $string5 = "PPLdump" nocase ascii wide
         // Description: Dump the memory of a PPL with a userland exploit
         // Reference: https://github.com/itm4n/PPLdump
         $string6 = /PPLdump\.exe/ nocase ascii wide
@@ -31,7 +31,7 @@ rule ppldump
         $string7 = /PPLdump64\.exe/ nocase ascii wide
         // Description: Dump the memory of a PPL with a userland exploit
         // Reference: https://github.com/itm4n/PPLdump
-        $string8 = /PPLdumpDll/ nocase ascii wide
+        $string8 = "PPLdumpDll" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

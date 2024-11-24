@@ -25,7 +25,7 @@ rule demiguise
         $string5 = /\\demiguise\.py/ nocase ascii wide
         // Description: The aim of this project is to generate .html files that contain an encrypted HTA file. The idea is that when your target visits the page. the key is fetched and the HTA is decrypted dynamically within the browser and pushed directly to the user. This is an evasion technique to get round content / file-type inspection implemented by some security-appliances. This tool is not designed to create awesome HTA content. There are many other tools/techniques that can help you with that. What it might help you with is getting your HTA into an environment in the first place. and (if you use environmental keying) to avoid it being sandboxed.
         // Reference: https://github.com/nccgroup/demiguise
-        $string6 = /nccgroup\/demiguise/ nocase ascii wide
+        $string6 = "nccgroup/demiguise" nocase ascii wide
         // Description: The aim of this project is to generate .html files that contain an encrypted HTA file. The idea is that when your target visits the page. the key is fetched and the HTA is decrypted dynamically within the browser and pushed directly to the user. This is an evasion technique to get round content / file-type inspection implemented by some security-appliances. This tool is not designed to create awesome HTA content. There are many other tools/techniques that can help you with that. What it might help you with is getting your HTA into an environment in the first place. and (if you use environmental keying) to avoid it being sandboxed.
         // Reference: https://github.com/nccgroup/demiguise
         $string7 = /Yh0Js82rIfFEbS6pR7oUkN0Use54pIZBa3fpYprAMuURNrZZGc6cM8dc\+AC/ nocase ascii wide

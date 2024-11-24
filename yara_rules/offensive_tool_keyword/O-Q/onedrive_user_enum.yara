@@ -10,7 +10,7 @@ rule onedrive_user_enum
     strings:
         // Description: enumerate valid onedrive users
         // Reference: https://github.com/nyxgeek/onedrive_user_enum
-        $string1 = /\/onedrive_user_enum/ nocase ascii wide
+        $string1 = "/onedrive_user_enum" nocase ascii wide
         // Description: enumerate valid onedrive users
         // Reference: https://github.com/nyxgeek/onedrive_user_enum
         $string2 = /\-my\.sharepoint\.com\/personal\/Fakeuser/ nocase ascii wide
@@ -19,7 +19,7 @@ rule onedrive_user_enum
         $string3 = /\-my\.sharepoint\.com\/personal\/TESTUSER_/ nocase ascii wide
         // Description: enumerate valid onedrive users
         // Reference: https://github.com/nyxgeek/onedrive_user_enum
-        $string4 = /OneDrive\sEnumerator/ nocase ascii wide
+        $string4 = "OneDrive Enumerator" nocase ascii wide
         // Description: enumerate valid onedrive users
         // Reference: https://github.com/nyxgeek/onedrive_user_enum
         $string5 = /onedrive_enum\.py/ nocase ascii wide

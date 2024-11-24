@@ -25,10 +25,10 @@ rule teamstracker
         $string5 = /\\teamstracker\.py/ nocase ascii wide
         // Description: using graph proxy to monitor teams user presence
         // Reference: https://github.com/nyxgeek/teamstracker
-        $string6 = /nyxgeek\/teamstracker/ nocase ascii wide
+        $string6 = "nyxgeek/teamstracker" nocase ascii wide
         // Description: using graph proxy to monitor teams user presence
         // Reference: https://github.com/nyxgeek/teamstracker
-        $string7 = /teamstracker\-main/ nocase ascii wide
+        $string7 = "teamstracker-main" nocase ascii wide
 
     condition:
         any of them

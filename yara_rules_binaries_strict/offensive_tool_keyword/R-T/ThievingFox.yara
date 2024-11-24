@@ -10,13 +10,13 @@ rule ThievingFox
     strings:
         // Description: collection of post-exploitation tools to gather credentials from various password managers
         // Reference: https://github.com/Slowerzs/ThievingFox
-        $string1 = /\s\-\-mobaxterm\-poison\-hkcr/ nocase ascii wide
+        $string1 = " --mobaxterm-poison-hkcr" nocase ascii wide
         // Description: collection of post-exploitation tools to gather credentials from various password managers
         // Reference: https://github.com/Slowerzs/ThievingFox
-        $string2 = /\s\-\-mstsc\-poison\-hkcr/ nocase ascii wide
+        $string2 = " --mstsc-poison-hkcr" nocase ascii wide
         // Description: collection of post-exploitation tools to gather credentials from various password managers
         // Reference: https://github.com/Slowerzs/ThievingFox
-        $string3 = /\s\-\-rdcman\-poison\-hkcr/ nocase ascii wide
+        $string3 = " --rdcman-poison-hkcr" nocase ascii wide
         // Description: collection of post-exploitation tools to gather credentials from various password managers
         // Reference: https://github.com/Slowerzs/ThievingFox
         $string4 = /\sSuccessfully\shijacked\sKeePassXC\.exe/ nocase ascii wide
@@ -61,25 +61,25 @@ rule ThievingFox
         $string17 = /\\ThievingFox\.py/ nocase ascii wide
         // Description: collection of post-exploitation tools to gather credentials from various password managers
         // Reference: https://github.com/Slowerzs/ThievingFox
-        $string18 = /28e90498456b5e0866fde4371f560e5673f75e761855b73b063eadaef39834d2/ nocase ascii wide
+        $string18 = "28e90498456b5e0866fde4371f560e5673f75e761855b73b063eadaef39834d2" nocase ascii wide
         // Description: collection of post-exploitation tools to gather credentials from various password managers
         // Reference: https://github.com/Slowerzs/ThievingFox
-        $string19 = /6A5942A4\-9086\-408E\-A9B4\-05ABC34BFD58/ nocase ascii wide
+        $string19 = "6A5942A4-9086-408E-A9B4-05ABC34BFD58" nocase ascii wide
         // Description: collection of post-exploitation tools to gather credentials from various password managers
         // Reference: https://github.com/Slowerzs/ThievingFox
-        $string20 = /b99078f0abc00a579cf218f3ed1d1ca89fffd5c328239303bf98432732df00f0/ nocase ascii wide
+        $string20 = "b99078f0abc00a579cf218f3ed1d1ca89fffd5c328239303bf98432732df00f0" nocase ascii wide
         // Description: collection of post-exploitation tools to gather credentials from various password managers
         // Reference: https://github.com/Slowerzs/ThievingFox
-        $string21 = /Compiling\smstscax\sdll\sproxy/ nocase ascii wide
+        $string21 = "Compiling mstscax dll proxy" nocase ascii wide
         // Description: collection of post-exploitation tools to gather credentials from various password managers
         // Reference: https://github.com/Slowerzs/ThievingFox
         $string22 = /Compiling\sproxy\sargon2\.dll/ nocase ascii wide
         // Description: collection of post-exploitation tools to gather credentials from various password managers
         // Reference: https://github.com/Slowerzs/ThievingFox
-        $string23 = /f6f082606e6725734c4ad3fef4e9d1ae5669ebab5c9085e6ab3b409793ca2000/ nocase ascii wide
+        $string23 = "f6f082606e6725734c4ad3fef4e9d1ae5669ebab5c9085e6ab3b409793ca2000" nocase ascii wide
         // Description: collection of post-exploitation tools to gather credentials from various password managers
         // Reference: https://github.com/Slowerzs/ThievingFox
-        $string24 = /Found\sa\ssideloaded\sDLL\,\sassuming\sinjection\salready\sperformed/ nocase ascii wide
+        $string24 = "Found a sideloaded DLL, assuming injection already performed" nocase ascii wide
         // Description: collection of post-exploitation tools to gather credentials from various password managers
         // Reference: https://github.com/Slowerzs/ThievingFox
         $string25 = /keepassxcfox\.dll/ nocase ascii wide
@@ -88,7 +88,7 @@ rule ThievingFox
         $string26 = /mobaxtermfox\.dll/ nocase ascii wide
         // Description: collection of post-exploitation tools to gather credentials from various password managers
         // Reference: https://github.com/Slowerzs/ThievingFox
-        $string27 = /Slowerzs\/ThievingFox/ nocase ascii wide
+        $string27 = "Slowerzs/ThievingFox" nocase ascii wide
         // Description: collection of post-exploitation tools to gather credentials from various password managers
         // Reference: https://github.com/Slowerzs/ThievingFox
         $string28 = /Successfully\shijacked\sKeePassXC\.exe/ nocase ascii wide
@@ -100,7 +100,7 @@ rule ThievingFox
         $string30 = /Successfully\spoisonned\sLogonUI\.exe/ nocase ascii wide
         // Description: collection of post-exploitation tools to gather credentials from various password managers
         // Reference: https://github.com/Slowerzs/ThievingFox
-        $string31 = /Successfully\spoisonned\sMobaXTerm/ nocase ascii wide
+        $string31 = "Successfully poisonned MobaXTerm" nocase ascii wide
         // Description: collection of post-exploitation tools to gather credentials from various password managers
         // Reference: https://github.com/Slowerzs/ThievingFox
         $string32 = /Successfully\spoisonned\smstsc\.exe/ nocase ascii wide
@@ -109,13 +109,13 @@ rule ThievingFox
         $string33 = /Successfully\spoisonned\sRDCMan\.exe/ nocase ascii wide
         // Description: collection of post-exploitation tools to gather credentials from various password managers
         // Reference: https://github.com/Slowerzs/ThievingFox
-        $string34 = /Sucessfully\sperformed\sAppDomainInjection\sfor\sKeePass/ nocase ascii wide
+        $string34 = "Sucessfully performed AppDomainInjection for KeePass" nocase ascii wide
         // Description: collection of post-exploitation tools to gather credentials from various password managers
         // Reference: https://github.com/Slowerzs/ThievingFox
         $string35 = /ThievingFox\.py\s/ nocase ascii wide
         // Description: collection of post-exploitation tools to gather credentials from various password managers
         // Reference: https://github.com/Slowerzs/ThievingFox
-        $string36 = /uploading\smstscax\sproxy\sdll\sto\s/ nocase ascii wide
+        $string36 = "uploading mstscax proxy dll to " nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

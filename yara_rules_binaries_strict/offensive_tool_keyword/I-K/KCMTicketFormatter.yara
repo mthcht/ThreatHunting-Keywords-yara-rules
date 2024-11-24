@@ -10,7 +10,7 @@ rule KCMTicketFormatter
     strings:
         // Description: Format SSSD Raw Kerberos Payloads into CCACHE files for use on Windows systems
         // Reference: https://github.com/blacklanternsecurity/KCMTicketFormatter
-        $string1 = /\/KCMTicketFormatter/ nocase ascii wide
+        $string1 = "/KCMTicketFormatter" nocase ascii wide
         // Description: Format SSSD Raw Kerberos Payloads into CCACHE files for use on Windows systems
         // Reference: https://github.com/blacklanternsecurity/KCMTicketFormatter
         $string2 = /\\KCMTicketFormatter/ nocase ascii wide

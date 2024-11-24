@@ -10,13 +10,13 @@ rule GC2_sheet
     strings:
         // Description: GC2 is a Command and Control application that allows an attacker to execute commands on the target machine using Google Sheet and exfiltrate data using Google Drive.
         // Reference: https://github.com/looCiprian/GC2-sheet
-        $string1 = /\sGC2\-sheet/ nocase ascii wide
+        $string1 = " GC2-sheet" nocase ascii wide
         // Description: GC2 is a Command and Control application that allows an attacker to execute commands on the target machine using Google Sheet and exfiltrate data using Google Drive.
         // Reference: https://github.com/looCiprian/GC2-sheet
         $string2 = /\/C2\/c2\.go/ nocase ascii wide
         // Description: GC2 is a Command and Control application that allows an attacker to execute commands on the target machine using Google Sheet and exfiltrate data using Google Drive.
         // Reference: https://github.com/looCiprian/GC2-sheet
-        $string3 = /\/GC2\-sheet\// nocase ascii wide
+        $string3 = "/GC2-sheet/" nocase ascii wide
         // Description: GC2 is a Command and Control application that allows an attacker to execute commands on the target machine using Google Sheet and exfiltrate data using Google Drive.
         // Reference: https://github.com/looCiprian/GC2-sheet
         $string4 = /\/internal\/C2\/.{0,100}\.go/ nocase ascii wide
@@ -25,10 +25,10 @@ rule GC2_sheet
         $string5 = /gc2\-sheet\.go/ nocase ascii wide
         // Description: GC2 is a Command and Control application that allows an attacker to execute commands on the target machine using Google Sheet and exfiltrate data using Google Drive.
         // Reference: https://github.com/looCiprian/GC2-sheet
-        $string6 = /GC2\-sheet\/cmd/ nocase ascii wide
+        $string6 = "GC2-sheet/cmd" nocase ascii wide
         // Description: GC2 is a Command and Control application that allows an attacker to execute commands on the target machine using Google Sheet and exfiltrate data using Google Drive.
         // Reference: https://github.com/looCiprian/GC2-sheet
-        $string7 = /looCiprian\/GC2\-sheet/ nocase ascii wide
+        $string7 = "looCiprian/GC2-sheet" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

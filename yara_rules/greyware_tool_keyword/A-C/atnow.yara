@@ -25,10 +25,10 @@ rule atnow
         $string5 = /\\atnow\.zip/ nocase ascii wide
         // Description: AtNow is a command-line utility that schedules programs and commands to run in the near future - abused by TA
         // Reference: https://www.nirsoft.net/utils/atnow.html
-        $string6 = /\>Near\-Future\sCommand\sScheduler\</ nocase ascii wide
+        $string6 = ">Near-Future Command Scheduler<" nocase ascii wide
         // Description: AtNow is a command-line utility that schedules programs and commands to run in the near future - abused by TA
         // Reference: https://www.nirsoft.net/utils/atnow.html
-        $string7 = /aa142160446a919eaba99ce15992f6e11b1fdaa7a9f569979a29068120f774cf/ nocase ascii wide
+        $string7 = "aa142160446a919eaba99ce15992f6e11b1fdaa7a9f569979a29068120f774cf" nocase ascii wide
         // Description: AtNow is a command-line utility that schedules programs and commands to run in the near future - abused by TA
         // Reference: https://www.nirsoft.net/utils/atnow.html
         $string8 = /ProductName.{0,1000}\>AtNow\</ nocase ascii wide

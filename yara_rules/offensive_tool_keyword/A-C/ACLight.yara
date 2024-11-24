@@ -16,7 +16,7 @@ rule ACLight
         $string2 = /\/ACLight\.git/ nocase ascii wide
         // Description: A tool for advanced discovery of Privileged Accounts - including Shadow Admins.
         // Reference: https://github.com/cyberark/ACLight
-        $string3 = /\/ACLight\// nocase ascii wide
+        $string3 = "/ACLight/" nocase ascii wide
         // Description: A tool for advanced discovery of Privileged Accounts - including Shadow Admins.
         // Reference: https://github.com/cyberark/ACLight
         $string4 = /\\scanACLsResults\.csv/ nocase ascii wide
@@ -43,10 +43,10 @@ rule ACLight
         $string11 = /ACLight2\.psm1/ nocase ascii wide
         // Description: A tool for advanced discovery of Privileged Accounts - including Shadow Admins.
         // Reference: https://github.com/cyberark/ACLight
-        $string12 = /ACLight\-master/ nocase ascii wide
+        $string12 = "ACLight-master" nocase ascii wide
         // Description: A tool for advanced discovery of Privileged Accounts - including Shadow Admins.
         // Reference: https://github.com/cyberark/ACLight
-        $string13 = /cyberark\/ACLight/ nocase ascii wide
+        $string13 = "cyberark/ACLight" nocase ascii wide
         // Description: A tool for advanced discovery of Privileged Accounts - including Shadow Admins.
         // Reference: https://github.com/cyberark/ACLight
         $string14 = /Execute\-ACLight\.bat/ nocase ascii wide
@@ -55,7 +55,7 @@ rule ACLight
         $string15 = /Execute\-ACLight2\.bat/ nocase ascii wide
         // Description: A tool for advanced discovery of Privileged Accounts - including Shadow Admins.
         // Reference: https://github.com/cyberark/ACLight
-        $string16 = /Invoke\-ACLcsvFileAnalysis/ nocase ascii wide
+        $string16 = "Invoke-ACLcsvFileAnalysis" nocase ascii wide
         // Description: A tool for advanced discovery of Privileged Accounts - including Shadow Admins.
         // Reference: https://github.com/cyberark/ACLight
         $string17 = /Invoke\-ACLScanner\s.{0,1000}\s\-Filter\s/ nocase ascii wide
@@ -73,13 +73,13 @@ rule ACLight
         $string21 = /Privileged\sAccounts\sPermissions\s\-\sIrregular\sAccounts\.csv/ nocase ascii wide
         // Description: A tool for advanced discovery of Privileged Accounts - including Shadow Admins.
         // Reference: https://github.com/cyberark/ACLight
-        $string22 = /Start\-ACLsAnalysis\s\-Domain/ nocase ascii wide
+        $string22 = "Start-ACLsAnalysis -Domain" nocase ascii wide
         // Description: A tool for advanced discovery of Privileged Accounts - including Shadow Admins.
         // Reference: https://github.com/cyberark/ACLight
-        $string23 = /Start\-domainACLsAnalysis/ nocase ascii wide
+        $string23 = "Start-domainACLsAnalysis" nocase ascii wide
         // Description: A tool for advanced discovery of Privileged Accounts - including Shadow Admins.
         // Reference: https://github.com/cyberark/ACLight
-        $string24 = /starting\sMulti\-Layered\sACLight\sscan/ nocase ascii wide
+        $string24 = "starting Multi-Layered ACLight scan" nocase ascii wide
 
     condition:
         any of them

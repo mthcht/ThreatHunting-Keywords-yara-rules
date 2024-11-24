@@ -25,13 +25,13 @@ rule ShimDB
         $string5 = /\\ShimDB\\sdb\-explorer/ nocase ascii wide
         // Description: Shim database persistence (Fin7 TTP)
         // Reference: https://github.com/jackson5sec/ShimDB
-        $string6 = /223279bb628165de88609c81444f4a9bf9aac6f921ea155ac427a47d13b49084/ nocase ascii wide
+        $string6 = "223279bb628165de88609c81444f4a9bf9aac6f921ea155ac427a47d13b49084" nocase ascii wide
         // Description: Shim database persistence (Fin7 TTP)
         // Reference: https://github.com/jackson5sec/ShimDB
-        $string7 = /A1A949A4\-5CE4\-4FCF\-A3B9\-A2290EA46086/ nocase ascii wide
+        $string7 = "A1A949A4-5CE4-4FCF-A3B9-A2290EA46086" nocase ascii wide
         // Description: Shim database persistence (Fin7 TTP)
         // Reference: https://github.com/jackson5sec/ShimDB
-        $string8 = /jackson5sec\/ShimDB/ nocase ascii wide
+        $string8 = "jackson5sec/ShimDB" nocase ascii wide
 
     condition:
         any of them

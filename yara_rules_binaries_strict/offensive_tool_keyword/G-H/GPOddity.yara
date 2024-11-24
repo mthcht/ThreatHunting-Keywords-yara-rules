@@ -19,10 +19,10 @@ rule GPOddity
         $string3 = /\s\-\-gpo\-id\s.{0,100}\s\-\-gpo\-type\s.{0,100}\s\-\-no\-smb\-server\s/ nocase ascii wide
         // Description: GPO attack vectors through NTLM relaying
         // Reference: https://github.com/synacktiv/GPOddity
-        $string4 = /\s\-\-rogue\-smbserver\-ip\s/ nocase ascii wide
+        $string4 = " --rogue-smbserver-ip " nocase ascii wide
         // Description: GPO attack vectors through NTLM relaying
         // Reference: https://github.com/synacktiv/GPOddity
-        $string5 = /\s\-\-rogue\-smbserver\-share\s/ nocase ascii wide
+        $string5 = " --rogue-smbserver-share " nocase ascii wide
         // Description: GPO attack vectors through NTLM relaying
         // Reference: https://github.com/synacktiv/GPOddity
         $string6 = /\(not\slaunching\sGPOddity\sSMB\sserver\)/ nocase ascii wide
@@ -31,7 +31,7 @@ rule GPOddity
         $string7 = /\/GPOddity\.git/ nocase ascii wide
         // Description: GPO attack vectors through NTLM relaying
         // Reference: https://github.com/synacktiv/GPOddity
-        $string8 = /\/GPOddity\// nocase ascii wide
+        $string8 = "/GPOddity/" nocase ascii wide
         // Description: GPO attack vectors through NTLM relaying
         // Reference: https://github.com/synacktiv/GPOddity
         $string9 = /\[\!\]\sFailed\sto\sdownload\slegitimate\sGPO\sfrom\sSYSVOL\s\(dc_ip\:/ nocase ascii wide
@@ -61,13 +61,13 @@ rule GPOddity
         $string17 = /\\GPOddity\\/ nocase ascii wide
         // Description: GPO attack vectors through NTLM relaying
         // Reference: https://github.com/synacktiv/GPOddity
-        $string18 = /\=\=\=\sGENERATING\sMALICIOUS\sGROUP\sPOLICY\sTEMPLATE\s\=\=\=/ nocase ascii wide
+        $string18 = "=== GENERATING MALICIOUS GROUP POLICY TEMPLATE ===" nocase ascii wide
         // Description: GPO attack vectors through NTLM relaying
         // Reference: https://github.com/synacktiv/GPOddity
-        $string19 = /46993522\-7D77\-4B59\-9B77\-F82082DE9D81/ nocase ascii wide
+        $string19 = "46993522-7D77-4B59-9B77-F82082DE9D81" nocase ascii wide
         // Description: GPO attack vectors through NTLM relaying
         // Reference: https://github.com/synacktiv/GPOddity
-        $string20 = /Could\snot\swrite\sNTLM\sHashes\sto\sthe\sspecified\sJTR_Dump_Path\s/ nocase ascii wide
+        $string20 = "Could not write NTLM Hashes to the specified JTR_Dump_Path " nocase ascii wide
         // Description: GPO attack vectors through NTLM relaying
         // Reference: https://github.com/synacktiv/GPOddity
         $string21 = /Couldn\'t\sclone\sGPO\s\{\}\s\(maybe\sit\sdoes\snot\sexist\?/ nocase ascii wide
@@ -82,7 +82,7 @@ rule GPOddity
         $string24 = /gpoddity_smbserver\.py/ nocase ascii wide
         // Description: GPO attack vectors through NTLM relaying
         // Reference: https://github.com/synacktiv/GPOddity
-        $string25 = /GPOddity\-master/ nocase ascii wide
+        $string25 = "GPOddity-master" nocase ascii wide
         // Description: GPO attack vectors through NTLM relaying
         // Reference: https://github.com/synacktiv/GPOddity
         $string26 = /helpers\.gpoddity_smbserver/ nocase ascii wide
@@ -94,25 +94,25 @@ rule GPOddity
         $string28 = /\-\-just\-clean.{0,100}cleaning\/to_clean\.txt/ nocase ascii wide
         // Description: GPO attack vectors through NTLM relaying
         // Reference: https://github.com/synacktiv/GPOddity
-        $string29 = /LAUNCHING\sGPODDITY\sSMB\sSERVER\sAND\sWAITING\sFOR\sGPO\sREQUESTS/ nocase ascii wide
+        $string29 = "LAUNCHING GPODDITY SMB SERVER AND WAITING FOR GPO REQUESTS" nocase ascii wide
         // Description: GPO attack vectors through NTLM relaying
         // Reference: https://github.com/synacktiv/GPOddity
-        $string30 = /net\suser\sjohn\sH4x00r123/ nocase ascii wide
+        $string30 = "net user john H4x00r123" nocase ascii wide
         // Description: GPO attack vectors through NTLM relaying
         // Reference: https://github.com/synacktiv/GPOddity
         $string31 = /scheduledtask_utils\.py\s/ nocase ascii wide
         // Description: GPO attack vectors through NTLM relaying
         // Reference: https://github.com/synacktiv/GPOddity
-        $string32 = /SPOOFING\sGROUP\sPOLICY\sTEMPLATE\sLOCATION\sTHROUGH\sgPCFileSysPath/ nocase ascii wide
+        $string32 = "SPOOFING GROUP POLICY TEMPLATE LOCATION THROUGH gPCFileSysPath" nocase ascii wide
         // Description: GPO attack vectors through NTLM relaying
         // Reference: https://github.com/synacktiv/GPOddity
-        $string33 = /synacktiv\/GPOddity/ nocase ascii wide
+        $string33 = "synacktiv/GPOddity" nocase ascii wide
         // Description: GPO attack vectors through NTLM relaying
         // Reference: https://github.com/synacktiv/GPOddity
-        $string34 = /synacktiv_gpoddity/ nocase ascii wide
+        $string34 = "synacktiv_gpoddity" nocase ascii wide
         // Description: GPO attack vectors through NTLM relaying
         // Reference: https://github.com/synacktiv/GPOddity
-        $string35 = /You\sare\strying\sto\starget\sa\sUser\sGroup\sPolicy\sObject\swhile\srunning\sthe\sembedded\sSMB\sserver/ nocase ascii wide
+        $string35 = "You are trying to target a User Group Policy Object while running the embedded SMB server" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

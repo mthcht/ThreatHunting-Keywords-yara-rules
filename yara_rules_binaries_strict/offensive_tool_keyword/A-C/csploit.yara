@@ -13,7 +13,7 @@ rule csploit
         $string1 = /cSploit\-.{0,100}\.apk/ nocase ascii wide
         // Description: The most complete and advanced IT security professional toolkit on Android.
         // Reference: https://github.com/cSploit/android
-        $string2 = /cSploit\/android/ nocase ascii wide
+        $string2 = "cSploit/android" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -10,7 +10,7 @@ rule Awesome_Hacking_Resources
     strings:
         // Description: A collection of hacking / penetration testing resources to make you better!
         // Reference: https://github.com/vitalysim/Awesome-Hacking-Resources
-        $string1 = /Awesome\-Hacking\-Resources/ nocase ascii wide
+        $string1 = "Awesome-Hacking-Resources" nocase ascii wide
 
     condition:
         any of them

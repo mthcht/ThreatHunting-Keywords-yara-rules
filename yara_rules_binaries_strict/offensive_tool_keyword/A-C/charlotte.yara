@@ -28,7 +28,7 @@ rule charlotte
         $string6 = /\\charlotte\.py/ nocase ascii wide
         // Description: c++ fully undetected shellcode launcher
         // Reference: https://github.com/9emin1/charlotte
-        $string7 = /9emin1\/charlotte/ nocase ascii wide
+        $string7 = "9emin1/charlotte" nocase ascii wide
         // Description: c++ fully undetected shellcode launcher
         // Reference: https://github.com/9emin1/charlotte
         $string8 = /charlotte\-main\.zip/ nocase ascii wide
@@ -43,7 +43,7 @@ rule charlotte
         $string11 = /rundll32\scharlotte\.dll/ nocase ascii wide
         // Description: c++ fully undetected shellcode launcher
         // Reference: https://github.com/9emin1/charlotte
-        $string12 = /windows\/x64\/meterpreter_reverse_tcp/ nocase ascii wide
+        $string12 = "windows/x64/meterpreter_reverse_tcp" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

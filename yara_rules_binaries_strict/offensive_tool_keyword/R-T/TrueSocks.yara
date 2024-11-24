@@ -16,7 +16,7 @@ rule TrueSocks
         $string2 = /api\.truesocks\.net/ nocase ascii wide
         // Description: Simple API for buying renting and managing proxies
         // Reference: https://github.com/c0dn/truesocks_rs
-        $string3 = /c0dn\/truesocks_rs/ nocase ascii wide
+        $string3 = "c0dn/truesocks_rs" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

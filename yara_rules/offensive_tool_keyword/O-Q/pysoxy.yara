@@ -19,10 +19,10 @@ rule pysoxy
         $string3 = /\\pysoxy\.py/ nocase ascii wide
         // Description: A small Socks5 Proxy Server in Python
         // Reference: https://github.com/MisterDaneel/pysoxy
-        $string4 = /MisterDaneel\/pysoxy/ nocase ascii wide
+        $string4 = "MisterDaneel/pysoxy" nocase ascii wide
         // Description: A small Socks5 Proxy Server in Python
         // Reference: https://github.com/MisterDaneel/pysoxy
-        $string5 = /pysoxy\-master/ nocase ascii wide
+        $string5 = "pysoxy-master" nocase ascii wide
 
     condition:
         any of them

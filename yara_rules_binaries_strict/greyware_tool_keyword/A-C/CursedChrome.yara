@@ -13,10 +13,10 @@ rule CursedChrome
         $string1 = /\/anyproxy\.log/ nocase ascii wide
         // Description: Chrome-extension implant that turns victim Chrome browsers into fully-functional HTTP proxies allowing you to browse sites as your victims
         // Reference: https://github.com/mandatoryprogrammer/CursedChrome
-        $string2 = /\/work\/anyproxy\/bin\/anyproxy\-ca\s\-\-generate/ nocase ascii wide
+        $string2 = "/work/anyproxy/bin/anyproxy-ca --generate" nocase ascii wide
         // Description: Chrome-extension implant that turns victim Chrome browsers into fully-functional HTTP proxies allowing you to browse sites as your victims
         // Reference: https://github.com/mandatoryprogrammer/CursedChrome
-        $string3 = /anyproxy\s\-\-intercept\s\-\-ws\-intercept\s/ nocase ascii wide
+        $string3 = "anyproxy --intercept --ws-intercept " nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

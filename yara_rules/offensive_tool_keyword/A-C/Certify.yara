@@ -22,7 +22,7 @@ rule Certify
         $string4 = /Certify\.exe\s/ nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string5 = /ImpersonateLoggedOnUser\sworked\,\sbut\sthread\sis\snot\srunning\sas\sSYSTEM/ nocase ascii wide
+        $string5 = "ImpersonateLoggedOnUser worked, but thread is not running as SYSTEM" nocase ascii wide
 
     condition:
         any of them

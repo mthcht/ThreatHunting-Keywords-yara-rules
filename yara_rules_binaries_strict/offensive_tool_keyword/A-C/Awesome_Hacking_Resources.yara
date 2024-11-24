@@ -10,7 +10,7 @@ rule Awesome_Hacking_Resources
     strings:
         // Description: A collection of hacking / penetration testing resources to make you better!
         // Reference: https://github.com/vitalysim/Awesome-Hacking-Resources
-        $string1 = /Awesome\-Hacking\-Resources/ nocase ascii wide
+        $string1 = "Awesome-Hacking-Resources" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

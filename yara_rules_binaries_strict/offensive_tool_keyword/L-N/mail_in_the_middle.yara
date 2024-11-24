@@ -73,22 +73,22 @@ rule mail_in_the_middle
         $string21 = /change_shellcode_exec_method\(/ nocase ascii wide
         // Description: This script sits in the middle between a legitimate sender of an email and the legitimate recipient of that email. This means that we (the attackers) are receiving sensitive information not originally destined to us
         // Reference: https://github.com/sensepost/mail-in-the-middle
-        $string22 = /Ding\sDing\sDing\!\sEmail\sopened\!/ nocase ascii wide
+        $string22 = "Ding Ding Ding! Email opened!" nocase ascii wide
         // Description: This script sits in the middle between a legitimate sender of an email and the legitimate recipient of that email. This means that we (the attackers) are receiving sensitive information not originally destined to us
         // Reference: https://github.com/sensepost/mail-in-the-middle
-        $string23 = /docker\sbuild\s\-t\smaitm\s/ nocase ascii wide
+        $string23 = "docker build -t maitm " nocase ascii wide
         // Description: This script sits in the middle between a legitimate sender of an email and the legitimate recipient of that email. This means that we (the attackers) are receiving sensitive information not originally destined to us
         // Reference: https://github.com/sensepost/mail-in-the-middle
-        $string24 = /docker\srun\s\-\-rm\s\-ti\smaitm\s\-/ nocase ascii wide
+        $string24 = "docker run --rm -ti maitm -" nocase ascii wide
         // Description: This script sits in the middle between a legitimate sender of an email and the legitimate recipient of that email. This means that we (the attackers) are receiving sensitive information not originally destined to us
         // Reference: https://github.com/sensepost/mail-in-the-middle
-        $string25 = /from\sDiscordBot\simport\sMitmPuppeter/ nocase ascii wide
+        $string25 = "from DiscordBot import MitmPuppeter" nocase ascii wide
         // Description: This script sits in the middle between a legitimate sender of an email and the legitimate recipient of that email. This means that we (the attackers) are receiving sensitive information not originally destined to us
         // Reference: https://github.com/sensepost/mail-in-the-middle
         $string26 = /from\sMaitm\.Maitm\s/ nocase ascii wide
         // Description: This script sits in the middle between a legitimate sender of an email and the legitimate recipient of that email. This means that we (the attackers) are receiving sensitive information not originally destined to us
         // Reference: https://github.com/sensepost/mail-in-the-middle
-        $string27 = /LABEL\sname\=\\"Maitm\\"/ nocase ascii wide
+        $string27 = "LABEL name=\"Maitm\"" nocase ascii wide
         // Description: This script sits in the middle between a legitimate sender of an email and the legitimate recipient of that email. This means that we (the attackers) are receiving sensitive information not originally destined to us
         // Reference: https://github.com/sensepost/mail-in-the-middle
         $string28 = /logs\/maitm\.log\\"/ nocase ascii wide

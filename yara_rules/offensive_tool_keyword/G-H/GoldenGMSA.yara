@@ -25,10 +25,10 @@ rule GoldenGMSA
         $string5 = /GoldenGMSA\.exe/ nocase ascii wide
         // Description: GolenGMSA tool for working with GMSA passwords
         // Reference: https://github.com/Semperis/GoldenGMSA
-        $string6 = /GoldenGMSA\-main/ nocase ascii wide
+        $string6 = "GoldenGMSA-main" nocase ascii wide
         // Description: GolenGMSA tool for working with GMSA passwords
         // Reference: https://github.com/Semperis/GoldenGMSA
-        $string7 = /Semperis\/GoldenGMSA/ nocase ascii wide
+        $string7 = "Semperis/GoldenGMSA" nocase ascii wide
 
     condition:
         any of them

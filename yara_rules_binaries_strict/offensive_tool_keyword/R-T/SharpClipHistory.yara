@@ -10,7 +10,7 @@ rule SharpClipHistory
     strings:
         // Description: SharpClipHistory is a .NET 4.5 application written in C# that can be used to read the contents of a users clipboard history in Windows 10 starting from the 1809 Build.
         // Reference: https://github.com/FSecureLABS/SharpClipHistory
-        $string1 = /SharpClipHistory/ nocase ascii wide
+        $string1 = "SharpClipHistory" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

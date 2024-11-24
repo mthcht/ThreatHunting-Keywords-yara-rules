@@ -10,10 +10,10 @@ rule RedTeam_toolkit
     strings:
         // Description: Fast and customizable vulnerability scanner For JIRA written in Python
         // Reference: https://github.com/MayankPandey01/Jira-Lens
-        $string1 = /\/Jira\-Lens\// nocase ascii wide
+        $string1 = "/Jira-Lens/" nocase ascii wide
         // Description: Red Team Toolkit is an Open-Source Django Offensive Web-App which is keeping the useful offensive tools used in the red-teaming together
         // Reference: https://github.com/signorrayan/RedTeam_toolkit
-        $string2 = /\/RedTeam_toolkit/ nocase ascii wide
+        $string2 = "/RedTeam_toolkit" nocase ascii wide
         // Description: Red Team Toolkit is an Open-Source Django Offensive Web-App which is keeping the useful offensive tools used in the red-teaming together
         // Reference: https://github.com/signorrayan/RedTeam_toolkit
         $string3 = /cvescanner\.py/ nocase ascii wide

@@ -46,22 +46,22 @@ rule traitor
         $string12 = /go\sget\s\-u\s.{0,100}traitor\/cmd\/traitor/ nocase ascii wide
         // Description: Automatically exploit low-hanging fruit to pop a root shell. Linux privilege escalation made easy
         // Reference: https://github.com/liamg/traitor
-        $string13 = /liamg\/traitor/ nocase ascii wide
+        $string13 = "liamg/traitor" nocase ascii wide
         // Description: Automatically exploit low-hanging fruit to pop a root shell. Linux privilege escalation made easy
         // Reference: https://github.com/liamg/traitor
-        $string14 = /traitor\s\-a\s/ nocase ascii wide
+        $string14 = "traitor -a " nocase ascii wide
         // Description: Automatically exploit low-hanging fruit to pop a root shell. Linux privilege escalation made easy
         // Reference: https://github.com/liamg/traitor
-        $string15 = /traitor\s\-\-any\s/ nocase ascii wide
+        $string15 = "traitor --any " nocase ascii wide
         // Description: Automatically exploit low-hanging fruit to pop a root shell. Linux privilege escalation made easy
         // Reference: https://github.com/liamg/traitor
-        $string16 = /traitor\s\-e\s/ nocase ascii wide
+        $string16 = "traitor -e " nocase ascii wide
         // Description: Automatically exploit low-hanging fruit to pop a root shell. Linux privilege escalation made easy
         // Reference: https://github.com/liamg/traitor
-        $string17 = /traitor\s\-\-exploit/ nocase ascii wide
+        $string17 = "traitor --exploit" nocase ascii wide
         // Description: Automatically exploit low-hanging fruit to pop a root shell. Linux privilege escalation made easy
         // Reference: https://github.com/liamg/traitor
-        $string18 = /traitor\s\-p\s/ nocase ascii wide
+        $string18 = "traitor -p " nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

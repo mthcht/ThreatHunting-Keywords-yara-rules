@@ -67,7 +67,7 @@ rule DataBouncing
         $string19 = /nightCrawler\.ps1\s/ nocase ascii wide
         // Description: Data Bouncing is a technique for transmitting data between two endpoints using DNS lookups and HTTP header manipulation
         // Reference: https://github.com/Unit-259/DataBouncing
-        $string20 = /Unit\-259\/DataBouncing/ nocase ascii wide
+        $string20 = "Unit-259/DataBouncing" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -19,7 +19,7 @@ rule PrintSpoofer
         $string3 = /\\PrintSpoofer\.exe/ nocase ascii wide
         // Description: Abusing Impersonation Privileges on Windows 10 and Server 2019
         // Reference: https://github.com/itm4n/PrintSpoofer
-        $string4 = /itm4n\/PrintSpoofer/ nocase ascii wide
+        $string4 = "itm4n/PrintSpoofer" nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
         $string5 = /PrintSpoofer\sv\%ws\s\(by\s\@itm4n\)/ nocase ascii wide

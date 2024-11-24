@@ -10,16 +10,16 @@ rule SpaceRunner
     strings:
         // Description: enables the compilation of a C# program that will execute arbitrary PowerShell code without launching PowerShell processes through the use of runspace.
         // Reference: https://github.com/Mr-B0b/SpaceRunner
-        $string1 = /\s\-f\sFind\-AllVulns/ nocase ascii wide
+        $string1 = " -f Find-AllVulns" nocase ascii wide
         // Description: enables the compilation of a C# program that will execute arbitrary PowerShell code without launching PowerShell processes through the use of runspace.
         // Reference: https://github.com/Mr-B0b/SpaceRunner
-        $string2 = /\s\-f\sFind\-PathDLLHijack/ nocase ascii wide
+        $string2 = " -f Find-PathDLLHijack" nocase ascii wide
         // Description: enables the compilation of a C# program that will execute arbitrary PowerShell code without launching PowerShell processes through the use of runspace.
         // Reference: https://github.com/Mr-B0b/SpaceRunner
         $string3 = /\s\-f\sGet\-DomainGroupMember.{0,100}\s\-a\s.{0,100}\-Identity\s.{0,100}admin.{0,100}\s\-Recurse/ nocase ascii wide
         // Description: enables the compilation of a C# program that will execute arbitrary PowerShell code without launching PowerShell processes through the use of runspace.
         // Reference: https://github.com/Mr-B0b/SpaceRunner
-        $string4 = /\s\-f\sInvoke\-Inveigh/ nocase ascii wide
+        $string4 = " -f Invoke-Inveigh" nocase ascii wide
         // Description: enables the compilation of a C# program that will execute arbitrary PowerShell code without launching PowerShell processes through the use of runspace.
         // Reference: https://github.com/Mr-B0b/SpaceRunner
         $string5 = /\/out\:spacerunner\.exe/ nocase ascii wide
@@ -49,7 +49,7 @@ rule SpaceRunner
         $string13 = /beacon\.ps1.{0,100}beacon\.exe/ nocase ascii wide
         // Description: enables the compilation of a C# program that will execute arbitrary PowerShell code without launching PowerShell processes through the use of runspace.
         // Reference: https://github.com/Mr-B0b/SpaceRunner
-        $string14 = /Mr\-B0b\/SpaceRunner/ nocase ascii wide
+        $string14 = "Mr-B0b/SpaceRunner" nocase ascii wide
         // Description: enables the compilation of a C# program that will execute arbitrary PowerShell code without launching PowerShell processes through the use of runspace.
         // Reference: https://github.com/Mr-B0b/SpaceRunner
         $string15 = /spacerunner\.exe\s\-i\s.{0,100}\.ps1.{0,100}\s\-o\s.{0,100}\.exe/ nocase ascii wide

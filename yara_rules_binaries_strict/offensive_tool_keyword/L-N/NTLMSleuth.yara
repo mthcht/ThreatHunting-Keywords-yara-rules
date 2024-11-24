@@ -16,7 +16,7 @@ rule NTLMSleuth
         $string2 = /https\:\/\/ntlm\.pw\// nocase ascii wide
         // Description: verify NTLM hash integrity against the robust database of ntlm.pw.
         // Reference: https://github.com/jmarr73/NTLMSleuth
-        $string3 = /jmarr73\/NTLMSleuth/ nocase ascii wide
+        $string3 = "jmarr73/NTLMSleuth" nocase ascii wide
         // Description: verify NTLM hash integrity against the robust database of ntlm.pw.
         // Reference: https://github.com/jmarr73/NTLMSleuth
         $string4 = /NTLMSleuth\.ps1/ nocase ascii wide

@@ -37,16 +37,16 @@ rule Waitfor_Persistence
         $string9 = /\\Waitfor\-Persistence\-master/ nocase ascii wide
         // Description: Use Waitfor.exe to maintain persistence
         // Reference: https://github.com/3gstudent/Waitfor-Persistence
-        $string10 = /3gstudent\/Waitfor\-Persistence/ nocase ascii wide
+        $string10 = "3gstudent/Waitfor-Persistence" nocase ascii wide
         // Description: Use Waitfor.exe to maintain persistence
         // Reference: https://github.com/3gstudent/Waitfor-Persistence
-        $string11 = /fcda7875e75e4d74879ad122a5861477e30c825cb90aceb76ac885cc2eb7e6dc/ nocase ascii wide
+        $string11 = "fcda7875e75e4d74879ad122a5861477e30c825cb90aceb76ac885cc2eb7e6dc" nocase ascii wide
         // Description: Use Waitfor.exe to maintain persistence
         // Reference: https://github.com/3gstudent/Waitfor-Persistence
-        $string12 = /JABlAHgAZQBjAD0AKABbAFcAbQBpAEMAbABhAHMAcwBdACAAJwBXAGkAbgAzADIAXwBCAGEAYwBrAGQAbwBvAHIAJwApAC4AUAByAG8AcABlAHIAdABpAGUAcwBbACcAQwBvAGQAZQAnAF0ALgBWAGEAbAB1AGUAOwAgAGkAZQB4ACAAJABlAHgAZQBjAA/ nocase ascii wide
+        $string12 = "JABlAHgAZQBjAD0AKABbAFcAbQBpAEMAbABhAHMAcwBdACAAJwBXAGkAbgAzADIAXwBCAGEAYwBrAGQAbwBvAHIAJwApAC4AUAByAG8AcABlAHIAdABpAGUAcwBbACcAQwBvAGQAZQAnAF0ALgBWAGEAbAB1AGUAOwAgAGkAZQB4ACAAJABlAHgAZQBjAA" nocase ascii wide
         // Description: Use Waitfor.exe to maintain persistence
         // Reference: https://github.com/3gstudent/Waitfor-Persistence
-        $string13 = /\'Win32_Backdoor\'/ nocase ascii wide
+        $string13 = "'Win32_Backdoor'" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

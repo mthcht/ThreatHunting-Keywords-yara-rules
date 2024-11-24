@@ -10,7 +10,7 @@ rule archstrike
     strings:
         // Description: Arch Linux repo containing lots of exploitation tools for pentesters
         // Reference: https://archstrike.org/
-        $string1 = /ArchStrike/ nocase ascii wide
+        $string1 = "ArchStrike" nocase ascii wide
 
     condition:
         any of them

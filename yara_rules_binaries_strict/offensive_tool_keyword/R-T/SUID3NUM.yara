@@ -10,7 +10,7 @@ rule SUID3NUM
     strings:
         // Description: A standalone python2/3 script which utilizes pythons built-in modules to find SUID bins. separate default bins from custom bins. cross-match those with bins in GTFO Bins repository & auto-exploit those. all with colors! ( ?? ?? ??)
         // Reference: https://github.com/Anon-Exploiter/SUID3NUM
-        $string1 = /SUID3NUM\s\-/ nocase ascii wide
+        $string1 = "SUID3NUM -" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

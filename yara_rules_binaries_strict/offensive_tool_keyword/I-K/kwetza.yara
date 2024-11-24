@@ -10,7 +10,7 @@ rule kwetza
     strings:
         // Description: Kwetza infects an existing Android application with either custom or default payload templates to avoid detection by antivirus. Kwetza allows you to infect Android applications using the target applications default permissions or inject additional permissions to gain additional functionality.
         // Reference: https://github.com/sensepost/kwetza
-        $string1 = /sensepost\/kwetza/ nocase ascii wide
+        $string1 = "sensepost/kwetza" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

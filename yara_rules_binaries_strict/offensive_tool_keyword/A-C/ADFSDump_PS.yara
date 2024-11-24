@@ -19,10 +19,10 @@ rule ADFSDump_PS
         $string3 = /\\Golden\.ps1/ nocase ascii wide
         // Description: ADFSDump to assist with GoldenSAML
         // Reference: https://github.com/ZephrFish/ADFSDump-PS
-        $string4 = /c04b117bc1e5883c3c85ab2823071b33dbf1344e581e250fa5d80a8fae6b338b/ nocase ascii wide
+        $string4 = "c04b117bc1e5883c3c85ab2823071b33dbf1344e581e250fa5d80a8fae6b338b" nocase ascii wide
         // Description: ADFSDump to assist with GoldenSAML
         // Reference: https://github.com/ZephrFish/ADFSDump-PS
-        $string5 = /ZephrFish\/ADFSDump\-PS/ nocase ascii wide
+        $string5 = "ZephrFish/ADFSDump-PS" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

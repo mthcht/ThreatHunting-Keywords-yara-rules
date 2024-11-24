@@ -19,13 +19,13 @@ rule WSPCoerce
         $string3 = /\\WSPCoerce\.cs/ nocase ascii wide
         // Description: PoC to coerce authentication from Windows hosts using MS-WSP
         // Reference: https://github.com/slemire/WSPCoerce
-        $string4 = /slemire\/WSPCoerce/ nocase ascii wide
+        $string4 = "slemire/WSPCoerce" nocase ascii wide
         // Description: PoC to coerce authentication from Windows hosts using MS-WSP
         // Reference: https://github.com/slemire/WSPCoerce
         $string5 = /WSPCoerce\.ex/ nocase ascii wide
         // Description: PoC to coerce authentication from Windows hosts using MS-WSP
         // Reference: https://github.com/slemire/WSPCoerce
-        $string6 = /WSPCoerce\-main/ nocase ascii wide
+        $string6 = "WSPCoerce-main" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

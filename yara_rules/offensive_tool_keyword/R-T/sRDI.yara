@@ -10,7 +10,7 @@ rule sRDI
     strings:
         // Description: Shellcode Reflective DLL Injection - Shellcode implementation of Reflective DLL Injection. Convert DLLs to position independent shellcode
         // Reference: https://github.com/monoxgas/sRDI
-        $string1 = /ConvertTo\-Shellcode\s\-/ nocase ascii wide
+        $string1 = "ConvertTo-Shellcode -" nocase ascii wide
         // Description: Shellcode Reflective DLL Injection - Shellcode implementation of Reflective DLL Injection. Convert DLLs to position independent shellcode
         // Reference: https://github.com/monoxgas/sRDI
         $string2 = /ConvertTo\-Shellcode\./ nocase ascii wide
@@ -19,10 +19,10 @@ rule sRDI
         $string3 = /ConvertToShellcode\.py/ nocase ascii wide
         // Description: Shellcode Reflective DLL Injection - Shellcode implementation of Reflective DLL Injection. Convert DLLs to position independent shellcode
         // Reference: https://github.com/monoxgas/sRDI
-        $string4 = /Invoke\-Shellcode/ nocase ascii wide
+        $string4 = "Invoke-Shellcode" nocase ascii wide
         // Description: Shellcode Reflective DLL Injection - Shellcode implementation of Reflective DLL Injection. Convert DLLs to position independent shellcode
         // Reference: https://github.com/monoxgas/sRDI
-        $string5 = /monoxgas\/sRDI/ nocase ascii wide
+        $string5 = "monoxgas/sRDI" nocase ascii wide
         // Description: Shellcode Reflective DLL Injection - Shellcode implementation of Reflective DLL Injection. Convert DLLs to position independent shellcode
         // Reference: https://github.com/monoxgas/sRDI
         $string6 = /ShellcodeRDI\./ nocase ascii wide

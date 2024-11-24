@@ -10,7 +10,7 @@ rule warberry
     strings:
         // Description: WarBerryPi is a RaspberryPi based hardware implant that has the ability to go on stealth mode when used in acuiring informational data from a target network. especially useful during read teaming engagements. Its designed with a special feature that allows it to get the needed information within the shortest time possible. WarBerryPis scripts are designed in such way to avoid noise in the network as much as possible.
         // Reference: https://github.com/secgroundzero/warberry
-        $string1 = /warberry/ nocase ascii wide
+        $string1 = "warberry" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

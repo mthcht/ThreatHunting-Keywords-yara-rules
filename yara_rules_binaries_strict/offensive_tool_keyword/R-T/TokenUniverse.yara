@@ -25,7 +25,7 @@ rule TokenUniverse
         $string5 = /\\TokenUniverse\\TokenUniverse\./ nocase ascii wide
         // Description: An advanced tool for working with access tokens and Windows security policy.
         // Reference: https://github.com/diversenok/TokenUniverse
-        $string6 = /diversenok\/TokenUniverse/ nocase ascii wide
+        $string6 = "diversenok/TokenUniverse" nocase ascii wide
         // Description: An advanced tool for working with access tokens and Windows security policy.
         // Reference: https://github.com/diversenok/TokenUniverse
         $string7 = /TokenUniverse\.dproj/ nocase ascii wide

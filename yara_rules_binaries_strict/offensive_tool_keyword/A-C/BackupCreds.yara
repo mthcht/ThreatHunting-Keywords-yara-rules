@@ -40,13 +40,13 @@ rule BackupCreds
         $string10 = /\]\sEnjoy\syour\screds\!\sReverting\sto\sself/ nocase ascii wide
         // Description: A C# implementation of dumping credentials from Windows Credential Manager
         // Reference: https://github.com/leftp/BackupCreds
-        $string11 = /7943C5FF\-C219\-4E0B\-992E\-0ECDEB2681F3/ nocase ascii wide
+        $string11 = "7943C5FF-C219-4E0B-992E-0ECDEB2681F3" nocase ascii wide
         // Description: A C# implementation of dumping credentials from Windows Credential Manager
         // Reference: https://github.com/leftp/BackupCreds
-        $string12 = /leftp\/BackupCreds/ nocase ascii wide
+        $string12 = "leftp/BackupCreds" nocase ascii wide
         // Description: A C# implementation of dumping credentials from Windows Credential Manager
         // Reference: https://github.com/leftp/BackupCreds
-        $string13 = /namespace\sBackupCreds/ nocase ascii wide
+        $string13 = "namespace BackupCreds" nocase ascii wide
         // Description: A C# implementation of dumping credentials from Windows Credential Manager
         // Reference: https://github.com/leftp/BackupCreds
         $string14 = /using\sstatic\sBackupCreds\.Interop/ nocase ascii wide

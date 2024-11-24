@@ -10,7 +10,7 @@ rule VPNPivot
     strings:
         // Description: Sometime we do external penetration testing and when we compromise the remote target we would like to explore the internal network behind and getting such compromise like owning Active directory. accessing shared files. conducting MITM attacks ... etc
         // Reference: https://github.com/0x36/VPNPivot
-        $string1 = /VPNPivot/ nocase ascii wide
+        $string1 = "VPNPivot" nocase ascii wide
 
     condition:
         any of them

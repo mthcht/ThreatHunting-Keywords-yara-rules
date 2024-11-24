@@ -10,16 +10,16 @@ rule wifigrabber
     strings:
         // Description: grab wifi password and exfiltrate to a given site
         // Reference: https://github.com/hak5/omg-payloads/tree/master/payloads/library/credentials/wifigrabber
-        $string1 = /\s\>\sWi\-Fi\-PASS/ nocase ascii wide
+        $string1 = " > Wi-Fi-PASS" nocase ascii wide
         // Description: grab wifi password and exfiltrate to a given site
         // Reference: https://github.com/hak5/omg-payloads/tree/master/payloads/library/credentials/wifigrabber
-        $string2 = /\s\-InFile\sWi\-Fi\-PASS/ nocase ascii wide
+        $string2 = " -InFile Wi-Fi-PASS" nocase ascii wide
         // Description: grab wifi password and exfiltrate to a given site
         // Reference: https://github.com/hak5/omg-payloads/tree/master/payloads/library/credentials/wifigrabber
-        $string3 = /\/credentials\/wifigrabber/ nocase ascii wide
+        $string3 = "/credentials/wifigrabber" nocase ascii wide
         // Description: grab wifi password and exfiltrate to a given site
         // Reference: https://github.com/hak5/omg-payloads/tree/master/payloads/library/credentials/wifigrabber
-        $string4 = /String\snetsh\swlan\sexport\sprofile\skey\=clear/ nocase ascii wide
+        $string4 = "String netsh wlan export profile key=clear" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -10,7 +10,7 @@ rule RdpStrike
     strings:
         // Description: Positional Independent Code to extract clear text password from mstsc.exe using API Hooking via HWBP
         // Reference: https://github.com/0xEr3bus/RdpStrike
-        $string1 = /\"RdpStrike\.cna\"/ nocase ascii wide
+        $string1 = /\\"RdpStrike\.cna\\"/ nocase ascii wide
         // Description: Positional Independent Code to extract clear text password from mstsc.exe using API Hooking via HWBP
         // Reference: https://github.com/0xEr3bus/RdpStrike
         $string2 = /\/RdpStrike\.git/ nocase ascii wide
@@ -25,19 +25,19 @@ rule RdpStrike
         $string5 = /\\RdpStrike\\/ nocase ascii wide
         // Description: Positional Independent Code to extract clear text password from mstsc.exe using API Hooking via HWBP
         // Reference: https://github.com/0xEr3bus/RdpStrike
-        $string6 = /0xEr3bus\/RdpStrike/ nocase ascii wide
+        $string6 = "0xEr3bus/RdpStrike" nocase ascii wide
         // Description: Positional Independent Code to extract clear text password from mstsc.exe using API Hooking via HWBP
         // Reference: https://github.com/0xEr3bus/RdpStrike
-        $string7 = /227cc3d2c07ef203c39afe00c81943cf245d626c1efa1b32024d7229604635e5/ nocase ascii wide
+        $string7 = "227cc3d2c07ef203c39afe00c81943cf245d626c1efa1b32024d7229604635e5" nocase ascii wide
         // Description: Positional Independent Code to extract clear text password from mstsc.exe using API Hooking via HWBP
         // Reference: https://github.com/0xEr3bus/RdpStrike
-        $string8 = /Disabling\sRDPStrike/ nocase ascii wide
+        $string8 = "Disabling RDPStrike" nocase ascii wide
         // Description: Positional Independent Code to extract clear text password from mstsc.exe using API Hooking via HWBP
         // Reference: https://github.com/0xEr3bus/RdpStrike
         $string9 = /Injecting\sinto\smstsc\.exe/ nocase ascii wide
         // Description: Positional Independent Code to extract clear text password from mstsc.exe using API Hooking via HWBP
         // Reference: https://github.com/0xEr3bus/RdpStrike
-        $string10 = /RDPStrike\senabled/ nocase ascii wide
+        $string10 = "RDPStrike enabled" nocase ascii wide
         // Description: Positional Independent Code to extract clear text password from mstsc.exe using API Hooking via HWBP
         // Reference: https://github.com/0xEr3bus/RdpStrike
         $string11 = /RdpStrike\.x64\.bin/ nocase ascii wide

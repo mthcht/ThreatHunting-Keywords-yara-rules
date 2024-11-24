@@ -13,16 +13,16 @@ rule adcshunter
         $string1 = /\/adcshunter\.git/ nocase ascii wide
         // Description: Uses rpcdump to locate the ADCS server and identify if ESC8 is vulnerable from unauthenticated perspective.
         // Reference: https://github.com/danti1988/adcshunter
-        $string2 = /ADCS\sServer\slocation\sidentified\son\sIP\s/ nocase ascii wide
+        $string2 = "ADCS Server location identified on IP " nocase ascii wide
         // Description: Uses rpcdump to locate the ADCS server and identify if ESC8 is vulnerable from unauthenticated perspective.
         // Reference: https://github.com/danti1988/adcshunter
         $string3 = /adcshunter\.py/ nocase ascii wide
         // Description: Uses rpcdump to locate the ADCS server and identify if ESC8 is vulnerable from unauthenticated perspective.
         // Reference: https://github.com/danti1988/adcshunter
-        $string4 = /danti1988\/adcshunter/ nocase ascii wide
+        $string4 = "danti1988/adcshunter" nocase ascii wide
         // Description: Uses rpcdump to locate the ADCS server and identify if ESC8 is vulnerable from unauthenticated perspective.
         // Reference: https://github.com/danti1988/adcshunter
-        $string5 = /impacket\-rpcdump/ nocase ascii wide
+        $string5 = "impacket-rpcdump" nocase ascii wide
         // Description: Uses rpcdump to locate the ADCS server and identify if ESC8 is vulnerable from unauthenticated perspective.
         // Reference: https://github.com/danti1988/adcshunter
         $string6 = /rpcdump\.py/ nocase ascii wide

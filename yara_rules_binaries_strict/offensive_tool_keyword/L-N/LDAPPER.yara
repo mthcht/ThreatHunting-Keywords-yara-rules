@@ -19,7 +19,7 @@ rule LDAPPER
         $string3 = /\/ldapper\.py/ nocase ascii wide
         // Description: LDAP Querying without the Suck
         // Reference: https://github.com/shellster/LDAPPER
-        $string4 = /\/LDAPPER\-master/ nocase ascii wide
+        $string4 = "/LDAPPER-master" nocase ascii wide
         // Description: LDAP Querying without the Suck
         // Reference: https://github.com/shellster/LDAPPER
         $string5 = /\\ldapper\.py/ nocase ascii wide
@@ -31,7 +31,7 @@ rule LDAPPER
         $string7 = /AD\sLDAP\sCommand\sLine\sSearching\sthat\sdoesn\'t\ssuck\./ nocase ascii wide
         // Description: LDAP Querying without the Suck
         // Reference: https://github.com/shellster/LDAPPER
-        $string8 = /shellster\/LDAPPER/ nocase ascii wide
+        $string8 = "shellster/LDAPPER" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

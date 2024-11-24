@@ -10,7 +10,7 @@ rule icmpsh
     strings:
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string1 = /bdamele\/icmpsh/ nocase ascii wide
+        $string1 = "bdamele/icmpsh" nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
         $string2 = /icmpsh\.exe/ nocase ascii wide
@@ -25,7 +25,7 @@ rule icmpsh
         $string5 = /icmpsh\-m\./ nocase ascii wide
         // Description: Simple reverse ICMP shell
         // Reference: https://github.com/bdamele/icmpsh
-        $string6 = /icmpsh\-master/ nocase ascii wide
+        $string6 = "icmpsh-master" nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
         $string7 = /icmpsh\-s\./ nocase ascii wide

@@ -10,7 +10,7 @@ rule theHarvester
     strings:
         // Description: E-mails. subdomains and names Harvester.
         // Reference: https://github.com/laramies/theHarvester
-        $string1 = /theHarvester/ nocase ascii wide
+        $string1 = "theHarvester" nocase ascii wide
 
     condition:
         any of them

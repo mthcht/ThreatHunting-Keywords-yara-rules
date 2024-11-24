@@ -13,7 +13,7 @@ rule dirty_pipe
         $string1 = /\.\/exploit\s\/etc\/passwd\s1\s.{0,100}cat\s\/etc\/passwd/ nocase ascii wide
         // Description: POC exploitation for dirty pipe vulnerability
         // Reference: https://github.com/0xIronGoat/dirty-pipe
-        $string2 = /\/0xIronGoat\/dirty\-pipe/ nocase ascii wide
+        $string2 = "/0xIronGoat/dirty-pipe" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

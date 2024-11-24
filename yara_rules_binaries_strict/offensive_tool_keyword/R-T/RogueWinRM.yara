@@ -22,16 +22,16 @@ rule RogueWinRM
         $string4 = /\\windows\\temp\\nc64\.exe/ nocase ascii wide
         // Description: RogueWinRM is a local privilege escalation exploit that allows to escalate from a Service account (with SeImpersonatePrivilege) to Local System account if WinRM service is not running
         // Reference: https://github.com/antonioCoco/RogueWinRM
-        $string5 = /antonioCoco\/RogueWinRM/ nocase ascii wide
+        $string5 = "antonioCoco/RogueWinRM" nocase ascii wide
         // Description: RogueWinRM is a local privilege escalation exploit that allows to escalate from a Service account (with SeImpersonatePrivilege) to Local System account if WinRM service is not running
         // Reference: https://github.com/antonioCoco/RogueWinRM
-        $string6 = /B03A3AF9\-9448\-43FE\-8CEE\-5A2C43BFAC86/ nocase ascii wide
+        $string6 = "B03A3AF9-9448-43FE-8CEE-5A2C43BFAC86" nocase ascii wide
         // Description: RogueWinRM is a local privilege escalation exploit that allows to escalate from a Service account (with SeImpersonatePrivilege) to Local System account if WinRM service is not running
         // Reference: https://github.com/antonioCoco/RogueWinRM
-        $string7 = /ec260817672bcc48f734f89e9eac84ebc7903924b36f807caf58c6820c0e336c/ nocase ascii wide
+        $string7 = "ec260817672bcc48f734f89e9eac84ebc7903924b36f807caf58c6820c0e336c" nocase ascii wide
         // Description: RogueWinRM is a local privilege escalation exploit that allows to escalate from a Service account (with SeImpersonatePrivilege) to Local System account if WinRM service is not running
         // Reference: https://github.com/antonioCoco/RogueWinRM
-        $string8 = /RogueWinRM\s/ nocase ascii wide
+        $string8 = "RogueWinRM " nocase ascii wide
         // Description: RogueWinRM is a local privilege escalation exploit that allows to escalate from a Service account (with SeImpersonatePrivilege) to Local System account if WinRM service is not running
         // Reference: https://github.com/antonioCoco/RogueWinRM
         $string9 = /RogueWinRM\.cpp/ nocase ascii wide

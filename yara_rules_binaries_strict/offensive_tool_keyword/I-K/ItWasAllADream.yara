@@ -13,7 +13,7 @@ rule ItWasAllADream
         $string1 = /\/ItWasAllADream\.git/ nocase ascii wide
         // Description: A PrintNightmare (CVE-2021-34527) Python Scanner. Scan entire subnets for hosts vulnerable to the PrintNightmare RCE
         // Reference: https://github.com/byt3bl33d3r/ItWasAllADream
-        $string2 = /byt3bl33d3r\/ItWasAllADream/ nocase ascii wide
+        $string2 = "byt3bl33d3r/ItWasAllADream" nocase ascii wide
         // Description: A PrintNightmare (CVE-2021-34527) Python Scanner. Scan entire subnets for hosts vulnerable to the PrintNightmare RCE
         // Reference: https://github.com/byt3bl33d3r/ItWasAllADream
         $string3 = /itwasalladream\s\-u\s.{0,100}\s\-p\s.{0,100}\s\-d\s/ nocase ascii wide
@@ -22,7 +22,7 @@ rule ItWasAllADream
         $string4 = /itwasalladream.{0,100}bogus\.dll/ nocase ascii wide
         // Description: A PrintNightmare (CVE-2021-34527) Python Scanner. Scan entire subnets for hosts vulnerable to the PrintNightmare RCE
         // Reference: https://github.com/byt3bl33d3r/ItWasAllADream
-        $string5 = /ItWasAllADream\-master/ nocase ascii wide
+        $string5 = "ItWasAllADream-master" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

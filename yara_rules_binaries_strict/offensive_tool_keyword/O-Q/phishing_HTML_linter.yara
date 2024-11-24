@@ -10,7 +10,7 @@ rule phishing_HTML_linter
     strings:
         // Description: Phishing and Social-Engineering related scripts
         // Reference: https://github.com/mgeeky/Penetration-Testing-Tools/blob/master/phishing
-        $string1 = /\/VisualBasicObfuscator/ nocase ascii wide
+        $string1 = "/VisualBasicObfuscator" nocase ascii wide
         // Description: Phishing and Social-Engineering related scripts
         // Reference: https://github.com/mgeeky/Penetration-Testing-Tools/blob/master/phishing
         $string2 = /DancingRightToLeft\.py/ nocase ascii wide
@@ -28,7 +28,7 @@ rule phishing_HTML_linter
         $string6 = /phishing\-HTML\-linter\./ nocase ascii wide
         // Description: Phishing and Social-Engineering related scripts
         // Reference: https://github.com/mgeeky/Penetration-Testing-Tools/blob/master/phishing
-        $string7 = /RobustPentestMacro/ nocase ascii wide
+        $string7 = "RobustPentestMacro" nocase ascii wide
         // Description: Phishing and Social-Engineering related scripts
         // Reference: https://github.com/mgeeky/Penetration-Testing-Tools/blob/master/phishing
         $string8 = /vba\-macro\-mac\-persistence\.vbs/ nocase ascii wide

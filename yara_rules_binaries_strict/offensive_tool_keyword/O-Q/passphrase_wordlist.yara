@@ -10,7 +10,7 @@ rule passphrase_wordlist
     strings:
         // Description: This project includes a massive wordlist of phrases (over 20 million) and two hashcat rule files for GPU-based cracking. The rules will create over 1.000 permutations of each phase.
         // Reference: https://github.com/initstring/passphrase-wordlist
-        $string1 = /passphrase\-wordlist/ nocase ascii wide
+        $string1 = "passphrase-wordlist" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

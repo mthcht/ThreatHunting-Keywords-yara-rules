@@ -19,7 +19,7 @@ rule ratchatpt
         $string3 = /\/ratchatPT\.syso/ nocase ascii wide
         // Description: C2 using openAI API
         // Reference: https://github.com/spartan-conseil/ratchatpt
-        $string4 = /\/root\/output\/ratchatPT/ nocase ascii wide
+        $string4 = "/root/output/ratchatPT" nocase ascii wide
         // Description: C2 using openAI API
         // Reference: https://github.com/spartan-conseil/ratchatpt
         $string5 = /\\ratchatPT\.go/ nocase ascii wide
@@ -31,7 +31,7 @@ rule ratchatpt
         $string7 = /Agent\/ratchatPT\.go/ nocase ascii wide
         // Description: C2 using openAI API
         // Reference: https://github.com/spartan-conseil/ratchatpt
-        $string8 = /output\/RatChatPT_unix/ nocase ascii wide
+        $string8 = "output/RatChatPT_unix" nocase ascii wide
         // Description: C2 using openAI API
         // Reference: https://github.com/spartan-conseil/ratchatpt
         $string9 = /ratchatPT.{0,1000}\/bin\/bash/ nocase ascii wide
@@ -43,10 +43,10 @@ rule ratchatpt
         $string11 = /RatChatPT_windows\.exe/ nocase ascii wide
         // Description: C2 using openAI API
         // Reference: https://github.com/spartan-conseil/ratchatpt
-        $string12 = /ratchatpt\-main/ nocase ascii wide
+        $string12 = "ratchatpt-main" nocase ascii wide
         // Description: C2 using openAI API
         // Reference: https://github.com/spartan-conseil/ratchatpt
-        $string13 = /spartan\-conseil\/ratchatpt/ nocase ascii wide
+        $string13 = "spartan-conseil/ratchatpt" nocase ascii wide
 
     condition:
         any of them

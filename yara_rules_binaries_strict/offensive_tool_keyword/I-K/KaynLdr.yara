@@ -55,16 +55,16 @@ rule KaynLdr
         $string15 = /\\src\\KaynLdr\.c/ nocase ascii wide
         // Description: KaynLdr is a Reflective Loader written in C/ASM
         // Reference: https://github.com/Cracked5pider/KaynLdr
-        $string16 = /Call\sKaynLoader\sin\sa\sremote\sthread/ nocase ascii wide
+        $string16 = "Call KaynLoader in a remote thread" nocase ascii wide
         // Description: KaynLdr is a Reflective Loader written in C/ASM
         // Reference: https://github.com/Cracked5pider/KaynLdr
-        $string17 = /Call\sKaynLoader\sin\sa\sremote\sthread/ nocase ascii wide
+        $string17 = "Call KaynLoader in a remote thread" nocase ascii wide
         // Description: KaynLdr is a Reflective Loader written in C/ASM
         // Reference: https://github.com/Cracked5pider/KaynLdr
-        $string18 = /Cracked5pider\/KaynLdr/ nocase ascii wide
+        $string18 = "Cracked5pider/KaynLdr" nocase ascii wide
         // Description: KaynLdr is a Reflective Loader written in C/ASM
         // Reference: https://github.com/Cracked5pider/KaynLdr
-        $string19 = /Hello\sfrom\sKaynLdr/ nocase ascii wide
+        $string19 = "Hello from KaynLdr" nocase ascii wide
         // Description: KaynLdr is a Reflective Loader written in C/ASM
         // Reference: https://github.com/Cracked5pider/KaynLdr
         $string20 = /KaynInject\.x64\.exe/ nocase ascii wide
@@ -73,16 +73,16 @@ rule KaynLdr
         $string21 = /KaynInject\.x86\.exe/ nocase ascii wide
         // Description: KaynLdr is a Reflective Loader written in C/ASM
         // Reference: https://github.com/Cracked5pider/KaynLdr
-        $string22 = /KAYNINJECT_KAYNINJECT_H/ nocase ascii wide
+        $string22 = "KAYNINJECT_KAYNINJECT_H" nocase ascii wide
         // Description: KaynLdr is a Reflective Loader written in C/ASM
         // Reference: https://github.com/Cracked5pider/KaynLdr
         $string23 = /KaynLdr\.x64\.dll/ nocase ascii wide
         // Description: KaynLdr is a Reflective Loader written in C/ASM
         // Reference: https://github.com/Cracked5pider/KaynLdr
-        $string24 = /KAYNLDR_KAYNLDR_H/ nocase ascii wide
+        $string24 = "KAYNLDR_KAYNLDR_H" nocase ascii wide
         // Description: KaynLdr is a Reflective Loader written in C/ASM
         // Reference: https://github.com/Cracked5pider/KaynLdr
-        $string25 = /Write\sDll\sbuffer\sinto\sremote\smemory/ nocase ascii wide
+        $string25 = "Write Dll buffer into remote memory" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

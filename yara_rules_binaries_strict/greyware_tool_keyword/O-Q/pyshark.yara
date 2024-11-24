@@ -16,13 +16,13 @@ rule pyshark
         $string2 = /\\pyshark\\src\\/ nocase ascii wide
         // Description: Python wrapper for tshark allowing python packet parsing using wireshark dissectors
         // Reference: https://github.com/KimiNewt/pyshark
-        $string3 = /import\spyshark/ nocase ascii wide
+        $string3 = "import pyshark" nocase ascii wide
         // Description: Python wrapper for tshark allowing python packet parsing using wireshark dissectors
         // Reference: https://github.com/KimiNewt/pyshark
-        $string4 = /KimiNewt\/pyshark/ nocase ascii wide
+        $string4 = "KimiNewt/pyshark" nocase ascii wide
         // Description: Python wrapper for tshark allowing python packet parsing using wireshark dissectors
         // Reference: https://github.com/KimiNewt/pyshark
-        $string5 = /pip\sinstall\spyshark/ nocase ascii wide
+        $string5 = "pip install pyshark" nocase ascii wide
         // Description: Python wrapper for tshark allowing python packet parsing using wireshark dissectors
         // Reference: https://github.com/KimiNewt/pyshark
         $string6 = /pyshark\.FileCapture\(/ nocase ascii wide

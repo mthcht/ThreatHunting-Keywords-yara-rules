@@ -13,13 +13,13 @@ rule DNSStager
         $string1 = /\sdnsstager\.py/ nocase ascii wide
         // Description: DNSStager is an open-source project based on Python used to hide and transfer your payload using DNS.
         // Reference: https://github.com/mhaskar/DNSStager
-        $string2 = /\sIPV6\saddresses\sxored\s/ nocase ascii wide
+        $string2 = " IPV6 addresses xored " nocase ascii wide
         // Description: DNSStager is an open-source project based on Python used to hide and transfer your payload using DNS.
         // Reference: https://github.com/mhaskar/DNSStager
         $string3 = /\s\-\-payload\s.{0,100}\s\-\-shellcode_path\s.{0,100}\s\-\-xorkey\s/ nocase ascii wide
         // Description: DNSStager is an open-source project based on Python used to hide and transfer your payload using DNS.
         // Reference: https://github.com/mhaskar/DNSStager
-        $string4 = /\s\-\-payload\sx64\/c\/ipv6\s/ nocase ascii wide
+        $string4 = " --payload x64/c/ipv6 " nocase ascii wide
         // Description: DNSStager is an open-source project based on Python used to hide and transfer your payload using DNS.
         // Reference: https://github.com/mhaskar/DNSStager
         $string5 = /\/DNSStager\.git/ nocase ascii wide
@@ -40,28 +40,28 @@ rule DNSStager
         $string10 = /build_golang_xor_ipv6\(/ nocase ascii wide
         // Description: DNSStager is an open-source project based on Python used to hide and transfer your payload using DNS.
         // Reference: https://github.com/mhaskar/DNSStager
-        $string11 = /DNSStager\spayloads\sAvailable/ nocase ascii wide
+        $string11 = "DNSStager payloads Available" nocase ascii wide
         // Description: DNSStager is an open-source project based on Python used to hide and transfer your payload using DNS.
         // Reference: https://github.com/mhaskar/DNSStager
-        $string12 = /DNSStager\swill\s/ nocase ascii wide
+        $string12 = "DNSStager will " nocase ascii wide
         // Description: DNSStager is an open-source project based on Python used to hide and transfer your payload using DNS.
         // Reference: https://github.com/mhaskar/DNSStager
         $string13 = /encode_xor_shellcode\(/ nocase ascii wide
         // Description: DNSStager is an open-source project based on Python used to hide and transfer your payload using DNS.
         // Reference: https://github.com/mhaskar/DNSStager
-        $string14 = /f15f6182ca98bb702c2578efc0aef6e35d8237b89a00a588364bb7e068b132fa/ nocase ascii wide
+        $string14 = "f15f6182ca98bb702c2578efc0aef6e35d8237b89a00a588364bb7e068b132fa" nocase ascii wide
         // Description: DNSStager is an open-source project based on Python used to hide and transfer your payload using DNS.
         // Reference: https://github.com/mhaskar/DNSStager
-        $string15 = /mhaskar\/DNSStager/ nocase ascii wide
+        $string15 = "mhaskar/DNSStager" nocase ascii wide
         // Description: DNSStager is an open-source project based on Python used to hide and transfer your payload using DNS.
         // Reference: https://github.com/mhaskar/DNSStager
-        $string16 = /run\sDNSStager\sas\sroot/ nocase ascii wide
+        $string16 = "run DNSStager as root" nocase ascii wide
         // Description: DNSStager is an open-source project based on Python used to hide and transfer your payload using DNS.
         // Reference: https://github.com/mhaskar/DNSStager
         $string17 = /sudo\s\.\/dnsstager/ nocase ascii wide
         // Description: DNSStager is an open-source project based on Python used to hide and transfer your payload using DNS.
         // Reference: https://github.com/mhaskar/DNSStager
-        $string18 = /We\srecommend\sto\sXOR\syour\sshellcode\sbefore\syou\stransfer\sit/ nocase ascii wide
+        $string18 = "We recommend to XOR your shellcode before you transfer it" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

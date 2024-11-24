@@ -43,19 +43,19 @@ rule EASSniper
         $string11 = /\]\sNow\sspraying\sEAS\sportal\sat\shttps\:\/\/.{0,1000}\/Microsoft\-Server\-ActiveSync/ nocase ascii wide
         // Description: EASSniper is a penetration testing tool for account enumeration and brute force attacks against Exchange Active Sync (EAS)
         // Reference: https://github.com/fugawi/EASSniper
-        $string12 = /002fa7c3b308536f94ff10852afcfbb0285608d259a43277e69751ab7db48e04/ nocase ascii wide
+        $string12 = "002fa7c3b308536f94ff10852afcfbb0285608d259a43277e69751ab7db48e04" nocase ascii wide
         // Description: EASSniper is a penetration testing tool for account enumeration and brute force attacks against Exchange Active Sync (EAS)
         // Reference: https://github.com/fugawi/EASSniper
-        $string13 = /fugawi\/EASSniper/ nocase ascii wide
+        $string13 = "fugawi/EASSniper" nocase ascii wide
         // Description: EASSniper is a penetration testing tool for account enumeration and brute force attacks against Exchange Active Sync (EAS)
         // Reference: https://github.com/fugawi/EASSniper
-        $string14 = /Invoke\-PasswordSprayEAS/ nocase ascii wide
+        $string14 = "Invoke-PasswordSprayEAS" nocase ascii wide
         // Description: EASSniper is a penetration testing tool for account enumeration and brute force attacks against Exchange Active Sync (EAS)
         // Reference: https://github.com/fugawi/EASSniper
-        $string15 = /Invoke\-UsernameHarvestEAS/ nocase ascii wide
+        $string15 = "Invoke-UsernameHarvestEAS" nocase ascii wide
         // Description: EASSniper is a penetration testing tool for account enumeration and brute force attacks against Exchange Active Sync (EAS)
         // Reference: https://github.com/fugawi/EASSniper
-        $string16 = /Password\sSpraying\sEAS\sat\shttps\:\/\// nocase ascii wide
+        $string16 = "Password Spraying EAS at https://" nocase ascii wide
 
     condition:
         any of them

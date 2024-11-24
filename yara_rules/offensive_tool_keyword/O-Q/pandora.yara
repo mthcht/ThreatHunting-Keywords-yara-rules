@@ -10,7 +10,7 @@ rule pandora
     strings:
         // Description: A red team tool that assists into extracting/dumping master credentials and/or entries from different password managers
         // Reference: https://github.com/efchatz/pandora
-        $string1 = /\sneeds\sHigh\sIntegrity\sPrivileges\sto\sdump\sthe\srelevant\sprocess\!/ nocase ascii wide
+        $string1 = " needs High Integrity Privileges to dump the relevant process!" nocase ascii wide
         // Description: A red team tool that assists into extracting/dumping master credentials and/or entries from different password managers
         // Reference: https://github.com/efchatz/pandora
         $string2 = /\\1password\\app\\FindsecondPID1password\.h/ nocase ascii wide
@@ -127,13 +127,13 @@ rule pandora
         $string39 = /\\roboform\\plugin\\getCredsroboformplugin\.h/ nocase ascii wide
         // Description: A red team tool that assists into extracting/dumping master credentials and/or entries from different password managers
         // Reference: https://github.com/efchatz/pandora
-        $string40 = /82F417BE\-49BF\-44FF\-9BBD\-64FECEA181D7/ nocase ascii wide
+        $string40 = "82F417BE-49BF-44FF-9BBD-64FECEA181D7" nocase ascii wide
         // Description: A red team tool that assists into extracting/dumping master credentials and/or entries from different password managers
         // Reference: https://github.com/efchatz/pandora
-        $string41 = /c1fb599493390e17676176219c5cdd8f4b4bca43696b6a54ded88c9b28f741ff/ nocase ascii wide
+        $string41 = "c1fb599493390e17676176219c5cdd8f4b4bca43696b6a54ded88c9b28f741ff" nocase ascii wide
         // Description: A red team tool that assists into extracting/dumping master credentials and/or entries from different password managers
         // Reference: https://github.com/efchatz/pandora
-        $string42 = /efchatz\/pandora/ nocase ascii wide
+        $string42 = "efchatz/pandora" nocase ascii wide
         // Description: A red team tool that assists into extracting/dumping master credentials and/or entries from different password managers
         // Reference: https://github.com/efchatz/pandora
         $string43 = /getCreds1passwordappEntries1\.h/ nocase ascii wide

@@ -16,10 +16,10 @@ rule DLL_Spoofer
         $string2 = /\\spoof\.py/ nocase ascii wide
         // Description: POC for a DLL spoofer to determine DLL Hijacking
         // Reference: https://github.com/MitchHS/DLL-Spoofer
-        $string3 = /DLL\-Spoofer\-main/ nocase ascii wide
+        $string3 = "DLL-Spoofer-main" nocase ascii wide
         // Description: POC for a DLL spoofer to determine DLL Hijacking
         // Reference: https://github.com/MitchHS/DLL-Spoofer
-        $string4 = /MitchHS\/DLL\-Spoofer/ nocase ascii wide
+        $string4 = "MitchHS/DLL-Spoofer" nocase ascii wide
         // Description: POC for a DLL spoofer to determine DLL Hijacking
         // Reference: https://github.com/MitchHS/DLL-Spoofer
         $string5 = /spoof\.py\s.{0,1000}\.dll/ nocase ascii wide

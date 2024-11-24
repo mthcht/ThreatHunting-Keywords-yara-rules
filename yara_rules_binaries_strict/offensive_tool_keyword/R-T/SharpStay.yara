@@ -10,16 +10,16 @@ rule SharpStay
     strings:
         // Description: SharpStay - .NET Persistence
         // Reference: https://github.com/0xthirteen/SharpStay
-        $string1 = /\saction\=BackdoorLNK\s/ nocase ascii wide
+        $string1 = " action=BackdoorLNK " nocase ascii wide
         // Description: SharpStay - .NET Persistence
         // Reference: https://github.com/0xthirteen/SharpStay
         $string2 = /\saction\=CreateService\sservicename\=.{0,100}\scommand\=/ nocase ascii wide
         // Description: SharpStay - .NET Persistence
         // Reference: https://github.com/0xthirteen/SharpStay
-        $string3 = /\saction\=ElevatedRegistryKey\skeyname\=Debug\skeypath/ nocase ascii wide
+        $string3 = " action=ElevatedRegistryKey keyname=Debug keypath" nocase ascii wide
         // Description: SharpStay - .NET Persistence
         // Reference: https://github.com/0xthirteen/SharpStay
-        $string4 = /\saction\=ElevatedUserInitKey\scommand\=/ nocase ascii wide
+        $string4 = " action=ElevatedUserInitKey command=" nocase ascii wide
         // Description: SharpStay - .NET Persistence
         // Reference: https://github.com/0xthirteen/SharpStay
         $string5 = /\saction\=JunctionFolder\sdllpath\=.{0,100}\.dll\sguid\=/ nocase ascii wide
@@ -34,10 +34,10 @@ rule SharpStay
         $string8 = /\saction\=ScheduledTaskAction\staskname\=.{0,100}\scommand\=/ nocase ascii wide
         // Description: SharpStay - .NET Persistence
         // Reference: https://github.com/0xthirteen/SharpStay
-        $string9 = /\saction\=SchTaskCOMHijack\sclsid\=/ nocase ascii wide
+        $string9 = " action=SchTaskCOMHijack clsid=" nocase ascii wide
         // Description: SharpStay - .NET Persistence
         // Reference: https://github.com/0xthirteen/SharpStay
-        $string10 = /\saction\=UserRegistryKey\skeyname\=Debug\skeypath\=HKCU\:/ nocase ascii wide
+        $string10 = " action=UserRegistryKey keyname=Debug keypath=HKCU:" nocase ascii wide
         // Description: SharpStay - .NET Persistence
         // Reference: https://github.com/0xthirteen/SharpStay
         $string11 = /\saction\=WMIEventSub\scommand\=.{0,100}\seventname\=/ nocase ascii wide
@@ -55,13 +55,13 @@ rule SharpStay
         $string15 = /\.exe\saction\=ListTaskNames/ nocase ascii wide
         // Description: SharpStay - .NET Persistence
         // Reference: https://github.com/0xthirteen/SharpStay
-        $string16 = /\/0xthirteen\// nocase ascii wide
+        $string16 = "/0xthirteen/" nocase ascii wide
         // Description: SharpStay - .NET Persistence
         // Reference: https://github.com/0xthirteen/SharpStay
         $string17 = /\/SharpStay\.git/ nocase ascii wide
         // Description: SharpStay - .NET Persistence
         // Reference: https://github.com/0xthirteen/SharpStay
-        $string18 = /\/SharpStay\// nocase ascii wide
+        $string18 = "/SharpStay/" nocase ascii wide
         // Description: SharpStay - .NET Persistence
         // Reference: https://github.com/0xthirteen/SharpStay
         $string19 = /\[\+\]\sCreated\sElevated\sHKLM\:/ nocase ascii wide
@@ -70,16 +70,16 @@ rule SharpStay
         $string20 = /\[\+\]\sUpdated\sElevated\sHKLM\:Software\\\\Microsoft\\\\Windows\sNT\\\\CurrentVersion\\\\Winlogon\skey\sUserInit/ nocase ascii wide
         // Description: SharpStay - .NET Persistence
         // Reference: https://github.com/0xthirteen/SharpStay
-        $string21 = /0xthirteen\/SharpStay/ nocase ascii wide
+        $string21 = "0xthirteen/SharpStay" nocase ascii wide
         // Description: SharpStay - .NET Persistence
         // Reference: https://github.com/0xthirteen/SharpStay
-        $string22 = /2963C954\-7B1E\-47F5\-B4FA\-2FC1F0D56AEA/ nocase ascii wide
+        $string22 = "2963C954-7B1E-47F5-B4FA-2FC1F0D56AEA" nocase ascii wide
         // Description: SharpStay - .NET Persistence
         // Reference: https://github.com/0xthirteen/SharpStay
-        $string23 = /2963C954\-7B1E\-47F5\-B4FA\-2FC1F0D56AEA/ nocase ascii wide
+        $string23 = "2963C954-7B1E-47F5-B4FA-2FC1F0D56AEA" nocase ascii wide
         // Description: SharpStay - .NET Persistence
         // Reference: https://github.com/0xthirteen/SharpStay
-        $string24 = /action\=SchTaskCOMHijack\s/ nocase ascii wide
+        $string24 = "action=SchTaskCOMHijack " nocase ascii wide
         // Description: SharpStay - .NET Persistence
         // Reference: https://github.com/0xthirteen/SharpStay
         $string25 = /SharpStay\.csproj/ nocase ascii wide
@@ -91,7 +91,7 @@ rule SharpStay
         $string27 = /SharpStay\.sln/ nocase ascii wide
         // Description: SharpStay - .NET Persistence
         // Reference: https://github.com/0xthirteen/SharpStay
-        $string28 = /SharpStay\-master/ nocase ascii wide
+        $string28 = "SharpStay-master" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

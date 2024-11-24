@@ -10,7 +10,7 @@ rule LOLBAS_Project
     strings:
         // Description: Living Off The Land Binaries and Scripts (and also Libraries) malicious use of  legitimate tool
         // Reference: https://lolbas-project.github.io/
-        $string1 = /LOLBAS\-Project/ nocase ascii wide
+        $string1 = "LOLBAS-Project" nocase ascii wide
 
     condition:
         any of them

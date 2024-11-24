@@ -34,13 +34,13 @@ rule DiskCryptor
         $string8 = /\\Public\\dcapi\.dll/ nocase ascii wide
         // Description: DiskCryptor is an open source encryption solution that offers encryption of all disk partitions including system partitions
         // Reference: https://github.com/DavidXanatos/DiskCryptor
-        $string9 = /A38C04C7\-B172\-4897\-8471\-E3478903035E/ nocase ascii wide
+        $string9 = "A38C04C7-B172-4897-8471-E3478903035E" nocase ascii wide
         // Description: DiskCryptor is an open source encryption solution that offers encryption of all disk partitions including system partitions
         // Reference: https://github.com/DavidXanatos/DiskCryptor
-        $string10 = /A38C04C7\-B172\-4897\-8471\-E3478903035E/ nocase ascii wide
+        $string10 = "A38C04C7-B172-4897-8471-E3478903035E" nocase ascii wide
         // Description: DiskCryptor is an open source encryption solution that offers encryption of all disk partitions including system partitions
         // Reference: https://github.com/DavidXanatos/DiskCryptor
-        $string11 = /DavidXanatos\/DiskCryptor/ nocase ascii wide
+        $string11 = "DavidXanatos/DiskCryptor" nocase ascii wide
         // Description: DiskCryptor is an open source encryption solution that offers encryption of all disk partitions including system partitions
         // Reference: https://github.com/DavidXanatos/DiskCryptor
         $string12 = /dccon\.exe\s\-encrypt2/ nocase ascii wide
@@ -58,16 +58,16 @@ rule DiskCryptor
         $string16 = /dcrypt_winpe\.zip/ nocase ascii wide
         // Description: DiskCryptor is an open source encryption solution that offers encryption of all disk partitions including system partitions
         // Reference: https://github.com/DavidXanatos/DiskCryptor
-        $string17 = /DiskCryptor\sDevice\sInstallation\sDisk/ nocase ascii wide
+        $string17 = "DiskCryptor Device Installation Disk" nocase ascii wide
         // Description: DiskCryptor is an open source encryption solution that offers encryption of all disk partitions including system partitions
         // Reference: https://github.com/DavidXanatos/DiskCryptor
-        $string18 = /DiskCryptor\sdriver/ nocase ascii wide
+        $string18 = "DiskCryptor driver" nocase ascii wide
         // Description: DiskCryptor is an open source encryption solution that offers encryption of all disk partitions including system partitions
         // Reference: https://github.com/DavidXanatos/DiskCryptor
-        $string19 = /DISKCRYPTOR_MUTEX/ nocase ascii wide
+        $string19 = "DISKCRYPTOR_MUTEX" nocase ascii wide
         // Description: DiskCryptor is an open source encryption solution that offers encryption of all disk partitions including system partitions
         // Reference: https://github.com/DavidXanatos/DiskCryptor
-        $string20 = /DiskCryptor\-master/ nocase ascii wide
+        $string20 = "DiskCryptor-master" nocase ascii wide
         // Description: DiskCryptor is an open source encryption solution that offers encryption of all disk partitions including system partitions
         // Reference: https://github.com/DavidXanatos/DiskCryptor
         $string21 = /Public\\dcinst\.exe/ nocase ascii wide

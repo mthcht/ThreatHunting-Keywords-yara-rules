@@ -22,10 +22,10 @@ rule NetSess
         $string4 = /\\NetSess\.zip/ nocase ascii wide
         // Description: Command line tool to enumerate NetBIOS sessions on a specified local or remote machine. 
         // Reference: https://www.joeware.net/freetools/tools/netsess/
-        $string5 = /ddeeedc8ab9ab3b90c2e36340d4674fda3b458c0afd7514735b2857f26b14c6d/ nocase ascii wide
+        $string5 = "ddeeedc8ab9ab3b90c2e36340d4674fda3b458c0afd7514735b2857f26b14c6d" nocase ascii wide
         // Description: Command line tool to enumerate NetBIOS sessions on a specified local or remote machine. 
         // Reference: https://www.joeware.net/freetools/tools/netsess/
-        $string6 = /ddeeedc8ab9ab3b90c2e36340d4674fda3b458c0afd7514735b2857f26b14c6d/ nocase ascii wide
+        $string6 = "ddeeedc8ab9ab3b90c2e36340d4674fda3b458c0afd7514735b2857f26b14c6d" nocase ascii wide
         // Description: Command line tool to enumerate NetBIOS sessions on a specified local or remote machine. 
         // Reference: https://www.joeware.net/freetools/tools/netsess/
         $string7 = /Get\-NetSessionEnum\.ps1/ nocase ascii wide

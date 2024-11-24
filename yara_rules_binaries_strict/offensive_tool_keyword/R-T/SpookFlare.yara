@@ -10,7 +10,7 @@ rule SpookFlare
     strings:
         // Description: SpookFlare has a different perspective to bypass security measures and it gives you the opportunity to bypass the endpoint countermeasures at the client-side detection and network-side detection. SpookFlare is a loader/dropper generator for Meterpreter. Empire. Koadic etc. SpookFlare has obfuscation. encoding. run-time code compilation and character substitution features.
         // Reference: https://github.com/hlldz/SpookFlare
-        $string1 = /SpookFlare/ nocase ascii wide
+        $string1 = "SpookFlare" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

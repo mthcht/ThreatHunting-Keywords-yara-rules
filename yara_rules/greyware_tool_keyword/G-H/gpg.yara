@@ -10,7 +10,7 @@ rule gpg
     strings:
         // Description: List gpg keys for privilege escalation
         // Reference: N/A
-        $string1 = /gpg\s\-\-list\-keys/ nocase ascii wide
+        $string1 = "gpg --list-keys" nocase ascii wide
 
     condition:
         any of them

@@ -28,10 +28,10 @@ rule Adeleginator
         $string6 = /\/ADeleginator\.git/ nocase ascii wide
         // Description: tool that uses ADeleg to find insecure trustee and resource delegations in Active Directory
         // Reference: https://github.com/techspence/Adeleginator
-        $string7 = /\/Invoke\-Adeleginator/ nocase ascii wide
+        $string7 = "/Invoke-Adeleginator" nocase ascii wide
         // Description: tool that uses ADeleg to find insecure trustee and resource delegations in Active Directory
         // Reference: https://github.com/techspence/Adeleginator
-        $string8 = /\/mtth\-bfft\/adeleg\/releases/ nocase ascii wide
+        $string8 = "/mtth-bfft/adeleg/releases" nocase ascii wide
         // Description: tool that uses ADeleg to find insecure trustee and resource delegations in Active Directory
         // Reference: https://github.com/techspence/Adeleginator
         $string9 = /\[\!\]\sInsecure\sresource\sdelegations\sfound\.\sExporting\sreport\:/ nocase ascii wide
@@ -58,25 +58,25 @@ rule Adeleginator
         $string16 = /\\Adeleginator\-main/ nocase ascii wide
         // Description: tool that uses ADeleg to find insecure trustee and resource delegations in Active Directory
         // Reference: https://github.com/techspence/Adeleginator
-        $string17 = /ADeleg_InsecureResourceDelegationReport_/ nocase ascii wide
+        $string17 = "ADeleg_InsecureResourceDelegationReport_" nocase ascii wide
         // Description: tool that uses ADeleg to find insecure trustee and resource delegations in Active Directory
         // Reference: https://github.com/techspence/Adeleginator
-        $string18 = /ADeleg_InsecureTrusteeDelegationReport_/ nocase ascii wide
+        $string18 = "ADeleg_InsecureTrusteeDelegationReport_" nocase ascii wide
         // Description: tool that uses ADeleg to find insecure trustee and resource delegations in Active Directory
         // Reference: https://github.com/techspence/Adeleginator
-        $string19 = /Create\-ADelegReport/ nocase ascii wide
+        $string19 = "Create-ADelegReport" nocase ascii wide
         // Description: tool that uses ADeleg to find insecure trustee and resource delegations in Active Directory
         // Reference: https://github.com/techspence/Adeleginator
-        $string20 = /Find\-InsecureResourceDelegations/ nocase ascii wide
+        $string20 = "Find-InsecureResourceDelegations" nocase ascii wide
         // Description: tool that uses ADeleg to find insecure trustee and resource delegations in Active Directory
         // Reference: https://github.com/techspence/Adeleginator
-        $string21 = /Go\,\sgo\sADeleginator\!/ nocase ascii wide
+        $string21 = "Go, go ADeleginator!" nocase ascii wide
         // Description: tool that uses ADeleg to find insecure trustee and resource delegations in Active Directory
         // Reference: https://github.com/techspence/Adeleginator
-        $string22 = /Invoke\-Adeleginator/ nocase ascii wide
+        $string22 = "Invoke-Adeleginator" nocase ascii wide
         // Description: tool that uses ADeleg to find insecure trustee and resource delegations in Active Directory
         // Reference: https://github.com/techspence/Adeleginator
-        $string23 = /techspence\/Adeleginator/ nocase ascii wide
+        $string23 = "techspence/Adeleginator" nocase ascii wide
         // Description: tool that uses ADeleg to find insecure trustee and resource delegations in Active Directory
         // Reference: https://github.com/techspence/Adeleginator
         $string24 = /Thank\syou\sfor\susing\sADeleginator\.\sGodspeed\!\s\:O/ nocase ascii wide

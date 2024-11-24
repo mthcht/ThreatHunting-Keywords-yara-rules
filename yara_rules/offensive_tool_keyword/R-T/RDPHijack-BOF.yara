@@ -10,10 +10,10 @@ rule RDPHijack_BOF
     strings:
         // Description: BOF - RDPHijack - Cobalt Strike Beacon Object File (BOF) that uses WinStationConnect API to perform local/remote RDP session hijacking.
         // Reference: https://github.com/netero1010/RDPHijack-BOF
-        $string1 = /beacon_inline_execute/ nocase ascii wide
+        $string1 = "beacon_inline_execute" nocase ascii wide
         // Description: BOF - RDPHijack - Cobalt Strike Beacon Object File (BOF) that uses WinStationConnect API to perform local/remote RDP session hijacking.
         // Reference: https://github.com/netero1010/RDPHijack-BOF
-        $string2 = /bof\-rdphijack/ nocase ascii wide
+        $string2 = "bof-rdphijack" nocase ascii wide
         // Description: BOF - RDPHijack - Cobalt Strike Beacon Object File (BOF) that uses WinStationConnect API to perform local/remote RDP session hijacking.
         // Reference: https://github.com/netero1010/RDPHijack-BOF
         $string3 = /rdphijack\./ nocase ascii wide
@@ -25,7 +25,7 @@ rule RDPHijack_BOF
         $string5 = /rdphijack\.x86\./ nocase ascii wide
         // Description: BOF - RDPHijack - Cobalt Strike Beacon Object File (BOF) that uses WinStationConnect API to perform local/remote RDP session hijacking.
         // Reference: https://github.com/netero1010/RDPHijack-BOF
-        $string6 = /RDPHijack\-BOF/ nocase ascii wide
+        $string6 = "RDPHijack-BOF" nocase ascii wide
 
     condition:
         any of them

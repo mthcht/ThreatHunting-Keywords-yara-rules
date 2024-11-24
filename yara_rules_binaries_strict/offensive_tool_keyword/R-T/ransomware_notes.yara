@@ -418,7 +418,7 @@ rule ransomware_notes
         $string136 = /\\yanluowang\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string137 = /\<h1\>All\syour\sfiles\swas\sencrypted\!/ nocase ascii wide
+        $string137 = "<h1>All your files was encrypted!" nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
         $string138 = /15010050\@tutamail\.com/ nocase ascii wide
@@ -508,10 +508,10 @@ rule ransomware_notes
         $string166 = /akiralkzxzq2dsrzsrvbr2xgbbu2wgsmxryd4csgfameg52n7efvr2id\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string167 = /All\sYour\s\<span\>Important\sFiles\<\/span\>\sHave\sBeen\sEncrypted/ nocase ascii wide
+        $string167 = "All Your <span>Important Files</span> Have Been Encrypted" nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string168 = /All\sYour\sImportant\sFiles\sHave\sBeen\sEncrypted/ nocase ascii wide
+        $string168 = "All Your Important Files Have Been Encrypted" nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
         $string169 = /alphvmmm27o3abo3r2mlmjrpdmzle3rykajqc5xsj7j7ejksbpsa36ad\.onion/ nocase ascii wide
@@ -823,7 +823,7 @@ rule ransomware_notes
         $string271 = /iamaduck7\@onionmail\.org/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string272 = /If\syou\sdo\snot\spay\sthe\sransom\,\swe\swill\sattack\syour\scompany\sagain\sin\sthe\sfuture/ nocase ascii wide
+        $string272 = "If you do not pay the ransom, we will attack your company again in the future" nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
         $string273 = /inbukcc4xk67uzbgkzufdqq3q3ikhwtebqxza5zlfbtzwm2g6usxidqd\.onion/ nocase ascii wide
@@ -1279,7 +1279,7 @@ rule ransomware_notes
         $string423 = /reltypade1977\@protonmail\.com/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string424 = /Restore\syour\sdata\spossible\sonly\sbuying\sprivate\skey\sfrom\sus/ nocase ascii wide
+        $string424 = "Restore your data possible only buying private key from us" nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
         $string425 = /rgleaktxuey67yrgspmhvtnrqtgogur35lwdrup4d3igtbm3pupc4lyd\.onion/ nocase ascii wide
@@ -1411,28 +1411,28 @@ rule ransomware_notes
         $string467 = /WayneEvenson\@tutanota\.com/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string468 = /WE\sDESTROYED\sYOU\sBACKUPS/ nocase ascii wide
+        $string468 = "WE DESTROYED YOU BACKUPS" nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string469 = /WE\sHACKED\sYOU/ nocase ascii wide
+        $string469 = "WE HACKED YOU" nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string470 = /we\swill\scontinue\sthe\sprocess\sof\sleaking\sor\sselling\syour\sdocuments/ nocase ascii wide
+        $string470 = "we will continue the process of leaking or selling your documents" nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
         $string471 = /weg7sdx54bevnvulapqu6bpzwztryeflq3s23tegbmnhkbpqz637f2yd\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string472 = /Welcome\!\sYour\sare\slocked\sby\sSenSayQ\!/ nocase ascii wide
+        $string472 = "Welcome! Your are locked by SenSayQ!" nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
         $string473 = /wemo2ysyeq6km2nqhcrz63dkdhez3j25yw2nvn7xba2z4h7v7gyrfgid\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string474 = /WHOLE\sNETWORK\sHAS\sBEEN\sPENETRATED\sBY\sBlack\sHunt/ nocase ascii wide
+        $string474 = "WHOLE NETWORK HAS BEEN PENETRATED BY Black Hunt" nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string475 = /WHOLE\sNETWORK\<\/span\>HAS\sBEEN\sPENETRATED\sBY\<span\>Black\sHunt/ nocase ascii wide
+        $string475 = "WHOLE NETWORK</span>HAS BEEN PENETRATED BY<span>Black Hunt" nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
         $string476 = /wlh3dpptx2gt7nsxcor37a3kiyaiy6qwhdv7o6nl6iuniu5ycze5ydid\.onion/ nocase ascii wide
@@ -1465,16 +1465,16 @@ rule ransomware_notes
         $string485 = /yeuajcizwytgmrntijhxphs6wn5txp2prs6rpndafbsapek3zd4ubcid\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string486 = /YOU\sHAVE\sto\sCONTACT\sUS\susing\sTOR\sLIVE\sCHAT/ nocase ascii wide
+        $string486 = "YOU HAVE to CONTACT US using TOR LIVE CHAT" nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string487 = /You\sneed\sto\scontact\sus\son\sTOR\sdarknet\ssites\swith\syour\spersonal\sID/ nocase ascii wide
+        $string487 = "You need to contact us on TOR darknet sites with your personal ID" nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string488 = /Your\sdata\sis\sstolen\sand\sencrypted/ nocase ascii wide
+        $string488 = "Your data is stolen and encrypted" nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string489 = /your\ssensitive\sdata\,\swhich\swe\sWill\sleak\sor\ssell\sin\scase\sof\sno\scooperation/ nocase ascii wide
+        $string489 = "your sensitive data, which we Will leak or sell in case of no cooperation" nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
         $string490 = /z3wqggtxft7id3ibr7srivv5gjof5fwg76slewnzwwakjuf3nlhukdid\.onion/ nocase ascii wide

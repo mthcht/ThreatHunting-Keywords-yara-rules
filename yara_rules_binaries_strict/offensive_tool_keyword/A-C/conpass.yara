@@ -10,7 +10,7 @@ rule conpass
     strings:
         // Description: Continuous password spraying tool
         // Reference: https://github.com/login-securite/conpass
-        $string1 = /b09a40f998e8bc112841842ed56d8e843e5df98f4b53657098924fd10325a4b9/ nocase ascii wide
+        $string1 = "b09a40f998e8bc112841842ed56d8e843e5df98f4b53657098924fd10325a4b9" nocase ascii wide
         // Description: Continuous password spraying tool
         // Reference: https://github.com/login-securite/conpass
         $string2 = /conpass\s\-d\s.{0,100}\s\-u\s.{0,100}\s\-p\s/ nocase ascii wide
@@ -22,7 +22,7 @@ rule conpass
         $string4 = /DumpNTLMInfo\.py/ nocase ascii wide
         // Description: Continuous password spraying tool
         // Reference: https://github.com/login-securite/conpass
-        $string5 = /ed99b1d4757d0848ced6b91f18326c42127f6f79ad1cc7e7fafeee91388004e3/ nocase ascii wide
+        $string5 = "ed99b1d4757d0848ced6b91f18326c42127f6f79ad1cc7e7fafeee91388004e3" nocase ascii wide
         // Description: Continuous password spraying tool
         // Reference: https://github.com/login-securite/conpass
         $string6 = /from\sconpass\.ntlminfo\simport\s/ nocase ascii wide
@@ -31,16 +31,16 @@ rule conpass
         $string7 = /from\sconpass\.password\simport\s/ nocase ascii wide
         // Description: Continuous password spraying tool
         // Reference: https://github.com/login-securite/conpass
-        $string8 = /Hackndo\/conpass/ nocase ascii wide
+        $string8 = "Hackndo/conpass" nocase ascii wide
         // Description: Continuous password spraying tool
         // Reference: https://github.com/login-securite/conpass
         $string9 = /impacket\.smbconnection/ nocase ascii wide
         // Description: Continuous password spraying tool
         // Reference: https://github.com/login-securite/conpass
-        $string10 = /login\-securite\/conpass/ nocase ascii wide
+        $string10 = "login-securite/conpass" nocase ascii wide
         // Description: Continuous password spraying tool
         // Reference: https://github.com/login-securite/conpass
-        $string11 = /pip\sinstall\sconpass/ nocase ascii wide
+        $string11 = "pip install conpass" nocase ascii wide
         // Description: Continuous password spraying tool
         // Reference: https://github.com/login-securite/conpass
         $string12 = /Romain\sBentz\s\(pixis\s\-\s\@hackanddo\)/ nocase ascii wide

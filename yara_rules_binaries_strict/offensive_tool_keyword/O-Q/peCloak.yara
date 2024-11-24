@@ -10,7 +10,7 @@ rule peCloak
     strings:
         // Description: peCloak.py (beta) - A Multi-Pass Encoder & Heuristic Sandbox Bypass AV Evasion Tool
         // Reference: https://github.com/v-p-b/peCloakCapstone/blob/master/peCloak.py
-        $string1 = /peCloak/ nocase ascii wide
+        $string1 = "peCloak" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

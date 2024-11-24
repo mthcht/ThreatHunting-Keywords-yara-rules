@@ -25,10 +25,10 @@ rule VDR
         $string5 = /\\VDR\-main\.zip/ nocase ascii wide
         // Description: Vulnerable driver research tool - result and exploit PoCs
         // Reference: https://github.com/TakahiroHaruyama/VDR
-        $string6 = /EoP\sPoC\sexploiting\sthe\sAMD\sdriver\s/ nocase ascii wide
+        $string6 = "EoP PoC exploiting the AMD driver " nocase ascii wide
         // Description: Vulnerable driver research tool - result and exploit PoCs
         // Reference: https://github.com/TakahiroHaruyama/VDR
-        $string7 = /EoP\sPoC\sexploiting\sthe\sIntel\sdriver\s/ nocase ascii wide
+        $string7 = "EoP PoC exploiting the Intel driver " nocase ascii wide
         // Description: Vulnerable driver research tool - result and exploit PoCs
         // Reference: https://github.com/TakahiroHaruyama/VDR
         $string8 = /eop_pdfwkrnl\.py/ nocase ascii wide
@@ -46,7 +46,7 @@ rule VDR
         $string12 = /System\stoken\sis\scopied\sto\sthe\scurrent\sprocess\.\sExecuting\scmd\.exe\.\./ nocase ascii wide
         // Description: Vulnerable driver research tool - result and exploit PoCs
         // Reference: https://github.com/TakahiroHaruyama/VDR
-        $string13 = /TakahiroHaruyama\/VDR/ nocase ascii wide
+        $string13 = "TakahiroHaruyama/VDR" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

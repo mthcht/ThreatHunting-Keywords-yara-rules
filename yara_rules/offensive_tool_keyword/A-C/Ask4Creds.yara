@@ -22,10 +22,10 @@ rule Ask4Creds
         $string4 = /\\Ask4Creds\.ps1/ nocase ascii wide
         // Description: Prompt User for credentials
         // Reference: https://github.com/Leo4j/Ask4Creds
-        $string5 = /d3924d3bf6f59335a1e5453d80eaaa7404cea2e342105c3e69ddfb943aeb29c6/ nocase ascii wide
+        $string5 = "d3924d3bf6f59335a1e5453d80eaaa7404cea2e342105c3e69ddfb943aeb29c6" nocase ascii wide
         // Description: Prompt User for credentials
         // Reference: https://github.com/Leo4j/Ask4Creds
-        $string6 = /Leo4j\/Ask4Creds/ nocase ascii wide
+        $string6 = "Leo4j/Ask4Creds" nocase ascii wide
 
     condition:
         any of them

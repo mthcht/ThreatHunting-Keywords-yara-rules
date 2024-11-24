@@ -22,7 +22,7 @@ rule Cordyceps
         $string4 = /nasm\s\-f\swin64\s\.\/syscalls\.asm\s\-o\s\.\/syscalls\.obj/ nocase ascii wide
         // Description: C++ self-Injecting dropper based on various EDR evasion techniques
         // Reference: https://github.com/pard0p/Cordyceps
-        $string5 = /pard0p\/Cordyceps/ nocase ascii wide
+        $string5 = "pard0p/Cordyceps" nocase ascii wide
 
     condition:
         any of them

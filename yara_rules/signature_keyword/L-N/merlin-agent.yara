@@ -16,7 +16,7 @@ rule merlin_agent
         $string2 = /W64\/Merlin\.T\!tr/ nocase ascii wide
         // Description: Merlin is a post-exploit Command & Control (C2) tool also known as a Remote Access Tool (RAT)
         // Reference: https://github.com/Ne0nd0g/merlin-agent
-        $string3 = /Win64\:MerlinAgent/ nocase ascii wide
+        $string3 = "Win64:MerlinAgent" nocase ascii wide
 
     condition:
         any of them

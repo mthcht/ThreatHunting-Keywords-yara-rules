@@ -10,10 +10,10 @@ rule wifijammer
     strings:
         // Description: wifijammer
         // Reference: https://github.com/hash3liZer/wifijammer
-        $string1 = /hash3liZer\/wifijammer/ nocase ascii wide
+        $string1 = "hash3liZer/wifijammer" nocase ascii wide
         // Description: wifijammer
         // Reference: https://github.com/DanMcInerney/wifijammer
-        $string2 = /wifijammer/ nocase ascii wide
+        $string2 = "wifijammer" nocase ascii wide
 
     condition:
         any of them

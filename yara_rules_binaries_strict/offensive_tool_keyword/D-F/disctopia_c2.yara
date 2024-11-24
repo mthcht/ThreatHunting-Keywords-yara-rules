@@ -13,13 +13,13 @@ rule disctopia_c2
         $string1 = /\/disctopia\.py/ nocase ascii wide
         // Description: Windows Remote Administration Tool that uses Discord Telegram and GitHub as C2s
         // Reference: https://github.com/3ct0s/disctopia-c2
-        $string2 = /\/disctopia\-c2/ nocase ascii wide
+        $string2 = "/disctopia-c2" nocase ascii wide
         // Description: Windows Remote Administration Tool that uses Discord Telegram and GitHub as C2s
         // Reference: https://github.com/3ct0s/disctopia-c2
-        $string3 = /\/distopia\-test/ nocase ascii wide
+        $string3 = "/distopia-test" nocase ascii wide
         // Description: Windows Remote Administration Tool that uses Discord Telegram and GitHub as C2s
         // Reference: https://github.com/3ct0s/disctopia-c2
-        $string4 = /Disctopia\sBackdoor/ nocase ascii wide
+        $string4 = "Disctopia Backdoor" nocase ascii wide
         // Description: Windows Remote Administration Tool that uses Discord Telegram and GitHub as C2s
         // Reference: https://github.com/3ct0s/disctopia-c2
         $string5 = /disctopia\-c2\.git/ nocase ascii wide

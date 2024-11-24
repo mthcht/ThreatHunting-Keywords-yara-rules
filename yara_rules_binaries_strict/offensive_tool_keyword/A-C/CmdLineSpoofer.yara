@@ -22,7 +22,7 @@ rule CmdLineSpoofer
         $string4 = /\[System\.Reflection\.Assembly\]\:\:Load\(\(Invoke\-WebRequest\s.{0,100}\.exe.{0,100}while\s\(\$true\)\{Start\-Sleep\s\-s\s1000\}/ nocase ascii wide
         // Description: How to spoof the command line when spawning a new process from C#
         // Reference: https://github.com/plackyhacker/CmdLineSpoofer
-        $string5 = /5D03EFC2\-72E9\-4410\-B147\-0A1A5C743999/ nocase ascii wide
+        $string5 = "5D03EFC2-72E9-4410-B147-0A1A5C743999" nocase ascii wide
         // Description: How to spoof the command line when spawning a new process from C#
         // Reference: https://github.com/plackyhacker/CmdLineSpoofer
         $string6 = /CmdLineSpoofer\.exe/ nocase ascii wide
@@ -31,10 +31,10 @@ rule CmdLineSpoofer
         $string7 = /CmdLineSpoofer\.sln/ nocase ascii wide
         // Description: How to spoof the command line when spawning a new process from C#
         // Reference: https://github.com/plackyhacker/CmdLineSpoofer
-        $string8 = /CmdLineSpoofer\-master/ nocase ascii wide
+        $string8 = "CmdLineSpoofer-master" nocase ascii wide
         // Description: How to spoof the command line when spawning a new process from C#
         // Reference: https://github.com/plackyhacker/CmdLineSpoofer
-        $string9 = /plackyhacker\/CmdLineSpoofer/ nocase ascii wide
+        $string9 = "plackyhacker/CmdLineSpoofer" nocase ascii wide
         // Description: How to spoof the command line when spawning a new process from C#
         // Reference: https://github.com/plackyhacker/CmdLineSpoofer
         $string10 = /powershell\.exe\snothing\sto\ssee\shere\!\s\:\-P/ nocase ascii wide
@@ -43,10 +43,10 @@ rule CmdLineSpoofer
         $string11 = /Press\sa\skey\sto\send\sPoC\?/ nocase ascii wide
         // Description: How to spoof the command line when spawning a new process from C#
         // Reference: https://github.com/plackyhacker/CmdLineSpoofer
-        $string12 = /string\smaliciousCommand\s\=/ nocase ascii wide
+        $string12 = "string maliciousCommand =" nocase ascii wide
         // Description: How to spoof the command line when spawning a new process from C#
         // Reference: https://github.com/plackyhacker/CmdLineSpoofer
-        $string13 = /WwBTAHkAcwB0AGUAbQAuAFIAZQBmAGwAZQBjAHQAaQBvAG4ALgBBAHMAcwBlAG0AYgBsAHkAXQA/ nocase ascii wide
+        $string13 = "WwBTAHkAcwB0AGUAbQAuAFIAZQBmAGwAZQBjAHQAaQBvAG4ALgBBAHMAcwBlAG0AYgBsAHkAXQA" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

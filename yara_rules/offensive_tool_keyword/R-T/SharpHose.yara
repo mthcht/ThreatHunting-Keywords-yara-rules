@@ -10,13 +10,13 @@ rule SharpHose
     strings:
         // Description: Asynchronous Password Spraying Tool in C# for Windows Environments
         // Reference: https://github.com/ustayready/SharpHose
-        $string1 = /\s\-\-action\sSPRAY_USERS\s/ nocase ascii wide
+        $string1 = " --action SPRAY_USERS " nocase ascii wide
         // Description: Asynchronous Password Spraying Tool in C# for Windows Environments
         // Reference: https://github.com/ustayready/SharpHose
         $string2 = /\sSharpHose\.exe/ nocase ascii wide
         // Description: Asynchronous Password Spraying Tool in C# for Windows Environments
         // Reference: https://github.com/ustayready/SharpHose
-        $string3 = /\s\-\-spraypassword\s/ nocase ascii wide
+        $string3 = " --spraypassword " nocase ascii wide
         // Description: Asynchronous Password Spraying Tool in C# for Windows Environments
         // Reference: https://github.com/ustayready/SharpHose
         $string4 = /\/SharpHose\.exe/ nocase ascii wide
@@ -28,10 +28,10 @@ rule SharpHose
         $string6 = /\\SharpHose\\Program\.cs/ nocase ascii wide
         // Description: Asynchronous Password Spraying Tool in C# for Windows Environments
         // Reference: https://github.com/ustayready/SharpHose
-        $string7 = /29d30b556932d0657f14a0b290ec79d23f88d8454ca27151c8348ab7e4be9657/ nocase ascii wide
+        $string7 = "29d30b556932d0657f14a0b290ec79d23f88d8454ca27151c8348ab7e4be9657" nocase ascii wide
         // Description: Asynchronous Password Spraying Tool in C# for Windows Environments
         // Reference: https://github.com/ustayready/SharpHose
-        $string8 = /51C6E016\-1428\-441D\-82E9\-BB0EB599BBC8/ nocase ascii wide
+        $string8 = "51C6E016-1428-441D-82E9-BB0EB599BBC8" nocase ascii wide
 
     condition:
         any of them

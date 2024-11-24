@@ -49,22 +49,22 @@ rule bash
         $string13 = /exec\s5\<\>\/dev\/tcp\/.{0,100}\/.{0,100}.{0,100}cat\s\<\&5\s\|\swhile\sread\sline.{0,100}\sdo\s\$line\s2\>\&5\s\>\&5.{0,100}\sdone/ nocase ascii wide
         // Description: Adversaries may attempt to clear or disable the Bash command-line history in an attempt to evade detection or forensic investigations.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_deletion_of_bash_command_line_history.toml
-        $string14 = /export\sHISTFILE\=\/dev\/null/ nocase ascii wide
+        $string14 = "export HISTFILE=/dev/null" nocase ascii wide
         // Description: Adversaries may attempt to clear or disable the Bash command-line history in an attempt to evade detection or forensic investigations.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_deletion_of_bash_command_line_history.toml
-        $string15 = /export\sHISTFILESIZE\=0/ nocase ascii wide
+        $string15 = "export HISTFILESIZE=0" nocase ascii wide
         // Description: Clear command history in linux which is used for defense evasion. 
         // Reference: https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1146/T1146.yaml
-        $string16 = /export\sHISTFILESIZE\=0/ nocase ascii wide
+        $string16 = "export HISTFILESIZE=0" nocase ascii wide
         // Description: use a space in front of your bash command and it won't be logged with the following option
         // Reference: N/A
-        $string17 = /HISTCONTROL\=ignoredups\:ignorespace/ nocase ascii wide
+        $string17 = "HISTCONTROL=ignoredups:ignorespace" nocase ascii wide
         // Description: Adversaries may attempt to clear or disable the Bash command-line history in an attempt to evade detection or forensic investigations.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_deletion_of_bash_command_line_history.toml
-        $string18 = /history\s\-c/ nocase ascii wide
+        $string18 = "history -c" nocase ascii wide
         // Description: Clear command history in linux which is used for defense evasion. 
         // Reference: N/A
-        $string19 = /HISTORY\=\/dev\/null/ nocase ascii wide
+        $string19 = "HISTORY=/dev/null" nocase ascii wide
         // Description: Clear command history in linux which is used for defense evasion. 
         // Reference: https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1146/T1146.yaml
         $string20 = /ln\s\-sf\s\/dev\/null\s.{0,100}bash_history/ nocase ascii wide
@@ -94,7 +94,7 @@ rule bash
         $string28 = /truncate\s\-s0\s.{0,100}bash_history\'/ nocase ascii wide
         // Description: Adversaries may attempt to clear or disable the Bash command-line history in an attempt to evade detection or forensic investigations.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_deletion_of_bash_command_line_history.toml
-        $string29 = /unset\sHISTFILE/ nocase ascii wide
+        $string29 = "unset HISTFILE" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

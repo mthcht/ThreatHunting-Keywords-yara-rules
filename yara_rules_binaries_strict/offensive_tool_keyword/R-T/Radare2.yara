@@ -10,7 +10,7 @@ rule Radare2
     strings:
         // Description: r2 is a rewrite from scratch of radare in order to provide a set of libraries and tools to work with binary files.Radare project started as a forensics tool. a scriptable command-line hexadecimal editor able to open disk files. but later added support for analyzing binaries. disassembling code. debugging programs. attaching to remote gdb servers
         // Reference: https://github.com/radareorg/radare2
-        $string1 = /Radare2/ nocase ascii wide
+        $string1 = "Radare2" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

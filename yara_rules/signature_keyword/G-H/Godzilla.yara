@@ -13,7 +13,7 @@ rule Godzilla
         $string1 = /Backdoor\:ASP\/Chopper\.ZC\!dha/ nocase ascii wide
         // Description: Webshell Manager Tool that provide request proxy, server info, RCE shell, terminal execution, memory shell, port forwarding, and MSF bind/reverse shell capabilities.
         // Reference: https://github.com/BeichenDream/Godzilla
-        $string2 = /TrojanDownloader\:Java\/GodzillaWebShell/ nocase ascii wide
+        $string2 = "TrojanDownloader:Java/GodzillaWebShell" nocase ascii wide
         // Description: Webshell Manager Tool that provide request proxy, server info, RCE shell, terminal execution, memory shell, port forwarding, and MSF bind/reverse shell capabilities.
         // Reference: https://github.com/BeichenDream/Godzilla
         $string3 = /TrojanDownloader\:Java\/GodzillaWebShell\.C/ nocase ascii wide

@@ -10,7 +10,7 @@ rule badtouch
     strings:
         // Description: Scriptable network authentication cracker
         // Reference: https://github.com/kpcyrd/badtouch
-        $string1 = /kpcyrd\/badtouch/ nocase ascii wide
+        $string1 = "kpcyrd/badtouch" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

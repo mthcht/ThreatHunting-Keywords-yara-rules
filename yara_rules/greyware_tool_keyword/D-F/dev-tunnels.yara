@@ -37,10 +37,10 @@ rule dev_tunnels
         $string9 = /brs\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string10 = /devtunnel\screate\s/ nocase ascii wide
+        $string10 = "devtunnel create " nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string11 = /devtunnel\shost\s\-p\s/ nocase ascii wide
+        $string11 = "devtunnel host -p " nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
         $string12 = /devtunnel.{0,1000}\suser\slogin\s\-/ nocase ascii wide

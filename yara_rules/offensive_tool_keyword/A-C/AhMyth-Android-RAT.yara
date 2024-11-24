@@ -10,7 +10,7 @@ rule AhMyth_Android_RAT
     strings:
         // Description: AhMyth Android Rat
         // Reference: https://github.com/AhMyth/AhMyth-Android-RAT
-        $string1 = /AhMyth\-Android\-RAT/ nocase ascii wide
+        $string1 = "AhMyth-Android-RAT" nocase ascii wide
 
     condition:
         any of them

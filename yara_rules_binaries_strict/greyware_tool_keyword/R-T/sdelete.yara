@@ -40,7 +40,7 @@ rule sdelete
         $string10 = /\>sdelete\.exe\</ nocase ascii wide
         // Description: delete one or more files and/or directories, or to cleanse the free space on a logical disk - abused by attackers
         // Reference: https://learn.microsoft.com/en-us/sysinternals/downloads/sdelete
-        $string11 = /\>sysinternals\ssdelete\</ nocase ascii wide
+        $string11 = ">sysinternals sdelete<" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

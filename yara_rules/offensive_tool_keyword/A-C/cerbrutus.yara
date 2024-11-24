@@ -10,13 +10,13 @@ rule cerbrutus
     strings:
         // Description: Network brute force tool. written in Python. Faster than other existing solutions (including the main leader in the network brute force market).
         // Reference: https://github.com/Cerbrutus-BruteForcer/cerbrutus
-        $string1 = /\/cerbrutus/ nocase ascii wide
+        $string1 = "/cerbrutus" nocase ascii wide
         // Description: Network brute force tool. written in Python. Faster than other existing solutions (including the main leader in the network brute force market).
         // Reference: https://github.com/Cerbrutus-BruteForcer/cerbrutus
         $string2 = /cerbrutus\.py/ nocase ascii wide
         // Description: Network brute force tool. written in Python. Faster than other existing solutions (including the main leader in the network brute force market).
         // Reference: https://github.com/Cerbrutus-BruteForcer/cerbrutus
-        $string3 = /Cerbrutus\-BruteForcer/ nocase ascii wide
+        $string3 = "Cerbrutus-BruteForcer" nocase ascii wide
         // Description: Network brute force tool. written in Python. Faster than other existing solutions (including the main leader in the network brute force market).
         // Reference: https://github.com/Cerbrutus-BruteForcer/cerbrutus
         $string4 = /wordlists\/fasttrack\.txt/ nocase ascii wide

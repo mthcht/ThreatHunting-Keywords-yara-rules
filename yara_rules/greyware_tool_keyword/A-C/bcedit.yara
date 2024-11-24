@@ -10,7 +10,7 @@ rule bcedit
     strings:
         // Description: This checks whether the script has administrative access before continuing
         // Reference: https://github.com/Lifka/hacking-resources/blob/7885f95676c3ba4b2ee79fbaf0f6797add892322/system-hacking-cheat-sheet.md?plain=1#L114
-        $string1 = /FOR\s\/F\s\"tokens\=1\,2.{0,1000}\"\s\%\%V\sIN\s\(\'bcdedit\'\)\sDO\sSET\sadminTest\=\%\%V/ nocase ascii wide
+        $string1 = /FOR\s\/F\s\\"tokens\=1\,2.{0,1000}\\"\s\%\%V\sIN\s\(\'bcdedit\'\)\sDO\sSET\sadminTest\=\%\%V/ nocase ascii wide
 
     condition:
         any of them

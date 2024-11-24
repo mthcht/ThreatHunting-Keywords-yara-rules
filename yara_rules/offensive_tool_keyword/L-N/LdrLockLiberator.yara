@@ -19,10 +19,10 @@ rule LdrLockLiberator
         $string3 = /\\LdrLockLiberatorWDK\.c/ nocase ascii wide
         // Description: LdrLockLiberator is a collection of techniques for escaping or otherwise forgoing Loader Lock while executing your code from DllMain or anywhere else the lock may be present.
         // Reference: https://github.com/ElliotKillick/LdrLockLiberator
-        $string4 = /ElliotKillick\/LdrLockLiberator/ nocase ascii wide
+        $string4 = "ElliotKillick/LdrLockLiberator" nocase ascii wide
         // Description: LdrLockLiberator is a collection of techniques for escaping or otherwise forgoing Loader Lock while executing your code from DllMain or anywhere else the lock may be present.
         // Reference: https://github.com/ElliotKillick/LdrLockLiberator
-        $string5 = /LdrLockLiberator\-main/ nocase ascii wide
+        $string5 = "LdrLockLiberator-main" nocase ascii wide
 
     condition:
         any of them

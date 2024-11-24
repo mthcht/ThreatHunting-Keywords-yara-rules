@@ -13,7 +13,7 @@ rule JunctionFolder
         $string1 = /\%APPDATA\%\/Indexing\./ nocase ascii wide
         // Description: Creates a junction folder in the Windows Accessories Start Up folder as described in the Vault 7 leaks. On start or when a user browses the directory - the referenced DLL will be executed by verclsid.exe in medium integrity.
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/JunctionFolder
-        $string2 = /\/master\/JunctionFolder\// nocase ascii wide
+        $string2 = "/master/JunctionFolder/" nocase ascii wide
         // Description: Creates a junction folder in the Windows Accessories Start Up folder as described in the Vault 7 leaks. On start or when a user browses the directory - the referenced DLL will be executed by verclsid.exe in medium integrity.
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/JunctionFolder
         $string3 = /\\JunctionFolder\.csproj/ nocase ascii wide

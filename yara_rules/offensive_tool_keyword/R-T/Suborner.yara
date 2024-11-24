@@ -16,7 +16,7 @@ rule Suborner
         $string2 = /\\Suborner\.sln/ nocase ascii wide
         // Description: The Invisible Account Forger - A simple program to create a Windows account you will only know about 
         // Reference: https://github.com/r4wd3r/Suborner
-        $string3 = /r4wd3r\/Suborner/ nocase ascii wide
+        $string3 = "r4wd3r/Suborner" nocase ascii wide
         // Description: The Invisible Account Forger - A simple program to create a Windows account you will only know about 
         // Reference: https://github.com/r4wd3r/Suborner
         $string4 = /Suborner\.exe/ nocase ascii wide

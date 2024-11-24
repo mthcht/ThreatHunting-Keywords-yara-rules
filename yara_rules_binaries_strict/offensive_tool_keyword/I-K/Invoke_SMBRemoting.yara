@@ -16,7 +16,7 @@ rule Invoke_SMBRemoting
         $string2 = /\/Invoke\-SMBRemoting\.git/ nocase ascii wide
         // Description: Interactive Shell and Command Execution over Named-Pipes (SMB)
         // Reference: https://github.com/Leo4j/Invoke-SMBRemoting
-        $string3 = /Enter\-SMBSession\s\-ComputerName\s/ nocase ascii wide
+        $string3 = "Enter-SMBSession -ComputerName " nocase ascii wide
         // Description: Interactive Shell and Command Execution over Named-Pipes (SMB)
         // Reference: https://github.com/Leo4j/Invoke-SMBRemoting
         $string4 = /Enter\-SMBSession.{0,100}\s\-PipeName\s.{0,100}\s\-ServiceName\s/ nocase ascii wide
@@ -25,10 +25,10 @@ rule Invoke_SMBRemoting
         $string5 = /Invoke\-SMBRemoting\.ps1/ nocase ascii wide
         // Description: Interactive Shell and Command Execution over Named-Pipes (SMB)
         // Reference: https://github.com/Leo4j/Invoke-SMBRemoting
-        $string6 = /Invoke\-SMBRemoting\-main/ nocase ascii wide
+        $string6 = "Invoke-SMBRemoting-main" nocase ascii wide
         // Description: Interactive Shell and Command Execution over Named-Pipes (SMB)
         // Reference: https://github.com/Leo4j/Invoke-SMBRemoting
-        $string7 = /Leo4j\/Invoke\-SMBRemoting/ nocase ascii wide
+        $string7 = "Leo4j/Invoke-SMBRemoting" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

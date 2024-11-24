@@ -22,40 +22,40 @@ rule inceptor
         $string4 = /\sinceptor\.spec/ nocase ascii wide
         // Description: Template-Driven AV/EDR Evasion Framework
         // Reference: https://github.com/klezVirus/inceptor
-        $string5 = /\s\-\-obfuscate\s/ nocase ascii wide
+        $string5 = " --obfuscate " nocase ascii wide
         // Description: Template-Driven AV/EDR Evasion Framework
         // Reference: https://github.com/klezVirus/inceptor
-        $string6 = /\s\-\-pinject\s/ nocase ascii wide
+        $string6 = " --pinject " nocase ascii wide
         // Description: Template-Driven AV/EDR Evasion Framework
         // Reference: https://github.com/klezVirus/inceptor
-        $string7 = /\s\-\-sign\-domain\s/ nocase ascii wide
+        $string7 = " --sign-domain " nocase ascii wide
         // Description: Template-Driven AV/EDR Evasion Framework
         // Reference: https://github.com/klezVirus/inceptor
-        $string8 = /\s\-\-sign\-steal\s/ nocase ascii wide
+        $string8 = " --sign-steal " nocase ascii wide
         // Description: Template-Driven AV/EDR Evasion Framework
         // Reference: https://github.com/klezVirus/inceptor
-        $string9 = /\s\-t\sdonut\s/ nocase ascii wide
+        $string9 = " -t donut " nocase ascii wide
         // Description: Template-Driven AV/EDR Evasion Framework
         // Reference: https://github.com/klezVirus/inceptor
-        $string10 = /\s\-t\spe2sh/ nocase ascii wide
+        $string10 = " -t pe2sh" nocase ascii wide
         // Description: Template-Driven AV/EDR Evasion Framework
         // Reference: https://github.com/klezVirus/inceptor
-        $string11 = /\s\-\-transformer\sdonut/ nocase ascii wide
+        $string11 = " --transformer donut" nocase ascii wide
         // Description: Template-Driven AV/EDR Evasion Framework
         // Reference: https://github.com/klezVirus/inceptor
-        $string12 = /\s\-\-transformer\sLoader/ nocase ascii wide
+        $string12 = " --transformer Loader" nocase ascii wide
         // Description: Template-Driven AV/EDR Evasion Framework
         // Reference: https://github.com/klezVirus/inceptor
-        $string13 = /\s\-\-transformer\spe2sh/ nocase ascii wide
+        $string13 = " --transformer pe2sh" nocase ascii wide
         // Description: Template-Driven AV/EDR Evasion Framework
         // Reference: https://github.com/klezVirus/inceptor
-        $string14 = /\s\-\-transformer\ssRDI/ nocase ascii wide
+        $string14 = " --transformer sRDI" nocase ascii wide
         // Description: Template-Driven AV/EDR Evasion Framework
         // Reference: https://github.com/klezVirus/inceptor
         $string15 = /\.\/inceptor\.py/ nocase ascii wide
         // Description: Template-Driven AV/EDR Evasion Framework
         // Reference: https://github.com/klezVirus/inceptor
-        $string16 = /\/csharp\/process_injection\// nocase ascii wide
+        $string16 = "/csharp/process_injection/" nocase ascii wide
         // Description: Template-Driven AV/EDR Evasion Framework
         // Reference: https://github.com/klezVirus/inceptor
         $string17 = /\/inceptor\.git/ nocase ascii wide
@@ -70,16 +70,16 @@ rule inceptor
         $string20 = /\/Obfuscator\.py/ nocase ascii wide
         // Description: Template-Driven AV/EDR Evasion Framework
         // Reference: https://github.com/klezVirus/inceptor
-        $string21 = /\/powershell\/process_injection\// nocase ascii wide
+        $string21 = "/powershell/process_injection/" nocase ascii wide
         // Description: Template-Driven AV/EDR Evasion Framework
         // Reference: https://github.com/klezVirus/inceptor
-        $string22 = /\/syscalls\/syswhispers\// nocase ascii wide
+        $string22 = "/syscalls/syswhispers/" nocase ascii wide
         // Description: Template-Driven AV/EDR Evasion Framework
         // Reference: https://github.com/klezVirus/inceptor
-        $string23 = /\/syscalls\/syswhispersv2/ nocase ascii wide
+        $string23 = "/syscalls/syswhispersv2" nocase ascii wide
         // Description: Template-Driven AV/EDR Evasion Framework
         // Reference: https://github.com/klezVirus/inceptor
-        $string24 = /\/syswhispersv2/ nocase ascii wide
+        $string24 = "/syswhispersv2" nocase ascii wide
         // Description: Template-Driven AV/EDR Evasion Framework
         // Reference: https://github.com/klezVirus/inceptor
         $string25 = /\\inceptor\.py/ nocase ascii wide
@@ -115,7 +115,7 @@ rule inceptor
         $string35 = /bypass\-powershell\.ps1/ nocase ascii wide
         // Description: Template-Driven AV/EDR Evasion Framework
         // Reference: https://github.com/klezVirus/inceptor
-        $string36 = /cd\sinceptor/ nocase ascii wide
+        $string36 = "cd inceptor" nocase ascii wide
         // Description: Template-Driven AV/EDR Evasion Framework
         // Reference: https://github.com/klezVirus/inceptor
         $string37 = /chameleon\.py\s/ nocase ascii wide
@@ -148,31 +148,31 @@ rule inceptor
         $string46 = /inceptor\.py\s/ nocase ascii wide
         // Description: Template-Driven AV/EDR Evasion Framework
         // Reference: https://github.com/klezVirus/inceptor
-        $string47 = /inceptor\/obfuscators/ nocase ascii wide
+        $string47 = "inceptor/obfuscators" nocase ascii wide
         // Description: Template-Driven AV/EDR Evasion Framework
         // Reference: https://github.com/klezVirus/inceptor
         $string48 = /inceptor\-main\.zip/ nocase ascii wide
         // Description: Template-Driven AV/EDR Evasion Framework
         // Reference: https://github.com/klezVirus/inceptor
-        $string49 = /Invoke\-AmsiBypass/ nocase ascii wide
+        $string49 = "Invoke-AmsiBypass" nocase ascii wide
         // Description: Template-Driven AV/EDR Evasion Framework
         // Reference: https://github.com/klezVirus/inceptor
-        $string50 = /Invoke\-IronCyclone/ nocase ascii wide
+        $string50 = "Invoke-IronCyclone" nocase ascii wide
         // Description: Template-Driven AV/EDR Evasion Framework
         // Reference: https://github.com/klezVirus/inceptor
-        $string51 = /Invoke\-PsUACme/ nocase ascii wide
+        $string51 = "Invoke-PsUACme" nocase ascii wide
         // Description: Template-Driven AV/EDR Evasion Framework
         // Reference: https://github.com/klezVirus/inceptor
         $string52 = /Karmaleon\.py/ nocase ascii wide
         // Description: Template-Driven AV/EDR Evasion Framework
         // Reference: https://github.com/klezVirus/inceptor
-        $string53 = /klezVirus\/inceptor/ nocase ascii wide
+        $string53 = "klezVirus/inceptor" nocase ascii wide
         // Description: Template-Driven AV/EDR Evasion Framework
         // Reference: https://github.com/klezVirus/inceptor
         $string54 = /mimikatz\.raw/ nocase ascii wide
         // Description: Template-Driven AV/EDR Evasion Framework
         // Reference: https://github.com/klezVirus/inceptor
-        $string55 = /msf\-revhttps/ nocase ascii wide
+        $string55 = "msf-revhttps" nocase ascii wide
         // Description: Template-Driven AV/EDR Evasion Framework
         // Reference: https://github.com/klezVirus/inceptor
         $string56 = /msf\-sgn\.raw/ nocase ascii wide
@@ -205,7 +205,7 @@ rule inceptor
         $string65 = /syswhispers\.py/ nocase ascii wide
         // Description: Template-Driven AV/EDR Evasion Framework
         // Reference: https://github.com/klezVirus/inceptor
-        $string66 = /syswhispersv2_x86/ nocase ascii wide
+        $string66 = "syswhispersv2_x86" nocase ascii wide
         // Description: Template-Driven AV/EDR Evasion Framework
         // Reference: https://github.com/klezVirus/inceptor
         $string67 = /ThreatCheck\.exe/ nocase ascii wide

@@ -10,10 +10,10 @@ rule SimpleBackdoorAdmin
     strings:
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string1 = /net\slocalgroup\sadministrators\sbackdoor/ nocase ascii wide
+        $string1 = "net localgroup administrators backdoor" nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string2 = /net\suser\sbackdoor\sPassword123\!/ nocase ascii wide
+        $string2 = "net user backdoor Password123!" nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
         $string3 = /SimpleBackdoorAdmin\.dll/ nocase ascii wide

@@ -19,10 +19,10 @@ rule nsa_rules
         $string3 = /\/pwcrack\.sh/ nocase ascii wide
         // Description: Password cracking rules and masks for hashcat that I generated from cracked passwords.
         // Reference: https://github.com/NSAKEY/nsa-rules
-        $string4 = /NSAKEY\/nsa\-rules/ nocase ascii wide
+        $string4 = "NSAKEY/nsa-rules" nocase ascii wide
         // Description: Password cracking rules and masks for hashcat that I generated from cracked passwords.
         // Reference: https://github.com/NSAKEY/nsa-rules
-        $string5 = /nsa\-rules\-master/ nocase ascii wide
+        $string5 = "nsa-rules-master" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

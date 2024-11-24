@@ -25,25 +25,25 @@ rule SharpRDPThief
         $string5 = /\\SharpRDPThief\\/ nocase ascii wide
         // Description: A C# implementation of RDPThief to steal credentials from RDP
         // Reference: https://github.com/passthehashbrowns/SharpRDPThief
-        $string6 = /20B3AA84\-9CA7\-43E5\-B0CD\-8DBA5091DF92/ nocase ascii wide
+        $string6 = "20B3AA84-9CA7-43E5-B0CD-8DBA5091DF92" nocase ascii wide
         // Description: A C# implementation of RDPThief to steal credentials from RDP
         // Reference: https://github.com/passthehashbrowns/SharpRDPThief
-        $string7 = /73B2C22B\-C020\-45B7\-BF61\-B48F49A2693F/ nocase ascii wide
+        $string7 = "73B2C22B-C020-45B7-BF61-B48F49A2693F" nocase ascii wide
         // Description: A C# implementation of RDPThief to steal credentials from RDP
         // Reference: https://github.com/passthehashbrowns/SharpRDPThief
-        $string8 = /bbfe2aee2092d981bd2822b8fde8db0ed264f0f86ed445d8987d99b505fd0ff5/ nocase ascii wide
+        $string8 = "bbfe2aee2092d981bd2822b8fde8db0ed264f0f86ed445d8987d99b505fd0ff5" nocase ascii wide
         // Description: A C# implementation of RDPThief to steal credentials from RDP
         // Reference: https://github.com/passthehashbrowns/SharpRDPThief
-        $string9 = /FileMonitor\shas\sinjected\sFileMonitorHook\sinto\sprocess\s/ nocase ascii wide
+        $string9 = "FileMonitor has injected FileMonitorHook into process " nocase ascii wide
         // Description: A C# implementation of RDPThief to steal credentials from RDP
         // Reference: https://github.com/passthehashbrowns/SharpRDPThief
         $string10 = /Hook\sinstalled\sin\smstsc\.exe\,\sPID\s/ nocase ascii wide
         // Description: A C# implementation of RDPThief to steal credentials from RDP
         // Reference: https://github.com/passthehashbrowns/SharpRDPThief
-        $string11 = /passthehashbrowns\/SharpRDPThief/ nocase ascii wide
+        $string11 = "passthehashbrowns/SharpRDPThief" nocase ascii wide
         // Description: A C# implementation of RDPThief to steal credentials from RDP
         // Reference: https://github.com/passthehashbrowns/SharpRDPThief
-        $string12 = /SharpRDPThief\sis\sa\sC\#\simplementation\sof\sRDPThief/ nocase ascii wide
+        $string12 = "SharpRDPThief is a C# implementation of RDPThief" nocase ascii wide
         // Description: A C# implementation of RDPThief to steal credentials from RDP
         // Reference: https://github.com/passthehashbrowns/SharpRDPThief
         $string13 = /SharpRDPThief\.csproj/ nocase ascii wide

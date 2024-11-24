@@ -28,7 +28,7 @@ rule _3proxy
         $string6 = /\/3proxy\.log/ nocase ascii wide
         // Description: 3proxy - tiny free proxy server
         // Reference: https://github.com/3proxy/3proxy
-        $string7 = /\/etc\/3proxy\/conf/ nocase ascii wide
+        $string7 = "/etc/3proxy/conf" nocase ascii wide
         // Description: 3proxy - tiny free proxy server
         // Reference: https://github.com/3proxy/3proxy
         $string8 = /\\3proxy\-.{0,1000}\.deb/ nocase ascii wide
@@ -55,19 +55,19 @@ rule _3proxy
         $string15 = /\\bin\\3proxy/ nocase ascii wide
         // Description: 3proxy - tiny free proxy server
         // Reference: https://github.com/3proxy/3proxy
-        $string16 = /128s3proxy\.key\"/ nocase ascii wide
+        $string16 = /128s3proxy\.key\\"/ nocase ascii wide
         // Description: 3proxy - tiny free proxy server
         // Reference: https://github.com/3proxy/3proxy
-        $string17 = /3proxy\s\-\-install/ nocase ascii wide
+        $string17 = "3proxy --install" nocase ascii wide
         // Description: 3proxy - tiny free proxy server
         // Reference: https://github.com/3proxy/3proxy
-        $string18 = /3proxy\s\-\-remove/ nocase ascii wide
+        $string18 = "3proxy --remove" nocase ascii wide
         // Description: 3proxy - tiny free proxy server
         // Reference: https://github.com/3proxy/3proxy
-        $string19 = /3proxy\stiny\sproxy\sserver/ nocase ascii wide
+        $string19 = "3proxy tiny proxy server" nocase ascii wide
         // Description: 3proxy - tiny free proxy server
         // Reference: https://github.com/3proxy/3proxy
-        $string20 = /3proxy\sWindows\sAuthentication\splugin/ nocase ascii wide
+        $string20 = "3proxy Windows Authentication plugin" nocase ascii wide
         // Description: 3proxy - tiny free proxy server
         // Reference: https://github.com/3proxy/3proxy
         $string21 = /3proxy\.exe\s\-\-/ nocase ascii wide
@@ -76,7 +76,7 @@ rule _3proxy
         $string22 = /3proxy\.service/ nocase ascii wide
         // Description: 3proxy - tiny free proxy server
         // Reference: https://github.com/3proxy/3proxy
-        $string23 = /3proxy\/3proxy/ nocase ascii wide
+        $string23 = "3proxy/3proxy" nocase ascii wide
         // Description: 3proxy - tiny free proxy server
         // Reference: https://github.com/3proxy/3proxy
         $string24 = /3proxy\@3proxy\.org/ nocase ascii wide

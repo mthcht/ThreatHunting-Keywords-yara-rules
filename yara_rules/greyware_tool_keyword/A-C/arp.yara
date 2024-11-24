@@ -10,7 +10,7 @@ rule arp
     strings:
         // Description: Arp displays and modifies information about a system's Address Resolution Protocol (ARP) cache
         // Reference: N/A
-        $string1 = /\"C\:\\Windows\\system32\\ARP\.EXE\"\s\/a/ nocase ascii wide
+        $string1 = /\\"C\:\\Windows\\system32\\ARP\.EXE\\"\s\/a/ nocase ascii wide
 
     condition:
         any of them

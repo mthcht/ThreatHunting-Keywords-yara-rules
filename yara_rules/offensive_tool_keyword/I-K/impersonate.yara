@@ -37,7 +37,7 @@ rule impersonate
         $string9 = /\\Temp\\Impersonate\.exe/ nocase ascii wide
         // Description: A windows token impersonation tool
         // Reference: https://github.com/sensepost/impersonate
-        $string10 = /00630066\-0B43\-474E\-A93B\-417CF1A65195/ nocase ascii wide
+        $string10 = "00630066-0B43-474E-A93B-417CF1A65195" nocase ascii wide
         // Description: A windows token impersonation tool
         // Reference: https://github.com/sensepost/impersonate
         $string11 = /Impersonate\.exe\sadduser\s/ nocase ascii wide
@@ -55,7 +55,7 @@ rule impersonate
         $string15 = /impersonate\-main\.zip/ nocase ascii wide
         // Description: A windows token impersonation tool
         // Reference: https://github.com/sensepost/impersonate
-        $string16 = /sensepost\/impersonate/ nocase ascii wide
+        $string16 = "sensepost/impersonate" nocase ascii wide
 
     condition:
         any of them

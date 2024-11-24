@@ -10,10 +10,10 @@ rule wce
     strings:
         // Description: Windows Credentials Editor
         // Reference: https://www.kali.org/tools/wce/
-        $string1 = /\/returnvar\/wce\// nocase ascii wide
+        $string1 = "/returnvar/wce/" nocase ascii wide
         // Description: Windows Credentials Editor
         // Reference: https://www.kali.org/tools/wce/
-        $string2 = /\/share\/windows\-resources\/wce/ nocase ascii wide
+        $string2 = "/share/windows-resources/wce" nocase ascii wide
         // Description: Windows Credentials Editor
         // Reference: https://www.kali.org/tools/wce/
         $string3 = /\/wce32\.exe/ nocase ascii wide
@@ -34,10 +34,10 @@ rule wce
         $string8 = /\\wce\-beta\.zip/ nocase ascii wide
         // Description: Windows Credentials Editor
         // Reference: https://www.kali.org/tools/wce/
-        $string9 = /apt\sinstall\swce/ nocase ascii wide
+        $string9 = "apt install wce" nocase ascii wide
         // Description: Windows Credentials Editor
         // Reference: https://www.kali.org/tools/wce/
-        $string10 = /wce\s\-i\s3e5\s\-s\s/ nocase ascii wide
+        $string10 = "wce -i 3e5 -s " nocase ascii wide
         // Description: Windows Credentials Editor
         // Reference: https://www.kali.org/tools/wce/
         $string11 = /wce.{0,100}getlsasrvaddr\.exe/ nocase ascii wide

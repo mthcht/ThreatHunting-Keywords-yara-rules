@@ -19,13 +19,13 @@ rule LDAPWordlistHarvester
         $string3 = /LDAPWordlistHarvester\.py/ nocase ascii wide
         // Description: A tool to generate a wordlist from the information present in LDAP in order to crack passwords of domain accounts.
         // Reference: https://github.com/p0dalirius/LDAPWordlistHarvester
-        $string4 = /LDAPWordlistHarvester\-main/ nocase ascii wide
+        $string4 = "LDAPWordlistHarvester-main" nocase ascii wide
         // Description: A tool to generate a wordlist from the information present in LDAP in order to crack passwords of domain accounts.
         // Reference: https://github.com/p0dalirius/LDAPWordlistHarvester
-        $string5 = /p0dalirius\/LDAPWordlistHarvester/ nocase ascii wide
+        $string5 = "p0dalirius/LDAPWordlistHarvester" nocase ascii wide
         // Description: A tool to generate a wordlist from the information present in LDAP in order to crack passwords of domain accounts.
         // Reference: https://github.com/p0dalirius/LDAPWordlistHarvester
-        $string6 = /Powershell\sLDAPWordlistHarvester/ nocase ascii wide
+        $string6 = "Powershell LDAPWordlistHarvester" nocase ascii wide
 
     condition:
         any of them

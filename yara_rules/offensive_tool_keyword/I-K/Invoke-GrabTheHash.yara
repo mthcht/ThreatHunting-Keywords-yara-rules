@@ -16,10 +16,10 @@ rule Invoke_GrabTheHash
         $string2 = /\[\-\]\sStopping\shere\,\sbefore\sgrabbing\sthe\sHash/ nocase ascii wide
         // Description: Get the NTLM Hash for the User or Machine Account TGT held in your current session
         // Reference: https://github.com/Leo4j/Invoke-GrabTheHash
-        $string3 = /0592164ed8c8e6330431ba1f8a3eeee650af93d11b4320cfcfda75483b699c32/ nocase ascii wide
+        $string3 = "0592164ed8c8e6330431ba1f8a3eeee650af93d11b4320cfcfda75483b699c32" nocase ascii wide
         // Description: Get the NTLM Hash for the User or Machine Account TGT held in your current session
         // Reference: https://github.com/Leo4j/Invoke-GrabTheHash
-        $string4 = /Invoke\-GrabTheHash/ nocase ascii wide
+        $string4 = "Invoke-GrabTheHash" nocase ascii wide
 
     condition:
         any of them

@@ -28,43 +28,43 @@ rule localxpose
         $string6 = /\\loclx\-windows\-amd64\.zip/ nocase ascii wide
         // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
         // Reference: https://localxpose.io/
-        $string7 = /17a9356024d2fa2ae8f327fc5babc10eb859e0c433e768cd03a50dd9c7880601/ nocase ascii wide
+        $string7 = "17a9356024d2fa2ae8f327fc5babc10eb859e0c433e768cd03a50dd9c7880601" nocase ascii wide
         // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
         // Reference: https://localxpose.io/
-        $string8 = /33ab2fa30777211450e30c21c45803cdf076cb991f05691bd60aef97a8183e04/ nocase ascii wide
+        $string8 = "33ab2fa30777211450e30c21c45803cdf076cb991f05691bd60aef97a8183e04" nocase ascii wide
         // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
         // Reference: https://localxpose.io/
         $string9 = /api\.localxpose\.io/ nocase ascii wide
         // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
         // Reference: https://localxpose.io/
-        $string10 = /brew\sinstall\s\-\-cask\slocalxpose/ nocase ascii wide
+        $string10 = "brew install --cask localxpose" nocase ascii wide
         // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
         // Reference: https://localxpose.io/
-        $string11 = /cd1978742a4afdbaaa15bf712d5c90bef4144caa99024df98f6a9ad58043ae85/ nocase ascii wide
+        $string11 = "cd1978742a4afdbaaa15bf712d5c90bef4144caa99024df98f6a9ad58043ae85" nocase ascii wide
         // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
         // Reference: https://localxpose.io/
-        $string12 = /choco\sinstall\slocalxpose/ nocase ascii wide
+        $string12 = "choco install localxpose" nocase ascii wide
         // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
         // Reference: https://localxpose.io/
         $string13 = /https\:\/\/localxpose\.io\/download/ nocase ascii wide
         // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
         // Reference: https://localxpose.io/
-        $string14 = /localxpose\/localxpose/ nocase ascii wide
+        $string14 = "localxpose/localxpose" nocase ascii wide
         // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
         // Reference: https://localxpose.io/
-        $string15 = /loclx\stunnel\sconfig\s/ nocase ascii wide
+        $string15 = "loclx tunnel config " nocase ascii wide
         // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
         // Reference: https://localxpose.io/
-        $string16 = /loclx\stunnel\shttp\s/ nocase ascii wide
+        $string16 = "loclx tunnel http " nocase ascii wide
         // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
         // Reference: https://localxpose.io/
-        $string17 = /loclx\stunnel\stcp\s/ nocase ascii wide
+        $string17 = "loclx tunnel tcp " nocase ascii wide
         // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
         // Reference: https://localxpose.io/
-        $string18 = /loclx\stunnel\stls\s/ nocase ascii wide
+        $string18 = "loclx tunnel tls " nocase ascii wide
         // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
         // Reference: https://localxpose.io/
-        $string19 = /loclx\stunnel\sudp\s/ nocase ascii wide
+        $string19 = "loclx tunnel udp " nocase ascii wide
         // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
         // Reference: https://localxpose.io/
         $string20 = /loclx\.exe\stunnel\shttp\s/ nocase ascii wide
@@ -82,13 +82,13 @@ rule localxpose
         $string24 = /loclx\-client\.s3\.amazonaws\.com/ nocase ascii wide
         // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
         // Reference: https://localxpose.io/
-        $string25 = /npm\sinstall\slocalxpose/ nocase ascii wide
+        $string25 = "npm install localxpose" nocase ascii wide
         // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
         // Reference: https://localxpose.io/
-        $string26 = /snap\sinstall\slocalxpose/ nocase ascii wide
+        $string26 = "snap install localxpose" nocase ascii wide
         // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
         // Reference: https://localxpose.io/
-        $string27 = /yarn\sadd\slocalxpose/ nocase ascii wide
+        $string27 = "yarn add localxpose" nocase ascii wide
 
     condition:
         any of them

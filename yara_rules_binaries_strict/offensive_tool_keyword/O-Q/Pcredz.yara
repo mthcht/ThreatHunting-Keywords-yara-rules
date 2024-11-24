@@ -13,16 +13,16 @@ rule Pcredz
         $string1 = /\.\/Pcredz\s/ nocase ascii wide
         // Description: This tool extracts Credit card numbers. NTLM(DCE-RPC. HTTP. SQL. LDAP. etc). Kerberos (AS-REQ Pre-Auth etype 23). HTTP Basic. SNMP. POP. SMTP. FTP. IMAP. etc from a pcap file or from a live interface.
         // Reference: https://github.com/lgandx/Pcredz
-        $string2 = /lgandx\/Pcredz/ nocase ascii wide
+        $string2 = "lgandx/Pcredz" nocase ascii wide
         // Description: This tool extracts Credit card numbers. NTLM(DCE-RPC. HTTP. SQL. LDAP. etc). Kerberos (AS-REQ Pre-Auth etype 23). HTTP Basic. SNMP. POP. SMTP. FTP. IMAP. etc from a pcap file or from a live interface.
         // Reference: https://github.com/lgandx/Pcredz
-        $string3 = /Pcredz\s\-d\s/ nocase ascii wide
+        $string3 = "Pcredz -d " nocase ascii wide
         // Description: This tool extracts Credit card numbers. NTLM(DCE-RPC. HTTP. SQL. LDAP. etc). Kerberos (AS-REQ Pre-Auth etype 23). HTTP Basic. SNMP. POP. SMTP. FTP. IMAP. etc from a pcap file or from a live interface.
         // Reference: https://github.com/lgandx/Pcredz
-        $string4 = /Pcredz\s\-f\s/ nocase ascii wide
+        $string4 = "Pcredz -f " nocase ascii wide
         // Description: This tool extracts Credit card numbers. NTLM(DCE-RPC. HTTP. SQL. LDAP. etc). Kerberos (AS-REQ Pre-Auth etype 23). HTTP Basic. SNMP. POP. SMTP. FTP. IMAP. etc from a pcap file or from a live interface.
         // Reference: https://github.com/lgandx/Pcredz
-        $string5 = /Pcredz\s\-i\s/ nocase ascii wide
+        $string5 = "Pcredz -i " nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -10,10 +10,10 @@ rule AzureAD_Autologon_Brute
     strings:
         // Description: Brute force attack tool for Azure AD Autologon
         // Reference: https://github.com/nyxgeek/AzureAD_Autologon_Brute
-        $string1 = /AzureAD\sAutoLogon\sBrute/ nocase ascii wide
+        $string1 = "AzureAD AutoLogon Brute" nocase ascii wide
         // Description: Brute force attack tool for Azure AD Autologon
         // Reference: https://github.com/nyxgeek/AzureAD_Autologon_Brute
-        $string2 = /AzureAD_Autologon_Brute/ nocase ascii wide
+        $string2 = "AzureAD_Autologon_Brute" nocase ascii wide
 
     condition:
         any of them

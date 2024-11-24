@@ -10,7 +10,7 @@ rule DumpsterFire
     strings:
         // Description: The DumpsterFire Toolset is a modular. menu-driven. cross-platform tool for building repeatable. time-delayed. distributed security events. Easily create custom event chains for Blue Team drills and sensor / alert mapping. Red Teams can create decoy incidents. distractions. and lures to support and scale their operations. Turn paper tabletop exercises into controlled live fire range events. Build event sequences (narratives) to simulate realistic scenarios and generate corresponding network and filesystem artifacts.
         // Reference: https://github.com/TryCatchHCF/DumpsterFire
-        $string1 = /\/DumpsterFire\// nocase ascii wide
+        $string1 = "/DumpsterFire/" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

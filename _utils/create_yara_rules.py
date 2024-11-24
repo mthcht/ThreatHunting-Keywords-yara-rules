@@ -98,21 +98,35 @@ def generate_yara_rules(base_directory):
             outfile.write("\n    strings:\n")
             
             for idx, (keyword, description, reference) in enumerate(keywords):
-                keyword = re.sub(r'^\*','', keyword)
-                keyword = re.sub(r'\*$','', keyword)
-                escaped_keyword = keyword.replace("\\", "\\\\").replace("\"", "\\\"")\
-                .replace(".", "\\.").replace(" ", "\\s").replace("|", "\\|").replace("/", "\\/")\
-                .replace("(", "\\(").replace(")", "\\)").replace('+','\+').replace("&","\\&")\
-                .replace('?','\?').replace('[','\[').replace(']','\]').replace("'","\\'").replace('-','\-')\
-                .replace('!','\!').replace('#','\#').replace('"','\"').replace('^','\^').replace('%','\%')\
-                .replace('=','\=').replace('$','\$').replace(';','\;').replace('<','\<').replace('>','\>')\
-                .replace('@','\@').replace('}','\}').replace('{','\{').replace(',','\,').replace('`','\`')\
-                .replace('~','\~').replace(':','\:').replace("*", ".{0,1000}")
-                escaped_keyword = re.sub(r'^\.\*|\.\*$', '', escaped_keyword)
                 description_sanitized = description.replace("\n", " ")
                 outfile.write(f"        // Description: {description_sanitized}\n")
                 outfile.write(f"        // Reference: {reference}\n")
-                outfile.write(f"        $string{idx+1} = /{escaped_keyword}/ nocase ascii wide\n")
+
+                # Remove leading and trailing '*'
+                keyword_stripped = keyword.strip('*')
+
+                # Check if keyword contains wildcards or special characters
+                if '*' in keyword_stripped or re.search(r'[.^$+?{}\[\]\\|()]', keyword_stripped):
+                    needs_regex_flag = True
+                else:
+                    needs_regex_flag = False
+
+                if needs_regex_flag:
+                    escaped_keyword = keyword_stripped.replace("\\", "\\\\").replace("\"", "\\\"") \
+                        .replace(" ", r"\s").replace("|", r"\|").replace("/", r"\/").replace(".", r"\.") \
+                        .replace("(", r"\(").replace(")", r"\)").replace('+', r"\+").replace("&", r"\&") \
+                        .replace('?', r"\?").replace('[', r"\[").replace(']', r"\]").replace("'", r"\'").replace('-', r"\-") \
+                        .replace('!', r"\!").replace('#', r"\#").replace('"', r"\"").replace('^', r"\^").replace('%', r"\%") \
+                        .replace('=', r"\=").replace('$', r"\$").replace(';', r"\;").replace('<', r"\<").replace('>', r"\>") \
+                        .replace('@', r"\@").replace('}', r"\}").replace('{', r"\{").replace(',', r"\,").replace('`', r"\`") \
+                        .replace('~', r"\~").replace(':', r"\:").replace('*', '.{0,1000}')
+
+                    outfile.write(f"        $string{idx+1} = /{escaped_keyword}/ nocase ascii wide\n")
+                else:
+                    # Use simple string
+                    # Escape backslash and double quote
+                    escaped_keyword = keyword_stripped.replace("\\", "\\\\").replace("\"", "\\\"")
+                    outfile.write(f"        $string{idx+1} = \"{escaped_keyword}\" nocase ascii wide\n")
                 
             outfile.write("\n    condition:\n")
             outfile.write("        any of them\n")

@@ -16,22 +16,22 @@ rule legba
         $string2 = /\/legba\.git/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string3 = /\/legba\/target\/release\/legba/ nocase ascii wide
+        $string3 = "/legba/target/release/legba" nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string4 = /\/usr\/bin\/legba/ nocase ascii wide
+        $string4 = "/usr/bin/legba" nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string5 = /A\sfast\smulti\sprotocol\scredential\sbruteforcer\/sprayer\/enumerator/ nocase ascii wide
+        $string5 = "A fast multi protocol credential bruteforcer/sprayer/enumerator" nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
         $string6 = /docker\sbuild\s\-t\slegba\s\./ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string7 = /docker\srun\slegba/ nocase ascii wide
+        $string7 = "docker run legba" nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string8 = /evilsocket\/legba/ nocase ascii wide
+        $string8 = "evilsocket/legba" nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
         $string9 = /evilsocket\@gmail\.com/ nocase ascii wide
@@ -115,7 +115,7 @@ rule legba
         $string35 = /legba\-main\.zip/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string36 = /root\scargo\snew\s\-\-bin\slegba/ nocase ascii wide
+        $string36 = "root cargo new --bin legba" nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
         $string37 = /Simone\sMargaritelli\s\<evilsocket\@gmail\.com\>/ nocase ascii wide

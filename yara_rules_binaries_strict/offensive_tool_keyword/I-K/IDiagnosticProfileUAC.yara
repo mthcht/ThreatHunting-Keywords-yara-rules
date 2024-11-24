@@ -10,7 +10,7 @@ rule IDiagnosticProfileUAC
     strings:
         // Description: UAC bypass using auto-elevated COM object Virtual Factory for DiagCpl
         // Reference: https://github.com/Wh04m1001/IDiagnosticProfileUAC
-        $string1 = /\/IDiagnosticProfileUAC/ nocase ascii wide
+        $string1 = "/IDiagnosticProfileUAC" nocase ascii wide
         // Description: UAC bypass using auto-elevated COM object Virtual Factory for DiagCpl
         // Reference: https://github.com/Wh04m1001/IDiagnosticProfileUAC
         $string2 = /\\IDiagnosticProfileUAC/ nocase ascii wide
@@ -22,7 +22,7 @@ rule IDiagnosticProfileUAC
         $string4 = /IDiagnosticProfileUAC\.git/ nocase ascii wide
         // Description: UAC bypass using auto-elevated COM object Virtual Factory for DiagCpl
         // Reference: https://github.com/Wh04m1001/IDiagnosticProfileUAC
-        $string5 = /IDiagnosticProfileUAC\-main/ nocase ascii wide
+        $string5 = "IDiagnosticProfileUAC-main" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

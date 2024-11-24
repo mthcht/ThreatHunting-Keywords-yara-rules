@@ -16,7 +16,7 @@ rule wmiexec
         $string2 = /\s\>\s\\\\127\.0\.0\.1\\ADMIN\$\\__17.{0,100}\s2\>\&1/ nocase ascii wide
         // Description: Set of python scripts which perform different ways of command execution via WMI protocol
         // Reference: https://github.com/WKL-Sec/wmiexec
-        $string3 = /\/wmiexec\// nocase ascii wide
+        $string3 = "/wmiexec/" nocase ascii wide
         // Description: wmiexec.py from impacket used by metasploit
         // Reference: https://github.com/rapid7/metasploit-framework/blob/2722067108b5c034da9f77b95eaf1c1db33db4fa/modules/auxiliary/scanner/smb/impacket/wmiexec.py#L127
         $string4 = /cmd\.exe\s\/Q\s\/c\s.{0,100}\.bat\s.{0,100}\>\s\\\\127\.0\.0\.1\\ADMIN\$\\.{0,100}\s2\&/ nocase ascii wide
@@ -49,7 +49,7 @@ rule wmiexec
         $string13 = /wmiexec_win32process\.py/ nocase ascii wide
         // Description: Set of python scripts which perform different ways of command execution via WMI protocol
         // Reference: https://github.com/WKL-Sec/wmiexec
-        $string14 = /WMIExec\-main/ nocase ascii wide
+        $string14 = "WMIExec-main" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -10,7 +10,7 @@ rule WinDefenderKiller
     strings:
         // Description: Windows Defender Killer | C++ Code Disabling Permanently Windows Defender using Registry Keys
         // Reference: https://github.com/S12cybersecurity/WinDefenderKiller
-        $string1 = /\swinDefKiller\s/ nocase ascii wide
+        $string1 = " winDefKiller " nocase ascii wide
         // Description: Windows Defender Killer | C++ Code Disabling Permanently Windows Defender using Registry Keys
         // Reference: https://github.com/S12cybersecurity/WinDefenderKiller
         $string2 = /disableWinDef\.cpp/ nocase ascii wide
@@ -22,7 +22,7 @@ rule WinDefenderKiller
         $string4 = /RevWinDefKiller\.exe/ nocase ascii wide
         // Description: Windows Defender Killer | C++ Code Disabling Permanently Windows Defender using Registry Keys
         // Reference: https://github.com/S12cybersecurity/WinDefenderKiller
-        $string5 = /WinDefenderKiller/ nocase ascii wide
+        $string5 = "WinDefenderKiller" nocase ascii wide
         // Description: Windows Defender Killer | C++ Code Disabling Permanently Windows Defender using Registry Keys
         // Reference: https://github.com/S12cybersecurity/WinDefenderKiller
         $string6 = /winDefKiller\.exe/ nocase ascii wide

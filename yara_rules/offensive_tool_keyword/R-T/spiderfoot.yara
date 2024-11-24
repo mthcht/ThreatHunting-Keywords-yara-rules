@@ -40,13 +40,13 @@ rule spiderfoot
         $string10 = /sfp_torexits\.py/ nocase ascii wide
         // Description: The OSINT Platform for Security Assessments
         // Reference: https://www.spiderfoot.net/
-        $string11 = /smicallef\/spiderfoot/ nocase ascii wide
+        $string11 = "smicallef/spiderfoot" nocase ascii wide
         // Description: The OSINT Platform for Security Assessments
         // Reference: https://www.spiderfoot.net/
         $string12 = /\-SpiderFoot\-correlations\.csv/ nocase ascii wide
         // Description: The OSINT Platform for Security Assessments
         // Reference: https://www.spiderfoot.net/
-        $string13 = /spiderfoot\-master/ nocase ascii wide
+        $string13 = "spiderfoot-master" nocase ascii wide
 
     condition:
         any of them

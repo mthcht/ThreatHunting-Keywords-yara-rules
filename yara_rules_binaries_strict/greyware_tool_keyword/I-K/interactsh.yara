@@ -16,16 +16,16 @@ rule interactsh
         $string2 = /\.interactsh\.com/ nocase ascii wide
         // Description: Interactsh is an open-source tool for detecting out-of-band interactions. It is a tool designed to detect vulnerabilities that cause external interactions but abused by attackers as C5
         // Reference: https://github.com/projectdiscovery/interactsh
-        $string3 = /\/interactsh\// nocase ascii wide
+        $string3 = "/interactsh/" nocase ascii wide
         // Description: Interactsh is an open-source tool for detecting out-of-band interactions. It is a tool designed to detect vulnerabilities that cause external interactions but abused by attackers as C6
         // Reference: https://github.com/projectdiscovery/interactsh
-        $string4 = /\/interactsh\-client/ nocase ascii wide
+        $string4 = "/interactsh-client" nocase ascii wide
         // Description: Interactsh is an open-source tool for detecting out-of-band interactions. It is a tool designed to detect vulnerabilities that cause external interactions but abused by attackers as C15
         // Reference: https://github.com/projectdiscovery/interactsh
-        $string5 = /\/interactsh\-collaborator/ nocase ascii wide
+        $string5 = "/interactsh-collaborator" nocase ascii wide
         // Description: Interactsh is an open-source tool for detecting out-of-band interactions. It is a tool designed to detect vulnerabilities that cause external interactions but abused by attackers as C8
         // Reference: https://github.com/projectdiscovery/interactsh
-        $string6 = /\/interactsh\-server/ nocase ascii wide
+        $string6 = "/interactsh-server" nocase ascii wide
         // Description: Interactsh is an open-source tool for detecting out-of-band interactions. It is a tool designed to detect vulnerabilities that cause external interactions but abused by attackers as C3
         // Reference: https://github.com/projectdiscovery/interactsh
         $string7 = /curl.{0,100}\.interact\.sh/ nocase ascii wide
@@ -34,7 +34,7 @@ rule interactsh
         $string8 = /http\:\/\/.{0,100}\.interact\.sh/ nocase ascii wide
         // Description: Interactsh is an open-source tool for detecting out-of-band interactions. It is a tool designed to detect vulnerabilities that cause external interactions but abused by attackers as C10
         // Reference: https://github.com/projectdiscovery/interactsh
-        $string9 = /interactsh\s\-/ nocase ascii wide
+        $string9 = "interactsh -" nocase ascii wide
         // Description: Interactsh is an open-source tool for detecting out-of-band interactions. It is a tool designed to detect vulnerabilities that cause external interactions but abused by attackers as C9
         // Reference: https://github.com/projectdiscovery/interactsh
         $string10 = /interactsh.{0,100}\.exe/ nocase ascii wide
@@ -43,13 +43,13 @@ rule interactsh
         $string11 = /interactsh.{0,100}oast\./ nocase ascii wide
         // Description: Interactsh is an open-source tool for detecting out-of-band interactions. It is a tool designed to detect vulnerabilities that cause external interactions but abused by attackers as C11
         // Reference: https://github.com/projectdiscovery/interactsh
-        $string12 = /interactsh\-client\s\-/ nocase ascii wide
+        $string12 = "interactsh-client -" nocase ascii wide
         // Description: Interactsh is an open-source tool for detecting out-of-band interactions. It is a tool designed to detect vulnerabilities that cause external interactions but abused by attackers as C13
         // Reference: https://github.com/projectdiscovery/interactsh
-        $string13 = /interactsh\-server\s\-/ nocase ascii wide
+        $string13 = "interactsh-server -" nocase ascii wide
         // Description: Interactsh is an open-source tool for detecting out-of-band interactions. It is a tool designed to detect vulnerabilities that cause external interactions but abused by attackers as C12
         // Reference: https://github.com/projectdiscovery/interactsh
-        $string14 = /projectdiscovery\/interactsh/ nocase ascii wide
+        $string14 = "projectdiscovery/interactsh" nocase ascii wide
         // Description: Interactsh is an open-source tool for detecting out-of-band interactions. It is a tool designed to detect vulnerabilities that cause external interactions but abused by attackers as C2
         // Reference: https://github.com/projectdiscovery/interactsh
         $string15 = /wget.{0,100}\.interact\.sh/ nocase ascii wide

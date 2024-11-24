@@ -10,7 +10,7 @@ rule CredPhisher
     strings:
         // Description: Prompts the current user for their credentials using the CredUIPromptForWindowsCredentials WinAPI function
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/CredPhisher
-        $string1 = /\/CredPhisher\// nocase ascii wide
+        $string1 = "/CredPhisher/" nocase ascii wide
         // Description: Prompts the current user for their credentials using the CredUIPromptForWindowsCredentials WinAPI function
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/CredPhisher
         $string2 = /CredPhisher\.csproj/ nocase ascii wide
@@ -19,7 +19,7 @@ rule CredPhisher
         $string3 = /CredPhisher\.exe/ nocase ascii wide
         // Description: Prompts the current user for their credentials using the CredUIPromptForWindowsCredentials WinAPI function
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/CredPhisher
-        $string4 = /namespace\sCredPhisher/ nocase ascii wide
+        $string4 = "namespace CredPhisher" nocase ascii wide
 
     condition:
         any of them

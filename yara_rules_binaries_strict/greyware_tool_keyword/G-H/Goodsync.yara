@@ -46,7 +46,7 @@ rule Goodsync
         $string12 = /\\Users\\.{0,100}\\AppData\\Local\\GoodSync/ nocase ascii wide
         // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://www.goodsync.com/
-        $string13 = /\>GoodSync\</ nocase ascii wide
+        $string13 = ">GoodSync<" nocase ascii wide
         // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://www.goodsync.com/
         $string14 = /\>gs\-runner\.exe\</ nocase ascii wide
@@ -58,7 +58,7 @@ rule Goodsync
         $string16 = /Copy\sNew\s.{0,100}sftp\:\/\// nocase ascii wide
         // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://www.goodsync.com/
-        $string17 = /GoodSync\sServer/ nocase ascii wide
+        $string17 = "GoodSync Server" nocase ascii wide
         // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://www.goodsync.com/
         $string18 = /GoodSync\-vsub\-2Go\-Setup\.exe/ nocase ascii wide

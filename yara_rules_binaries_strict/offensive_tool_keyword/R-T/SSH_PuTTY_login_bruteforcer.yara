@@ -10,13 +10,13 @@ rule SSH_PuTTY_login_bruteforcer
     strings:
         // Description: Turn PuTTY into an SSH login bruteforcing tool.
         // Reference: https://github.com/InfosecMatter/SSH-PuTTY-login-bruteforcer
-        $string1 = /ssh\-putty\-brute\s\-/ nocase ascii wide
+        $string1 = "ssh-putty-brute -" nocase ascii wide
         // Description: Turn PuTTY into an SSH login bruteforcing tool.
         // Reference: https://github.com/InfosecMatter/SSH-PuTTY-login-bruteforcer
         $string2 = /ssh\-putty\-brute\.ps1/ nocase ascii wide
         // Description: Turn PuTTY into an SSH login bruteforcing tool.
         // Reference: https://github.com/InfosecMatter/SSH-PuTTY-login-bruteforcer
-        $string3 = /SSH\-PuTTY\-login\-bruteforcer/ nocase ascii wide
+        $string3 = "SSH-PuTTY-login-bruteforcer" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

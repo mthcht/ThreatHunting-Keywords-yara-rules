@@ -34,7 +34,7 @@ rule EmailAll
         $string8 = /EmailAll\-master\./ nocase ascii wide
         // Description: EmailAll is a powerful Email Collect tool
         // Reference: https://github.com/Taonn/EmailAll
-        $string9 = /Taonn\/EmailAll/ nocase ascii wide
+        $string9 = "Taonn/EmailAll" nocase ascii wide
 
     condition:
         any of them

@@ -22,7 +22,7 @@ rule HookDetector
         $string4 = /\\HookDetector\.exe/ nocase ascii wide
         // Description: Detects hooked Native API functions in the current process indicating the presence of EDR
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/HookDetector
-        $string5 = /master\/HookDetector/ nocase ascii wide
+        $string5 = "master/HookDetector" nocase ascii wide
 
     condition:
         any of them

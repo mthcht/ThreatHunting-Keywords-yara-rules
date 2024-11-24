@@ -13,13 +13,13 @@ rule OffensiveCSharp
         $string1 = /\/OffensiveCSharp\.git/ nocase ascii wide
         // Description: Collection of Offensive C# Tooling
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master
-        $string2 = /\/OffensiveCSharp\// nocase ascii wide
+        $string2 = "/OffensiveCSharp/" nocase ascii wide
         // Description: Collection of Offensive C# Tooling
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master
         $string3 = /\\OffensiveCSharp\\/ nocase ascii wide
         // Description: Collection of Offensive C# Tooling
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master
-        $string4 = /OffensiveCSharp\-master/ nocase ascii wide
+        $string4 = "OffensiveCSharp-master" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

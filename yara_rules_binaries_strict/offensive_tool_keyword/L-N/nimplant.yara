@@ -10,13 +10,13 @@ rule nimplant
     strings:
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
-        $string1 = /\s\-d\:sleepmask/ nocase ascii wide
+        $string1 = " -d:sleepmask" nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
-        $string2 = /\sexe\-selfdelete/ nocase ascii wide
+        $string2 = " exe-selfdelete" nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
-        $string3 = /\s\-\-nomain\s\-d\:exportDll\s\-\-passL\:/ nocase ascii wide
+        $string3 = " --nomain -d:exportDll --passL:" nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
         $string4 = /\.nimplant/ nocase ascii wide
@@ -28,43 +28,43 @@ rule nimplant
         $string6 = /\/NimPlant\./ nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
-        $string7 = /\/NimPlant\// nocase ascii wide
+        $string7 = "/NimPlant/" nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
-        $string8 = /\/nimplants\// nocase ascii wide
+        $string8 = "/nimplants/" nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
         $string9 = /\\NimPlant\./ nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
-        $string10 = /_nimplant_/ nocase ascii wide
+        $string10 = "_nimplant_" nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
         $string11 = /127\.0\.0\.1\:31337/ nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
-        $string12 = /789CF3CBCC0DC849CC2B51703652084E2D2A4B2D02003B5C0650/ nocase ascii wide
+        $string12 = "789CF3CBCC0DC849CC2B51703652084E2D2A4B2D02003B5C0650" nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
-        $string13 = /BeaconGetSpawnTo/ nocase ascii wide
+        $string13 = "BeaconGetSpawnTo" nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
-        $string14 = /BeaconInjectProcess/ nocase ascii wide
+        $string14 = "BeaconInjectProcess" nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
-        $string15 = /C2\sClient/ nocase ascii wide
+        $string15 = "C2 Client" nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
-        $string16 = /C2\sNimplant\sServer/ nocase ascii wide
+        $string16 = "C2 Nimplant Server" nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
-        $string17 = /Cannot\senumerate\santivirus/ nocase ascii wide
+        $string17 = "Cannot enumerate antivirus" nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
-        $string18 = /chvancooten\/nimbuild/ nocase ascii wide
+        $string18 = "chvancooten/nimbuild" nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
-        $string19 = /chvancooten\/NimPlant/ nocase ascii wide
+        $string19 = "chvancooten/NimPlant" nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
         $string20 = /Cmd\-Execute\-Assembly\./ nocase ascii wide
@@ -79,22 +79,22 @@ rule nimplant
         $string23 = /Cmd\-Upload\./ nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
-        $string24 = /compile_implant/ nocase ascii wide
+        $string24 = "compile_implant" nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
-        $string25 = /ConvertToShellcode/ nocase ascii wide
+        $string25 = "ConvertToShellcode" nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
-        $string26 = /dbGetNimplant/ nocase ascii wide
+        $string26 = "dbGetNimplant" nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
         $string27 = /details\-c80a6994018b23dc\.js/ nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
-        $string28 = /EiD5PDowAAAAEFRQVBSUVZIMdJlSItSYEiLUhhIi1IgSItyUEgPt0pKTTHJSDHArDxhfAIsIEHByQ1BAcHi7VJBUUiLUiCLQj/ nocase ascii wide
+        $string28 = "EiD5PDowAAAAEFRQVBSUVZIMdJlSItSYEiLUhhIi1IgSItyUEgPt0pKTTHJSDHArDxhfAIsIEHByQ1BAcHi7VJBUUiLUiCLQj" nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
-        $string29 = /execute\-assembly\s/ nocase ascii wide
+        $string29 = "execute-assembly " nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
         $string30 = /executeAssembly\.nim/ nocase ascii wide
@@ -106,13 +106,13 @@ rule nimplant
         $string32 = /fde1b109f9704ff7\.css/ nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
-        $string33 = /getNimplantByGuid/ nocase ascii wide
+        $string33 = "getNimplantByGuid" nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
-        $string34 = /getPositionImplant/ nocase ascii wide
+        $string34 = "getPositionImplant" nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
-        $string35 = /import\snp_server/ nocase ascii wide
+        $string35 = "import np_server" nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
         $string36 = /inline\-execute\s.{0,100}\.o/ nocase ascii wide
@@ -121,16 +121,16 @@ rule nimplant
         $string37 = /inlineExecute\.nim/ nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
-        $string38 = /killAllNimplants/ nocase ascii wide
+        $string38 = "killAllNimplants" nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
-        $string39 = /localhost\:31337/ nocase ascii wide
+        $string39 = "localhost:31337" nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
-        $string40 = /NimPlant\sv/ nocase ascii wide
+        $string40 = "NimPlant v" nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
-        $string41 = /nimplant\-/ nocase ascii wide
+        $string41 = "nimplant-" nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
         $string42 = /NimPlant.{0,100}\.tar\.gz/ nocase ascii wide
@@ -154,7 +154,7 @@ rule nimplant
         $string48 = /NimPlant\.py/ nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
-        $string49 = /nimplantPrint/ nocase ascii wide
+        $string49 = "nimplantPrint" nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
         $string50 = /nimplants\-.{0,100}\.js/ nocase ascii wide
@@ -175,7 +175,7 @@ rule nimplant
         $string55 = /ShellcodeRDI\.py/ nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
-        $string56 = /shinject\s/ nocase ascii wide
+        $string56 = "shinject " nocase ascii wide
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
         $string57 = /shinject\.nim/ nocase ascii wide

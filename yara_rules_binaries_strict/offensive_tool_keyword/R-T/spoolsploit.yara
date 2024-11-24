@@ -10,31 +10,31 @@ rule spoolsploit
     strings:
         // Description: A collection of Windows print spooler exploits containerized with other utilities for practical exploitation.
         // Reference: https://github.com/BeetleChunks/SpoolSploit
-        $string1 = /\s\-a\snightmare/ nocase ascii wide
+        $string1 = " -a nightmare" nocase ascii wide
         // Description: A collection of Windows print spooler exploits containerized with other utilities for practical exploitation.
         // Reference: https://github.com/BeetleChunks/SpoolSploit
-        $string2 = /\s\-a\sspoolsample/ nocase ascii wide
+        $string2 = " -a spoolsample" nocase ascii wide
         // Description: A collection of Windows print spooler exploits containerized with other utilities for practical exploitation.
         // Reference: https://github.com/BeetleChunks/SpoolSploit
         $string3 = /\sevil\.corp\s/ nocase ascii wide
         // Description: A collection of Windows print spooler exploits containerized with other utilities for practical exploitation.
         // Reference: https://github.com/BeetleChunks/SpoolSploit
-        $string4 = /\sspoolsploit\s/ nocase ascii wide
+        $string4 = " spoolsploit " nocase ascii wide
         // Description: A collection of Windows print spooler exploits containerized with other utilities for practical exploitation.
         // Reference: https://github.com/BeetleChunks/SpoolSploit
         $string5 = /\/smbserver\/smb_server\.py/ nocase ascii wide
         // Description: A collection of Windows print spooler exploits containerized with other utilities for practical exploitation.
         // Reference: https://github.com/BeetleChunks/SpoolSploit
-        $string6 = /\/ssploit\// nocase ascii wide
+        $string6 = "/ssploit/" nocase ascii wide
         // Description: A collection of Windows print spooler exploits containerized with other utilities for practical exploitation.
         // Reference: https://github.com/BeetleChunks/SpoolSploit
-        $string7 = /\-\-attack\snightmare/ nocase ascii wide
+        $string7 = "--attack nightmare" nocase ascii wide
         // Description: A collection of Windows print spooler exploits containerized with other utilities for practical exploitation.
         // Reference: https://github.com/BeetleChunks/SpoolSploit
-        $string8 = /\-\-attack\sspoolsample/ nocase ascii wide
+        $string8 = "--attack spoolsample" nocase ascii wide
         // Description: A collection of Windows print spooler exploits containerized with other utilities for practical exploitation.
         // Reference: https://github.com/BeetleChunks/SpoolSploit
-        $string9 = /BeetleChunks\/SpoolSploit/ nocase ascii wide
+        $string9 = "BeetleChunks/SpoolSploit" nocase ascii wide
         // Description: A collection of Windows print spooler exploits containerized with other utilities for practical exploitation.
         // Reference: https://github.com/BeetleChunks/SpoolSploit
         $string10 = /impacket\./ nocase ascii wide
@@ -49,10 +49,10 @@ rule spoolsploit
         $string13 = /spool_sploit\.py/ nocase ascii wide
         // Description: A collection of Windows print spooler exploits containerized with other utilities for practical exploitation.
         // Reference: https://github.com/BeetleChunks/SpoolSploit
-        $string14 = /SpoolSploit\// nocase ascii wide
+        $string14 = "SpoolSploit/" nocase ascii wide
         // Description: A collection of Windows print spooler exploits containerized with other utilities for practical exploitation.
         // Reference: https://github.com/BeetleChunks/SpoolSploit
-        $string15 = /spoolsploit\:latest/ nocase ascii wide
+        $string15 = "spoolsploit:latest" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

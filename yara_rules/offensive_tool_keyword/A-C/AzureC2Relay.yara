@@ -10,7 +10,7 @@ rule AzureC2Relay
     strings:
         // Description: AzureC2Relay is an Azure Function that validates and relays Cobalt Strike beacon traffic by verifying the incoming requests based on a Cobalt Strike Malleable C2 profile.
         // Reference: https://github.com/Flangvik/AzureC2Relay
-        $string1 = /\/AzureC2Relay/ nocase ascii wide
+        $string1 = "/AzureC2Relay" nocase ascii wide
         // Description: AzureC2Relay is an Azure Function that validates and relays Cobalt Strike beacon traffic by verifying the incoming requests based on a Cobalt Strike Malleable C2 profile.
         // Reference: https://github.com/Flangvik/AzureC2Relay
         $string2 = /\/ParsedMalleableData\.txt/ nocase ascii wide
@@ -28,7 +28,7 @@ rule AzureC2Relay
         $string6 = /AzureC2Relay\.zip/ nocase ascii wide
         // Description: AzureC2Relay is an Azure Function that validates and relays Cobalt Strike beacon traffic by verifying the incoming requests based on a Cobalt Strike Malleable C2 profile.
         // Reference: https://github.com/Flangvik/AzureC2Relay
-        $string7 = /AzureC2Relay\-main/ nocase ascii wide
+        $string7 = "AzureC2Relay-main" nocase ascii wide
         // Description: AzureC2Relay is an Azure Function that validates and relays Cobalt Strike beacon traffic by verifying the incoming requests based on a Cobalt Strike Malleable C2 profile.
         // Reference: https://github.com/Flangvik/AzureC2Relay
         $string8 = /cobaltstrike\-dist\.tgz/ nocase ascii wide
@@ -40,7 +40,7 @@ rule AzureC2Relay
         $string10 = /GenericC2Relay\.cs/ nocase ascii wide
         // Description: AzureC2Relay is an Azure Function that validates and relays Cobalt Strike beacon traffic by verifying the incoming requests based on a Cobalt Strike Malleable C2 profile.
         // Reference: https://github.com/Flangvik/AzureC2Relay
-        $string11 = /MalleableProfileB64/ nocase ascii wide
+        $string11 = "MalleableProfileB64" nocase ascii wide
         // Description: AzureC2Relay is an Azure Function that validates and relays Cobalt Strike beacon traffic by verifying the incoming requests based on a Cobalt Strike Malleable C2 profile.
         // Reference: https://github.com/Flangvik/AzureC2Relay
         $string12 = /mojo\.5688\.8052\.183894939787088877\#\#/ nocase ascii wide

@@ -13,10 +13,10 @@ rule Tchopper
         $string1 = /\stmp_payload\.txt/ nocase ascii wide
         // Description: conduct Lateral Movement attack by leveraging unfiltered services display name to smuggle binaries as chunks into the target machine
         // Reference: https://github.com/lawrenceamer/Tchopper
-        $string2 = /\#1\s\-\sSmuggling\sbinary\svia\sService\sDisplayName/ nocase ascii wide
+        $string2 = "#1 - Smuggling binary via Service DisplayName" nocase ascii wide
         // Description: conduct Lateral Movement attack by leveraging unfiltered services display name to smuggle binaries as chunks into the target machine
         // Reference: https://github.com/lawrenceamer/Tchopper
-        $string3 = /\#2\s\-\sSmuggling\sbinary\svia\sWMI/ nocase ascii wide
+        $string3 = "#2 - Smuggling binary via WMI" nocase ascii wide
         // Description: conduct Lateral Movement attack by leveraging unfiltered services display name to smuggle binaries as chunks into the target machine
         // Reference: https://github.com/lawrenceamer/Tchopper
         $string4 = /\/TChopper\.git/ nocase ascii wide
@@ -40,7 +40,7 @@ rule Tchopper
         $string10 = /\\tmp_payload\.txt/ nocase ascii wide
         // Description: conduct Lateral Movement attack by leveraging unfiltered services display name to smuggle binaries as chunks into the target machine
         // Reference: https://github.com/lawrenceamer/Tchopper
-        $string11 = /chop\starget\susername\spassword\sdomain\sfilename\schd\swmi/ nocase ascii wide
+        $string11 = "chop target username password domain filename chd wmi" nocase ascii wide
         // Description: conduct Lateral Movement attack by leveraging unfiltered services display name to smuggle binaries as chunks into the target machine
         // Reference: https://github.com/lawrenceamer/Tchopper
         $string12 = /chopper\.exe\s\-m/ nocase ascii wide
@@ -52,25 +52,25 @@ rule Tchopper
         $string14 = /chopper\.exe\s\-w/ nocase ascii wide
         // Description: conduct Lateral Movement attack by leveraging unfiltered services display name to smuggle binaries as chunks into the target machine
         // Reference: https://github.com/lawrenceamer/Tchopper
-        $string15 = /cmd\.exe\s\/c\spowershell\s\-command\s\"Get\-Service\s.{0,1000}chopper/ nocase ascii wide
+        $string15 = /cmd\.exe\s\/c\spowershell\s\-command\s\\"Get\-Service\s.{0,1000}chopper/ nocase ascii wide
         // Description: conduct Lateral Movement attack by leveraging unfiltered services display name to smuggle binaries as chunks into the target machine
         // Reference: https://github.com/lawrenceamer/Tchopper
-        $string16 = /Data\sName\=\"ServiceName\"\>chopper\<\/Data\>/ nocase ascii wide
+        $string16 = "Data Name=\"ServiceName\">chopper</Data>" nocase ascii wide
         // Description: conduct Lateral Movement attack by leveraging unfiltered services display name to smuggle binaries as chunks into the target machine
         // Reference: https://github.com/lawrenceamer/Tchopper
-        $string17 = /Data\sName\=\"ServiceName\"\>final_seg\<\/Data\>/ nocase ascii wide
+        $string17 = "Data Name=\"ServiceName\">final_seg</Data>" nocase ascii wide
         // Description: conduct Lateral Movement attack by leveraging unfiltered services display name to smuggle binaries as chunks into the target machine
         // Reference: https://github.com/lawrenceamer/Tchopper
-        $string18 = /Data\sName\=\"ServiceName\"\>let\sme\sin\<\/Data\>/ nocase ascii wide
+        $string18 = "Data Name=\"ServiceName\">let me in</Data>" nocase ascii wide
         // Description: conduct Lateral Movement attack by leveraging unfiltered services display name to smuggle binaries as chunks into the target machine
         // Reference: https://github.com/lawrenceamer/Tchopper
-        $string19 = /lawrenceamer\/Tchopper/ nocase ascii wide
+        $string19 = "lawrenceamer/Tchopper" nocase ascii wide
         // Description: conduct Lateral Movement attack by leveraging unfiltered services display name to smuggle binaries as chunks into the target machine
         // Reference: https://github.com/lawrenceamer/Tchopper
-        $string20 = /\'svc_smuggling\'/ nocase ascii wide
+        $string20 = "'svc_smuggling'" nocase ascii wide
         // Description: conduct Lateral Movement attack by leveraging unfiltered services display name to smuggle binaries as chunks into the target machine
         // Reference: https://github.com/lawrenceamer/Tchopper
-        $string21 = /Technique\s\#1\s\-\sChop\sChop\s\-\sCreate\/delete/ nocase ascii wide
+        $string21 = "Technique #1 - Chop Chop - Create/delete" nocase ascii wide
 
     condition:
         any of them

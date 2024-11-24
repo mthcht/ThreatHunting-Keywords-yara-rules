@@ -31,7 +31,7 @@ rule adcsync
         $string7 = /certipy\sreq\s\-u\s.{0,100}\s\-p\s.{0,100}\s\-target\-ip\s.{0,100}\s\-dc\-ip\s.{0,100}\s\-ca\s/ nocase ascii wide
         // Description: Use ESC1 to perform a makeshift DCSync and dump hashes
         // Reference: https://github.com/JPG0mez/ADCSync
-        $string8 = /JPG0mez\/ADCSync/ nocase ascii wide
+        $string8 = "JPG0mez/ADCSync" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

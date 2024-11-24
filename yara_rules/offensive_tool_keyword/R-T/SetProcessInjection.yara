@@ -19,13 +19,13 @@ rule SetProcessInjection
         $string3 = /\[x\]\sCannot\sload\sNTDLL\.DLL/ nocase ascii wide
         // Description: alternate technique allowing execution at an arbitrary memory address on a remote process that can be used to replace the standard CreateRemoteThread call.
         // Reference: https://github.com/OtterHacker/SetProcessInjection
-        $string4 = /azfvgayqKwtFApcvyRedpUXculaeCCGA/ nocase ascii wide
+        $string4 = "azfvgayqKwtFApcvyRedpUXculaeCCGA" nocase ascii wide
         // Description: alternate technique allowing execution at an arbitrary memory address on a remote process that can be used to replace the standard CreateRemoteThread call.
         // Reference: https://github.com/OtterHacker/SetProcessInjection
-        $string5 = /CA280845\-1F10\-4E65\-9DE7\-D9C6513BBD91/ nocase ascii wide
+        $string5 = "CA280845-1F10-4E65-9DE7-D9C6513BBD91" nocase ascii wide
         // Description: alternate technique allowing execution at an arbitrary memory address on a remote process that can be used to replace the standard CreateRemoteThread call.
         // Reference: https://github.com/OtterHacker/SetProcessInjection
-        $string6 = /OtterHacker\/SetProcessInjection/ nocase ascii wide
+        $string6 = "OtterHacker/SetProcessInjection" nocase ascii wide
         // Description: alternate technique allowing execution at an arbitrary memory address on a remote process that can be used to replace the standard CreateRemoteThread call.
         // Reference: https://github.com/OtterHacker/SetProcessInjection
         $string7 = /payload\/encryptor_remote\.py/ nocase ascii wide
@@ -34,7 +34,7 @@ rule SetProcessInjection
         $string8 = /SetProcessInjection.{0,1000}encryptor\.py/ nocase ascii wide
         // Description: alternate technique allowing execution at an arbitrary memory address on a remote process that can be used to replace the standard CreateRemoteThread call.
         // Reference: https://github.com/OtterHacker/SetProcessInjection
-        $string9 = /SetProcessInjection\-main/ nocase ascii wide
+        $string9 = "SetProcessInjection-main" nocase ascii wide
 
     condition:
         any of them

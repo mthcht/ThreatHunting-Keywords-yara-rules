@@ -10,10 +10,10 @@ rule Invoke_SocksProxy
     strings:
         // Description: Socks proxy -  and reverse socks server using powershell.
         // Reference: https://github.com/p3nt4/Invoke-SocksProxy
-        $string1 = /Backdoor\:Win64\/PortStarter/ nocase ascii wide
+        $string1 = "Backdoor:Win64/PortStarter" nocase ascii wide
         // Description: also known as PortStarter is a socks proxy and reverse socks server using powershell
         // Reference: https://github.com/roadwy/DefenderYara/blob/9bbdb7f9fd3513ce30aa69cd1d88830e3cf596ca/Backdoor/Win64/PortStarter/Backdoor_Win64_PortStarter_B.yar#L8
-        $string2 = /Backdoor\:Win64\/PortStarter/ nocase ascii wide
+        $string2 = "Backdoor:Win64/PortStarter" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

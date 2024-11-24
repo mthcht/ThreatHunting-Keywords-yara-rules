@@ -13,7 +13,7 @@ rule BarracudaRMM
         $string1 = /\.apitest\.barracudamsp\.com/ nocase ascii wide
         // Description: Deliver remote support services - formely AVG
         // Reference: https://www.barracudamsp.com/products/rmm/barracuda-rmm
-        $string2 = /\/Applications\/Managed\sWorkplace\/Onsite\sManager\/logs\// nocase ascii wide
+        $string2 = "/Applications/Managed Workplace/Onsite Manager/logs/" nocase ascii wide
         // Description: Deliver remote support services - formely AVG
         // Reference: https://www.barracudamsp.com/products/rmm/barracuda-rmm
         $string3 = /\\BRMM_2024\.1\-Release/ nocase ascii wide
@@ -43,25 +43,25 @@ rule BarracudaRMM
         $string11 = /\\SOFTWARE\\Level\sPlatforms\\Managed\sWorkplace\\/ nocase ascii wide
         // Description: Deliver remote support services - formely AVG
         // Reference: https://www.barracudamsp.com/products/rmm/barracuda-rmm
-        $string12 = /\>Barracuda\sMSP\</ nocase ascii wide
+        $string12 = ">Barracuda MSP<" nocase ascii wide
         // Description: Deliver remote support services - formely AVG
         // Reference: https://www.barracudamsp.com/products/rmm/barracuda-rmm
         $string13 = /\>Barracuda\sNetworks\,\sInc\./ nocase ascii wide
         // Description: Deliver remote support services - formely AVG
         // Reference: https://www.barracudamsp.com/products/rmm/barracuda-rmm
-        $string14 = /\>Barracuda\sRMM\sSetup\sAutoRun\</ nocase ascii wide
+        $string14 = ">Barracuda RMM Setup AutoRun<" nocase ascii wide
         // Description: Deliver remote support services - formely AVG
         // Reference: https://www.barracudamsp.com/products/rmm/barracuda-rmm
-        $string15 = /\>Barracuda\sRMM\sSetup\</ nocase ascii wide
+        $string15 = ">Barracuda RMM Setup<" nocase ascii wide
         // Description: Deliver remote support services - formely AVG
         // Reference: https://www.barracudamsp.com/products/rmm/barracuda-rmm
         $string16 = /\>Barracuda\sRMM.{0,100}\</ nocase ascii wide
         // Description: Deliver remote support services - formely AVG
         // Reference: https://www.barracudamsp.com/products/rmm/barracuda-rmm
-        $string17 = /\>LPI\sLevel\sPlatforms\</ nocase ascii wide
+        $string17 = ">LPI Level Platforms<" nocase ascii wide
         // Description: Deliver remote support services - formely AVG
         // Reference: https://www.barracudamsp.com/products/rmm/barracuda-rmm
-        $string18 = /Barracuda\sRMM\sOnsite\sManager\s\-\sInstallShield\sWizard/ nocase ascii wide
+        $string18 = "Barracuda RMM Onsite Manager - InstallShield Wizard" nocase ascii wide
         // Description: Deliver remote support services - formely AVG
         // Reference: https://www.barracudamsp.com/products/rmm/barracuda-rmm
         $string19 = /Barracuda\sRMM\sOnsite\sManager\.msi/ nocase ascii wide

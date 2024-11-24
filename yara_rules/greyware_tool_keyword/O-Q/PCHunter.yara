@@ -34,16 +34,16 @@ rule PCHunter
         $string8 = /\\PCHunter64ar\.sys/ nocase ascii wide
         // Description: PCHunter is a toolkit offering deep access to kernel setting - processes - network  and startup configurations. It is designed to detect and remove malware - including rootkits but is also abused by attackers to disable antivirus
         // Reference: https://www.majorgeeks.com/files/details/pc_hunter.html
-        $string9 = /\>Epoolsoft\sWindows\sInformation\sView\sTools\</ nocase ascii wide
+        $string9 = ">Epoolsoft Windows Information View Tools<" nocase ascii wide
         // Description: PCHunter is a toolkit offering deep access to kernel setting - processes - network  and startup configurations. It is designed to detect and remove malware - including rootkits but is also abused by attackers to disable antivirus
         // Reference: https://www.majorgeeks.com/files/details/pc_hunter.html
-        $string10 = /\>PC\sHunter\</ nocase ascii wide
+        $string10 = ">PC Hunter<" nocase ascii wide
         // Description: PCHunter is a toolkit offering deep access to kernel setting - processes - network  and startup configurations. It is designed to detect and remove malware - including rootkits but is also abused by attackers to disable antivirus
         // Reference: https://www.majorgeeks.com/files/details/pc_hunter.html
         $string11 = /\>PCHunter\.sys\</ nocase ascii wide
         // Description: PCHunter is a toolkit offering deep access to kernel setting - processes - network  and startup configurations. It is designed to detect and remove malware - including rootkits but is also abused by attackers to disable antivirus
         // Reference: https://www.majorgeeks.com/files/details/pc_hunter.html
-        $string12 = /648eaadf2d81af9ea6792d48740aa3ef4787303f95a0e2abaf23b87b13758eb7/ nocase ascii wide
+        $string12 = "648eaadf2d81af9ea6792d48740aa3ef4787303f95a0e2abaf23b87b13758eb7" nocase ascii wide
         // Description: PCHunter is a toolkit offering deep access to kernel setting - processes - network  and startup configurations. It is designed to detect and remove malware - including rootkits but is also abused by attackers to disable antivirus
         // Reference: https://www.majorgeeks.com/files/details/pc_hunter.html
         $string13 = /http\:\/\/www\.epoolsoft\.com\/pchunter\/pchunter_free/ nocase ascii wide
@@ -55,7 +55,7 @@ rule PCHunter
         $string15 = /https\:\/\/www\.majorgeeks\.com\/files\/details\/pc_hunter\.html/ nocase ascii wide
         // Description: PCHunter is a toolkit offering deep access to kernel setting - processes - network  and startup configurations. It is designed to detect and remove malware - including rootkits but is also abused by attackers to disable antivirus
         // Reference: https://www.majorgeeks.com/files/details/pc_hunter.html
-        $string16 = /PC\sHunter\sStandard/ nocase ascii wide
+        $string16 = "PC Hunter Standard" nocase ascii wide
         // Description: PCHunter is a toolkit offering deep access to kernel setting - processes - network  and startup configurations. It is designed to detect and remove malware - including rootkits but is also abused by attackers to disable antivirus
         // Reference: https://www.majorgeeks.com/files/details/pc_hunter.html
         $string17 = /PCHunter32\.exe/ nocase ascii wide

@@ -43,7 +43,7 @@ rule level_io
         $string11 = /\/level\-windows\-arm64\.exe/ nocase ascii wide
         // Description: Level is reinventing remote monitoring and management
         // Reference: https://level.io/
-        $string12 = /\/usr\/local\/bin\/level/ nocase ascii wide
+        $string12 = "/usr/local/bin/level" nocase ascii wide
         // Description: Level is reinventing remote monitoring and management
         // Reference: https://level.io/
         $string13 = /\/var\/lib\/level\/level\.db/ nocase ascii wide
@@ -91,10 +91,10 @@ rule level_io
         $string27 = /\>Remote\sdevice\smanagement\s\-\shttps\:\/\/level\.io\</ nocase ascii wide
         // Description: Level is reinventing remote monitoring and management
         // Reference: https://level.io/
-        $string28 = /37B9B43761672219E98BFA826E7AF17E799592BC57ACBC4AAC38DAF5EFAAF653/ nocase ascii wide
+        $string28 = "37B9B43761672219E98BFA826E7AF17E799592BC57ACBC4AAC38DAF5EFAAF653" nocase ascii wide
         // Description: Level is reinventing remote monitoring and management
         // Reference: https://level.io/
-        $string29 = /3DDF7FBB35EC90BCF15E723F1445EEB71E71C9757243EFEC1CEB4E74A10A1D9F/ nocase ascii wide
+        $string29 = "3DDF7FBB35EC90BCF15E723F1445EEB71E71C9757243EFEC1CEB4E74A10A1D9F" nocase ascii wide
         // Description: Level is reinventing remote monitoring and management
         // Reference: https://level.io/
         $string30 = /agents\.level\.io/ nocase ascii wide

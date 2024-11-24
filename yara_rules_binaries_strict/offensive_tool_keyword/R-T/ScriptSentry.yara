@@ -34,13 +34,13 @@ rule ScriptSentry
         $string8 = /\\ScriptSentry\.txt/ nocase ascii wide
         // Description: ScriptSentry finds misconfigured and dangerous logon scripts.
         // Reference: https://github.com/techspence/ScriptSentry
-        $string9 = /e1cd2b55\-3b4f\-41bd\-a168\-40db41e34349/ nocase ascii wide
+        $string9 = "e1cd2b55-3b4f-41bd-a168-40db41e34349" nocase ascii wide
         // Description: ScriptSentry finds misconfigured and dangerous logon scripts.
         // Reference: https://github.com/techspence/ScriptSentry
         $string10 = /Find\-AdminLogonScripts\.ps1/ nocase ascii wide
         // Description: ScriptSentry finds misconfigured and dangerous logon scripts.
         // Reference: https://github.com/techspence/ScriptSentry
-        $string11 = /Find\-LogonScriptCredentials\s\-LogonScripts/ nocase ascii wide
+        $string11 = "Find-LogonScriptCredentials -LogonScripts" nocase ascii wide
         // Description: ScriptSentry finds misconfigured and dangerous logon scripts.
         // Reference: https://github.com/techspence/ScriptSentry
         $string12 = /Find\-LogonScriptCredentials\.ps1/ nocase ascii wide
@@ -49,7 +49,7 @@ rule ScriptSentry
         $string13 = /Find\-UnsafeLogonScriptPermissions\.ps1/ nocase ascii wide
         // Description: ScriptSentry finds misconfigured and dangerous logon scripts.
         // Reference: https://github.com/techspence/ScriptSentry
-        $string14 = /Find\-UnsafeUNCPermissions\s\-UNCScripts/ nocase ascii wide
+        $string14 = "Find-UnsafeUNCPermissions -UNCScripts" nocase ascii wide
         // Description: ScriptSentry finds misconfigured and dangerous logon scripts.
         // Reference: https://github.com/techspence/ScriptSentry
         $string15 = /Find\-UnsafeUNCPermissions\.ps1/ nocase ascii wide
@@ -58,13 +58,13 @@ rule ScriptSentry
         $string16 = /Get\-DomainAdmins\.ps1/ nocase ascii wide
         // Description: ScriptSentry finds misconfigured and dangerous logon scripts.
         // Reference: https://github.com/techspence/ScriptSentry
-        $string17 = /Invoke\-ScriptSentry/ nocase ascii wide
+        $string17 = "Invoke-ScriptSentry" nocase ascii wide
         // Description: ScriptSentry finds misconfigured and dangerous logon scripts.
         // Reference: https://github.com/techspence/ScriptSentry
         $string18 = /ScriptSentry\-main\.zip/ nocase ascii wide
         // Description: ScriptSentry finds misconfigured and dangerous logon scripts.
         // Reference: https://github.com/techspence/ScriptSentry
-        $string19 = /techspence\/ScriptSentry/ nocase ascii wide
+        $string19 = "techspence/ScriptSentry" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

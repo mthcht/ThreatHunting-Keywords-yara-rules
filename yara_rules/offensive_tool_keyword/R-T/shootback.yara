@@ -10,13 +10,13 @@ rule shootback
     strings:
         // Description: a reverse TCP tunnel let you access target behind NAT or firewall
         // Reference: https://github.com/aploium/shootback
-        $string1 = /aploium\/shootback/ nocase ascii wide
+        $string1 = "aploium/shootback" nocase ascii wide
         // Description: a reverse TCP tunnel let you access target behind NAT or firewall
         // Reference: https://github.com/aploium/shootback
-        $string2 = /bd582dca867f580de4cea00df8dafe985f7790233de90f7e962b6e6a80dd55cf/ nocase ascii wide
+        $string2 = "bd582dca867f580de4cea00df8dafe985f7790233de90f7e962b6e6a80dd55cf" nocase ascii wide
         // Description: a reverse TCP tunnel let you access target behind NAT or firewall
         // Reference: https://github.com/aploium/shootback
-        $string3 = /dd7677e9132c0e2b813bf5a5fd4b34772d0804cf36b7266a2b9d0e64075019d0/ nocase ascii wide
+        $string3 = "dd7677e9132c0e2b813bf5a5fd4b34772d0804cf36b7266a2b9d0e64075019d0" nocase ascii wide
         // Description: a reverse TCP tunnel let you access target behind NAT or firewall
         // Reference: https://github.com/aploium/shootback
         $string4 = /python3\sslaver\.py\s/ nocase ascii wide

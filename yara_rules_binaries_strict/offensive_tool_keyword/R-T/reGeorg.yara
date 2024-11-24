@@ -22,19 +22,19 @@ rule reGeorg
         $string4 = /\/tunnel\.tomcat\.5\.jsp/ nocase ascii wide
         // Description: The successor to reDuh - pwn a bastion webserver and create SOCKS proxies through the DMZ. Pivot and pwn.
         // Reference: https://github.com/sensepost/reGeorg
-        $string5 = /Georg\sis\snot\sready\,\splease\scheck\surl/ nocase ascii wide
+        $string5 = "Georg is not ready, please check url" nocase ascii wide
         // Description: The successor to reDuh - pwn a bastion webserver and create SOCKS proxies through the DMZ. Pivot and pwn.
         // Reference: https://github.com/sensepost/reGeorg
-        $string6 = /Georg\ssays\,\s\'All\sseems\sfine\'/ nocase ascii wide
+        $string6 = "Georg says, 'All seems fine'" nocase ascii wide
         // Description: The successor to reDuh - pwn a bastion webserver and create SOCKS proxies through the DMZ. Pivot and pwn.
         // Reference: https://github.com/sensepost/reGeorg
-        $string7 = /reGeorg\-master/ nocase ascii wide
+        $string7 = "reGeorg-master" nocase ascii wide
         // Description: The successor to reDuh - pwn a bastion webserver and create SOCKS proxies through the DMZ. Pivot and pwn.
         // Reference: https://github.com/sensepost/reGeorg
         $string8 = /reGeorgSocksProxy\.py/ nocase ascii wide
         // Description: The successor to reDuh - pwn a bastion webserver and create SOCKS proxies through the DMZ. Pivot and pwn.
         // Reference: https://github.com/sensepost/reGeorg
-        $string9 = /sensepost\/reGeorg/ nocase ascii wide
+        $string9 = "sensepost/reGeorg" nocase ascii wide
         // Description: The successor to reDuh - pwn a bastion webserver and create SOCKS proxies through the DMZ. Pivot and pwn.
         // Reference: https://github.com/sensepost/reGeorg
         $string10 = /Socks\sserver\sfor\sreGeorg\sHTTP\(s\)\stunneller/ nocase ascii wide

@@ -13,13 +13,13 @@ rule TartarusGate
         $string1 = /\/TartarusGate\.git/ nocase ascii wide
         // Description: TartarusGate Bypassing EDRs
         // Reference: https://github.com/trickster0/TartarusGate
-        $string2 = /DC6187CB\-D5DF\-4973\-84A2\-F92AAE90CDA9/ nocase ascii wide
+        $string2 = "DC6187CB-D5DF-4973-84A2-F92AAE90CDA9" nocase ascii wide
         // Description: TartarusGate Bypassing EDRs
         // Reference: https://github.com/trickster0/TartarusGate
-        $string3 = /TartarusGate\-master/ nocase ascii wide
+        $string3 = "TartarusGate-master" nocase ascii wide
         // Description: TartarusGate Bypassing EDRs
         // Reference: https://github.com/trickster0/TartarusGate
-        $string4 = /trickster0\/TartarusGate/ nocase ascii wide
+        $string4 = "trickster0/TartarusGate" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

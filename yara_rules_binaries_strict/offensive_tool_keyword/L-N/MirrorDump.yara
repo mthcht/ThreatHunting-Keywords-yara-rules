@@ -64,10 +64,10 @@ rule MirrorDump
         $string18 = /\\MirrorDump\-master/ nocase ascii wide
         // Description: LSASS dumping tool that uses a dynamically compiled LSA plugin to grab an lsass handle and API hooking for capturing the dump in memory
         // Reference: https://github.com/CCob/MirrorDump
-        $string19 = /58338E42\-6010\-493C\-B8C8\-2FD2CFC30FFB/ nocase ascii wide
+        $string19 = "58338E42-6010-493C-B8C8-2FD2CFC30FFB" nocase ascii wide
         // Description: LSASS dumping tool that uses a dynamically compiled LSA plugin to grab an lsass handle and API hooking for capturing the dump in memory
         // Reference: https://github.com/CCob/MirrorDump
-        $string20 = /CCob\/MirrorDump/ nocase ascii wide
+        $string20 = "CCob/MirrorDump" nocase ascii wide
         // Description: LSASS dumping tool that uses a dynamically compiled LSA plugin to grab an lsass handle and API hooking for capturing the dump in memory
         // Reference: https://github.com/CCob/MirrorDump
         $string21 = /minidumptomemsharp\.lsa\.lsaproviderduper\.boo/ nocase ascii wide

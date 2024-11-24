@@ -10,7 +10,7 @@ rule binwalk
     strings:
         // Description: Binwalk is a fast. easy to use tool for analyzing. reverse engineering. and extracting firmware images.
         // Reference: https://github.com/ReFirmLabs/binwalk
-        $string1 = /binwalk/ nocase ascii wide
+        $string1 = "binwalk" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

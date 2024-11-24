@@ -22,16 +22,16 @@ rule Cable
         $string4 = /\[\+\]\sSID\sadded\sto\smsDS\-AllowedToActOnBehalfOfOtherIdentity/ nocase ascii wide
         // Description: *.NET post-exploitation toolkit for Active Directory reconnaissance and exploitation*
         // Reference: https://github.com/logangoins/Cable
-        $string5 = /06B2AE2B\-7FD3\-4C36\-B825\-1594752B1D7B/ nocase ascii wide
+        $string5 = "06B2AE2B-7FD3-4C36-B825-1594752B1D7B" nocase ascii wide
         // Description: *.NET post-exploitation toolkit for Active Directory reconnaissance and exploitation*
         // Reference: https://github.com/logangoins/Cable
-        $string6 = /16717cf09d49d252b21c5768092a557ea5a7899d781656da909a7766b6c55074/ nocase ascii wide
+        $string6 = "16717cf09d49d252b21c5768092a557ea5a7899d781656da909a7766b6c55074" nocase ascii wide
         // Description: *.NET post-exploitation toolkit for Active Directory reconnaissance and exploitation*
         // Reference: https://github.com/logangoins/Cable
-        $string7 = /fff1c91cf41743e46dc2b43b256680ce9015d0a705b31cf19c2cfb48f48c616f/ nocase ascii wide
+        $string7 = "fff1c91cf41743e46dc2b43b256680ce9015d0a705b31cf19c2cfb48f48c616f" nocase ascii wide
         // Description: *.NET post-exploitation toolkit for Active Directory reconnaissance and exploitation*
         // Reference: https://github.com/logangoins/Cable
-        $string8 = /logangoins\/Cable/ nocase ascii wide
+        $string8 = "logangoins/Cable" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

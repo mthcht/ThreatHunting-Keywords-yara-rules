@@ -10,7 +10,7 @@ rule JuicyPotatoNG
     strings:
         // Description: Another Windows Local Privilege Escalation from Service Account to System
         // Reference: https://github.com/antonioCoco/JuicyPotatoNG
-        $string1 = /\sJuicyPotatoNG/ nocase ascii wide
+        $string1 = " JuicyPotatoNG" nocase ascii wide
         // Description: Another Windows Local Privilege Escalation from Service Account to System
         // Reference: https://github.com/antonioCoco/JuicyPotatoNG
         $string2 = /\.exe\s\-l\s.{0,1000}\s\-c\s\{B91D5831\-B1BD\-4608\-8198\-D72E155020F7\}/ nocase ascii wide
@@ -34,19 +34,19 @@ rule JuicyPotatoNG
         $string8 = /\]\sBruteforcing\s\%d\sCLSIDs/ nocase ascii wide
         // Description: Another Windows Local Privilege Escalation from Service Account to System
         // Reference: https://github.com/antonioCoco/JuicyPotatoNG
-        $string9 = /261f880e\-4bee\-428d\-9f64\-c29292002c19/ nocase ascii wide
+        $string9 = "261f880e-4bee-428d-9f64-c29292002c19" nocase ascii wide
         // Description: Another Windows Local Privilege Escalation from Service Account to System
         // Reference: https://github.com/antonioCoco/JuicyPotatoNG
-        $string10 = /antonioCoco\/JuicyPotatoNG/ nocase ascii wide
+        $string10 = "antonioCoco/JuicyPotatoNG" nocase ascii wide
         // Description: Another Windows Local Privilege Escalation from Service Account to System
         // Reference: https://github.com/antonioCoco/JuicyPotatoNG
         $string11 = /BruteforceCLSIDs\./ nocase ascii wide
         // Description: Another Windows Local Privilege Escalation from Service Account to System
         // Reference: https://github.com/antonioCoco/JuicyPotatoNG
-        $string12 = /c5af796b44a3d3d09e184ef622ad002b8298696c2de139392fd35898f5073527/ nocase ascii wide
+        $string12 = "c5af796b44a3d3d09e184ef622ad002b8298696c2de139392fd35898f5073527" nocase ascii wide
         // Description: Another Windows Local Privilege Escalation from Service Account to System
         // Reference: https://github.com/antonioCoco/JuicyPotatoNG
-        $string13 = /C73A4893\-A5D1\-44C8\-900C\-7B8850BBD2EC/ nocase ascii wide
+        $string13 = "C73A4893-A5D1-44C8-900C-7B8850BBD2EC" nocase ascii wide
         // Description: Another Windows Local Privilege Escalation from Service Account to System
         // Reference: https://github.com/antonioCoco/JuicyPotatoNG
         $string14 = /JuicyPotatoNG\.cpp/ nocase ascii wide
@@ -64,7 +64,7 @@ rule JuicyPotatoNG
         $string18 = /JuicyPotatoNG\.zip/ nocase ascii wide
         // Description: Another Windows Local Privilege Escalation from Service Account to System
         // Reference: https://github.com/antonioCoco/JuicyPotatoNG
-        $string19 = /JuicyPotatoNG\-main/ nocase ascii wide
+        $string19 = "JuicyPotatoNG-main" nocase ascii wide
         // Description: Another Windows Local Privilege Escalation from Service Account to System
         // Reference: https://github.com/antonioCoco/JuicyPotatoNG
         $string20 = /PotatoTrigger\.cpp/ nocase ascii wide

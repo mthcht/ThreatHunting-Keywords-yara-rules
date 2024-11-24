@@ -19,10 +19,10 @@ rule bloodhound_quickwin
         $string3 = /\/bloodhound\-quickwin\.git/ nocase ascii wide
         // Description: Simple script to extract useful informations from the combo BloodHound + Neo4j
         // Reference: https://github.com/kaluche/bloodhound-quickwin
-        $string4 = /bloodhound\-quickwin\-main/ nocase ascii wide
+        $string4 = "bloodhound-quickwin-main" nocase ascii wide
         // Description: Simple script to extract useful informations from the combo BloodHound + Neo4j
         // Reference: https://github.com/kaluche/bloodhound-quickwin
-        $string5 = /kaluche\/bloodhound\-quickwin/ nocase ascii wide
+        $string5 = "kaluche/bloodhound-quickwin" nocase ascii wide
 
     condition:
         any of them

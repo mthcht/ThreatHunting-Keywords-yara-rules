@@ -10,13 +10,13 @@ rule rmmod
     strings:
         // Description: Kernel modules are pieces of code that can be loaded and unloaded into the kernel upon demand. They extend the functionality of the kernel without the need to reboot the system. This rule identifies attempts to remove a kernel module.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_kernel_module_removal.toml
-        $string1 = /rmmod\s\-r/ nocase ascii wide
+        $string1 = "rmmod -r" nocase ascii wide
         // Description: Kernel modules are pieces of code that can be loaded and unloaded into the kernel upon demand. They extend the functionality of the kernel without the need to reboot the system. This rule identifies attempts to remove a kernel module.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_kernel_module_removal.toml
-        $string2 = /rmmod\s\-\-remove/ nocase ascii wide
+        $string2 = "rmmod --remove" nocase ascii wide
         // Description: Kernel modules are pieces of code that can be loaded and unloaded into the kernel upon demand. They extend the functionality of the kernel without the need to reboot the system. This rule identifies attempts to remove a kernel module.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_kernel_module_removal.toml
-        $string3 = /sudo\srmmod\s\-r/ nocase ascii wide
+        $string3 = "sudo rmmod -r" nocase ascii wide
 
     condition:
         any of them

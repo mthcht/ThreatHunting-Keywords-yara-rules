@@ -28,10 +28,10 @@ rule Mystikal
         $string6 = /\\mystikal\.py/ nocase ascii wide
         // Description: macOS Initial Access Payload Generator
         // Reference: https://github.com/D00MFist/Mystikal
-        $string7 = /D00MFist\/Mystikal/ nocase ascii wide
+        $string7 = "D00MFist/Mystikal" nocase ascii wide
         // Description: macOS Initial Access Payload Generator
         // Reference: https://github.com/D00MFist/Mystikal
-        $string8 = /Mystikal\-main/ nocase ascii wide
+        $string8 = "Mystikal-main" nocase ascii wide
         // Description: macOS Initial Access Payload Generator
         // Reference: https://github.com/D00MFist/Mystikal
         $string9 = /PDF_Payload.{0,100}Doomfist\.pdf/ nocase ascii wide

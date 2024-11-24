@@ -10,22 +10,22 @@ rule krbrelayx
     strings:
         // Description: Kerberos unconstrained delegation abuse toolkit
         // Reference: https://github.com/dirkjanm/krbrelayx
-        $string1 = /\s\-\-dump\-adcs/ nocase ascii wide
+        $string1 = " --dump-adcs" nocase ascii wide
         // Description: Kerberos unconstrained delegation abuse toolkit
         // Reference: https://github.com/dirkjanm/krbrelayx
-        $string2 = /\s\-\-dump\-gmsa/ nocase ascii wide
+        $string2 = " --dump-gmsa" nocase ascii wide
         // Description: Kerberos unconstrained delegation abuse toolkit
         // Reference: https://github.com/dirkjanm/krbrelayx
-        $string3 = /\s\-\-dump\-laps/ nocase ascii wide
+        $string3 = " --dump-laps" nocase ascii wide
         // Description: Kerberos unconstrained delegation abuse toolkit
         // Reference: https://github.com/dirkjanm/krbrelayx
-        $string4 = /\s\-\-enum\-local\-admins/ nocase ascii wide
+        $string4 = " --enum-local-admins" nocase ascii wide
         // Description: Kerberos unconstrained delegation abuse toolkit
         // Reference: https://github.com/dirkjanm/krbrelayx
-        $string5 = /\s\-f\skirbi\s/ nocase ascii wide
+        $string5 = " -f kirbi " nocase ascii wide
         // Description: Kerberos unconstrained delegation abuse toolkit
         // Reference: https://github.com/dirkjanm/krbrelayx
-        $string6 = /\s\-\-format\skirbi/ nocase ascii wide
+        $string6 = " --format kirbi" nocase ascii wide
         // Description: Kerberos unconstrained delegation abuse toolkit
         // Reference: https://github.com/dirkjanm/krbrelayx
         $string7 = /\s\-\-krbpass\s.{0,100}\-\-krbsalt/ nocase ascii wide
@@ -34,7 +34,7 @@ rule krbrelayx
         $string8 = /\/dnstool\.py/ nocase ascii wide
         // Description: Kerberos unconstrained delegation abuse toolkit
         // Reference: https://github.com/dirkjanm/krbrelayx
-        $string9 = /\/krbrelayx/ nocase ascii wide
+        $string9 = "/krbrelayx" nocase ascii wide
         // Description: Kerberos unconstrained delegation abuse toolkit
         // Reference: https://github.com/dirkjanm/krbrelayx
         $string10 = /\/printerbug\.py/ nocase ascii wide
@@ -52,7 +52,7 @@ rule krbrelayx
         $string14 = /krbrelayx\.py/ nocase ascii wide
         // Description: Kerberos unconstrained delegation abuse toolkit
         // Reference: https://github.com/dirkjanm/krbrelayx
-        $string15 = /krbrelayx\-master/ nocase ascii wide
+        $string15 = "krbrelayx-master" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

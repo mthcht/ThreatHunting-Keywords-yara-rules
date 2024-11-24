@@ -22,10 +22,10 @@ rule Mshikaki
         $string4 = /Mshikaki\.exe/ nocase ascii wide
         // Description: A shellcode injection tool capable of bypassing AMSI. Features the QueueUserAPC() injection technique and supports XOR encryption
         // Reference: https://github.com/trevorsaudi/Mshikaki
-        $string5 = /Mshikaki\-main/ nocase ascii wide
+        $string5 = "Mshikaki-main" nocase ascii wide
         // Description: A shellcode injection tool capable of bypassing AMSI. Features the QueueUserAPC() injection technique and supports XOR encryption
         // Reference: https://github.com/trevorsaudi/Mshikaki
-        $string6 = /trevorsaudi\/Mshikaki/ nocase ascii wide
+        $string6 = "trevorsaudi/Mshikaki" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

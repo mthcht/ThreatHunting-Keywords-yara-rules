@@ -25,16 +25,16 @@ rule Invoke_RDPThief
         $string5 = /\\RdpThief\.dll/ nocase ascii wide
         // Description: perform process injection on the target process and inject RDPthief into the process in order to capture cleartext credentials
         // Reference: https://github.com/The-Viper-One/Invoke-RDPThief
-        $string6 = /e382edfe2f7c38cb3d6abd20c75e1ac24ddc19f921aba4b92dda3e1774e45240/ nocase ascii wide
+        $string6 = "e382edfe2f7c38cb3d6abd20c75e1ac24ddc19f921aba4b92dda3e1774e45240" nocase ascii wide
         // Description: perform process injection on the target process and inject RDPthief into the process in order to capture cleartext credentials
         // Reference: https://github.com/The-Viper-One/Invoke-RDPThief
-        $string7 = /Invoke\-RDPThief\s/ nocase ascii wide
+        $string7 = "Invoke-RDPThief " nocase ascii wide
         // Description: perform process injection on the target process and inject RDPthief into the process in order to capture cleartext credentials
         // Reference: https://github.com/The-Viper-One/Invoke-RDPThief
         $string8 = /Invoke\-RDPThief\.ps1/ nocase ascii wide
         // Description: perform process injection on the target process and inject RDPthief into the process in order to capture cleartext credentials
         // Reference: https://github.com/The-Viper-One/Invoke-RDPThief
-        $string9 = /The\-Viper\-One\/Invoke\-RDPThief/ nocase ascii wide
+        $string9 = "The-Viper-One/Invoke-RDPThief" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -13,7 +13,7 @@ rule ShellGhost
         $string1 = /\/ShellGhost\.git/ nocase ascii wide
         // Description: A memory-based evasion technique which makes shellcode invisible from process start to end
         // Reference: https://github.com/lem0nSec/ShellGhost
-        $string2 = /lem0nSec\/ShellGhost/ nocase ascii wide
+        $string2 = "lem0nSec/ShellGhost" nocase ascii wide
         // Description: A memory-based evasion technique which makes shellcode invisible from process start to end
         // Reference: https://github.com/lem0nSec/ShellGhost
         $string3 = /ShellGhost\.dll/ nocase ascii wide

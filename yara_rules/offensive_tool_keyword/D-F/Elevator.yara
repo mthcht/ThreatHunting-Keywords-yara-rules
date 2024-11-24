@@ -22,16 +22,16 @@ rule Elevator
         $string4 = /\\Elevator\\target\\release/ nocase ascii wide
         // Description: UAC bypass by abusing RPC and debug objects.
         // Reference: https://github.com/Kudaes/Elevator
-        $string5 = /73415a38d4b76dd2215d9fd81015b36a025018552f7847494f908f50c62fc8d2/ nocase ascii wide
+        $string5 = "73415a38d4b76dd2215d9fd81015b36a025018552f7847494f908f50c62fc8d2" nocase ascii wide
         // Description: UAC bypass by abusing RPC and debug objects.
         // Reference: https://github.com/Kudaes/Elevator
-        $string6 = /AAB75969\-92BA\-4632\-9F78\-AF52FA2BCE1E/ nocase ascii wide
+        $string6 = "AAB75969-92BA-4632-9F78-AF52FA2BCE1E" nocase ascii wide
         // Description: UAC bypass by abusing RPC and debug objects.
         // Reference: https://github.com/Kudaes/Elevator
         $string7 = /elevator\.exe\s.{0,1000}cmd\.exe/ nocase ascii wide
         // Description: UAC bypass by abusing RPC and debug objects.
         // Reference: https://github.com/Kudaes/Elevator
-        $string8 = /Kudaes\/Elevator/ nocase ascii wide
+        $string8 = "Kudaes/Elevator" nocase ascii wide
 
     condition:
         any of them

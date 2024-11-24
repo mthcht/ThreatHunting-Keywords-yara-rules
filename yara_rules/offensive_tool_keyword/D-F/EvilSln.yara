@@ -19,13 +19,13 @@ rule EvilSln
         $string3 = /\\EvilSln\\.{0,1000}\.suo/ nocase ascii wide
         // Description: A New Exploitation Technique for Visual Studio Projects
         // Reference: https://github.com/cjm00n/EvilSln
-        $string4 = /0FE0D049\-F352\-477D\-BCCD\-ACBF7D4F6F15/ nocase ascii wide
+        $string4 = "0FE0D049-F352-477D-BCCD-ACBF7D4F6F15" nocase ascii wide
         // Description: A New Exploitation Technique for Visual Studio Projects
         // Reference: https://github.com/cjm00n/EvilSln
-        $string5 = /cjm00n\/EvilSln/ nocase ascii wide
+        $string5 = "cjm00n/EvilSln" nocase ascii wide
         // Description: A New Exploitation Technique for Visual Studio Projects
         // Reference: https://github.com/cjm00n/EvilSln
-        $string6 = /EvilSln\-main/ nocase ascii wide
+        $string6 = "EvilSln-main" nocase ascii wide
 
     condition:
         any of them

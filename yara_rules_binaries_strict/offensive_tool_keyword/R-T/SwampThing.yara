@@ -10,10 +10,10 @@ rule SwampThing
     strings:
         // Description: SwampThing lets you to spoof process command line args (x32/64). Essentially you create a process in a suspended state - rewrite the PEB - resume and finally revert the PEB. The end result is that logging infrastructure will record the fake command line args instead of the real ones
         // Reference: https://github.com/FuzzySecurity/Sharp-Suite/tree/master/SwampThing
-        $string1 = /\s\-FakeCmdLine\s/ nocase ascii wide
+        $string1 = " -FakeCmdLine " nocase ascii wide
         // Description: SwampThing lets you to spoof process command line args (x32/64). Essentially you create a process in a suspended state - rewrite the PEB - resume and finally revert the PEB. The end result is that logging infrastructure will record the fake command line args instead of the real ones
         // Reference: https://github.com/FuzzySecurity/Sharp-Suite/tree/master/SwampThing
-        $string2 = /\s\-RealCmdLine\s/ nocase ascii wide
+        $string2 = " -RealCmdLine " nocase ascii wide
         // Description: SwampThing lets you to spoof process command line args (x32/64). Essentially you create a process in a suspended state - rewrite the PEB - resume and finally revert the PEB. The end result is that logging infrastructure will record the fake command line args instead of the real ones
         // Reference: https://github.com/FuzzySecurity/Sharp-Suite/tree/master/SwampThing
         $string3 = /\\SpoofCmdLine\\TheThing/ nocase ascii wide
@@ -25,7 +25,7 @@ rule SwampThing
         $string5 = /\\TheThing\.exe/ nocase ascii wide
         // Description: SwampThing lets you to spoof process command line args (x32/64). Essentially you create a process in a suspended state - rewrite the PEB - resume and finally revert the PEB. The end result is that logging infrastructure will record the fake command line args instead of the real ones
         // Reference: https://github.com/FuzzySecurity/Sharp-Suite/tree/master/SwampThing
-        $string6 = /master\/SwampThing/ nocase ascii wide
+        $string6 = "master/SwampThing" nocase ascii wide
         // Description: SwampThing lets you to spoof process command line args (x32/64). Essentially you create a process in a suspended state - rewrite the PEB - resume and finally revert the PEB. The end result is that logging infrastructure will record the fake command line args instead of the real ones
         // Reference: https://github.com/FuzzySecurity/Sharp-Suite/tree/master/SwampThing
         $string7 = /SwampThing\.exe/ nocase ascii wide

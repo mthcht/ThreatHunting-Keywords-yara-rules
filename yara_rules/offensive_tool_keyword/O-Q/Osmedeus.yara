@@ -13,7 +13,7 @@ rule Osmedeus
         $string1 = /\/cloudbrute\.yaml/ nocase ascii wide
         // Description: Osmedeus - A Workflow Engine for Offensive Security
         // Reference: https://github.com/j3ssie/osmedeus
-        $string2 = /\/osmedeus/ nocase ascii wide
+        $string2 = "/osmedeus" nocase ascii wide
         // Description: Osmedeus - A Workflow Engine for Offensive Security
         // Reference: https://github.com/j3ssie/osmedeus
         $string3 = /\/portscan\.yaml/ nocase ascii wide
@@ -31,19 +31,19 @@ rule Osmedeus
         $string7 = /\/workflow\/test\/dirbscan\.yaml/ nocase ascii wide
         // Description: Osmedeus - A Workflow Engine for Offensive Security
         // Reference: https://github.com/j3ssie/osmedeus
-        $string8 = /osmedeus\scloud/ nocase ascii wide
+        $string8 = "osmedeus cloud" nocase ascii wide
         // Description: Osmedeus - A Workflow Engine for Offensive Security
         // Reference: https://github.com/j3ssie/osmedeus
-        $string9 = /osmedeus\shealth/ nocase ascii wide
+        $string9 = "osmedeus health" nocase ascii wide
         // Description: Osmedeus - A Workflow Engine for Offensive Security
         // Reference: https://github.com/j3ssie/osmedeus
-        $string10 = /osmedeus\sprovider/ nocase ascii wide
+        $string10 = "osmedeus provider" nocase ascii wide
         // Description: Osmedeus - A Workflow Engine for Offensive Security
         // Reference: https://github.com/j3ssie/osmedeus
-        $string11 = /osmedeus\sscan/ nocase ascii wide
+        $string11 = "osmedeus scan" nocase ascii wide
         // Description: Osmedeus - A Workflow Engine for Offensive Security
         // Reference: https://github.com/j3ssie/osmedeus
-        $string12 = /osmedeus\sutils/ nocase ascii wide
+        $string12 = "osmedeus utils" nocase ascii wide
         // Description: Osmedeus - A Workflow Engine for Offensive Security
         // Reference: https://github.com/j3ssie/osmedeus
         $string13 = /scan\s\-T\slist_of_targets\.txt/ nocase ascii wide

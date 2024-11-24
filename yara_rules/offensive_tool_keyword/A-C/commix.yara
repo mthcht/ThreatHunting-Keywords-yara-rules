@@ -16,7 +16,7 @@ rule commix
         $string2 = /\/commix\.py/ nocase ascii wide
         // Description: Automated All-in-One OS command injection and exploitation tool.
         // Reference: https://github.com/commixproject/commix
-        $string3 = /commixproject\/commix/ nocase ascii wide
+        $string3 = "commixproject/commix" nocase ascii wide
 
     condition:
         any of them

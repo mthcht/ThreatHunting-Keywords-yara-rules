@@ -10,10 +10,10 @@ rule Akira
     strings:
         // Description: Akira ransomware Windows payload
         // Reference: https://github.com/rivitna/Malware
-        $string1 = /\s\:Failed\sto\smake\sfull\sencrypt/ nocase ascii wide
+        $string1 = " :Failed to make full encrypt" nocase ascii wide
         // Description: Akira ransomware Windows payload
         // Reference: https://github.com/rivitna/Malware
-        $string2 = /Paste\sthis\slink\s\-\shttps\:\/\/akira/ nocase ascii wide
+        $string2 = "Paste this link - https://akira" nocase ascii wide
 
     condition:
         any of them

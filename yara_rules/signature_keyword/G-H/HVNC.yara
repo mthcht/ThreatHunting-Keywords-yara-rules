@@ -10,7 +10,7 @@ rule HVNC
     strings:
         // Description: Standalone HVNC Client & Server Coded in C++ (Modified Tinynuke)
         // Reference: https://github.com/Meltedd/HVNC
-        $string1 = /TrojanSpy\:Win32\/Tinukebot/ nocase ascii wide
+        $string1 = "TrojanSpy:Win32/Tinukebot" nocase ascii wide
 
     condition:
         any of them

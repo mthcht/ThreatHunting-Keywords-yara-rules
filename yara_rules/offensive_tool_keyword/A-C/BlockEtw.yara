@@ -25,10 +25,10 @@ rule BlockEtw
         $string5 = /blocketw\.pdb/ nocase ascii wide
         // Description: .Net Assembly to block ETW telemetry in current process
         // Reference: https://github.com/Soledge/BlockEtw
-        $string6 = /BlockEtw\-master/ nocase ascii wide
+        $string6 = "BlockEtw-master" nocase ascii wide
         // Description: .Net Assembly to block ETW telemetry in current process
         // Reference: https://github.com/Soledge/BlockEtw
-        $string7 = /Soledge\/BlockEtw/ nocase ascii wide
+        $string7 = "Soledge/BlockEtw" nocase ascii wide
 
     condition:
         any of them

@@ -28,7 +28,7 @@ rule PPLSystem
         $string6 = /\\PPLSystem\-main/ nocase ascii wide
         // Description: creates a livedump of the machine through NtDebugSystemControl to extract the COM secret and context, to then inject inside this process.
         // Reference: https://github.com/Slowerzs/PPLSystem
-        $string7 = /531870bd9f59ac799dfa6573472db1966cd3a9f8ece84d2f2e409e4384770b4a/ nocase ascii wide
+        $string7 = "531870bd9f59ac799dfa6573472db1966cd3a9f8ece84d2f2e409e4384770b4a" nocase ascii wide
         // Description: creates a livedump of the machine through NtDebugSystemControl to extract the COM secret and context, to then inject inside this process.
         // Reference: https://github.com/Slowerzs/PPLSystem
         $string8 = /Live\sDump\sCapture\sDump\sData\sAPI\sended\.\sNT\sStatus\:\sSTATUS_SUCCESS\./ nocase ascii wide
@@ -37,7 +37,7 @@ rule PPLSystem
         $string9 = /pplsystem\.exe\s/ nocase ascii wide
         // Description: creates a livedump of the machine through NtDebugSystemControl to extract the COM secret and context, to then inject inside this process.
         // Reference: https://github.com/Slowerzs/PPLSystem
-        $string10 = /Slowerzs\/PPLSystem/ nocase ascii wide
+        $string10 = "Slowerzs/PPLSystem" nocase ascii wide
 
     condition:
         any of them

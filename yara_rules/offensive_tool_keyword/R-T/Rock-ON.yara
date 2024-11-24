@@ -10,7 +10,7 @@ rule Rock_ON
     strings:
         // Description: Rock-On is a all in one recon tool that will help your Recon process give a boost. It is mainley aimed to automate the whole process of recon and save the time that is being wasted in doing all this stuffs manually
         // Reference: https://github.com/SilverPoision/Rock-ON
-        $string1 = /SilverPoision\/Rock\-ON/ nocase ascii wide
+        $string1 = "SilverPoision/Rock-ON" nocase ascii wide
 
     condition:
         any of them

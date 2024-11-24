@@ -13,10 +13,10 @@ rule SilentMoonwalk
         $string1 = /\/SilentMoonwalk\.git/ nocase ascii wide
         // Description: PoC Implementation of a fully dynamic call stack spoofer
         // Reference: https://github.com/klezVirus/SilentMoonwalk
-        $string2 = /E11DC25D\-E96D\-495D\-8968\-1BA09C95B673/ nocase ascii wide
+        $string2 = "E11DC25D-E96D-495D-8968-1BA09C95B673" nocase ascii wide
         // Description: PoC Implementation of a fully dynamic call stack spoofer
         // Reference: https://github.com/klezVirus/SilentMoonwalk
-        $string3 = /klezVirus\/SilentMoonwalk/ nocase ascii wide
+        $string3 = "klezVirus/SilentMoonwalk" nocase ascii wide
         // Description: PoC Implementation of a fully dynamic call stack spoofer
         // Reference: https://github.com/klezVirus/SilentMoonwalk
         $string4 = /SilentMoonwalk\.cpp/ nocase ascii wide
@@ -28,7 +28,7 @@ rule SilentMoonwalk
         $string6 = /SilentMoonwalk\.sln/ nocase ascii wide
         // Description: PoC Implementation of a fully dynamic call stack spoofer
         // Reference: https://github.com/klezVirus/SilentMoonwalk
-        $string7 = /SilentMoonwalk\-master/ nocase ascii wide
+        $string7 = "SilentMoonwalk-master" nocase ascii wide
         // Description: PoC Implementation of a fully dynamic call stack spoofer
         // Reference: https://github.com/klezVirus/SilentMoonwalk
         $string8 = /UnwindInspector\.exe/ nocase ascii wide

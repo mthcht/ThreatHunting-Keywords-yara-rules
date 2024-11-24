@@ -16,10 +16,10 @@ rule wevtutil
         $string2 = /for\s\/F\s\\"tokens\=.{0,100}\\"\s\%\%G\sin\s\(\'wevtutil\.exe\sel\'\)\sDO\s\(call\s\:do_clear\s\\"\%\%G\\"\)/ nocase ascii wide
         // Description: adversaries can delete specific event logs or clear their contents. erasing potentially valuable information that could aid in detection. incident response. or forensic investigations. This tactic aims to hinder forensic analysis efforts and make it more challenging for defenders to reconstruct the timeline of events or identify malicious activities.
         // Reference: N/A
-        $string3 = /wevtutil\scl\s/ nocase ascii wide
+        $string3 = "wevtutil cl " nocase ascii wide
         // Description: adversaries can delete specific event logs or clear their contents. erasing potentially valuable information that could aid in detection. incident response. or forensic investigations. This tactic aims to hinder forensic analysis efforts and make it more challenging for defenders to reconstruct the timeline of events or identify malicious activities.
         // Reference: N/A
-        $string4 = /wevtutil\sclear\-log/ nocase ascii wide
+        $string4 = "wevtutil clear-log" nocase ascii wide
         // Description: observed used by lslsass sample (dump active logon session password hashes from the lsass process (old tool for vista and older))
         // Reference: https://www.virustotal.com/gui/file/b24ab1f8cb68547932dd8a5c81e9b2133763a7ddf48aa431456530c1340b939e/details
         $string5 = /wevtutil.{0,100}\scl\s\\"Microsoft\-Windows\-Storage\-ATAPort\// nocase ascii wide

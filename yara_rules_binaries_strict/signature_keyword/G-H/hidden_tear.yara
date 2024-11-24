@@ -10,10 +10,10 @@ rule hidden_tear
     strings:
         // Description: open source ransomware - many variant in the wild
         // Reference: https://github.com/goliate/hidden-tear
-        $string1 = /hiddentear\/msil/ nocase ascii wide
+        $string1 = "hiddentear/msil" nocase ascii wide
         // Description: open source ransomware - many variant in the wild
         // Reference: https://github.com/goliate/hidden-tear
-        $string2 = /MSIL\/Hiddentear/ nocase ascii wide
+        $string2 = "MSIL/Hiddentear" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

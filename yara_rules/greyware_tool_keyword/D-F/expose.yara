@@ -10,28 +10,28 @@ rule expose
     strings:
         // Description: tunneling service - written in pure PHP
         // Reference: https://github.com/beyondcode/expose
-        $string1 = /\s\/usr\/local\/bin\/expose/ nocase ascii wide
+        $string1 = " /usr/local/bin/expose" nocase ascii wide
         // Description: tunneling service - written in pure PHP
         // Reference: https://github.com/beyondcode/expose
         $string2 = /\/expose\/database\/expose\.db/ nocase ascii wide
         // Description: tunneling service - written in pure PHP
         // Reference: https://github.com/beyondcode/expose
-        $string3 = /\/expose\/raw\/master\/builds\/expose/ nocase ascii wide
+        $string3 = "/expose/raw/master/builds/expose" nocase ascii wide
         // Description: tunneling service - written in pure PHP
         // Reference: https://github.com/beyondcode/expose
-        $string4 = /\/src\/expose\sserve\s/ nocase ascii wide
+        $string4 = "/src/expose serve " nocase ascii wide
         // Description: tunneling service - written in pure PHP
         // Reference: https://github.com/beyondcode/expose
-        $string5 = /beyondcode\/expose/ nocase ascii wide
+        $string5 = "beyondcode/expose" nocase ascii wide
         // Description: tunneling service - written in pure PHP
         // Reference: https://github.com/beyondcode/expose
-        $string6 = /docker\sbuild\s\-t\sexpose\s/ nocase ascii wide
+        $string6 = "docker build -t expose " nocase ascii wide
         // Description: tunneling service - written in pure PHP
         // Reference: https://github.com/beyondcode/expose
-        $string7 = /docker\srun\sexpose\s/ nocase ascii wide
+        $string7 = "docker run expose " nocase ascii wide
         // Description: tunneling service - written in pure PHP
         // Reference: https://github.com/beyondcode/expose
-        $string8 = /expose\sshare\shttp\:\/\// nocase ascii wide
+        $string8 = "expose share http://" nocase ascii wide
         // Description: tunneling service - written in pure PHP
         // Reference: https://github.com/beyondcode/expose
         $string9 = /exposeConfigPath\=\/src\/config\/expose\.php/ nocase ascii wide

@@ -10,7 +10,7 @@ rule ratchatgpt
     strings:
         // Description: ratchatpt a tool using openai api as a C2
         // Reference: https://github.com/spartan-conseil/ratchatpt
-        $string1 = /\/output\/ratchatPT/ nocase ascii wide
+        $string1 = "/output/ratchatPT" nocase ascii wide
         // Description: ratchatpt a tool using openai api as a C2
         // Reference: https://github.com/spartan-conseil/ratchatpt
         $string2 = /\/ratchatpt\.git/ nocase ascii wide
@@ -31,10 +31,10 @@ rule ratchatgpt
         $string7 = /RatChatPT_windows\.exe/ nocase ascii wide
         // Description: ratchatpt a tool using openai api as a C2
         // Reference: https://github.com/spartan-conseil/ratchatpt
-        $string8 = /ratchatpt\-main/ nocase ascii wide
+        $string8 = "ratchatpt-main" nocase ascii wide
         // Description: ratchatpt a tool using openai api as a C2
         // Reference: https://github.com/spartan-conseil/ratchatpt
-        $string9 = /spartan\-conseil\/ratchatpt/ nocase ascii wide
+        $string9 = "spartan-conseil/ratchatpt" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

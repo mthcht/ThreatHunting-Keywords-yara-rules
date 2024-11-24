@@ -10,7 +10,7 @@ rule Token_Impersonation
     strings:
         // Description: Make a Token (local admin rights not required) or Steal the Token of the specified Process ID (local admin rights required)
         // Reference: https://github.com/Leo4j/Token-Impersonation
-        $string1 = /\s\-Steal\s\-ProcessID\s/ nocase ascii wide
+        $string1 = " -Steal -ProcessID " nocase ascii wide
         // Description: Make a Token (local admin rights not required) or Steal the Token of the specified Process ID (local admin rights required)
         // Reference: https://github.com/Leo4j/Token-Impersonation
         $string2 = /\sToken\-Impersonation\.ps1/ nocase ascii wide
@@ -31,19 +31,19 @@ rule Token_Impersonation
         $string7 = /\\Token\-Impersonation\.ps1/ nocase ascii wide
         // Description: Make a Token (local admin rights not required) or Steal the Token of the specified Process ID (local admin rights required)
         // Reference: https://github.com/Leo4j/Token-Impersonation
-        $string8 = /42e10ec6f9a5276060bade151ccd929325daa8ac8910ee26de5e6eebe10f77aa/ nocase ascii wide
+        $string8 = "42e10ec6f9a5276060bade151ccd929325daa8ac8910ee26de5e6eebe10f77aa" nocase ascii wide
         // Description: Make a Token (local admin rights not required) or Steal the Token of the specified Process ID (local admin rights required)
         // Reference: https://github.com/Leo4j/Token-Impersonation
-        $string9 = /Leo4j\/Token\-Impersonation/ nocase ascii wide
+        $string9 = "Leo4j/Token-Impersonation" nocase ascii wide
         // Description: Make a Token (local admin rights not required) or Steal the Token of the specified Process ID (local admin rights required)
         // Reference: https://github.com/Leo4j/Token-Impersonation
-        $string10 = /Token\-Impersonation\s\-MakeToken/ nocase ascii wide
+        $string10 = "Token-Impersonation -MakeToken" nocase ascii wide
         // Description: Make a Token (local admin rights not required) or Steal the Token of the specified Process ID (local admin rights required)
         // Reference: https://github.com/Leo4j/Token-Impersonation
-        $string11 = /Token\-Impersonation\s\-Rev2Self/ nocase ascii wide
+        $string11 = "Token-Impersonation -Rev2Self" nocase ascii wide
         // Description: Make a Token (local admin rights not required) or Steal the Token of the specified Process ID (local admin rights required)
         // Reference: https://github.com/Leo4j/Token-Impersonation
-        $string12 = /Token\-Impersonation\s\-Steal/ nocase ascii wide
+        $string12 = "Token-Impersonation -Steal" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

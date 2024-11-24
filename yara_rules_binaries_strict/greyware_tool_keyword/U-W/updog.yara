@@ -16,7 +16,7 @@ rule updog
         $string2 = /\/updog\.git/ nocase ascii wide
         // Description: Updog is a replacement for SimpleHTTPServer. It allows uploading and downloading via HTTP/S can set ad hoc SSL certificates and use http basic auth.
         // Reference: https://github.com/sc0tfree/updog
-        $string3 = /\/updog\/archive\/updog\-/ nocase ascii wide
+        $string3 = "/updog/archive/updog-" nocase ascii wide
         // Description: Updog is a replacement for SimpleHTTPServer. It allows uploading and downloading via HTTP/S can set ad hoc SSL certificates and use http basic auth.
         // Reference: https://github.com/sc0tfree/updog
         $string4 = /\\updog\-master\\/ nocase ascii wide
@@ -25,16 +25,16 @@ rule updog
         $string5 = /pip.{0,100}\sinstall\supdog/ nocase ascii wide
         // Description: Updog is a replacement for SimpleHTTPServer. It allows uploading and downloading via HTTP/S can set ad hoc SSL certificates and use http basic auth.
         // Reference: https://github.com/sc0tfree/updog
-        $string6 = /sc0tfree\/updog/ nocase ascii wide
+        $string6 = "sc0tfree/updog" nocase ascii wide
         // Description: Updog is a replacement for SimpleHTTPServer. It allows uploading and downloading via HTTP/S can set ad hoc SSL certificates and use http basic auth.
         // Reference: https://github.com/sc0tfree/updog
-        $string7 = /updog\s\-\-/ nocase ascii wide
+        $string7 = "updog --" nocase ascii wide
         // Description: Updog is a replacement for SimpleHTTPServer. It allows uploading and downloading via HTTP/S can set ad hoc SSL certificates and use http basic auth.
         // Reference: https://github.com/sc0tfree/updog
-        $string8 = /updog\s\-d\s\// nocase ascii wide
+        $string8 = "updog -d /" nocase ascii wide
         // Description: Updog is a replacement for SimpleHTTPServer. It allows uploading and downloading via HTTP/S can set ad hoc SSL certificates and use http basic auth.
         // Reference: https://github.com/sc0tfree/updog
-        $string9 = /updog\s\-p\s/ nocase ascii wide
+        $string9 = "updog -p " nocase ascii wide
         // Description: Updog is a replacement for SimpleHTTPServer. It allows uploading and downloading via HTTP/S can set ad hoc SSL certificates and use http basic auth.
         // Reference: https://github.com/sc0tfree/updog
         $string10 = /updog\-master\.zip/ nocase ascii wide

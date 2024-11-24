@@ -10,22 +10,22 @@ rule ssh
     strings:
         // Description: Detects suspicious SSH / SSHD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
         // Reference: https://github.com/ossec/ossec-hids/blob/master/etc/rules/sshd_rules.xml
-        $string1 = /bad\sclient\spublic\sDH\svalue/ nocase ascii wide
+        $string1 = "bad client public DH value" nocase ascii wide
         // Description: Detects suspicious SSH / SSHD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
         // Reference: https://github.com/ossec/ossec-hids/blob/master/etc/rules/sshd_rules.xml
-        $string2 = /fatal\:\sbuffer_get_string\:\sbad\sstring/ nocase ascii wide
+        $string2 = "fatal: buffer_get_string: bad string" nocase ascii wide
         // Description: Detects suspicious SSH / SSHD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
         // Reference: https://github.com/ossec/ossec-hids/blob/master/etc/rules/sshd_rules.xml
-        $string3 = /Local\:\scrc32\scompensation\sattack/ nocase ascii wide
+        $string3 = "Local: crc32 compensation attack" nocase ascii wide
         // Description: modification of the sshd configuration file - couldbe an attacker establishing persistence or a legitimate admin behavior
         // Reference: https://x.com/mthcht/status/1827714529687658796
-        $string4 = /nano\s\/etc\/ssh\/sshd_config/ nocase ascii wide
+        $string4 = "nano /etc/ssh/sshd_config" nocase ascii wide
         // Description: Binding to port 445 on Windows with ssh - useful for NTLM relaying
         // Reference: https://x.com/0x64616e/status/1817149974724956286
         $string5 = /ssh\.exe\s\-L\s0\.0\.0\.0\:445\:127\.0\.0\.1\:445\s/ nocase ascii wide
         // Description: modification of the sshd configuration file - couldbe an attacker establishing persistence or a legitimate admin behavior
         // Reference: https://x.com/mthcht/status/1827714529687658796
-        $string6 = /vim\s\/etc\/ssh\/sshd_config/ nocase ascii wide
+        $string6 = "vim /etc/ssh/sshd_config" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

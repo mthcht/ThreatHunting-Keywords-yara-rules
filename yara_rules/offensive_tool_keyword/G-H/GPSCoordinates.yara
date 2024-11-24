@@ -10,7 +10,7 @@ rule GPSCoordinates
     strings:
         // Description: Tracks the system's GPS coordinates (accurate within 1km currently) if Location Services are enabled
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/GPSCoordinates
-        $string1 = /\/master\/GPSCoordinates\// nocase ascii wide
+        $string1 = "/master/GPSCoordinates/" nocase ascii wide
         // Description: Tracks the system's GPS coordinates (accurate within 1km currently) if Location Services are enabled
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/GPSCoordinates
         $string2 = /\\master\\GPSCoordinates\\/ nocase ascii wide

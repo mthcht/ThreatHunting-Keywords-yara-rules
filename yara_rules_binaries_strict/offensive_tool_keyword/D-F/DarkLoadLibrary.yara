@@ -16,10 +16,10 @@ rule DarkLoadLibrary
         $string2 = /\\DarkLoadLibrary\./ nocase ascii wide
         // Description: LoadLibrary for offensive operations
         // Reference: https://github.com/bats3c/DarkLoadLibrary
-        $string3 = /bats3c\/DarkLoadLibrary/ nocase ascii wide
+        $string3 = "bats3c/DarkLoadLibrary" nocase ascii wide
         // Description: LoadLibrary for offensive operations
         // Reference: https://github.com/bats3c/DarkLoadLibrary
-        $string4 = /DarkLoadLibrary\-maser/ nocase ascii wide
+        $string4 = "DarkLoadLibrary-maser" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -10,7 +10,7 @@ rule pwn_jenkins
     strings:
         // Description: Remote Code Execution for jenkins
         // Reference: https://github.com/gquere/pwn_jenkins
-        $string1 = /pwn_jenkins/ nocase ascii wide
+        $string1 = "pwn_jenkins" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

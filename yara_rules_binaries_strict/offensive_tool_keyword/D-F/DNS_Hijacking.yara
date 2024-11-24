@@ -13,7 +13,7 @@ rule DNS_Hijacking
         $string1 = /\/DNS\-Hijacking\.git/ nocase ascii wide
         // Description: DNS Hijacking in UNIX/Linux System by using raw socket and pcap
         // Reference: https://github.com/DyeKuu/DNS-Hijacking
-        $string2 = /DyeKuu\/DNS\-Hijacking/ nocase ascii wide
+        $string2 = "DyeKuu/DNS-Hijacking" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

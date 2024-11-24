@@ -37,10 +37,10 @@ rule ccmpwn
         $string9 = /\\smb_SCNotification\.exe/ nocase ascii wide
         // Description: Lateral Movement script that leverages the CcmExec service to remotely hijack user sessions
         // Reference: https://github.com/mandiant/ccmpwn
-        $string10 = /5c611fb030683dba08662997836b3b308c0278130bf2eee6ac6af6a4332285fe/ nocase ascii wide
+        $string10 = "5c611fb030683dba08662997836b3b308c0278130bf2eee6ac6af6a4332285fe" nocase ascii wide
         // Description: Lateral Movement script that leverages the CcmExec service to remotely hijack user sessions
         // Reference: https://github.com/mandiant/ccmpwn
-        $string11 = /CcmExec\smight\snot\sbe\sinstalled\son\starget/ nocase ascii wide
+        $string11 = "CcmExec might not be installed on target" nocase ascii wide
         // Description: Lateral Movement script that leverages the CcmExec service to remotely hijack user sessions
         // Reference: https://github.com/mandiant/ccmpwn
         $string12 = /CcmExec\sservice\snot\saccessible\son\sremote\ssystem\!\s\:\(/ nocase ascii wide
@@ -52,7 +52,7 @@ rule ccmpwn
         $string14 = /impacket\.dcerpc/ nocase ascii wide
         // Description: Lateral Movement script that leverages the CcmExec service to remotely hijack user sessions
         // Reference: https://github.com/mandiant/ccmpwn
-        $string15 = /mandiant\/ccmpwn/ nocase ascii wide
+        $string15 = "mandiant/ccmpwn" nocase ascii wide
         // Description: Lateral Movement script that leverages the CcmExec service to remotely hijack user sessions
         // Reference: https://github.com/mandiant/ccmpwn
         $string16 = /SCNotification\.exe\.config\.malicious/ nocase ascii wide
@@ -70,7 +70,7 @@ rule ccmpwn
         $string20 = /templates\/smb_SCNotification\.exe/ nocase ascii wide
         // Description: Lateral Movement script that leverages the CcmExec service to remotely hijack user sessions
         // Reference: https://github.com/mandiant/ccmpwn
-        $string21 = /Uploading\smalicious\sDLL\svia\sSMB/ nocase ascii wide
+        $string21 = "Uploading malicious DLL via SMB" nocase ascii wide
         // Description: Lateral Movement script that leverages the CcmExec service to remotely hijack user sessions
         // Reference: https://github.com/mandiant/ccmpwn
         $string22 = /Uploading\smalicious\sSCNotification\.exe\.config\svia\sSMB/ nocase ascii wide

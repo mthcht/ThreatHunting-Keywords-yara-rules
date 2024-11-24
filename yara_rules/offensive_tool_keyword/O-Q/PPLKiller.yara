@@ -16,7 +16,7 @@ rule PPLKiller
         $string2 = /\/PPLKiller\.git/ nocase ascii wide
         // Description: Tool to bypass LSA Protection (aka Protected Process Light)
         // Reference: https://github.com/RedCursorSecurityConsulting/PPLKiller
-        $string3 = /\/PPLKiller\// nocase ascii wide
+        $string3 = "/PPLKiller/" nocase ascii wide
         // Description: Tool to bypass LSA Protection (aka Protected Process Light)
         // Reference: https://github.com/RedCursorSecurityConsulting/PPLKiller
         $string4 = /\\PPLKiller/ nocase ascii wide
@@ -34,7 +34,7 @@ rule PPLKiller
         $string8 = /PPLKiller\.vcxproj/ nocase ascii wide
         // Description: Tool to bypass LSA Protection (aka Protected Process Light)
         // Reference: https://github.com/RedCursorSecurityConsulting/PPLKiller
-        $string9 = /PPLKiller\-master/ nocase ascii wide
+        $string9 = "PPLKiller-master" nocase ascii wide
         // Description: Tool to bypass LSA Protection (aka Protected Process Light)
         // Reference: https://github.com/RedCursorSecurityConsulting/PPLKiller
         $string10 = /processPIDByName.{0,1000}lsass\.exe/ nocase ascii wide

@@ -10,7 +10,7 @@ rule WitnessMe
     strings:
         // Description: WitnessMe is primarily a Web Inventory tool inspired by Eyewitness. its also written to be extensible allowing you to create custom functionality that can take advantage of the headless browser it drives in the back-end.
         // Reference: https://github.com/byt3bl33d3r/WitnessMe
-        $string1 = /WitnessMe/ nocase ascii wide
+        $string1 = "WitnessMe" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

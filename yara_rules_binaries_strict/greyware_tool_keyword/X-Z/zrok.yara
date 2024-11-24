@@ -10,13 +10,13 @@ rule zrok
     strings:
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
-        $string1 = /\sadmin\screate\sfrontend\ssqJRAINSiB\spublic\s/ nocase ascii wide
+        $string1 = " admin create frontend sqJRAINSiB public " nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
-        $string2 = /\s\-c\srest_client_zrok\s\-t/ nocase ascii wide
+        $string2 = " -c rest_client_zrok -t" nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
-        $string3 = /\s\-s\srest_server_zrok\s\-t/ nocase ascii wide
+        $string3 = " -s rest_server_zrok -t" nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
         $string4 = /\szrok\.listener/ nocase ascii wide
@@ -43,19 +43,19 @@ rule zrok
         $string11 = /\/\/\sNewHTTPClient\screates\sa\snew\szrok\sHTTP\sclient\./ nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
-        $string12 = /\/docker\/compose\/zrok\-instance\// nocase ascii wide
+        $string12 = "/docker/compose/zrok-instance/" nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
         $string13 = /\/etc\/zrok\.env/ nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
-        $string14 = /\/etc\/zrok\// nocase ascii wide
+        $string14 = "/etc/zrok/" nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
-        $string15 = /\/rest_client_zrok\// nocase ascii wide
+        $string15 = "/rest_client_zrok/" nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
-        $string16 = /\/var\/lib\/zrok\-/ nocase ascii wide
+        $string16 = "/var/lib/zrok-" nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
         $string17 = /\/zrok\.exe/ nocase ascii wide
@@ -67,16 +67,16 @@ rule zrok
         $string19 = /\/zrok\.zip/ nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
-        $string20 = /\/zrok\-amd64_darwin_amd64/ nocase ascii wide
+        $string20 = "/zrok-amd64_darwin_amd64" nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
-        $string21 = /\/zrok\-arm64_darwin_arm64/ nocase ascii wide
+        $string21 = "/zrok-arm64_darwin_arm64" nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
         $string22 = /\/zrok\-controller\.log/ nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
-        $string23 = /\/zrok\-docker\// nocase ascii wide
+        $string23 = "/zrok-docker/" nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
         $string24 = /\/zrok\-frontend\.log/ nocase ascii wide
@@ -97,34 +97,34 @@ rule zrok
         $string29 = /\\zrok\-frontend\.log/ nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
-        $string30 = /\>Welcome\snew\szrok\suser\!\</ nocase ascii wide
+        $string30 = ">Welcome new zrok user!<" nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
-        $string31 = /\>Welcome\sto\szrok\!\</ nocase ascii wide
+        $string31 = ">Welcome to zrok!<" nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
-        $string32 = /\>zrok\sfrontend\shealth\:\sok\</ nocase ascii wide
+        $string32 = ">zrok frontend health: ok<" nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
-        $string33 = /\>zrok\stest\sendpoint\</ nocase ascii wide
+        $string33 = ">zrok test endpoint<" nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
-        $string34 = /25e850edd1cb8707c9a18a0fcc610b831cce25203dff650ec7e781175d900df3/ nocase ascii wide
+        $string34 = "25e850edd1cb8707c9a18a0fcc610b831cce25203dff650ec7e781175d900df3" nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
-        $string35 = /4adeaf8287ac71363bb2c5ccd6b67b8c973f783702c18c444741875375772be1/ nocase ascii wide
+        $string35 = "4adeaf8287ac71363bb2c5ccd6b67b8c973f783702c18c444741875375772be1" nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
-        $string36 = /651caf1b8d81a445db65551955dda4aa7df88a0013a81fda506bdfcfe05611b0/ nocase ascii wide
+        $string36 = "651caf1b8d81a445db65551955dda4aa7df88a0013a81fda506bdfcfe05611b0" nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
-        $string37 = /9af57a343f42da2250dd4499d6dcff61a7a6395eae77eaab0ddddbe544743116/ nocase ascii wide
+        $string37 = "9af57a343f42da2250dd4499d6dcff61a7a6395eae77eaab0ddddbe544743116" nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
-        $string38 = /d5be8ba1112a210428cac87772b6d7902a9b9299b9a658d03ffbc52e9d125593/ nocase ascii wide
+        $string38 = "d5be8ba1112a210428cac87772b6d7902a9b9299b9a658d03ffbc52e9d125593" nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
-        $string39 = /def7512aaa595d7cad9b2e237a0ee99e778bbae0a30dd2eba75d099fc80f310f/ nocase ascii wide
+        $string39 = "def7512aaa595d7cad9b2e237a0ee99e778bbae0a30dd2eba75d099fc80f310f" nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
         $string40 = /http.{0,100}api\.zrok\./ nocase ascii wide
@@ -145,10 +145,10 @@ rule zrok
         $string45 = /https\:\/\/zrok\./ nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
-        $string46 = /openziti\/zrok/ nocase ascii wide
+        $string46 = "openziti/zrok" nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
-        $string47 = /pastefrom\sb46p9j82z81f/ nocase ascii wide
+        $string47 = "pastefrom b46p9j82z81f" nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
         $string48 = /share\.zrok\.io/ nocase ascii wide
@@ -157,28 +157,28 @@ rule zrok
         $string49 = /tags\.zrokShareToken\=/ nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
-        $string50 = /the\szrok\senvironment\swas\ssuccessfully\senabled/ nocase ascii wide
+        $string50 = "the zrok environment was successfully enabled" nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
         $string51 = /zrockify_func\(/ nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
-        $string52 = /zrok\sadmin\sbootstrap/ nocase ascii wide
+        $string52 = "zrok admin bootstrap" nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
-        $string53 = /zrok\sconfiguration\supdated/ nocase ascii wide
+        $string53 = "zrok configuration updated" nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
-        $string54 = /zrok\senvironment\sdisabled/ nocase ascii wide
+        $string54 = "zrok environment disabled" nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
-        $string55 = /zrok\sshare\spublic\s/ nocase ascii wide
+        $string55 = "zrok share public " nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
-        $string56 = /zrok\sshare\sreserved\s/ nocase ascii wide
+        $string56 = "zrok share reserved " nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
-        $string57 = /zrok\stest\sloop\spublic/ nocase ascii wide
+        $string57 = "zrok test loop public" nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
         $string58 = /zrok\.environment\.root/ nocase ascii wide
@@ -196,16 +196,16 @@ rule zrok
         $string62 = /zrok_api\.configuration/ nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
-        $string63 = /ZROK_BACKEND_MODE/ nocase ascii wide
+        $string63 = "ZROK_BACKEND_MODE" nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
-        $string64 = /ZROK_RESERVED_TOKEN/ nocase ascii wide
+        $string64 = "ZROK_RESERVED_TOKEN" nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
         $string65 = /zrok\-share\.service/ nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
-        $string66 = /zrokSvcId\=/ nocase ascii wide
+        $string66 = "zrokSvcId=" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

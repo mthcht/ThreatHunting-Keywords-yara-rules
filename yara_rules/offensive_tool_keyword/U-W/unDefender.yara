@@ -22,7 +22,7 @@ rule unDefender
         $string4 = /\\unDefender\.exe/ nocase ascii wide
         // Description: Killing your preferred antimalware by abusing native symbolic links and NT paths.
         // Reference: https://github.com/APTortellini/unDefender
-        $string5 = /APTortellini\/unDefender/ nocase ascii wide
+        $string5 = "APTortellini/unDefender" nocase ascii wide
         // Description: Killing your preferred antimalware by abusing native symbolic links and NT paths.
         // Reference: https://github.com/APTortellini/unDefender
         $string6 = /copy\s.{0,1000}\\legit\.sys\s.{0,1000}Windows\\System32\\Drivers\\.{0,1000}\.sys/ nocase ascii wide
@@ -31,7 +31,7 @@ rule unDefender
         $string7 = /ImpersonateAndUnload\.cpp/ nocase ascii wide
         // Description: Killing your preferred antimalware by abusing native symbolic links and NT paths.
         // Reference: https://github.com/APTortellini/unDefender
-        $string8 = /unDefender\-master/ nocase ascii wide
+        $string8 = "unDefender-master" nocase ascii wide
 
     condition:
         any of them

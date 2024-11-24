@@ -10,7 +10,7 @@ rule Rhadamanthys
     strings:
         // Description: Fake Xworm - Rhadamanthys infostealer
         // Reference: https://github.com/koyaxZ/XWorm-v5-Remote-Access-Tool
-        $string1 = /\sXworm\sv/ nocase ascii wide
+        $string1 = " Xworm v" nocase ascii wide
         // Description: Fake Xworm - Rhadamanthys infostealer
         // Reference: https://github.com/koyaxZ/XWorm-v5-Remote-Access-Tool
         $string2 = /\/XWorm\.exe/ nocase ascii wide
@@ -31,10 +31,10 @@ rule Rhadamanthys
         $string7 = /\\XWorm\.rar/ nocase ascii wide
         // Description: Fake Xworm - Rhadamanthys infostealer
         // Reference: https://github.com/koyaxZ/XWorm-v5-Remote-Access-Tool
-        $string8 = /9950788284df125c7359aeb91435ed24d59359fac6a74ed73774ca31561cc7ae/ nocase ascii wide
+        $string8 = "9950788284df125c7359aeb91435ed24d59359fac6a74ed73774ca31561cc7ae" nocase ascii wide
         // Description: Fake Xworm - Rhadamanthys infostealer
         // Reference: https://github.com/koyaxZ/XWorm-v5-Remote-Access-Tool
-        $string9 = /XWorm\-v5\-Remote\-Access\-Tool/ nocase ascii wide
+        $string9 = "XWorm-v5-Remote-Access-Tool" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

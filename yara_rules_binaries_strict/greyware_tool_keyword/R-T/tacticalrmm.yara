@@ -16,13 +16,13 @@ rule tacticalrmm
         $string2 = /\stacticalrmm\.exe/ nocase ascii wide
         // Description: A remote monitoring & management tool
         // Reference: https://github.com/amidaware/tacticalrmm
-        $string3 = /\/amidaware\/rmmagent\/releases\/download\// nocase ascii wide
+        $string3 = "/amidaware/rmmagent/releases/download/" nocase ascii wide
         // Description: A remote monitoring & management tool
         // Reference: https://github.com/amidaware/tacticalrmm
         $string4 = /\/nats\-rmm\.conf/ nocase ascii wide
         // Description: A remote monitoring & management tool
         // Reference: https://github.com/amidaware/tacticalrmm
-        $string5 = /\/rmm\/api\/tacticalrmm\// nocase ascii wide
+        $string5 = "/rmm/api/tacticalrmm/" nocase ascii wide
         // Description: A remote monitoring & management tool
         // Reference: https://github.com/amidaware/tacticalrmm
         $string6 = /\/rmm\-installer\.ps1/ nocase ascii wide
@@ -49,7 +49,7 @@ rule tacticalrmm
         $string13 = /\/tacticalrmm\/master\/install\.sh/ nocase ascii wide
         // Description: A remote monitoring & management tool
         // Reference: https://github.com/amidaware/tacticalrmm
-        $string14 = /\/tacticalrmm\/releases\/latest/ nocase ascii wide
+        $string14 = "/tacticalrmm/releases/latest" nocase ascii wide
         // Description: A remote monitoring & management tool
         // Reference: https://github.com/amidaware/tacticalrmm
         $string15 = /\/tacticalrmm\-web\.git/ nocase ascii wide
@@ -85,13 +85,13 @@ rule tacticalrmm
         $string25 = /\\tacticalrmm\\/ nocase ascii wide
         // Description: A remote monitoring & management tool
         // Reference: https://github.com/amidaware/tacticalrmm
-        $string26 = /amidaware\/tacticalrmm/ nocase ascii wide
+        $string26 = "amidaware/tacticalrmm" nocase ascii wide
         // Description: A remote monitoring & management tool
         // Reference: https://github.com/amidaware/tacticalrmm
         $string27 = /https\:\/\/.{0,100}\.tacticalrmm\.com\// nocase ascii wide
         // Description: A remote monitoring & management tool
         // Reference: https://github.com/amidaware/tacticalrmm
-        $string28 = /net\sstop\stacticalrmm/ nocase ascii wide
+        $string28 = "net stop tacticalrmm" nocase ascii wide
         // Description: A remote monitoring & management tool
         // Reference: https://github.com/amidaware/tacticalrmm
         $string29 = /RMM\.WebRemote\.exe/ nocase ascii wide
@@ -100,22 +100,22 @@ rule tacticalrmm
         $string30 = /SOFTWARE\\TacticalRMM/ nocase ascii wide
         // Description: A remote monitoring & management tool
         // Reference: https://github.com/amidaware/tacticalrmm
-        $string31 = /su\s\-\stactical/ nocase ascii wide
+        $string31 = "su - tactical" nocase ascii wide
         // Description: A remote monitoring & management tool
         // Reference: https://github.com/amidaware/tacticalrmm
-        $string32 = /sudo\s\-s\s\/bin\/bash\stactical/ nocase ascii wide
+        $string32 = "sudo -s /bin/bash tactical" nocase ascii wide
         // Description: A remote monitoring & management tool
         // Reference: https://github.com/amidaware/tacticalrmm
         $string33 = /systemctl\s.{0,100}\srmm\.service/ nocase ascii wide
         // Description: A remote monitoring & management tool
         // Reference: https://github.com/amidaware/tacticalrmm
-        $string34 = /Tactical\sRMM\sAgent/ nocase ascii wide
+        $string34 = "Tactical RMM Agent" nocase ascii wide
         // Description: A remote monitoring & management tool
         // Reference: https://github.com/amidaware/tacticalrmm
         $string35 = /tacticalrmm\.utils/ nocase ascii wide
         // Description: A remote monitoring & management tool
         // Reference: https://github.com/amidaware/tacticalrmm
-        $string36 = /tacticalrmm\-develop/ nocase ascii wide
+        $string36 = "tacticalrmm-develop" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

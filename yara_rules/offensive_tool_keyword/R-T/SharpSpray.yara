@@ -16,7 +16,7 @@ rule SharpSpray
         $string2 = /\ssharpspray\.exe/ nocase ascii wide
         // Description: SharpSpray is a Windows domain password spraying tool written in .NET C#
         // Reference: https://github.com/iomoath/SharpSpray
-        $string3 = /\s\-x\s\-z\s\-\-get\-users\-list/ nocase ascii wide
+        $string3 = " -x -z --get-users-list" nocase ascii wide
         // Description: SharpSpray is a Windows domain password spraying tool written in .NET C#
         // Reference: https://github.com/iomoath/SharpSpray
         $string4 = /\s\-x\s\-z\s\-s\s3\s\-j\s1\s\-u\s.{0,1000}\.txt/ nocase ascii wide
@@ -49,19 +49,19 @@ rule SharpSpray
         $string13 = /\\SharpSpray\-1\.1\.zip/ nocase ascii wide
         // Description: SharpSpray is a Windows domain password spraying tool written in .NET C#
         // Reference: https://github.com/iomoath/SharpSpray
-        $string14 = /29CFAA16\-9277\-4EFB\-9E91\-A7D11225160B/ nocase ascii wide
+        $string14 = "29CFAA16-9277-4EFB-9E91-A7D11225160B" nocase ascii wide
         // Description: SharpSpray is a Windows domain password spraying tool written in .NET C#
         // Reference: https://github.com/iomoath/SharpSpray
-        $string15 = /9a30590136ad955b56d367ca00f3d9feb50d4a3fb1d643fc8e3bb3cbcfd1dfa1/ nocase ascii wide
+        $string15 = "9a30590136ad955b56d367ca00f3d9feb50d4a3fb1d643fc8e3bb3cbcfd1dfa1" nocase ascii wide
         // Description: SharpSpray is a Windows domain password spraying tool written in .NET C#
         // Reference: https://github.com/iomoath/SharpSpray
         $string16 = /DomainPasswordSpray\.ps1/ nocase ascii wide
         // Description: SharpSpray is a Windows domain password spraying tool written in .NET C#
         // Reference: https://github.com/iomoath/SharpSpray
-        $string17 = /iomoath\/SharpSpray/ nocase ascii wide
+        $string17 = "iomoath/SharpSpray" nocase ascii wide
         // Description: This project is a C# port of my PowerSpray.ps1 script. SharpSpray a simple code set to perform a password spraying attack against all users of a domain using LDAP and is compatible with Cobalt Strike.
         // Reference: https://github.com/jnqpblc/SharpSpray
-        $string18 = /SharpSpray/ nocase ascii wide
+        $string18 = "SharpSpray" nocase ascii wide
         // Description: SharpSpray is a Windows domain password spraying tool written in .NET C#
         // Reference: https://github.com/iomoath/SharpSpray
         $string19 = /SharpSpray\\Program\.cs/ nocase ascii wide

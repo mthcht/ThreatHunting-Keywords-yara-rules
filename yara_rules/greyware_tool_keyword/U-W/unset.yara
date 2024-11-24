@@ -13,16 +13,16 @@ rule unset
         $string1 = /unset\sHISTFILE\s\&\&\sHISTSIZE\=0\s\&\&\srm\s\-f\s\$HISTFILE\s\&\&\sunset\sHISTFILE/ nocase ascii wide
         // Description: linux commands abused by attackers
         // Reference: N/A
-        $string2 = /unset\sHISTFILE/ nocase ascii wide
+        $string2 = "unset HISTFILE" nocase ascii wide
         // Description: covering history tracks on linux system
         // Reference: https://rosesecurity.gitbook.io/red-teaming-ttps/linux
-        $string3 = /unset\sHISTFILE/ nocase ascii wide
+        $string3 = "unset HISTFILE" nocase ascii wide
         // Description: covering history tracks on linux system
         // Reference: https://rosesecurity.gitbook.io/red-teaming-ttps/linux
-        $string4 = /unset\sHISTFILESIZE/ nocase ascii wide
+        $string4 = "unset HISTFILESIZE" nocase ascii wide
         // Description: covering history tracks on linux system
         // Reference: https://rosesecurity.gitbook.io/red-teaming-ttps/linux
-        $string5 = /unset\sHISTSIZE/ nocase ascii wide
+        $string5 = "unset HISTSIZE" nocase ascii wide
 
     condition:
         any of them

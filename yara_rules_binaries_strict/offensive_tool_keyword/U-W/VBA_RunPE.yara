@@ -10,7 +10,7 @@ rule VBA_RunPE
     strings:
         // Description: A simple yet effective implementation of the RunPE technique in VBA. This code can be used to run executables from the memory of Word or Excel. It is compatible with both 32 bits and 64 bits versions of Microsoft Office 2010 and above.
         // Reference: https://github.com/itm4n/VBA-RunPE
-        $string1 = /VBA\-RunPE\s\-/ nocase ascii wide
+        $string1 = "VBA-RunPE -" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

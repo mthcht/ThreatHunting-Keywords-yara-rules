@@ -22,7 +22,7 @@ rule dir
         $string4 = /dir\s\/a\:h\sC\:\\Users\\.{0,1000}\\AppData\\Roaming\\Microsoft\\Credentials\\/ nocase ascii wide
         // Description: List Users with dir
         // Reference: https://casvancooten.com/posts/2020/11/windows-active-directory-exploitation-cheat-sheet-and-command-reference
-        $string5 = /dir\s\/b\s\/ad\s\"C\:\\Users\"/ nocase ascii wide
+        $string5 = /dir\s\/b\s\/ad\s\\"C\:\\Users\\"/ nocase ascii wide
         // Description: associated with PEASS-ng - Privilege Escalation Awesome Scripts suite
         // Reference: https://github.com/peass-ng/PEASS-ng
         $string6 = /dir\s\/b\/a\s\%appdata\%\\Microsoft\\Credentials\\\s2\>nul/ nocase ascii wide

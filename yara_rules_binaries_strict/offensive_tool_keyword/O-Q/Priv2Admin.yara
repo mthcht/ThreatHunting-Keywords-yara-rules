@@ -19,7 +19,7 @@ rule Priv2Admin
         $string3 = /\/SeBackupPrivilege\.md/ nocase ascii wide
         // Description: Exploitation paths allowing you to (mis)use the Windows Privileges to elevate your rights within the OS.
         // Reference: https://github.com/gtworek/Priv2Admin
-        $string4 = /gtworek\/Priv2Admin/ nocase ascii wide
+        $string4 = "gtworek/Priv2Admin" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

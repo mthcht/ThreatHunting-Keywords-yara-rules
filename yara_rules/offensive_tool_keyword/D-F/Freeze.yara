@@ -13,7 +13,7 @@ rule Freeze
         $string1 = /\s\-encrypt\s.{0,1000}\s\-process\s.{0,1000}\s\-sandbox\s/ nocase ascii wide
         // Description: Freeze is a payload toolkit for bypassing EDRs using suspended processes. direct syscalls. and alternative execution methods
         // Reference: https://github.com/optiv/Freeze
-        $string2 = /\/optiv\/Freeze\// nocase ascii wide
+        $string2 = "/optiv/Freeze/" nocase ascii wide
         // Description: Freeze is a payload toolkit for bypassing EDRs using suspended processes. direct syscalls. and alternative execution methods
         // Reference: https://github.com/optiv/Freeze
         $string3 = /\\freeze\.go/ nocase ascii wide

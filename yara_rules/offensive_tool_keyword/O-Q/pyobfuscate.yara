@@ -22,7 +22,7 @@ rule pyobfuscate
         $string4 = /pyobfuscate\s\=\s\(/ nocase ascii wide
         // Description: ADVANCED PYTHON OBFUSCATOR
         // Reference: https://pyobfuscate.com/pyd
-        $string5 = /why\,are\,you\,reading\,this\,thing\,huh\=/ nocase ascii wide
+        $string5 = "why,are,you,reading,this,thing,huh=" nocase ascii wide
 
     condition:
         any of them

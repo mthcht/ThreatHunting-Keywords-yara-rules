@@ -10,7 +10,7 @@ rule sed
     strings:
         // Description: allowing root login for ssh
         // Reference: N/A
-        $string1 = /sed\s\'s\/\#PermitRootLogin\sprohibit\-password\/PermitRootLogin\sYes\'\s\/etc\/ssh\/sshd_config/ nocase ascii wide
+        $string1 = "sed 's/#PermitRootLogin prohibit-password/PermitRootLogin Yes' /etc/ssh/sshd_config" nocase ascii wide
 
     condition:
         any of them

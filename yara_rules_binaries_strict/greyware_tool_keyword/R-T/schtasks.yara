@@ -25,7 +25,7 @@ rule schtasks
         $string5 = /schtasks\s\/Change\s\/TN\s\\"Microsoft\\Windows\\Windows\sDefender\\Windows\sDefender\sVerification\\"\s\/Disable/ nocase ascii wide
         // Description: view detailed information about all the scheduled tasks.
         // Reference: N/A
-        $string6 = /schtasks\s\/query\s\/v\s\/fo\sLIST/ nocase ascii wide
+        $string6 = "schtasks /query /v /fo LIST" nocase ascii wide
         // Description: SSH backdoor creation with schtasks
         // Reference: https://www.trellix.com/blogs/research/cactus-ransomware-new-strain-in-the-market/
         $string7 = /schtasks\.exe\s\/create\s\/sc\s.{0,100}\s\/tr\s\\"\%programdata\%\\sshd\\sshd\.exe\s\-f\s\%programdata\%\\sshd\\config\\sshd_config\\keys\\id_rsa\s\-N\s\-R\s.{0,100}\s\-o\sStrictHostKeyChecking\=no\s\-o\s/ nocase ascii wide

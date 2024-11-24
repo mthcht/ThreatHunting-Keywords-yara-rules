@@ -37,7 +37,7 @@ rule linux_smart_enumeration
         $string9 = /chmod\s755\slse\.sh/ nocase ascii wide
         // Description: Linux enumeration tool for privilege escalation and discovery
         // Reference: https://github.com/diego-treitos/linux-smart-enumeration
-        $string10 = /diego\-treitos\/linux\-smart\-enumeration/ nocase ascii wide
+        $string10 = "diego-treitos/linux-smart-enumeration" nocase ascii wide
         // Description: Linux enumeration tool for privilege escalation and discovery
         // Reference: https://github.com/diego-treitos/linux-smart-enumeration
         $string11 = /find\s\/\s.{0,100}\s\-4000\s\-type\sf\s\-print/ nocase ascii wide
@@ -52,7 +52,7 @@ rule linux_smart_enumeration
         $string14 = /https\:\/\/.{0,100}\/releases\/download\/.{0,100}\/lse\.sh/ nocase ascii wide
         // Description: Linux enumeration tool for privilege escalation and discovery
         // Reference: https://github.com/diego-treitos/linux-smart-enumeration
-        $string15 = /linux\-smart\-enumeration\-master/ nocase ascii wide
+        $string15 = "linux-smart-enumeration-master" nocase ascii wide
         // Description: Linux enumeration tool for privilege escalation and discovery
         // Reference: https://github.com/diego-treitos/linux-smart-enumeration
         $string16 = /lse\.sh\s\-l/ nocase ascii wide
@@ -70,7 +70,7 @@ rule linux_smart_enumeration
         $string20 = /ss\s\-tunlp\s\|\|\snetstat\s\-tunlp.{0,100}127\.0\.0\.1/ nocase ascii wide
         // Description: Linux enumeration tool for privilege escalation and discovery
         // Reference: https://github.com/diego-treitos/linux-smart-enumeration
-        $string21 = /sudo\s\-nS\sid\'\s\&\&\slse_sudo\=true/ nocase ascii wide
+        $string21 = "sudo -nS id' && lse_sudo=true" nocase ascii wide
         // Description: Linux enumeration tool for privilege escalation and discovery
         // Reference: https://github.com/diego-treitos/linux-smart-enumeration
         $string22 = /user\|username\|login\|pass\|password\|pw\|credentials/ nocase ascii wide

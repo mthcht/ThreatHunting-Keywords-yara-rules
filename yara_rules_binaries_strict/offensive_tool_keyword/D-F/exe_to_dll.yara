@@ -37,16 +37,16 @@ rule exe_to_dll
         $string9 = /exe_to_dll_.{0,100}_64bit\.zip/ nocase ascii wide
         // Description: Converts a EXE into DLL
         // Reference: https://github.com/hasherezade/exe_to_dll
-        $string10 = /exe_to_dll\-master/ nocase ascii wide
+        $string10 = "exe_to_dll-master" nocase ascii wide
         // Description: Converts an EXE so that it can be loaded like a DLL.
         // Reference: https://github.com/hasherezade/exe_to_dll
-        $string11 = /exe_to_dll\-master/ nocase ascii wide
+        $string11 = "exe_to_dll-master" nocase ascii wide
         // Description: Converts a EXE into DLL
         // Reference: https://github.com/hasherezade/exe_to_dll
-        $string12 = /hasherezade\/exe_to_dll/ nocase ascii wide
+        $string12 = "hasherezade/exe_to_dll" nocase ascii wide
         // Description: Converts an EXE so that it can be loaded like a DLL.
         // Reference: https://github.com/hasherezade/exe_to_dll
-        $string13 = /hasherezade\/exe_to_dll/ nocase ascii wide
+        $string13 = "hasherezade/exe_to_dll" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

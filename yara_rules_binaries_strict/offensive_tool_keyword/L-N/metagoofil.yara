@@ -10,7 +10,7 @@ rule metagoofil
     strings:
         // Description: Metagoofil is a tool for extracting metadata of public documents (pdf.doc.xls.ppt..etc) availables in the target websites.This information could be useful because you can get valid usernames. people names. for using later in bruteforce password attacks (vpn. ftp. webapps). the tool will also extracts interesting paths of the documents. where we can get shared resources names. server names... etc.
         // Reference: https://github.com/laramies/metagoofi
-        $string1 = /metagoofil/ nocase ascii wide
+        $string1 = "metagoofil" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -43,58 +43,58 @@ rule VectorKernel
         $string11 = /\\StealTokenDrv\.exe/ nocase ascii wide
         // Description: PoCs for Kernelmode rootkit techniques research.
         // Reference: https://github.com/daem0nc0re/VectorKernel/
-        $string12 = /02EF15C0\-BA19\-4115\-BB7F\-F5B04F7087FE/ nocase ascii wide
+        $string12 = "02EF15C0-BA19-4115-BB7F-F5B04F7087FE" nocase ascii wide
         // Description: PoCs for Kernelmode rootkit techniques research.
         // Reference: https://github.com/daem0nc0re/VectorKernel/
-        $string13 = /0C89EC7D\-AC60\-4591\-8F6B\-CB5F20EC0D8D/ nocase ascii wide
+        $string13 = "0C89EC7D-AC60-4591-8F6B-CB5F20EC0D8D" nocase ascii wide
         // Description: PoCs for Kernelmode rootkit techniques research.
         // Reference: https://github.com/daem0nc0re/VectorKernel/
-        $string14 = /1250BAE1\-D26F\-4EF2\-9452\-9B5009568336/ nocase ascii wide
+        $string14 = "1250BAE1-D26F-4EF2-9452-9B5009568336" nocase ascii wide
         // Description: PoCs for Kernelmode rootkit techniques research.
         // Reference: https://github.com/daem0nc0re/VectorKernel/
-        $string15 = /171A9A71\-EDEF\-4891\-9828\-44434A00585E/ nocase ascii wide
+        $string15 = "171A9A71-EDEF-4891-9828-44434A00585E" nocase ascii wide
         // Description: PoCs for Kernelmode rootkit techniques research.
         // Reference: https://github.com/daem0nc0re/VectorKernel/
-        $string16 = /28F9E001\-67E0\-4200\-B120\-3021596689E9/ nocase ascii wide
+        $string16 = "28F9E001-67E0-4200-B120-3021596689E9" nocase ascii wide
         // Description: PoCs for Kernelmode rootkit techniques research.
         // Reference: https://github.com/daem0nc0re/VectorKernel/
-        $string17 = /2FB94059\-2D49\-4EEA\-AAF8\-7E89E249644B/ nocase ascii wide
+        $string17 = "2FB94059-2D49-4EEA-AAF8-7E89E249644B" nocase ascii wide
         // Description: PoCs for Kernelmode rootkit techniques research.
         // Reference: https://github.com/daem0nc0re/VectorKernel/
-        $string18 = /3F0C3D9A\-CFB8\-4DB5\-8419\-1C28CBC8621D/ nocase ascii wide
+        $string18 = "3F0C3D9A-CFB8-4DB5-8419-1C28CBC8621D" nocase ascii wide
         // Description: PoCs for Kernelmode rootkit techniques research.
         // Reference: https://github.com/daem0nc0re/VectorKernel/
-        $string19 = /3FBBC3DD\-39D9\-4D8C\-AF73\-EDC3D2849DEB/ nocase ascii wide
+        $string19 = "3FBBC3DD-39D9-4D8C-AF73-EDC3D2849DEB" nocase ascii wide
         // Description: PoCs for Kernelmode rootkit techniques research.
         // Reference: https://github.com/daem0nc0re/VectorKernel/
-        $string20 = /51E46096\-4A36\-4C7D\-9773\-BC28DBDC4FC6/ nocase ascii wide
+        $string20 = "51E46096-4A36-4C7D-9773-BC28DBDC4FC6" nocase ascii wide
         // Description: PoCs for Kernelmode rootkit techniques research.
         // Reference: https://github.com/daem0nc0re/VectorKernel/
-        $string21 = /56F981FD\-634A\-4656\-85A7\-5636658E1F94/ nocase ascii wide
+        $string21 = "56F981FD-634A-4656-85A7-5636658E1F94" nocase ascii wide
         // Description: PoCs for Kernelmode rootkit techniques research.
         // Reference: https://github.com/daem0nc0re/VectorKernel/
-        $string22 = /628E42D5\-AE4F\-4CDD\-8D14\-DAB1A3697B62/ nocase ascii wide
+        $string22 = "628E42D5-AE4F-4CDD-8D14-DAB1A3697B62" nocase ascii wide
         // Description: PoCs for Kernelmode rootkit techniques research.
         // Reference: https://github.com/daem0nc0re/VectorKernel/
-        $string23 = /9E5A6F99\-0A26\-4959\-847D\-A4221CF4441B/ nocase ascii wide
+        $string23 = "9E5A6F99-0A26-4959-847D-A4221CF4441B" nocase ascii wide
         // Description: PoCs for Kernelmode rootkit techniques research.
         // Reference: https://github.com/daem0nc0re/VectorKernel/
-        $string24 = /9EFFFF7A\-DC03\-4D52\-BB8F\-F0140FAD26E7/ nocase ascii wide
+        $string24 = "9EFFFF7A-DC03-4D52-BB8F-F0140FAD26E7" nocase ascii wide
         // Description: PoCs for Kernelmode rootkit techniques research.
         // Reference: https://github.com/daem0nc0re/VectorKernel/
-        $string25 = /9FEA6712\-3880\-4E5F\-BD56\-8E58A4EBCCB4/ nocase ascii wide
+        $string25 = "9FEA6712-3880-4E5F-BD56-8E58A4EBCCB4" nocase ascii wide
         // Description: PoCs for Kernelmode rootkit techniques research.
         // Reference: https://github.com/daem0nc0re/VectorKernel/
-        $string26 = /A017568E\-B62E\-46B4\-9557\-15B278656365/ nocase ascii wide
+        $string26 = "A017568E-B62E-46B4-9557-15B278656365" nocase ascii wide
         // Description: PoCs for Kernelmode rootkit techniques research.
         // Reference: https://github.com/daem0nc0re/VectorKernel/
-        $string27 = /AD0067D9\-4AF6\-47C2\-B0C3\-D768A9624002/ nocase ascii wide
+        $string27 = "AD0067D9-4AF6-47C2-B0C3-D768A9624002" nocase ascii wide
         // Description: PoCs for Kernelmode rootkit techniques research.
         // Reference: https://github.com/daem0nc0re/VectorKernel/
-        $string28 = /B9635D08\-2BB2\-404B\-92B7\-6A4981CB34F3/ nocase ascii wide
+        $string28 = "B9635D08-2BB2-404B-92B7-6A4981CB34F3" nocase ascii wide
         // Description: PoCs for Kernelmode rootkit techniques research.
         // Reference: https://github.com/daem0nc0re/VectorKernel/
-        $string29 = /BDED2735\-F9E4\-4B2E\-9636\-4EEDD78FC720/ nocase ascii wide
+        $string29 = "BDED2735-F9E4-4B2E-9636-4EEDD78FC720" nocase ascii wide
         // Description: PoCs for Kernelmode rootkit techniques research.
         // Reference: https://github.com/daem0nc0re/VectorKernel/
         $string30 = /BlockNewProcClient\.exe\s\-/ nocase ascii wide
@@ -103,10 +103,10 @@ rule VectorKernel
         $string31 = /BlockNewProcDrv_x64\.sys/ nocase ascii wide
         // Description: PoCs for Kernelmode rootkit techniques research.
         // Reference: https://github.com/daem0nc0re/VectorKernel/
-        $string32 = /C7F1F871\-8045\-4414\-9DC3\-20F8AA42B4A1/ nocase ascii wide
+        $string32 = "C7F1F871-8045-4414-9DC3-20F8AA42B4A1" nocase ascii wide
         // Description: PoCs for Kernelmode rootkit techniques research.
         // Reference: https://github.com/daem0nc0re/VectorKernel/
-        $string33 = /C8C12FA3\-717F\-4D35\-B8B3\-2E7F7A124E7C/ nocase ascii wide
+        $string33 = "C8C12FA3-717F-4D35-B8B3-2E7F7A124E7C" nocase ascii wide
         // Description: PoCs for Kernelmode rootkit techniques research.
         // Reference: https://github.com/daem0nc0re/VectorKernel/
         $string34 = /CreateTokenClient\.exe\s/ nocase ascii wide
@@ -115,13 +115,13 @@ rule VectorKernel
         $string35 = /CreateTokenDrv_x64\.sys/ nocase ascii wide
         // Description: PoCs for Kernelmode rootkit techniques research.
         // Reference: https://github.com/daem0nc0re/VectorKernel/
-        $string36 = /D19BD978\-267A\-4BF0\-85CC\-851E280FF4C2/ nocase ascii wide
+        $string36 = "D19BD978-267A-4BF0-85CC-851E280FF4C2" nocase ascii wide
         // Description: PoCs for Kernelmode rootkit techniques research.
         // Reference: https://github.com/daem0nc0re/VectorKernel/
-        $string37 = /daem0nc0re\/VectorKernel/ nocase ascii wide
+        $string37 = "daem0nc0re/VectorKernel" nocase ascii wide
         // Description: PoCs for Kernelmode rootkit techniques research.
         // Reference: https://github.com/daem0nc0re/VectorKernel/
-        $string38 = /FC5A1C5A\-65B4\-452A\-AA4E\-E6DCF1FA04FB/ nocase ascii wide
+        $string38 = "FC5A1C5A-65B4-452A-AA4E-E6DCF1FA04FB" nocase ascii wide
         // Description: PoCs for Kernelmode rootkit techniques research.
         // Reference: https://github.com/daem0nc0re/VectorKernel/
         $string39 = /GetFullPrivsClient\.exe/ nocase ascii wide

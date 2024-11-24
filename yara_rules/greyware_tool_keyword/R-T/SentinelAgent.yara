@@ -31,7 +31,7 @@ rule SentinelAgent
         $string7 = /TakeDump\s\-SentinelHelper\s.{0,1000}\s\-ProcessId\s.{0,1000}\s\-User\s.{0,1000}\s\-Kernel\s/ nocase ascii wide
         // Description: dump a process with SentinelAgent.exe
         // Reference: https://gist.github.com/adamsvoboda/8e248c6b7fb812af5d04daba141c867e
-        $string8 = /Trying\sto\sdump\sSentinelAgent\sto\s/ nocase ascii wide
+        $string8 = "Trying to dump SentinelAgent to " nocase ascii wide
 
     condition:
         any of them

@@ -13,7 +13,7 @@ rule RouterScan
         $string1 = /HackTool\.Win32\.RouterScan/ nocase ascii wide
         // Description: a penetration testing tool to maliciously scan for and brute force routers - cameras and network-attached storage devices with web interfaces
         // Reference: https://github.com/mustafashykh/router-scan
-        $string2 = /HackTool\:Win32\/RouterScan/ nocase ascii wide
+        $string2 = "HackTool:Win32/RouterScan" nocase ascii wide
 
     condition:
         any of them

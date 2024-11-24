@@ -10,7 +10,7 @@ rule firesheep
     strings:
         // Description: Free program for HTTP session hijacking attacks.
         // Reference: https://codebutler.github.io/firesheep/
-        $string1 = /Firesheep\// nocase ascii wide
+        $string1 = "Firesheep/" nocase ascii wide
 
     condition:
         any of them

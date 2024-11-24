@@ -40,10 +40,10 @@ rule aeroadmin
         $string10 = /\\ProgramData\\Aeroadmin\\/ nocase ascii wide
         // Description: RMM software - full remote control / file transfer
         // Reference: https://ulm.aeroadmin.com/AeroAdmin.exe
-        $string11 = /2ef8a13faa44755fab1ac6fb3665cc78f7e7b451/ nocase ascii wide
+        $string11 = "2ef8a13faa44755fab1ac6fb3665cc78f7e7b451" nocase ascii wide
         // Description: RMM software - full remote control / file transfer
         // Reference: https://ulm.aeroadmin.com/AeroAdmin.exe
-        $string12 = /Aeroadmin\sLLC/ nocase ascii wide
+        $string12 = "Aeroadmin LLC" nocase ascii wide
         // Description: RMM software - full remote control / file transfer
         // Reference: https://ulm.aeroadmin.com/AeroAdmin.exe
         $string13 = /AeroAdmin\sPRO\s\-\sremote\sdesktop\.exe/ nocase ascii wide
@@ -67,7 +67,7 @@ rule aeroadmin
         $string19 = /AeroAdmin_2\.exe/ nocase ascii wide
         // Description: RMM software - full remote control / file transfer
         // Reference: https://ulm.aeroadmin.com/AeroAdmin.exe
-        $string20 = /AeroadminService/ nocase ascii wide
+        $string20 = "AeroadminService" nocase ascii wide
         // Description: RMM software - full remote control / file transfer
         // Reference: https://ulm.aeroadmin.com/AeroAdmin.exe
         $string21 = /auth.{0,100}\.aeroadmin\.com/ nocase ascii wide
@@ -79,7 +79,7 @@ rule aeroadmin
         $string23 = /DEFAULT\\Software\\AeroAdmin/ nocase ascii wide
         // Description: RMM software - full remote control / file transfer
         // Reference: https://ulm.aeroadmin.com/AeroAdmin.exe
-        $string24 = /EE54577067550559C4711C9E5E10435807F9DEEE9A5ADB4409CB60A6B0108700/ nocase ascii wide
+        $string24 = "EE54577067550559C4711C9E5E10435807F9DEEE9A5ADB4409CB60A6B0108700" nocase ascii wide
         // Description: RMM software - full remote control / file transfer
         // Reference: https://ulm.aeroadmin.com/AeroAdmin.exe
         $string25 = /ulm\.aeroadmin\.com\// nocase ascii wide

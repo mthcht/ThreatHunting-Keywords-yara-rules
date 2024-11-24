@@ -13,7 +13,7 @@ rule cracklord
         $string1 = /\/cracklord\.git/ nocase ascii wide
         // Description: Queue and resource system for cracking passwords
         // Reference: https://github.com/jmmcatee/cracklord
-        $string2 = /\/cracklord\/cmd\// nocase ascii wide
+        $string2 = "/cracklord/cmd/" nocase ascii wide
         // Description: Queue and resource system for cracking passwords
         // Reference: https://github.com/jmmcatee/cracklord
         $string3 = /cracklord\-master\./ nocase ascii wide
@@ -25,7 +25,7 @@ rule cracklord
         $string5 = /cracklord\-resourced.{0,1000}_amd64\.deb/ nocase ascii wide
         // Description: Queue and resource system for cracking passwords
         // Reference: https://github.com/jmmcatee/cracklord
-        $string6 = /jmmcatee\/cracklord/ nocase ascii wide
+        $string6 = "jmmcatee/cracklord" nocase ascii wide
 
     condition:
         any of them

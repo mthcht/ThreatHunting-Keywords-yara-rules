@@ -13,7 +13,7 @@ rule MaccaroniC2
         $string1 = /\/asyncssh_server\.py/ nocase ascii wide
         // Description: A proof-of-concept Command & Control framework that utilizes the powerful AsyncSSH Python library which provides an asynchronous client and server implementation of the SSHv2 protocol and use PyNgrok wrapper for ngrok integration.
         // Reference: https://github.com/CalfCrusher/MaccaroniC2
-        $string2 = /\/MaccaroniC2/ nocase ascii wide
+        $string2 = "/MaccaroniC2" nocase ascii wide
         // Description: A proof-of-concept Command & Control framework that utilizes the powerful AsyncSSH Python library which provides an asynchronous client and server implementation of the SSHv2 protocol and use PyNgrok wrapper for ngrok integration.
         // Reference: https://github.com/CalfCrusher/MaccaroniC2
         $string3 = /\\MaccaroniC2/ nocase ascii wide
@@ -31,7 +31,7 @@ rule MaccaroniC2
         $string7 = /asyncssh_commander\.py/ nocase ascii wide
         // Description: A proof-of-concept Command & Control framework that utilizes the powerful AsyncSSH Python library which provides an asynchronous client and server implementation of the SSHv2 protocol and use PyNgrok wrapper for ngrok integration.
         // Reference: https://github.com/CalfCrusher/MaccaroniC2
-        $string8 = /localhost\:8022/ nocase ascii wide
+        $string8 = "localhost:8022" nocase ascii wide
         // Description: A proof-of-concept Command & Control framework that utilizes the powerful AsyncSSH Python library which provides an asynchronous client and server implementation of the SSHv2 protocol and use PyNgrok wrapper for ngrok integration.
         // Reference: https://github.com/CalfCrusher/MaccaroniC2
         $string9 = /MaccaroniC2\.git/ nocase ascii wide

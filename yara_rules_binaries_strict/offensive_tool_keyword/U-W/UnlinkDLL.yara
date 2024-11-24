@@ -13,7 +13,7 @@ rule UnlinkDLL
         $string1 = /\/UnlinkDLL\.git/ nocase ascii wide
         // Description: DLL Unlinking from InLoadOrderModuleList - InMemoryOrderModuleList - InInitializationOrderModuleList and LdrpHashTable
         // Reference: https://github.com/frkngksl/UnlinkDLL
-        $string2 = /frkngksl\/UnlinkDLL/ nocase ascii wide
+        $string2 = "frkngksl/UnlinkDLL" nocase ascii wide
         // Description: DLL Unlinking from InLoadOrderModuleList - InMemoryOrderModuleList - InInitializationOrderModuleList and LdrpHashTable
         // Reference: https://github.com/frkngksl/UnlinkDLL
         $string3 = /listdlls64\.exe/ nocase ascii wide
@@ -31,7 +31,7 @@ rule UnlinkDLL
         $string7 = /UnlinkDLL\\Structs\.nim/ nocase ascii wide
         // Description: DLL Unlinking from InLoadOrderModuleList - InMemoryOrderModuleList - InInitializationOrderModuleList and LdrpHashTable
         // Reference: https://github.com/frkngksl/UnlinkDLL
-        $string8 = /UnlinkDLL\-main/ nocase ascii wide
+        $string8 = "UnlinkDLL-main" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

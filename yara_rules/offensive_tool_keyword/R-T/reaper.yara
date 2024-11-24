@@ -28,22 +28,22 @@ rule reaper
         $string6 = /\\Temp\\Reaper\.exe/ nocase ascii wide
         // Description: Reaper is a proof-of-concept designed to exploit BYOVD (Bring Your Own Vulnerable Driver) driver vulnerability. This malicious technique involves inserting a legitimate - vulnerable driver into a target system - which allows attackers to exploit the driver to perform malicious actions.
         // Reference: https://github.com/MrEmpy/Reaper
-        $string7 = /30f7ba049eab00673ae6b247199ec4f6af533d9ba46482159668fd23f484bdc6/ nocase ascii wide
+        $string7 = "30f7ba049eab00673ae6b247199ec4f6af533d9ba46482159668fd23f484bdc6" nocase ascii wide
         // Description: Reaper is a proof-of-concept designed to exploit BYOVD (Bring Your Own Vulnerable Driver) driver vulnerability. This malicious technique involves inserting a legitimate - vulnerable driver into a target system - which allows attackers to exploit the driver to perform malicious actions.
         // Reference: https://github.com/MrEmpy/Reaper
-        $string8 = /526f652d4d9e20a19374817eac75b914b75f3bfaecc16b65f979e5758ea62476/ nocase ascii wide
+        $string8 = "526f652d4d9e20a19374817eac75b914b75f3bfaecc16b65f979e5758ea62476" nocase ascii wide
         // Description: Reaper is a proof-of-concept designed to exploit BYOVD (Bring Your Own Vulnerable Driver) driver vulnerability. This malicious technique involves inserting a legitimate - vulnerable driver into a target system - which allows attackers to exploit the driver to perform malicious actions.
         // Reference: https://github.com/MrEmpy/Reaper
-        $string9 = /c725919e6357126d512c638f993cf572112f323da359645e4088f789eb4c7b8c/ nocase ascii wide
+        $string9 = "c725919e6357126d512c638f993cf572112f323da359645e4088f789eb4c7b8c" nocase ascii wide
         // Description: Reaper is a proof-of-concept designed to exploit BYOVD (Bring Your Own Vulnerable Driver) driver vulnerability. This malicious technique involves inserting a legitimate - vulnerable driver into a target system - which allows attackers to exploit the driver to perform malicious actions.
         // Reference: https://github.com/MrEmpy/Reaper
-        $string10 = /CB561720\-0175\-49D9\-A114\-FE3489C53661/ nocase ascii wide
+        $string10 = "CB561720-0175-49D9-A114-FE3489C53661" nocase ascii wide
         // Description: Reaper is a proof-of-concept designed to exploit BYOVD (Bring Your Own Vulnerable Driver) driver vulnerability. This malicious technique involves inserting a legitimate - vulnerable driver into a target system - which allows attackers to exploit the driver to perform malicious actions.
         // Reference: https://github.com/MrEmpy/Reaper
         $string11 = /github\.com\/.{0,1000}Reaper\.exe/ nocase ascii wide
         // Description: Reaper is a proof-of-concept designed to exploit BYOVD (Bring Your Own Vulnerable Driver) driver vulnerability. This malicious technique involves inserting a legitimate - vulnerable driver into a target system - which allows attackers to exploit the driver to perform malicious actions.
         // Reference: https://github.com/MrEmpy/Reaper
-        $string12 = /MrEmpy\/Reaper/ nocase ascii wide
+        $string12 = "MrEmpy/Reaper" nocase ascii wide
         // Description: Reaper is a proof-of-concept designed to exploit BYOVD (Bring Your Own Vulnerable Driver) driver vulnerability. This malicious technique involves inserting a legitimate - vulnerable driver into a target system - which allows attackers to exploit the driver to perform malicious actions.
         // Reference: https://github.com/MrEmpy/Reaper
         $string13 = /Reaper\.exe\skp\s/ nocase ascii wide

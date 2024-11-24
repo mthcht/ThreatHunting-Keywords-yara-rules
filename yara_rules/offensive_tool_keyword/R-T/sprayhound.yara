@@ -19,7 +19,7 @@ rule sprayhound
         $string3 = /\/sprayhound\/.{0,1000}\.py/ nocase ascii wide
         // Description: Password spraying tool and Bloodhound integration
         // Reference: https://github.com/Hackndo/sprayhound
-        $string4 = /Hackndo\/sprayhound/ nocase ascii wide
+        $string4 = "Hackndo/sprayhound" nocase ascii wide
         // Description: Password spraying tool and Bloodhound integration
         // Reference: https://github.com/Hackndo/sprayhound
         $string5 = /neo4jconnection\.py/ nocase ascii wide
@@ -28,7 +28,7 @@ rule sprayhound
         $string6 = /\-nh\s127\.0\.0\.1\s\-nP\s7687\s\-nu\sneo4j\s\-np\s/ nocase ascii wide
         // Description: Password spraying tool and Bloodhound integration
         // Reference: https://github.com/Hackndo/sprayhound
-        $string7 = /sprayhound\s\-/ nocase ascii wide
+        $string7 = "sprayhound -" nocase ascii wide
         // Description: Password spraying tool and Bloodhound integration
         // Reference: https://github.com/Hackndo/sprayhound
         $string8 = /sprayhound\-master\.zip/ nocase ascii wide

@@ -16,19 +16,19 @@ rule DCOMPotato
         $string2 = /DCOMPotato\./ nocase ascii wide
         // Description: Service DCOM Object and SeImpersonatePrivilege abuse.
         // Reference: https://github.com/zcgonvh/DCOMPotato
-        $string3 = /DCOMPotato\-master/ nocase ascii wide
+        $string3 = "DCOMPotato-master" nocase ascii wide
         // Description: Service DCOM Object and SeImpersonatePrivilege abuse.
         // Reference: https://github.com/zcgonvh/DCOMPotato
         $string4 = /McpManagementPotato\./ nocase ascii wide
         // Description: Service DCOM Object and SeImpersonatePrivilege abuse.
         // Reference: https://github.com/zcgonvh/DCOMPotato
-        $string5 = /PrinterNotifyPotato\s/ nocase ascii wide
+        $string5 = "PrinterNotifyPotato " nocase ascii wide
         // Description: Service DCOM Object and SeImpersonatePrivilege abuse.
         // Reference: https://github.com/zcgonvh/DCOMPotato
         $string6 = /PrinterNotifyPotato\./ nocase ascii wide
         // Description: Service DCOM Object and SeImpersonatePrivilege abuse.
         // Reference: https://github.com/zcgonvh/DCOMPotato
-        $string7 = /zcgonvh\/DCOMPotato/ nocase ascii wide
+        $string7 = "zcgonvh/DCOMPotato" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

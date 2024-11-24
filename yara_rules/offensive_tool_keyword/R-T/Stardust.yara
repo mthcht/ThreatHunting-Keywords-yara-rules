@@ -10,7 +10,7 @@ rule Stardust
     strings:
         // Description: An modern 64-bit position independent implant template
         // Reference: https://github.com/Cracked5pider/Stardust
-        $string1 = /\"Stardust\sMessageBox\"/ nocase ascii wide
+        $string1 = "\"Stardust MessageBox\"" nocase ascii wide
         // Description: An modern 64-bit position independent implant template
         // Reference: https://github.com/Cracked5pider/Stardust
         $string2 = /\/stardust\.x64\.exe/ nocase ascii wide
@@ -52,7 +52,7 @@ rule Stardust
         $string14 = /Stardust\.Win32\.RtlAllocateHeap\(/ nocase ascii wide
         // Description: An modern 64-bit position independent implant template
         // Reference: https://github.com/Cracked5pider/Stardust
-        $string15 = /STARDUST_MACROS_H/ nocase ascii wide
+        $string15 = "STARDUST_MACROS_H" nocase ascii wide
 
     condition:
         any of them

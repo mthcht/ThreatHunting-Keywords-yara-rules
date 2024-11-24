@@ -16,7 +16,7 @@ rule ICMP_TransferTools
         $string2 = /ICMP\-SendFile\.py/ nocase ascii wide
         // Description: Transfer files to and from a Windows host via ICMP in restricted network environments.
         // Reference: https://github.com/icyguider/ICMP-TransferTools
-        $string3 = /Invoke\-IcmpDownload/ nocase ascii wide
+        $string3 = "Invoke-IcmpDownload" nocase ascii wide
         // Description: Transfer files to and from a Windows host via ICMP in restricted network environments.
         // Reference: https://github.com/icyguider/ICMP-TransferTools
         $string4 = /Invoke\-IcmpDownload\.ps1/ nocase ascii wide

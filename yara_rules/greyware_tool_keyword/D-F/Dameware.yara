@@ -13,19 +13,19 @@ rule Dameware
         $string1 = /\s\/monitor\s\/from_service\s\/cpu_memory_refresh\s.{0,1000}\s\/disk_space_refresh\s.{0,1000}\s\/proc_list_refresh\s.{0,1000}\s\/semkey\s/ nocase ascii wide
         // Description: Solarwind Dameware Remote Control utilities
         // Reference: https://www.solarwinds.com/fr/remote-support-software
-        $string2 = /\s\/r\s\/proxy\s\s\/proxyport\s\s\/proxyusername\s\s\/proxypasswd\s/ nocase ascii wide
+        $string2 = " /r /proxy  /proxyport  /proxyusername  /proxypasswd " nocase ascii wide
         // Description: Solarwind Dameware Remote Control utilities
         // Reference: https://www.solarwinds.com/fr/remote-support-software
-        $string3 = /\s\/register\s\s\/proxy\s\s\/proxyport\s\s\/proxyusername\s\s\/proxypasswd/ nocase ascii wide
+        $string3 = " /register  /proxy  /proxyport  /proxyusername  /proxypasswd" nocase ascii wide
         // Description: Solarwind Dameware Remote Control utilities
         // Reference: https://www.solarwinds.com/fr/remote-support-software
-        $string4 = /\s\-a\stcrmtshellagentmodule_/ nocase ascii wide
+        $string4 = " -a tcrmtshellagentmodule_" nocase ascii wide
         // Description: Solarwind Dameware Remote Control utilities
         // Reference: https://www.solarwinds.com/fr/remote-support-software
-        $string5 = /\sDameware\sMini\sRemote\sControl\sx64\s\-\-\sInstallation\scompleted\ssuccessfully/ nocase ascii wide
+        $string5 = " Dameware Mini Remote Control x64 -- Installation completed successfully" nocase ascii wide
         // Description: Solarwind Dameware Remote Control utilities
         // Reference: https://www.solarwinds.com/fr/remote-support-software
-        $string6 = /\s\-log\-level\strace\s\-dre\s\-log\-path\s/ nocase ascii wide
+        $string6 = " -log-level trace -dre -log-path " nocase ascii wide
         // Description: Solarwind Dameware Remote Control utilities
         // Reference: https://www.solarwinds.com/fr/remote-support-software
         $string7 = /\stkc_agent_dre\.deb/ nocase ascii wide
@@ -736,13 +736,13 @@ rule Dameware
         $string242 = /\\wow6432node\\multiplicar\snegocios\\bace_dameware/ nocase ascii wide
         // Description: Solarwind Dameware Remote Control utilities
         // Reference: https://www.solarwinds.com/fr/remote-support-software
-        $string243 = /\<data\>dameware\sremote\severywhere\<\/data\>/ nocase ascii wide
+        $string243 = "<data>dameware remote everywhere</data>" nocase ascii wide
         // Description: Solarwind Dameware Remote Control utilities
         // Reference: https://www.solarwinds.com/fr/remote-support-software
-        $string244 = /\<data\>n\-able\stake\scontrol\<\/data\>/ nocase ascii wide
+        $string244 = "<data>n-able take control</data>" nocase ascii wide
         // Description: Solarwind Dameware Remote Control utilities
         // Reference: https://www.solarwinds.com/fr/remote-support-software
-        $string245 = /\<provider\sname\=\"dameware\sremote\severywhere\s\-\s\[dameware\]\"\s\/\>/ nocase ascii wide
+        $string245 = /\<provider\sname\=\\"dameware\sremote\severywhere\s\-\s\[dameware\]\\"\s\/\>/ nocase ascii wide
         // Description: Solarwind Dameware Remote Control utilities
         // Reference: https://www.solarwinds.com/fr/remote-support-software
         $string246 = /admin\..{0,1000}\.swi\-dre\.com/ nocase ascii wide
@@ -757,7 +757,7 @@ rule Dameware
         $string249 = /chat\.us\.n\-able\.com/ nocase ascii wide
         // Description: Solarwind Dameware Remote Control utilities
         // Reference: https://www.solarwinds.com/fr/remote-support-software
-        $string250 = /\'company\'\>n\-able\stake\scontrol\<\/data\>/ nocase ascii wide
+        $string250 = "'company'>n-able take control</data>" nocase ascii wide
         // Description: Solarwind Dameware Remote Control utilities
         // Reference: https://www.solarwinds.com/fr/remote-support-software
         $string251 = /comserver\.corporate\.beanywhere\.com/ nocase ascii wide
@@ -784,7 +784,7 @@ rule Dameware
         $string258 = /damewareremoteeverywhereconsole\.exe/ nocase ascii wide
         // Description: Solarwind Dameware Mini Remote Control tool 
         // Reference: https://www.solarwinds.com/dameware-mini-remote-control
-        $string259 = /\'Description\'\>Dameware\sproducts\<\/Data\>/ nocase ascii wide
+        $string259 = "'Description'>Dameware products</Data>" nocase ascii wide
         // Description: Solarwind Dameware Remote Control utilities
         // Reference: https://www.solarwinds.com/fr/remote-support-software
         $string260 = /download\.global\.mspa\.n\-able\.com\// nocase ascii wide
@@ -805,10 +805,10 @@ rule Dameware
         $string265 = /notifications\..{0,1000}\.swi\-rc\.com/ nocase ascii wide
         // Description: Solarwind Dameware Remote Control utilities
         // Reference: https://www.solarwinds.com/fr/remote-support-software
-        $string266 = /product\:\sdamewareagent\s\-\-/ nocase ascii wide
+        $string266 = "product: damewareagent --" nocase ascii wide
         // Description: Solarwind Dameware Remote Control utilities
         // Reference: https://www.solarwinds.com/fr/remote-support-software
-        $string267 = /provider\sname\=\"n\-able\stake\scontrol\s\-\s\[dameware\]\"\s\/\>/ nocase ascii wide
+        $string267 = /provider\sname\=\\"n\-able\stake\scontrol\s\-\s\[dameware\]\\"\s\/\>/ nocase ascii wide
         // Description: Solarwind Dameware Mini Remote Control tool 
         // Reference: https://www.solarwinds.com/fr/remote-support-software
         $string268 = /\-\-single\-argument\shttps\:\/\/www\.solarwinds\.com\/.{0,1000}\/remote\-support\-software/ nocase ascii wide

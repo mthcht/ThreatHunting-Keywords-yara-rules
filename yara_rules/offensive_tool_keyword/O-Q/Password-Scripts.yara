@@ -10,7 +10,7 @@ rule Password_Scripts
     strings:
         // Description: Password Scripts xploitation 
         // Reference: https://github.com/laconicwolf/Password-Scripts
-        $string1 = /Password\-Scripts/ nocase ascii wide
+        $string1 = "Password-Scripts" nocase ascii wide
 
     condition:
         any of them

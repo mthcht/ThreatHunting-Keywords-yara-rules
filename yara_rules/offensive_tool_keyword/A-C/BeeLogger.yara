@@ -10,7 +10,7 @@ rule BeeLogger
     strings:
         // Description: Keylogger generator. fake office and acrobat file and malicious executables generator
         // Reference: https://github.com/4w4k3/BeeLogger
-        $string1 = /Beelogger/ nocase ascii wide
+        $string1 = "Beelogger" nocase ascii wide
 
     condition:
         any of them

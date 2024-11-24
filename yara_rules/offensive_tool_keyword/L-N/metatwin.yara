@@ -25,19 +25,19 @@ rule metatwin
         $string5 = /\\sigthief\.exe/ nocase ascii wide
         // Description: The project is designed as a file resource cloner. Metadata including digital signature is extracted from one file and injected into another
         // Reference: https://github.com/threatexpress/metatwin
-        $string6 = /Invoke\-MetaTwin/ nocase ascii wide
+        $string6 = "Invoke-MetaTwin" nocase ascii wide
         // Description: The project is designed as a file resource cloner. Metadata including digital signature is extracted from one file and injected into another
         // Reference: https://github.com/threatexpress/metatwin
         $string7 = /metatwin\.ps1/ nocase ascii wide
         // Description: The project is designed as a file resource cloner. Metadata including digital signature is extracted from one file and injected into another
         // Reference: https://github.com/threatexpress/metatwin
-        $string8 = /metatwin\-master/ nocase ascii wide
+        $string8 = "metatwin-master" nocase ascii wide
         // Description: The project is designed as a file resource cloner. Metadata including digital signature is extracted from one file and injected into another
         // Reference: https://github.com/threatexpress/metatwin
         $string9 = /sigthief\.exe\.manifest/ nocase ascii wide
         // Description: The project is designed as a file resource cloner. Metadata including digital signature is extracted from one file and injected into another
         // Reference: https://github.com/threatexpress/metatwin
-        $string10 = /SigThief\-master/ nocase ascii wide
+        $string10 = "SigThief-master" nocase ascii wide
 
     condition:
         any of them

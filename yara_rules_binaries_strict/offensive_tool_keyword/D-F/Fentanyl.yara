@@ -25,7 +25,7 @@ rule Fentanyl
         $string5 = /\#\sInject\:\sInject\spayload\sinto\sDiscord\?/ nocase ascii wide
         // Description: Stealer Malware - Steal Discord Tokens (+ Much More Info) - Steal Passwords/Cookies/History/Credit Cards/Phone Numbers and Addresses from all Browsers (Profile Support) - Steal PC Info - Steal Video Game Accounts (Adding more games + wallets and VPN's) - Low Detections - Anti VM - Sort of Fast - Startup - IP Logger
         // Reference: https://github.com/dekrypted/Fentanyl
-        $string6 = /\#\sInjection\sURL\:\sRaw\sURL\sto\sinjection\spayload/ nocase ascii wide
+        $string6 = "# Injection URL: Raw URL to injection payload" nocase ascii wide
         // Description: Stealer Malware - Steal Discord Tokens (+ Much More Info) - Steal Passwords/Cookies/History/Credit Cards/Phone Numbers and Addresses from all Browsers (Profile Support) - Steal PC Info - Steal Video Game Accounts (Adding more games + wallets and VPN's) - Low Detections - Anti VM - Sort of Fast - Startup - IP Logger
         // Reference: https://github.com/dekrypted/Fentanyl
         $string7 = /\/cursorinit\.vbs/ nocase ascii wide
@@ -43,13 +43,13 @@ rule Fentanyl
         $string11 = /\{os\.getlogin\(\)\}\s\|\sFentanyl/ nocase ascii wide
         // Description: Stealer Malware - Steal Discord Tokens (+ Much More Info) - Steal Passwords/Cookies/History/Credit Cards/Phone Numbers and Addresses from all Browsers (Profile Support) - Steal PC Info - Steal Video Game Accounts (Adding more games + wallets and VPN's) - Low Detections - Anti VM - Sort of Fast - Startup - IP Logger
         // Reference: https://github.com/dekrypted/Fentanyl
-        $string12 = /\>CursorSvc\</ nocase ascii wide
+        $string12 = ">CursorSvc<" nocase ascii wide
         // Description: Stealer Malware - Steal Discord Tokens (+ Much More Info) - Steal Passwords/Cookies/History/Credit Cards/Phone Numbers and Addresses from all Browsers (Profile Support) - Steal PC Info - Steal Video Game Accounts (Adding more games + wallets and VPN's) - Low Detections - Anti VM - Sort of Fast - Startup - IP Logger
         // Reference: https://github.com/dekrypted/Fentanyl
-        $string13 = /2fa97965c5491fd73b586656a2a3d376013fa20918cc501f598439b85e49e244/ nocase ascii wide
+        $string13 = "2fa97965c5491fd73b586656a2a3d376013fa20918cc501f598439b85e49e244" nocase ascii wide
         // Description: Stealer Malware - Steal Discord Tokens (+ Much More Info) - Steal Passwords/Cookies/History/Credit Cards/Phone Numbers and Addresses from all Browsers (Profile Support) - Steal PC Info - Steal Video Game Accounts (Adding more games + wallets and VPN's) - Low Detections - Anti VM - Sort of Fast - Startup - IP Logger
         // Reference: https://github.com/dekrypted/Fentanyl
-        $string14 = /70376ae9437efcd92034825528cc12f1c0e03c1a4f965aabb3377d2a19e1d4f7/ nocase ascii wide
+        $string14 = "70376ae9437efcd92034825528cc12f1c0e03c1a4f965aabb3377d2a19e1d4f7" nocase ascii wide
         // Description: Stealer Malware - Steal Discord Tokens (+ Much More Info) - Steal Passwords/Cookies/History/Credit Cards/Phone Numbers and Addresses from all Browsers (Profile Support) - Steal PC Info - Steal Video Game Accounts (Adding more games + wallets and VPN's) - Low Detections - Anti VM - Sort of Fast - Startup - IP Logger
         // Reference: https://github.com/dekrypted/Fentanyl
         $string15 = /bypassBetterDiscord\(/ nocase ascii wide
@@ -58,10 +58,10 @@ rule Fentanyl
         $string16 = /Cursors\\cursorinit\.vbs/ nocase ascii wide
         // Description: Stealer Malware - Steal Discord Tokens (+ Much More Info) - Steal Passwords/Cookies/History/Credit Cards/Phone Numbers and Addresses from all Browsers (Profile Support) - Steal PC Info - Steal Video Game Accounts (Adding more games + wallets and VPN's) - Low Detections - Anti VM - Sort of Fast - Startup - IP Logger
         // Reference: https://github.com/dekrypted/Fentanyl
-        $string17 = /dekrypted\/Fentanyl/ nocase ascii wide
+        $string17 = "dekrypted/Fentanyl" nocase ascii wide
         // Description: Stealer Malware - Steal Discord Tokens (+ Much More Info) - Steal Passwords/Cookies/History/Credit Cards/Phone Numbers and Addresses from all Browsers (Profile Support) - Steal PC Info - Steal Video Game Accounts (Adding more games + wallets and VPN's) - Low Detections - Anti VM - Sort of Fast - Startup - IP Logger
         // Reference: https://github.com/dekrypted/Fentanyl
-        $string18 = /Fentanyl\sstrikes\sagain\!/ nocase ascii wide
+        $string18 = "Fentanyl strikes again!" nocase ascii wide
         // Description: Stealer Malware - Steal Discord Tokens (+ Much More Info) - Steal Passwords/Cookies/History/Credit Cards/Phone Numbers and Addresses from all Browsers (Profile Support) - Steal PC Info - Steal Video Game Accounts (Adding more games + wallets and VPN's) - Low Detections - Anti VM - Sort of Fast - Startup - IP Logger
         // Reference: https://github.com/dekrypted/Fentanyl
         $string19 = /Fentanyl\/fenty\.py/ nocase ascii wide
@@ -91,7 +91,7 @@ rule Fentanyl
         $string27 = /if\sos\.getlogin\(\)\sin\s\[\\"WDAGUtilityAccount\\"\,\\"Abby\\"\,\\"Peter\sWilson\\"\,\\"hmarc\\"\,\\"patex\\"\,\\"JOHN\-PC\\"\,\\"RDhJ0CNFevzX\\"\,\\"kEecfMwgj\\"\,\\"Frank\\"\,\\"8Nl0ColNQ5bq\\"/ nocase ascii wide
         // Description: Stealer Malware - Steal Discord Tokens (+ Much More Info) - Steal Passwords/Cookies/History/Credit Cards/Phone Numbers and Addresses from all Browsers (Profile Support) - Steal PC Info - Steal Video Game Accounts (Adding more games + wallets and VPN's) - Low Detections - Anti VM - Sort of Fast - Startup - IP Logger
         // Reference: https://github.com/dekrypted/Fentanyl
-        $string28 = /reagentc\s\/disable\s\>nul/ nocase ascii wide
+        $string28 = "reagentc /disable >nul" nocase ascii wide
         // Description: Stealer Malware - Steal Discord Tokens (+ Much More Info) - Steal Passwords/Cookies/History/Credit Cards/Phone Numbers and Addresses from all Browsers (Profile Support) - Steal PC Info - Steal Video Game Accounts (Adding more games + wallets and VPN's) - Low Detections - Anti VM - Sort of Fast - Startup - IP Logger
         // Reference: https://github.com/dekrypted/Fentanyl
         $string29 = /reg\sadd\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\"\s\/v\s\\"SettingsPageVisibility\\"\s\/t\sREG_SZ\s\/d\s\\"hide\:recovery\;windowsdefender\\"\s\/f\s\>nul/ nocase ascii wide
@@ -103,16 +103,16 @@ rule Fentanyl
         $string31 = /REG\sADD\sHKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\s\/v\s\\"CursorInit\\"\s\/t\sREG_SZ\s\/d\s/ nocase ascii wide
         // Description: Stealer Malware - Steal Discord Tokens (+ Much More Info) - Steal Passwords/Cookies/History/Credit Cards/Phone Numbers and Addresses from all Browsers (Profile Support) - Steal PC Info - Steal Video Game Accounts (Adding more games + wallets and VPN's) - Low Detections - Anti VM - Sort of Fast - Startup - IP Logger
         // Reference: https://github.com/dekrypted/Fentanyl
-        $string32 = /schtasks\s\/create\s\/tn\s\\"CursorSvc\\"/ nocase ascii wide
+        $string32 = "schtasks /create /tn \"CursorSvc\"" nocase ascii wide
         // Description: Stealer Malware - Steal Discord Tokens (+ Much More Info) - Steal Passwords/Cookies/History/Credit Cards/Phone Numbers and Addresses from all Browsers (Profile Support) - Steal PC Info - Steal Video Game Accounts (Adding more games + wallets and VPN's) - Low Detections - Anti VM - Sort of Fast - Startup - IP Logger
         // Reference: https://github.com/dekrypted/Fentanyl
-        $string33 = /SELECT\sname_on_card\,\sexpiration_month\,\sexpiration_year\,\scard_number_encrypted\sFROM\scredit_cards/ nocase ascii wide
+        $string33 = "SELECT name_on_card, expiration_month, expiration_year, card_number_encrypted FROM credit_cards" nocase ascii wide
         // Description: Stealer Malware - Steal Discord Tokens (+ Much More Info) - Steal Passwords/Cookies/History/Credit Cards/Phone Numbers and Addresses from all Browsers (Profile Support) - Steal PC Info - Steal Video Game Accounts (Adding more games + wallets and VPN's) - Low Detections - Anti VM - Sort of Fast - Startup - IP Logger
         // Reference: https://github.com/dekrypted/Fentanyl
         $string34 = /\-\-Sharing\-this\-will\-allow\-someone\-to\-log\-in\-as\-you\-and\-to\-steal\-your\-ROBUX\-and\-items.{0,100}decrypted_cookie/ nocase ascii wide
         // Description: Stealer Malware - Steal Discord Tokens (+ Much More Info) - Steal Passwords/Cookies/History/Credit Cards/Phone Numbers and Addresses from all Browsers (Profile Support) - Steal PC Info - Steal Video Game Accounts (Adding more games + wallets and VPN's) - Low Detections - Anti VM - Sort of Fast - Startup - IP Logger
         // Reference: https://github.com/dekrypted/Fentanyl
-        $string35 = /vssadmin\sdelete\sshadows\s\/all\s\/quiet\s\>nul/ nocase ascii wide
+        $string35 = "vssadmin delete shadows /all /quiet >nul" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

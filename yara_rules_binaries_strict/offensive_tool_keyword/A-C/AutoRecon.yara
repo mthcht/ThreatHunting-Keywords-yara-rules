@@ -241,7 +241,7 @@ rule AutoRecon
         $string77 = /\\smbmap\.py/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string78 = /_smtp_user\-enum_hydra_/ nocase ascii wide
+        $string78 = "_smtp_user-enum_hydra_" nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
         $string79 = /_snmp_snmpwalk\.txt/ nocase ascii wide
@@ -268,10 +268,10 @@ rule AutoRecon
         $string86 = /_snmp_snmpwalk_user_accounts\.txt/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string87 = /apt\sinstall\sseclists/ nocase ascii wide
+        $string87 = "apt install seclists" nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string88 = /autorecon\s\-t\s/ nocase ascii wide
+        $string88 = "autorecon -t " nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
         $string89 = /AutoRecon\\autorecon\.py/ nocase ascii wide
@@ -286,10 +286,10 @@ rule AutoRecon
         $string92 = /import.{0,100}autorecon\.plugins/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string93 = /pip\suninstall\sautorecon/ nocase ascii wide
+        $string93 = "pip uninstall autorecon" nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string94 = /pipx\supgrade\sautorecon/ nocase ascii wide
+        $string94 = "pipx upgrade autorecon" nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
         $string95 = /smbmap\-execute\-command\.txt/ nocase ascii wide
@@ -310,7 +310,7 @@ rule AutoRecon
         $string100 = /subdomains\-top1million\-110000\.txt/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string101 = /Tib3rius\/AutoRecon/ nocase ascii wide
+        $string101 = "Tib3rius/AutoRecon" nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
         $string102 = /top\-usernames\-shortlist\.txt/ nocase ascii wide

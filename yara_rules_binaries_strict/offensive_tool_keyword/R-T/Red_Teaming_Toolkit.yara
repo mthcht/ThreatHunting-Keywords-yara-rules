@@ -10,7 +10,7 @@ rule Red_Teaming_Toolkit
     strings:
         // Description: A collection of open source and commercial tools that aid in red team operations. This repository will help you during red team engagement. If you want to contribute to this list send me a pull request
         // Reference: https://github.com/infosecn1nja/Red-Teaming-Toolkit
-        $string1 = /Red\-Teaming\-Toolkit/ nocase ascii wide
+        $string1 = "Red-Teaming-Toolkit" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

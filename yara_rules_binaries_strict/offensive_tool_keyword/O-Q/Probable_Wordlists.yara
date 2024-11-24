@@ -10,13 +10,13 @@ rule Probable_Wordlists
     strings:
         // Description: Password wordlists
         // Reference: https://github.com/berzerk0/Probable-Wordlists
-        $string1 = /Probable\-Wordlists/ nocase ascii wide
+        $string1 = "Probable-Wordlists" nocase ascii wide
         // Description: real password lists
         // Reference: https://github.com/berzerk0/Probable-Wordlists
-        $string2 = /Probable\-Wordlists/ nocase ascii wide
+        $string2 = "Probable-Wordlists" nocase ascii wide
         // Description: Password wordlists
         // Reference: https://github.com/berzerk0/Probable-Wordlists
-        $string3 = /Real\-Passwords/ nocase ascii wide
+        $string3 = "Real-Passwords" nocase ascii wide
         // Description: Password wordlists
         // Reference: https://github.com/berzerk0/Probable-Wordlists
         $string4 = /Top109Million\-probable\-v2\.txt/ nocase ascii wide

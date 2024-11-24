@@ -10,19 +10,19 @@ rule CloakNDaggerC2
     strings:
         // Description: A C2 framework designed around the use of public/private RSA key pairs to sign and authenticate commands being executed. This prevents MiTM interception of calls and ensures opsec during delicate operations.
         // Reference: https://github.com/matt-culbert/CloakNDaggerC2
-        $string1 = /\/CloakNDaggerC2/ nocase ascii wide
+        $string1 = "/CloakNDaggerC2" nocase ascii wide
         // Description: A C2 framework designed around the use of public/private RSA key pairs to sign and authenticate commands being executed. This prevents MiTM interception of calls and ensures opsec during delicate operations.
         // Reference: https://github.com/matt-culbert/CloakNDaggerC2
         $string2 = /\\CloakNDaggerC2/ nocase ascii wide
         // Description: A C2 framework designed around the use of public/private RSA key pairs to sign and authenticate commands being executed. This prevents MiTM interception of calls and ensures opsec during delicate operations.
         // Reference: https://github.com/matt-culbert/CloakNDaggerC2
-        $string3 = /CloakNDaggerC2\-main/ nocase ascii wide
+        $string3 = "CloakNDaggerC2-main" nocase ascii wide
         // Description: A C2 framework designed around the use of public/private RSA key pairs to sign and authenticate commands being executed. This prevents MiTM interception of calls and ensures opsec during delicate operations.
         // Reference: https://github.com/matt-culbert/CloakNDaggerC2
         $string4 = /http\:\/\/192\.168\.1\.179\:8000\/session/ nocase ascii wide
         // Description: A C2 framework designed around the use of public/private RSA key pairs to sign and authenticate commands being executed. This prevents MiTM interception of calls and ensures opsec during delicate operations.
         // Reference: https://github.com/matt-culbert/CloakNDaggerC2
-        $string5 = /nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4pz/ nocase ascii wide
+        $string5 = "nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4pz" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

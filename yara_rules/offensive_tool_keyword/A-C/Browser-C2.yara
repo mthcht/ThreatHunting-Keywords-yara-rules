@@ -10,7 +10,7 @@ rule Browser_C2
     strings:
         // Description: Post Exploitation agent which uses a browser to do C2 operations.
         // Reference: https://github.com/0x09AL/Browser-C2
-        $string1 = /\/Browser\-C2/ nocase ascii wide
+        $string1 = "/Browser-C2" nocase ascii wide
         // Description: Post Exploitation agent which uses a browser to do C2 operations.
         // Reference: https://github.com/0x09AL/Browser-C2
         $string2 = /Browser\-C2\.git/ nocase ascii wide

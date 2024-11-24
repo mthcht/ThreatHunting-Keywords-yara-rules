@@ -28,7 +28,7 @@ rule cloud_enum
         $string6 = /cloud_enum\-master\.zip/ nocase ascii wide
         // Description: Multi-cloud OSINT tool. Enumerate public resources in AWS Azure and Google Cloud.
         // Reference: https://github.com/initstring/cloud_enum
-        $string7 = /initstring\/cloud_enum/ nocase ascii wide
+        $string7 = "initstring/cloud_enum" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -10,7 +10,7 @@ rule FunctionalC2
     strings:
         // Description: A small POC of using Azure Functions to relay communications
         // Reference: https://github.com/FortyNorthSecurity/FunctionalC2
-        $string1 = /\/FunctionalC2\// nocase ascii wide
+        $string1 = "/FunctionalC2/" nocase ascii wide
         // Description: A small POC of using Azure Functions to relay communications
         // Reference: https://github.com/FortyNorthSecurity/FunctionalC2
         $string2 = /beacon_endpoint.{0,100}c2Get/ nocase ascii wide
@@ -19,7 +19,7 @@ rule FunctionalC2
         $string3 = /beacon_endpoint.{0,100}c2Post/ nocase ascii wide
         // Description: A small POC of using Azure Functions to relay communications
         // Reference: https://github.com/FortyNorthSecurity/FunctionalC2
-        $string4 = /FortyNorthSecurity\/FunctionalC2/ nocase ascii wide
+        $string4 = "FortyNorthSecurity/FunctionalC2" nocase ascii wide
         // Description: A small POC of using Azure Functions to relay communications
         // Reference: https://github.com/FortyNorthSecurity/FunctionalC2
         $string5 = /gcp_functionalc2\.profile/ nocase ascii wide

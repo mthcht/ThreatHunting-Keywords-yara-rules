@@ -16,22 +16,22 @@ rule dns2tcp
         $string2 = /\/\.dns2tcprc/ nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string3 = /\/debian\/dns2tcp/ nocase ascii wide
+        $string3 = "/debian/dns2tcp" nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
         $string4 = /\/dns2tcp\.git/ nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string5 = /\/dns2tcp\/client\// nocase ascii wide
+        $string5 = "/dns2tcp/client/" nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string6 = /\/dns2tcp\/common\// nocase ascii wide
+        $string6 = "/dns2tcp/common/" nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string7 = /\/dns2tcp\/server/ nocase ascii wide
+        $string7 = "/dns2tcp/server" nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string8 = /\/root\/dns2tcp/ nocase ascii wide
+        $string8 = "/root/dns2tcp" nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
         $string9 = /\\\\\.\\pipe\\win\-sux\-no\-async\-anon\-pipe\-.{0,100}\-/ nocase ascii wide
@@ -46,10 +46,10 @@ rule dns2tcp
         $string12 = /\\dns2tcp\-0\./ nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string13 = /alex\-sector\/dns2tcp/ nocase ascii wide
+        $string13 = "alex-sector/dns2tcp" nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string14 = /apt\sinstall\sdns2tcp/ nocase ascii wide
+        $string14 = "apt install dns2tcp" nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
         $string15 = /dns2tcp\-.{0,100}\.zip/ nocase ascii wide
@@ -67,19 +67,19 @@ rule dns2tcp
         $string19 = /dns2tcp\.pid/ nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string20 = /dns2tcpc\s\-z\s/ nocase ascii wide
+        $string20 = "dns2tcpc -z " nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
         $string21 = /dns2tcpc\.exe/ nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string22 = /dns2tcpd\s\-\-/ nocase ascii wide
+        $string22 = "dns2tcpd --" nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string23 = /dns2tcpd\s\-f\s/ nocase ascii wide
+        $string23 = "dns2tcpd -f " nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string24 = /dns2tcp\-master/ nocase ascii wide
+        $string24 = "dns2tcp-master" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

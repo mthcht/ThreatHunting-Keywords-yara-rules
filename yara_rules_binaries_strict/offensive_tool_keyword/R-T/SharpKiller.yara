@@ -22,10 +22,10 @@ rule SharpKiller
         $string4 = /\\Sharp\-Killer\.sln/ nocase ascii wide
         // Description: Lifetime AMSI bypass by @ZeroMemoryEx ported to .NET Framework 4.8
         // Reference: https://github.com/S1lkys/SharpKiller
-        $string5 = /4DD3206C\-F14A\-43A3\-8EA8\-88676810B8CD/ nocase ascii wide
+        $string5 = "4DD3206C-F14A-43A3-8EA8-88676810B8CD" nocase ascii wide
         // Description: Lifetime AMSI bypass by @ZeroMemoryEx ported to .NET Framework 4.8
         // Reference: https://github.com/S1lkys/SharpKiller
-        $string6 = /S1lkys\/SharpKiller/ nocase ascii wide
+        $string6 = "S1lkys/SharpKiller" nocase ascii wide
         // Description: Lifetime AMSI bypass by @ZeroMemoryEx ported to .NET Framework 4.8
         // Reference: https://github.com/S1lkys/SharpKiller
         $string7 = /Sharp\-Killer\.csproj/ nocase ascii wide
@@ -37,7 +37,7 @@ rule SharpKiller
         $string9 = /Sharp\-Killer\.pdb/ nocase ascii wide
         // Description: Lifetime AMSI bypass by @ZeroMemoryEx ported to .NET Framework 4.8
         // Reference: https://github.com/S1lkys/SharpKiller
-        $string10 = /SharpKiller\-main/ nocase ascii wide
+        $string10 = "SharpKiller-main" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

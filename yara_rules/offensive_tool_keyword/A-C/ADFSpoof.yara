@@ -22,7 +22,7 @@ rule ADFSpoof
         $string4 = /\\ADFSpoof\.py/ nocase ascii wide
         // Description: A python tool to forge AD FS security tokens.
         // Reference: https://github.com/mandiant/ADFSpoof
-        $string5 = /ADFSpoof\-master/ nocase ascii wide
+        $string5 = "ADFSpoof-master" nocase ascii wide
         // Description: A python tool to forge AD FS security tokens.
         // Reference: https://github.com/mandiant/ADFSpoof
         $string6 = /EncryptedPfx\.py/ nocase ascii wide

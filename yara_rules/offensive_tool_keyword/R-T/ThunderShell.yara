@@ -19,7 +19,7 @@ rule ThunderShell
         $string3 = /\-out.{0,1000}\.exe\s\-r\:.{0,1000}System\.Drawing\.dll.{0,1000}System\.Management\.Automation.{0,1000}\.dll/ nocase ascii wide
         // Description: ThunderShell is a C# RAT that communicates via HTTP requests. All the network traffic is encrypted using a second layer of RC4 to avoid SSL interception and defeat network detection on the target system. RC4 is a weak cipher and is used to help obfuscate the traffic. HTTPS options should be used to provide integrity and strong encryption.
         // Reference: https://github.com/Mr-Un1k0d3r/ThunderShell
-        $string4 = /PppEWCIgXbsepIwnuRIHtQLC/ nocase ascii wide
+        $string4 = "PppEWCIgXbsepIwnuRIHtQLC" nocase ascii wide
         // Description: ThunderShell is a C# RAT that communicates via HTTP requests. All the network traffic is encrypted using a second layer of RC4 to avoid SSL interception and defeat network detection on the target system. RC4 is a weak cipher and is used to help obfuscate the traffic. HTTPS options should be used to provide integrity and strong encryption.
         // Reference: https://github.com/Mr-Un1k0d3r/ThunderShell
         $string5 = /scripts.{0,1000}Remote\-WmiExecute\./ nocase ascii wide
@@ -37,7 +37,7 @@ rule ThunderShell
         $string9 = /ThunderShell\-master\.zip/ nocase ascii wide
         // Description: ThunderShell is a C# RAT that communicates via HTTP requests. All the network traffic is encrypted using a second layer of RC4 to avoid SSL interception and defeat network detection on the target system. RC4 is a weak cipher and is used to help obfuscate the traffic. HTTPS options should be used to provide integrity and strong encryption.
         // Reference: https://github.com/Mr-Un1k0d3r/ThunderShell
-        $string10 = /YaWNdpwplLwycqWQDCyruhAFsYjWjnBA/ nocase ascii wide
+        $string10 = "YaWNdpwplLwycqWQDCyruhAFsYjWjnBA" nocase ascii wide
 
     condition:
         any of them

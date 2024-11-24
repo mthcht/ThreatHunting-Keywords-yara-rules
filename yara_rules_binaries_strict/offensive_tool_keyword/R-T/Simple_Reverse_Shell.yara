@@ -10,7 +10,7 @@ rule Simple_Reverse_Shell
     strings:
         // Description: Simple C++ reverse shell without obfuscation to avoid Win 11 defender detection (At the time of publication
         // Reference: https://github.com/tihanyin/Simple-Reverse-Shell/
-        $string1 = /\/Simple\-Reverse\-Shell/ nocase ascii wide
+        $string1 = "/Simple-Reverse-Shell" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

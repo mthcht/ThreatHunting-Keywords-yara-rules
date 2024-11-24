@@ -46,13 +46,13 @@ rule tricky_lnk
         $string12 = /\\tricky2\.ps1/ nocase ascii wide
         // Description: VBS that creates a .lnk file spoofing the file extension with unicode chars that reverses the .lnk file extension. appends .txt to the end and changes the icon to notepad to make it appear as a textfile. When executed. the payload is a powershell webdl and execute
         // Reference: https://github.com/xillwillx/tricky.lnk
-        $string13 = /11fcbd067d55ddaa11e622be03a55ea342efe497cbcb14abf4dc410cb5d7a203/ nocase ascii wide
+        $string13 = "11fcbd067d55ddaa11e622be03a55ea342efe497cbcb14abf4dc410cb5d7a203" nocase ascii wide
         // Description: VBS that creates a .lnk file spoofing the file extension with unicode chars that reverses the .lnk file extension. appends .txt to the end and changes the icon to notepad to make it appear as a textfile. When executed. the payload is a powershell webdl and execute
         // Reference: https://github.com/xillwillx/tricky.lnk
-        $string14 = /676766b4b6296303a601cf2191da028cc39681fa69b1da408242882f760c849b/ nocase ascii wide
+        $string14 = "676766b4b6296303a601cf2191da028cc39681fa69b1da408242882f760c849b" nocase ascii wide
         // Description: VBS that creates a .lnk file spoofing the file extension with unicode chars that reverses the .lnk file extension. appends .txt to the end and changes the icon to notepad to make it appear as a textfile. When executed. the payload is a powershell webdl and execute
         // Reference: https://github.com/xillwillx/tricky.lnk
-        $string15 = /9c9cc73f47b3b509df0845593e6b2f8d900f34772e4aaf3438bb0120303d5670/ nocase ascii wide
+        $string15 = "9c9cc73f47b3b509df0845593e6b2f8d900f34772e4aaf3438bb0120303d5670" nocase ascii wide
         // Description: VBS that creates a .lnk file spoofing the file extension with unicode chars that reverses the .lnk file extension. appends .txt to the end and changes the icon to notepad to make it appear as a textfile. When executed. the payload is a powershell webdl and execute
         // Reference: https://github.com/xillwillx/tricky.lnk
         $string16 = /xillwillx\/tricky\.lnk/ nocase ascii wide

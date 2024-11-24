@@ -37,16 +37,16 @@ rule smbscan
         $string9 = /\\smbscan\.py/ nocase ascii wide
         // Description: SMBScan is a tool to enumerate file shares on an internal network.
         // Reference: https://github.com/jeffhacks/smbscan
-        $string10 = /a4d92518de887211fcc6d0f0c011336140fa14d69a505223947a088cec3a9c0f/ nocase ascii wide
+        $string10 = "a4d92518de887211fcc6d0f0c011336140fa14d69a505223947a088cec3a9c0f" nocase ascii wide
         // Description: SMBScan is a tool to enumerate file shares on an internal network.
         // Reference: https://github.com/jeffhacks/smbscan
-        $string11 = /dc9978d7\-6299\-4c5a\-a22d\-a039cdc716ea/ nocase ascii wide
+        $string11 = "dc9978d7-6299-4c5a-a22d-a039cdc716ea" nocase ascii wide
         // Description: SMBScan is a tool to enumerate file shares on an internal network.
         // Reference: https://github.com/jeffhacks/smbscan
         $string12 = /impacket\.smbconnection\.SMBConnection/ nocase ascii wide
         // Description: SMBScan is a tool to enumerate file shares on an internal network.
         // Reference: https://github.com/jeffhacks/smbscan
-        $string13 = /jeffhacks\/smbscan/ nocase ascii wide
+        $string13 = "jeffhacks/smbscan" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

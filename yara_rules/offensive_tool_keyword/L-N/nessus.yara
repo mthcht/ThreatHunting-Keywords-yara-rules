@@ -10,7 +10,7 @@ rule nessus
     strings:
         // Description: Vulnerability scanner
         // Reference: https://fr.tenable.com/products/nessus
-        $string1 = /\/opt\/nessus\// nocase ascii wide
+        $string1 = "/opt/nessus/" nocase ascii wide
         // Description: Vulnerability scanner
         // Reference: https://fr.tenable.com/products/nessus
         $string2 = /log4shell.{0,1000}\.nessus\.org/ nocase ascii wide
@@ -37,10 +37,10 @@ rule nessus
         $string9 = /Nessus\-.{0,1000}\.txz/ nocase ascii wide
         // Description: Vulnerability scanner
         // Reference: https://fr.tenable.com/products/nessus
-        $string10 = /nessuscli\sfetch/ nocase ascii wide
+        $string10 = "nessuscli fetch" nocase ascii wide
         // Description: Vulnerability scanner
         // Reference: https://fr.tenable.com/products/nessus
-        $string11 = /nessuscli\sfix/ nocase ascii wide
+        $string11 = "nessuscli fix" nocase ascii wide
         // Description: Vulnerability scanner
         // Reference: https://fr.tenable.com/products/nessus
         $string12 = /nessus\-updates.{0,1000}\.tar\.gz/ nocase ascii wide
@@ -49,7 +49,7 @@ rule nessus
         $string13 = /plugins\.nessus\.org\./ nocase ascii wide
         // Description: Vulnerability scanner
         // Reference: https://fr.tenable.com/products/nessus
-        $string14 = /systemctl\sstart\snessusd/ nocase ascii wide
+        $string14 = "systemctl start nessusd" nocase ascii wide
         // Description: Vulnerability scanner
         // Reference: https://fr.tenable.com/products/nessus
         $string15 = /tenable\.com\/downloads\/nessus/ nocase ascii wide

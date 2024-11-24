@@ -10,13 +10,13 @@ rule Invoke_DNSteal
     strings:
         // Description: DNS Data Exfiltrator
         // Reference: https://github.com/JoelGMSec/Invoke-DNSteal
-        $string1 = /2dd67e996df7577217a7fcc783610a7bb901655e1ce269157c6d935ea0dd510c/ nocase ascii wide
+        $string1 = "2dd67e996df7577217a7fcc783610a7bb901655e1ce269157c6d935ea0dd510c" nocase ascii wide
         // Description: DNS Data Exfiltrator
         // Reference: https://github.com/JoelGMSec/Invoke-DNSteal
-        $string2 = /94519aa5c41e7294ffc95b621e39097172fd0eeb9287d8678346fb80898516c3/ nocase ascii wide
+        $string2 = "94519aa5c41e7294ffc95b621e39097172fd0eeb9287d8678346fb80898516c3" nocase ascii wide
         // Description: DNS Data Exfiltrator
         // Reference: https://github.com/JoelGMSec/Invoke-DNSteal
-        $string3 = /Invoke\-DNSteal/ nocase ascii wide
+        $string3 = "Invoke-DNSteal" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

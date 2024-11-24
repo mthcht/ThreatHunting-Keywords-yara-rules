@@ -19,10 +19,10 @@ rule SharpChrome
         $string3 = /\\SharpChrome\.pdb/ nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string4 = /\>SharpChrome\</ nocase ascii wide
+        $string4 = ">SharpChrome<" nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string5 = /SharpChrome\sbackupkey/ nocase ascii wide
+        $string5 = "SharpChrome backupkey" nocase ascii wide
 
     condition:
         any of them

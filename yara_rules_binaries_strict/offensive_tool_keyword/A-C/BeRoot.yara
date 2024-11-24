@@ -16,7 +16,7 @@ rule BeRoot
         $string2 = /\sbeRoot\.py/ nocase ascii wide
         // Description: BeRoot Project is a post exploitation tool to check common misconfigurations to find a way to escalate our privilege.
         // Reference: https://github.com/AlessandroZ/BeRoot
-        $string3 = /\-\-\-\-\-\-\-\-\-\-\-\-\-\-\sGet\sSystem\sPriv\swith\sWebClient\s\-\-\-\-\-\-\-\-\-\-\-\-\-\-/ nocase ascii wide
+        $string3 = "-------------- Get System Priv with WebClient --------------" nocase ascii wide
         // Description: Privilege Escalation Project - Windows / Linux / Mac 
         // Reference: https://github.com/AlessandroZ/BeRoot
         $string4 = /\/beRoot\.exe/ nocase ascii wide
@@ -31,7 +31,7 @@ rule BeRoot
         $string7 = /\/beRoot\.zip/ nocase ascii wide
         // Description: BeRoot Project is a post exploitation tool to check common misconfigurations to find a way to escalate our privilege.
         // Reference: https://github.com/AlessandroZ/BeRoot
-        $string8 = /\/BeRoot\/Linux\// nocase ascii wide
+        $string8 = "/BeRoot/Linux/" nocase ascii wide
         // Description: BeRoot Project is a post exploitation tool to check common misconfigurations to find a way to escalate our privilege.
         // Reference: https://github.com/AlessandroZ/BeRoot
         $string9 = /\/beroot\/modules\/.{0,100}\.py/ nocase ascii wide
@@ -52,10 +52,10 @@ rule BeRoot
         $string14 = /\\DLL_Hijacking\./ nocase ascii wide
         // Description: BeRoot Project is a post exploitation tool to check common misconfigurations to find a way to escalate our privilege.
         // Reference: https://github.com/AlessandroZ/BeRoot
-        $string15 = /52B0FF57\-7E0A\-4CA9\-84D4\-58DFA2456BA5/ nocase ascii wide
+        $string15 = "52B0FF57-7E0A-4CA9-84D4-58DFA2456BA5" nocase ascii wide
         // Description: BeRoot Project is a post exploitation tool to check common misconfigurations to find a way to escalate our privilege.
         // Reference: https://github.com/AlessandroZ/BeRoot
-        $string16 = /AlessandroZ\/BeRoot/ nocase ascii wide
+        $string16 = "AlessandroZ/BeRoot" nocase ascii wide
         // Description: Privilege Escalation Project - Windows / Linux / Mac 
         // Reference: https://github.com/AlessandroZ/BeRoot
         $string17 = /beRoot\.exe\s\-/ nocase ascii wide
@@ -64,7 +64,7 @@ rule BeRoot
         $string18 = /beroot\.py\s\-/ nocase ascii wide
         // Description: Privilege Escalation Project - Windows / Linux / Mac 
         // Reference: https://github.com/AlessandroZ/BeRoot
-        $string19 = /BeRoot\-master/ nocase ascii wide
+        $string19 = "BeRoot-master" nocase ascii wide
         // Description: BeRoot Project is a post exploitation tool to check common misconfigurations to find a way to escalate our privilege.
         // Reference: https://github.com/AlessandroZ/BeRoot
         $string20 = /from\s\.modules\.exploit\simport\sExploit/ nocase ascii wide
@@ -76,13 +76,13 @@ rule BeRoot
         $string22 = /Getting\spermissions\sof\ssensitive\sfiles\./ nocase ascii wide
         // Description: BeRoot Project is a post exploitation tool to check common misconfigurations to find a way to escalate our privilege.
         // Reference: https://github.com/AlessandroZ/BeRoot
-        $string23 = /import\scheck_currrent_user_privilege/ nocase ascii wide
+        $string23 = "import check_currrent_user_privilege" nocase ascii wide
         // Description: BeRoot Project is a post exploitation tool to check common misconfigurations to find a way to escalate our privilege.
         // Reference: https://github.com/AlessandroZ/BeRoot
-        $string24 = /import\scheck_sudoers_misconfigurations/ nocase ascii wide
+        $string24 = "import check_sudoers_misconfigurations" nocase ascii wide
         // Description: Privilege Escalation Project - Windows / Linux / Mac 
         // Reference: https://github.com/AlessandroZ/BeRoot
-        $string25 = /linux\-exploit\-suggester/ nocase ascii wide
+        $string25 = "linux-exploit-suggester" nocase ascii wide
         // Description: BeRoot Project is a post exploitation tool to check common misconfigurations to find a way to escalate our privilege.
         // Reference: https://github.com/AlessandroZ/BeRoot
         $string26 = /modules\.gtfobins\simport\sGTFOBins/ nocase ascii wide

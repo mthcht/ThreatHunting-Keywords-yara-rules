@@ -118,13 +118,13 @@ rule MEGAsync
         $string36 = /\\StartupTNotiMEGAsync\.lnk/ nocase ascii wide
         // Description: synchronize or backup your computers to MEGA
         // Reference: https://mega.io/en/desktop
-        $string37 = /\'Company\'\>Mega\sLimited\<\/Data\>/ nocase ascii wide
+        $string37 = "'Company'>Mega Limited</Data>" nocase ascii wide
         // Description: synchronize or backup your computers to MEGA
         // Reference: https://mega.io/en/desktop
         $string38 = /https\:\/\/mega\.nz\/linux\/repo\// nocase ascii wide
         // Description: synchronize or backup your computers to MEGA
         // Reference: https://mega.io/en/desktop
-        $string39 = /MEGAsync\sUpdate\sTask/ nocase ascii wide
+        $string39 = "MEGAsync Update Task" nocase ascii wide
         // Description: synchronize or backup your computers to MEGA
         // Reference: https://mega.io/en/desktop
         $string40 = /MEGAsync\.exe\s\// nocase ascii wide
@@ -172,13 +172,13 @@ rule MEGAsync
         $string54 = /megasync\-xUbuntu_.{0,1000}_amd64\.deb/ nocase ascii wide
         // Description: synchronize or backup your computers to MEGA
         // Reference: https://mega.io/en/desktop
-        $string55 = /\'Product\'\>MEGAsync\<\/Data\>/ nocase ascii wide
+        $string55 = "'Product'>MEGAsync</Data>" nocase ascii wide
         // Description: synchronize or backup your computers to MEGA
         // Reference: https://mega.io/en/desktop
         $string56 = /ReferrerUrl\=https\:\/\/mega\.io\// nocase ascii wide
         // Description: synchronize or backup your computers to MEGA
         // Reference: https://mega.io/en/desktop
-        $string57 = /\'Signature\'\>Mega\sLimited\<\/Data\>/ nocase ascii wide
+        $string57 = "'Signature'>Mega Limited</Data>" nocase ascii wide
         // Description: synchronize or backup your computers to MEGA
         // Reference: https://mega.io/en/desktop
         $string58 = /Windows\\System32\\Tasks\\MEGA/ nocase ascii wide

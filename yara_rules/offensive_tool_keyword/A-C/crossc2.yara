@@ -10,10 +10,10 @@ rule crossc2
     strings:
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
-        $string1 = /\/CrossC2\-test/ nocase ascii wide
+        $string1 = "/CrossC2-test" nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
-        $string2 = /\/mimipenguin\// nocase ascii wide
+        $string2 = "/mimipenguin/" nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
         $string3 = /\/tmp\/c2\-rebind\.so/ nocase ascii wide
@@ -22,19 +22,19 @@ rule crossc2
         $string4 = /c2profile\.profile/ nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
-        $string5 = /cc2_keystrokes/ nocase ascii wide
+        $string5 = "cc2_keystrokes" nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
-        $string6 = /cc2_portscan/ nocase ascii wide
+        $string6 = "cc2_portscan" nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
         $string7 = /CCHOST\=127\.0\.0\.1.{0,1000}\/tmp\/c2/ nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
-        $string8 = /crossc2\sdyn\sload/ nocase ascii wide
+        $string8 = "crossc2 dyn load" nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
-        $string9 = /CrossC2\sframework/ nocase ascii wide
+        $string9 = "CrossC2 framework" nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
         $string10 = /CrossC2\.cna/ nocase ascii wide
@@ -52,25 +52,25 @@ rule crossc2
         $string14 = /CrossC2\.Win/ nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
-        $string15 = /CrossC2_dev_/ nocase ascii wide
+        $string15 = "CrossC2_dev_" nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
-        $string16 = /CrossC2\-cs/ nocase ascii wide
+        $string16 = "CrossC2-cs" nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
-        $string17 = /CrossC2\-GithubBot/ nocase ascii wide
+        $string17 = "CrossC2-GithubBot" nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
-        $string18 = /CrossC2Kit/ nocase ascii wide
+        $string18 = "CrossC2Kit" nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
-        $string19 = /genCrossC2\s/ nocase ascii wide
+        $string19 = "genCrossC2 " nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
         $string20 = /genCrossC2\.Win\.exe/ nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
-        $string21 = /gloxec\/CrossC2/ nocase ascii wide
+        $string21 = "gloxec/CrossC2" nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
         $string22 = /http\:\/\/127\.0\.0\.1\/CrossC2/ nocase ascii wide

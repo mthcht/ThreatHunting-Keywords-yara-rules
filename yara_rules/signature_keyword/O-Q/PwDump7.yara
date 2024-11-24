@@ -19,7 +19,7 @@ rule PwDump7
         $string3 = /HackTool\.Win32\.PWDump/ nocase ascii wide
         // Description: pwdump7 works with its own filesytem driver (from rkdetector.com technology) so users with administrative privileges are able to dump directly from disk both SYSTEM and SAM registry hives. Once dumped - the SYSKEY key will be retrieved from the SYSTEM hive and then used to decrypt both LanMan and NTLM hashes and dump them in pwdump like format.
         // Reference: https://www.openwall.com/passwords/windows-pwdump
-        $string4 = /HackTool\:Win32\/PWDump/ nocase ascii wide
+        $string4 = "HackTool:Win32/PWDump" nocase ascii wide
         // Description: pwdump7 works with its own filesytem driver (from rkdetector.com technology) so users with administrative privileges are able to dump directly from disk both SYSTEM and SAM registry hives. Once dumped - the SYSKEY key will be retrieved from the SYSTEM hive and then used to decrypt both LanMan and NTLM hashes and dump them in pwdump like format.
         // Reference: https://www.openwall.com/passwords/windows-pwdump
         $string5 = /PWCrack\-Pwdump\./ nocase ascii wide
@@ -28,7 +28,7 @@ rule PwDump7
         $string6 = /PWDump7\sRaw\sPassword\sExtractor\s\(PUA\)/ nocase ascii wide
         // Description: pwdump7 works with its own filesytem driver (from rkdetector.com technology) so users with administrative privileges are able to dump directly from disk both SYSTEM and SAM registry hives. Once dumped - the SYSKEY key will be retrieved from the SYSTEM hive and then used to decrypt both LanMan and NTLM hashes and dump them in pwdump like format.
         // Reference: https://www.openwall.com/passwords/windows-pwdump
-        $string7 = /Win32\/PWDump/ nocase ascii wide
+        $string7 = "Win32/PWDump" nocase ascii wide
 
     condition:
         any of them

@@ -10,7 +10,7 @@ rule DockerPwn
     strings:
         // Description: Automation for abusing an exposed Docker TCP Socket. 
         // Reference: https://github.com/AbsoZed/DockerPwn.py
-        $string1 = /DockerPwn/ nocase ascii wide
+        $string1 = "DockerPwn" nocase ascii wide
 
     condition:
         any of them

@@ -43,10 +43,10 @@ rule ngrok
         $string11 = /\\ngrokd\.go/ nocase ascii wide
         // Description: ngrok - abused by attackers for C2 usage
         // Reference: https://github.com/inconshreveable/ngrok
-        $string12 = /6abfc342f0a659066c8b42999510ccc3592b499569c2e7af37470a445a2e3560/ nocase ascii wide
+        $string12 = "6abfc342f0a659066c8b42999510ccc3592b499569c2e7af37470a445a2e3560" nocase ascii wide
         // Description: ngrok - abused by attackers for C2 usage
         // Reference: https://github.com/inconshreveable/ngrok
-        $string13 = /fe9dd722a085bce94fe2403f8d02e20becf0f0faa019d0789fadf35b66611a46/ nocase ascii wide
+        $string13 = "fe9dd722a085bce94fe2403f8d02e20becf0f0faa019d0789fadf35b66611a46" nocase ascii wide
         // Description: ngrok - abused by attackers for C2 usage
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
         $string14 = /http\:\/\/.{0,1000}\.ngrok\.io/ nocase ascii wide
@@ -58,7 +58,7 @@ rule ngrok
         $string16 = /https\:\/\/.{0,1000}\.ngrok\.io/ nocase ascii wide
         // Description: ngrok - abused by attackers for C2 usage
         // Reference: https://github.com/inconshreveable/ngrok
-        $string17 = /inconshreveable\/ngrok/ nocase ascii wide
+        $string17 = "inconshreveable/ngrok" nocase ascii wide
         // Description: ngrok - abused by attackers for C2 usage
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
         $string18 = /LHOST\=0\.tcp\.ngrok\.io/ nocase ascii wide
@@ -67,7 +67,7 @@ rule ngrok
         $string19 = /Mozilla\/5\.0\s\(compatible\;\sngrok\)/ nocase ascii wide
         // Description: ngrok - abused by attackers for C2 usage
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string20 = /ngrok\stcp\s/ nocase ascii wide
+        $string20 = "ngrok tcp " nocase ascii wide
         // Description: ngrok - abused by attackers for C2 usage
         // Reference: https://github.com/inconshreveable/ngrok
         $string21 = /ngrok\,\sInc\./ nocase ascii wide

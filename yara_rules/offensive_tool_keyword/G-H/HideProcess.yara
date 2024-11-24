@@ -10,7 +10,7 @@ rule HideProcess
     strings:
         // Description: process injection rootkit
         // Reference: https://github.com/landhb/HideProcess
-        $string1 = /landhb\/HideProcess/ nocase ascii wide
+        $string1 = "landhb/HideProcess" nocase ascii wide
 
     condition:
         any of them

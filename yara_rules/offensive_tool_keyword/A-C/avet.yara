@@ -19,85 +19,85 @@ rule avet
         $string3 = /\\avetdbg\.txt/ nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string4 = /add_evasion\scheck_fast_forwarding/ nocase ascii wide
+        $string4 = "add_evasion check_fast_forwarding" nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string5 = /add_evasion\scomputation_fibonacci\s/ nocase ascii wide
+        $string5 = "add_evasion computation_fibonacci " nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string6 = /add_evasion\scomputation_timed_fibonacci/ nocase ascii wide
+        $string6 = "add_evasion computation_timed_fibonacci" nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string7 = /add_evasion\sevasion_by_sleep\s/ nocase ascii wide
+        $string7 = "add_evasion evasion_by_sleep " nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string8 = /add_evasion\sfopen_sandbox_evasion/ nocase ascii wide
+        $string8 = "add_evasion fopen_sandbox_evasion" nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string9 = /add_evasion\sget_bios_info/ nocase ascii wide
+        $string9 = "add_evasion get_bios_info" nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string10 = /add_evasion\sget_computer_domain\s/ nocase ascii wide
+        $string10 = "add_evasion get_computer_domain " nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string11 = /add_evasion\sget_cpu_cores\s/ nocase ascii wide
+        $string11 = "add_evasion get_cpu_cores " nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string12 = /add_evasion\sget_install_date\s/ nocase ascii wide
+        $string12 = "add_evasion get_install_date " nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string13 = /add_evasion\sget_num_processes/ nocase ascii wide
+        $string13 = "add_evasion get_num_processes" nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string14 = /add_evasion\sget_standard_browser\s/ nocase ascii wide
+        $string14 = "add_evasion get_standard_browser " nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string15 = /add_evasion\sget_tickcount/ nocase ascii wide
+        $string15 = "add_evasion get_tickcount" nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string16 = /add_evasion\sgethostbyname_sandbox_evasion/ nocase ascii wide
+        $string16 = "add_evasion gethostbyname_sandbox_evasion" nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string17 = /add_evasion\shas_background_wp/ nocase ascii wide
+        $string17 = "add_evasion has_background_wp" nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string18 = /add_evasion\shas_folder\s/ nocase ascii wide
+        $string18 = "add_evasion has_folder " nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string19 = /add_evasion\shas_network_drive/ nocase ascii wide
+        $string19 = "add_evasion has_network_drive" nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string20 = /add_evasion\shas_public_desktop/ nocase ascii wide
+        $string20 = "add_evasion has_public_desktop" nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string21 = /add_evasion\shas_recent_files/ nocase ascii wide
+        $string21 = "add_evasion has_recent_files" nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string22 = /add_evasion\shas_recycle_bin/ nocase ascii wide
+        $string22 = "add_evasion has_recycle_bin" nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string23 = /add_evasion\shas_username\s/ nocase ascii wide
+        $string23 = "add_evasion has_username " nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string24 = /add_evasion\shas_vm_mac/ nocase ascii wide
+        $string24 = "add_evasion has_vm_mac" nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string25 = /add_evasion\shas_vm_regkey/ nocase ascii wide
+        $string25 = "add_evasion has_vm_regkey" nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string26 = /add_evasion\shide_console/ nocase ascii wide
+        $string26 = "add_evasion hide_console" nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string27 = /add_evasion\sinteraction_getchar/ nocase ascii wide
+        $string27 = "add_evasion interaction_getchar" nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string28 = /add_evasion\sinteraction_system_pause/ nocase ascii wide
+        $string28 = "add_evasion interaction_system_pause" nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string29 = /add_evasion\sis_debugger_present/ nocase ascii wide
+        $string29 = "add_evasion is_debugger_present" nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string30 = /add_evasion\ssleep_by_ping\s/ nocase ascii wide
+        $string30 = "add_evasion sleep_by_ping " nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
         $string31 = /avet\-master\.zip/ nocase ascii wide
@@ -166,7 +166,7 @@ rule avet
         $string52 = /evasion\/has_recycle_bin\./ nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string53 = /govolution\/avet/ nocase ascii wide
+        $string53 = "govolution/avet" nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
         $string54 = /input\/shellcode_enc_raw\.txt/ nocase ascii wide
@@ -181,31 +181,31 @@ rule avet
         $string57 = /pe2shc_.{0,1000}\.zip/ nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string58 = /set_command_exec\sexec_via_cmd/ nocase ascii wide
+        $string58 = "set_command_exec exec_via_cmd" nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string59 = /set_command_exec\sexec_via_powershell/ nocase ascii wide
+        $string59 = "set_command_exec exec_via_powershell" nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string60 = /set_command_exec\sno_command/ nocase ascii wide
+        $string60 = "set_command_exec no_command" nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string61 = /set_command_source\sdownload_bitsadmin/ nocase ascii wide
+        $string61 = "set_command_source download_bitsadmin" nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string62 = /set_decoder\sxor/ nocase ascii wide
+        $string62 = "set_decoder xor" nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string63 = /set_payload_execution_method\sexec_shellcode64/ nocase ascii wide
+        $string63 = "set_payload_execution_method exec_shellcode64" nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string64 = /set_payload_execution_method\sinject_dll/ nocase ascii wide
+        $string64 = "set_payload_execution_method inject_dll" nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string65 = /set_payload_info_source\sfrom_command_line_raw/ nocase ascii wide
+        $string65 = "set_payload_info_source from_command_line_raw" nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
-        $string66 = /set_payload_source\sdownload_powershell/ nocase ascii wide
+        $string66 = "set_payload_source download_powershell" nocase ascii wide
         // Description: AVET is an AntiVirus Evasion Tool. which was developed for making life easier for pentesters and for experimenting with antivirus evasion techniques. as well as other methods used by malicious software. For an overview of new features in v2.3. as well as past version increments. have a look at the CHANGELOG file.
         // Reference: https://github.com/govolution/avet
         $string67 = /source\/avetsvc\.c/ nocase ascii wide

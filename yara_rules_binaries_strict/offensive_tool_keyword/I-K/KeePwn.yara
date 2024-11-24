@@ -34,13 +34,13 @@ rule KeePwn
         $string8 = /\/keepwn\.utils\./ nocase ascii wide
         // Description: A python tool to automate KeePass discovery and secret extraction
         // Reference: https://github.com/Orange-Cyberdefense/KeePwn
-        $string9 = /\/KeePwn\/keepwn\// nocase ascii wide
+        $string9 = "/KeePwn/keepwn/" nocase ascii wide
         // Description: A python tool to automate KeePass discovery and secret extraction
         // Reference: https://github.com/Orange-Cyberdefense/KeePwn
-        $string10 = /\/KeePwn\/tarball\// nocase ascii wide
+        $string10 = "/KeePwn/tarball/" nocase ascii wide
         // Description: A python tool to automate KeePass discovery and secret extraction
         // Reference: https://github.com/Orange-Cyberdefense/KeePwn
-        $string11 = /\/KeePwn\/zipball\// nocase ascii wide
+        $string11 = "/KeePwn/zipball/" nocase ascii wide
         // Description: A python tool to automate KeePass discovery and secret extraction
         // Reference: https://github.com/Orange-Cyberdefense/KeePwn
         $string12 = /\/KeePwn\-0\.3\// nocase ascii wide
@@ -58,49 +58,49 @@ rule KeePwn
         $string16 = /\\KeePwn\-main\\/ nocase ascii wide
         // Description: A python tool to automate KeePass discovery and secret extraction
         // Reference: https://github.com/Orange-Cyberdefense/KeePwn
-        $string17 = /0971aee212257aba1a537747e492b76aff0020623edb68defd378e8ed069f6a8/ nocase ascii wide
+        $string17 = "0971aee212257aba1a537747e492b76aff0020623edb68defd378e8ed069f6a8" nocase ascii wide
         // Description: A python tool to automate KeePass discovery and secret extraction
         // Reference: https://github.com/Orange-Cyberdefense/KeePwn
-        $string18 = /161451349be662c5c649be01c670f86b233fb08a1c77c9b720ea08b622d04964/ nocase ascii wide
+        $string18 = "161451349be662c5c649be01c670f86b233fb08a1c77c9b720ea08b622d04964" nocase ascii wide
         // Description: A python tool to automate KeePass discovery and secret extraction
         // Reference: https://github.com/Orange-Cyberdefense/KeePwn
-        $string19 = /2c71dd5b47601d4b105d8da7007511045dd58f5d71b997290209d55f20dce887/ nocase ascii wide
+        $string19 = "2c71dd5b47601d4b105d8da7007511045dd58f5d71b997290209d55f20dce887" nocase ascii wide
         // Description: A python tool to automate KeePass discovery and secret extraction
         // Reference: https://github.com/Orange-Cyberdefense/KeePwn
-        $string20 = /39a9f25d64ef416e4be4fadf6fae1b2169bfeb02501be443e8af1fec17412f60/ nocase ascii wide
+        $string20 = "39a9f25d64ef416e4be4fadf6fae1b2169bfeb02501be443e8af1fec17412f60" nocase ascii wide
         // Description: A python tool to automate KeePass discovery and secret extraction
         // Reference: https://github.com/Orange-Cyberdefense/KeePwn
-        $string21 = /83803142d36f4e09346394ae2038353977bd16389fd80e09dc7fc1e8850e1365/ nocase ascii wide
+        $string21 = "83803142d36f4e09346394ae2038353977bd16389fd80e09dc7fc1e8850e1365" nocase ascii wide
         // Description: A python tool to automate KeePass discovery and secret extraction
         // Reference: https://github.com/Orange-Cyberdefense/KeePwn
-        $string22 = /8793997d31b23280ec1a46ff7fd065a6510ea66fcbf12651583244805e958212/ nocase ascii wide
+        $string22 = "8793997d31b23280ec1a46ff7fd065a6510ea66fcbf12651583244805e958212" nocase ascii wide
         // Description: A python tool to automate KeePass discovery and secret extraction
         // Reference: https://github.com/Orange-Cyberdefense/KeePwn
-        $string23 = /a8fca4711a214b5b154a7a9f31018bff0eb59ddc8dfe8bad04dde7f90972437a/ nocase ascii wide
+        $string23 = "a8fca4711a214b5b154a7a9f31018bff0eb59ddc8dfe8bad04dde7f90972437a" nocase ascii wide
         // Description: A python tool to automate KeePass discovery and secret extraction
         // Reference: https://github.com/Orange-Cyberdefense/KeePwn
-        $string24 = /b7b67e33ca53799aa1be6a7aa7677363b8a0e711091bccd2e49f501d5dc22de7/ nocase ascii wide
+        $string24 = "b7b67e33ca53799aa1be6a7aa7677363b8a0e711091bccd2e49f501d5dc22de7" nocase ascii wide
         // Description: A python tool to automate KeePass discovery and secret extraction
         // Reference: https://github.com/Orange-Cyberdefense/KeePwn
         $string25 = /d3lb3\@protonmail\.com/ nocase ascii wide
         // Description: A python tool to automate KeePass discovery and secret extraction
         // Reference: https://github.com/Orange-Cyberdefense/KeePwn
-        $string26 = /e3bd611e8aa3d18d81944ebdabf51ce9aed8eb414a95ee8eb6d45ca0ebd58003/ nocase ascii wide
+        $string26 = "e3bd611e8aa3d18d81944ebdabf51ce9aed8eb414a95ee8eb6d45ca0ebd58003" nocase ascii wide
         // Description: A python tool to automate KeePass discovery and secret extraction
         // Reference: https://github.com/Orange-Cyberdefense/KeePwn
-        $string27 = /keepass\-password\-dumper/ nocase ascii wide
+        $string27 = "keepass-password-dumper" nocase ascii wide
         // Description: A python tool to automate KeePass discovery and secret extraction
         // Reference: https://github.com/Orange-Cyberdefense/KeePwn
-        $string28 = /KeePwn\s\-\-/ nocase ascii wide
+        $string28 = "KeePwn --" nocase ascii wide
         // Description: A python tool to automate KeePass discovery and secret extraction
         // Reference: https://github.com/Orange-Cyberdefense/KeePwn
-        $string29 = /KeePwn\sparse_dump\s/ nocase ascii wide
+        $string29 = "KeePwn parse_dump " nocase ascii wide
         // Description: A python tool to automate KeePass discovery and secret extraction
         // Reference: https://github.com/Orange-Cyberdefense/KeePwn
-        $string30 = /KeePwn\splugin\s/ nocase ascii wide
+        $string30 = "KeePwn plugin " nocase ascii wide
         // Description: A python tool to automate KeePass discovery and secret extraction
         // Reference: https://github.com/Orange-Cyberdefense/KeePwn
-        $string31 = /KeePwn\strigger\s/ nocase ascii wide
+        $string31 = "KeePwn trigger " nocase ascii wide
         // Description: A python tool to automate KeePass discovery and secret extraction
         // Reference: https://github.com/Orange-Cyberdefense/KeePwn
         $string32 = /KeePwn\sv.{0,100}\s\-\sby\sJulien\sBEDEL/ nocase ascii wide
@@ -133,10 +133,10 @@ rule KeePwn
         $string41 = /KeePwn\-main\.zip/ nocase ascii wide
         // Description: A python tool to automate KeePass discovery and secret extraction
         // Reference: https://github.com/Orange-Cyberdefense/KeePwn
-        $string42 = /Orange\-Cyberdefense\/KeePwn/ nocase ascii wide
+        $string42 = "Orange-Cyberdefense/KeePwn" nocase ascii wide
         // Description: A python tool to automate KeePass discovery and secret extraction
         // Reference: https://github.com/Orange-Cyberdefense/KeePwn
-        $string43 = /Orange\-Cyberdefense\/KeePwn/ nocase ascii wide
+        $string43 = "Orange-Cyberdefense/KeePwn" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

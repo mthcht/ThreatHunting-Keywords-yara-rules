@@ -13,7 +13,7 @@ rule RouterScan
         $string1 = /HackTool\.Win32\.RouterScan/ nocase ascii wide
         // Description: a penetration testing tool to maliciously scan for and brute force routers - cameras and network-attached storage devices with web interfaces
         // Reference: https://github.com/mustafashykh/router-scan
-        $string2 = /HackTool\:Win32\/RouterScan/ nocase ascii wide
+        $string2 = "HackTool:Win32/RouterScan" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

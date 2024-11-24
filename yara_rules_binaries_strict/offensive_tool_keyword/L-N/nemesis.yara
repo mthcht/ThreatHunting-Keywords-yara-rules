@@ -109,7 +109,7 @@ rule nemesis
         $string33 = /\ssubmit_to_nemesis\.sh/ nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
-        $string34 = /\s\-\-user\s\'nemesis\:/ nocase ascii wide
+        $string34 = " --user 'nemesis:" nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
         $string35 = /\.\/agscript\s.{0,100}\snemesis\-bot\s/ nocase ascii wide
@@ -136,7 +136,7 @@ rule nemesis
         $string42 = /\/chromium_logins\.py/ nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
-        $string43 = /\/cobaltstrike\-nemesis\-connector\// nocase ascii wide
+        $string43 = "/cobaltstrike-nemesis-connector/" nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
         $string44 = /\/crack_list\/client_wordlists\.py/ nocase ascii wide
@@ -184,7 +184,7 @@ rule nemesis
         $string58 = /\/office2john\.py/ nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
-        $string59 = /\/opt\/cobaltstrike\-nemesis/ nocase ascii wide
+        $string59 = "/opt/cobaltstrike-nemesis" nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
         $string60 = /\/passwd\.py/ nocase ascii wide
@@ -196,7 +196,7 @@ rule nemesis
         $string62 = /\/passwordcracker\.Dockerfile/ nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
-        $string63 = /\/passwordcracker\// nocase ascii wide
+        $string63 = "/passwordcracker/" nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
         $string64 = /\/pdf2john\.py/ nocase ascii wide
@@ -238,22 +238,22 @@ rule nemesis
         $string76 = /\/wordlists\/top_100000\.txt/ nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
-        $string77 = /\:8080\/yara\/file/ nocase ascii wide
+        $string77 = ":8080/yara/file" nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
         $string78 = /\\Seatbelt\.exe/ nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
-        $string79 = /AWS_BUCKET\=nemesis\-test/ nocase ascii wide
+        $string79 = "AWS_BUCKET=nemesis-test" nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
-        $string80 = /AWS_KMS_KEY_ALIAS\=nemesis\-dev/ nocase ascii wide
+        $string80 = "AWS_KMS_KEY_ALIAS=nemesis-dev" nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
-        $string81 = /class\sPlugin\:\:Nemesis\s\<\sMsf\:\:Plugin/ nocase ascii wide
+        $string81 = "class Plugin::Nemesis < Msf::Plugin" nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
-        $string82 = /cobaltstrike\-nemesis\-connector/ nocase ascii wide
+        $string82 = "cobaltstrike-nemesis-connector" nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
         $string83 = /create_nemesis_db\(/ nocase ascii wide
@@ -265,10 +265,10 @@ rule nemesis
         $string85 = /def\snemesis_post_data\(/ nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
-        $string86 = /export\sNEMESIS_BASE_URL/ nocase ascii wide
+        $string86 = "export NEMESIS_BASE_URL" nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
-        $string87 = /export\sNEMESIS_CREDS/ nocase ascii wide
+        $string87 = "export NEMESIS_CREDS" nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
         $string88 = /file_parsers\/group_policy_preferences\.py/ nocase ascii wide
@@ -277,22 +277,22 @@ rule nemesis
         $string89 = /getLogger\(\\"NemesisConnector\\"\)/ nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
-        $string90 = /http\:\/\/nemesis\/file/ nocase ascii wide
+        $string90 = "http://nemesis/file" nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
-        $string91 = /http\:\/\/nemesis\/yara/ nocase ascii wide
+        $string91 = "http://nemesis/yara" nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
         $string92 = /http\:\/\/nemesis\-es\-http\.default\.svc\.cluster\.local\:9200/ nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
-        $string93 = /http\:\/\/nemesis\-es\-internal\-http\:9200/ nocase ascii wide
+        $string93 = "http://nemesis-es-internal-http:9200" nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
         $string94 = /http\:\/\/nemesis\-kb\-http\.default\.svc\.cluster\.local\:5601/ nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
-        $string95 = /http\:\/\/nemesis\-kb\-http\:5601/ nocase ascii wide
+        $string95 = "http://nemesis-kb-http:5601" nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
         $string96 = /https\:\/\/nemesis\..{0,100}\.com\/api\// nocase ascii wide
@@ -304,10 +304,10 @@ rule nemesis
         $string98 = /modules\/nemesis\.rb/ nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
-        $string99 = /Nemesis\sfrontend\sHTTP\sserver\sendpoint/ nocase ascii wide
+        $string99 = "Nemesis frontend HTTP server endpoint" nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
-        $string100 = /nemesis\:Qwerty12345\@/ nocase ascii wide
+        $string100 = "nemesis:Qwerty12345@" nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
         $string101 = /nemesis\@nemesis\.com/ nocase ascii wide
@@ -316,37 +316,37 @@ rule nemesis
         $string102 = /nemesis\@nemesis\.local/ nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
-        $string103 = /NEMESIS_API_URL/ nocase ascii wide
+        $string103 = "NEMESIS_API_URL" nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
-        $string104 = /NEMESIS_HTTP_SERVER\s/ nocase ascii wide
+        $string104 = "NEMESIS_HTTP_SERVER " nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
         $string105 = /nemesis_post_file\(/ nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
-        $string106 = /nemesis\-rabbitmq\-discovery/ nocase ascii wide
+        $string106 = "nemesis-rabbitmq-discovery" nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
         $string107 = /nemesis\-rabbitmq\-discovery\.default\.svc\.cluster\.local/ nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
-        $string108 = /NemesisRabbitMQProducer/ nocase ascii wide
+        $string108 = "NemesisRabbitMQProducer" nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
         $string109 = /plugins\/nemesis\.rb/ nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
-        $string110 = /sample_files\/passwd/ nocase ascii wide
+        $string110 = "sample_files/passwd" nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
         $string111 = /Seatbelt\.Commands\.Windows/ nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
-        $string112 = /skaffold\srun\s\-m\snemesis\s/ nocase ascii wide
+        $string112 = "skaffold run -m nemesis " nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
-        $string113 = /SpecterOps\/Nemesis/ nocase ascii wide
+        $string113 = "SpecterOps/Nemesis" nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
         $string114 = /Staring\sNemesis\sBot\.\sTeamserver/ nocase ascii wide

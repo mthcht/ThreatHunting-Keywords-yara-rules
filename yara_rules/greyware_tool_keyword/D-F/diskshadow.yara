@@ -10,7 +10,7 @@ rule diskshadow
     strings:
         // Description: List shadow copies using diskshadow
         // Reference: N/A
-        $string1 = /diskshadow\slist\sshadows\sall/ nocase ascii wide
+        $string1 = "diskshadow list shadows all" nocase ascii wide
 
     condition:
         any of them

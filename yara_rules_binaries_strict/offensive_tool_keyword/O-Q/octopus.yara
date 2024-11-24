@@ -10,7 +10,7 @@ rule octopus
     strings:
         // Description: Octopus is an open source. pre-operation C2 server based on python which can control an Octopus powershell agent through HTTP/S.
         // Reference: https://github.com/mhaskar/Octopus
-        $string1 = /\sdeploy_cobalt_beacon/ nocase ascii wide
+        $string1 = " deploy_cobalt_beacon" nocase ascii wide
         // Description: Octopus is an open source. pre-operation C2 server based on python which can control an Octopus powershell agent through HTTP/S.
         // Reference: https://github.com/mhaskar/Octopus
         $string2 = /\soctopus\.py/ nocase ascii wide
@@ -37,22 +37,22 @@ rule octopus
         $string9 = /ASBBypass\.ps1/ nocase ascii wide
         // Description: Octopus is an open source. pre-operation C2 server based on python which can control an Octopus powershell agent through HTTP/S.
         // Reference: https://github.com/mhaskar/Octopus
-        $string10 = /generate_hta\soperation1/ nocase ascii wide
+        $string10 = "generate_hta operation1" nocase ascii wide
         // Description: Octopus is an open source. pre-operation C2 server based on python which can control an Octopus powershell agent through HTTP/S.
         // Reference: https://github.com/mhaskar/Octopus
-        $string11 = /generate_powershell\soperation1/ nocase ascii wide
+        $string11 = "generate_powershell operation1" nocase ascii wide
         // Description: Octopus is an open source. pre-operation C2 server based on python which can control an Octopus powershell agent through HTTP/S.
         // Reference: https://github.com/mhaskar/Octopus
-        $string12 = /generate_spoofed_args_exe/ nocase ascii wide
+        $string12 = "generate_spoofed_args_exe" nocase ascii wide
         // Description: Octopus is an open source. pre-operation C2 server based on python which can control an Octopus powershell agent through HTTP/S.
         // Reference: https://github.com/mhaskar/Octopus
         $string13 = /generate_unmanaged_exe\soperation1\s.{0,100}\.exe/ nocase ascii wide
         // Description: Octopus is an open source. pre-operation C2 server based on python which can control an Octopus powershell agent through HTTP/S.
         // Reference: https://github.com/mhaskar/Octopus
-        $string14 = /generate_x64_shellcode/ nocase ascii wide
+        $string14 = "generate_x64_shellcode" nocase ascii wide
         // Description: Octopus is an open source. pre-operation C2 server based on python which can control an Octopus powershell agent through HTTP/S.
         // Reference: https://github.com/mhaskar/Octopus
-        $string15 = /generate_x86_shellcode/ nocase ascii wide
+        $string15 = "generate_x86_shellcode" nocase ascii wide
         // Description: Octopus is an open source. pre-operation C2 server based on python which can control an Octopus powershell agent through HTTP/S.
         // Reference: https://github.com/mhaskar/Octopus
         $string16 = /ILBypass\.ps1/ nocase ascii wide
@@ -61,7 +61,7 @@ rule octopus
         $string17 = /listen_http\s0\.0\.0\.0\s8080\s.{0,100}\.php\soperation1/ nocase ascii wide
         // Description: Octopus is an open source. pre-operation C2 server based on python which can control an Octopus powershell agent through HTTP/S.
         // Reference: https://github.com/mhaskar/Octopus
-        $string18 = /mhaskar\/Octopus/ nocase ascii wide
+        $string18 = "mhaskar/Octopus" nocase ascii wide
         // Description: Octopus is an open source. pre-operation C2 server based on python which can control an Octopus powershell agent through HTTP/S.
         // Reference: https://github.com/mhaskar/Octopus
         $string19 = /octopus\.py\s/ nocase ascii wide

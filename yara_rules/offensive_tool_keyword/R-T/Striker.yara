@@ -16,16 +16,16 @@ rule Striker
         $string2 = /\.striker\.local/ nocase ascii wide
         // Description: Striker is a simple Command and Control (C2) program.
         // Reference: https://github.com/4g3nt47/Striker
-        $string3 = /\/agent\/C\/src\// nocase ascii wide
+        $string3 = "/agent/C/src/" nocase ascii wide
         // Description: Striker is a simple Command and Control (C2) program.
         // Reference: https://github.com/4g3nt47/Striker
         $string4 = /\/redirector\/redirector\.py/ nocase ascii wide
         // Description: Striker is a simple Command and Control (C2) program.
         // Reference: https://github.com/4g3nt47/Striker
-        $string5 = /\/sites\-available\/striker/ nocase ascii wide
+        $string5 = "/sites-available/striker" nocase ascii wide
         // Description: Striker is a simple Command and Control (C2) program.
         // Reference: https://github.com/4g3nt47/Striker
-        $string6 = /\/sites\-enabled\/striker/ nocase ascii wide
+        $string6 = "/sites-enabled/striker" nocase ascii wide
         // Description: Striker is a simple Command and Control (C2) program.
         // Reference: https://github.com/4g3nt47/Striker
         $string7 = /\/striker\.c/ nocase ascii wide
@@ -37,10 +37,10 @@ rule Striker
         $string9 = /\/striker\.local/ nocase ascii wide
         // Description: Striker is a simple Command and Control (C2) program.
         // Reference: https://github.com/4g3nt47/Striker
-        $string10 = /4g3nt47\/Striker/ nocase ascii wide
+        $string10 = "4g3nt47/Striker" nocase ascii wide
         // Description: Striker is a simple Command and Control (C2) program.
         // Reference: https://github.com/4g3nt47/Striker
-        $string11 = /bin\/striker/ nocase ascii wide
+        $string11 = "bin/striker" nocase ascii wide
         // Description: Striker is a simple Command and Control (C2) program.
         // Reference: https://github.com/4g3nt47/Striker
         $string12 = /c2\.striker\./ nocase ascii wide
@@ -58,7 +58,7 @@ rule Striker
         $string16 = /src\/obfuscator\.c/ nocase ascii wide
         // Description: Striker is a simple Command and Control (C2) program.
         // Reference: https://github.com/4g3nt47/Striker
-        $string17 = /VITE_STRIKER_API/ nocase ascii wide
+        $string17 = "VITE_STRIKER_API" nocase ascii wide
 
     condition:
         any of them

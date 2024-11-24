@@ -13,7 +13,7 @@ rule TokenPlayer
         $string1 = /\s\-\-maketoken\s\-\-username\s.{0,1000}\s\-\-password\s.{0,1000}\s\-\-domain\s/ nocase ascii wide
         // Description: Manipulating and Abusing Windows Access Tokens
         // Reference: https://github.com/S1ckB0y1337/TokenPlayer
-        $string2 = /\s\-\-spoofppid\s\-\-ppid\s/ nocase ascii wide
+        $string2 = " --spoofppid --ppid " nocase ascii wide
         // Description: Manipulating and Abusing Windows Access Tokens
         // Reference: https://github.com/S1ckB0y1337/TokenPlayer
         $string3 = /\sUAC\-TokenMagic\.ps1/ nocase ascii wide
@@ -52,13 +52,13 @@ rule TokenPlayer
         $string14 = /\]Spawning\sProcess\swith\sSpoofed\sParent/ nocase ascii wide
         // Description: Manipulating and Abusing Windows Access Tokens
         // Reference: https://github.com/S1ckB0y1337/TokenPlayer
-        $string15 = /0ADFD1F0\-7C15\-4A22\-87B4\-F67E046ECD96/ nocase ascii wide
+        $string15 = "0ADFD1F0-7C15-4A22-87B4-F67E046ECD96" nocase ascii wide
         // Description: Manipulating and Abusing Windows Access Tokens
         // Reference: https://github.com/S1ckB0y1337/TokenPlayer
-        $string16 = /95d19ae58bbd6b38b4988fae5c7b514c8451a15e940f1392bcf1f93374364054/ nocase ascii wide
+        $string16 = "95d19ae58bbd6b38b4988fae5c7b514c8451a15e940f1392bcf1f93374364054" nocase ascii wide
         // Description: Manipulating and Abusing Windows Access Tokens
         // Reference: https://github.com/S1ckB0y1337/TokenPlayer
-        $string17 = /S1ckB0y1337\/TokenPlayer/ nocase ascii wide
+        $string17 = "S1ckB0y1337/TokenPlayer" nocase ascii wide
         // Description: Manipulating and Abusing Windows Access Tokens
         // Reference: https://github.com/S1ckB0y1337/TokenPlayer
         $string18 = /TokenPlayer\-v0\.3\.exe/ nocase ascii wide

@@ -10,7 +10,7 @@ rule ShadowForgeC2
     strings:
         // Description: ShadowForge Command & Control - Harnessing the power of Zoom API - control a compromised Windows Machine from your Zoom Chats.
         // Reference: https://github.com/0xEr3bus/ShadowForgeC2
-        $string1 = /\/ShadowForgeC2/ nocase ascii wide
+        $string1 = "/ShadowForgeC2" nocase ascii wide
         // Description: ShadowForge Command & Control - Harnessing the power of Zoom API - control a compromised Windows Machine from your Zoom Chats.
         // Reference: https://github.com/0xEr3bus/ShadowForgeC2
         $string2 = /cmd_powershell\.cpp/ nocase ascii wide
@@ -22,19 +22,19 @@ rule ShadowForgeC2
         $string4 = /dist\\shadow\.exe/ nocase ascii wide
         // Description: ShadowForge Command & Control - Harnessing the power of Zoom API - control a compromised Windows Machine from your Zoom Chats.
         // Reference: https://github.com/0xEr3bus/ShadowForgeC2
-        $string5 = /generate\sexe\sShadow/ nocase ascii wide
+        $string5 = "generate exe Shadow" nocase ascii wide
         // Description: ShadowForge Command & Control - Harnessing the power of Zoom API - control a compromised Windows Machine from your Zoom Chats.
         // Reference: https://github.com/0xEr3bus/ShadowForgeC2
-        $string6 = /import\sShadowForgeHome/ nocase ascii wide
+        $string6 = "import ShadowForgeHome" nocase ascii wide
         // Description: ShadowForge Command & Control - Harnessing the power of Zoom API - control a compromised Windows Machine from your Zoom Chats.
         // Reference: https://github.com/0xEr3bus/ShadowForgeC2
         $string7 = /ShadowForge\.py/ nocase ascii wide
         // Description: ShadowForge Command & Control - Harnessing the power of Zoom API - control a compromised Windows Machine from your Zoom Chats.
         // Reference: https://github.com/0xEr3bus/ShadowForgeC2
-        $string8 = /ShadowForgeC2\-main/ nocase ascii wide
+        $string8 = "ShadowForgeC2-main" nocase ascii wide
         // Description: ShadowForge Command & Control - Harnessing the power of Zoom API - control a compromised Windows Machine from your Zoom Chats.
         // Reference: https://github.com/0xEr3bus/ShadowForgeC2
-        $string9 = /shell\swhoami\s\/user/ nocase ascii wide
+        $string9 = "shell whoami /user" nocase ascii wide
         // Description: ShadowForge Command & Control - Harnessing the power of Zoom API - control a compromised Windows Machine from your Zoom Chats.
         // Reference: https://github.com/0xEr3bus/ShadowForgeC2
         $string10 = /teamServer.{0,100}ZoomAPI\.py/ nocase ascii wide

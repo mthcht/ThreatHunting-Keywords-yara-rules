@@ -25,22 +25,22 @@ rule LTProxy
         $string5 = /\\LTProxy\-main/ nocase ascii wide
         // Description: Linux Transparent Proxy (Similar to Proxifiter)
         // Reference: https://github.com/L-codes/LTProxy
-        $string6 = /ac5f344727467b6ad9743b8ffa2646ed73180dbdb97224feec6c54c5160a1984/ nocase ascii wide
+        $string6 = "ac5f344727467b6ad9743b8ffa2646ed73180dbdb97224feec6c54c5160a1984" nocase ascii wide
         // Description: Linux Transparent Proxy (Similar to Proxifiter)
         // Reference: https://github.com/L-codes/LTProxy
         $string7 = /ipt2socks\s\-R\s\-n\s9999\s\-j\s50\s\-u\s.{0,100}\s\-s\s.{0,100}\s\-l\s/ nocase ascii wide
         // Description: Linux Transparent Proxy (Similar to Proxifiter)
         // Reference: https://github.com/L-codes/LTProxy
-        $string8 = /L\-codes\/LTProxy/ nocase ascii wide
+        $string8 = "L-codes/LTProxy" nocase ascii wide
         // Description: Linux Transparent Proxy (Similar to Proxifiter)
         // Reference: https://github.com/L-codes/LTProxy
-        $string9 = /ltproxy\srestart/ nocase ascii wide
+        $string9 = "ltproxy restart" nocase ascii wide
         // Description: Linux Transparent Proxy (Similar to Proxifiter)
         // Reference: https://github.com/L-codes/LTProxy
-        $string10 = /ltproxy\sstart/ nocase ascii wide
+        $string10 = "ltproxy start" nocase ascii wide
         // Description: Linux Transparent Proxy (Similar to Proxifiter)
         // Reference: https://github.com/L-codes/LTProxy
-        $string11 = /ltproxy\sstop/ nocase ascii wide
+        $string11 = "ltproxy stop" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

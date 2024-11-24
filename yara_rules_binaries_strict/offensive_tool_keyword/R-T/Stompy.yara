@@ -46,13 +46,13 @@ rule Stompy
         $string12 = /\\Stompy\-main\\/ nocase ascii wide
         // Description: Timestomp Tool to flatten MAC times with a specific timestamp
         // Reference: https://github.com/ZephrFish/Stompy
-        $string13 = /784F8029\-4D72\-4363\-9638\-5A8D11545494/ nocase ascii wide
+        $string13 = "784F8029-4D72-4363-9638-5A8D11545494" nocase ascii wide
         // Description: Timestomp Tool to flatten MAC times with a specific timestamp
         // Reference: https://github.com/ZephrFish/Stompy
         $string14 = /build\sGoStompy\.go/ nocase ascii wide
         // Description: Timestomp Tool to flatten MAC times with a specific timestamp
         // Reference: https://github.com/ZephrFish/Stompy
-        $string15 = /Invoke\-Stompy/ nocase ascii wide
+        $string15 = "Invoke-Stompy" nocase ascii wide
         // Description: Timestomp Tool to flatten MAC times with a specific timestamp
         // Reference: https://github.com/ZephrFish/Stompy
         $string16 = /StompySharps\.csproj/ nocase ascii wide
@@ -64,7 +64,7 @@ rule Stompy
         $string18 = /StompySharps\.sln/ nocase ascii wide
         // Description: Timestomp Tool to flatten MAC times with a specific timestamp
         // Reference: https://github.com/ZephrFish/Stompy
-        $string19 = /ZephrFish\/Stompy/ nocase ascii wide
+        $string19 = "ZephrFish/Stompy" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

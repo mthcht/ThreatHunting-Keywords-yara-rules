@@ -16,7 +16,7 @@ rule Get_WmiObject
         $string2 = /Get\-WmiObject\s\-Namespace\s\\"root\\directory\\ldap\\"\s\-Class\sds_user\s/ nocase ascii wide
         // Description: Get logged on user on remote host with Get-WmiObject
         // Reference: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-wmiobject?view=powershell-5.1
-        $string3 = /Get\-WmiObject\swin32_loggedonuser\s\-ComputerName\s/ nocase ascii wide
+        $string3 = "Get-WmiObject win32_loggedonuser -ComputerName " nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

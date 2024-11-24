@@ -13,16 +13,16 @@ rule hyperion
         $string1 = /\/hyperion\.exe/ nocase ascii wide
         // Description: A runtime PE-Crypter - The crypter is started via the command line and encrypts an input executable with AES-128. The encrypted file decrypts itself on startup (bruteforcing the AES key which may take a few seconds)
         // Reference: https://www.kali.org/tools/hyperion/
-        $string2 = /\/windows\-resources\/hyperion/ nocase ascii wide
+        $string2 = "/windows-resources/hyperion" nocase ascii wide
         // Description: A runtime PE-Crypter - The crypter is started via the command line and encrypts an input executable with AES-128. The encrypted file decrypts itself on startup (bruteforcing the AES key which may take a few seconds)
         // Reference: https://www.kali.org/tools/hyperion/
         $string3 = /\\hyperion\.exe/ nocase ascii wide
         // Description: A runtime PE-Crypter - The crypter is started via the command line and encrypts an input executable with AES-128. The encrypted file decrypts itself on startup (bruteforcing the AES key which may take a few seconds)
         // Reference: https://www.kali.org/tools/hyperion/
-        $string4 = /apt\sinstall\shyperion/ nocase ascii wide
+        $string4 = "apt install hyperion" nocase ascii wide
         // Description: A runtime PE-Crypter - The crypter is started via the command line and encrypts an input executable with AES-128. The encrypted file decrypts itself on startup (bruteforcing the AES key which may take a few seconds)
         // Reference: https://www.kali.org/tools/hyperion/
-        $string5 = /Hyperion\sPE\-Crypter/ nocase ascii wide
+        $string5 = "Hyperion PE-Crypter" nocase ascii wide
         // Description: A runtime PE-Crypter - The crypter is started via the command line and encrypts an input executable with AES-128. The encrypted file decrypts itself on startup (bruteforcing the AES key which may take a few seconds)
         // Reference: https://www.kali.org/tools/hyperion/
         $string6 = /hyperion\.exe\s/ nocase ascii wide

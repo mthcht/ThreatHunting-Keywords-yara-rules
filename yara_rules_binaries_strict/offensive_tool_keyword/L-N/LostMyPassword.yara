@@ -19,16 +19,16 @@ rule LostMyPassword
         $string3 = /\\LostMyPassword32bit/ nocase ascii wide
         // Description: Nirsoft tool that allows you to recover a lost password if it's stored by a software installed on your system
         // Reference: https://www.nirsoft.net/alpha/lostmypassword-x64.zip
-        $string4 = /\>LostMyPassword\</ nocase ascii wide
+        $string4 = ">LostMyPassword<" nocase ascii wide
         // Description: Nirsoft tool that allows you to recover a lost password if it's stored by a software installed on your system
         // Reference: https://www.nirsoft.net/alpha/lostmypassword-x64.zip
-        $string5 = /73882b9c273a72eb49fc2854de8b37ef3012115c0e62267acb8b955a681ec312/ nocase ascii wide
+        $string5 = "73882b9c273a72eb49fc2854de8b37ef3012115c0e62267acb8b955a681ec312" nocase ascii wide
         // Description: Nirsoft tool that allows you to recover a lost password if it's stored by a software installed on your system
         // Reference: https://www.nirsoft.net/alpha/lostmypassword-x64.zip
-        $string6 = /745bdc69fd7d712f65419c126b3ab5524fb96a511a21fea2d2b261607b3b2c55/ nocase ascii wide
+        $string6 = "745bdc69fd7d712f65419c126b3ab5524fb96a511a21fea2d2b261607b3b2c55" nocase ascii wide
         // Description: Nirsoft tool that allows you to recover a lost password if it's stored by a software installed on your system
         // Reference: https://www.nirsoft.net/alpha/lostmypassword-x64.zip
-        $string7 = /7da421d00cd50570a79a82803c170d043fa3b2253ae2f0697e103072c34d39f1/ nocase ascii wide
+        $string7 = "7da421d00cd50570a79a82803c170d043fa3b2253ae2f0697e103072c34d39f1" nocase ascii wide
         // Description: Nirsoft tool that allows you to recover a lost password if it's stored by a software installed on your system
         // Reference: https://www.nirsoft.net/alpha/lostmypassword-x64.zip
         $string8 = /LostMyPassword\.exe/ nocase ascii wide
@@ -40,7 +40,7 @@ rule LostMyPassword
         $string10 = /LostMyPasswordx64\.zip/ nocase ascii wide
         // Description: Nirsoft tool that allows you to recover a lost password if it's stored by a software installed on your system
         // Reference: https://www.nirsoft.net/alpha/lostmypassword-x64.zip
-        $string11 = /Search\syour\spasswords\sas\snormal\suser/ nocase ascii wide
+        $string11 = "Search your passwords as normal user" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

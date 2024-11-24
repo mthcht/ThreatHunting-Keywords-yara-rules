@@ -13,7 +13,7 @@ rule Ares
         $string1 = /\s0\.0\.0\.0\:8080\s\-\-threads/ nocase ascii wide
         // Description: Python C2 botnet and backdoor 
         // Reference: https://github.com/sweetsoftware/Ares
-        $string2 = /\shttp\:\/\/localhost\:8080\s\-o\sagent/ nocase ascii wide
+        $string2 = " http://localhost:8080 -o agent" nocase ascii wide
         // Description: Python C2 botnet and backdoor 
         // Reference: https://github.com/sweetsoftware/Ares
         $string3 = /\/Ares\.git/ nocase ascii wide
@@ -31,13 +31,13 @@ rule Ares
         $string7 = /autostart\/ares\.desktop/ nocase ascii wide
         // Description: Python C2 botnet and backdoor 
         // Reference: https://github.com/sweetsoftware/Ares
-        $string8 = /gunicorn\sares\:app/ nocase ascii wide
+        $string8 = "gunicorn ares:app" nocase ascii wide
         // Description: Python C2 botnet and backdoor 
         // Reference: https://github.com/sweetsoftware/Ares
         $string9 = /sqlite\:\/\/\/ares\.db/ nocase ascii wide
         // Description: Python C2 botnet and backdoor 
         // Reference: https://github.com/sweetsoftware/Ares
-        $string10 = /sweetsoftware\/Ares/ nocase ascii wide
+        $string10 = "sweetsoftware/Ares" nocase ascii wide
 
     condition:
         any of them

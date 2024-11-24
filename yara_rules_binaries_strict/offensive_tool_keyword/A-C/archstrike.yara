@@ -10,7 +10,7 @@ rule archstrike
     strings:
         // Description: Arch Linux repo containing lots of exploitation tools for pentesters
         // Reference: https://archstrike.org/
-        $string1 = /ArchStrike/ nocase ascii wide
+        $string1 = "ArchStrike" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

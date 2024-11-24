@@ -10,13 +10,13 @@ rule blackcat_ransomware
     strings:
         // Description: BlackCat Ransomware behavior
         // Reference: https://www.sentinelone.com/labs/blackcat-ransomware-highly-configurable-rust-driven-raas-on-the-prowl-for-victims/
-        $string1 = /\s\-\-drop\-drag\-and\-drop\-target/ nocase ascii wide
+        $string1 = " --drop-drag-and-drop-target" nocase ascii wide
         // Description: BlackCat Ransomware behavior
         // Reference: https://www.sentinelone.com/labs/blackcat-ransomware-highly-configurable-rust-driven-raas-on-the-prowl-for-victims/
-        $string2 = /\s\-\-no\-vm\-kill/ nocase ascii wide
+        $string2 = " --no-vm-kill" nocase ascii wide
         // Description: BlackCat Ransomware behavior
         // Reference: https://www.sentinelone.com/labs/blackcat-ransomware-highly-configurable-rust-driven-raas-on-the-prowl-for-victims/
-        $string3 = /\s\-\-no\-vm\-snapshot\-kill/ nocase ascii wide
+        $string3 = " --no-vm-snapshot-kill" nocase ascii wide
         // Description: BlackCat Ransomware behavior
         // Reference: https://www.sentinelone.com/labs/blackcat-ransomware-highly-configurable-rust-driven-raas-on-the-prowl-for-victims/
         $string4 = /bcdedit\.exe\s\/set\s\{default\}\srecoveryenabled\sNo/ nocase ascii wide

@@ -25,13 +25,13 @@ rule combine_harvester
         $string5 = /\\harvest\.cmb/ nocase ascii wide
         // Description: Rust in-memory dumper
         // Reference: https://github.com/m3f157O/combine_harvester
-        $string6 = /23E06BF12C5BE7641EF89F557C3F6600E1F3881F8DCE7279C2112279E7EC3B988E1A85EC350149007DE78CE5566FCBD18F630D2CDB78C76AA06F2B121F0B3701/ nocase ascii wide
+        $string6 = "23E06BF12C5BE7641EF89F557C3F6600E1F3881F8DCE7279C2112279E7EC3B988E1A85EC350149007DE78CE5566FCBD18F630D2CDB78C76AA06F2B121F0B3701" nocase ascii wide
         // Description: Rust in-memory dumper
         // Reference: https://github.com/m3f157O/combine_harvester
-        $string7 = /combine_harvester\-main/ nocase ascii wide
+        $string7 = "combine_harvester-main" nocase ascii wide
         // Description: Rust in-memory dumper
         // Reference: https://github.com/m3f157O/combine_harvester
-        $string8 = /m3f157O\/combine_harvester/ nocase ascii wide
+        $string8 = "m3f157O/combine_harvester" nocase ascii wide
 
     condition:
         any of them

@@ -13,10 +13,10 @@ rule daphne
         $string1 = /\/daphne\.git/ nocase ascii wide
         // Description: evade auditd by tampering via ptrace
         // Reference: https://github.com/codewhitesec/daphne
-        $string2 = /\/daphne\-x64/ nocase ascii wide
+        $string2 = "/daphne-x64" nocase ascii wide
         // Description: evade auditd by tampering via ptrace
         // Reference: https://github.com/codewhitesec/daphne
-        $string3 = /codewhitesec\/daphne/ nocase ascii wide
+        $string3 = "codewhitesec/daphne" nocase ascii wide
         // Description: evade auditd by tampering via ptrace
         // Reference: https://github.com/codewhitesec/daphne
         $string4 = /daphne\-main\.zip/ nocase ascii wide

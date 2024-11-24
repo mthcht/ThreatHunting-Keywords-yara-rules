@@ -109,7 +109,7 @@ rule AlanFramework
         $string33 = /dump_process\(.{0,1000}lsass\.exe.{0,1000}\)/ nocase ascii wide
         // Description: Alan Framework is a post-exploitation framework useful during red-team activities.
         // Reference: https://github.com/enkomio/AlanFramework
-        $string34 = /enkomio\/AlanFramework/ nocase ascii wide
+        $string34 = "enkomio/AlanFramework" nocase ascii wide
         // Description: Alan Framework is a post-exploitation framework useful during red-team activities.
         // Reference: https://github.com/enkomio/AlanFramework
         $string35 = /ES\.Alan\.Core\// nocase ascii wide
@@ -160,13 +160,13 @@ rule AlanFramework
         $string50 = /stagerx64\.bin/ nocase ascii wide
         // Description: Alan Framework is a post-exploitation framework useful during red-team activities.
         // Reference: https://github.com/enkomio/AlanFramework
-        $string51 = /test_nanodump_exe/ nocase ascii wide
+        $string51 = "test_nanodump_exe" nocase ascii wide
         // Description: Alan Framework is a post-exploitation framework useful during red-team activities.
         // Reference: https://github.com/enkomio/AlanFramework
-        $string52 = /windows_agent\/asm\/x64\/alter_pe_sections/ nocase ascii wide
+        $string52 = "windows_agent/asm/x64/alter_pe_sections" nocase ascii wide
         // Description: Alan Framework is a post-exploitation framework useful during red-team activities.
         // Reference: https://github.com/enkomio/AlanFramework
-        $string53 = /windows_agent\/asm\/x86\/alter_pe_sections/ nocase ascii wide
+        $string53 = "windows_agent/asm/x86/alter_pe_sections" nocase ascii wide
         // Description: Alan Framework is a post-exploitation framework useful during red-team activities.
         // Reference: https://github.com/enkomio/AlanFramework
         $string54 = /windows_agent\/dll_main\./ nocase ascii wide
@@ -199,16 +199,16 @@ rule AlanFramework
         $string63 = /x86PELoader\/.{0,1000}\.exe/ nocase ascii wide
         // Description: Alan Framework is a post-exploitation framework useful during red-team activities.
         // Reference: https://github.com/enkomio/AlanFramework
-        $string64 = /x86PELoader\/test_agent_dll/ nocase ascii wide
+        $string64 = "x86PELoader/test_agent_dll" nocase ascii wide
         // Description: Alan Framework is a post-exploitation framework useful during red-team activities.
         // Reference: https://github.com/enkomio/AlanFramework
-        $string65 = /x86PELoader\/test_agent_exe/ nocase ascii wide
+        $string65 = "x86PELoader/test_agent_exe" nocase ascii wide
         // Description: Alan Framework is a post-exploitation framework useful during red-team activities.
         // Reference: https://github.com/enkomio/AlanFramework
-        $string66 = /x86PELoader\/test_proxy_dll/ nocase ascii wide
+        $string66 = "x86PELoader/test_proxy_dll" nocase ascii wide
         // Description: Alan Framework is a post-exploitation framework useful during red-team activities.
         // Reference: https://github.com/enkomio/AlanFramework
-        $string67 = /x86PELoader\/test_proxy_exe/ nocase ascii wide
+        $string67 = "x86PELoader/test_proxy_exe" nocase ascii wide
 
     condition:
         any of them

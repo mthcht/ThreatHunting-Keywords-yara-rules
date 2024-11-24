@@ -13,7 +13,7 @@ rule Mara
         $string1 = /\smain\.c\s\slog\.c\sshelljack\.c\s/ nocase ascii wide
         // Description: Mara is a userland pty/tty sniffer
         // Reference: https://github.com/io-tl/Mara/
-        $string2 = /\/io\-tl\/Mara/ nocase ascii wide
+        $string2 = "/io-tl/Mara" nocase ascii wide
         // Description: Mara is a userland pty/tty sniffer
         // Reference: https://github.com/io-tl/Mara/
         $string3 = /\/Mara\.git/ nocase ascii wide

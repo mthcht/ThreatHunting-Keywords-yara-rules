@@ -19,7 +19,7 @@ rule SharpMove
         $string3 = /\\SharpMove\.exe/ nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string4 = /\'Product\'\>SharpMove/ nocase ascii wide
+        $string4 = "'Product'>SharpMove" nocase ascii wide
 
     condition:
         any of them

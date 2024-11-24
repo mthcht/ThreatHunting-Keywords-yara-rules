@@ -10,16 +10,16 @@ rule smc
     strings:
         // Description: Symantec Client Management Component or (smc.exe) is a command-line utility that can manage (enable - disable - export) different components of SEP
         // Reference: https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Antivirus/Symantec%20Endpoint%20Protection#threat-actor-ops-taops
-        $string1 = /smc\s\-disable\s\-mem/ nocase ascii wide
+        $string1 = "smc -disable -mem" nocase ascii wide
         // Description: Symantec Client Management Component or (smc.exe) is a command-line utility that can manage (enable - disable - export) different components of SEP
         // Reference: https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Antivirus/Symantec%20Endpoint%20Protection#threat-actor-ops-taops
-        $string2 = /smc\s\-disable\s\-ntp/ nocase ascii wide
+        $string2 = "smc -disable -ntp" nocase ascii wide
         // Description: Symantec Client Management Component or (smc.exe) is a command-line utility that can manage (enable - disable - export) different components of SEP
         // Reference: https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Antivirus/Symantec%20Endpoint%20Protection#threat-actor-ops-taops
-        $string3 = /smc\s\-disable\s\-wss/ nocase ascii wide
+        $string3 = "smc -disable -wss" nocase ascii wide
         // Description: Symantec Client Management Component or (smc.exe) is a command-line utility that can manage (enable - disable - export) different components of SEP
         // Reference: https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Antivirus/Symantec%20Endpoint%20Protection#threat-actor-ops-taops
-        $string4 = /smc\s\-enable\s\-gem/ nocase ascii wide
+        $string4 = "smc -enable -gem" nocase ascii wide
         // Description: Symantec Client Management Component or (smc.exe) is a command-line utility that can manage (enable - disable - export) different components of SEP
         // Reference: https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Antivirus/Symantec%20Endpoint%20Protection#threat-actor-ops-taops
         $string5 = /smc\.exe\s\-disable\s\-mem/ nocase ascii wide

@@ -1435,7 +1435,7 @@ rule nmap
         $string475 = /\ssamba\-vuln\-cve\-2012\-1182\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://github.com/cldrn/nmap-nse-scripts/tree/master/scripts
-        $string476 = /\s\-\-script\ssmb\-vuln\-/ nocase ascii wide
+        $string476 = " --script smb-vuln-" nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
         $string477 = /\sservicetags\.nse/ nocase ascii wide
@@ -1723,7 +1723,7 @@ rule nmap
         $string571 = /\ssupermicro\-ipmi\-conf\.nse/ nocase ascii wide
         // Description: Nmap (Network Mapper) is a free and open source utility for network discovery and security auditing
         // Reference: https://nmap.org/book/nse-usage.html
-        $string572 = /\s\-sV\s\-\-script\svulners\s/ nocase ascii wide
+        $string572 = " -sV --script vulners " nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
         $string573 = /\ssvn\-brute\.nse/ nocase ascii wide
@@ -3724,7 +3724,7 @@ rule nmap
         $string1238 = /\/xmpp\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1239 = /krb5\-enum\-users\s/ nocase ascii wide
+        $string1239 = "krb5-enum-users " nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
         $string1240 = /krb5\-enum\-users\./ nocase ascii wide

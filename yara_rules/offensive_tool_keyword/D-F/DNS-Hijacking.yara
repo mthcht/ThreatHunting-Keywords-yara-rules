@@ -13,7 +13,7 @@ rule DNS_Hijacking
         $string1 = /\/DNS\-Hijacking\.git/ nocase ascii wide
         // Description: DNS Hijacking in UNIX/Linux System by using raw socket and pcap
         // Reference: https://github.com/DyeKuu/DNS-Hijacking
-        $string2 = /DyeKuu\/DNS\-Hijacking/ nocase ascii wide
+        $string2 = "DyeKuu/DNS-Hijacking" nocase ascii wide
 
     condition:
         any of them

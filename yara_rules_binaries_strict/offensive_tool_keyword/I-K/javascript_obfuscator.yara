@@ -10,7 +10,7 @@ rule javascript_obfuscator
     strings:
         // Description: JavaScript Obfuscator is a powerful free obfuscator for JavaScript. containing a variety of features which provide protection for your source code.
         // Reference: https://github.com/javascript-obfuscator/javascript-obfuscator
-        $string1 = /javascript\-obfuscator/ nocase ascii wide
+        $string1 = "javascript-obfuscator" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

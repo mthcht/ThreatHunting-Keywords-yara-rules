@@ -10,13 +10,13 @@ rule Google_Remote_Desktop
     strings:
         // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string1 = /\schrome\-remote\-desktop\@/ nocase ascii wide
+        $string1 = " chrome-remote-desktop@" nocase ascii wide
         // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
         $string2 = /\.chrome\-remote\-desktop\-session/ nocase ascii wide
         // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string3 = /\/system\/chrome\-remote\-desktop\@/ nocase ascii wide
+        $string3 = "/system/chrome-remote-desktop@" nocase ascii wide
         // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
         $string4 = /\\Chrome\sRemote\sDesktop\\host\.json/ nocase ascii wide
@@ -43,16 +43,16 @@ rule Google_Remote_Desktop
         $string11 = /\\remoting_start_host\.exe/ nocase ascii wide
         // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string12 = /\<Data\>Product\:\sChrome\sRemote\sDesktop\sHost/ nocase ascii wide
+        $string12 = "<Data>Product: Chrome Remote Desktop Host" nocase ascii wide
         // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string13 = /\<Provider\sName\=\"chromoting\"\s\/\>/ nocase ascii wide
+        $string13 = "<Provider Name=\"chromoting\" />" nocase ascii wide
         // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
         $string14 = /Channel\sIP\sfor\sclient\:\s.{0,1000}\@gmail\.com\/chromoting/ nocase ascii wide
         // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string15 = /Chrome\sremote\sdesktop\sinstallation\scompleted/ nocase ascii wide
+        $string15 = "Chrome remote desktop installation completed" nocase ascii wide
         // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
         $string16 = /chrome\-remote\-desktop\.service/ nocase ascii wide
@@ -64,10 +64,10 @@ rule Google_Remote_Desktop
         $string18 = /chromeremotedesktophost\.msi/ nocase ascii wide
         // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string19 = /export\sCHROME_REMOTE_DESKTOP_DEFAULT_DESKTOP_SIZES/ nocase ascii wide
+        $string19 = "export CHROME_REMOTE_DESKTOP_DEFAULT_DESKTOP_SIZES" nocase ascii wide
         // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string20 = /\-Force\sStop\-Process\s\-Name\sremote_webauthn/ nocase ascii wide
+        $string20 = "-Force Stop-Process -Name remote_webauthn" nocase ascii wide
         // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
         $string21 = /google\-chrome\-stable_current_amd64\.deb/ nocase ascii wide
@@ -79,7 +79,7 @@ rule Google_Remote_Desktop
         $string23 = /https\:\/\/remotedesktop\.google\.com\/headless/ nocase ascii wide
         // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string24 = /inomeogfingihgjfjlpeplalcfajhgai/ nocase ascii wide
+        $string24 = "inomeogfingihgjfjlpeplalcfajhgai" nocase ascii wide
         // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
         $string25 = /remotedesktop\.google\.com\/access/ nocase ascii wide
@@ -88,16 +88,16 @@ rule Google_Remote_Desktop
         $string26 = /remotedesktop\.google\.com\/support/ nocase ascii wide
         // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string27 = /Stop\-Process\s\-Force\s\-Name\sremote_assistance_host/ nocase ascii wide
+        $string27 = "Stop-Process -Force -Name remote_assistance_host" nocase ascii wide
         // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string28 = /Stop\-Process\s\-Force\s\-Name\sremote_assistance_host_uiaccess/ nocase ascii wide
+        $string28 = "Stop-Process -Force -Name remote_assistance_host_uiaccess" nocase ascii wide
         // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string29 = /Stop\-Process\s\-Force\s\-Name\sremoting_native_messaging_host/ nocase ascii wide
+        $string29 = "Stop-Process -Force -Name remoting_native_messaging_host" nocase ascii wide
         // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string30 = /SYSLOG_IDENTIFIER\=chrome\-remote\-desktop/ nocase ascii wide
+        $string30 = "SYSLOG_IDENTIFIER=chrome-remote-desktop" nocase ascii wide
 
     condition:
         any of them

@@ -19,13 +19,13 @@ rule EDRSandBlast
         $string3 = /\\ntdlol\.txt/ nocase ascii wide
         // Description: EDRSandBlast is a tool written in C that weaponize a vulnerable signed driver to bypass EDR detections
         // Reference: https://github.com/wavestone-cdt/EDRSandblast
-        $string4 = /04DFB6E4\-809E\-4C35\-88A1\-2CC5F1EBFEBD/ nocase ascii wide
+        $string4 = "04DFB6E4-809E-4C35-88A1-2CC5F1EBFEBD" nocase ascii wide
         // Description: EDRSandBlast is a tool written in C that weaponize a vulnerable signed driver to bypass EDR detections
         // Reference: https://github.com/wavestone-cdt/EDRSandblast
-        $string5 = /3A2FCB56\-01A3\-41B3\-BDAA\-B25F45784B23/ nocase ascii wide
+        $string5 = "3A2FCB56-01A3-41B3-BDAA-B25F45784B23" nocase ascii wide
         // Description: EDRSandBlast is a tool written in C that weaponize a vulnerable signed driver to bypass EDR detections
         // Reference: https://github.com/wavestone-cdt/EDRSandblast
-        $string6 = /7E3E2ECE\-D1EB\-43C6\-8C83\-B52B7571954B/ nocase ascii wide
+        $string6 = "7E3E2ECE-D1EB-43C6-8C83-B52B7571954B" nocase ascii wide
         // Description: EDRSandBlast is a tool written in C that weaponize a vulnerable signed driver to bypass EDR detections
         // Reference: https://github.com/wavestone-cdt/EDRSandblast
         $string7 = /EDRSandblast\.c/ nocase ascii wide
@@ -37,19 +37,19 @@ rule EDRSandBlast
         $string9 = /EDRSandblast\.sln/ nocase ascii wide
         // Description: EDRSandBlast is a tool written in C that weaponize a vulnerable signed driver to bypass EDR detections
         // Reference: https://github.com/wavestone-cdt/EDRSandblast
-        $string10 = /EDRSandblast_CLI/ nocase ascii wide
+        $string10 = "EDRSandblast_CLI" nocase ascii wide
         // Description: EDRSandBlast is a tool written in C that weaponize a vulnerable signed driver to bypass EDR detections
         // Reference: https://github.com/wavestone-cdt/EDRSandblast
-        $string11 = /EDRSandblast_LsassDump/ nocase ascii wide
+        $string11 = "EDRSandblast_LsassDump" nocase ascii wide
         // Description: EDRSandBlast is a tool written in C that weaponize a vulnerable signed driver to bypass EDR detections
         // Reference: https://github.com/wavestone-cdt/EDRSandblast
-        $string12 = /EDRSandblast_StaticLibrary/ nocase ascii wide
+        $string12 = "EDRSandblast_StaticLibrary" nocase ascii wide
         // Description: EDRSandBlast is a tool written in C that weaponize a vulnerable signed driver to bypass EDR detections
         // Reference: https://github.com/wavestone-cdt/EDRSandblast
-        $string13 = /EDRSandblast\-master/ nocase ascii wide
+        $string13 = "EDRSandblast-master" nocase ascii wide
         // Description: EDRSandBlast is a tool written in C that weaponize a vulnerable signed driver to bypass EDR detections
         // Reference: https://github.com/wavestone-cdt/EDRSandblast
-        $string14 = /FFA0FDDE\-BE70\-49E4\-97DE\-753304EF1113/ nocase ascii wide
+        $string14 = "FFA0FDDE-BE70-49E4-97DE-753304EF1113" nocase ascii wide
         // Description: EDRSandBlast is a tool written in C that weaponize a vulnerable signed driver to bypass EDR detections
         // Reference: https://github.com/wavestone-cdt/EDRSandblast
         $string15 = /lsass\.exe.{0,1000}C\:\\temp\\tmp\.tmp/ nocase ascii wide
@@ -61,7 +61,7 @@ rule EDRSandBlast
         $string17 = /NtoskrnlOffsets\.csv/ nocase ascii wide
         // Description: EDRSandBlast is a tool written in C that weaponize a vulnerable signed driver to bypass EDR detections
         // Reference: https://github.com/wavestone-cdt/EDRSandblast
-        $string18 = /wavestone\-cdt\/EDRSandblast/ nocase ascii wide
+        $string18 = "wavestone-cdt/EDRSandblast" nocase ascii wide
         // Description: EDRSandBlast is a tool written in C that weaponize a vulnerable signed driver to bypass EDR detections
         // Reference: https://github.com/wavestone-cdt/EDRSandblast
         $string19 = /\-\-wdigest\-offsets\s.{0,1000}\.csv\s/ nocase ascii wide

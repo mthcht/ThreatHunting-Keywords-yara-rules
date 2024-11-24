@@ -10,7 +10,7 @@ rule pspy
     strings:
         // Description: Monitor linux processes without root permissions
         // Reference: https://github.com/DominicBreuker/pspy
-        $string1 = /\/bin\/pspsy/ nocase ascii wide
+        $string1 = "/bin/pspsy" nocase ascii wide
         // Description: Monitor linux processes without root permissions
         // Reference: https://github.com/DominicBreuker/pspy
         $string2 = /\/download\/v1\.1\.0\/pspy32/ nocase ascii wide
@@ -28,7 +28,7 @@ rule pspy
         $string6 = /\/download\/v1\.2\.1\/pspy64/ nocase ascii wide
         // Description: Monitor linux processes without root permissions
         // Reference: https://github.com/DominicBreuker/pspy
-        $string7 = /\/pspy\s\-/ nocase ascii wide
+        $string7 = "/pspy -" nocase ascii wide
         // Description: Monitor linux processes without root permissions
         // Reference: https://github.com/DominicBreuker/pspy
         $string8 = /\/pspy\.git/ nocase ascii wide
@@ -40,19 +40,19 @@ rule pspy
         $string10 = /\/pspy\.go/ nocase ascii wide
         // Description: Monitor linux processes without root permissions
         // Reference: https://github.com/DominicBreuker/pspy
-        $string11 = /\/pspy\/cmd/ nocase ascii wide
+        $string11 = "/pspy/cmd" nocase ascii wide
         // Description: Monitor linux processes without root permissions
         // Reference: https://github.com/DominicBreuker/pspy
-        $string12 = /\/pspy\/cmd\// nocase ascii wide
+        $string12 = "/pspy/cmd/" nocase ascii wide
         // Description: Monitor linux processes without root permissions
         // Reference: https://github.com/DominicBreuker/pspy
         $string13 = /\/pspy\/pspy\.go/ nocase ascii wide
         // Description: Monitor linux processes without root permissions
         // Reference: https://github.com/DominicBreuker/pspy
-        $string14 = /\/pspy32/ nocase ascii wide
+        $string14 = "/pspy32" nocase ascii wide
         // Description: Monitor linux processes without root permissions
         // Reference: https://github.com/DominicBreuker/pspy
-        $string15 = /\/pspy64/ nocase ascii wide
+        $string15 = "/pspy64" nocase ascii wide
         // Description: Monitor linux processes without root permissions
         // Reference: https://github.com/DominicBreuker/pspy
         $string16 = /\/psscanner\.go/ nocase ascii wide
@@ -73,52 +73,52 @@ rule pspy
         $string21 = /\\psscanner\\psscanner\.go/ nocase ascii wide
         // Description: Monitor linux processes without root permissions
         // Reference: https://github.com/DominicBreuker/pspy
-        $string22 = /3d770299898ab069e0a7f139ed0659991feeb17f73e55b398bf982932c200ef9/ nocase ascii wide
+        $string22 = "3d770299898ab069e0a7f139ed0659991feeb17f73e55b398bf982932c200ef9" nocase ascii wide
         // Description: Monitor linux processes without root permissions
         // Reference: https://github.com/DominicBreuker/pspy
         $string23 = /Complete\slog\sof\spspy\s\(may\scontain\scommands\srun\sin\sthis\stest\)\:/ nocase ascii wide
         // Description: Monitor linux processes without root permissions
         // Reference: https://github.com/DominicBreuker/pspy
-        $string24 = /docker\srun\s\-it\s\-\-rm\slocal\/pspy/ nocase ascii wide
+        $string24 = "docker run -it --rm local/pspy" nocase ascii wide
         // Description: Monitor linux processes without root permissions
         // Reference: https://github.com/DominicBreuker/pspy
-        $string25 = /DominicBreuker\/pspy/ nocase ascii wide
+        $string25 = "DominicBreuker/pspy" nocase ascii wide
         // Description: Monitor linux processes without root permissions
         // Reference: https://github.com/DominicBreuker/pspy
-        $string26 = /DominicBreuker\/pspy/ nocase ascii wide
+        $string26 = "DominicBreuker/pspy" nocase ascii wide
         // Description: Monitor linux processes without root permissions
         // Reference: https://github.com/DominicBreuker/pspy
-        $string27 = /pspy\s\-\sversion\:\s/ nocase ascii wide
+        $string27 = "pspy - version: " nocase ascii wide
         // Description: Monitor linux processes without root permissions
         // Reference: https://github.com/DominicBreuker/pspy
         $string28 = /pspy.{0,1000}psscanner/ nocase ascii wide
         // Description: Monitor linux processes without root permissions
         // Reference: https://github.com/DominicBreuker/pspy
-        $string29 = /pspy32\s\-/ nocase ascii wide
+        $string29 = "pspy32 -" nocase ascii wide
         // Description: Monitor linux processes without root permissions
         // Reference: https://github.com/DominicBreuker/pspy
-        $string30 = /pspy64\s\-/ nocase ascii wide
+        $string30 = "pspy64 -" nocase ascii wide
         // Description: Monitor linux processes without root permissions
         // Reference: https://github.com/DominicBreuker/pspy
-        $string31 = /pspy64\s\-p/ nocase ascii wide
+        $string31 = "pspy64 -p" nocase ascii wide
         // Description: Monitor linux processes without root permissions
         // Reference: https://github.com/DominicBreuker/pspy
-        $string32 = /pspy64\s\-r\s/ nocase ascii wide
+        $string32 = "pspy64 -r " nocase ascii wide
         // Description: Monitor linux processes without root permissions
         // Reference: https://github.com/DominicBreuker/pspy
-        $string33 = /pspy\-build\:latest/ nocase ascii wide
+        $string33 = "pspy-build:latest" nocase ascii wide
         // Description: Monitor linux processes without root permissions
         // Reference: https://github.com/DominicBreuker/pspy
-        $string34 = /pspy\-development\:latest/ nocase ascii wide
+        $string34 = "pspy-development:latest" nocase ascii wide
         // Description: Monitor linux processes without root permissions
         // Reference: https://github.com/DominicBreuker/pspy
-        $string35 = /pspy\-example\:latest/ nocase ascii wide
+        $string35 = "pspy-example:latest" nocase ascii wide
         // Description: Monitor linux processes without root permissions
         // Reference: https://github.com/DominicBreuker/pspy
-        $string36 = /pspy\-master/ nocase ascii wide
+        $string36 = "pspy-master" nocase ascii wide
         // Description: Monitor linux processes without root permissions
         // Reference: https://github.com/DominicBreuker/pspy
-        $string37 = /pspy\-testing\:latest/ nocase ascii wide
+        $string37 = "pspy-testing:latest" nocase ascii wide
 
     condition:
         any of them

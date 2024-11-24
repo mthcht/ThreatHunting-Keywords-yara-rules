@@ -40,16 +40,16 @@ rule Adamantium_Thief
         $string10 = /\\Stealer\\Stealer\\modules\\/ nocase ascii wide
         // Description: Decrypt chromium based browsers passwords - cookies - credit cards - history - bookmarks and autofill.
         // Reference: https://github.com/LimerBoy/Adamantium-Thief
-        $string11 = /Adamantium\-Thief\-master/ nocase ascii wide
+        $string11 = "Adamantium-Thief-master" nocase ascii wide
         // Description: Decrypt chromium based browsers passwords - cookies - credit cards - history - bookmarks and autofill.
         // Reference: https://github.com/LimerBoy/Adamantium-Thief
-        $string12 = /Coded\sby\sLimerBoy\s\<3/ nocase ascii wide
+        $string12 = "Coded by LimerBoy <3" nocase ascii wide
         // Description: Decrypt chromium based browsers passwords - cookies - credit cards - history - bookmarks and autofill.
         // Reference: https://github.com/LimerBoy/Adamantium-Thief
-        $string13 = /E6104BC9\-FEA9\-4EE9\-B919\-28156C1F2EDE/ nocase ascii wide
+        $string13 = "E6104BC9-FEA9-4EE9-B919-28156C1F2EDE" nocase ascii wide
         // Description: Decrypt chromium based browsers passwords - cookies - credit cards - history - bookmarks and autofill.
         // Reference: https://github.com/LimerBoy/Adamantium-Thief
-        $string14 = /LimerBoy\/Adamantium\-Thief/ nocase ascii wide
+        $string14 = "LimerBoy/Adamantium-Thief" nocase ascii wide
         // Description: Decrypt chromium based browsers passwords - cookies - credit cards - history - bookmarks and autofill.
         // Reference: https://github.com/LimerBoy/Adamantium-Thief
         $string15 = /Please\sselect\scommand\s\[PASSWORDS\/HISTORY\/COOKIES\/AUTOFILL\/CREDIT_CARDS\/BOOKMARKS\]/ nocase ascii wide

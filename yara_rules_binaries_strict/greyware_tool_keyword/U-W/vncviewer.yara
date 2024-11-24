@@ -10,10 +10,10 @@ rule vncviewer
     strings:
         // Description: VNCViewer is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: N/A
-        $string1 = /\>RealVNC\</ nocase ascii wide
+        $string1 = ">RealVNC<" nocase ascii wide
         // Description: VNCViewer is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: N/A
-        $string2 = /\>UltraVNC\sVNCViewer\</ nocase ascii wide
+        $string2 = ">UltraVNC VNCViewer<" nocase ascii wide
         // Description: SimpleHelp or VNCViewer is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
         $string3 = /ProgramData\\JWrapper\-Remote\sAccess\\.{0,100}\.exe/ nocase ascii wide

@@ -40,10 +40,10 @@ rule RunAsWinTcb
         $string10 = /\\RunAsWinTcb\\/ nocase ascii wide
         // Description: RunAsWinTcb uses an userland exploit to run a DLL with a protection level of WinTcb-Light.
         // Reference: https://github.com/tastypepperoni/RunAsWinTcb
-        $string11 = /33BF8AA2\-18DE\-4ED9\-9613\-A4118CBFC32A/ nocase ascii wide
+        $string11 = "33BF8AA2-18DE-4ED9-9613-A4118CBFC32A" nocase ascii wide
         // Description: RunAsWinTcb uses an userland exploit to run a DLL with a protection level of WinTcb-Light.
         // Reference: https://github.com/tastypepperoni/RunAsWinTcb
-        $string12 = /cb291da763f1ac7b8221be536e9d110a4c937c749da51b15151975c1b84f8b6d/ nocase ascii wide
+        $string12 = "cb291da763f1ac7b8221be536e9d110a4c937c749da51b15151975c1b84f8b6d" nocase ascii wide
         // Description: RunAsWinTcb uses an userland exploit to run a DLL with a protection level of WinTcb-Light.
         // Reference: https://github.com/tastypepperoni/RunAsWinTcb
         $string13 = /Choosing\sDLL\sto\shijack\./ nocase ascii wide
@@ -52,10 +52,10 @@ rule RunAsWinTcb
         $string14 = /RunAsWinTcb\.exe/ nocase ascii wide
         // Description: RunAsWinTcb uses an userland exploit to run a DLL with a protection level of WinTcb-Light.
         // Reference: https://github.com/tastypepperoni/RunAsWinTcb
-        $string15 = /RunAsWinTcb\-master/ nocase ascii wide
+        $string15 = "RunAsWinTcb-master" nocase ascii wide
         // Description: RunAsWinTcb uses an userland exploit to run a DLL with a protection level of WinTcb-Light.
         // Reference: https://github.com/tastypepperoni/RunAsWinTcb
-        $string16 = /tastypepperoni\/RunAsWinTcb/ nocase ascii wide
+        $string16 = "tastypepperoni/RunAsWinTcb" nocase ascii wide
 
     condition:
         any of them

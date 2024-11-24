@@ -61,13 +61,13 @@ rule cat
         $string17 = /cat\s\/dev\/null\s\>\s\~\/\.bash_history/ nocase ascii wide
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
-        $string18 = /cat\s\/etc\/passwd/ nocase ascii wide
+        $string18 = "cat /etc/passwd" nocase ascii wide
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
-        $string19 = /cat\s\/etc\/shadow/ nocase ascii wide
+        $string19 = "cat /etc/shadow" nocase ascii wide
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
-        $string20 = /cat\s\/etc\/sudoers/ nocase ascii wide
+        $string20 = "cat /etc/sudoers" nocase ascii wide
         // Description: cat suspicious commands
         // Reference: N/A
         $string21 = /cat\s\/root\/\.aws\/credentials/ nocase ascii wide

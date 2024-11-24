@@ -37,10 +37,10 @@ rule FileZilla
         $string9 = /\\Software\\WOW6432Node\\FileZilla\sClient/ nocase ascii wide
         // Description: FileZilla admintool used by threat actors for persistence and data exfiltration
         // Reference: https://filezilla-project.org/
-        $string10 = /\>FileZilla\sFTP\sClient\</ nocase ascii wide
+        $string10 = ">FileZilla FTP Client<" nocase ascii wide
         // Description: FileZilla admintool used by threat actors for persistence and data exfiltration
         // Reference: https://filezilla-project.org/
-        $string11 = /\>FileZilla\sServer\</ nocase ascii wide
+        $string11 = ">FileZilla Server<" nocase ascii wide
         // Description: FileZilla admintool used by threat actors for persistence and data exfiltration
         // Reference: https://filezilla-project.org/
         $string12 = /download\.filezilla\-project\.org/ nocase ascii wide
@@ -49,7 +49,7 @@ rule FileZilla
         $string13 = /Software\\FileZilla/ nocase ascii wide
         // Description: FileZilla admintool used by threat actors for persistence and data exfiltration
         // Reference: https://filezilla-project.org/
-        $string14 = /Win32\/FileZilla_BundleInstaller/ nocase ascii wide
+        $string14 = "Win32/FileZilla_BundleInstaller" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

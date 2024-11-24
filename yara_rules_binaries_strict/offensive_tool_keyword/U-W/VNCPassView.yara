@@ -13,13 +13,13 @@ rule VNCPassView
         $string1 = /\/utils\/vnc_password\.html/ nocase ascii wide
         // Description: recover the passwords stored by the VNC tool
         // Reference: https://www.nirsoft.net/utils/vnc_password.html
-        $string2 = /\>VNCPassView\</ nocase ascii wide
+        $string2 = ">VNCPassView<" nocase ascii wide
         // Description: recover the passwords stored by the VNC tool
         // Reference: https://www.nirsoft.net/utils/vnc_password.html
-        $string3 = /816d7616238958dfe0bb811a063eb3102efd82eff14408f5cab4cb5258bfd019/ nocase ascii wide
+        $string3 = "816d7616238958dfe0bb811a063eb3102efd82eff14408f5cab4cb5258bfd019" nocase ascii wide
         // Description: recover the passwords stored by the VNC tool
         // Reference: https://www.nirsoft.net/utils/vnc_password.html
-        $string4 = /cba64638575e382bab065f43dc60b76943bce77854a80af38debeb803edb96e4/ nocase ascii wide
+        $string4 = "cba64638575e382bab065f43dc60b76943bce77854a80af38debeb803edb96e4" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

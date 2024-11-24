@@ -10,22 +10,22 @@ rule MANSPIDER
     strings:
         // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
         // Reference: https://github.com/blacklanternsecurity/MANSPIDER
-        $string1 = /\s\-\-dirnames\sbank\sfinanc\spayable\spayment\sreconcil\sremit\svoucher\svendor\seft\sswift\s/ nocase ascii wide
+        $string1 = " --dirnames bank financ payable payment reconcil remit voucher vendor eft swift " nocase ascii wide
         // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
         // Reference: https://github.com/blacklanternsecurity/MANSPIDER
-        $string2 = /\s\-e\sbat\scom\svbs\sps1\spsd1\spsm1\spem\skey\srsa\spub\sreg\stxt\scfg\sconf\sconfig\s/ nocase ascii wide
+        $string2 = " -e bat com vbs ps1 psd1 psm1 pem key rsa pub reg txt cfg conf config " nocase ascii wide
         // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
         // Reference: https://github.com/blacklanternsecurity/MANSPIDER
-        $string3 = /\s\-e\spfx\sp12\spkcs12\spem\skey\scrt\scer\scsr\sjks\skeystore\skey\skeys\sder\s/ nocase ascii wide
+        $string3 = " -e pfx p12 pkcs12 pem key crt cer csr jks keystore key keys der " nocase ascii wide
         // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
         // Reference: https://github.com/blacklanternsecurity/MANSPIDER
-        $string4 = /\s\-e\sppk\srsa\spem\sssh\srsa/ nocase ascii wide
+        $string4 = " -e ppk rsa pem ssh rsa" nocase ascii wide
         // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
         // Reference: https://github.com/blacklanternsecurity/MANSPIDER
-        $string5 = /\s\-f\spassw\s\-e\sxlsx\scsv\s/ nocase ascii wide
+        $string5 = " -f passw -e xlsx csv " nocase ascii wide
         // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
         // Reference: https://github.com/blacklanternsecurity/MANSPIDER
-        $string6 = /\s\-f\spassw\suser\sadmin\saccount\snetwork\slogin\slogon\scred\s/ nocase ascii wide
+        $string6 = " -f passw user admin account network login logon cred " nocase ascii wide
         // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
         // Reference: https://github.com/blacklanternsecurity/MANSPIDER
         $string7 = /\/\.manspider\/logs/ nocase ascii wide
@@ -46,7 +46,7 @@ rule MANSPIDER
         $string12 = /\\manspider_.{0,1000}\.log/ nocase ascii wide
         // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
         // Reference: https://github.com/blacklanternsecurity/MANSPIDER
-        $string13 = /blacklanternsecurity\/MANSPIDER/ nocase ascii wide
+        $string13 = "blacklanternsecurity/MANSPIDER" nocase ascii wide
         // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
         // Reference: https://github.com/blacklanternsecurity/MANSPIDER
         $string14 = /man_spider\.manspider\:main/ nocase ascii wide
@@ -70,7 +70,7 @@ rule MANSPIDER
         $string20 = /manspider\.spiderling/ nocase ascii wide
         // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
         // Reference: https://github.com/blacklanternsecurity/MANSPIDER
-        $string21 = /MANSPIDER\-master/ nocase ascii wide
+        $string21 = "MANSPIDER-master" nocase ascii wide
 
     condition:
         any of them

@@ -19,7 +19,7 @@ rule EncryptedZIP
         $string3 = /EncryptedZIP\.exe/ nocase ascii wide
         // Description: Compresses a directory or file and then encrypts the ZIP file with a supplied key using AES256 CFB. This assembly also clears the key out of memory using RtlZeroMemory
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/EncryptedZIP
-        $string4 = /master\/EncryptedZIP/ nocase ascii wide
+        $string4 = "master/EncryptedZIP" nocase ascii wide
         // Description: Compresses a directory or file and then encrypts the ZIP file with a supplied key using AES256 CFB. This assembly also clears the key out of memory using RtlZeroMemory
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/EncryptedZIP
         $string5 = /Output\.aes\.zip/ nocase ascii wide

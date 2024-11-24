@@ -10,7 +10,7 @@ rule PrivilegeEscalation
     strings:
         // Description: This program is a very short batch file which allows you to run anything with admin rights without prompting user could be related to other tools using privsec methods
         // Reference: https://github.com/LouisVallat/PrivilegeEscalation
-        $string1 = /PrivilegeEscalation/ nocase ascii wide
+        $string1 = "PrivilegeEscalation" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -43,7 +43,7 @@ rule KaynStrike
         $string11 = /\\src\\KaynStrike\.c/ nocase ascii wide
         // Description: A User Defined Reflective Loader for Cobalt Strike Beacon that spoofs the thread start address and frees itself after entry point was executed.
         // Reference: https://github.com/Cracked5pider/KaynStrike
-        $string12 = /Cracked5pider\/KaynStrike/ nocase ascii wide
+        $string12 = "Cracked5pider/KaynStrike" nocase ascii wide
         // Description: A User Defined Reflective Loader for Cobalt Strike Beacon that spoofs the thread start address and frees itself after entry point was executed.
         // Reference: https://github.com/Cracked5pider/KaynStrike
         $string13 = /KaynStrike\.x64\.bin/ nocase ascii wide

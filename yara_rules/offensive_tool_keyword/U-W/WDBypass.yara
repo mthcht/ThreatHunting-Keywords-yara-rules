@@ -10,10 +10,10 @@ rule WDBypass
     strings:
         // Description: Disable Windows Defender (+ UAC Bypass, + Upgrade to SYSTEM)
         // Reference: https://bitbucket.org/evilgreyswork/wd-uac/downloads/
-        $string1 = /\"Starting\sElevating\sto\sSYSTEM\"/ nocase ascii wide
+        $string1 = "\"Starting Elevating to SYSTEM\"" nocase ascii wide
         // Description: Disable Windows Defender (+ UAC Bypass, + Upgrade to SYSTEM)
         // Reference: https://bitbucket.org/evilgreyswork/wd-uac/downloads/
-        $string2 = /\"Starting\sWD\sDisable\"/ nocase ascii wide
+        $string2 = "\"Starting WD Disable\"" nocase ascii wide
         // Description: Disable Windows Defender (+ UAC Bypass, + Upgrade to SYSTEM)
         // Reference: https://bitbucket.org/evilgreyswork/wd-uac/downloads/
         $string3 = /\\DisableWD\.7z/ nocase ascii wide
@@ -22,10 +22,10 @@ rule WDBypass
         $string4 = /\\Silent\.7z/ nocase ascii wide
         // Description: Disable Windows Defender (+ UAC Bypass, + Upgrade to SYSTEM)
         // Reference: https://bitbucket.org/evilgreyswork/wd-uac/downloads/
-        $string5 = /A220F564\-41CB\-46F5\-9938\-FEFD87819771/ nocase ascii wide
+        $string5 = "A220F564-41CB-46F5-9938-FEFD87819771" nocase ascii wide
         // Description: Disable Windows Defender (+ UAC Bypass, + Upgrade to SYSTEM)
         // Reference: https://bitbucket.org/evilgreyswork/wd-uac/downloads/
-        $string6 = /F1E836C1\-2279\-49B3\-84CC\-ED8B048FCC44/ nocase ascii wide
+        $string6 = "F1E836C1-2279-49B3-84CC-ED8B048FCC44" nocase ascii wide
         // Description: Disable Windows Defender (+ UAC Bypass, + Upgrade to SYSTEM)
         // Reference: https://bitbucket.org/evilgreyswork/wd-uac/downloads/
         $string7 = /https\:\/\/bitbucket\.org\/evilgreyswork\// nocase ascii wide

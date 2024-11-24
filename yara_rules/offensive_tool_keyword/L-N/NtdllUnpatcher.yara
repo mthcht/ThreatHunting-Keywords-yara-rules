@@ -31,13 +31,13 @@ rule NtdllUnpatcher
         $string7 = /NtdllUnpatcher\.sln/ nocase ascii wide
         // Description: code for EDR bypassing
         // Reference: https://github.com/Signal-Labs/NtdllUnpatcher
-        $string8 = /NtdllUnpatcher_Injector/ nocase ascii wide
+        $string8 = "NtdllUnpatcher_Injector" nocase ascii wide
         // Description: code for EDR bypassing
         // Reference: https://github.com/Signal-Labs/NtdllUnpatcher
-        $string9 = /NtdllUnpatcher\-master/ nocase ascii wide
+        $string9 = "NtdllUnpatcher-master" nocase ascii wide
         // Description: code for EDR bypassing
         // Reference: https://github.com/Signal-Labs/NtdllUnpatcher
-        $string10 = /Signal\-Labs\/NtdllUnpatcher/ nocase ascii wide
+        $string10 = "Signal-Labs/NtdllUnpatcher" nocase ascii wide
 
     condition:
         any of them

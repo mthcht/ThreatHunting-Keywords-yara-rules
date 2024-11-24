@@ -22,13 +22,13 @@ rule TDSKiller
         $string4 = /\\tdsskiller\.zip/ nocase ascii wide
         // Description: TDSKiller detect and remove malware - including rootkits but is also abused by attackers to disable antivirus
         // Reference: https://www.majorgeeks.com/files/details/kaspersky_tdsskiller.html
-        $string5 = /\>TDSS\srootkit\sremoving\stool\</ nocase ascii wide
+        $string5 = ">TDSS rootkit removing tool<" nocase ascii wide
         // Description: TDSKiller detect and remove malware - including rootkits but is also abused by attackers to disable antivirus
         // Reference: https://www.majorgeeks.com/files/details/kaspersky_tdsskiller.html
-        $string6 = /\>TDSSKiller\</ nocase ascii wide
+        $string6 = ">TDSSKiller<" nocase ascii wide
         // Description: TDSKiller detect and remove malware - including rootkits but is also abused by attackers to disable antivirus
         // Reference: https://www.majorgeeks.com/files/details/kaspersky_tdsskiller.html
-        $string7 = /2d823c8b6076e932d696e8cb8a2c5c5df6d392526cba8e39b64c43635f683009/ nocase ascii wide
+        $string7 = "2d823c8b6076e932d696e8cb8a2c5c5df6d392526cba8e39b64c43635f683009" nocase ascii wide
         // Description: TDSKiller detect and remove malware - including rootkits but is also abused by attackers to disable antivirus
         // Reference: https://www.majorgeeks.com/files/details/kaspersky_tdsskiller.html
         $string8 = /http\:\/\/support\.kaspersky\.com\/viruses\/tdsskiller\.xmlt/ nocase ascii wide

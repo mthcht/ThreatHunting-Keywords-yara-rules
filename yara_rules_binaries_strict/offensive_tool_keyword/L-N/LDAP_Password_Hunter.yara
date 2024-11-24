@@ -10,10 +10,10 @@ rule LDAP_Password_Hunter
     strings:
         // Description: Password Hunter in Active Directory
         // Reference: https://github.com/oldboy21/LDAP-Password-Hunter
-        $string1 = /\sFROM\sLDAPHUNTERFINDINGS/ nocase ascii wide
+        $string1 = " FROM LDAPHUNTERFINDINGS" nocase ascii wide
         // Description: Password Hunter in Active Directory
         // Reference: https://github.com/oldboy21/LDAP-Password-Hunter
-        $string2 = /\sINTO\sLDAPHUNTERFINDINGS/ nocase ascii wide
+        $string2 = " INTO LDAPHUNTERFINDINGS" nocase ascii wide
         // Description: Password Hunter in Active Directory
         // Reference: https://github.com/oldboy21/LDAP-Password-Hunter
         $string3 = /\sldapph\.db/ nocase ascii wide
@@ -28,22 +28,22 @@ rule LDAP_Password_Hunter
         $string6 = /\\ldapph\.db/ nocase ascii wide
         // Description: Password Hunter in Active Directory
         // Reference: https://github.com/oldboy21/LDAP-Password-Hunter
-        $string7 = /c850818a6b19486dae2a4c370797cbb4fa61a4ebd35cba8e94a60b54c4499c8b/ nocase ascii wide
+        $string7 = "c850818a6b19486dae2a4c370797cbb4fa61a4ebd35cba8e94a60b54c4499c8b" nocase ascii wide
         // Description: LDAP Password Hunter is a tool which wraps features of getTGT.py (Impacket) and ldapsearch in order to look up for password stored in LDAP database
         // Reference: https://github.com/oldboy21/LDAP-Password-Hunter
         $string8 = /CREATE\sTABLE\s\[LDAPHUNTERFINDINGS\]/ nocase ascii wide
         // Description: LDAP Password Hunter is a tool which wraps features of getTGT.py (Impacket) and ldapsearch in order to look up for password stored in LDAP database
         // Reference: https://github.com/oldboy21/LDAP-Password-Hunter
-        $string9 = /Creating\sa\sTGT\sticket\sfor\sthe\suser/ nocase ascii wide
+        $string9 = "Creating a TGT ticket for the user" nocase ascii wide
         // Description: LDAP Password Hunter is a tool which wraps features of getTGT.py (Impacket) and ldapsearch in order to look up for password stored in LDAP database
         // Reference: https://github.com/oldboy21/LDAP-Password-Hunter
-        $string10 = /DELETE\sFROM\sLDAPHUNTERFINDINGS/ nocase ascii wide
+        $string10 = "DELETE FROM LDAPHUNTERFINDINGS" nocase ascii wide
         // Description: LDAP Password Hunter is a tool which wraps features of getTGT.py (Impacket) and ldapsearch in order to look up for password stored in LDAP database
         // Reference: https://github.com/oldboy21/LDAP-Password-Hunter
         $string11 = /getTGT\.py\s\-dc\-ip/ nocase ascii wide
         // Description: LDAP Password Hunter is a tool which wraps features of getTGT.py (Impacket) and ldapsearch in order to look up for password stored in LDAP database
         // Reference: https://github.com/oldboy21/LDAP-Password-Hunter
-        $string12 = /INSERT\sINTO\sLDAPHUNTERFINDINGS\s/ nocase ascii wide
+        $string12 = "INSERT INTO LDAPHUNTERFINDINGS " nocase ascii wide
         // Description: LDAP Password Hunter is a tool which wraps features of getTGT.py (Impacket) and ldapsearch in order to look up for password stored in LDAP database
         // Reference: https://github.com/oldboy21/LDAP-Password-Hunter
         $string13 = /kerberos\-ldap\-password\-hunter\.sh/ nocase ascii wide
@@ -52,16 +52,16 @@ rule LDAP_Password_Hunter
         $string14 = /kerberos\-ldap\-password\-hunter\.sh/ nocase ascii wide
         // Description: LDAP Password Hunter is a tool which wraps features of getTGT.py (Impacket) and ldapsearch in order to look up for password stored in LDAP database
         // Reference: https://github.com/oldboy21/LDAP-Password-Hunter
-        $string15 = /LDAP\sPASSWORD\sENUM/ nocase ascii wide
+        $string15 = "LDAP PASSWORD ENUM" nocase ascii wide
         // Description: Password Hunter in Active Directory
         // Reference: https://github.com/oldboy21/LDAP-Password-Hunter
-        $string16 = /LDAP\sPASSWORD\sHUNTER/ nocase ascii wide
+        $string16 = "LDAP PASSWORD HUNTER" nocase ascii wide
         // Description: LDAP Password Hunter is a tool which wraps features of getTGT.py (Impacket) and ldapsearch in order to look up for password stored in LDAP database
         // Reference: https://github.com/oldboy21/LDAP-Password-Hunter
         $string17 = /mv\s.{0,100}\.ccache\s.{0,100}\.ccache/ nocase ascii wide
         // Description: Password Hunter in Active Directory
         // Reference: https://github.com/oldboy21/LDAP-Password-Hunter
-        $string18 = /oldboy21\/LDAP\-Password\-Hunter/ nocase ascii wide
+        $string18 = "oldboy21/LDAP-Password-Hunter" nocase ascii wide
         // Description: LDAP Password Hunter is a tool which wraps features of getTGT.py (Impacket) and ldapsearch in order to look up for password stored in LDAP database
         // Reference: https://github.com/oldboy21/LDAP-Password-Hunter
         $string19 = /password\|pwd\|creds\|cred\|secret\|userpw/ nocase ascii wide
@@ -73,16 +73,16 @@ rule LDAP_Password_Hunter
         $string21 = /Please\sbe\ssure\simpacket\sand\sldapsearch\sare\sinstalled\sand\syour\s\/etc\/krb5\.conf/ nocase ascii wide
         // Description: LDAP Password Hunter is a tool which wraps features of getTGT.py (Impacket) and ldapsearch in order to look up for password stored in LDAP database
         // Reference: https://github.com/oldboy21/LDAP-Password-Hunter
-        $string22 = /Please\sbe\ssure\simpacket\sis\sinstalled\sin\syour\ssystem/ nocase ascii wide
+        $string22 = "Please be sure impacket is installed in your system" nocase ascii wide
         // Description: Password Hunter in Active Directory
         // Reference: https://github.com/oldboy21/LDAP-Password-Hunter
-        $string23 = /Please\sbe\ssure\simpacket\sis\sinstalled\sin\syour\ssystem/ nocase ascii wide
+        $string23 = "Please be sure impacket is installed in your system" nocase ascii wide
         // Description: Password Hunter in Active Directory
         // Reference: https://github.com/oldboy21/LDAP-Password-Hunter
         $string24 = /pwd\|creds\|cred\|secret\|userpw/ nocase ascii wide
         // Description: Password Hunter in Active Directory
         // Reference: https://github.com/oldboy21/LDAP-Password-Hunter
-        $string25 = /Results\sare\son\sdisk\,\senumerating\snext\sDC\!/ nocase ascii wide
+        $string25 = "Results are on disk, enumerating next DC!" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -10,13 +10,13 @@ rule shhmon
     strings:
         // Description: Neutering Sysmon via driver unload
         // Reference: https://github.com/matterpreter/Shhmon
-        $string1 = /\/Shhmon\// nocase ascii wide
+        $string1 = "/Shhmon/" nocase ascii wide
         // Description: Neutering Sysmon via driver unload
         // Reference: https://github.com/matterpreter/Shhmon
         $string2 = /\\Shhmon\./ nocase ascii wide
         // Description: Neutering Sysmon via driver unload
         // Reference: https://github.com/matterpreter/Shhmon
-        $string3 = /matterpreter\/Shhmon/ nocase ascii wide
+        $string3 = "matterpreter/Shhmon" nocase ascii wide
         // Description: Neutering Sysmon via driver unload
         // Reference: https://github.com/matterpreter/Shhmon
         $string4 = /Shhmon\.csproj/ nocase ascii wide

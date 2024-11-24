@@ -10,7 +10,7 @@ rule Offensive_Payloads
     strings:
         // Description: List of payloads and wordlists that are specifically crafted to identify and exploit vulnerabilities in target web applications.
         // Reference: https://github.com/InfoSecWarrior/Offensive-Payloads/
-        $string1 = /Cross\-Site\-Scripting\-XSS\-Payloads/ nocase ascii wide
+        $string1 = "Cross-Site-Scripting-XSS-Payloads" nocase ascii wide
         // Description: List of payloads and wordlists that are specifically crafted to identify and exploit vulnerabilities in target web applications.
         // Reference: https://github.com/InfoSecWarrior/Offensive-Payloads/
         $string2 = /Directory\-Traversal\-Payloads\./ nocase ascii wide

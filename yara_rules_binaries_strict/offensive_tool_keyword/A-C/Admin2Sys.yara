@@ -16,10 +16,10 @@ rule Admin2Sys
         $string2 = /Admin2Sys\.exe/ nocase ascii wide
         // Description: Admin2Sys it's a C++ malware to escalate privileges from Administrator account to NT AUTORITY SYSTEM
         // Reference: https://github.com/S12cybersecurity/Admin2Sys
-        $string3 = /Admin2Sys\-main/ nocase ascii wide
+        $string3 = "Admin2Sys-main" nocase ascii wide
         // Description: Admin2Sys it's a C++ malware to escalate privileges from Administrator account to NT AUTORITY SYSTEM
         // Reference: https://github.com/S12cybersecurity/Admin2Sys
-        $string4 = /S12cybersecurity\/Admin2Sys/ nocase ascii wide
+        $string4 = "S12cybersecurity/Admin2Sys" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -52,10 +52,10 @@ rule SharpSQL
         $string14 = /\\SharpSQL\.pdb/ nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string15 = /\>SharpSQL\</ nocase ascii wide
+        $string15 = ">SharpSQL<" nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string16 = /SharpSQL\sby\s\@mlcsec/ nocase ascii wide
+        $string16 = "SharpSQL by @mlcsec" nocase ascii wide
 
     condition:
         any of them

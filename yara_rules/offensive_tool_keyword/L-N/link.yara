@@ -55,64 +55,64 @@ rule link
         $string15 = /output\:\slink\.dll/ nocase ascii wide
         // Description: link is a command and control framework written in rust
         // Reference: https://github.com/postrequest/link
-        $string16 = /pip3\sinstall\spypykatz/ nocase ascii wide
+        $string16 = "pip3 install pypykatz" nocase ascii wide
         // Description: link is a command and control framework written in rust
         // Reference: https://github.com/postrequest/link
         $string17 = /postrequest\/link\.git/ nocase ascii wide
         // Description: link is a command and control framework written in rust
         // Reference: https://github.com/postrequest/link
-        $string18 = /pypykatz\snot\sinstalled/ nocase ascii wide
+        $string18 = "pypykatz not installed" nocase ascii wide
         // Description: link is a command and control framework written in rust
         // Reference: https://github.com/postrequest/link
-        $string19 = /sharp\sADCollector/ nocase ascii wide
+        $string19 = "sharp ADCollector" nocase ascii wide
         // Description: link is a command and control framework written in rust
         // Reference: https://github.com/postrequest/link
-        $string20 = /sharp\sADSearch/ nocase ascii wide
+        $string20 = "sharp ADSearch" nocase ascii wide
         // Description: link is a command and control framework written in rust
         // Reference: https://github.com/postrequest/link
-        $string21 = /sharp\sBetterSafetyKatz/ nocase ascii wide
+        $string21 = "sharp BetterSafetyKatz" nocase ascii wide
         // Description: link is a command and control framework written in rust
         // Reference: https://github.com/postrequest/link
-        $string22 = /sharp\sinit\s\sdownload\/update\sSharpCollection\stools/ nocase ascii wide
+        $string22 = "sharp init  download/update SharpCollection tools" nocase ascii wide
         // Description: link is a command and control framework written in rust
         // Reference: https://github.com/postrequest/link
-        $string23 = /sharp\sInveighZero/ nocase ascii wide
+        $string23 = "sharp InveighZero" nocase ascii wide
         // Description: link is a command and control framework written in rust
         // Reference: https://github.com/postrequest/link
-        $string24 = /sharp\sSharpAllowedToAct/ nocase ascii wide
+        $string24 = "sharp SharpAllowedToAct" nocase ascii wide
         // Description: link is a command and control framework written in rust
         // Reference: https://github.com/postrequest/link
-        $string25 = /sharp\sSharpAppLocker/ nocase ascii wide
+        $string25 = "sharp SharpAppLocker" nocase ascii wide
         // Description: link is a command and control framework written in rust
         // Reference: https://github.com/postrequest/link
-        $string26 = /sharp\sSharpChisel/ nocase ascii wide
+        $string26 = "sharp SharpChisel" nocase ascii wide
         // Description: link is a command and control framework written in rust
         // Reference: https://github.com/postrequest/link
-        $string27 = /sharp\sSharpChromium/ nocase ascii wide
+        $string27 = "sharp SharpChromium" nocase ascii wide
         // Description: link is a command and control framework written in rust
         // Reference: https://github.com/postrequest/link
-        $string28 = /sharp\sSharpCrashEventLog\s/ nocase ascii wide
+        $string28 = "sharp SharpCrashEventLog " nocase ascii wide
         // Description: link is a command and control framework written in rust
         // Reference: https://github.com/postrequest/link
-        $string29 = /sharp\sSharpKatz\s\-\-Command\slogonpasswords/ nocase ascii wide
+        $string29 = "sharp SharpKatz --Command logonpasswords" nocase ascii wide
         // Description: link is a command and control framework written in rust
         // Reference: https://github.com/postrequest/link
-        $string30 = /sharp\sSharpMiniDump/ nocase ascii wide
+        $string30 = "sharp SharpMiniDump" nocase ascii wide
         // Description: link is a command and control framework written in rust
         // Reference: https://github.com/postrequest/link
-        $string31 = /sharp\sSharp\-SMBExec\s/ nocase ascii wide
+        $string31 = "sharp Sharp-SMBExec " nocase ascii wide
         // Description: link is a command and control framework written in rust
         // Reference: https://github.com/postrequest/link
-        $string32 = /sharp\sSharpSpray/ nocase ascii wide
+        $string32 = "sharp SharpSpray" nocase ascii wide
         // Description: link is a command and control framework written in rust
         // Reference: https://github.com/postrequest/link
-        $string33 = /sharp\sSharpZeroLogon/ nocase ascii wide
+        $string33 = "sharp SharpZeroLogon" nocase ascii wide
         // Description: link is a command and control framework written in rust
         // Reference: https://github.com/postrequest/link
-        $string34 = /sharp\sStickyNotesExtract/ nocase ascii wide
+        $string34 = "sharp StickyNotesExtract" nocase ascii wide
         // Description: link is a command and control framework written in rust
         // Reference: https://github.com/postrequest/link
-        $string35 = /sharp\swinPEAS/ nocase ascii wide
+        $string35 = "sharp winPEAS" nocase ascii wide
         // Description: link is a command and control framework written in rust
         // Reference: https://github.com/postrequest/link
         $string36 = /sharp_collection\.insert\(/ nocase ascii wide

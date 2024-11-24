@@ -10,10 +10,10 @@ rule wifijammer
     strings:
         // Description: wifijammer
         // Reference: https://github.com/hash3liZer/wifijammer
-        $string1 = /hash3liZer\/wifijammer/ nocase ascii wide
+        $string1 = "hash3liZer/wifijammer" nocase ascii wide
         // Description: wifijammer
         // Reference: https://github.com/DanMcInerney/wifijammer
-        $string2 = /wifijammer/ nocase ascii wide
+        $string2 = "wifijammer" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

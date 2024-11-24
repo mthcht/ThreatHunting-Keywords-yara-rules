@@ -19,7 +19,7 @@ rule KrbRelay
         $string3 = /\/CheckPort\.exe/ nocase ascii wide
         // Description: Relaying 3-headed dogs. More details at https://googleprojectzero.blogspot.com/2021/10/windows-exploitation-tricks-relaying.html and https://googleprojectzero.blogspot.com/2021/10/using-kerberos-for-authentication-relay.html
         // Reference: https://github.com/cube0x0/KrbRelay
-        $string4 = /\/KrbRelay/ nocase ascii wide
+        $string4 = "/KrbRelay" nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
         $string5 = /\/KrbRelay\.exe/ nocase ascii wide
@@ -28,13 +28,13 @@ rule KrbRelay
         $string6 = /\\KrbRelay\.exe/ nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string7 = /\>KrbRelay\</ nocase ascii wide
+        $string7 = ">KrbRelay<" nocase ascii wide
         // Description: Relaying 3-headed dogs. More details at https://googleprojectzero.blogspot.com/2021/10/windows-exploitation-tricks-relaying.html and https://googleprojectzero.blogspot.com/2021/10/using-kerberos-for-authentication-relay.html
         // Reference: https://github.com/cube0x0/KrbRelay
         $string8 = /CheckPort\.csproj/ nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string9 = /KrbRelay\sby\s\@Cube0x0/ nocase ascii wide
+        $string9 = "KrbRelay by @Cube0x0" nocase ascii wide
         // Description: Relaying 3-headed dogs. More details at https://googleprojectzero.blogspot.com/2021/10/windows-exploitation-tricks-relaying.html and https://googleprojectzero.blogspot.com/2021/10/using-kerberos-for-authentication-relay.html
         // Reference: https://github.com/cube0x0/KrbRelay
         $string10 = /KrbRelay.{0,100}misc/ nocase ascii wide

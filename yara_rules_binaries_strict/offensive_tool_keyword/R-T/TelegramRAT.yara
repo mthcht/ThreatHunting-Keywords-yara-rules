@@ -19,10 +19,10 @@ rule TelegramRAT
         $string3 = /https\:\/\/t\.me\/machine1337/ nocase ascii wide
         // Description: Cross Platform Telegram based RAT that communicates via telegram to evade network restrictions
         // Reference: https://github.com/machine1337/TelegramRAT
-        $string4 = /machine1337\/TelegramRAT/ nocase ascii wide
+        $string4 = "machine1337/TelegramRAT" nocase ascii wide
         // Description: Cross Platform Telegram based RAT that communicates via telegram to evade network restrictions
         // Reference: https://github.com/machine1337/TelegramRAT
-        $string5 = /TelegramRAT\-main/ nocase ascii wide
+        $string5 = "TelegramRAT-main" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

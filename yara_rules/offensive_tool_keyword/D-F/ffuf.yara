@@ -16,10 +16,10 @@ rule ffuf
         $string2 = /\/ffuf\.git/ nocase ascii wide
         // Description: Fast web fuzzer written in Go
         // Reference: https://github.com/ffuf/ffuf
-        $string3 = /\/ffuf\/ffufrc/ nocase ascii wide
+        $string3 = "/ffuf/ffufrc" nocase ascii wide
         // Description: Fast web fuzzer written in Go
         // Reference: https://github.com/ffuf/ffuf
-        $string4 = /cd\sffuf/ nocase ascii wide
+        $string4 = "cd ffuf" nocase ascii wide
         // Description: Fast web fuzzer written in Go
         // Reference: https://github.com/ffuf/ffuf
         $string5 = /ffuf\s.{0,1000}\-input\-cmd/ nocase ascii wide
@@ -28,16 +28,16 @@ rule ffuf
         $string6 = /ffuf\s.{0,1000}\-u\shttp/ nocase ascii wide
         // Description: Fast web fuzzer written in Go
         // Reference: https://github.com/ffuf/ffuf
-        $string7 = /ffuf\s\-c\s/ nocase ascii wide
+        $string7 = "ffuf -c " nocase ascii wide
         // Description: Fast web fuzzer written in Go
         // Reference: https://github.com/ffuf/ffuf
-        $string8 = /ffuf\s\-w\s/ nocase ascii wide
+        $string8 = "ffuf -w " nocase ascii wide
         // Description: Fast web fuzzer written in Go
         // Reference: https://github.com/ffuf/ffuf
         $string9 = /ffuf\.exe/ nocase ascii wide
         // Description: Fast web fuzzer written in Go
         // Reference: https://github.com/ffuf/ffuf
-        $string10 = /ffuf\/ffuf/ nocase ascii wide
+        $string10 = "ffuf/ffuf" nocase ascii wide
         // Description: Fast web fuzzer written in Go
         // Reference: https://github.com/ffuf/ffuf
         $string11 = /ffuf_.{0,1000}_freebsd_.{0,1000}\.tar\.gz/ nocase ascii wide

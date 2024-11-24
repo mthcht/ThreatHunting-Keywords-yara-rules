@@ -13,13 +13,13 @@ rule SharpUnhooker
         $string1 = /\/SharpUnhooker\.git/ nocase ascii wide
         // Description: C# Based Universal API Unhooker
         // Reference: https://github.com/GetRektBoy724/SharpUnhooker
-        $string2 = /GetRektBoy724\/SharpUnhooker/ nocase ascii wide
+        $string2 = "GetRektBoy724/SharpUnhooker" nocase ascii wide
         // Description: C# Based Universal API Unhooker
         // Reference: https://github.com/GetRektBoy724/SharpUnhooker
         $string3 = /SharpUnhooker\./ nocase ascii wide
         // Description: C# Based Universal API Unhooker
         // Reference: https://github.com/GetRektBoy724/SharpUnhooker
-        $string4 = /SharpUnhooker\-main/ nocase ascii wide
+        $string4 = "SharpUnhooker-main" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -16,10 +16,10 @@ rule glit
         $string2 = /\/glit\.git/ nocase ascii wide
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
-        $string3 = /\/glit\-cli/ nocase ascii wide
+        $string3 = "/glit-cli" nocase ascii wide
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
-        $string4 = /\/glit\-core/ nocase ascii wide
+        $string4 = "/glit-core" nocase ascii wide
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
         $string5 = /\\glit\.exe/ nocase ascii wide
@@ -28,16 +28,16 @@ rule glit
         $string6 = /\\glit\-cli/ nocase ascii wide
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
-        $string7 = /cargo\sinstall\sglit/ nocase ascii wide
+        $string7 = "cargo install glit" nocase ascii wide
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
-        $string8 = /glit\sorg\s\-/ nocase ascii wide
+        $string8 = "glit org -" nocase ascii wide
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
-        $string9 = /glit\srepo\s/ nocase ascii wide
+        $string9 = "glit repo " nocase ascii wide
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
-        $string10 = /glit\suser\s/ nocase ascii wide
+        $string10 = "glit user " nocase ascii wide
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
         $string11 = /glit\.exe\sorg/ nocase ascii wide
@@ -49,22 +49,22 @@ rule glit
         $string13 = /glit\.exe\suser/ nocase ascii wide
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
-        $string14 = /glit\-i686\-pc\-windows\-msvc/ nocase ascii wide
+        $string14 = "glit-i686-pc-windows-msvc" nocase ascii wide
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
         $string15 = /glit\-main\.zip/ nocase ascii wide
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
-        $string16 = /glit\-x86_64\-apple\-darwin/ nocase ascii wide
+        $string16 = "glit-x86_64-apple-darwin" nocase ascii wide
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
-        $string17 = /glit\-x86_64\-pc\-windows\-msvc/ nocase ascii wide
+        $string17 = "glit-x86_64-pc-windows-msvc" nocase ascii wide
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
-        $string18 = /glit\-x86_64\-unknown\-linux\-gnu/ nocase ascii wide
+        $string18 = "glit-x86_64-unknown-linux-gnu" nocase ascii wide
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
-        $string19 = /shadawck\/glit/ nocase ascii wide
+        $string19 = "shadawck/glit" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

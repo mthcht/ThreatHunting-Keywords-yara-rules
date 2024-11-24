@@ -28,7 +28,7 @@ rule RustiveDump
         $string6 = /\\RustiveDump\.exe/ nocase ascii wide
         // Description: LSASS memory dumper using only NTAPIs
         // Reference: https://github.com/safedv/RustiveDump
-        $string7 = /safedv\/RustiveDump/ nocase ascii wide
+        $string7 = "safedv/RustiveDump" nocase ascii wide
 
     condition:
         any of them

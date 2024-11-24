@@ -10,7 +10,7 @@ rule AggressorScripts_1
     strings:
         // Description: Collection of Aggressor scripts for Cobalt Strike 3.0+ pulled from multiple sources
         // Reference: https://github.com/Cn33liz/AggressorScripts-1
-        $string1 = /AggressorScripts/ nocase ascii wide
+        $string1 = "AggressorScripts" nocase ascii wide
         // Description: persistence script for cobaltstrike. Persistence Aggressor Scripts for Cobalt Strike 3.0+
         // Reference: https://github.com/Cn33liz/AggressorScripts-1/tree/master/Persistence
         $string2 = /Persist\.cna/ nocase ascii wide

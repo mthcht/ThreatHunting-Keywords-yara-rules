@@ -37,16 +37,16 @@ rule Fuck_Etw
         $string9 = /\\etw\-fuck\.exe/ nocase ascii wide
         // Description: Bypass the Event Trace Windows(ETW) and unhook ntdll.
         // Reference: https://github.com/unkvolism/Fuck-Etw
-        $string10 = /40E7714F\-460D\-4CA6\-9A5A\-FB32C6769BE4/ nocase ascii wide
+        $string10 = "40E7714F-460D-4CA6-9A5A-FB32C6769BE4" nocase ascii wide
         // Description: Bypass the Event Trace Windows(ETW) and unhook ntdll.
         // Reference: https://github.com/unkvolism/Fuck-Etw
         $string11 = /etw\-fuck\.exe\s/ nocase ascii wide
         // Description: Bypass the Event Trace Windows(ETW) and unhook ntdll.
         // Reference: https://github.com/unkvolism/Fuck-Etw
-        $string12 = /Fuck\-Etw\-main/ nocase ascii wide
+        $string12 = "Fuck-Etw-main" nocase ascii wide
         // Description: Bypass the Event Trace Windows(ETW) and unhook ntdll.
         // Reference: https://github.com/unkvolism/Fuck-Etw
-        $string13 = /unkvolism\/Fuck\-Etw/ nocase ascii wide
+        $string13 = "unkvolism/Fuck-Etw" nocase ascii wide
 
     condition:
         any of them

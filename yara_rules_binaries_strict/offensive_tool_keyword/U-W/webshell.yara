@@ -28,7 +28,7 @@ rule webshell
         $string6 = /\\simple\-backdoor\.php/ nocase ascii wide
         // Description: A collection of webshell
         // Reference: https://github.com/Peaky-XD/webshell
-        $string7 = /Peaky\-XD\/webshell/ nocase ascii wide
+        $string7 = "Peaky-XD/webshell" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

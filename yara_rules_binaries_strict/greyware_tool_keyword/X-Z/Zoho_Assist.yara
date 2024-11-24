@@ -193,7 +193,7 @@ rule Zoho_Assist
         $string61 = /program\sfiles\s\(x86\)\\zohomeeting/ nocase ascii wide
         // Description: Zoho Assist Remote access software - abused by attackers
         // Reference: https://www.zoho.com/assist/
-        $string62 = /\'ServiceName\'\>Zoho\sAssist\-Remote\sSupport/ nocase ascii wide
+        $string62 = "'ServiceName'>Zoho Assist-Remote Support" nocase ascii wide
         // Description: Zoho Assist Remote access software - abused by attackers
         // Reference: https://www.zoho.com/assist/
         $string63 = /turn\-.{0,100}\.zohomeeting\.com/ nocase ascii wide
@@ -211,7 +211,7 @@ rule Zoho_Assist
         $string67 = /ZAService\.exe\s/ nocase ascii wide
         // Description: Zoho Assist Remote access software - abused by attackers
         // Reference: https://www.zoho.com/assist/
-        $string68 = /ZOHO\sCORPORATION\sPRIVATE\sLIMITED/ nocase ascii wide
+        $string68 = "ZOHO CORPORATION PRIVATE LIMITED" nocase ascii wide
         // Description: Zoho Assist Remote access software - abused by attackers
         // Reference: https://www.zoho.com/assist/
         $string69 = /ZohoMeeting\.exe/ nocase ascii wide

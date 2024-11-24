@@ -10,7 +10,7 @@ rule unshadow
     strings:
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
-        $string1 = /unshadow\spasswd\sshadow\s\>\s/ nocase ascii wide
+        $string1 = "unshadow passwd shadow > " nocase ascii wide
 
     condition:
         any of them

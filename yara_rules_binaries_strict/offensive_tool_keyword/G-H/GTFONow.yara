@@ -31,7 +31,7 @@ rule GTFONow
         $string7 = /\/gtfonow\.py/ nocase ascii wide
         // Description: Automatic privilege escalation for misconfigured capabilities - sudo and suid binaries using GTFOBins.
         // Reference: https://github.com/Frissi0n/GTFONow
-        $string8 = /\/home\/lowpriv\// nocase ascii wide
+        $string8 = "/home/lowpriv/" nocase ascii wide
         // Description: Automatic privilege escalation for misconfigured capabilities - sudo and suid binaries using GTFOBins.
         // Reference: https://github.com/Frissi0n/GTFONow
         $string9 = /\/test_privesc\.py/ nocase ascii wide
@@ -61,10 +61,10 @@ rule GTFONow
         $string17 = /\\gtfonow\.py/ nocase ascii wide
         // Description: Automatic privilege escalation for misconfigured capabilities - sudo and suid binaries using GTFOBins.
         // Reference: https://github.com/Frissi0n/GTFONow
-        $string18 = /1b220d5538e63244c3b81a0c7a83ebb9ac7b0cdaed9f3e84057a812d7192b9b2/ nocase ascii wide
+        $string18 = "1b220d5538e63244c3b81a0c7a83ebb9ac7b0cdaed9f3e84057a812d7192b9b2" nocase ascii wide
         // Description: Automatic privilege escalation for misconfigured capabilities - sudo and suid binaries using GTFOBins.
         // Reference: https://github.com/Frissi0n/GTFONow
-        $string19 = /7c8dcea2da2cd78b706f7e08ff49f7733008ce357fba21777d17334abf0458a6/ nocase ascii wide
+        $string19 = "7c8dcea2da2cd78b706f7e08ff49f7733008ce357fba21777d17334abf0458a6" nocase ascii wide
         // Description: Automatic privilege escalation for misconfigured capabilities - sudo and suid binaries using GTFOBins.
         // Reference: https://github.com/Frissi0n/GTFONow
         $string20 = /check_sudo_nopasswd_binaries\(/ nocase ascii wide
@@ -73,7 +73,7 @@ rule GTFONow
         $string21 = /cron_priv_esc\(payload/ nocase ascii wide
         // Description: Automatic privilege escalation for misconfigured capabilities - sudo and suid binaries using GTFOBins.
         // Reference: https://github.com/Frissi0n/GTFONow
-        $string22 = /db62ef03d6be4778d3ec0fd2f6cb2cf030f02a70efa1f30850b27e0cefd50e9e/ nocase ascii wide
+        $string22 = "db62ef03d6be4778d3ec0fd2f6cb2cf030f02a70efa1f30850b27e0cefd50e9e" nocase ascii wide
         // Description: Automatic privilege escalation for misconfigured capabilities - sudo and suid binaries using GTFOBins.
         // Reference: https://github.com/Frissi0n/GTFONow
         $string23 = /display_privilege_escalation_options\(/ nocase ascii wide
@@ -82,13 +82,13 @@ rule GTFONow
         $string24 = /execute_payload\(priv_esc/ nocase ascii wide
         // Description: Automatic privilege escalation for misconfigured capabilities - sudo and suid binaries using GTFOBins.
         // Reference: https://github.com/Frissi0n/GTFONow
-        $string25 = /Frissi0n\/GTFONow/ nocase ascii wide
+        $string25 = "Frissi0n/GTFONow" nocase ascii wide
         // Description: Automatic privilege escalation for misconfigured capabilities - sudo and suid binaries using GTFOBins.
         // Reference: https://github.com/Frissi0n/GTFONow
         $string26 = /from\sgtfonow\./ nocase ascii wide
         // Description: Automatic privilege escalation for misconfigured capabilities - sudo and suid binaries using GTFOBins.
         // Reference: https://github.com/Frissi0n/GTFONow
-        $string27 = /getcap\snot\sfound\sin\sPATH\,\scannot\sescalate\susing\scapabilities/ nocase ascii wide
+        $string27 = "getcap not found in PATH, cannot escalate using capabilities" nocase ascii wide
         // Description: Automatic privilege escalation for misconfigured capabilities - sudo and suid binaries using GTFOBins.
         // Reference: https://github.com/Frissi0n/GTFONow
         $string28 = /gtfonow\.py\s\-a/ nocase ascii wide
@@ -106,10 +106,10 @@ rule GTFONow
         $string32 = /ssh_write_privesc\(payload/ nocase ascii wide
         // Description: Automatic privilege escalation for misconfigured capabilities - sudo and suid binaries using GTFOBins.
         // Reference: https://github.com/Frissi0n/GTFONow
-        $string33 = /ssh\-keygen\snot\sfound\sin\sPATH\,\scannot\sescalate\susing\sSSH\skey/ nocase ascii wide
+        $string33 = "ssh-keygen not found in PATH, cannot escalate using SSH key" nocase ascii wide
         // Description: Automatic privilege escalation for misconfigured capabilities - sudo and suid binaries using GTFOBins.
         // Reference: https://github.com/Frissi0n/GTFONow
-        $string34 = /Thanks\sfor\susing\sGTFONow\!/ nocase ascii wide
+        $string34 = "Thanks for using GTFONow!" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

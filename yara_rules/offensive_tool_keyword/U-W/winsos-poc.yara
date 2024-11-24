@@ -34,7 +34,7 @@ rule winsos_poc
         $string8 = /http\:\/\/127\.0\.0\.1\:8080\/target\.dll/ nocase ascii wide
         // Description: A PoC demonstrating code execution via DLL Side-Loading in WinSxS binaries.
         // Reference: https://github.com/thiagopeixoto/winsos-poc
-        $string9 = /thiagopeixoto\/winsos\-poc/ nocase ascii wide
+        $string9 = "thiagopeixoto/winsos-poc" nocase ascii wide
 
     condition:
         any of them

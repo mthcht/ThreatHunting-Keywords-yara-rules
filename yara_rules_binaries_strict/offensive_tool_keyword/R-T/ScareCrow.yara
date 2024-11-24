@@ -19,7 +19,7 @@ rule ScareCrow
         $string3 = /\.\/ScareCrow/ nocase ascii wide
         // Description: ScareCrow - Payload creation framework designed around EDR bypass.
         // Reference: https://github.com/optiv/ScareCrow
-        $string4 = /optiv\/ScareCrow/ nocase ascii wide
+        $string4 = "optiv/ScareCrow" nocase ascii wide
         // Description: ScareCrow - Payload creation framework designed around EDR bypass.
         // Reference: https://github.com/optiv/ScareCrow
         $string5 = /ScareCrow\s.{0,100}\-loader\s/ nocase ascii wide

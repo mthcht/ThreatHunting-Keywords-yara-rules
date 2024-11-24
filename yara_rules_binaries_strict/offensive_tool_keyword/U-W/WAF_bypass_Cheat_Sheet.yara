@@ -10,7 +10,7 @@ rule WAF_bypass_Cheat_Sheet
     strings:
         // Description: WAF/IPS/DLP bypass Cheat Sheet
         // Reference: https://github.com/Bo0oM/WAF-bypass-Cheat-Sheet
-        $string1 = /WAF\-bypass\-Cheat\-Sheet/ nocase ascii wide
+        $string1 = "WAF-bypass-Cheat-Sheet" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

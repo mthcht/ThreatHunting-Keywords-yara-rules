@@ -37,7 +37,7 @@ rule adeleg
         $string9 = /ADeleg\.exe\s\-/ nocase ascii wide
         // Description: an Active Directory delegation management tool. It allows you to make a detailed inventory of delegations set up so far in a forest
         // Reference: https://github.com/mtth-bfft/adeleg
-        $string10 = /mtth\-bfft\/adeleg/ nocase ascii wide
+        $string10 = "mtth-bfft/adeleg" nocase ascii wide
 
     condition:
         any of them

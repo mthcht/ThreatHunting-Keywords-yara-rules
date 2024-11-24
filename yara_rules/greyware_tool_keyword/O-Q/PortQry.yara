@@ -28,22 +28,22 @@ rule PortQry
         $string6 = /\\RunOnce\\wextract_cleanup0/ nocase ascii wide
         // Description: Microsoft port scanning tool abused by threat actors
         // Reference: https://www.microsoft.com/en-us/download/details.aspx?id=17148
-        $string7 = /6471c5190a99e3d1f337fcfef1fc410e8d487b66e093f924700e186cbd398dc0/ nocase ascii wide
+        $string7 = "6471c5190a99e3d1f337fcfef1fc410e8d487b66e093f924700e186cbd398dc0" nocase ascii wide
         // Description: Microsoft port scanning tool abused by threat actors
         // Reference: https://www.microsoft.com/en-us/download/details.aspx?id=17148
-        $string8 = /PortQry\sCommand\sLine\sPort\sScanner/ nocase ascii wide
+        $string8 = "PortQry Command Line Port Scanner" nocase ascii wide
         // Description: Microsoft port scanning tool abused by threat actors
         // Reference: https://www.microsoft.com/en-us/download/details.aspx?id=17148
-        $string9 = /portqry\s\-local/ nocase ascii wide
+        $string9 = "portqry -local" nocase ascii wide
         // Description: Microsoft port scanning tool abused by threat actors
         // Reference: https://www.microsoft.com/en-us/download/details.aspx?id=17148
-        $string10 = /portqry\s\-n\s/ nocase ascii wide
+        $string10 = "portqry -n " nocase ascii wide
         // Description: Microsoft port scanning tool abused by threat actors
         // Reference: https://www.microsoft.com/en-us/download/details.aspx?id=17148
-        $string11 = /portqry\s\-wpid/ nocase ascii wide
+        $string11 = "portqry -wpid" nocase ascii wide
         // Description: Microsoft port scanning tool abused by threat actors
         // Reference: https://www.microsoft.com/en-us/download/details.aspx?id=17148
-        $string12 = /portqry\s\-wport/ nocase ascii wide
+        $string12 = "portqry -wport" nocase ascii wide
 
     condition:
         any of them

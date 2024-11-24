@@ -13,7 +13,7 @@ rule Cam_Hackers
         $string1 = /\/Cam\-Hackers\.git/ nocase ascii wide
         // Description: Hack Cameras CCTV FREE
         // Reference: https://github.com/AngelSecurityTeam/Cam-Hackers
-        $string2 = /AngelSecurityTeam\/Cam\-Hackers/ nocase ascii wide
+        $string2 = "AngelSecurityTeam/Cam-Hackers" nocase ascii wide
         // Description: Hack Cameras CCTV FREE
         // Reference: https://github.com/AngelSecurityTeam/Cam-Hackers
         $string3 = /cam\-hackers\.py/ nocase ascii wide

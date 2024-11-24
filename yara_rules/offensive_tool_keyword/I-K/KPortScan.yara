@@ -22,7 +22,7 @@ rule KPortScan
         $string4 = /\\KPortScan\\/ nocase ascii wide
         // Description: port scanner used by attackers
         // Reference: https://github.com/stardust50578/rdp_brute
-        $string5 = /080c6108c3bd0f8a43d5647db36dc434032842339f0ba38ad1ff62f72999c4e5/ nocase ascii wide
+        $string5 = "080c6108c3bd0f8a43d5647db36dc434032842339f0ba38ad1ff62f72999c4e5" nocase ascii wide
         // Description: port scanner used by attackers
         // Reference: https://github.com/stardust50578/rdp_brute
         $string6 = /KPortScan\.exe/ nocase ascii wide
@@ -37,7 +37,7 @@ rule KPortScan
         $string9 = /KPortScan3\.exe/ nocase ascii wide
         // Description: port scanner used by attackers
         // Reference: https://github.com/stardust50578/rdp_brute
-        $string10 = /stardust50578\/rdp_brute/ nocase ascii wide
+        $string10 = "stardust50578/rdp_brute" nocase ascii wide
 
     condition:
         any of them

@@ -19,10 +19,10 @@ rule Synergy_httpx
         $string3 = /synergy_httpx\.py/ nocase ascii wide
         // Description: A Python http(s) server designed to assist in red teaming activities such as receiving intercepted data via POST requests and serving content dynamically
         // Reference: https://github.com/t3l3machus/Synergy-httpx
-        $string4 = /Synergy\-httpx\-main/ nocase ascii wide
+        $string4 = "Synergy-httpx-main" nocase ascii wide
         // Description: A Python http(s) server designed to assist in red teaming activities such as receiving intercepted data via POST requests and serving content dynamically
         // Reference: https://github.com/t3l3machus/Synergy-httpx
-        $string5 = /t3l3machus\/Synergy\-httpx/ nocase ascii wide
+        $string5 = "t3l3machus/Synergy-httpx" nocase ascii wide
 
     condition:
         any of them

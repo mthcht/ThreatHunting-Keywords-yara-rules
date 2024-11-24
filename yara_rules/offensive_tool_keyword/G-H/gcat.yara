@@ -10,7 +10,7 @@ rule gcat
     strings:
         // Description: A PoC backdoor that uses Gmail as a C&C server
         // Reference: https://github.com/byt3bl33d3r/gcat
-        $string1 = /\s\-exec\-shellcode\s/ nocase ascii wide
+        $string1 = " -exec-shellcode " nocase ascii wide
         // Description: A PoC backdoor that uses Gmail as a C&C server
         // Reference: https://github.com/byt3bl33d3r/gcat
         $string2 = /\sgcat\.py\s\-/ nocase ascii wide
@@ -22,7 +22,7 @@ rule gcat
         $string4 = /\/gcat\.py/ nocase ascii wide
         // Description: A PoC backdoor that uses Gmail as a C&C server
         // Reference: https://github.com/byt3bl33d3r/gcat
-        $string5 = /byt3bl33d3r\/gcat/ nocase ascii wide
+        $string5 = "byt3bl33d3r/gcat" nocase ascii wide
         // Description: A PoC backdoor that uses Gmail as a C&C server
         // Reference: https://github.com/byt3bl33d3r/gcat
         $string6 = /gcat.{0,1000}implant\.py/ nocase ascii wide
@@ -31,10 +31,10 @@ rule gcat
         $string7 = /gcat\.is\.the\.shit\@gmail\.com/ nocase ascii wide
         // Description: A PoC backdoor that uses Gmail as a C&C server
         // Reference: https://github.com/byt3bl33d3r/gcat
-        $string8 = /\-start\-keylogger/ nocase ascii wide
+        $string8 = "-start-keylogger" nocase ascii wide
         // Description: A PoC backdoor that uses Gmail as a C&C server
         // Reference: https://github.com/byt3bl33d3r/gcat
-        $string9 = /\-stop\-keylogger/ nocase ascii wide
+        $string9 = "-stop-keylogger" nocase ascii wide
 
     condition:
         any of them

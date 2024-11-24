@@ -13,7 +13,7 @@ rule Huan
         $string1 = /\/huan\.exe\s/ nocase ascii wide
         // Description: Huan is an encrypted PE Loader Generator that I developed for learning PE file structure and PE loading processes. It encrypts the PE file to be run with different keys each time and embeds it in a new section of the loader binary. Currently. it works on 64 bit PE files.
         // Reference: https://github.com/frkngksl/Huan
-        $string2 = /\/HuanLoader\// nocase ascii wide
+        $string2 = "/HuanLoader/" nocase ascii wide
         // Description: Huan is an encrypted PE Loader Generator that I developed for learning PE file structure and PE loading processes. It encrypts the PE file to be run with different keys each time and embeds it in a new section of the loader binary. Currently. it works on 64 bit PE files.
         // Reference: https://github.com/frkngksl/Huan
         $string3 = /\\huan\.exe\s/ nocase ascii wide

@@ -46,10 +46,10 @@ rule Parasite_Invoke
         $string12 = /\\Parasite\-Invoke\-main/ nocase ascii wide
         // Description: Hide your P/Invoke signatures through other people's signed assemblies
         // Reference: https://github.com/MzHmO/Parasite-Invoke
-        $string13 = /\=\=\=PARASITE\sINVOKE/ nocase ascii wide
+        $string13 = "===PARASITE INVOKE" nocase ascii wide
         // Description: Hide your P/Invoke signatures through other people's signed assemblies
         // Reference: https://github.com/MzHmO/Parasite-Invoke
-        $string14 = /7CEC7793\-3E22\-455B\-9E88\-94B8D1A8F78D/ nocase ascii wide
+        $string14 = "7CEC7793-3E22-455B-9E88-94B8D1A8F78D" nocase ascii wide
         // Description: Hide your P/Invoke signatures through other people's signed assemblies
         // Reference: https://github.com/MzHmO/Parasite-Invoke
         $string15 = /https\:\/\/pastebin\.com\/9JyjcMAH/ nocase ascii wide
@@ -61,7 +61,7 @@ rule Parasite_Invoke
         $string17 = /Michael\sZhmaylo\s\(github\.com\// nocase ascii wide
         // Description: Hide your P/Invoke signatures through other people's signed assemblies
         // Reference: https://github.com/MzHmO/Parasite-Invoke
-        $string18 = /MzHmO\/Parasite\-Invoke/ nocase ascii wide
+        $string18 = "MzHmO/Parasite-Invoke" nocase ascii wide
         // Description: Hide your P/Invoke signatures through other people's signed assemblies
         // Reference: https://github.com/MzHmO/Parasite-Invoke
         $string19 = /Parasite\sInvoke_\.\-\'/ nocase ascii wide

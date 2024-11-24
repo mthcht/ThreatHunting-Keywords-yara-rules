@@ -10,7 +10,7 @@ rule pcunlocker
     strings:
         // Description: Reset and unlock forgotten Windows login password
         // Reference: https://www.pcunlocker.com/
-        $string1 = /\/download\/pcunlocker/ nocase ascii wide
+        $string1 = "/download/pcunlocker" nocase ascii wide
         // Description: Reset and unlock forgotten Windows login password
         // Reference: https://www.pcunlocker.com/
         $string2 = /\/pcunlocker\.iso/ nocase ascii wide

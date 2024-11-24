@@ -16,13 +16,13 @@ rule DumpAADSyncCreds
         $string2 = /\[\+\]\sObtained\sADSync\sservice\saccount\stoken\sfrom\smiiserver\sprocess/ nocase ascii wide
         // Description: C# implementation of Get-AADIntSyncCredentials from AADInternals which extracts Azure AD Connect credentials to AD and Azure AD from AAD connect database.
         // Reference: https://github.com/Hagrid29/DumpAADSyncCreds
-        $string3 = /95A40D7C\-F3F7\-4C45\-8C5A\-D384DE50B6C9/ nocase ascii wide
+        $string3 = "95A40D7C-F3F7-4C45-8C5A-D384DE50B6C9" nocase ascii wide
         // Description: C# implementation of Get-AADIntSyncCredentials from AADInternals which extracts Azure AD Connect credentials to AD and Azure AD from AAD connect database.
         // Reference: https://github.com/Hagrid29/DumpAADSyncCreds
-        $string4 = /ADSync\spasswords\scan\sbe\sread\sor\smodified\sas\slocal\sadministrator\sonly\sfor\sADSync\sversion\s/ nocase ascii wide
+        $string4 = "ADSync passwords can be read or modified as local administrator only for ADSync version " nocase ascii wide
         // Description: C# implementation of Get-AADIntSyncCredentials from AADInternals which extracts Azure AD Connect credentials to AD and Azure AD from AAD connect database.
         // Reference: https://github.com/Hagrid29/DumpAADSyncCreds
-        $string5 = /Dump\sAAD\sconnect\saccount\scredential\sin\scurrent\scontext/ nocase ascii wide
+        $string5 = "Dump AAD connect account credential in current context" nocase ascii wide
         // Description: C# implementation of Get-AADIntSyncCredentials from AADInternals which extracts Azure AD Connect credentials to AD and Azure AD from AAD connect database.
         // Reference: https://github.com/Hagrid29/DumpAADSyncCreds
         $string6 = /DumpAADSyncCreds\.csproj/ nocase ascii wide
@@ -34,13 +34,13 @@ rule DumpAADSyncCreds
         $string8 = /DumpAADSyncCreds\.sln/ nocase ascii wide
         // Description: C# implementation of Get-AADIntSyncCredentials from AADInternals which extracts Azure AD Connect credentials to AD and Azure AD from AAD connect database.
         // Reference: https://github.com/Hagrid29/DumpAADSyncCreds
-        $string9 = /e6e05a88178633c271919ae5ea4c9633991774e2fd345ffe3052c209e2ef31d5/ nocase ascii wide
+        $string9 = "e6e05a88178633c271919ae5ea4c9633991774e2fd345ffe3052c209e2ef31d5" nocase ascii wide
         // Description: C# implementation of Get-AADIntSyncCredentials from AADInternals which extracts Azure AD Connect credentials to AD and Azure AD from AAD connect database.
         // Reference: https://github.com/Hagrid29/DumpAADSyncCreds
-        $string10 = /Hagrid29\/DumpAADSyncCreds/ nocase ascii wide
+        $string10 = "Hagrid29/DumpAADSyncCreds" nocase ascii wide
         // Description: C# implementation of Get-AADIntSyncCredentials from AADInternals which extracts Azure AD Connect credentials to AD and Azure AD from AAD connect database.
         // Reference: https://github.com/Hagrid29/DumpAADSyncCreds
-        $string11 = /P\@ss4Hagrid29/ nocase ascii wide
+        $string11 = "P@ss4Hagrid29" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

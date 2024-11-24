@@ -10,7 +10,7 @@ rule Sharp_Suite
     strings:
         // Description: C# offensive tools
         // Reference: https://github.com/FuzzySecurity/Sharp-Suite
-        $string1 = /FuzzySecurity\/Sharp\-Suite/ nocase ascii wide
+        $string1 = "FuzzySecurity/Sharp-Suite" nocase ascii wide
         // Description: C# offensive tools
         // Reference: https://github.com/FuzzySecurity/Sharp-Suite
         $string2 = /Londor\.exe\s\-t\sCoverage/ nocase ascii wide

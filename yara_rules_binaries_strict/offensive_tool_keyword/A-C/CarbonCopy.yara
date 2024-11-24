@@ -10,7 +10,7 @@ rule CarbonCopy
     strings:
         // Description: A tool which creates a spoofed certificate of any online website and signs an Executable for AV Evasion. Works for both Windows and Linux
         // Reference: https://github.com/paranoidninja/CarbonCopy
-        $string1 = /CarbonCopy/ nocase ascii wide
+        $string1 = "CarbonCopy" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

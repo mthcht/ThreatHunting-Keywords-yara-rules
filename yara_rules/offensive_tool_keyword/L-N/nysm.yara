@@ -13,10 +13,10 @@ rule nysm
         $string1 = /\.\/nysm\/src\// nocase ascii wide
         // Description: nysm is a stealth post-exploitation container
         // Reference: https://github.com/eeriedusk/nysm
-        $string2 = /\/nysm\sbash/ nocase ascii wide
+        $string2 = "/nysm bash" nocase ascii wide
         // Description: nysm is a stealth post-exploitation container
         // Reference: https://github.com/eeriedusk/nysm
-        $string3 = /\/nysm\s\-dr\ssocat\sTCP4\-LISTEN/ nocase ascii wide
+        $string3 = "/nysm -dr socat TCP4-LISTEN" nocase ascii wide
         // Description: nysm is a stealth post-exploitation container
         // Reference: https://github.com/eeriedusk/nysm
         $string4 = /\/nysm\s\-r\sssh\s.{0,1000}\@/ nocase ascii wide
@@ -31,7 +31,7 @@ rule nysm
         $string7 = /\/src\/nysm\.c/ nocase ascii wide
         // Description: nysm is a stealth post-exploitation container
         // Reference: https://github.com/eeriedusk/nysm
-        $string8 = /eeriedusk\/nysm/ nocase ascii wide
+        $string8 = "eeriedusk/nysm" nocase ascii wide
         // Description: nysm is a stealth post-exploitation container
         // Reference: https://github.com/eeriedusk/nysm
         $string9 = /nysm\.skel\.h/ nocase ascii wide

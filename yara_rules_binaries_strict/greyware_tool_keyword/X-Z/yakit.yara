@@ -13,13 +13,13 @@ rule yakit
         $string1 = /\sset\-proxy\.ps1/ nocase ascii wide
         // Description: security platform with fuzzers - webshell and MITM (chinese burp)
         // Reference: https://github.com/Gerenios/AADInternals
-        $string2 = /\\"http\:\/\/mitm\\"/ nocase ascii wide
+        $string2 = "\"http://mitm\"" nocase ascii wide
         // Description: security platform with fuzzers - webshell and MITM (chinese burp)
         // Reference: https://github.com/Gerenios/AADInternals
-        $string3 = /\/MITMPluginLogViewer/ nocase ascii wide
+        $string3 = "/MITMPluginLogViewer" nocase ascii wide
         // Description: security platform with fuzzers - webshell and MITM (chinese burp)
         // Reference: https://github.com/Gerenios/AADInternals
-        $string4 = /\/MITMServerHijacking/ nocase ascii wide
+        $string4 = "/MITMServerHijacking" nocase ascii wide
         // Description: security platform with fuzzers - webshell and MITM (chinese burp)
         // Reference: https://github.com/Gerenios/AADInternals
         $string5 = /\/set\-proxy\.ps1/ nocase ascii wide
@@ -49,16 +49,16 @@ rule yakit
         $string13 = /\\yak\.exe/ nocase ascii wide
         // Description: security platform with fuzzers - webshell and MITM (chinese burp)
         // Reference: https://github.com/Gerenios/AADInternals
-        $string14 = /MITMServerHijacking\/MITMPluginLocalList/ nocase ascii wide
+        $string14 = "MITMServerHijacking/MITMPluginLocalList" nocase ascii wide
         // Description: security platform with fuzzers - webshell and MITM (chinese burp)
         // Reference: https://github.com/Gerenios/AADInternals
-        $string15 = /pwd86u1qwZ9PWevKqm1A3yAw\=\=/ nocase ascii wide
+        $string15 = "pwd86u1qwZ9PWevKqm1A3yAw==" nocase ascii wide
         // Description: security platform with fuzzers - webshell and MITM (chinese burp)
         // Reference: https://github.com/Gerenios/AADInternals
-        $string16 = /PwDaBjJzgufjES89Rs4Lpq63O300R\/kOz30WCLo6BxxX6QVEilwSlpClnG5cZaikTA\=\=/ nocase ascii wide
+        $string16 = "PwDaBjJzgufjES89Rs4Lpq63O300R/kOz30WCLo6BxxX6QVEilwSlpClnG5cZaikTA==" nocase ascii wide
         // Description: security platform with fuzzers - webshell and MITM (chinese burp)
         // Reference: https://github.com/Gerenios/AADInternals
-        $string17 = /pWDkVEtllTAK5h6cnhxNxDA\=\=/ nocase ascii wide
+        $string17 = "pWDkVEtllTAK5h6cnhxNxDA==" nocase ascii wide
         // Description: security platform with fuzzers - webshell and MITM (chinese burp)
         // Reference: https://github.com/Gerenios/AADInternals
         $string18 = /Yakit\-.{0,100}\-windows\-amd64\.exe/ nocase ascii wide
@@ -67,7 +67,7 @@ rule yakit
         $string19 = /Yakit\/1\.0\.0/ nocase ascii wide
         // Description: security platform with fuzzers - webshell and MITM (chinese burp)
         // Reference: https://github.com/Gerenios/AADInternals
-        $string20 = /YAKIT_MITM/ nocase ascii wide
+        $string20 = "YAKIT_MITM" nocase ascii wide
         // Description: security platform with fuzzers - webshell and MITM (chinese burp)
         // Reference: https://github.com/Gerenios/AADInternals
         $string21 = /yakit\-remote\.json/ nocase ascii wide

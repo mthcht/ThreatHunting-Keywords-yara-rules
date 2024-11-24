@@ -31,7 +31,7 @@ rule Macrome
         $string7 = /\/MacroPatterns\.cs/ nocase ascii wide
         // Description: An Excel Macro Document Reader/Writer for Red Teamers & Analysts. Blog posts describing what this tool actually does can be found https://malware.pizza/2020/05/12/evading-av-with-excel-macros-and-biff8-xls/ and https://malware.pizza/2020/06/19/further-evasion-in-the-forgotten-corners-of-ms-xls/
         // Reference: https://github.com/michaelweber/Macrome
-        $string8 = /\/michaelweber\/Macrome/ nocase ascii wide
+        $string8 = "/michaelweber/Macrome" nocase ascii wide
         // Description: An Excel Macro Document Reader/Writer for Red Teamers & Analysts. Blog posts describing what this tool actually does can be found https://malware.pizza/2020/05/12/evading-av-with-excel-macros-and-biff8-xls/ and https://malware.pizza/2020/06/19/further-evasion-in-the-forgotten-corners-of-ms-xls/
         // Reference: https://github.com/michaelweber/Macrome
         $string9 = /\/RC4BinaryEncryption\.cs/ nocase ascii wide
@@ -52,7 +52,7 @@ rule Macrome
         $string14 = /Macrome\s.{0,100}\-\-payload/ nocase ascii wide
         // Description: An Excel Macro Document Reader/Writer for Red Teamers & Analysts. Blog posts describing what this tool actually does can be found https://malware.pizza/2020/05/12/evading-av-with-excel-macros-and-biff8-xls/ and https://malware.pizza/2020/06/19/further-evasion-in-the-forgotten-corners-of-ms-xls/
         // Reference: https://github.com/michaelweber/Macrome
-        $string15 = /Macrome\sbuild/ nocase ascii wide
+        $string15 = "Macrome build" nocase ascii wide
         // Description: An Excel Macro Document Reader/Writer for Red Teamers & Analysts. Blog posts describing what this tool actually does can be found https://malware.pizza/2020/05/12/evading-av-with-excel-macros-and-biff8-xls/ and https://malware.pizza/2020/06/19/further-evasion-in-the-forgotten-corners-of-ms-xls/
         // Reference: https://github.com/michaelweber/Macrome
         $string16 = /Macrome\.csproj/ nocase ascii wide
@@ -67,7 +67,7 @@ rule Macrome
         $string19 = /\-\-path\sdocToDump\.xls/ nocase ascii wide
         // Description: An Excel Macro Document Reader/Writer for Red Teamers & Analysts. Blog posts describing what this tool actually does can be found https://malware.pizza/2020/05/12/evading-av-with-excel-macros-and-biff8-xls/ and https://malware.pizza/2020/06/19/further-evasion-in-the-forgotten-corners-of-ms-xls/
         // Reference: https://github.com/michaelweber/Macrome
-        $string20 = /\-\-payload\-type\sMacro/ nocase ascii wide
+        $string20 = "--payload-type Macro" nocase ascii wide
         // Description: An Excel Macro Document Reader/Writer for Red Teamers & Analysts. Blog posts describing what this tool actually does can be found https://malware.pizza/2020/05/12/evading-av-with-excel-macros-and-biff8-xls/ and https://malware.pizza/2020/06/19/further-evasion-in-the-forgotten-corners-of-ms-xls/
         // Reference: https://github.com/michaelweber/Macrome
         $string21 = /ReadyToPhish\.xls/ nocase ascii wide

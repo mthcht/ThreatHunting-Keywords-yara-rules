@@ -13,7 +13,7 @@ rule hashview
         $string1 = /\shashview\.py/ nocase ascii wide
         // Description: A web front-end for password cracking and analytics
         // Reference: https://github.com/hashview/hashview
-        $string2 = /\shashview\-agent\s/ nocase ascii wide
+        $string2 = " hashview-agent " nocase ascii wide
         // Description: A web front-end for password cracking and analytics
         // Reference: https://github.com/hashview/hashview
         $string3 = /\.\/hashview\// nocase ascii wide
@@ -25,7 +25,7 @@ rule hashview
         $string5 = /\\hashview\.py/ nocase ascii wide
         // Description: A web front-end for password cracking and analytics
         // Reference: https://github.com/hashview/hashview
-        $string6 = /DoNotUseThisPassword123\!/ nocase ascii wide
+        $string6 = "DoNotUseThisPassword123!" nocase ascii wide
         // Description: A web front-end for password cracking and analytics
         // Reference: https://github.com/hashview/hashview
         $string7 = /hashview.{0,1000}\@.{0,1000}localhost/ nocase ascii wide
@@ -34,7 +34,7 @@ rule hashview
         $string8 = /hashview\/config\.conf/ nocase ascii wide
         // Description: A web front-end for password cracking and analytics
         // Reference: https://github.com/hashview/hashview
-        $string9 = /hashview\/hashview/ nocase ascii wide
+        $string9 = "hashview/hashview" nocase ascii wide
         // Description: A web front-end for password cracking and analytics
         // Reference: https://github.com/hashview/hashview
         $string10 = /hashview\-agent\..{0,1000}\.tgz/ nocase ascii wide

@@ -10,7 +10,7 @@ rule ctftool
     strings:
         // Description: This is ctftool. an interactive command line tool to experiment with CTF. a little-known protocol used on Windows to implement Text Services. This might be useful for studying Windows internals. debugging complex issues with Text Input Processors and analyzing Windows security.
         // Reference: https://github.com/taviso/ctftool
-        $string1 = /\/ctftool/ nocase ascii wide
+        $string1 = "/ctftool" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

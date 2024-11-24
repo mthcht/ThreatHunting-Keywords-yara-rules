@@ -10,7 +10,7 @@ rule Cowpatty
     strings:
         // Description: coWPAtty - Brute-force dictionary attack against WPA-PSK.
         // Reference: https://github.com/joswr1ght/cowpatty
-        $string1 = /Cowpatty/ nocase ascii wide
+        $string1 = "Cowpatty" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

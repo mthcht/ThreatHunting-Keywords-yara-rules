@@ -10,7 +10,7 @@ rule p0wny_shell
     strings:
         // Description: p0wny@shell:~# is a very basic. single-file. PHP shell. It can be used to quickly execute commands on a server when pentesting a PHP application. Use it with caution: this script represents a security risk for the server.
         // Reference: https://github.com/flozz/p0wny-shell
-        $string1 = /p0wny\-shell/ nocase ascii wide
+        $string1 = "p0wny-shell" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

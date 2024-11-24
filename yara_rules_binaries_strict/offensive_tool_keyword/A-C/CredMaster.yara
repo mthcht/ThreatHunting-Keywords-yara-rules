@@ -25,13 +25,13 @@ rule CredMaster
         $string5 = /\soh365userfinder\.py/ nocase ascii wide
         // Description: CredKing password spraying tool - uses FireProx APIs to rotate IP addresses
         // Reference: https://github.com/knavesec/CredMaster
-        $string6 = /\s\-\-plugin\sgmailenum/ nocase ascii wide
+        $string6 = " --plugin gmailenum" nocase ascii wide
         // Description: CredKing password spraying tool - uses FireProx APIs to rotate IP addresses
         // Reference: https://github.com/knavesec/CredMaster
-        $string7 = /\s\-\-plugin\shttpbrute/ nocase ascii wide
+        $string7 = " --plugin httpbrute" nocase ascii wide
         // Description: CredKing password spraying tool - uses FireProx APIs to rotate IP addresses
         // Reference: https://github.com/knavesec/CredMaster
-        $string8 = /\s\-\-plugin\so365enum/ nocase ascii wide
+        $string8 = " --plugin o365enum" nocase ascii wide
         // Description: CredKing password spraying tool - uses FireProx APIs to rotate IP addresses
         // Reference: https://github.com/knavesec/CredMaster
         $string9 = /\sutils\.ntlmdecode\s/ nocase ascii wide
@@ -76,16 +76,16 @@ rule CredMaster
         $string22 = /\\oh365userfinder\.py/ nocase ascii wide
         // Description: CredKing password spraying tool - uses FireProx APIs to rotate IP addresses
         // Reference: https://github.com/knavesec/CredMaster
-        $string23 = /05f4184029b94e304fcef2f2c6875c1fb2a226f0d94fce013643727b10b169a5/ nocase ascii wide
+        $string23 = "05f4184029b94e304fcef2f2c6875c1fb2a226f0d94fce013643727b10b169a5" nocase ascii wide
         // Description: CredKing password spraying tool - uses FireProx APIs to rotate IP addresses
         // Reference: https://github.com/knavesec/CredMaster
-        $string24 = /4665bf3f84b00ec83f005ea4feb3617acf032a69826013656a04683865c204f6/ nocase ascii wide
+        $string24 = "4665bf3f84b00ec83f005ea4feb3617acf032a69826013656a04683865c204f6" nocase ascii wide
         // Description: CredKing password spraying tool - uses FireProx APIs to rotate IP addresses
         // Reference: https://github.com/knavesec/CredMaster
-        $string25 = /7bc64714fb90bddef226c04fb69f30d689384e3f0dfb89934c73ad1486e76e3a/ nocase ascii wide
+        $string25 = "7bc64714fb90bddef226c04fb69f30d689384e3f0dfb89934c73ad1486e76e3a" nocase ascii wide
         // Description: CredKing password spraying tool - uses FireProx APIs to rotate IP addresses
         // Reference: https://github.com/knavesec/CredMaster
-        $string26 = /acc6cd307e1dd184b722a082c177639e78421f79b0e3b26fa602f1ce8392cc4f/ nocase ascii wide
+        $string26 = "acc6cd307e1dd184b722a082c177639e78421f79b0e3b26fa602f1ce8392cc4f" nocase ascii wide
         // Description: CredKing password spraying tool - uses FireProx APIs to rotate IP addresses
         // Reference: https://github.com/knavesec/CredMaster
         $string27 = /credmaster\.py\s/ nocase ascii wide
@@ -94,7 +94,7 @@ rule CredMaster
         $string28 = /CredMaster\\passwords\.txt/ nocase ascii wide
         // Description: CredKing password spraying tool - uses FireProx APIs to rotate IP addresses
         // Reference: https://github.com/knavesec/CredMaster
-        $string29 = /knavesec\/CredMaster/ nocase ascii wide
+        $string29 = "knavesec/CredMaster" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

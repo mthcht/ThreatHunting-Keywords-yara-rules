@@ -10,13 +10,13 @@ rule AD_Enumeration_Hunt
     strings:
         // Description: This repository contains a collection of PowerShell scripts and commands that can be used for Active Directory (AD) penetration testing and security assessment
         // Reference: https://github.com/alperenugurlu/AD_Enumeration_Hunt
-        $string1 = /\/AD_Enumeration_Hunt/ nocase ascii wide
+        $string1 = "/AD_Enumeration_Hunt" nocase ascii wide
         // Description: This repository contains a collection of PowerShell scripts and commands that can be used for Active Directory (AD) penetration testing and security assessment
         // Reference: https://github.com/alperenugurlu/AD_Enumeration_Hunt
         $string2 = /AD_Enumeration_Hunt\.ps1/ nocase ascii wide
         // Description: This repository contains a collection of PowerShell scripts and commands that can be used for Active Directory (AD) penetration testing and security assessment
         // Reference: https://github.com/alperenugurlu/AD_Enumeration_Hunt
-        $string3 = /AD_Enumeration_Hunt\-alperen_ugurlu_hack/ nocase ascii wide
+        $string3 = "AD_Enumeration_Hunt-alperen_ugurlu_hack" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

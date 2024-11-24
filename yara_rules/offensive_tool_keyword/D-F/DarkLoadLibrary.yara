@@ -16,10 +16,10 @@ rule DarkLoadLibrary
         $string2 = /\\DarkLoadLibrary\./ nocase ascii wide
         // Description: LoadLibrary for offensive operations
         // Reference: https://github.com/bats3c/DarkLoadLibrary
-        $string3 = /bats3c\/DarkLoadLibrary/ nocase ascii wide
+        $string3 = "bats3c/DarkLoadLibrary" nocase ascii wide
         // Description: LoadLibrary for offensive operations
         // Reference: https://github.com/bats3c/DarkLoadLibrary
-        $string4 = /DarkLoadLibrary\-maser/ nocase ascii wide
+        $string4 = "DarkLoadLibrary-maser" nocase ascii wide
 
     condition:
         any of them

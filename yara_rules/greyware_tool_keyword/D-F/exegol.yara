@@ -70,10 +70,10 @@ rule exegol
         $string20 = /nbtscan\s\-r\s.{0,1000}\/24/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string21 = /net\srpc\sgroup\saddmem\s\'Domain\sadmins\'\s/ nocase ascii wide
+        $string21 = "net rpc group addmem 'Domain admins' " nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string22 = /net\srpc\sgroup\smembers\s\'Domain\sadmins\'\s\-U\s/ nocase ascii wide
+        $string22 = "net rpc group members 'Domain admins' -U " nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
         $string23 = /netdiscover\s\-i\s.{0,1000}\s\-r\s.{0,1000}\/24/ nocase ascii wide
@@ -82,40 +82,40 @@ rule exegol
         $string24 = /ngrok\sauthtoken\sAUTHTOKEN\:\:\:https\:\/\/dashboard\.ngrok\.com\/get\-started\/your\-authtoken/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string25 = /nmap\s\-Pn\s\-v\s\-sS\s\-F/ nocase ascii wide
+        $string25 = "nmap -Pn -v -sS -F" nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
         $string26 = /pwnedornot\.py\s\-d\s/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string27 = /scout\saws\s\-\-profile\sdefault\s\-f/ nocase ascii wide
+        $string27 = "scout aws --profile default -f" nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string28 = /scout\sazure\s\-\-cli/ nocase ascii wide
+        $string28 = "scout azure --cli" nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string29 = /screen\s\/dev\/ttyACM0\s115200/ nocase ascii wide
+        $string29 = "screen /dev/ttyACM0 115200" nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string30 = /snmpwalk\s\-c\spublic\s\-v\s1\s/ nocase ascii wide
+        $string30 = "snmpwalk -c public -v 1 " nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string31 = /snmpwalk\s\-c\spublic\s\-v\s2c\s/ nocase ascii wide
+        $string31 = "snmpwalk -c public -v 2c " nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
         $string32 = /tailscale\sup\s\-\-advertise\-routes\=.{0,1000}\/24/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string33 = /tailscaled\s\-\-tun\=userspace\-networking\s\-\-socks5\-server\=/ nocase ascii wide
+        $string33 = "tailscaled --tun=userspace-networking --socks5-server=" nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string34 = /volatility2\s\-\-profile\=/ nocase ascii wide
+        $string34 = "volatility2 --profile=" nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
         $string35 = /volatility3\s\-f\s.{0,1000}\.dmp/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string36 = /vulny\-code\-static\-analysis\s\-\-dir\s/ nocase ascii wide
+        $string36 = "vulny-code-static-analysis --dir " nocase ascii wide
 
     condition:
         any of them

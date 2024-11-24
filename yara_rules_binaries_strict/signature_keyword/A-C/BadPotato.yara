@@ -10,7 +10,7 @@ rule BadPotato
     strings:
         // Description: Windows Privilege Escalation Exploit BadPotato
         // Reference: https://github.com/BeichenDream/BadPotato
-        $string1 = /ATK\/BadPotato\-A/ nocase ascii wide
+        $string1 = "ATK/BadPotato-A" nocase ascii wide
         // Description: Windows Privilege Escalation Exploit BadPotato
         // Reference: https://github.com/BeichenDream/BadPotato
         $string2 = /BadPotato\.Win32/ nocase ascii wide
@@ -19,10 +19,10 @@ rule BadPotato
         $string3 = /HackTool\.BadPotato/ nocase ascii wide
         // Description: Windows Privilege Escalation Exploit BadPotato
         // Reference: https://github.com/BeichenDream/BadPotato
-        $string4 = /HackTool\/BadPotato/ nocase ascii wide
+        $string4 = "HackTool/BadPotato" nocase ascii wide
         // Description: Windows Privilege Escalation Exploit BadPotato
         // Reference: https://github.com/BeichenDream/BadPotato
-        $string5 = /HackTool\:Win32\/Badcastle\!pz/ nocase ascii wide
+        $string5 = "HackTool:Win32/Badcastle!pz" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

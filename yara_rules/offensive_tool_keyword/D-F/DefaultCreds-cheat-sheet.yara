@@ -22,7 +22,7 @@ rule DefaultCreds_cheat_sheet
         $string4 = /\/tmp\/.{0,1000}\-usernames\.txt/ nocase ascii wide
         // Description: One place for all the default credentials to assist the Blue/Red teamers activities on finding devices with default password
         // Reference: https://github.com/ihebski/DefaultCreds-cheat-sheet
-        $string5 = /DefaultCreds\-cheat\-sheet/ nocase ascii wide
+        $string5 = "DefaultCreds-cheat-sheet" nocase ascii wide
 
     condition:
         any of them

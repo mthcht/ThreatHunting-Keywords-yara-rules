@@ -16,10 +16,10 @@ rule Internal_Monologue
         $string2 = /Internal\-Monologue\.exe/ nocase ascii wide
         // Description: Internal Monologue Attack: Retrieving NTLM Hashes without Touching LSASS
         // Reference: https://github.com/eladshamir/Internal-Monologue
-        $string3 = /InternalMonologueDll/ nocase ascii wide
+        $string3 = "InternalMonologueDll" nocase ascii wide
         // Description: Internal Monologue Attack: Retrieving NTLM Hashes without Touching LSASS
         // Reference: https://github.com/eladshamir/Internal-Monologue
-        $string4 = /InternalMonologueExe/ nocase ascii wide
+        $string4 = "InternalMonologueExe" nocase ascii wide
 
     condition:
         any of them

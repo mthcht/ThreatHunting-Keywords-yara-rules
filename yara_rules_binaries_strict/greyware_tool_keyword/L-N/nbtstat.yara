@@ -10,7 +10,7 @@ rule nbtstat
     strings:
         // Description: Displays the NetBIOS name table of the local computer. The status of registered indicates that the name is registered either by broadcast or with a WINS server.
         // Reference: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/nbtstat
-        $string1 = /nbtstat\s\-n/ nocase ascii wide
+        $string1 = "nbtstat -n" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -10,7 +10,7 @@ rule gmer
     strings:
         // Description: rootkit detector abused by attackers to disable security software
         // Reference: gmer.net
-        $string1 = /HackTool\:Win32\/Gmer/ nocase ascii wide
+        $string1 = "HackTool:Win32/Gmer" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

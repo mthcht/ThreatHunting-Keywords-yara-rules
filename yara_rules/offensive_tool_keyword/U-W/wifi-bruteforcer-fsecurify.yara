@@ -10,7 +10,7 @@ rule wifi_bruteforcer_fsecurify
     strings:
         // Description: Android application to brute force WiFi passwords without requiring a rooted device.
         // Reference: https://github.com/faizann24/wifi-bruteforcer-fsecurify
-        $string1 = /wifi\-bruteforcer/ nocase ascii wide
+        $string1 = "wifi-bruteforcer" nocase ascii wide
 
     condition:
         any of them

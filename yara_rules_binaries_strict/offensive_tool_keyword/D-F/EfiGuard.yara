@@ -55,19 +55,19 @@ rule EfiGuard
         $string15 = /\\UefiShell\.iso/ nocase ascii wide
         // Description: EfiGuard is a portable x64 UEFI bootkit that patches the Windows boot manager - boot loader and kernel at boot time in order to disable PatchGuard and Driver Signature Enforcement (DSE).
         // Reference: https://github.com/Mattiwatti/EfiGuard
-        $string16 = /0E4BAB8F\-E6E0\-47A8\-8E99\-8D451839967E/ nocase ascii wide
+        $string16 = "0E4BAB8F-E6E0-47A8-8E99-8D451839967E" nocase ascii wide
         // Description: EfiGuard is a portable x64 UEFI bootkit that patches the Windows boot manager - boot loader and kernel at boot time in order to disable PatchGuard and Driver Signature Enforcement (DSE).
         // Reference: https://github.com/Mattiwatti/EfiGuard
-        $string17 = /B2924789\-9912\-4B6F\-8F7B\-53240AC3BA0E/ nocase ascii wide
+        $string17 = "B2924789-9912-4B6F-8F7B-53240AC3BA0E" nocase ascii wide
         // Description: EfiGuard is a portable x64 UEFI bootkit that patches the Windows boot manager - boot loader and kernel at boot time in order to disable PatchGuard and Driver Signature Enforcement (DSE).
         // Reference: https://github.com/Mattiwatti/EfiGuard
-        $string18 = /D7484EBA\-6357\-4D81\-B355\-066E28D5DF72/ nocase ascii wide
+        $string18 = "D7484EBA-6357-4D81-B355-066E28D5DF72" nocase ascii wide
         // Description: EfiGuard is a portable x64 UEFI bootkit that patches the Windows boot manager - boot loader and kernel at boot time in order to disable PatchGuard and Driver Signature Enforcement (DSE).
         // Reference: https://github.com/Mattiwatti/EfiGuard
         $string19 = /EfiDSEFix\.exe\s/ nocase ascii wide
         // Description: EfiGuard is a portable x64 UEFI bootkit that patches the Windows boot manager - boot loader and kernel at boot time in order to disable PatchGuard and Driver Signature Enforcement (DSE).
         // Reference: https://github.com/Mattiwatti/EfiGuard
-        $string20 = /EFIGUARD_BACKDOOR_VARIABLE_NAME/ nocase ascii wide
+        $string20 = "EFIGUARD_BACKDOOR_VARIABLE_NAME" nocase ascii wide
         // Description: EfiGuard is a portable x64 UEFI bootkit that patches the Windows boot manager - boot loader and kernel at boot time in order to disable PatchGuard and Driver Signature Enforcement (DSE).
         // Reference: https://github.com/Mattiwatti/EfiGuard
         $string21 = /EfiGuard\-v1\.1\.zip/ nocase ascii wide
@@ -88,7 +88,7 @@ rule EfiGuard
         $string26 = /Protocol\/EfiGuard\.h/ nocase ascii wide
         // Description: EfiGuard is a portable x64 UEFI bootkit that patches the Windows boot manager - boot loader and kernel at boot time in order to disable PatchGuard and Driver Signature Enforcement (DSE).
         // Reference: https://github.com/Mattiwatti/EfiGuard
-        $string27 = /roodkcaBdrauGifE/ nocase ascii wide
+        $string27 = "roodkcaBdrauGifE" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

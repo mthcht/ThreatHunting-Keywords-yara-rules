@@ -16,10 +16,10 @@ rule telebit_cloud
         $string2 = /\/cloud\.telebit\.remote\.plist/ nocase ascii wide
         // Description: Access your devices - Share your stuff (shell from telebit.cloud)
         // Reference: https://telebit.cloud/
-        $string3 = /\/opt\/telebit/ nocase ascii wide
+        $string3 = "/opt/telebit" nocase ascii wide
         // Description: Access your devices - Share your stuff (shell from telebit.cloud)
         // Reference: https://telebit.cloud/
-        $string4 = /\/telebit\shttp\s/ nocase ascii wide
+        $string4 = "/telebit http " nocase ascii wide
         // Description: Access your devices - Share your stuff (shell from telebit.cloud)
         // Reference: https://telebit.cloud/
         $string5 = /\/telebit\.js\.git/ nocase ascii wide
@@ -28,7 +28,7 @@ rule telebit_cloud
         $string6 = /\/telebit\.service/ nocase ascii wide
         // Description: Access your devices - Share your stuff (shell from telebit.cloud)
         // Reference: https://telebit.cloud/
-        $string7 = /\/telebit\/var\/log\// nocase ascii wide
+        $string7 = "/telebit/var/log/" nocase ascii wide
         // Description: Access your devices - Share your stuff (shell from telebit.cloud)
         // Reference: https://telebit.cloud/
         $string8 = /\/telebit\-remote\.js/ nocase ascii wide
@@ -46,7 +46,7 @@ rule telebit_cloud
         $string12 = /https\:\/\/get\.telebit\.io/ nocase ascii wide
         // Description: Access your devices - Share your stuff (shell from telebit.cloud)
         // Reference: https://telebit.cloud/
-        $string13 = /install\s\-g\stelebit/ nocase ascii wide
+        $string13 = "install -g telebit" nocase ascii wide
         // Description: Access your devices - Share your stuff (shell from telebit.cloud)
         // Reference: https://telebit.cloud/
         $string14 = /netcat\s.{0,1000}\.telebit\.io/ nocase ascii wide
@@ -58,13 +58,13 @@ rule telebit_cloud
         $string16 = /ssh.{0,1000}\.telebit\.cloud/ nocase ascii wide
         // Description: Access your devices - Share your stuff (shell from telebit.cloud)
         // Reference: https://telebit.cloud/
-        $string17 = /telebit\sssh\sauto/ nocase ascii wide
+        $string17 = "telebit ssh auto" nocase ascii wide
         // Description: Access your devices - Share your stuff (shell from telebit.cloud)
         // Reference: https://telebit.cloud/
-        $string18 = /telebit\stcp\s/ nocase ascii wide
+        $string18 = "telebit tcp " nocase ascii wide
         // Description: Access your devices - Share your stuff (shell from telebit.cloud)
         // Reference: https://telebit.cloud/
-        $string19 = /\-\-user\-unit\=telebit/ nocase ascii wide
+        $string19 = "--user-unit=telebit" nocase ascii wide
 
     condition:
         any of them

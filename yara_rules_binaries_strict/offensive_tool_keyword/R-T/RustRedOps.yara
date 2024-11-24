@@ -364,7 +364,7 @@ rule RustRedOps
         $string118 = /\\wmi_exec\.exe/ nocase ascii wide
         // Description: RustRedOps is a repository dedicated to gathering and sharing advanced techniques and offensive malware for Red Team
         // Reference: https://github.com/joaoviictorti/RustRedOps
-        $string119 = /joaoviictorti\/RustRedOps/ nocase ascii wide
+        $string119 = "joaoviictorti/RustRedOps" nocase ascii wide
         // Description: RustRedOps is a repository dedicated to gathering and sharing advanced techniques and offensive malware for Red Team
         // Reference: https://github.com/joaoviictorti/RustRedOps
         $string120 = /obfuscation\.exe\s\-\-/ nocase ascii wide

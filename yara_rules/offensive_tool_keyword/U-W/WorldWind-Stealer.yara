@@ -13,7 +13,7 @@ rule WorldWind_Stealer
         $string1 = /WorldWind\sStealer\.zip/ nocase ascii wide
         // Description: WorldWind Stealer This stealer sends logs directly to your telegram id from a Bot that YOU Create with telegram
         // Reference: https://github.com/Leecher21/WorldWind-Stealer
-        $string2 = /WorldWind\-Stealer/ nocase ascii wide
+        $string2 = "WorldWind-Stealer" nocase ascii wide
 
     condition:
         any of them

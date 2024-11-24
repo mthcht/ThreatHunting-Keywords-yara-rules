@@ -10,10 +10,10 @@ rule pdbedit
     strings:
         // Description: Sets the smbpasswd listing format. It will make pdbedit list the users in the database - printing out the account fields in a format compatible with the smbpasswd file format.
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string1 = /pdbedit\s\-L\s\-v/ nocase ascii wide
+        $string1 = "pdbedit -L -v" nocase ascii wide
         // Description: Enables the verbose listing format. It causes pdbedit to list the users in the database - printing out the account fields in a descriptive format
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string2 = /pdbedit\s\-L\s\-w/ nocase ascii wide
+        $string2 = "pdbedit -L -w" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

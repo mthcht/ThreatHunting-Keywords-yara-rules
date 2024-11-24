@@ -10,13 +10,13 @@ rule DefenderCheck
     strings:
         // Description: Quick tool to help make evasion work a little bit easier.Takes a binary as input and splits it until it pinpoints that exact byte that Microsoft Defender will flag on. and then prints those offending bytes to the screen. This can be helpful when trying to identify the specific bad pieces of code in your tool/payload.
         // Reference: https://github.com/matterpreter/DefenderCheck
-        $string1 = /DefenderCheck/ nocase ascii wide
+        $string1 = "DefenderCheck" nocase ascii wide
         // Description: Identifies the bytes that Microsoft Defender flags on
         // Reference: https://github.com/rasta-mouse/ThreatCheck
         $string2 = /DefenderCheck\.exe/ nocase ascii wide
         // Description: Identifies the bytes that Microsoft Defender flags on
         // Reference: https://github.com/rasta-mouse/ThreatCheck
-        $string3 = /matterpreter\/DefenderCheck/ nocase ascii wide
+        $string3 = "matterpreter/DefenderCheck" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

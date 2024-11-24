@@ -10,7 +10,7 @@ rule AbandonedCOMKeys
     strings:
         // Description: Enumerates abandoned COM keys (specifically InprocServer32). Useful for persistence
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/AbandonedCOMKeys
-        $string1 = /\/AbandonedCOMKeys\// nocase ascii wide
+        $string1 = "/AbandonedCOMKeys/" nocase ascii wide
         // Description: Enumerates abandoned COM keys (specifically InprocServer32). Useful for persistence
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/AbandonedCOMKeys
         $string2 = /\\AbandonedCOMKeys\./ nocase ascii wide

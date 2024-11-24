@@ -28,19 +28,19 @@ rule mhydeath
         $string6 = /\\process_killer\.cpp/ nocase ascii wide
         // Description: Abusing mhyprotect to kill AVs / EDRs / XDRs / Protected Processes.
         // Reference: https://github.com/zer0condition/mhydeath
-        $string7 = /0D17A4B4\-A7C4\-49C0\-99E3\-B856F9F3B271/ nocase ascii wide
+        $string7 = "0D17A4B4-A7C4-49C0-99E3-B856F9F3B271" nocase ascii wide
         // Description: Abusing mhyprotect to kill AVs / EDRs / XDRs / Protected Processes.
         // Reference: https://github.com/zer0condition/mhydeath
         $string8 = /mhydeath\.exe/ nocase ascii wide
         // Description: Abusing mhyprotect to kill AVs / EDRs / XDRs / Protected Processes.
         // Reference: https://github.com/zer0condition/mhydeath
-        $string9 = /mhydeath\-master/ nocase ascii wide
+        $string9 = "mhydeath-master" nocase ascii wide
         // Description: Abusing mhyprotect to kill AVs / EDRs / XDRs / Protected Processes.
         // Reference: https://github.com/zer0condition/mhydeath
         $string10 = /process_killer\.exe/ nocase ascii wide
         // Description: Abusing mhyprotect to kill AVs / EDRs / XDRs / Protected Processes.
         // Reference: https://github.com/zer0condition/mhydeath
-        $string11 = /zer0condition\/mhydeath/ nocase ascii wide
+        $string11 = "zer0condition/mhydeath" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -10,10 +10,10 @@ rule o365_attack_toolkit
     strings:
         // Description: A toolkit to attack Office365
         // Reference: https://github.com/mdsecactivebreach/o365-attack-toolkit
-        $string1 = /http\:\/\/localhost\:30662/ nocase ascii wide
+        $string1 = "http://localhost:30662" nocase ascii wide
         // Description: A toolkit to attack Office365
         // Reference: https://github.com/mdsecactivebreach/o365-attack-toolkit
-        $string2 = /o365\-attack\-toolkit/ nocase ascii wide
+        $string2 = "o365-attack-toolkit" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

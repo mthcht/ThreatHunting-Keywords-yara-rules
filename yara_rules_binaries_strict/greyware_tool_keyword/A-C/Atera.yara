@@ -13,16 +13,16 @@ rule Atera
         $string1 = /\.servicedesk\.atera\.com\/GetAgent/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://www.atera.com/
-        $string2 = /\/Agent\/AcknowledgeCommands\// nocase ascii wide
+        $string2 = "/Agent/AcknowledgeCommands/" nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://www.atera.com/
-        $string3 = /\/Agent\/GetCommandsFallback\// nocase ascii wide
+        $string3 = "/Agent/GetCommandsFallback/" nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://www.atera.com/
-        $string4 = /\/Agent\/GetEnvironmentStatus\// nocase ascii wide
+        $string4 = "/Agent/GetEnvironmentStatus/" nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://www.atera.com/
-        $string5 = /\/Agent\/GetRecurringPackages\// nocase ascii wide
+        $string5 = "/Agent/GetRecurringPackages/" nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://www.atera.com/
         $string6 = /\\AlphaControlAgent\\obj\\Release\\AteraAgent\.pdb/ nocase ascii wide
@@ -43,7 +43,7 @@ rule Atera
         $string11 = /\\TEMP\\AteraUpgradeAgentPackage\\/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://www.atera.com/
-        $string12 = /\>Atera\sNetworks\</ nocase ascii wide
+        $string12 = ">Atera Networks<" nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://www.atera.com/
         $string13 = /acontrol\.atera\.com/ nocase ascii wide
@@ -82,7 +82,7 @@ rule Atera
         $string24 = /http.{0,100}\/agent\-api\-.{0,100}\.atera\.com/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://www.atera.com/
-        $string25 = /Monitoring\s\&\sManagement\sAgent\sby\sATERA/ nocase ascii wide
+        $string25 = "Monitoring & Management Agent by ATERA" nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
         $string26 = /REG\sDELETE\s\\"HKEY_CLASSES_ROOT\\Installer\\Products\\10F15BFE50893924BB61F671FEC4D2EF\\"\s\/f/ nocase ascii wide
@@ -91,13 +91,13 @@ rule Atera
         $string27 = /REG\sDELETE\s\\"HKEY_CLASSES_ROOT\\Installer\\Products\\4758948C95C1B194AB15204D95B42292\\"\s\/f/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://www.atera.com/
-        $string28 = /sc\sdelete\sAteraAgent/ nocase ascii wide
+        $string28 = "sc delete AteraAgent" nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://www.atera.com/
-        $string29 = /sc\sstart\sAteraAgent/ nocase ascii wide
+        $string29 = "sc start AteraAgent" nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://www.atera.com/
-        $string30 = /sc\sstop\sAteraAgent/ nocase ascii wide
+        $string30 = "sc stop AteraAgent" nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://www.atera.com/
         $string31 = /SOFTWARE\\ATERA\sNetworks\\AlphaAgent/ nocase ascii wide
@@ -112,16 +112,16 @@ rule Atera
         $string34 = /taskkill\s\/f\s\/im\sAgentPackageHeartbeat\.exe/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://www.atera.com/
-        $string35 = /taskkill\s\/f\s\/im\sAgentPackageInformation/ nocase ascii wide
+        $string35 = "taskkill /f /im AgentPackageInformation" nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://www.atera.com/
         $string36 = /taskkill\s\/f\s\/im\sAgentPackageInternalPoller\.exe/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://www.atera.com/
-        $string37 = /taskkill\s\/f\s\/im\sAgentPackageMonitoring/ nocase ascii wide
+        $string37 = "taskkill /f /im AgentPackageMonitoring" nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://www.atera.com/
-        $string38 = /taskkill\s\/f\s\/im\sAgentPackageProgramManagement/ nocase ascii wide
+        $string38 = "taskkill /f /im AgentPackageProgramManagement" nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://www.atera.com/
         $string39 = /taskkill\s\/f\s\/im\sAgentPackageRegistryExplorer\.exe/ nocase ascii wide
@@ -130,7 +130,7 @@ rule Atera
         $string40 = /taskkill\s\/f\s\/im\sAgentPackageRunCommande\.exe/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://www.atera.com/
-        $string41 = /taskkill\s\/f\s\/im\sAgentPackageRunCommandInteractive/ nocase ascii wide
+        $string41 = "taskkill /f /im AgentPackageRunCommandInteractive" nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://www.atera.com/
         $string42 = /taskkill\s\/f\s\/im\sAgentPackageSTRemote\.exe/ nocase ascii wide
@@ -139,7 +139,7 @@ rule Atera
         $string43 = /taskkill\s\/f\s\/im\sAgentPackageSystemTools\.exe/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://www.atera.com/
-        $string44 = /taskkill\s\/f\s\/im\sAgentPackageUpgradeAgent/ nocase ascii wide
+        $string44 = "taskkill /f /im AgentPackageUpgradeAgent" nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://www.atera.com/
         $string45 = /taskkill\s\/f\s\/im\sAgentPackageWindowsUpdate\.exe/ nocase ascii wide

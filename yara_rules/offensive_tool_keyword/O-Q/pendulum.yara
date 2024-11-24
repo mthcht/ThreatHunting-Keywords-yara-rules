@@ -19,7 +19,7 @@ rule pendulum
         $string3 = /\/src\/pendulum\.h/ nocase ascii wide
         // Description: Linux Sleep Obfuscation
         // Reference: https://github.com/kyleavery/pendulum
-        $string4 = /kyleavery\/pendulum/ nocase ascii wide
+        $string4 = "kyleavery/pendulum" nocase ascii wide
 
     condition:
         any of them

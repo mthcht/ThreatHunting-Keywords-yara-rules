@@ -19,10 +19,10 @@ rule SessionExec
         $string3 = /\\SessionExec\.exe/ nocase ascii wide
         // Description: Execute commands in other Sessions
         // Reference: https://github.com/Leo4j/SessionExec
-        $string4 = /9065655de782c08c41aa0fe11503e92e455fdf4b1a590101221aeb73f8db98e9/ nocase ascii wide
+        $string4 = "9065655de782c08c41aa0fe11503e92e455fdf4b1a590101221aeb73f8db98e9" nocase ascii wide
         // Description: Execute commands in other Sessions
         // Reference: https://github.com/Leo4j/SessionExec
-        $string5 = /Invoke\-SessionExec\s/ nocase ascii wide
+        $string5 = "Invoke-SessionExec " nocase ascii wide
         // Description: Execute commands in other Sessions
         // Reference: https://github.com/Leo4j/SessionExec
         $string6 = /Invoke\-SessionExec\.ps1/ nocase ascii wide

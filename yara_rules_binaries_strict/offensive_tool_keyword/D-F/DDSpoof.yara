@@ -46,7 +46,7 @@ rule DDSpoof
         $string12 = /\]\sLLMNR\sSniffer\sidentified\spreviously\ssniffed\sname/ nocase ascii wide
         // Description: DDSpoof is a tool that enables DHCP DNS Dynamic Update attacks against Microsoft DHCP servers in AD environments.
         // Reference: https://github.com/akamai/DDSpoof
-        $string13 = /akamai\/DDSpoof/ nocase ascii wide
+        $string13 = "akamai/DDSpoof" nocase ascii wide
         // Description: DDSpoof is a tool that enables DHCP DNS Dynamic Update attacks against Microsoft DHCP servers in AD environments.
         // Reference: https://github.com/akamai/DDSpoof
         $string14 = /ddspoof.{0,100}\-\-enum\-name\-protection/ nocase ascii wide
@@ -58,7 +58,7 @@ rule DDSpoof
         $string16 = /DDSpoof\\spoofer_config\.py/ nocase ascii wide
         // Description: DDSpoof is a tool that enables DHCP DNS Dynamic Update attacks against Microsoft DHCP servers in AD environments.
         // Reference: https://github.com/akamai/DDSpoof
-        $string17 = /DDSpoof\-main/ nocase ascii wide
+        $string17 = "DDSpoof-main" nocase ascii wide
         // Description: DDSpoof is a tool that enables DHCP DNS Dynamic Update attacks against Microsoft DHCP servers in AD environments.
         // Reference: https://github.com/akamai/DDSpoof
         $string18 = /dhcp_sniffer\.py/ nocase ascii wide
@@ -67,10 +67,10 @@ rule DDSpoof
         $string19 = /from\snetworking\.dhcp_dns_update_utils/ nocase ascii wide
         // Description: DDSpoof is a tool that enables DHCP DNS Dynamic Update attacks against Microsoft DHCP servers in AD environments.
         // Reference: https://github.com/akamai/DDSpoof
-        $string20 = /from\sspoofer_config\simport\sSpooferConfig/ nocase ascii wide
+        $string20 = "from spoofer_config import SpooferConfig" nocase ascii wide
         // Description: DDSpoof is a tool that enables DHCP DNS Dynamic Update attacks against Microsoft DHCP servers in AD environments.
         // Reference: https://github.com/akamai/DDSpoof
-        $string21 = /Invoke\-DHCPCheckup/ nocase ascii wide
+        $string21 = "Invoke-DHCPCheckup" nocase ascii wide
         // Description: DDSpoof is a tool that enables DHCP DNS Dynamic Update attacks against Microsoft DHCP servers in AD environments.
         // Reference: https://github.com/akamai/DDSpoof
         $string22 = /llmnr_sniffer\.py/ nocase ascii wide
@@ -79,13 +79,13 @@ rule DDSpoof
         $string23 = /networking\\dhcp_dns_update_utils\.py/ nocase ascii wide
         // Description: DDSpoof is a tool that enables DHCP DNS Dynamic Update attacks against Microsoft DHCP servers in AD environments.
         // Reference: https://github.com/akamai/DDSpoof
-        $string24 = /Path\sto\sa\sDDSpoof\sconfig\sfile\sto\sload\sconfiguration\sfrom/ nocase ascii wide
+        $string24 = "Path to a DDSpoof config file to load configuration from" nocase ascii wide
         // Description: DDSpoof is a tool that enables DHCP DNS Dynamic Update attacks against Microsoft DHCP servers in AD environments.
         // Reference: https://github.com/akamai/DDSpoof
         $string25 = /sniffers\.llmnr_sniffer/ nocase ascii wide
         // Description: DDSpoof is a tool that enables DHCP DNS Dynamic Update attacks against Microsoft DHCP servers in AD environments.
         // Reference: https://github.com/akamai/DDSpoof
-        $string26 = /This\soption\swill\scause\sDDSpoof\sto\screate\sDNS\srecords\son\sthe\sserver/ nocase ascii wide
+        $string26 = "This option will cause DDSpoof to create DNS records on the server" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

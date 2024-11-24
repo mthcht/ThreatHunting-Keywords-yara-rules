@@ -10,7 +10,7 @@ rule SpringCore0day
     strings:
         // Description: SpringCore0day from share.vx-underground.org & some additional links
         // Reference: https://github.com/craig/SpringCore0day
-        $string1 = /\/SpringCore0day/ nocase ascii wide
+        $string1 = "/SpringCore0day" nocase ascii wide
         // Description: SpringCore0day from share.vx-underground.org & some additional links
         // Reference: https://github.com/craig/SpringCore0day
         $string2 = /curl\s\-\-output\s.{0,100}http.{0,100}\/tomcatwar\.jsp\?/ nocase ascii wide
@@ -19,7 +19,7 @@ rule SpringCore0day
         $string3 = /python3\s\.\/exp\.py\s\-\-url\shttp\:\/\// nocase ascii wide
         // Description: SpringCore0day from share.vx-underground.org & some additional links
         // Reference: https://github.com/craig/SpringCore0day
-        $string4 = /vulfocus\/spring\-core\-rce\-/ nocase ascii wide
+        $string4 = "vulfocus/spring-core-rce-" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

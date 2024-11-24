@@ -19,28 +19,28 @@ rule OffensiveNotion
         $string3 = /\/OffensiveNotion\.git/ nocase ascii wide
         // Description: Notion (yes the notetaking app) as a C2.
         // Reference: https://github.com/mttaggart/OffensiveNotion
-        $string4 = /\/OffensiveNotion\/agent/ nocase ascii wide
+        $string4 = "/OffensiveNotion/agent" nocase ascii wide
         // Description: Notion (yes the notetaking app) as a C2.
         // Reference: https://github.com/mttaggart/OffensiveNotion
-        $string5 = /\/OffensiveNotion\/osxcross\/target\/bin/ nocase ascii wide
+        $string5 = "/OffensiveNotion/osxcross/target/bin" nocase ascii wide
         // Description: Notion (yes the notetaking app) as a C2.
         // Reference: https://github.com/mttaggart/OffensiveNotion
-        $string6 = /\/OffensiveNotion\/utils/ nocase ascii wide
+        $string6 = "/OffensiveNotion/utils" nocase ascii wide
         // Description: Notion (yes the notetaking app) as a C2.
         // Reference: https://github.com/mttaggart/OffensiveNotion
-        $string7 = /cddownloadelevategetprivsinjectpersistportscanpspwdrunassaveshellshutdownsleep/ nocase ascii wide
+        $string7 = "cddownloadelevategetprivsinjectpersistportscanpspwdrunassaveshellshutdownsleep" nocase ascii wide
         // Description: Notion (yes the notetaking app) as a C2.
         // Reference: https://github.com/mttaggart/OffensiveNotion
-        $string8 = /mttaggart\/OffensiveNotion/ nocase ascii wide
+        $string8 = "mttaggart/OffensiveNotion" nocase ascii wide
         // Description: Notion (yes the notetaking app) as a C2.
         // Reference: https://github.com/mttaggart/OffensiveNotion
         $string9 = /offensive_notion\.exe/ nocase ascii wide
         // Description: Notion (yes the notetaking app) as a C2.
         // Reference: https://github.com/mttaggart/OffensiveNotion
-        $string10 = /offensive_notion_darwin_/ nocase ascii wide
+        $string10 = "offensive_notion_darwin_" nocase ascii wide
         // Description: Notion (yes the notetaking app) as a C2.
         // Reference: https://github.com/mttaggart/OffensiveNotion
-        $string11 = /offensive_notion_linux_/ nocase ascii wide
+        $string11 = "offensive_notion_linux_" nocase ascii wide
         // Description: Notion (yes the notetaking app) as a C2.
         // Reference: https://github.com/mttaggart/OffensiveNotion
         $string12 = /offensive_notion_win_.{0,1000}\.exe/ nocase ascii wide

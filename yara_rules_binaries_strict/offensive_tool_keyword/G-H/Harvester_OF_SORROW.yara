@@ -13,10 +13,10 @@ rule Harvester_OF_SORROW
         $string1 = /\sPictures\\Screenshots\\loot\.zip/ nocase ascii wide
         // Description: The payload opens firefox about:logins and tabs and arrows its way through options. It then takes a screen shot with the first set of log in credentials made visible. Finally it sends the screenshot  to an email of your choosing.
         // Reference: https://github.com/hak5/omg-payloads/blob/master/payloads/library/credentials/Harvester_OF_SORROW/payload.txt
-        $string2 = /REM\sTitle\:\sHarvester_OF_SORROW/ nocase ascii wide
+        $string2 = "REM Title: Harvester_OF_SORROW" nocase ascii wide
         // Description: The payload opens firefox about:logins and tabs and arrows its way through options. It then takes a screen shot with the first set of log in credentials made visible. Finally it sends the screenshot  to an email of your choosing.
         // Reference: https://github.com/hak5/omg-payloads/blob/master/payloads/library/credentials/Harvester_OF_SORROW/payload.txt
-        $string3 = /STRING\sfirefox\sabout\:logins/ nocase ascii wide
+        $string3 = "STRING firefox about:logins" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

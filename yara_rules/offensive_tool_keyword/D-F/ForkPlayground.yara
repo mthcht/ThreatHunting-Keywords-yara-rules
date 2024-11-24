@@ -43,13 +43,13 @@ rule ForkPlayground
         $string11 = /\\ForkPlayground\.sln/ nocase ascii wide
         // Description: proof-of-concept of Process Forking.
         // Reference: https://github.com/D4stiny/ForkPlayground
-        $string12 = /18C681A2\-072F\-49D5\-9DE6\-74C979EAE08B/ nocase ascii wide
+        $string12 = "18C681A2-072F-49D5-9DE6-74C979EAE08B" nocase ascii wide
         // Description: proof-of-concept of Process Forking.
         // Reference: https://github.com/D4stiny/ForkPlayground
-        $string13 = /AD495F95\-007A\-4DC1\-9481\-0689CA0547D9/ nocase ascii wide
+        $string13 = "AD495F95-007A-4DC1-9481-0689CA0547D9" nocase ascii wide
         // Description: proof-of-concept of Process Forking.
         // Reference: https://github.com/D4stiny/ForkPlayground
-        $string14 = /D4stiny\/ForkPlayground/ nocase ascii wide
+        $string14 = "D4stiny/ForkPlayground" nocase ascii wide
         // Description: proof-of-concept of Process Forking.
         // Reference: https://github.com/D4stiny/ForkPlayground
         $string15 = /ForkDump\-x64\.exe/ nocase ascii wide
@@ -64,7 +64,7 @@ rule ForkPlayground
         $string18 = /ForkDump\-x86\.pdb/ nocase ascii wide
         // Description: proof-of-concept of Process Forking.
         // Reference: https://github.com/D4stiny/ForkPlayground
-        $string19 = /ForkPlayground\-master/ nocase ascii wide
+        $string19 = "ForkPlayground-master" nocase ascii wide
 
     condition:
         any of them

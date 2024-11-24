@@ -10,7 +10,7 @@ rule PrivilegeEscalation
     strings:
         // Description: This program is a very short batch file which allows you to run anything with admin rights without prompting user could be related to other tools using privsec methods
         // Reference: https://github.com/LouisVallat/PrivilegeEscalation
-        $string1 = /PrivilegeEscalation/ nocase ascii wide
+        $string1 = "PrivilegeEscalation" nocase ascii wide
 
     condition:
         any of them

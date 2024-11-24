@@ -19,10 +19,10 @@ rule attrib
         $string3 = /attrib\s\+R\s\+S\s\+H\sC\:\\WINDOWS\\scvhost\.exe/ nocase ascii wide
         // Description: defense evasion - hidding in suspicious directory
         // Reference: N/A
-        $string4 = /attrib\s\+s\s\+h\s\/D\s\"C\:\\Program\sFiles\\Windows\sNT\\/ nocase ascii wide
+        $string4 = /attrib\s\+s\s\+h\s\/D\s\\"C\:\\Program\sFiles\\Windows\sNT\\/ nocase ascii wide
         // Description: defense evasion - hidding in suspicious directory
         // Reference: N/A
-        $string5 = /attrib\s\+s\s\+h\s\/D\s\"C\:\\users\\Public\\/ nocase ascii wide
+        $string5 = /attrib\s\+s\s\+h\s\/D\s\\"C\:\\users\\Public\\/ nocase ascii wide
         // Description: NTLM Leak via Desktop.ini
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
         $string6 = /attrib\s\+s\s\+h\sdesktop\.ini/ nocase ascii wide

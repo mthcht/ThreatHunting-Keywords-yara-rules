@@ -10,7 +10,7 @@ rule WhatBreach
     strings:
         // Description: WhatBreach is an OSINT tool that simplifies the task of discovering what breaches an email address has been discovered in. WhatBreach provides a simple and effective way to search either multiple. or a single email address and discover all known breaches that this email has been seen in. From there WhatBreach is capable of downloading the database if it is publicly available. downloading the pastes the email was seen in. or searching the domain of the email for further investigation. To perform this task successfully WhatBreach takes advantage of the following websites and/or APIs:
         // Reference: https://github.com/Ekultek/WhatBreach
-        $string1 = /WhatBreach/ nocase ascii wide
+        $string1 = "WhatBreach" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

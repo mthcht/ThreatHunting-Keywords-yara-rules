@@ -52,7 +52,7 @@ rule Dendrobate
         $string14 = /Bates\.exe\s\-\-listen/ nocase ascii wide
         // Description: Dendrobate is a framework that facilitates the development of payloads that hook unmanaged code through managed .NET code
         // Reference: https://github.com/FuzzySecurity/Dendrobate
-        $string15 = /Dendrobate\-master/ nocase ascii wide
+        $string15 = "Dendrobate-master" nocase ascii wide
         // Description: Dendrobate is a framework that facilitates the development of payloads that hook unmanaged code through managed .NET code
         // Reference: https://github.com/FuzzySecurity/Dendrobate
         $string16 = /dendron.{0,100}FileMonInject\.dll/ nocase ascii wide
@@ -67,7 +67,7 @@ rule Dendrobate
         $string19 = /EasyHook\-Managed\/LocalHook\.cs/ nocase ascii wide
         // Description: Dendrobate is a framework that facilitates the development of payloads that hook unmanaged code through managed .NET code
         // Reference: https://github.com/FuzzySecurity/Dendrobate
-        $string20 = /FuzzySecurity\/Dendrobate/ nocase ascii wide
+        $string20 = "FuzzySecurity/Dendrobate" nocase ascii wide
         // Description: Dendrobate is a framework that facilitates the development of payloads that hook unmanaged code through managed .NET code
         // Reference: https://github.com/FuzzySecurity/Dendrobate
         $string21 = /ManagedEasyHook\.dll/ nocase ascii wide
@@ -79,7 +79,7 @@ rule Dendrobate
         $string23 = /NativeEasyHook64\.dll/ nocase ascii wide
         // Description: Dendrobate is a framework that facilitates the development of payloads that hook unmanaged code through managed .NET code
         // Reference: https://github.com/FuzzySecurity/Dendrobate
-        $string24 = /P8CuaPrgwBjunvZxJcgq/ nocase ascii wide
+        $string24 = "P8CuaPrgwBjunvZxJcgq" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

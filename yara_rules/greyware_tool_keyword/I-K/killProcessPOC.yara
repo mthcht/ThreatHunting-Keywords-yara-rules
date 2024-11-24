@@ -31,7 +31,7 @@ rule killProcessPOC
         $string7 = /\\killProcessPOC/ nocase ascii wide
         // Description: use  Avast (aswArPot.sys) to kill process - exploited by MONTI ransomware
         // Reference: https://github.com/timwhitez/killProcessPOC
-        $string8 = /55ab03a0f7e3ce2c13664db76e5e0b6768cb66d88971b6bc6caf577831a77a23/ nocase ascii wide
+        $string8 = "55ab03a0f7e3ce2c13664db76e5e0b6768cb66d88971b6bc6caf577831a77a23" nocase ascii wide
         // Description: use  Avast (aswArPot.sys) to kill process - exploited by MONTI ransomware
         // Reference: https://github.com/timwhitez/killProcessPOC
         $string9 = /sc\.exe\screate\saswSP_ArPot1/ nocase ascii wide
@@ -49,7 +49,7 @@ rule killProcessPOC
         $string13 = /sc\.exe\sstart\saswSP_ArPot/ nocase ascii wide
         // Description: use  Avast (aswArPot.sys) to kill process - exploited by MONTI ransomware
         // Reference: https://github.com/timwhitez/killProcessPOC
-        $string14 = /timwhitez\/killProcessPOC/ nocase ascii wide
+        $string14 = "timwhitez/killProcessPOC" nocase ascii wide
 
     condition:
         any of them

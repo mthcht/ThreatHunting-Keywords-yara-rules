@@ -25,7 +25,7 @@ rule LNKUp
         $string5 = /lnkup\.py\s\-\-/ nocase ascii wide
         // Description: Generates malicious LNK file payloads for data exfiltration
         // Reference: https://github.com/Plazmaz/LNKUp
-        $string6 = /Plazmaz\/LNKUp/ nocase ascii wide
+        $string6 = "Plazmaz/LNKUp" nocase ascii wide
 
     condition:
         any of them

@@ -28,10 +28,10 @@ rule Windows_Privilege_Escalation
         $string6 = /windows_recon\.bat/ nocase ascii wide
         // Description: Windows Privilege Escalation Techniques and Scripts
         // Reference: https://github.com/frizb/Windows-Privilege-Escalation
-        $string7 = /windows\-privesc\-check/ nocase ascii wide
+        $string7 = "windows-privesc-check" nocase ascii wide
         // Description: Windows Privilege Escalation Techniques and Scripts
         // Reference: https://github.com/frizb/Windows-Privilege-Escalation
-        $string8 = /Windows\-Privilege\-Escalation/ nocase ascii wide
+        $string8 = "Windows-Privilege-Escalation" nocase ascii wide
         // Description: Windows Privilege Escalation Techniques and Scripts
         // Reference: https://github.com/frizb/Windows-Privilege-Escalation
         $string9 = /winreconstreamline\.bat/ nocase ascii wide

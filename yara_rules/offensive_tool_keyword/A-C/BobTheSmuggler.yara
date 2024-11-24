@@ -22,25 +22,25 @@ rule BobTheSmuggler
         $string4 = /BobTheSmuggler\.py/ nocase ascii wide
         // Description: HTML SMUGGLING TOOL 6 allows you to create HTML files with embedded 7z/zip archives. The tool would compress your binary (EXE/DLL) into 7z/zip file format then XOR encrypt the archive and then hides inside PNG/GIF image file format (Image Polyglots)
         // Reference: https://github.com/TheCyb3rAlpha/BobTheSmuggler
-        $string5 = /BobTheSmuggler\-main/ nocase ascii wide
+        $string5 = "BobTheSmuggler-main" nocase ascii wide
         // Description: HTML SMUGGLING TOOL 6 allows you to create HTML files with embedded 7z/zip archives. The tool would compress your binary (EXE/DLL) into 7z/zip file format then XOR encrypt the archive and then hides inside PNG/GIF image file format (Image Polyglots)
         // Reference: https://github.com/TheCyb3rAlpha/BobTheSmuggler
-        $string6 = /Getting\sthe\sObfuscated\sJS\sCode/ nocase ascii wide
+        $string6 = "Getting the Obfuscated JS Code" nocase ascii wide
         // Description: HTML SMUGGLING TOOL 6 allows you to create HTML files with embedded 7z/zip archives. The tool would compress your binary (EXE/DLL) into 7z/zip file format then XOR encrypt the archive and then hides inside PNG/GIF image file format (Image Polyglots)
         // Reference: https://github.com/TheCyb3rAlpha/BobTheSmuggler
-        $string7 = /Successfully\sembedded\sEXE\sinto\sGIF/ nocase ascii wide
+        $string7 = "Successfully embedded EXE into GIF" nocase ascii wide
         // Description: HTML SMUGGLING TOOL 6 allows you to create HTML files with embedded 7z/zip archives. The tool would compress your binary (EXE/DLL) into 7z/zip file format then XOR encrypt the archive and then hides inside PNG/GIF image file format (Image Polyglots)
         // Reference: https://github.com/TheCyb3rAlpha/BobTheSmuggler
-        $string8 = /Successfully\sembedded\sEXE\sinto\sPNG/ nocase ascii wide
+        $string8 = "Successfully embedded EXE into PNG" nocase ascii wide
         // Description: HTML SMUGGLING TOOL 6 allows you to create HTML files with embedded 7z/zip archives. The tool would compress your binary (EXE/DLL) into 7z/zip file format then XOR encrypt the archive and then hides inside PNG/GIF image file format (Image Polyglots)
         // Reference: https://github.com/TheCyb3rAlpha/BobTheSmuggler
-        $string9 = /TheCyb3rAlpha\/BobTheSmuggler/ nocase ascii wide
+        $string9 = "TheCyb3rAlpha/BobTheSmuggler" nocase ascii wide
         // Description: HTML SMUGGLING TOOL 6 allows you to create HTML files with embedded 7z/zip archives. The tool would compress your binary (EXE/DLL) into 7z/zip file format then XOR encrypt the archive and then hides inside PNG/GIF image file format (Image Polyglots)
         // Reference: https://github.com/TheCyb3rAlpha/BobTheSmuggler
-        $string10 = /URL\smust\sbe\sprovided\sfor\sGIF\sembedding\!/ nocase ascii wide
+        $string10 = "URL must be provided for GIF embedding!" nocase ascii wide
         // Description: HTML SMUGGLING TOOL 6 allows you to create HTML files with embedded 7z/zip archives. The tool would compress your binary (EXE/DLL) into 7z/zip file format then XOR encrypt the archive and then hides inside PNG/GIF image file format (Image Polyglots)
         // Reference: https://github.com/TheCyb3rAlpha/BobTheSmuggler
-        $string11 = /URL\smust\sbe\sprovided\sfor\sPNG\sembedding\!/ nocase ascii wide
+        $string11 = "URL must be provided for PNG embedding!" nocase ascii wide
 
     condition:
         any of them

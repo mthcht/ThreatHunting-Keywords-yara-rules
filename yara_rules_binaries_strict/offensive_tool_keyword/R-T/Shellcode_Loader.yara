@@ -16,10 +16,10 @@ rule Shellcode_Loader
         $string2 = /C\:\\Windows\\DirectX\.log.{0,100}\\Windows\\Temp\\backup\.log/ nocase ascii wide
         // Description: dynamic shellcode loading
         // Reference: https://github.com/ReversingID/Shellcode-Loader
-        $string3 = /ReversingID\/Shellcode\-Loader/ nocase ascii wide
+        $string3 = "ReversingID/Shellcode-Loader" nocase ascii wide
         // Description: dynamic shellcode loading
         // Reference: https://github.com/ReversingID/Shellcode-Loader
-        $string4 = /Shellcode\-Loader\-master/ nocase ascii wide
+        $string4 = "Shellcode-Loader-master" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -10,7 +10,7 @@ rule FiercePhish
     strings:
         // Description: FiercePhish is a full-fledged phishing framework to manage all phishing engagements. It allows you to track separate phishing campaigns. schedule sending of emails. and much more. The features will continue to be expanded and will include website spoofing. click tracking. and extensive notification options. 
         // Reference: https://github.com/Raikia/FiercePhish
-        $string1 = /FiercePhish/ nocase ascii wide
+        $string1 = "FiercePhish" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

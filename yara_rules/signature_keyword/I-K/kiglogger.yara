@@ -10,7 +10,7 @@ rule kiglogger
     strings:
         // Description: malware parental control software - keylogger
         // Reference: https://kidlogger.net/download.html
-        $string1 = /Win32\/KidLogger/ nocase ascii wide
+        $string1 = "Win32/KidLogger" nocase ascii wide
 
     condition:
         any of them

@@ -34,13 +34,13 @@ rule NoArgs
         $string8 = /\\NoArgs_Encrypted\.exe/ nocase ascii wide
         // Description: NoArgs is a tool designed to dynamically spoof and conceal process arguments while staying undetected. It achieves this by hooking into Windows APIs to dynamically manipulate the Windows internals on the go. This allows NoArgs to alter process arguments discreetly.
         // Reference: https://github.com/oh-az/NoArgs
-        $string9 = /6a14782fd71e08ded40b8652783cb49695b09e4abbaaf8c22cc22d582032191f/ nocase ascii wide
+        $string9 = "6a14782fd71e08ded40b8652783cb49695b09e4abbaaf8c22cc22d582032191f" nocase ascii wide
         // Description: NoArgs is a tool designed to dynamically spoof and conceal process arguments while staying undetected. It achieves this by hooking into Windows APIs to dynamically manipulate the Windows internals on the go. This allows NoArgs to alter process arguments discreetly.
         // Reference: https://github.com/oh-az/NoArgs
-        $string10 = /8c7d64cec00aafa23884f1bb28337ef6ce49f2f90605800217f635526e38541d/ nocase ascii wide
+        $string10 = "8c7d64cec00aafa23884f1bb28337ef6ce49f2f90605800217f635526e38541d" nocase ascii wide
         // Description: NoArgs is a tool designed to dynamically spoof and conceal process arguments while staying undetected. It achieves this by hooking into Windows APIs to dynamically manipulate the Windows internals on the go. This allows NoArgs to alter process arguments discreetly.
         // Reference: https://github.com/oh-az/NoArgs
-        $string11 = /oh\-az\/NoArgs/ nocase ascii wide
+        $string11 = "oh-az/NoArgs" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -10,28 +10,28 @@ rule EHORUS_RMM
     strings:
         // Description: Pandora RC (formerly called eHorus) is a computer management system for MS Windows - Linux and MacOS that allows access to registered computers wherever they are from a browser without direct connectivity to their devices from the outside. (server based on VNC)
         // Reference: https://pandorafms.com/en/remote-control/
-        $string1 = /\"appName\"\:\"eHorus\sAgent\"/ nocase ascii wide
+        $string1 = "\"appName\":\"eHorus Agent\"" nocase ascii wide
         // Description: Pandora RC (formerly called eHorus) is a computer management system for MS Windows - Linux and MacOS that allows access to registered computers wherever they are from a browser without direct connectivity to their devices from the outside. (server based on VNC)
         // Reference: https://pandorafms.com/en/remote-control/
         $string2 = /\$EHORUS_HOME\/\.vnc\/passwd/ nocase ascii wide
         // Description: Pandora RC (formerly called eHorus) is a computer management system for MS Windows - Linux and MacOS that allows access to registered computers wherever they are from a browser without direct connectivity to their devices from the outside. (server based on VNC)
         // Reference: https://pandorafms.com/en/remote-control/
-        $string3 = /\/ehorus_agent_installer\-/ nocase ascii wide
+        $string3 = "/ehorus_agent_installer-" nocase ascii wide
         // Description: Pandora RC (formerly called eHorus) is a computer management system for MS Windows - Linux and MacOS that allows access to registered computers wherever they are from a browser without direct connectivity to their devices from the outside. (server based on VNC)
         // Reference: https://pandorafms.com/en/remote-control/
-        $string4 = /\/etc\/ehorus\/ehorus_agent/ nocase ascii wide
+        $string4 = "/etc/ehorus/ehorus_agent" nocase ascii wide
         // Description: Pandora RC (formerly called eHorus) is a computer management system for MS Windows - Linux and MacOS that allows access to registered computers wherever they are from a browser without direct connectivity to their devices from the outside. (server based on VNC)
         // Reference: https://pandorafms.com/en/remote-control/
         $string5 = /\/etc\/init\.d\/ehorus_agent_daemon/ nocase ascii wide
         // Description: Pandora RC (formerly called eHorus) is a computer management system for MS Windows - Linux and MacOS that allows access to registered computers wherever they are from a browser without direct connectivity to their devices from the outside. (server based on VNC)
         // Reference: https://pandorafms.com/en/remote-control/
-        $string6 = /\/usr\/bin\/ehorus_agent/ nocase ascii wide
+        $string6 = "/usr/bin/ehorus_agent" nocase ascii wide
         // Description: Pandora RC (formerly called eHorus) is a computer management system for MS Windows - Linux and MacOS that allows access to registered computers wherever they are from a browser without direct connectivity to their devices from the outside. (server based on VNC)
         // Reference: https://pandorafms.com/en/remote-control/
-        $string7 = /\/usr\/sbin\/userdel\s\-r\sehorus/ nocase ascii wide
+        $string7 = "/usr/sbin/userdel -r ehorus" nocase ascii wide
         // Description: Pandora RC (formerly called eHorus) is a computer management system for MS Windows - Linux and MacOS that allows access to registered computers wherever they are from a browser without direct connectivity to their devices from the outside. (server based on VNC)
         // Reference: https://pandorafms.com/en/remote-control/
-        $string8 = /\/usr\/share\/ehorus/ nocase ascii wide
+        $string8 = "/usr/share/ehorus" nocase ascii wide
         // Description: Pandora RC (formerly called eHorus) is a computer management system for MS Windows - Linux and MacOS that allows access to registered computers wherever they are from a browser without direct connectivity to their devices from the outside. (server based on VNC)
         // Reference: https://pandorafms.com/en/remote-control/
         $string9 = /\/var\/log\/ehorus_agent\.log/ nocase ascii wide
@@ -91,16 +91,16 @@ rule EHORUS_RMM
         $string27 = /\\System\\CurrentControlSet\\Services\\EHORUSAGENT/ nocase ascii wide
         // Description: Pandora RC (formerly called eHorus) is a computer management system for MS Windows - Linux and MacOS that allows access to registered computers wherever they are from a browser without direct connectivity to their devices from the outside. (server based on VNC)
         // Reference: https://pandorafms.com/en/remote-control/
-        $string28 = /\>eHorus\sAgent\sSetup\</ nocase ascii wide
+        $string28 = ">eHorus Agent Setup<" nocase ascii wide
         // Description: Pandora RC (formerly called eHorus) is a computer management system for MS Windows - Linux and MacOS that allows access to registered computers wherever they are from a browser without direct connectivity to their devices from the outside. (server based on VNC)
         // Reference: https://pandorafms.com/en/remote-control/
-        $string29 = /\>EHORUSAGENT\</ nocase ascii wide
+        $string29 = ">EHORUSAGENT<" nocase ascii wide
         // Description: Pandora RC (formerly called eHorus) is a computer management system for MS Windows - Linux and MacOS that allows access to registered computers wherever they are from a browser without direct connectivity to their devices from the outside. (server based on VNC)
         // Reference: https://pandorafms.com/en/remote-control/
-        $string30 = /chsh\s\-s\s\/bin\/false\sehorus/ nocase ascii wide
+        $string30 = "chsh -s /bin/false ehorus" nocase ascii wide
         // Description: Pandora RC (formerly called eHorus) is a computer management system for MS Windows - Linux and MacOS that allows access to registered computers wherever they are from a browser without direct connectivity to their devices from the outside. (server based on VNC)
         // Reference: https://pandorafms.com/en/remote-control/
-        $string31 = /ehorus_agent\s\-f\s\/etc\/ehorus\// nocase ascii wide
+        $string31 = "ehorus_agent -f /etc/ehorus/" nocase ascii wide
         // Description: Pandora RC (formerly called eHorus) is a computer management system for MS Windows - Linux and MacOS that allows access to registered computers wherever they are from a browser without direct connectivity to their devices from the outside. (server based on VNC)
         // Reference: https://pandorafms.com/en/remote-control/
         $string32 = /https\:\/\/portal\.ehorus\.com\/\#\/agents\// nocase ascii wide
@@ -109,25 +109,25 @@ rule EHORUS_RMM
         $string33 = /hub\.ehorus\.com/ nocase ascii wide
         // Description: Pandora RC (formerly called eHorus) is a computer management system for MS Windows - Linux and MacOS that allows access to registered computers wherever they are from a browser without direct connectivity to their devices from the outside. (server based on VNC)
         // Reference: https://pandorafms.com/en/remote-control/
-        $string34 = /sc\sdelete\sehorus/ nocase ascii wide
+        $string34 = "sc delete ehorus" nocase ascii wide
         // Description: Pandora RC (formerly called eHorus) is a computer management system for MS Windows - Linux and MacOS that allows access to registered computers wherever they are from a browser without direct connectivity to their devices from the outside. (server based on VNC)
         // Reference: https://pandorafms.com/en/remote-control/
-        $string35 = /sc\sstop\sehorus/ nocase ascii wide
+        $string35 = "sc stop ehorus" nocase ascii wide
         // Description: Pandora RC (formerly called eHorus) is a computer management system for MS Windows - Linux and MacOS that allows access to registered computers wherever they are from a browser without direct connectivity to their devices from the outside. (server based on VNC)
         // Reference: https://pandorafms.com/en/remote-control/
-        $string36 = /su\sehorus\s\-s\s\/bin\/bash\s\-c\s\"kill\s\-9\s\-1\"/ nocase ascii wide
+        $string36 = "su ehorus -s /bin/bash -c \"kill -9 -1\"" nocase ascii wide
         // Description: Pandora RC (formerly called eHorus) is a computer management system for MS Windows - Linux and MacOS that allows access to registered computers wherever they are from a browser without direct connectivity to their devices from the outside. (server based on VNC)
         // Reference: https://pandorafms.com/en/remote-control/
         $string37 = /switch\.ehorus\.com/ nocase ascii wide
         // Description: Pandora RC (formerly called eHorus) is a computer management system for MS Windows - Linux and MacOS that allows access to registered computers wherever they are from a browser without direct connectivity to their devices from the outside. (server based on VNC)
         // Reference: https://pandorafms.com/en/remote-control/
-        $string38 = /taskkill\s\/F\s\/IM\s\"ehorus_agent\.exe\"/ nocase ascii wide
+        $string38 = /taskkill\s\/F\s\/IM\s\\"ehorus_agent\.exe\\"/ nocase ascii wide
         // Description: Pandora RC (formerly called eHorus) is a computer management system for MS Windows - Linux and MacOS that allows access to registered computers wherever they are from a browser without direct connectivity to their devices from the outside. (server based on VNC)
         // Reference: https://pandorafms.com/en/remote-control/
-        $string39 = /taskkill\s\/F\s\/IM\s\"ehorus_cmd\.exe\"/ nocase ascii wide
+        $string39 = /taskkill\s\/F\s\/IM\s\\"ehorus_cmd\.exe\\"/ nocase ascii wide
         // Description: Pandora RC (formerly called eHorus) is a computer management system for MS Windows - Linux and MacOS that allows access to registered computers wherever they are from a browser without direct connectivity to their devices from the outside. (server based on VNC)
         // Reference: https://pandorafms.com/en/remote-control/
-        $string40 = /taskkill\s\/F\s\/IM\s\"ehorus_display\.exe\"/ nocase ascii wide
+        $string40 = /taskkill\s\/F\s\/IM\s\\"ehorus_display\.exe\\"/ nocase ascii wide
         // Description: Pandora RC (formerly called eHorus) is a computer management system for MS Windows - Linux and MacOS that allows access to registered computers wherever they are from a browser without direct connectivity to their devices from the outside. (server based on VNC)
         // Reference: https://pandorafms.com/en/remote-control/
         $string41 = /umount\s\/usr\/share\/ehorus\/\.gvfs\s\-r\s\>\/dev\/null\s2\>\&1/ nocase ascii wide

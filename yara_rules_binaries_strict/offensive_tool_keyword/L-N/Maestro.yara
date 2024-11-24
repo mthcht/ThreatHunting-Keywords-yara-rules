@@ -13,10 +13,10 @@ rule Maestro
         $string1 = /\\ROADtoken\\bin\\/ nocase ascii wide
         // Description: Maestro is a post-exploitation tool that simplifies interaction with Intune/EntraID from a C2 agent on a user's workstation bypassing the need for user password knowledge - token manipulation or Azure authentication processes
         // Reference: https://github.com/Mayyhem/Maestro
-        $string2 = /4EE2C7E8\-095D\-490A\-9465\-9B4BB9070669/ nocase ascii wide
+        $string2 = "4EE2C7E8-095D-490A-9465-9B4BB9070669" nocase ascii wide
         // Description: Maestro is a post-exploitation tool that simplifies interaction with Intune/EntraID from a C2 agent on a user's workstation bypassing the need for user password knowledge - token manipulation or Azure authentication processes
         // Reference: https://github.com/Mayyhem/Maestro
-        $string3 = /8fff8971be038906411561230e11adae6f576dca6761375cbcf61d3e7b2e4cd4/ nocase ascii wide
+        $string3 = "8fff8971be038906411561230e11adae6f576dca6761375cbcf61d3e7b2e4cd4" nocase ascii wide
         // Description: Maestro is a post-exploitation tool that simplifies interaction with Intune/EntraID from a C2 agent on a user's workstation bypassing the need for user password knowledge - token manipulation or Azure authentication processes
         // Reference: https://github.com/Mayyhem/Maestro
         $string4 = /await\sDeleteIntuneCommand\.Exe/ nocase ascii wide
@@ -67,10 +67,10 @@ rule Maestro
         $string19 = /await\sGetPrtCookieCommand\.Exe/ nocase ascii wide
         // Description: Maestro is a post-exploitation tool that simplifies interaction with Intune/EntraID from a C2 agent on a user's workstation bypassing the need for user password knowledge - token manipulation or Azure authentication processes
         // Reference: https://github.com/Mayyhem/Maestro
-        $string20 = /c0ec4fdda78c68d5b982664a121efb8939808171d11d7a1e9bc17db565d99ee1/ nocase ascii wide
+        $string20 = "c0ec4fdda78c68d5b982664a121efb8939808171d11d7a1e9bc17db565d99ee1" nocase ascii wide
         // Description: Maestro is a post-exploitation tool that simplifies interaction with Intune/EntraID from a C2 agent on a user's workstation bypassing the need for user password knowledge - token manipulation or Azure authentication processes
         // Reference: https://github.com/Mayyhem/Maestro
-        $string21 = /C9AF8FE1\-CDFC\-4DDD\-B314\-B44AD5EAD552/ nocase ascii wide
+        $string21 = "C9AF8FE1-CDFC-4DDD-B314-B44AD5EAD552" nocase ascii wide
         // Description: Maestro is a post-exploitation tool that simplifies interaction with Intune/EntraID from a C2 agent on a user's workstation bypassing the need for user password knowledge - token manipulation or Azure authentication processes
         // Reference: https://github.com/Mayyhem/Maestro
         $string22 = /dsregcmd\.exe\s\/status/ nocase ascii wide
@@ -79,7 +79,7 @@ rule Maestro
         $string23 = /maestro\.exe\sexec/ nocase ascii wide
         // Description: Maestro is a post-exploitation tool that simplifies interaction with Intune/EntraID from a C2 agent on a user's workstation bypassing the need for user password knowledge - token manipulation or Azure authentication processes
         // Reference: https://github.com/Mayyhem/Maestro
-        $string24 = /Mayyhem\/Maestro/ nocase ascii wide
+        $string24 = "Mayyhem/Maestro" nocase ascii wide
         // Description: Maestro is a post-exploitation tool that simplifies interaction with Intune/EntraID from a C2 agent on a user's workstation bypassing the need for user password knowledge - token manipulation or Azure authentication processes
         // Reference: https://github.com/Mayyhem/Maestro
         $string25 = /RequestAADRefreshToken\.exe/ nocase ascii wide
@@ -88,7 +88,7 @@ rule Maestro
         $string26 = /roadtoken\.exe/ nocase ascii wide
         // Description: Maestro is a post-exploitation tool that simplifies interaction with Intune/EntraID from a C2 agent on a user's workstation bypassing the need for user password knowledge - token manipulation or Azure authentication processes
         // Reference: https://github.com/Mayyhem/Maestro
-        $string27 = /RVLextu9ni633iqW54ktzkU4kTDgekRFY8ao9gSwM78\=/ nocase ascii wide
+        $string27 = "RVLextu9ni633iqW54ktzkU4kTDgekRFY8ao9gSwM78=" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -10,16 +10,16 @@ rule prometheus
     strings:
         // Description: malware C2
         // Reference: https://github.com/paranoidninja/0xdarkvortex-MalwareDevelopment
-        $string1 = /\/0xdarkvortex\-/ nocase ascii wide
+        $string1 = "/0xdarkvortex-" nocase ascii wide
         // Description: malware C2
         // Reference: https://github.com/paranoidninja/0xdarkvortex-MalwareDevelopment
-        $string2 = /\/paranoidninja\// nocase ascii wide
+        $string2 = "/paranoidninja/" nocase ascii wide
         // Description: malware C2
         // Reference: https://github.com/paranoidninja/0xdarkvortex-MalwareDevelopment
         $string3 = /\/prometheus\.exe/ nocase ascii wide
         // Description: malware C2
         // Reference: https://github.com/paranoidninja/0xdarkvortex-MalwareDevelopment
-        $string4 = /0xdarkvortex\-MalwareDevelopment/ nocase ascii wide
+        $string4 = "0xdarkvortex-MalwareDevelopment" nocase ascii wide
 
     condition:
         any of them

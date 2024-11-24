@@ -10,7 +10,7 @@ rule PSByPassCLM
     strings:
         // Description: Bypass for PowerShell Constrained Language Mode
         // Reference: https://github.com/padovah4ck/PSByPassCLM
-        $string1 = /PSByPassCLM/ nocase ascii wide
+        $string1 = "PSByPassCLM" nocase ascii wide
 
     condition:
         any of them

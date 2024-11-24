@@ -19,15 +19,15 @@ def get_subdirectory_name(tool):
     if not first_letter.isalpha():
         return "_Others"
     mapping = {
-        "A" : "A-C", "B" : "A-C", "C" : "A-C",
-        "D" : "D-F", "E" : "D-F", "F" : "D-F",
-        "G" : "G-H", "H" : "G-H",
-        "I" : "I-K", "J" : "I-K", "K" : "I-K",
-        "L" : "L-N", "M" : "L-N", "N" : "L-N",
-        "O" : "O-Q", "P" : "O-Q", "Q" : "O-Q",
-        "R" : "R-T", "S" : "R-T", "T" : "R-T",
-        "U" : "U-W", "V" : "U-W", "W" : "U-W",
-        "X" : "X-Z", "Y" : "X-Z", "Z" : "X-Z"
+        "A": "A-C", "B": "A-C", "C": "A-C",
+        "D": "D-F", "E": "D-F", "F": "D-F",
+        "G": "G-H", "H": "G-H",
+        "I": "I-K", "J": "I-K", "K": "I-K",
+        "L": "L-N", "M": "L-N", "N": "L-N",
+        "O": "O-Q", "P": "O-Q", "Q": "O-Q",
+        "R": "R-T", "S": "R-T", "T": "R-T",
+        "U": "U-W", "V": "U-W", "W": "U-W",
+        "X": "X-Z", "Y": "X-Z", "Z": "X-Z"
     }
     return mapping.get(first_letter, "_Others")
 
@@ -65,7 +65,7 @@ def generate_yara_rules(base_directory):
     
     aggregated_data = defaultdict(list)
     
-    with open(csv_file_path, 'r', newline='') as csvfile:
+    with open(csv_file_path, 'r', newline='', encoding='utf-8') as csvfile:
         csvreader = csv.DictReader(csvfile)
         for row in csvreader:
             tool = row['metadata_tool']
@@ -85,7 +85,7 @@ def generate_yara_rules(base_directory):
 
         sanitized_tool = safe_tool_name(tool)
         
-        with open(os.path.join(final_directory, f"{sanitized_tool}.yara"), 'w') as outfile:
+        with open(os.path.join(final_directory, f"{sanitized_tool}.yara"), 'w', encoding='utf-8') as outfile:
             outfile.write(f"rule {sanitized_tool}\n")
             outfile.write("{\n")
             outfile.write("    meta:\n")
@@ -97,21 +97,36 @@ def generate_yara_rules(base_directory):
             outfile.write("\n    strings:\n")
             
             for idx, (keyword, description, reference) in enumerate(keywords):
-                keyword = re.sub(r'^\*','', keyword)
-                keyword = re.sub(r'\*$','', keyword)
-                escaped_keyword = keyword.replace("\\", "\\\\").replace("\"", "\\\"")\
-                    .replace(".", r"\.").replace(" ", r"\s").replace("|", r"\|").replace("/", r"\/")\
-                    .replace("(", r"\(").replace(")", r"\)").replace('+', r"\+").replace("&", r"\&")\
-                    .replace('?', r"\?").replace('[', r"\[").replace(']', r"\]").replace("'", r"\'").replace('-', r"\-")\
-                    .replace('!', r"\!").replace('#', r"\#").replace('"', r"\"").replace('^', r"\^").replace('%', r"\%")\
-                    .replace('=', r"\=").replace('$', r"\$").replace(';', r"\;").replace('<', r"\<").replace('>', r"\>")\
-                    .replace('@', r"\@").replace('}', r"\}").replace('{', r"\{").replace(',', r"\,").replace('`', r"\`")\
-                    .replace('~', r"\~").replace(':', r"\:").replace("*", ".{0,100}")
-                escaped_keyword = re.sub(r'^\.\*|\.\*$', '', escaped_keyword)
                 description_sanitized = description.replace("\n", " ")
                 outfile.write(f"        // Description: {description_sanitized}\n")
                 outfile.write(f"        // Reference: {reference}\n")
-                outfile.write(f"        $string{idx+1} = /{escaped_keyword}/ nocase ascii wide\n")
+
+                # Remove leading and trailing '*'
+                keyword_stripped = keyword.strip('*')
+
+                # Check if keyword contains wildcards or special characters
+                if '*' in keyword_stripped or re.search(r'[.^$+?{}\[\]\\|()]', keyword_stripped):
+                    needs_regex_flag = True
+                else:
+                    needs_regex_flag = False
+
+                if needs_regex_flag:
+                    escaped_keyword = keyword_stripped.replace("\\", "\\\\").replace("\"", "\\\"") \
+                        .replace(" ", r"\s").replace("|", r"\|").replace("/", r"\/").replace(".", r"\.") \
+                        .replace("(", r"\(").replace(")", r"\)").replace('+', r"\+").replace("&", r"\&") \
+                        .replace('?', r"\?").replace('[', r"\[").replace(']', r"\]").replace("'", r"\'").replace('-', r"\-") \
+                        .replace('!', r"\!").replace('#', r"\#").replace('"', r"\"").replace('^', r"\^").replace('%', r"\%") \
+                        .replace('=', r"\=").replace('$', r"\$").replace(';', r"\;").replace('<', r"\<").replace('>', r"\>") \
+                        .replace('@', r"\@").replace('}', r"\}").replace('{', r"\{").replace(',', r"\,").replace('`', r"\`") \
+                        .replace('~', r"\~").replace(':', r"\:").replace('*', '.{0,100}')
+
+                    outfile.write(f"        $string{idx+1} = /{escaped_keyword}/ nocase ascii wide\n")
+                else:
+                    # Use simple string
+                    # Escape backslash and double quote
+                    escaped_keyword = keyword_stripped.replace("\\", "\\\\").replace("\"", "\\\"")
+                    outfile.write(f"        $string{idx+1} = \"{escaped_keyword}\" nocase ascii wide\n")
+
             string_count = len(keywords)  
 
             # Add metadata regex patterns

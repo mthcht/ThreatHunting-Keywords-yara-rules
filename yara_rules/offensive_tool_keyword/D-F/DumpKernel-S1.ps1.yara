@@ -16,7 +16,7 @@ rule DumpKernel_S1_ps1
         $string2 = /DumpKernel\-S1\.ps1/ nocase ascii wide
         // Description: SentinelHelper to perform a live kernel dump in a Windows environment
         // Reference: https://gist.github.com/adamsvoboda/8f29e09d74b73e1dec3f9049c4358e80
-        $string3 = /Trying\sto\sdump\skernel\sto\sC\:/ nocase ascii wide
+        $string3 = "Trying to dump kernel to C:" nocase ascii wide
 
     condition:
         any of them

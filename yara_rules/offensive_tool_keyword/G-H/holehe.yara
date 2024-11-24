@@ -10,7 +10,7 @@ rule holehe
     strings:
         // Description: holehe allows you to check if the mail is used on different sites like twitter instagram and will retrieve information on sites with the forgotten password function.
         // Reference: https://github.com/megadose/holehe
-        $string1 = /\sinstall\sholehe/ nocase ascii wide
+        $string1 = " install holehe" nocase ascii wide
         // Description: holehe allows you to check if the mail is used on different sites like twitter instagram and will retrieve information on sites with the forgotten password function.
         // Reference: https://github.com/megadose/holehe
         $string2 = /\/holehe\.git/ nocase ascii wide
@@ -31,7 +31,7 @@ rule holehe
         $string7 = /holehe\-master\./ nocase ascii wide
         // Description: holehe allows you to check if the mail is used on different sites like twitter instagram and will retrieve information on sites with the forgotten password function.
         // Reference: https://github.com/megadose/holehe
-        $string8 = /megadose\/holehe/ nocase ascii wide
+        $string8 = "megadose/holehe" nocase ascii wide
         // Description: holehe allows you to check if the mail is used on different sites like twitter instagram and will retrieve information on sites with the forgotten password function.
         // Reference: https://github.com/megadose/holehe
         $string9 = /megadose\@protonmail\.com/ nocase ascii wide

@@ -10,7 +10,7 @@ rule CrossLinked
     strings:
         // Description: CrossLinked simplifies the processes of searching LinkedIn to collect valid employee names when performing password spraying or other security testing against an organization. Using similar search engine scraping capabilities found in tools like subscraper and pymeta
         // Reference: https://github.com/m8r0wn/CrossLinked
-        $string1 = /CrossLinked/ nocase ascii wide
+        $string1 = "CrossLinked" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

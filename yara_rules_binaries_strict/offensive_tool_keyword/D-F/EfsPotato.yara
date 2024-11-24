@@ -34,7 +34,7 @@ rule EfsPotato
         $string8 = /EfsPotato.{0,100}samr/ nocase ascii wide
         // Description: Exploit for EfsPotato(MS-EFSR EfsRpcOpenFileRaw with SeImpersonatePrivilege local privalege escalation vulnerability)
         // Reference: https://github.com/zcgonvh/EfsPotato
-        $string9 = /EfsPotato\-main/ nocase ascii wide
+        $string9 = "EfsPotato-main" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

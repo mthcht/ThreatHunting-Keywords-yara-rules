@@ -19,13 +19,13 @@ rule acheron
         $string3 = /\/direct_syscall_amd64\.s/ nocase ascii wide
         // Description: indirect syscalls for AV/EDR evasion in Go assembly
         // Reference: https://github.com/f1zm0/acheron
-        $string4 = /\/sc_inject\/inject\// nocase ascii wide
+        $string4 = "/sc_inject/inject/" nocase ascii wide
         // Description: indirect syscalls for AV/EDR evasion in Go assembly
         // Reference: https://github.com/f1zm0/acheron
         $string5 = /acheron\-master\.zip/ nocase ascii wide
         // Description: indirect syscalls for AV/EDR evasion in Go assembly
         // Reference: https://github.com/f1zm0/acheron
-        $string6 = /f1zm0\/acheron/ nocase ascii wide
+        $string6 = "f1zm0/acheron" nocase ascii wide
         // Description: indirect syscalls for AV/EDR evasion in Go assembly
         // Reference: https://github.com/f1zm0/acheron
         $string7 = /process_snapshot\.exe/ nocase ascii wide

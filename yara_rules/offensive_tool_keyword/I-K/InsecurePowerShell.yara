@@ -10,7 +10,7 @@ rule InsecurePowerShell
     strings:
         // Description: powershell without securities features
         // Reference: https://github.com/cobbr/InsecurePowerShell
-        $string1 = /InsecurePowerShell/ nocase ascii wide
+        $string1 = "InsecurePowerShell" nocase ascii wide
 
     condition:
         any of them

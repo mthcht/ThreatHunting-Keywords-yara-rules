@@ -13,10 +13,10 @@ rule Powerlurk
         $string1 = /\sAdd\-KeeThiefLurker\.ps1/ nocase ascii wide
         // Description: PowerLurk is a PowerShell toolset for building malicious WMI Event Subsriptions
         // Reference: https://github.com/Sw4mpf0x/PowerLurk
-        $string2 = /\s\-EventName\sKeeThief\s\-WMI/ nocase ascii wide
+        $string2 = " -EventName KeeThief -WMI" nocase ascii wide
         // Description: PowerLurk is a PowerShell toolset for building malicious WMI Event Subsriptions
         // Reference: https://github.com/Sw4mpf0x/PowerLurk
-        $string3 = /\s\-EventName\sWmiBackdoor\s\-PermanentCommand\s/ nocase ascii wide
+        $string3 = " -EventName WmiBackdoor -PermanentCommand " nocase ascii wide
         // Description: PowerLurk is a PowerShell toolset for building malicious WMI Event Subsriptions
         // Reference: https://github.com/Sw4mpf0x/PowerLurk
         $string4 = /\sPowerLurk\.ps1/ nocase ascii wide
@@ -40,46 +40,46 @@ rule Powerlurk
         $string10 = /\\PowerLurk\-main/ nocase ascii wide
         // Description: PowerLurk is a PowerShell toolset for building malicious WMI Event Subsriptions
         // Reference: https://github.com/Sw4mpf0x/PowerLurk
-        $string11 = /238111f4c27f2bad38c5b5eac85aacf4305baaa7c854911e3cbffe7a58cc9964/ nocase ascii wide
+        $string11 = "238111f4c27f2bad38c5b5eac85aacf4305baaa7c854911e3cbffe7a58cc9964" nocase ascii wide
         // Description: PowerLurk is a PowerShell toolset for building malicious WMI Event Subsriptions
         // Reference: https://github.com/Sw4mpf0x/PowerLurk
-        $string12 = /7b0HYBxJliUmL23Ke39K9UrX4HShCIBgEyTYkEAQ7MGIzeaS7B1pRyMpqyqBymVWZV1mFkDM7Z28995777333nvvvfe6O51OJ/ nocase ascii wide
+        $string12 = "7b0HYBxJliUmL23Ke39K9UrX4HShCIBgEyTYkEAQ7MGIzeaS7B1pRyMpqyqBymVWZV1mFkDM7Z28995777333nvvvfe6O51OJ" nocase ascii wide
         // Description: PowerLurk is a PowerShell toolset for building malicious WMI Event Subsriptions
         // Reference: https://github.com/Sw4mpf0x/PowerLurk
-        $string13 = /81c3f4341d0cecc16beaae19c88e54dda2730a4eaf06cc0fea0119822d7482c3/ nocase ascii wide
+        $string13 = "81c3f4341d0cecc16beaae19c88e54dda2730a4eaf06cc0fea0119822d7482c3" nocase ascii wide
         // Description: PowerLurk is a PowerShell toolset for building malicious WMI Event Subsriptions
         // Reference: https://github.com/Sw4mpf0x/PowerLurk
-        $string14 = /Add\-KeeThiefLurker\s/ nocase ascii wide
+        $string14 = "Add-KeeThiefLurker " nocase ascii wide
         // Description: PowerLurk is a PowerShell toolset for building malicious WMI Event Subsriptions
         // Reference: https://github.com/Sw4mpf0x/PowerLurk
-        $string15 = /Find\-KeePassconfig\s/ nocase ascii wide
+        $string15 = "Find-KeePassconfig " nocase ascii wide
         // Description: PowerLurk is a PowerShell toolset for building malicious WMI Event Subsriptions
         // Reference: https://github.com/Sw4mpf0x/PowerLurk
-        $string16 = /function\sFind\-KeePassconfig/ nocase ascii wide
+        $string16 = "function Find-KeePassconfig" nocase ascii wide
         // Description: PowerLurk is a PowerShell toolset for building malicious WMI Event Subsriptions
         // Reference: https://github.com/Sw4mpf0x/PowerLurk
-        $string17 = /function\sLocal\:Get\-KeePassINIFields/ nocase ascii wide
+        $string17 = "function Local:Get-KeePassINIFields" nocase ascii wide
         // Description: PowerLurk is a PowerShell toolset for building malicious WMI Event Subsriptions
         // Reference: https://github.com/Sw4mpf0x/PowerLurk
-        $string18 = /Get\-KeePassDatabaseKey\s/ nocase ascii wide
+        $string18 = "Get-KeePassDatabaseKey " nocase ascii wide
         // Description: PowerLurk is a PowerShell toolset for building malicious WMI Event Subsriptions
         // Reference: https://github.com/Sw4mpf0x/PowerLurk
-        $string19 = /Register\-MaliciousWmiEvent/ nocase ascii wide
+        $string19 = "Register-MaliciousWmiEvent" nocase ascii wide
         // Description: PowerLurk is a PowerShell toolset for building malicious WMI Event Subsriptions
         // Reference: https://github.com/Sw4mpf0x/PowerLurk
         $string20 = /Registry\sKeeTheifLurker\s.{0,100}\sCreated/ nocase ascii wide
         // Description: PowerLurk is a PowerShell toolset for building malicious WMI Event Subsriptions
         // Reference: https://github.com/Sw4mpf0x/PowerLurk
-        $string21 = /Remove\-KeeThiefLurker\s/ nocase ascii wide
+        $string21 = "Remove-KeeThiefLurker " nocase ascii wide
         // Description: PowerLurk is a PowerShell toolset for building malicious WMI Event Subsriptions
         // Reference: https://github.com/Sw4mpf0x/PowerLurk
-        $string22 = /Remove\-TemplateLurker\s\-EventName\s/ nocase ascii wide
+        $string22 = "Remove-TemplateLurker -EventName " nocase ascii wide
         // Description: PowerLurk is a PowerShell toolset for building malicious WMI Event Subsriptions
         // Reference: https://github.com/Sw4mpf0x/PowerLurk
-        $string23 = /Sw4mpf0x\/PowerLurk/ nocase ascii wide
+        $string23 = "Sw4mpf0x/PowerLurk" nocase ascii wide
         // Description: PowerLurk is a PowerShell toolset for building malicious WMI Event Subsriptions
         // Reference: https://github.com/Sw4mpf0x/PowerLurk
-        $string24 = /WMI\sKeeTheifLurker\s/ nocase ascii wide
+        $string24 = "WMI KeeTheifLurker " nocase ascii wide
         // Description: PowerLurk is a PowerShell toolset for building malicious WMI Event Subsriptions
         // Reference: https://github.com/Sw4mpf0x/PowerLurk
         $string25 = /WMI\sKeeTheifLurker\s.{0,100}\sCreated/ nocase ascii wide

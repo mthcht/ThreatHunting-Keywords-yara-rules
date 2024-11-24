@@ -16,10 +16,10 @@ rule firefox_decrypt
         $string2 = /firefox_decrypt\.py/ nocase ascii wide
         // Description: Firefox Decrypt is a tool to extract passwords from Mozilla
         // Reference: https://github.com/unode/firefox_decrypt
-        $string3 = /firefox_decrypt\-main/ nocase ascii wide
+        $string3 = "firefox_decrypt-main" nocase ascii wide
         // Description: Firefox Decrypt is a tool to extract passwords from Mozilla
         // Reference: https://github.com/unode/firefox_decrypt
-        $string4 = /unode\/firefox_decrypt/ nocase ascii wide
+        $string4 = "unode/firefox_decrypt" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

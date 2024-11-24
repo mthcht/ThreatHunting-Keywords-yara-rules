@@ -16,7 +16,7 @@ rule Pachine
         $string2 = /\.\/pachine\.py/ nocase ascii wide
         // Description: Python implementation for CVE-2021-42278 (Active Directory Privilege Escalation)
         // Reference: https://github.com/ly4k/Pachine
-        $string3 = /\/ly4k\/Pachine/ nocase ascii wide
+        $string3 = "/ly4k/Pachine" nocase ascii wide
         // Description: Python implementation for CVE-2021-42278 (Active Directory Privilege Escalation)
         // Reference: https://github.com/ly4k/Pachine
         $string4 = /python.{0,100}\spachine\.py/ nocase ascii wide

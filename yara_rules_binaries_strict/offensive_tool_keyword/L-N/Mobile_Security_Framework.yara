@@ -10,7 +10,7 @@ rule Mobile_Security_Framework
     strings:
         // Description: Mobile Security Framework (MobSF) is an automated. all-in-one mobile application (Android/iOS/Windows) pen-testing. malware analysis and security assessment framework capable of performing static and dynamic analysis.
         // Reference: https://github.com/MobSF/Mobile-Security-Framework-MobSF
-        $string1 = /Mobile\-Security\-Framework/ nocase ascii wide
+        $string1 = "Mobile-Security-Framework" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

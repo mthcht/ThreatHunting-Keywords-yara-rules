@@ -10,7 +10,7 @@ rule injectify
     strings:
         // Description: Perform advanced MiTM attacks on websites with ease.
         // Reference: https://github.com/samdenty/injectify
-        $string1 = /injectify/ nocase ascii wide
+        $string1 = "injectify" nocase ascii wide
 
     condition:
         any of them

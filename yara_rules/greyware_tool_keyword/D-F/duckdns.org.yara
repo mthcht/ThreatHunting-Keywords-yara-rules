@@ -16,7 +16,7 @@ rule duckdns_org
         $string2 = /\/DuckDNS\.git/ nocase ascii wide
         // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
         // Reference: https://www.duckdns.org/install.jsp
-        $string3 = /\/DuckDNS\.zip\"/ nocase ascii wide
+        $string3 = /\/DuckDNS\.zip\\"/ nocase ascii wide
         // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
         // Reference: https://www.duckdns.org/install.jsp
         $string4 = /\/duckdns\/duck\.log/ nocase ascii wide
@@ -28,7 +28,7 @@ rule duckdns_org
         $string6 = /\/duckdns\-powershell\.git/ nocase ascii wide
         // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
         // Reference: https://www.duckdns.org/install.jsp
-        $string7 = /\/opt\/duckdns\// nocase ascii wide
+        $string7 = "/opt/duckdns/" nocase ascii wide
         // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
         // Reference: https://www.duckdns.org/install.jsp
         $string8 = /\\DuckDNS\.cfg/ nocase ascii wide
@@ -49,13 +49,13 @@ rule duckdns_org
         $string13 = /\\Update\-DuckDNS\.ps1/ nocase ascii wide
         // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
         // Reference: https://www.duckdns.org/install.jsp
-        $string14 = /4B9C98F6\-AF30\-4280\-873D\-B45C7A7B89EB/ nocase ascii wide
+        $string14 = "4B9C98F6-AF30-4280-873D-B45C7A7B89EB" nocase ascii wide
         // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
         // Reference: https://www.duckdns.org/install.jsp
-        $string15 = /8a35136501dde420ec5f3e88a7906c8c3d63af06621b47513befe8f09db3ed04/ nocase ascii wide
+        $string15 = "8a35136501dde420ec5f3e88a7906c8c3d63af06621b47513befe8f09db3ed04" nocase ascii wide
         // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
         // Reference: https://www.duckdns.org/install.jsp
-        $string16 = /ataylor32\/duckdns\-powershell/ nocase ascii wide
+        $string16 = "ataylor32/duckdns-powershell" nocase ascii wide
         // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
         // Reference: https://www.duckdns.org/install.jsp
         $string17 = /chmod\s700\sduck\.sh/ nocase ascii wide
@@ -64,13 +64,13 @@ rule duckdns_org
         $string18 = /https\:\/\/www\.duckdns\.org\/update\?domains\=/ nocase ascii wide
         // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
         // Reference: https://www.duckdns.org/install.jsp
-        $string19 = /jzelinskie\/duckdns/ nocase ascii wide
+        $string19 = "jzelinskie/duckdns" nocase ascii wide
         // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
         // Reference: https://www.duckdns.org/install.jsp
-        $string20 = /Sending\supdate\srequest\sto\sDuck\sDNS/ nocase ascii wide
+        $string20 = "Sending update request to Duck DNS" nocase ascii wide
         // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
         // Reference: https://www.duckdns.org/install.jsp
-        $string21 = /XWolfOverride\/DuckDNS/ nocase ascii wide
+        $string21 = "XWolfOverride/DuckDNS" nocase ascii wide
 
     condition:
         any of them

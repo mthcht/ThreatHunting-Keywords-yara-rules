@@ -13,16 +13,16 @@ rule SysWhispers3
         $string1 = /\s\-\-functions\sNtProtectVirtualMemory.{0,100}NtWriteVirtualMemory\s\-o\ssyscalls_mem/ nocase ascii wide
         // Description: SysWhispers on Steroids - AV/EDR evasion via direct system calls.
         // Reference: https://github.com/klezVirus/SysWhispers3
-        $string2 = /\s\-\-preset\sall\s\-o\ssyscalls_all/ nocase ascii wide
+        $string2 = " --preset all -o syscalls_all" nocase ascii wide
         // Description: SysWhispers on Steroids - AV/EDR evasion via direct system calls.
         // Reference: https://github.com/klezVirus/SysWhispers3
-        $string3 = /\s\-\-preset\scommon\s\-o\ssyscalls_common/ nocase ascii wide
+        $string3 = " --preset common -o syscalls_common" nocase ascii wide
         // Description: SysWhispers on Steroids - AV/EDR evasion via direct system calls.
         // Reference: https://github.com/klezVirus/SysWhispers3
-        $string4 = /\/SysWhispers2/ nocase ascii wide
+        $string4 = "/SysWhispers2" nocase ascii wide
         // Description: SysWhispers on Steroids - AV/EDR evasion via direct system calls.
         // Reference: https://github.com/klezVirus/SysWhispers3
-        $string5 = /\/SysWhispers3/ nocase ascii wide
+        $string5 = "/SysWhispers3" nocase ascii wide
         // Description: SysWhispers on Steroids - AV/EDR evasion via direct system calls.
         // Reference: https://github.com/klezVirus/SysWhispers3
         $string6 = /\/SysWhispers3\.git/ nocase ascii wide

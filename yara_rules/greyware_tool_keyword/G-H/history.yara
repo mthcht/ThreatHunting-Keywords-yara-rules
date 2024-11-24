@@ -10,7 +10,7 @@ rule history
     strings:
         // Description: Removes the most recently logged command.
         // Reference: N/A
-        $string1 = /history\s\-d\s\-2\s\&\&\shistory\s\-d\s\-1/ nocase ascii wide
+        $string1 = "history -d -2 && history -d -1" nocase ascii wide
 
     condition:
         any of them

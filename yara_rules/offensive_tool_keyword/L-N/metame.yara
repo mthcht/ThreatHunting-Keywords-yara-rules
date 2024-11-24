@@ -10,10 +10,10 @@ rule metame
     strings:
         // Description: metame is a metamorphic code engine for arbitrary executables
         // Reference: https://github.com/a0rtega/metame
-        $string1 = /a0rtega\/metame/ nocase ascii wide
+        $string1 = "a0rtega/metame" nocase ascii wide
         // Description: metame is a metamorphic code engine for arbitrary executables
         // Reference: https://github.com/a0rtega/metame
-        $string2 = /import\smetame/ nocase ascii wide
+        $string2 = "import metame" nocase ascii wide
         // Description: metame is a metamorphic code engine for arbitrary executables
         // Reference: https://github.com/a0rtega/metame
         $string3 = /metame\s\-i\s.{0,1000}\.exe/ nocase ascii wide

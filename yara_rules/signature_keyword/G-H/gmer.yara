@@ -10,7 +10,7 @@ rule gmer
     strings:
         // Description: rootkit detector abused by attackers to disable security software
         // Reference: gmer.net
-        $string1 = /HackTool\:Win32\/Gmer/ nocase ascii wide
+        $string1 = "HackTool:Win32/Gmer" nocase ascii wide
 
     condition:
         any of them

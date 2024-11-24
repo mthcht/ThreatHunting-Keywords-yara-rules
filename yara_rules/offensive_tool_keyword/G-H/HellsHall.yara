@@ -37,7 +37,7 @@ rule HellsHall
         $string9 = /\\HellsHall\.h/ nocase ascii wide
         // Description: Performing Indirect Clean Syscalls
         // Reference: https://github.com/Maldev-Academy/HellHall
-        $string10 = /F06EAC7B\-6996\-4E78\-B045\-0DF6ED201367/ nocase ascii wide
+        $string10 = "F06EAC7B-6996-4E78-B045-0DF6ED201367" nocase ascii wide
         // Description: Performing Indirect Clean Syscalls
         // Reference: https://github.com/Maldev-Academy/HellHall
         $string11 = /HellHall\-main\.zip/ nocase ascii wide
@@ -49,7 +49,7 @@ rule HellsHall
         $string13 = /Hell\'sHall\-Clang\&NoCrt\.zip/ nocase ascii wide
         // Description: Performing Indirect Clean Syscalls
         // Reference: https://github.com/Maldev-Academy/HellHall
-        $string14 = /Maldev\-Academy\/HellHall/ nocase ascii wide
+        $string14 = "Maldev-Academy/HellHall" nocase ascii wide
 
     condition:
         any of them

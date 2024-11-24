@@ -10,7 +10,7 @@ rule DockerPwn
     strings:
         // Description: Automation for abusing an exposed Docker TCP Socket. 
         // Reference: https://github.com/AbsoZed/DockerPwn.py
-        $string1 = /DockerPwn/ nocase ascii wide
+        $string1 = "DockerPwn" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

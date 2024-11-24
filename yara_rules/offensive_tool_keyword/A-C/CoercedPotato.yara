@@ -25,7 +25,7 @@ rule CoercedPotato
         $string5 = /127\.0\.0\.1\/pipe\/coerced\\\\C\$/ nocase ascii wide
         // Description: CoercedPotato From Patate (LOCAL/NETWORK SERVICE) to SYSTEM by abusing SeImpersonatePrivilege on Windows 10 Windows 11 and Server 2022.
         // Reference: https://github.com/Prepouce/CoercedPotato
-        $string6 = /337ED7BE\-969A\-40C4\-A356\-BE99561F4633/ nocase ascii wide
+        $string6 = "337ED7BE-969A-40C4-A356-BE99561F4633" nocase ascii wide
         // Description: CoercedPotato From Patate (LOCAL/NETWORK SERVICE) to SYSTEM by abusing SeImpersonatePrivilege on Windows 10 Windows 11 and Server 2022.
         // Reference: https://github.com/Prepouce/CoercedPotato
         $string7 = /CoercedPotato\.cpp/ nocase ascii wide
@@ -37,10 +37,10 @@ rule CoercedPotato
         $string9 = /CoercedPotato\.sln/ nocase ascii wide
         // Description: CoercedPotato From Patate (LOCAL/NETWORK SERVICE) to SYSTEM by abusing SeImpersonatePrivilege on Windows 10 Windows 11 and Server 2022.
         // Reference: https://github.com/Prepouce/CoercedPotato
-        $string10 = /CoercedPotato\-master/ nocase ascii wide
+        $string10 = "CoercedPotato-master" nocase ascii wide
         // Description: CoercedPotato From Patate (LOCAL/NETWORK SERVICE) to SYSTEM by abusing SeImpersonatePrivilege on Windows 10 Windows 11 and Server 2022.
         // Reference: https://github.com/Prepouce/CoercedPotato
-        $string11 = /Prepouce\/CoercedPotato/ nocase ascii wide
+        $string11 = "Prepouce/CoercedPotato" nocase ascii wide
 
     condition:
         any of them

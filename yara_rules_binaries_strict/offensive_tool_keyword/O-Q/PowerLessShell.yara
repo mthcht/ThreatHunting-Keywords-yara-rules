@@ -13,7 +13,7 @@ rule PowerLessShell
         $string1 = /malicious\.csproj/ nocase ascii wide
         // Description: PowerLessShell rely on MSBuild.exe to remotely execute PowerShell scripts and commands without spawning powershell.exe. You can also execute raw shellcode using the same approach.
         // Reference: https://github.com/Mr-Un1k0d3r/PowerLessShell
-        $string2 = /PowerLessShell/ nocase ascii wide
+        $string2 = "PowerLessShell" nocase ascii wide
         // Description: PowerLessShell rely on MSBuild.exe to remotely execute PowerShell scripts and commands without spawning powershell.exe. You can also execute raw shellcode using the same approach.
         // Reference: https://github.com/Mr-Un1k0d3r/PowerLessShell
         $string3 = /PowerLessShell\.py/ nocase ascii wide

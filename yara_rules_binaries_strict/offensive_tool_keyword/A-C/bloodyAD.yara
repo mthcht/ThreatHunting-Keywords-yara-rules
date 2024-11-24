@@ -13,16 +13,16 @@ rule bloodyAD
         $string1 = /\/bloodyAD\.git/ nocase ascii wide
         // Description: BloodyAD is an Active Directory Privilege Escalation Framework
         // Reference: https://github.com/CravateRouge/bloodyAD
-        $string2 = /bloodyAD\s\-/ nocase ascii wide
+        $string2 = "bloodyAD -" nocase ascii wide
         // Description: BloodyAD is an Active Directory Privilege Escalation Framework
         // Reference: https://github.com/CravateRouge/bloodyAD
         $string3 = /bloodyAD\.py/ nocase ascii wide
         // Description: BloodyAD is an Active Directory Privilege Escalation Framework
         // Reference: https://github.com/CravateRouge/bloodyAD
-        $string4 = /bloodyAD\-main/ nocase ascii wide
+        $string4 = "bloodyAD-main" nocase ascii wide
         // Description: BloodyAD is an Active Directory Privilege Escalation Framework
         // Reference: https://github.com/CravateRouge/bloodyAD
-        $string5 = /CravateRouge\/bloodyAD/ nocase ascii wide
+        $string5 = "CravateRouge/bloodyAD" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

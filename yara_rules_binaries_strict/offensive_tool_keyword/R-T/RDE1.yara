@@ -10,103 +10,103 @@ rule RDE1
     strings:
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string1 = /\scrde_arm_musl\shttps\s\-/ nocase ascii wide
+        $string1 = " crde_arm_musl https -" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string2 = /\scrde_armv7\shttps\s\-/ nocase ascii wide
+        $string2 = " crde_armv7 https -" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string3 = /\scrde_debug\shttps\s\-/ nocase ascii wide
+        $string3 = " crde_debug https -" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string4 = /\scrde_linux\shttps\s\-/ nocase ascii wide
+        $string4 = " crde_linux https -" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string5 = /\scrde_linux_aarch64\shttps\s\-/ nocase ascii wide
+        $string5 = " crde_linux_aarch64 https -" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string6 = /\scrde_linux_x86_64\shttps\s\-/ nocase ascii wide
+        $string6 = " crde_linux_x86_64 https -" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string7 = /\scrde_macos\shttps\s\-/ nocase ascii wide
+        $string7 = " crde_macos https -" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string8 = /\scrde_release\shttps\s\-/ nocase ascii wide
+        $string8 = " crde_release https -" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string9 = /\scrde_windows\shttps\s\-/ nocase ascii wide
+        $string9 = " crde_windows https -" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string10 = /\scrde_windows_x64\shttps\s\-/ nocase ascii wide
+        $string10 = " crde_windows_x64 https -" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string11 = /\scrde_windows_x86\shttps\s\-/ nocase ascii wide
+        $string11 = " crde_windows_x86 https -" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
         $string12 = /\shttps\s\-i\s0\.0\.0\.0\s\-P\s.{0,100}\s\-k\s.{0,100}\s\-\-private\-cert\s.{0,100}\s\-\-public\-cert\s/ nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string13 = /\srde1\scrde_windows/ nocase ascii wide
+        $string13 = " rde1 crde_windows" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string14 = /\srde1\ssrde_linux/ nocase ascii wide
+        $string14 = " rde1 srde_linux" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string15 = /\srde1\ssrde_macos/ nocase ascii wide
+        $string15 = " rde1 srde_macos" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string16 = /\srde1\ssrde_windows/ nocase ascii wide
+        $string16 = " rde1 srde_windows" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string17 = /\srec2\scrde_linux/ nocase ascii wide
+        $string17 = " rec2 crde_linux" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string18 = /\srec2\scrde_macos/ nocase ascii wide
+        $string18 = " rec2 crde_macos" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string19 = /\ssrde_arm_musl\shttps\s\-/ nocase ascii wide
+        $string19 = " srde_arm_musl https -" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string20 = /\ssrde_armv7\shttps\s\-/ nocase ascii wide
+        $string20 = " srde_armv7 https -" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string21 = /\ssrde_debug\shttps\s\-/ nocase ascii wide
+        $string21 = " srde_debug https -" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string22 = /\ssrde_linux\shttps\s\-/ nocase ascii wide
+        $string22 = " srde_linux https -" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string23 = /\ssrde_linux_aarch64\shttps\s\-/ nocase ascii wide
+        $string23 = " srde_linux_aarch64 https -" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string24 = /\ssrde_linux_x86_64\shttps\s\-/ nocase ascii wide
+        $string24 = " srde_linux_x86_64 https -" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string25 = /\ssrde_macos\shttps\s\-/ nocase ascii wide
+        $string25 = " srde_macos https -" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string26 = /\ssrde_release\shttps\s\-/ nocase ascii wide
+        $string26 = " srde_release https -" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string27 = /\ssrde_windows\shttps\s\-/ nocase ascii wide
+        $string27 = " srde_windows https -" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string28 = /\ssrde_windows_x64\shttps\s\-/ nocase ascii wide
+        $string28 = " srde_windows_x64 https -" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string29 = /\ssrde_windows_x86\shttps\s\-/ nocase ascii wide
+        $string29 = " srde_windows_x86 https -" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
         $string30 = /\/RDE1\.git/ nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string31 = /crde\sdns\s\-/ nocase ascii wide
+        $string31 = "crde dns -" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string32 = /crde\shttps\s\-/ nocase ascii wide
+        $string32 = "crde https -" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string33 = /crde\:\:utils\:\:checker/ nocase ascii wide
+        $string33 = "crde::utils::checker" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
         $string34 = /crde_x64\.exe\sdns\s\-f\s/ nocase ascii wide
@@ -121,37 +121,37 @@ rule RDE1
         $string37 = /docker\srun\s.{0,100}\/usr\/src\/rec2/ nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string38 = /Exfiltration\sfrom\sDNS\sfinished\!/ nocase ascii wide
+        $string38 = "Exfiltration from DNS finished!" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string39 = /Exfiltration\sfrom\sHTTPS\sfinished\!/ nocase ascii wide
+        $string39 = "Exfiltration from HTTPS finished!" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string40 = /g0h4n\/RDE1/ nocase ascii wide
+        $string40 = "g0h4n/RDE1" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string41 = /methods\:\:dns\:\:dns_exfiltrator/ nocase ascii wide
+        $string41 = "methods::dns::dns_exfiltrator" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string42 = /methods\:\:https\:\:https_exfiltrator/ nocase ascii wide
+        $string42 = "methods::https::https_exfiltrator" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string43 = /methods\:\:icmp\:\:icmp_exfiltrator/ nocase ascii wide
+        $string43 = "methods::icmp::icmp_exfiltrator" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
         $string44 = /RDE1\-main\.zip/ nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string45 = /srde\sdns\s\-/ nocase ascii wide
+        $string45 = "srde dns -" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string46 = /srde\shttps\s\-/ nocase ascii wide
+        $string46 = "srde https -" nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string47 = /srde_release\sdns\s\-k\s/ nocase ascii wide
+        $string47 = "srde_release dns -k " nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string48 = /srde_release\shttps\s\-i\s/ nocase ascii wide
+        $string48 = "srde_release https -i " nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

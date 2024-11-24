@@ -10,19 +10,19 @@ rule wifite2
     strings:
         // Description: This repo is a complete re-write of wifite. a Python script for auditing wireless networks.Run wifite. select your targets. and Wifite will automatically start trying to capture or crack the password.
         // Reference: https://github.com/derv82/wifite2
-        $string1 = /\/wifite\s\-c\s/ nocase ascii wide
+        $string1 = "/wifite -c " nocase ascii wide
         // Description: This repo is a complete re-write of wifite. a Python script for auditing wireless networks.Run wifite. select your targets. and Wifite will automatically start trying to capture or crack the password.
         // Reference: https://github.com/derv82/wifite2
-        $string2 = /\/wifite2/ nocase ascii wide
+        $string2 = "/wifite2" nocase ascii wide
         // Description: This repo is a complete re-write of wifite. a Python script for auditing wireless networks.Run wifite. select your targets. and Wifite will automatically start trying to capture or crack the password.
         // Reference: https://github.com/derv82/wifite2
-        $string3 = /wifite\s\-\-crack/ nocase ascii wide
+        $string3 = "wifite --crack" nocase ascii wide
         // Description: This repo is a complete re-write of wifite. a Python script for auditing wireless networks.Run wifite. select your targets. and Wifite will automatically start trying to capture or crack the password.
         // Reference: https://github.com/derv82/wifite2
-        $string4 = /wifite\s\-e\s/ nocase ascii wide
+        $string4 = "wifite -e " nocase ascii wide
         // Description: This repo is a complete re-write of wifite. a Python script for auditing wireless networks.Run wifite. select your targets. and Wifite will automatically start trying to capture or crack the password.
         // Reference: https://github.com/derv82/wifite2
-        $string5 = /wifite\s\-\-wep\s/ nocase ascii wide
+        $string5 = "wifite --wep " nocase ascii wide
         // Description: This repo is a complete re-write of wifite. a Python script for auditing wireless networks.Run wifite. select your targets. and Wifite will automatically start trying to capture or crack the password.
         // Reference: https://github.com/derv82/wifite2
         $string6 = /Wifite\.py/ nocase ascii wide

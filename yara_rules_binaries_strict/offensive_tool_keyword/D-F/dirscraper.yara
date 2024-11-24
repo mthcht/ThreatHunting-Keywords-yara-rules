@@ -10,7 +10,7 @@ rule dirscraper
     strings:
         // Description: Dirscraper is an OSINT scanning tool which assists penetration testers in identifying hidden. or previously unknown. directories on a domain or subdomain. This helps greatly in the recon stage of pentesting as it provide pentesters with a larger attack surface for the specific domain.
         // Reference: https://github.com/Cillian-Collins/dirscraper
-        $string1 = /dirscraper/ nocase ascii wide
+        $string1 = "dirscraper" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

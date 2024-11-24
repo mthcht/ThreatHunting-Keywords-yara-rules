@@ -10,7 +10,7 @@ rule powerview
     strings:
         // Description: PowerView is a PowerShell tool to gain network situational awareness on Windows domains
         // Reference: https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1
-        $string1 = /ATK\/PowSploit\-A/ nocase ascii wide
+        $string1 = "ATK/PowSploit-A" nocase ascii wide
         // Description: PowerView is a PowerShell tool to gain network situational awareness on Windows domains
         // Reference: https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1
         $string2 = /HackTool\.PowerShell\.PowerSploit/ nocase ascii wide
@@ -28,16 +28,16 @@ rule powerview
         $string6 = /HackTool\.PS1\.PowerSploit/ nocase ascii wide
         // Description: PowerView is a PowerShell tool to gain network situational awareness on Windows domains
         // Reference: https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1
-        $string7 = /HackTool\:PowerShell\/PowerView/ nocase ascii wide
+        $string7 = "HackTool:PowerShell/PowerView" nocase ascii wide
         // Description: PowerView is a PowerShell tool to gain network situational awareness on Windows domains
         // Reference: https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1
-        $string8 = /HackTool\:PowerShell\/PowerView/ nocase ascii wide
+        $string8 = "HackTool:PowerShell/PowerView" nocase ascii wide
         // Description: PowerView is a PowerShell tool to gain network situational awareness on Windows domains
         // Reference: https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1
-        $string9 = /HTool\-EmpireAgent/ nocase ascii wide
+        $string9 = "HTool-EmpireAgent" nocase ascii wide
         // Description: PowerView is a PowerShell tool to gain network situational awareness on Windows domains
         // Reference: https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1
-        $string10 = /HTool\-EmpireAgent/ nocase ascii wide
+        $string10 = "HTool-EmpireAgent" nocase ascii wide
         // Description: PowerView is a PowerShell tool to gain network situational awareness on Windows domains
         // Reference: https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1
         $string11 = /Trojan\.HackTool\.PowerSploit/ nocase ascii wide

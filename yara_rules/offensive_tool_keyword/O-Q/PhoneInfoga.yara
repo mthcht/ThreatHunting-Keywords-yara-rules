@@ -10,7 +10,7 @@ rule PhoneInfoga
     strings:
         // Description: An OSINT framework for phone numbers.
         // Reference: https://github.com/sundowndev/PhoneInfoga
-        $string1 = /PhoneInfoga/ nocase ascii wide
+        $string1 = "PhoneInfoga" nocase ascii wide
 
     condition:
         any of them

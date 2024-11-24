@@ -10,13 +10,13 @@ rule RemotePotato0
     strings:
         // Description: Windows Privilege Escalation from User to Domain Admin.
         // Reference: https://github.com/antonioCoco/RemotePotato0
-        $string1 = /\sprinting\sthe\sgolden\sdata\,\sformat\sinspired\sby\sResponder\s\:D/ nocase ascii wide
+        $string1 = " printing the golden data, format inspired by Responder :D" nocase ascii wide
         // Description: Windows Privilege Escalation from User to Domain Admin.
         // Reference: https://github.com/antonioCoco/RemotePotato0
         $string2 = /\sRemotePotato0\.zip/ nocase ascii wide
         // Description: Windows Privilege Escalation from User to Domain Admin.
         // Reference: https://github.com/antonioCoco/RemotePotato0
-        $string3 = /\sRogueOxidResolver\smust\sbe\srun\sremotely/ nocase ascii wide
+        $string3 = " RogueOxidResolver must be run remotely" nocase ascii wide
         // Description: Windows Privilege Escalation from User to Domain Admin.
         // Reference: https://github.com/antonioCoco/RemotePotato0
         $string4 = /\s\-s\s127\.0\.0\.1\s\-e\s.{0,100}\s\-a\sconnect\s\-u\sntlm/ nocase ascii wide
@@ -76,16 +76,16 @@ rule RemotePotato0
         $string22 = /\]\sStarting\sthe\sRPC\sserver\sto\scapture\sthe\scredentials\shash\sfrom\sthe\suser\sauthentication\!\!/ nocase ascii wide
         // Description: Windows Privilege Escalation from User to Domain Admin.
         // Reference: https://github.com/antonioCoco/RemotePotato0
-        $string23 = /1c6b60ff20f7c26a7436d966fc741ecd05dc2b3326de1ebcd7fcf6142ac24409/ nocase ascii wide
+        $string23 = "1c6b60ff20f7c26a7436d966fc741ecd05dc2b3326de1ebcd7fcf6142ac24409" nocase ascii wide
         // Description: Windows Privilege Escalation from User to Domain Admin.
         // Reference: https://github.com/antonioCoco/RemotePotato0
-        $string24 = /antonioCoco\/RemotePotato0/ nocase ascii wide
+        $string24 = "antonioCoco/RemotePotato0" nocase ascii wide
         // Description: Windows Privilege Escalation from User to Domain Admin.
         // Reference: https://github.com/antonioCoco/RemotePotato0
-        $string25 = /B88B65D3\-2689\-4E39\-892C\-7532087174CB/ nocase ascii wide
+        $string25 = "B88B65D3-2689-4E39-892C-7532087174CB" nocase ascii wide
         // Description: Windows Privilege Escalation from User to Domain Admin.
         // Reference: https://github.com/antonioCoco/RemotePotato0
-        $string26 = /Detected\sa\sWindows\sServer\sversion\snot\scompatible\swith\sJuicyPotato/ nocase ascii wide
+        $string26 = "Detected a Windows Server version not compatible with JuicyPotato" nocase ascii wide
         // Description: Windows Privilege Escalation from User to Domain Admin.
         // Reference: https://github.com/antonioCoco/RemotePotato0
         $string27 = /ntlmrelayx\.py/ nocase ascii wide

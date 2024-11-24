@@ -22,16 +22,16 @@ rule certsync
         $string4 = /certsync\s.{0,100}\-\-dc\-ip/ nocase ascii wide
         // Description: Dump NTDS with golden certificates and UnPAC the hash
         // Reference: https://github.com/zblurx/certsync
-        $string5 = /certsync\s\-u\s/ nocase ascii wide
+        $string5 = "certsync -u " nocase ascii wide
         // Description: Dump NTDS with golden certificates and UnPAC the hash
         // Reference: https://github.com/zblurx/certsync
         $string6 = /certsync\-master\.zip/ nocase ascii wide
         // Description: Dump NTDS with golden certificates and UnPAC the hash
         // Reference: https://github.com/zblurx/certsync
-        $string7 = /install\scertsync/ nocase ascii wide
+        $string7 = "install certsync" nocase ascii wide
         // Description: Dump NTDS with golden certificates and UnPAC the hash
         // Reference: https://github.com/zblurx/certsync
-        $string8 = /zblurx\/certsync/ nocase ascii wide
+        $string8 = "zblurx/certsync" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

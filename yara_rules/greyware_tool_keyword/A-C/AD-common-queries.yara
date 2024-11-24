@@ -22,7 +22,7 @@ rule AD_common_queries
         $string4 = /ADUsers\-PasswordNotRequired\.txt/ nocase ascii wide
         // Description: Collection of common ADSI queries for Domain Account enumeration
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string5 = /swarleysez\/AD\-common\-queries/ nocase ascii wide
+        $string5 = "swarleysez/AD-common-queries" nocase ascii wide
 
     condition:
         any of them

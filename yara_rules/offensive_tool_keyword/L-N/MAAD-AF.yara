@@ -25,7 +25,7 @@ rule MAAD_AF
         $string5 = /AzureADRecon\.ps1/ nocase ascii wide
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
-        $string6 = /Brute\-force\sUnsuccessful\!/ nocase ascii wide
+        $string6 = "Brute-force Unsuccessful!" nocase ascii wide
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
         $string7 = /BruteForce\.ps1/ nocase ascii wide
@@ -34,10 +34,10 @@ rule MAAD_AF
         $string8 = /CrossTenantSynchronizationBackdoor\.ps1/ nocase ascii wide
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
-        $string9 = /\-\-defaults\-torrc/ nocase ascii wide
+        $string9 = "--defaults-torrc" nocase ascii wide
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
-        $string10 = /DisableAntiPhishing/ nocase ascii wide
+        $string10 = "DisableAntiPhishing" nocase ascii wide
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
         $string11 = /DisableAntiPhishing\.ps1/ nocase ascii wide
@@ -88,13 +88,13 @@ rule MAAD_AF
         $string26 = /SharepointSiteExploiter\.ps1/ nocase ascii wide
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
-        $string27 = /Successfully\scracked\saccount\spassword/ nocase ascii wide
+        $string27 = "Successfully cracked account password" nocase ascii wide
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
         $string28 = /TORAnonymizer\.ps1/ nocase ascii wide
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
-        $string29 = /vectra\-ai\-research\/MAAD\-AF/ nocase ascii wide
+        $string29 = "vectra-ai-research/MAAD-AF" nocase ascii wide
 
     condition:
         any of them

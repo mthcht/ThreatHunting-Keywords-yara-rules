@@ -10,16 +10,16 @@ rule RevengeRAT_Stub_Cssharp
     strings:
         // Description: RevengeRAT - AsyncRAT  Simple RAT
         // Reference: https://github.com/NYAN-x-CAT/RevengeRAT-Stub-Cssharp
-        $string1 = /052C26C0\-7979\-4555\-89CE\-34C5CE8D8B34/ nocase ascii wide
+        $string1 = "052C26C0-7979-4555-89CE-34C5CE8D8B34" nocase ascii wide
         // Description: RevengeRAT - AsyncRAT  Simple RAT
         // Reference: https://github.com/NYAN-x-CAT/RevengeRAT-Stub-Cssharp
-        $string2 = /9ae37b21e20b611787f1219137b545597235c23fd54c0e73919b9ae3266bd046/ nocase ascii wide
+        $string2 = "9ae37b21e20b611787f1219137b545597235c23fd54c0e73919b9ae3266bd046" nocase ascii wide
         // Description: RevengeRAT - AsyncRAT  Simple RAT
         // Reference: https://github.com/NYAN-x-CAT/RevengeRAT-Stub-Cssharp
-        $string3 = /c4f026c01e451e1afa61ab8233fd15a3c0b4da615eae5d893db82b84bbe49e40/ nocase ascii wide
+        $string3 = "c4f026c01e451e1afa61ab8233fd15a3c0b4da615eae5d893db82b84bbe49e40" nocase ascii wide
         // Description: RevengeRAT - AsyncRAT  Simple RAT
         // Reference: https://github.com/NYAN-x-CAT/RevengeRAT-Stub-Cssharp
-        $string4 = /RevengeRAT\-Stub\-CSsharp/ nocase ascii wide
+        $string4 = "RevengeRAT-Stub-CSsharp" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

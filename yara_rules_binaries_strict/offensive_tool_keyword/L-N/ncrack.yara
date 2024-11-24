@@ -10,7 +10,7 @@ rule ncrack
     strings:
         // Description: High-speed network authentication cracking tool.
         // Reference: https://github.com/nmap/ncrack
-        $string1 = /\/ncrack\-/ nocase ascii wide
+        $string1 = "/ncrack-" nocase ascii wide
         // Description: High-speed network authentication cracking tool.
         // Reference: https://github.com/nmap/ncrack
         $string2 = /\/ncrack\.git/ nocase ascii wide
@@ -31,10 +31,10 @@ rule ncrack
         $string7 = /ncrack\-master\.zip/ nocase ascii wide
         // Description: High-speed network authentication cracking tool.
         // Reference: https://github.com/nmap/ncrack
-        $string8 = /ncrack\-services/ nocase ascii wide
+        $string8 = "ncrack-services" nocase ascii wide
         // Description: High-speed network authentication cracking tool.
         // Reference: https://github.com/nmap/ncrack
-        $string9 = /nmap\/ncrack/ nocase ascii wide
+        $string9 = "nmap/ncrack" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

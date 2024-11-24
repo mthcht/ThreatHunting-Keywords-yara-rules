@@ -19,7 +19,7 @@ rule lsa_whisperer
         $string3 = /\\lsa\-whisperer\-/ nocase ascii wide
         // Description: Tools for interacting with authentication packages using their individual message protocols
         // Reference: https://github.com/EvanMcBroom/lsa-whisperer
-        $string4 = /EvanMcBroom\/lsa\-whisperer/ nocase ascii wide
+        $string4 = "EvanMcBroom/lsa-whisperer" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

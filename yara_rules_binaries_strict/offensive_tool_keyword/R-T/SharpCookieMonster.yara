@@ -13,7 +13,7 @@ rule SharpCookieMonster
         $string1 = /execute\-assembly.{0,100}sharpcookiemonster/ nocase ascii wide
         // Description: This C# project will dump cookies for all sites. even those with httpOnly/secure/session
         // Reference: https://github.com/m0rv4i/SharpCookieMonster
-        $string2 = /m0rv4i\/SharpCookieMonster/ nocase ascii wide
+        $string2 = "m0rv4i/SharpCookieMonster" nocase ascii wide
         // Description: This C# project will dump cookies for all sites. even those with httpOnly/secure/session
         // Reference: https://github.com/m0rv4i/SharpCookieMonster
         $string3 = /SharpCookieMonster.{0,100}WebSocket4Net\.dll/ nocase ascii wide

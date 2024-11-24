@@ -10,7 +10,7 @@ rule awesome_static_analysis
     strings:
         // Description: This is a collection of static analysis tools and code quality checkers
         // Reference: https://github.com/codefactor-io/awesome-static-analysis
-        $string1 = /awesome\-static\-analysis/ nocase ascii wide
+        $string1 = "awesome-static-analysis" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

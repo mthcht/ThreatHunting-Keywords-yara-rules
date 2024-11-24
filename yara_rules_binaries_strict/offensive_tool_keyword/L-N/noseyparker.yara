@@ -10,34 +10,34 @@ rule noseyparker
     strings:
         // Description: Nosey Parker is a command-line program that finds secrets and sensitive information in textual data and Git history.
         // Reference: https://github.com/praetorian-inc/noseyparker
-        $string1 = /\sgithub\srepos\slist\s\-\-org/ nocase ascii wide
+        $string1 = " github repos list --org" nocase ascii wide
         // Description: Nosey Parker is a command-line program that finds secrets and sensitive information in textual data and Git history.
         // Reference: https://github.com/praetorian-inc/noseyparker
-        $string2 = /\sgithub\srepos\slist\s\-\-user\s/ nocase ascii wide
+        $string2 = " github repos list --user " nocase ascii wide
         // Description: Nosey Parker is a command-line program that finds secrets and sensitive information in textual data and Git history.
         // Reference: https://github.com/praetorian-inc/noseyparker
-        $string3 = /\sscan\s\-\-github\-org/ nocase ascii wide
+        $string3 = " scan --github-org" nocase ascii wide
         // Description: Nosey Parker is a command-line program that finds secrets and sensitive information in textual data and Git history.
         // Reference: https://github.com/praetorian-inc/noseyparker
-        $string4 = /\sscan\s\-\-github\-user/ nocase ascii wide
+        $string4 = " scan --github-user" nocase ascii wide
         // Description: Nosey Parker is a command-line program that finds secrets and sensitive information in textual data and Git history.
         // Reference: https://github.com/praetorian-inc/noseyparker
         $string5 = /\/noseyparker\.git/ nocase ascii wide
         // Description: Nosey Parker is a command-line program that finds secrets and sensitive information in textual data and Git history.
         // Reference: https://github.com/praetorian-inc/noseyparker
-        $string6 = /noseyparker\sreport\s\-\-datastore\s/ nocase ascii wide
+        $string6 = "noseyparker report --datastore " nocase ascii wide
         // Description: Nosey Parker is a command-line program that finds secrets and sensitive information in textual data and Git history.
         // Reference: https://github.com/praetorian-inc/noseyparker
-        $string7 = /noseyparker\sscan\s\-\-datastore\s/ nocase ascii wide
+        $string7 = "noseyparker scan --datastore " nocase ascii wide
         // Description: Nosey Parker is a command-line program that finds secrets and sensitive information in textual data and Git history.
         // Reference: https://github.com/praetorian-inc/noseyparker
-        $string8 = /noseyparker\ssummarize\s\-\-datastore\s/ nocase ascii wide
+        $string8 = "noseyparker summarize --datastore " nocase ascii wide
         // Description: Nosey Parker is a command-line program that finds secrets and sensitive information in textual data and Git history.
         // Reference: https://github.com/praetorian-inc/noseyparker
-        $string9 = /noseyparker\-cli/ nocase ascii wide
+        $string9 = "noseyparker-cli" nocase ascii wide
         // Description: Nosey Parker is a command-line program that finds secrets and sensitive information in textual data and Git history.
         // Reference: https://github.com/praetorian-inc/noseyparker
-        $string10 = /noseyparker\-main/ nocase ascii wide
+        $string10 = "noseyparker-main" nocase ascii wide
         // Description: Nosey Parker is a command-line program that finds secrets and sensitive information in textual data and Git history.
         // Reference: https://github.com/praetorian-inc/noseyparker
         $string11 = /noseyparker\-v.{0,100}\-universal\-macos/ nocase ascii wide
@@ -46,7 +46,7 @@ rule noseyparker
         $string12 = /noseyparker\-v.{0,100}\-x86_64\-unknown\-linux\-gnu/ nocase ascii wide
         // Description: Nosey Parker is a command-line program that finds secrets and sensitive information in textual data and Git history.
         // Reference: https://github.com/praetorian-inc/noseyparker
-        $string13 = /praetorian\-inc\/noseyparker/ nocase ascii wide
+        $string13 = "praetorian-inc/noseyparker" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

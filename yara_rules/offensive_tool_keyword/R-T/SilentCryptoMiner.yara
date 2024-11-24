@@ -10,7 +10,7 @@ rule SilentCryptoMiner
     strings:
         // Description: A Silent (Hidden) Free Crypto Miner Builder
         // Reference: https://github.com/UnamSanctam/SilentCryptoMiner
-        $string1 = /\/SilentCryptoMiner\// nocase ascii wide
+        $string1 = "/SilentCryptoMiner/" nocase ascii wide
         // Description: A Silent (Hidden) Free Crypto Miner Builder
         // Reference: https://github.com/UnamSanctam/SilentCryptoMiner
         $string2 = /\@etc\.2miners\.com\:/ nocase ascii wide
@@ -40,16 +40,16 @@ rule SilentCryptoMiner
         $string10 = /A\sSilent\s\(Hidden\)\sFree\sCrypto\sMiner\sBuilder/ nocase ascii wide
         // Description: A Silent (Hidden) Free Crypto Miner Builder
         // Reference: https://github.com/UnamSanctam/SilentCryptoMiner
-        $string11 = /CE2307EB\-A69E\-0EB9\-386C\-D322223A10A9/ nocase ascii wide
+        $string11 = "CE2307EB-A69E-0EB9-386C-D322223A10A9" nocase ascii wide
         // Description: A Silent (Hidden) Free Crypto Miner Builder
         // Reference: https://github.com/UnamSanctam/SilentCryptoMiner
-        $string12 = /Company\'\>Unam\sSanctam\<\/Data\>/ nocase ascii wide
+        $string12 = "Company'>Unam Sanctam</Data>" nocase ascii wide
         // Description: A Silent (Hidden) Free Crypto Miner Builder
         // Reference: https://github.com/UnamSanctam/SilentCryptoMiner
-        $string13 = /namespace\sSilentCryptoMiner/ nocase ascii wide
+        $string13 = "namespace SilentCryptoMiner" nocase ascii wide
         // Description: A Silent (Hidden) Free Crypto Miner Builder
         // Reference: https://github.com/UnamSanctam/SilentCryptoMiner
-        $string14 = /Silent\sCrypto\sMiner\sBuilder/ nocase ascii wide
+        $string14 = "Silent Crypto Miner Builder" nocase ascii wide
         // Description: A Silent (Hidden) Free Crypto Miner Builder
         // Reference: https://github.com/UnamSanctam/SilentCryptoMiner
         $string15 = /Silent\.Crypto\.Miner\.Builder\.zip/ nocase ascii wide
@@ -58,7 +58,7 @@ rule SilentCryptoMiner
         $string16 = /SilentCryptoMiner\.sln/ nocase ascii wide
         // Description: A Silent (Hidden) Free Crypto Miner Builder
         // Reference: https://github.com/UnamSanctam/SilentCryptoMiner
-        $string17 = /SilentCryptoMiner\-scm\-v/ nocase ascii wide
+        $string17 = "SilentCryptoMiner-scm-v" nocase ascii wide
         // Description: A Silent (Hidden) Free Crypto Miner Builder
         // Reference: https://github.com/UnamSanctam/SilentCryptoMiner
         $string18 = /xmr\.2miners\.com/ nocase ascii wide

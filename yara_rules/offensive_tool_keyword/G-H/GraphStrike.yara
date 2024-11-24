@@ -28,10 +28,10 @@ rule GraphStrike
         $string6 = /\/GraphStrike\.py/ nocase ascii wide
         // Description: Cobalt Strike HTTPS beaconing over Microsoft Graph API
         // Reference: https://github.com/RedSiege/GraphStrike
-        $string7 = /\/GraphStrike\-main\// nocase ascii wide
+        $string7 = "/GraphStrike-main/" nocase ascii wide
         // Description: Cobalt Strike HTTPS beaconing over Microsoft Graph API
         // Reference: https://github.com/RedSiege/GraphStrike
-        $string8 = /\/opt\/cobaltstrike\// nocase ascii wide
+        $string8 = "/opt/cobaltstrike/" nocase ascii wide
         // Description: Cobalt Strike HTTPS beaconing over Microsoft Graph API
         // Reference: https://github.com/RedSiege/GraphStrike
         $string9 = /\[\+\]\sRandomizing\ssyscall\snames/ nocase ascii wide
@@ -61,7 +61,7 @@ rule GraphStrike
         $string17 = /GraphLdr\.x64\.exe/ nocase ascii wide
         // Description: Cobalt Strike HTTPS beaconing over Microsoft Graph API
         // Reference: https://github.com/RedSiege/GraphStrike
-        $string18 = /GraphStrike\sServer\sis\srunning\sand\schecking\sSharePoint\sfor\sBeacon\straffic/ nocase ascii wide
+        $string18 = "GraphStrike Server is running and checking SharePoint for Beacon traffic" nocase ascii wide
         // Description: Cobalt Strike HTTPS beaconing over Microsoft Graph API
         // Reference: https://github.com/RedSiege/GraphStrike
         $string19 = /GraphStrike\.py\s/ nocase ascii wide
@@ -70,7 +70,7 @@ rule GraphStrike
         $string20 = /Lost\sconnection\sto\steam\sserver\!\sSleeping\s60\ssecond\sand\sretrying\?/ nocase ascii wide
         // Description: Cobalt Strike HTTPS beaconing over Microsoft Graph API
         // Reference: https://github.com/RedSiege/GraphStrike
-        $string21 = /RedSiege\/GraphStrike/ nocase ascii wide
+        $string21 = "RedSiege/GraphStrike" nocase ascii wide
 
     condition:
         any of them

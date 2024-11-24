@@ -10,22 +10,22 @@ rule SOAPHound
     strings:
         // Description: enumerate Active Directory environments via the Active Directory Web Services (ADWS)
         // Reference: https://github.com/FalconForceTeam/SOAPHound
-        $string1 = /\s\-\-bhdump\s/ nocase ascii wide
+        $string1 = " --bhdump " nocase ascii wide
         // Description: enumerate Active Directory environments via the Active Directory Web Services (ADWS)
         // Reference: https://github.com/FalconForceTeam/SOAPHound
-        $string2 = /\s\-\-certdump\s/ nocase ascii wide
+        $string2 = " --certdump " nocase ascii wide
         // Description: enumerate Active Directory environments via the Active Directory Web Services (ADWS)
         // Reference: https://github.com/FalconForceTeam/SOAPHound
-        $string3 = /\s\-\-dnsdump\s/ nocase ascii wide
+        $string3 = " --dnsdump " nocase ascii wide
         // Description: enumerate Active Directory environments via the Active Directory Web Services (ADWS)
         // Reference: https://github.com/FalconForceTeam/SOAPHound
         $string4 = /\sSOAPHound\.ADWS/ nocase ascii wide
         // Description: enumerate Active Directory environments via the Active Directory Web Services (ADWS)
         // Reference: https://github.com/FalconForceTeam/SOAPHound
-        $string5 = /\"ADWS\srequest\swith\sldapbase\s\(/ nocase ascii wide
+        $string5 = /\\"ADWS\srequest\swith\sldapbase\s\(/ nocase ascii wide
         // Description: enumerate Active Directory environments via the Active Directory Web Services (ADWS)
         // Reference: https://github.com/FalconForceTeam/SOAPHound
-        $string6 = /\"Dump\sBH\sdata\"/ nocase ascii wide
+        $string6 = "\"Dump BH data\"" nocase ascii wide
         // Description: enumerate Active Directory environments via the Active Directory Web Services (ADWS)
         // Reference: https://github.com/FalconForceTeam/SOAPHound
         $string7 = /\.exe\s\s\-\-buildcache\s\-c\s.{0,1000}\\cache\.txt/ nocase ascii wide
@@ -61,22 +61,22 @@ rule SOAPHound
         $string17 = /\\SOAPHound\-master/ nocase ascii wide
         // Description: enumerate Active Directory environments via the Active Directory Web Services (ADWS)
         // Reference: https://github.com/FalconForceTeam/SOAPHound
-        $string18 = /33571B09\-4E94\-43CB\-ABDC\-0226D769E701/ nocase ascii wide
+        $string18 = "33571B09-4E94-43CB-ABDC-0226D769E701" nocase ascii wide
         // Description: enumerate Active Directory environments via the Active Directory Web Services (ADWS)
         // Reference: https://github.com/FalconForceTeam/SOAPHound
         $string19 = /Domain\scontroller\sis\smissing.{0,1000}\suse\s\-\-dc\./ nocase ascii wide
         // Description: enumerate Active Directory environments via the Active Directory Web Services (ADWS)
         // Reference: https://github.com/FalconForceTeam/SOAPHound
-        $string20 = /Dump\sAD\sCertificate\sServices\sdata/ nocase ascii wide
+        $string20 = "Dump AD Certificate Services data" nocase ascii wide
         // Description: enumerate Active Directory environments via the Active Directory Web Services (ADWS)
         // Reference: https://github.com/FalconForceTeam/SOAPHound
-        $string21 = /Dump\sAD\sIntegrated\sDNS\sdata/ nocase ascii wide
+        $string21 = "Dump AD Integrated DNS data" nocase ascii wide
         // Description: enumerate Active Directory environments via the Active Directory Web Services (ADWS)
         // Reference: https://github.com/FalconForceTeam/SOAPHound
-        $string22 = /FalconForceTeam\/SOAPHound/ nocase ascii wide
+        $string22 = "FalconForceTeam/SOAPHound" nocase ascii wide
         // Description: enumerate Active Directory environments via the Active Directory Web Services (ADWS)
         // Reference: https://github.com/FalconForceTeam/SOAPHound
-        $string23 = /Password\sto\suse\sfor\sADWS\sConnection/ nocase ascii wide
+        $string23 = "Password to use for ADWS Connection" nocase ascii wide
         // Description: enumerate Active Directory environments via the Active Directory Web Services (ADWS)
         // Reference: https://github.com/FalconForceTeam/SOAPHound
         $string24 = /SOAPHound\sPoC\s1\.0\.1\-beta/ nocase ascii wide
@@ -88,7 +88,7 @@ rule SOAPHound
         $string26 = /SOAPHound\.Processors/ nocase ascii wide
         // Description: enumerate Active Directory environments via the Active Directory Web Services (ADWS)
         // Reference: https://github.com/FalconForceTeam/SOAPHound
-        $string27 = /Specify\sdomain\sfor\senumeration/ nocase ascii wide
+        $string27 = "Specify domain for enumeration" nocase ascii wide
         // Description: enumerate Active Directory environments via the Active Directory Web Services (ADWS)
         // Reference: https://github.com/FalconForceTeam/SOAPHound
         $string28 = /Username\sto\suse\sfor\sADWS\sConnection\.\sFormat\:\sdomain\\\\user\sor\suser\@domain/ nocase ascii wide

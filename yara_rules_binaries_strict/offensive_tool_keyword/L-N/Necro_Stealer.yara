@@ -16,19 +16,19 @@ rule Necro_Stealer
         $string2 = /\\Necro\-Stealer\-.{0,100}\.zip/ nocase ascii wide
         // Description: C++ stealer (passwords - cookies - forms - cards - wallets) 
         // Reference: https://github.com/SecUser1/Necro-Stealer
-        $string3 = /a568c8a8c28b7ceeee2f5eec82f94dd4fb0fc06175b2ee3043f863a68451ebbd/ nocase ascii wide
+        $string3 = "a568c8a8c28b7ceeee2f5eec82f94dd4fb0fc06175b2ee3043f863a68451ebbd" nocase ascii wide
         // Description: C++ stealer (passwords - cookies - forms - cards - wallets) 
         // Reference: https://github.com/SecUser1/Necro-Stealer
-        $string4 = /ac3107cf\-291c\-449b\-9121\-55cd37f6383e/ nocase ascii wide
+        $string4 = "ac3107cf-291c-449b-9121-55cd37f6383e" nocase ascii wide
         // Description: C++ stealer (passwords - cookies - forms - cards - wallets) 
         // Reference: https://github.com/SecUser1/Necro-Stealer
-        $string5 = /d14be0c5477fc937b2cc00367931e1181d8897ce98a560cff48e0939840a096b/ nocase ascii wide
+        $string5 = "d14be0c5477fc937b2cc00367931e1181d8897ce98a560cff48e0939840a096b" nocase ascii wide
         // Description: C++ stealer (passwords - cookies - forms - cards - wallets) 
         // Reference: https://github.com/SecUser1/Necro-Stealer
         $string6 = /NecroStealer\.exe/ nocase ascii wide
         // Description: C++ stealer (passwords - cookies - forms - cards - wallets) 
         // Reference: https://github.com/SecUser1/Necro-Stealer
-        $string7 = /SecUser1\/Necro\-Stealer/ nocase ascii wide
+        $string7 = "SecUser1/Necro-Stealer" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

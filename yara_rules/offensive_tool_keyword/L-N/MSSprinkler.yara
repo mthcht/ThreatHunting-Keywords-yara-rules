@@ -25,13 +25,13 @@ rule MSSprinkler
         $string5 = /\\mssprinkler\.ps1/ nocase ascii wide
         // Description: password spraying utility for organizations to test their M365 accounts from an external perspective. It employs a 'low-and-slow' approach
         // Reference: https://github.com/TheresAFewConors/MSSprinkler
-        $string6 = /c299346734b17df1a8dc47d97145c756938307fbd249837ff4dc697befd2961b/ nocase ascii wide
+        $string6 = "c299346734b17df1a8dc47d97145c756938307fbd249837ff4dc697befd2961b" nocase ascii wide
         // Description: password spraying utility for organizations to test their M365 accounts from an external perspective. It employs a 'low-and-slow' approach
         // Reference: https://github.com/TheresAFewConors/MSSprinkler
-        $string7 = /Invoke\-MSSprinkler/ nocase ascii wide
+        $string7 = "Invoke-MSSprinkler" nocase ascii wide
         // Description: password spraying utility for organizations to test their M365 accounts from an external perspective. It employs a 'low-and-slow' approach
         // Reference: https://github.com/TheresAFewConors/MSSprinkler
-        $string8 = /TheresAFewConors\/MSSprinkler/ nocase ascii wide
+        $string8 = "TheresAFewConors/MSSprinkler" nocase ascii wide
 
     condition:
         any of them

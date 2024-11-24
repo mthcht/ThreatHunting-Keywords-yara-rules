@@ -40,16 +40,16 @@ rule action1
         $string10 = /\\Windows\\Action1\\scripts\\/ nocase ascii wide
         // Description: Action1 remote administration tool abused buy attacker
         // Reference: https://app.action1.com/
-        $string11 = /_renamed_by_Action1/ nocase ascii wide
+        $string11 = "_renamed_by_Action1" nocase ascii wide
         // Description: Action1 remote administration tool abused buy attacker
         // Reference: https://app.action1.com/
         $string12 = /a1\-server\-prod\-even\.action1\.com/ nocase ascii wide
         // Description: Action1 remote administration tool abused buy attacker
         // Reference: https://app.action1.com/
-        $string13 = /Action1\sCorporation/ nocase ascii wide
+        $string13 = "Action1 Corporation" nocase ascii wide
         // Description: Action1 remote administration tool abused buy attacker
         // Reference: https://app.action1.com/
-        $string14 = /Action1\sEndpoint\sSecurity/ nocase ascii wide
+        $string14 = "Action1 Endpoint Security" nocase ascii wide
         // Description: Action1 remote administration tool abused buy attacker
         // Reference: https://app.action1.com/
         $string15 = /Action1.{0,100}\'DestinationPort\'\>22543/ nocase ascii wide
@@ -82,7 +82,7 @@ rule action1
         $string24 = /C\:\\Windows\\System32\\config\\systemprofile\\AppData\\Local\\Action1/ nocase ascii wide
         // Description: Action1 remote administration tool abused buy attacker
         // Reference: https://app.action1.com/
-        $string25 = /\'Company\'\>Action1\sCorporation/ nocase ascii wide
+        $string25 = "'Company'>Action1 Corporation" nocase ascii wide
         // Description: Action1 remote administration tool abused buy attacker
         // Reference: https://app.action1.com/
         $string26 = /CurrentControlSet\\Services\\A1Agent/ nocase ascii wide

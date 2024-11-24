@@ -13,7 +13,7 @@ rule WorldWind_Stealer
         $string1 = /WorldWind\sStealer\.zip/ nocase ascii wide
         // Description: WorldWind Stealer This stealer sends logs directly to your telegram id from a Bot that YOU Create with telegram
         // Reference: https://github.com/Leecher21/WorldWind-Stealer
-        $string2 = /WorldWind\-Stealer/ nocase ascii wide
+        $string2 = "WorldWind-Stealer" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

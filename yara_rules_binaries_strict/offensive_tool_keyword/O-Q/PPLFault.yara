@@ -10,13 +10,13 @@ rule PPLFault
     strings:
         // Description: Exploits a TOCTOU in Windows Code Integrity to achieve arbitrary code execution as WinTcb-Light then dump a specified process.
         // Reference: https://github.com/gabriellandau/PPLFault
-        $string1 = /\/DumpShellcode\// nocase ascii wide
+        $string1 = "/DumpShellcode/" nocase ascii wide
         // Description: Exploits a TOCTOU in Windows Code Integrity to achieve arbitrary code execution as WinTcb-Light then dump a specified process.
         // Reference: https://github.com/gabriellandau/PPLFault
         $string2 = /\/Nofault\.exe/ nocase ascii wide
         // Description: Exploits a TOCTOU in Windows Code Integrity to achieve arbitrary code execution as WinTcb-Light then dump a specified process.
         // Reference: https://github.com/gabriellandau/PPLFault
-        $string3 = /\/PPLFault\// nocase ascii wide
+        $string3 = "/PPLFault/" nocase ascii wide
         // Description: Exploits a TOCTOU in Windows Code Integrity to achieve arbitrary code execution as WinTcb-Light then dump a specified process.
         // Reference: https://github.com/gabriellandau/PPLFault
         $string4 = /\\GodFault\./ nocase ascii wide
@@ -43,10 +43,10 @@ rule PPLFault
         $string11 = /EventAggregationPH\.dll/ nocase ascii wide
         // Description: Exploits a TOCTOU in Windows Code Integrity to achieve arbitrary code execution as WinTcb-Light then dump a specified process.
         // Reference: https://github.com/gabriellandau/PPLFault
-        $string12 = /gabriellandau\/PPLFault/ nocase ascii wide
+        $string12 = "gabriellandau/PPLFault" nocase ascii wide
         // Description: Exploits a TOCTOU in Windows Code Integrity to achieve arbitrary code execution as WinTcb-Light then dump a specified process.
         // Reference: https://github.com/gabriellandau/PPLFault
-        $string13 = /GMShellcode/ nocase ascii wide
+        $string13 = "GMShellcode" nocase ascii wide
         // Description: Exploits a TOCTOU in Windows Code Integrity to achieve arbitrary code execution as WinTcb-Light then dump a specified process.
         // Reference: https://github.com/gabriellandau/PPLFault
         $string14 = /GMShellcode\./ nocase ascii wide
@@ -61,7 +61,7 @@ rule PPLFault
         $string17 = /GodFault\\GodFault/ nocase ascii wide
         // Description: Exploits a TOCTOU in Windows Code Integrity to achieve arbitrary code execution as WinTcb-Light then dump a specified process.
         // Reference: https://github.com/gabriellandau/PPLFault
-        $string18 = /HIJACK_DLL_PATH/ nocase ascii wide
+        $string18 = "HIJACK_DLL_PATH" nocase ascii wide
         // Description: Exploits a TOCTOU in Windows Code Integrity to achieve arbitrary code execution as WinTcb-Light then dump a specified process.
         // Reference: https://github.com/gabriellandau/PPLFault
         $string19 = /lsass\.dmp/ nocase ascii wide
@@ -82,7 +82,7 @@ rule PPLFault
         $string24 = /PPLFaultPayload\.dll/ nocase ascii wide
         // Description: Exploits a TOCTOU in Windows Code Integrity to achieve arbitrary code execution as WinTcb-Light then dump a specified process.
         // Reference: https://github.com/gabriellandau/PPLFault
-        $string25 = /PPLFaultTemp/ nocase ascii wide
+        $string25 = "PPLFaultTemp" nocase ascii wide
         // Description: Exploits a TOCTOU in Windows Code Integrity to achieve arbitrary code execution as WinTcb-Light then dump a specified process.
         // Reference: https://github.com/gabriellandau/PPLFault
         $string26 = /smbserver\.py\s\-payload/ nocase ascii wide

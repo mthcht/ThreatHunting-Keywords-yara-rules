@@ -22,13 +22,13 @@ rule TokenFinder
         $string4 = /\\TokenFinder\.py/ nocase ascii wide
         // Description: Tool to extract powerful tokens from Office desktop apps memory
         // Reference: https://github.com/doredry/TokenFinder
-        $string5 = /doredry\/TokenFinder/ nocase ascii wide
+        $string5 = "doredry/TokenFinder" nocase ascii wide
         // Description: Tool to extract powerful tokens from Office desktop apps memory
         // Reference: https://github.com/doredry/TokenFinder
-        $string6 = /f049f7c98172f7696d6a0b312c91010720970f825eb4cff5c76c151e15f16951/ nocase ascii wide
+        $string6 = "f049f7c98172f7696d6a0b312c91010720970f825eb4cff5c76c151e15f16951" nocase ascii wide
         // Description: Tool to extract powerful tokens from Office desktop apps memory
         // Reference: https://github.com/doredry/TokenFinder
-        $string7 = /python3\sTokenFinder/ nocase ascii wide
+        $string7 = "python3 TokenFinder" nocase ascii wide
         // Description: Tool to extract powerful tokens from Office desktop apps memory
         // Reference: https://github.com/doredry/TokenFinder
         $string8 = /Tokens\swere\sextracted\sto\stokens\.txt\!\sEnjoy/ nocase ascii wide

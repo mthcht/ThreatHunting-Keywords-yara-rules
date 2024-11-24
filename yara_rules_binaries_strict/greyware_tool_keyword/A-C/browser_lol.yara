@@ -10,7 +10,7 @@ rule browser_lol
     strings:
         // Description: Virtual Browser - Safely visit blocked or risky websites - can be used to bypass network restrictions within a corporate environment
         // Reference: https://browser.lol
-        $string1 = /\&browser\=tor\&api\=false/ nocase ascii wide
+        $string1 = "&browser=tor&api=false" nocase ascii wide
         // Description: Virtual Browser - Safely visit blocked or risky websites - can be used to bypass network restrictions within a corporate environment
         // Reference: https://browser.lol
         $string2 = /\.srv\.browser\.lol/ nocase ascii wide

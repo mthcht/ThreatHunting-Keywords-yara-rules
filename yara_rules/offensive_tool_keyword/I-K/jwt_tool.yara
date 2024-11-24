@@ -10,7 +10,7 @@ rule jwt_tool
     strings:
         // Description: jwt_tool.py is a toolkit for validating. forging. scanning and tampering JWTs (JSON Web Tokens).
         // Reference: https://github.com/ticarpi/jwt_tool
-        $string1 = /jwt_tool/ nocase ascii wide
+        $string1 = "jwt_tool" nocase ascii wide
 
     condition:
         any of them

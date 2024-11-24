@@ -19,10 +19,10 @@ rule ThisIsNotRat
         $string3 = /python\stinar\.py/ nocase ascii wide
         // Description: control windows computeur from telegram
         // Reference: https://github.com/RealBey/ThisIsNotRat
-        $string4 = /RealBey\/ThisIsNotRat/ nocase ascii wide
+        $string4 = "RealBey/ThisIsNotRat" nocase ascii wide
         // Description: control windows computeur from telegram
         // Reference: https://github.com/RealBey/ThisIsNotRat
-        $string5 = /ThisIsNotRat\-main/ nocase ascii wide
+        $string5 = "ThisIsNotRat-main" nocase ascii wide
 
     condition:
         any of them

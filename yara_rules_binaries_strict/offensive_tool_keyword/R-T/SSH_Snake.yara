@@ -31,7 +31,7 @@ rule SSH_Snake
         $string7 = /\/SSH\-Snake\.git/ nocase ascii wide
         // Description: SSH-Snake is a self-propagating - self-replicating - file-less script that automates the post-exploitation task of SSH private key and host discovery
         // Reference: https://github.com/MegaManSec/SSH-Snake
-        $string8 = /\/SSH\-Snake\// nocase ascii wide
+        $string8 = "/SSH-Snake/" nocase ascii wide
         // Description: SSH-Snake is a self-propagating - self-replicating - file-less script that automates the post-exploitation task of SSH private key and host discovery
         // Reference: https://github.com/MegaManSec/SSH-Snake
         $string9 = /\[\!\]\sInvalid\ssandbox\sevasion\stechnique\sprovided\!/ nocase ascii wide
@@ -79,7 +79,7 @@ rule SSH_Snake
         $string23 = /\[\+\]\sValid\sshellcode\sexecution\smethods\sare\:\sPoolPartyModuleStomping/ nocase ascii wide
         // Description: SSH-Snake is a self-propagating - self-replicating - file-less script that automates the post-exploitation task of SSH private key and host discovery
         // Reference: https://github.com/MegaManSec/SSH-Snake
-        $string24 = /MegaManSec\/SSH\-Snake/ nocase ascii wide
+        $string24 = "MegaManSec/SSH-Snake" nocase ascii wide
         // Description: SSH-Snake is a self-propagating - self-replicating - file-less script that automates the post-exploitation task of SSH private key and host discovery
         // Reference: https://github.com/MegaManSec/SSH-Snake
         $string25 = /Shellcode\spath\schanged\:.{0,100}shellcode_path/ nocase ascii wide
@@ -88,7 +88,7 @@ rule SSH_Snake
         $string26 = /SSHSnake\.log/ nocase ascii wide
         // Description: SSH-Snake is a self-propagating - self-replicating - file-less script that automates the post-exploitation task of SSH private key and host discovery
         // Reference: https://github.com/MegaManSec/SSH-Snake
-        $string27 = /SSH\-Snake\-main/ nocase ascii wide
+        $string27 = "SSH-Snake-main" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -19,28 +19,28 @@ rule pwndrop
         $string3 = /\/pwndrop\.ini/ nocase ascii wide
         // Description: Self-deployable file hosting service for red teamers allowing to easily upload and share payloads over HTTP and WebDAV.
         // Reference: https://github.com/kgretzky/pwndrop
-        $string4 = /\/usr\/local\/pwndrop\// nocase ascii wide
+        $string4 = "/usr/local/pwndrop/" nocase ascii wide
         // Description: Self-deployable file hosting service for red teamers allowing to easily upload and share payloads over HTTP and WebDAV.
         // Reference: https://github.com/kgretzky/pwndrop
-        $string5 = /kgretzky\/pwndrop/ nocase ascii wide
+        $string5 = "kgretzky/pwndrop" nocase ascii wide
         // Description: Self-deployable file hosting service for red teamers allowing to easily upload and share payloads over HTTP and WebDAV.
         // Reference: https://github.com/kgretzky/pwndrop
-        $string6 = /pwndrop\sinstall/ nocase ascii wide
+        $string6 = "pwndrop install" nocase ascii wide
         // Description: Self-deployable file hosting service for red teamers allowing to easily upload and share payloads over HTTP and WebDAV.
         // Reference: https://github.com/kgretzky/pwndrop
-        $string7 = /pwndrop\sstart/ nocase ascii wide
+        $string7 = "pwndrop start" nocase ascii wide
         // Description: Self-deployable file hosting service for red teamers allowing to easily upload and share payloads over HTTP and WebDAV.
         // Reference: https://github.com/kgretzky/pwndrop
-        $string8 = /pwndrop\sstatus/ nocase ascii wide
+        $string8 = "pwndrop status" nocase ascii wide
         // Description: Self-deployable file hosting service for red teamers allowing to easily upload and share payloads over HTTP and WebDAV.
         // Reference: https://github.com/kgretzky/pwndrop
-        $string9 = /pwndrop\sstop/ nocase ascii wide
+        $string9 = "pwndrop stop" nocase ascii wide
         // Description: Self-deployable file hosting service for red teamers allowing to easily upload and share payloads over HTTP and WebDAV.
         // Reference: https://github.com/kgretzky/pwndrop
-        $string10 = /pwndrop\-linux\-amd64/ nocase ascii wide
+        $string10 = "pwndrop-linux-amd64" nocase ascii wide
         // Description: Self-deployable file hosting service for red teamers allowing to easily upload and share payloads over HTTP and WebDAV.
         // Reference: https://github.com/kgretzky/pwndrop
-        $string11 = /pwndrop\-master/ nocase ascii wide
+        $string11 = "pwndrop-master" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

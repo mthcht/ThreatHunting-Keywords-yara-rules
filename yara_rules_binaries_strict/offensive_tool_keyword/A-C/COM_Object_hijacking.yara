@@ -16,10 +16,10 @@ rule COM_Object_hijacking
         $string2 = /\\COM\-Object\-hijacking\-master/ nocase ascii wide
         // Description: use COM Object hijacking to maintain persistence.(Hijack CAccPropServicesClass and MMDeviceEnumerator)
         // Reference: https://github.com/3gstudent/COM-Object-hijacking
-        $string3 = /3gstudent\/COM\-Object\-hijacking/ nocase ascii wide
+        $string3 = "3gstudent/COM-Object-hijacking" nocase ascii wide
         // Description: use COM Object hijacking to maintain persistence.(Hijack CAccPropServicesClass and MMDeviceEnumerator)
         // Reference: https://github.com/3gstudent/COM-Object-hijacking
-        $string4 = /ab816e6fa86f08ce0cadd09aa19335b5304f75a55f8fecfe917583650a12fe2c/ nocase ascii wide
+        $string4 = "ab816e6fa86f08ce0cadd09aa19335b5304f75a55f8fecfe917583650a12fe2c" nocase ascii wide
         // Description: use COM Object hijacking to maintain persistence.(Hijack CAccPropServicesClass and MMDeviceEnumerator)
         // Reference: https://github.com/3gstudent/COM-Object-hijacking
         $string5 = /COM\sObject\shijacking\spersistence\.ps1/ nocase ascii wide

@@ -22,13 +22,13 @@ rule PassSpray
         $string4 = /\\PassSpray\.ps1/ nocase ascii wide
         // Description: Domain Password Spray
         // Reference: https://github.com/Leo4j/PassSpray
-        $string5 = /24d7bda466850d93fc1883a3937e1317fbb3f9e631ab0d2a4fa0b45c2c21c24f/ nocase ascii wide
+        $string5 = "24d7bda466850d93fc1883a3937e1317fbb3f9e631ab0d2a4fa0b45c2c21c24f" nocase ascii wide
         // Description: Domain Password Spray
         // Reference: https://github.com/Leo4j/PassSpray
-        $string6 = /Invoke\-PassSpray/ nocase ascii wide
+        $string6 = "Invoke-PassSpray" nocase ascii wide
         // Description: Domain Password Spray
         // Reference: https://github.com/Leo4j/PassSpray
-        $string7 = /Leo4j\/PassSpray/ nocase ascii wide
+        $string7 = "Leo4j/PassSpray" nocase ascii wide
 
     condition:
         any of them

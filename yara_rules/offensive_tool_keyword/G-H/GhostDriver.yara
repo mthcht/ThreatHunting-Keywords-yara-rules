@@ -40,7 +40,7 @@ rule GhostDriver
         $string10 = /\\rentdrv\.log/ nocase ascii wide
         // Description: GhostDriver is a Rust-built AV killer tool using BYOVD
         // Reference: https://github.com/BlackSnufkin/GhostDriver
-        $string11 = /BlackSnufkin\/GhostDriver/ nocase ascii wide
+        $string11 = "BlackSnufkin/GhostDriver" nocase ascii wide
         // Description: GhostDriver is a Rust-built AV killer tool using BYOVD
         // Reference: https://github.com/BlackSnufkin/GhostDriver
         $string12 = /GhostDriver\.exe\s/ nocase ascii wide

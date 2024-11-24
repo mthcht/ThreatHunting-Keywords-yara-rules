@@ -25,7 +25,7 @@ rule Darkside
         $string5 = /\\Darkside\.sln/ nocase ascii wide
         // Description: C# AV/EDR Killer using less-known driver (BYOVD)
         // Reference: https://github.com/ph4nt0mbyt3/Darkside
-        $string6 = /D90EFC93\-2F8B\-4427\-B967\-0E78ED45611E/ nocase ascii wide
+        $string6 = "D90EFC93-2F8B-4427-B967-0E78ED45611E" nocase ascii wide
         // Description: C# AV/EDR Killer using less-known driver (BYOVD)
         // Reference: https://github.com/ph4nt0mbyt3/Darkside
         $string7 = /Darkside\.exe\s\-p/ nocase ascii wide
@@ -34,7 +34,7 @@ rule Darkside
         $string8 = /Darkside\-master\.zip/ nocase ascii wide
         // Description: C# AV/EDR Killer using less-known driver (BYOVD)
         // Reference: https://github.com/ph4nt0mbyt3/Darkside
-        $string9 = /ph4nt0mbyt3\/Darkside/ nocase ascii wide
+        $string9 = "ph4nt0mbyt3/Darkside" nocase ascii wide
 
     condition:
         any of them

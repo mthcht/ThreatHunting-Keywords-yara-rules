@@ -37,34 +37,34 @@ rule TrickDump
         $string9 = /\>Trick\.exe\</ nocase ascii wide
         // Description: Dump lsass using only NTAPIS running 3 programs to create 3 JSON and 1 ZIP file and generate the Minidump later!
         // Reference: https://github.com/ricardojoserf/TrickDump
-        $string10 = /12bc134420da64f0ff3a93d3a1ca6376677ae9c0494b545173bf20e45787e873/ nocase ascii wide
+        $string10 = "12bc134420da64f0ff3a93d3a1ca6376677ae9c0494b545173bf20e45787e873" nocase ascii wide
         // Description: Dump lsass using only NTAPIS running 3 programs to create 3 JSON and 1 ZIP file and generate the Minidump later!
         // Reference: https://github.com/ricardojoserf/TrickDump
-        $string11 = /2010807d09f45f949a2e24615d58a15d8914e09f9988aa8fd7c863c7e5434aa8/ nocase ascii wide
+        $string11 = "2010807d09f45f949a2e24615d58a15d8914e09f9988aa8fd7c863c7e5434aa8" nocase ascii wide
         // Description: Dump lsass using only NTAPIS running 3 programs to create 3 JSON and 1 ZIP file and generate the Minidump later!
         // Reference: https://github.com/ricardojoserf/TrickDump
-        $string12 = /4957a3e8d46d84698c5987e2c45bc2705865ac8cf742218c574de4cee69da080/ nocase ascii wide
+        $string12 = "4957a3e8d46d84698c5987e2c45bc2705865ac8cf742218c574de4cee69da080" nocase ascii wide
         // Description: Dump lsass using only NTAPIS running 3 programs to create 3 JSON and 1 ZIP file and generate the Minidump later!
         // Reference: https://github.com/ricardojoserf/TrickDump
-        $string13 = /9E9BB94C\-1FBE\-4D0B\-83B7\-E42C83FC5D45/ nocase ascii wide
+        $string13 = "9E9BB94C-1FBE-4D0B-83B7-E42C83FC5D45" nocase ascii wide
         // Description: Dump lsass using only NTAPIS running 3 programs to create 3 JSON and 1 ZIP file and generate the Minidump later!
         // Reference: https://github.com/ricardojoserf/TrickDump
-        $string14 = /B92B6B67\-C7C8\-4548\-85EE\-A215D74C000D/ nocase ascii wide
+        $string14 = "B92B6B67-C7C8-4548-85EE-A215D74C000D" nocase ascii wide
         // Description: Dump lsass using only NTAPIS running 3 programs to create 3 JSON and 1 ZIP file and generate the Minidump later!
         // Reference: https://github.com/ricardojoserf/TrickDump
-        $string15 = /by\s\@ricardojoserf/ nocase ascii wide
+        $string15 = "by @ricardojoserf" nocase ascii wide
         // Description: Dump lsass using only NTAPIS running 3 programs to create 3 JSON and 1 ZIP file and generate the Minidump later!
         // Reference: https://github.com/ricardojoserf/TrickDump
-        $string16 = /C666C98C\-84C3\-4A5A\-A73B\-2FC711CFCB7F/ nocase ascii wide
+        $string16 = "C666C98C-84C3-4A5A-A73B-2FC711CFCB7F" nocase ascii wide
         // Description: Dump lsass using only NTAPIS running 3 programs to create 3 JSON and 1 ZIP file and generate the Minidump later!
         // Reference: https://github.com/ricardojoserf/TrickDump
-        $string17 = /d2888f1714566be066719ca2bcbe9e5948a002a7f12070397b306e96442c26aa/ nocase ascii wide
+        $string17 = "d2888f1714566be066719ca2bcbe9e5948a002a7f12070397b306e96442c26aa" nocase ascii wide
         // Description: Dump lsass using only NTAPIS running 3 programs to create 3 JSON and 1 ZIP file and generate the Minidump later!
         // Reference: https://github.com/ricardojoserf/TrickDump
-        $string18 = /D8FC3807\-CEAA\-4F6A\-9C8F\-CC96F99D1F04/ nocase ascii wide
+        $string18 = "D8FC3807-CEAA-4F6A-9C8F-CC96F99D1F04" nocase ascii wide
         // Description: Dump lsass using only NTAPIS running 3 programs to create 3 JSON and 1 ZIP file and generate the Minidump later!
         // Reference: https://github.com/ricardojoserf/TrickDump
-        $string19 = /e4bc4fc4b8f65caedc7302900804da6af5689a7f3a03b31ae62433b24f393568/ nocase ascii wide
+        $string19 = "e4bc4fc4b8f65caedc7302900804da6af5689a7f3a03b31ae62433b24f393568" nocase ascii wide
         // Description: Dump lsass using only NTAPIS running 3 programs to create 3 JSON and 1 ZIP file and generate the Minidump later!
         // Reference: https://github.com/ricardojoserf/TrickDump
         $string20 = /go\sbuild\slock\.go\s\&\&\sgo\sbuild\sshock\.go\s\&\&\sgo\sbuild\sbarrel\.go/ nocase ascii wide
@@ -121,7 +121,7 @@ rule TrickDump
         $string37 = /python3\.exe.{0,1000}\screate_dump\.py\s/ nocase ascii wide
         // Description: Dump lsass using only NTAPIS running 3 programs to create 3 JSON and 1 ZIP file and generate the Minidump later!
         // Reference: https://github.com/ricardojoserf/TrickDump
-        $string38 = /ricardojoserf\/TrickDump/ nocase ascii wide
+        $string38 = "ricardojoserf/TrickDump" nocase ascii wide
 
     condition:
         any of them

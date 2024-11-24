@@ -10,13 +10,13 @@ rule RaRCE
     strings:
         // Description: An easy to install and easy to run tool for generating exploit payloads for CVE-2023-38831 - WinRAR RCE before versions 6.23
         // Reference: https://github.com/ignis-sec/CVE-2023-38831-RaRCE
-        $string1 = /\sCVE\-2023\-38831\-RaRCE/ nocase ascii wide
+        $string1 = " CVE-2023-38831-RaRCE" nocase ascii wide
         // Description: An easy to install and easy to run tool for generating exploit payloads for CVE-2023-38831 - WinRAR RCE before versions 6.23
         // Reference: https://github.com/ignis-sec/CVE-2023-38831-RaRCE
         $string2 = /\srarce\.py/ nocase ascii wide
         // Description: An easy to install and easy to run tool for generating exploit payloads for CVE-2023-38831 - WinRAR RCE before versions 6.23
         // Reference: https://github.com/ignis-sec/CVE-2023-38831-RaRCE
-        $string3 = /\/CVE\-2023\-38831\-RaRCE/ nocase ascii wide
+        $string3 = "/CVE-2023-38831-RaRCE" nocase ascii wide
         // Description: An easy to install and easy to run tool for generating exploit payloads for CVE-2023-38831 - WinRAR RCE before versions 6.23
         // Reference: https://github.com/ignis-sec/CVE-2023-38831-RaRCE
         $string4 = /\/rarce\.py/ nocase ascii wide
@@ -25,13 +25,13 @@ rule RaRCE
         $string5 = /\\rarce\.py/ nocase ascii wide
         // Description: An easy to install and easy to run tool for generating exploit payloads for CVE-2023-38831 - WinRAR RCE before versions 6.23
         // Reference: https://github.com/ignis-sec/CVE-2023-38831-RaRCE
-        $string6 = /from\srarce\simport\sexploit/ nocase ascii wide
+        $string6 = "from rarce import exploit" nocase ascii wide
         // Description: An easy to install and easy to run tool for generating exploit payloads for CVE-2023-38831 - WinRAR RCE before versions 6.23
         // Reference: https://github.com/ignis-sec/CVE-2023-38831-RaRCE
-        $string7 = /pip\sinstall\srarce/ nocase ascii wide
+        $string7 = "pip install rarce" nocase ascii wide
         // Description: An easy to install and easy to run tool for generating exploit payloads for CVE-2023-38831 - WinRAR RCE before versions 6.23
         // Reference: https://github.com/ignis-sec/CVE-2023-38831-RaRCE
-        $string8 = /python\s\-m\srarce\s/ nocase ascii wide
+        $string8 = "python -m rarce " nocase ascii wide
         // Description: An easy to install and easy to run tool for generating exploit payloads for CVE-2023-38831 - WinRAR RCE before versions 6.23
         // Reference: https://github.com/ignis-sec/CVE-2023-38831-RaRCE
         $string9 = /rarce\s.{0,1000}\.pdf\s.{0,1000}\.rar/ nocase ascii wide

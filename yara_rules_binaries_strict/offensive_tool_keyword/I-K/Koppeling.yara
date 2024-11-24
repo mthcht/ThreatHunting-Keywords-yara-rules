@@ -55,25 +55,25 @@ rule Koppeling
         $string15 = /\\Theif\.dll/ nocase ascii wide
         // Description: Adaptive DLL hijacking / dynamic export forwarding
         // Reference: https://github.com/monoxgas/Koppeling
-        $string16 = /1c9a4023737f0be81e06da3719ab68310dca400ca15cfb63012949215fb694eb/ nocase ascii wide
+        $string16 = "1c9a4023737f0be81e06da3719ab68310dca400ca15cfb63012949215fb694eb" nocase ascii wide
         // Description: Adaptive DLL hijacking / dynamic export forwarding
         // Reference: https://github.com/monoxgas/Koppeling
-        $string17 = /2150D252\-AA17\-45C2\-8981\-A6DCF7055CA6/ nocase ascii wide
+        $string17 = "2150D252-AA17-45C2-8981-A6DCF7055CA6" nocase ascii wide
         // Description: Adaptive DLL hijacking / dynamic export forwarding
         // Reference: https://github.com/monoxgas/Koppeling
-        $string18 = /491012428e225b620985e8fc2af087fe8b85ccd9c9cc0a37bd1385b62f317bbe/ nocase ascii wide
+        $string18 = "491012428e225b620985e8fc2af087fe8b85ccd9c9cc0a37bd1385b62f317bbe" nocase ascii wide
         // Description: Adaptive DLL hijacking / dynamic export forwarding
         // Reference: https://github.com/monoxgas/Koppeling
-        $string19 = /62E3CCF4\-07F3\-496E\-B77D\-48D5AC0E6260/ nocase ascii wide
+        $string19 = "62E3CCF4-07F3-496E-B77D-48D5AC0E6260" nocase ascii wide
         // Description: Adaptive DLL hijacking / dynamic export forwarding
         // Reference: https://github.com/monoxgas/Koppeling
-        $string20 = /8dd0633df72aacd10c634a263f6b1ade7195508e79993681e0800527ddfd86ef/ nocase ascii wide
+        $string20 = "8dd0633df72aacd10c634a263f6b1ade7195508e79993681e0800527ddfd86ef" nocase ascii wide
         // Description: Adaptive DLL hijacking / dynamic export forwarding
         // Reference: https://github.com/monoxgas/Koppeling
-        $string21 = /95BC2C38\-1FBE\-4AF1\-967E\-BC133250C4D4/ nocase ascii wide
+        $string21 = "95BC2C38-1FBE-4AF1-967E-BC133250C4D4" nocase ascii wide
         // Description: Adaptive DLL hijacking / dynamic export forwarding
         // Reference: https://github.com/monoxgas/Koppeling
-        $string22 = /DB8A345D\-E19C\-4C2A\-9FDF\-16BF4DD03717/ nocase ascii wide
+        $string22 = "DB8A345D-E19C-4C2A-9FDF-16BF4DD03717" nocase ascii wide
         // Description: Adaptive DLL hijacking / dynamic export forwarding
         // Reference: https://github.com/monoxgas/Koppeling
         $string23 = /Dyn\-NetClone\|x64/ nocase ascii wide
@@ -82,7 +82,7 @@ rule Koppeling
         $string24 = /Dyn\-PyClone\|Win32/ nocase ascii wide
         // Description: Adaptive DLL hijacking / dynamic export forwarding
         // Reference: https://github.com/monoxgas/Koppeling
-        $string25 = /monoxgas\/Koppeling/ nocase ascii wide
+        $string25 = "monoxgas/Koppeling" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

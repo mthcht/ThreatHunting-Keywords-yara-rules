@@ -25,10 +25,10 @@ rule dnscan
         $string5 = /\\dnscan\.py/ nocase ascii wide
         // Description: dnscan is a python wordlist-based DNS subdomain scanner.
         // Reference: https://github.com/rbsec/dnscan
-        $string6 = /dnscan\-master/ nocase ascii wide
+        $string6 = "dnscan-master" nocase ascii wide
         // Description: dnscan is a python wordlist-based DNS subdomain scanner.
         // Reference: https://github.com/rbsec/dnscan
-        $string7 = /rbsec\/dnscan/ nocase ascii wide
+        $string7 = "rbsec/dnscan" nocase ascii wide
         // Description: dnscan is a python wordlist-based DNS subdomain scanner.
         // Reference: https://github.com/rbsec/dnscan
         $string8 = /subdomains\-100\.txt/ nocase ascii wide

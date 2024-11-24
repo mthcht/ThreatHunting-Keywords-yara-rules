@@ -49,28 +49,28 @@ rule hookchain
         $string13 = /\]\sInjecting\sremote\sshellcode/ nocase ascii wide
         // Description: Bypassing EDR Solutions
         // Reference: https://github.com/helviojunior/hookchain
-        $string14 = /461df8ad66af0d6635bc8e389f307569c01f1b589319b8a887578b221c943b03/ nocase ascii wide
+        $string14 = "461df8ad66af0d6635bc8e389f307569c01f1b589319b8a887578b221c943b03" nocase ascii wide
         // Description: Bypassing EDR Solutions
         // Reference: https://github.com/helviojunior/hookchain
         $string15 = /72e0ca8ac2312f9bda3badfc199df5bd0a224dcbdfa681a6fda0e3f5a774f7b6\s\?\s\?/ nocase ascii wide
         // Description: Bypassing EDR Solutions
         // Reference: https://github.com/helviojunior/hookchain
-        $string16 = /a43682fd04ffe7d7a41a4b9a1afeddda45f2a74cca6632bbf4d7d6c110e2ff80/ nocase ascii wide
+        $string16 = "a43682fd04ffe7d7a41a4b9a1afeddda45f2a74cca6632bbf4d7d6c110e2ff80" nocase ascii wide
         // Description: Bypassing EDR Solutions
         // Reference: https://github.com/helviojunior/hookchain
-        $string17 = /B0C08C11\-23C4\-495F\-B40B\-14066F12FAAB/ nocase ascii wide
+        $string17 = "B0C08C11-23C4-495F-B40B-14066F12FAAB" nocase ascii wide
         // Description: Bypassing EDR Solutions
         // Reference: https://github.com/helviojunior/hookchain
-        $string18 = /helviojunior\/hookchain/ nocase ascii wide
+        $string18 = "helviojunior/hookchain" nocase ascii wide
         // Description: Bypassing EDR Solutions
         // Reference: https://github.com/helviojunior/hookchain
-        $string19 = /HookChainFinder\sM4v3r1ck\sby\sSec4US\sTeam/ nocase ascii wide
+        $string19 = "HookChainFinder M4v3r1ck by Sec4US Team" nocase ascii wide
         // Description: Bypassing EDR Solutions
         // Reference: https://github.com/helviojunior/hookchain
-        $string20 = /Message\sBox\screated\sfrom\sHookChain/ nocase ascii wide
+        $string20 = "Message Box created from HookChain" nocase ascii wide
         // Description: Bypassing EDR Solutions
         // Reference: https://github.com/helviojunior/hookchain
-        $string21 = /Process\sinjected\sMessageBox/ nocase ascii wide
+        $string21 = "Process injected MessageBox" nocase ascii wide
 
     condition:
         any of them

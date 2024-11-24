@@ -10,7 +10,7 @@ rule fastfuzz
     strings:
         // Description: Fast fuzzing websites with chrome extension
         // Reference: https://github.com/tismayil/fastfuz-chrome-ext
-        $string1 = /\/fastfuz\-chrome\-ext/ nocase ascii wide
+        $string1 = "/fastfuz-chrome-ext" nocase ascii wide
         // Description: Fast fuzzing websites with chrome extension
         // Reference: https://github.com/tismayil/fastfuz-chrome-ext
         $string2 = /fastfuz\-chrome\-ext.{0,1000}files\.txt/ nocase ascii wide

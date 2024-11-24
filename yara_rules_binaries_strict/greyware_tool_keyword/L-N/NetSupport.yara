@@ -10,7 +10,7 @@ rule NetSupport
     strings:
         // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
         // Reference: https://www.netsupportmanager.com/
-        $string1 = /\s\/EV\\"NetSupport\sSchool\\"/ nocase ascii wide
+        $string1 = " /EV\"NetSupport School\"" nocase ascii wide
         // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
         // Reference: https://www.netsupportmanager.com/
         $string2 = /\/nspowershell\.exe/ nocase ascii wide
@@ -118,31 +118,31 @@ rule NetSupport
         $string36 = /\\Win7Taskbar\.dll/ nocase ascii wide
         // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
         // Reference: https://www.netsupportmanager.com/
-        $string37 = /_NetSupport_NetSupport\sManager_/ nocase ascii wide
+        $string37 = "_NetSupport_NetSupport Manager_" nocase ascii wide
         // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
         // Reference: https://www.netsupportmanager.com/
-        $string38 = /\=NetSupport\sClient_deleteme/ nocase ascii wide
+        $string38 = "=NetSupport Client_deleteme" nocase ascii wide
         // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
         // Reference: https://www.netsupportmanager.com/
-        $string39 = /\>NetSupport\sClient\sApplication\<\// nocase ascii wide
+        $string39 = ">NetSupport Client Application</" nocase ascii wide
         // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
         // Reference: https://www.netsupportmanager.com/
         $string40 = /\>NETSUPPORT\sLTD\.\<\// nocase ascii wide
         // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
         // Reference: https://www.netsupportmanager.com/
-        $string41 = /\>NetSupport\sLtd\<\// nocase ascii wide
+        $string41 = ">NetSupport Ltd</" nocase ascii wide
         // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
         // Reference: https://www.netsupportmanager.com/
-        $string42 = /\>NetSupport\sRemote\sControl\<\// nocase ascii wide
+        $string42 = ">NetSupport Remote Control</" nocase ascii wide
         // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
         // Reference: https://www.netsupportmanager.com/
-        $string43 = /\>NetSupport\sremote\sControl\<\// nocase ascii wide
+        $string43 = ">NetSupport remote Control</" nocase ascii wide
         // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
         // Reference: https://www.netsupportmanager.com/
         $string44 = /activate\.netsupportsoftware\.com/ nocase ascii wide
         // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
         // Reference: https://www.netsupportmanager.com/
-        $string45 = /Company\'\>NetSupport\sLtd\<\// nocase ascii wide
+        $string45 = "Company'>NetSupport Ltd</" nocase ascii wide
         // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
         // Reference: https://www.netsupportmanager.com/
         $string46 = /geo\.netsupportsoftware\.com/ nocase ascii wide
@@ -160,13 +160,13 @@ rule NetSupport
         $string50 = /https\:\/\/nsproducts\.azureedge\.net\/nsm\-.{0,100}\/NetSupport/ nocase ascii wide
         // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
         // Reference: https://www.netsupportmanager.com/
-        $string51 = /NetSupport\sAudio\sSample\sSource\sFilter/ nocase ascii wide
+        $string51 = "NetSupport Audio Sample Source Filter" nocase ascii wide
         // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
         // Reference: https://www.netsupportmanager.com/
-        $string52 = /NetSupport\sBitmap\sSource\sFilter/ nocase ascii wide
+        $string52 = "NetSupport Bitmap Source Filter" nocase ascii wide
         // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
         // Reference: https://www.netsupportmanager.com/
-        $string53 = /NetSupport\sManager\s\-\-\sInstallation\s/ nocase ascii wide
+        $string53 = "NetSupport Manager -- Installation " nocase ascii wide
         // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
         // Reference: https://www.netsupportmanager.com/
         $string54 = /NetSupport\sManager\s\(1\)\.msi/ nocase ascii wide
@@ -202,34 +202,34 @@ rule NetSupport
         $string64 = /program\sfiles.{0,100}\\netsupport\\/ nocase ascii wide
         // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
         // Reference: https://www.netsupportmanager.com/
-        $string65 = /\'RuleName\'\>NetSupport\sClient\</ nocase ascii wide
+        $string65 = "'RuleName'>NetSupport Client<" nocase ascii wide
         // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
         // Reference: https://www.netsupportmanager.com/
-        $string66 = /\'RuleName\'\>NetSupport\sControl\</ nocase ascii wide
+        $string66 = "'RuleName'>NetSupport Control<" nocase ascii wide
         // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
         // Reference: https://www.netsupportmanager.com/
-        $string67 = /\'RuleName\'\>NetSupport\sDeploy\</ nocase ascii wide
+        $string67 = "'RuleName'>NetSupport Deploy<" nocase ascii wide
         // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
         // Reference: https://www.netsupportmanager.com/
-        $string68 = /\'RuleName\'\>NetSupport\sGateway\</ nocase ascii wide
+        $string68 = "'RuleName'>NetSupport Gateway<" nocase ascii wide
         // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
         // Reference: https://www.netsupportmanager.com/
-        $string69 = /\'RuleName\'\>NetSupport\sGroup\sLeader\</ nocase ascii wide
+        $string69 = "'RuleName'>NetSupport Group Leader<" nocase ascii wide
         // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
         // Reference: https://www.netsupportmanager.com/
-        $string70 = /\'RuleName\'\>NetSupport\sRun\sScript\</ nocase ascii wide
+        $string70 = "'RuleName'>NetSupport Run Script<" nocase ascii wide
         // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
         // Reference: https://www.netsupportmanager.com/
-        $string71 = /\'RuleName\'\>NetSupport\sScript\sEditor\</ nocase ascii wide
+        $string71 = "'RuleName'>NetSupport Script Editor<" nocase ascii wide
         // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
         // Reference: https://www.netsupportmanager.com/
-        $string72 = /\'RuleName\'\>NetSupport\sScripting\sAgent\</ nocase ascii wide
+        $string72 = "'RuleName'>NetSupport Scripting Agent<" nocase ascii wide
         // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
         // Reference: https://www.netsupportmanager.com/
-        $string73 = /\'RuleName\'\>NetSupport\sTech\sConsole\</ nocase ascii wide
+        $string73 = "'RuleName'>NetSupport Tech Console<" nocase ascii wide
         // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
         // Reference: https://www.netsupportmanager.com/
-        $string74 = /\'RuleName\'\>NetSupport\sTutor\</ nocase ascii wide
+        $string74 = "'RuleName'>NetSupport Tutor<" nocase ascii wide
         // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
         // Reference: https://www.netsupportmanager.com/
         $string75 = /WindowsStoreAppExporter\.exe/ nocase ascii wide

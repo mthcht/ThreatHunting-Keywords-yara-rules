@@ -16,7 +16,7 @@ rule ldap_queries
         $string2 = /\(\&\(objectCategory\=computer\)\(msDS\-isRODC\=TRUE\)\)/ nocase ascii wide
         // Description: LAPS passwords (from SharpLAPS)
         // Reference: https://gist.github.com/jsecurity101/9c7e94f95b8d90f9252d64949562ba5d
-        $string3 = /\(\&\(objectCategory\=computer\)\(ms\-MCS\-AdmPwd\=.{0,1000}\)\(sAMAccountName\=\"\s\+\starget\s\+\s\"\)\)/ nocase ascii wide
+        $string3 = /\(\&\(objectCategory\=computer\)\(ms\-MCS\-AdmPwd\=.{0,1000}\)\(sAMAccountName\=\\"\s\+\starget\s\+\s\\"\)\)/ nocase ascii wide
         // Description: Enumerate Accounts with Non-Expiring Passwords and Administrative Privileges
         // Reference: https://github.com/mthcht/ThreatHunting-Keywords
         $string4 = /\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=65536\)\(memberOf\=CN\=Administrators/ nocase ascii wide
@@ -88,22 +88,22 @@ rule ldap_queries
         $string26 = /\[ADSI\].{0,1000}\s\|\sSelect\-Object\s\-Property\s.{0,1000}minPwdLength/ nocase ascii wide
         // Description: enumeration of Domain Admins group members
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string27 = /\[ADSI\].{0,1000}LDAP\:\/\/CN\=Domain\sAdmins.{0,1000}\|\sForEach\-Object\s\{\[adsi\]\"LDAP\:\/\/\$_\"\}\;\s.{0,1000}\.distinguishedname/ nocase ascii wide
+        $string27 = /\[ADSI\].{0,1000}LDAP\:\/\/CN\=Domain\sAdmins.{0,1000}\|\sForEach\-Object\s\{\[adsi\]\\"LDAP\:\/\/\$_\\"\}\;\s.{0,1000}\.distinguishedname/ nocase ascii wide
         // Description: get LDAP properties for password settings directly
         // Reference: https://github.com/swarleysez/AD-common-queries
         $string28 = /\[ADSI\].{0,1000}LDAP\:\/\/dc\=.{0,1000}\s\|\sSelect\s\-Property\spwdProperties/ nocase ascii wide
         // Description: find user descriptions in Active Directory:
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string29 = /\[adsisearcher\]\"\(\&\(objectCategory\=person\)\(objectClass\=user\)\(\!\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)\)\"\;\s\$users\s\=\s\$searchUsers\.FindAll\(\)\;\s\$userProps\s\=\s\$users\.Properties\;\s\$userProps\s\|\sWhere\-Object\s\{\$_\.description\}/ nocase ascii wide
+        $string29 = /\[adsisearcher\]\\"\(\&\(objectCategory\=person\)\(objectClass\=user\)\(\!\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)\)\\"\;\s\$users\s\=\s\$searchUsers\.FindAll\(\)\;\s\$userProps\s\=\s\$users\.Properties\;\s\$userProps\s\|\sWhere\-Object\s\{\$_\.description\}/ nocase ascii wide
         // Description: find all disabled user accounts
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string30 = /\[adsisearcher\]\"\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)\"/ nocase ascii wide
+        $string30 = /\[adsisearcher\]\\"\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)\\"/ nocase ascii wide
         // Description: get a count of all inter domain trust accounts
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string31 = /\[adsisearcher\]\"\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2560\)\(\!\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)\)\"/ nocase ascii wide
+        $string31 = /\[adsisearcher\]\\"\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2560\)\(\!\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)\)\\"/ nocase ascii wide
         // Description: Detection of all accounts with 'Password Not Required'
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string32 = /\[adsisearcher\]\"\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=32\)\(\!\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)\)/ nocase ascii wide
+        $string32 = /\[adsisearcher\]\\"\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=32\)\(\!\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)\)/ nocase ascii wide
         // Description: Enumerate all Domain Controllers
         // Reference: https://web.archive.org/web/20240109000256/https://cyberdom.blog/2024/01/07/defender-for-identity-hunting-for-ldap/
         $string33 = /\[adsisearcher\]\'\(\&\(objectCategory\=computer\)\(primaryGroupID\=516\)\)\'\)\.FindAll\(\)/ nocase ascii wide
@@ -124,13 +124,13 @@ rule ldap_queries
         $string38 = /\[System\.DirectoryServices\.ActiveDirectory\.Forest\]\:\:GetCurrentForest\(\)\.RootDomain\.PDCRoleOwner\.Name/ nocase ascii wide
         // Description: cmdlets to get computer information about Domain Controllers
         // Reference: https://adsecurity.org/?p=299
-        $string39 = /get\-ADComputer\s\-filter\s\{\sPrimaryGroupID\s\-eq\s\"516\"\s\}\s\-properties\sPrimaryGroupID/ nocase ascii wide
+        $string39 = /get\-ADComputer\s\-filter\s\{\sPrimaryGroupID\s\-eq\s\\"516\\"\s\}\s\-properties\sPrimaryGroupID/ nocase ascii wide
         // Description: identifying accounts with 'Password Not Required
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string40 = /Get\-ADUser\s\-filter\s.{0,1000}\s\-Properties\sSamAccountName\,\sPasswordNotRequired\s\|\swhere\s\{\s\$_\.passwordnotrequired\s\-eq\s\"true\"\s\}\s\|\swhere\s\{\$_\.enabled\s\-eq\s\"true\"\}/ nocase ascii wide
+        $string40 = /Get\-ADUser\s\-filter\s.{0,1000}\s\-Properties\sSamAccountName\,\sPasswordNotRequired\s\|\swhere\s\{\s\$_\.passwordnotrequired\s\-eq\s\\"true\\"\s\}\s\|\swhere\s\{\$_\.enabled\s\-eq\s\\"true\\"\}/ nocase ascii wide
         // Description: querying accounts that have not been logged into for over 90 days
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string41 = /Get\-ADUser\s\-properties\s.{0,1000}\s\-filter\s\{\(lastlogondate\s\-notlike\s\".{0,1000}\"\s\-OR\slastlogondate\s\-le\s\$90days\)\s\-AND\s\(passwordlastset\s\-le\s\$90days\)\s\-AND\s\(enabled\s\-eq\s\$True\)\s\-and\s\(PasswordNeverExpires\s\-eq\s\$false\)\s\-and\s\(whencreated\s\-le\s\$90days\)\}/ nocase ascii wide
+        $string41 = /Get\-ADUser\s\-properties\s.{0,1000}\s\-filter\s\{\(lastlogondate\s\-notlike\s\\".{0,1000}\\"\s\-OR\slastlogondate\s\-le\s\$90days\)\s\-AND\s\(passwordlastset\s\-le\s\$90days\)\s\-AND\s\(enabled\s\-eq\s\$True\)\s\-and\s\(PasswordNeverExpires\s\-eq\s\$false\)\s\-and\s\(whencreated\s\-le\s\$90days\)\}/ nocase ascii wide
         // Description: Red Teams and adversaries may leverage [Adsisearcher] to enumerate domain groups for situational awareness and Active Directory Discovery
         // Reference: https://research.splunk.com/endpoint/089c862f-5f83-49b5-b1c8-7e4ff66560c7/
         $string42 = /powershell.{0,1000}\[adsisearcher\].{0,1000}\(objectcategory\=group\).{0,1000}findAll\(\)/ nocase ascii wide

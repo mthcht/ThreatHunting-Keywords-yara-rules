@@ -10,7 +10,7 @@ rule betterdefaultpasslist
     strings:
         // Description: list includes default credentials from various manufacturers for their products like NAS. ERP. ICS etc.. that are used for standard products like mssql. vnc. oracle and so on useful for network bruteforcing
         // Reference: https://github.com/govolution/betterdefaultpasslist
-        $string1 = /betterdefaultpasslist/ nocase ascii wide
+        $string1 = "betterdefaultpasslist" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

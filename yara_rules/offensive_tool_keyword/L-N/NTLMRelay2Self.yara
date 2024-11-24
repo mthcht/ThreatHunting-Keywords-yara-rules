@@ -10,7 +10,7 @@ rule NTLMRelay2Self
     strings:
         // Description: An other No-Fix LPE - NTLMRelay2Self over HTTP (Webdav).
         // Reference: https://github.com/med0x2e/NTLMRelay2Self
-        $string1 = /\/NTLMRelay2Self/ nocase ascii wide
+        $string1 = "/NTLMRelay2Self" nocase ascii wide
         // Description: An other No-Fix LPE - NTLMRelay2Self over HTTP (Webdav).
         // Reference: https://github.com/med0x2e/NTLMRelay2Self
         $string2 = /\\NTLMRelay2Self/ nocase ascii wide

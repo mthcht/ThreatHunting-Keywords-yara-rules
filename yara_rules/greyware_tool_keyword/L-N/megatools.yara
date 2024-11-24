@@ -28,7 +28,7 @@ rule megatools
         $string6 = /megatools\scopy\s\-l\s.{0,1000}\s\-r\s/ nocase ascii wide
         // Description: Megatools is a collection of free and open source programs for accessing Mega service from a command line. Abused by attackers for data exfiltration
         // Reference: https://github.com/megous/megatools
-        $string7 = /megatools\sput\s/ nocase ascii wide
+        $string7 = "megatools put " nocase ascii wide
 
     condition:
         any of them

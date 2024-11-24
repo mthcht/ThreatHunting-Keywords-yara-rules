@@ -19,7 +19,7 @@ rule EventLogCrasher
         $string3 = /\\EventLogCrasher\\/ nocase ascii wide
         // Description: crash the Windows Event Log service of any other Windows 10/Windows Server 2022 machine on the same domain
         // Reference: https://github.com/floesen/EventLogCrasher
-        $string4 = /corrupt\sdata\sthat\swas\smarshalled\sby\sNdr64ConformantVaryingArrayMarshall/ nocase ascii wide
+        $string4 = "corrupt data that was marshalled by Ndr64ConformantVaryingArrayMarshall" nocase ascii wide
         // Description: crash the Windows Event Log service of any other Windows 10/Windows Server 2022 machine on the same domain
         // Reference: https://github.com/floesen/EventLogCrasher
         $string5 = /eventlog_dos\.exe/ nocase ascii wide
@@ -28,10 +28,10 @@ rule EventLogCrasher
         $string6 = /EventLogCrasher\.exe/ nocase ascii wide
         // Description: crash the Windows Event Log service of any other Windows 10/Windows Server 2022 machine on the same domain
         // Reference: https://github.com/floesen/EventLogCrasher
-        $string7 = /EventLogCrasher\-main/ nocase ascii wide
+        $string7 = "EventLogCrasher-main" nocase ascii wide
         // Description: crash the Windows Event Log service of any other Windows 10/Windows Server 2022 machine on the same domain
         // Reference: https://github.com/floesen/EventLogCrasher
-        $string8 = /floesen\/EventLogCrasher/ nocase ascii wide
+        $string8 = "floesen/EventLogCrasher" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -10,16 +10,16 @@ rule Sitadel
     strings:
         // Description: Web Application Security Scanner
         // Reference: https://github.com/shenril/Sitadel
-        $string1 = /\s\-a\sbruteforce\s/ nocase ascii wide
+        $string1 = " -a bruteforce " nocase ascii wide
         // Description: Web Application Security Scanner
         // Reference: https://github.com/shenril/Sitadel
-        $string2 = /\s\-\-attack\sbruteforce/ nocase ascii wide
+        $string2 = " --attack bruteforce" nocase ascii wide
         // Description: Web Application Security Scanner
         // Reference: https://github.com/shenril/Sitadel
-        $string3 = /\s\-\-attack\sinjection/ nocase ascii wide
+        $string3 = " --attack injection" nocase ascii wide
         // Description: Web Application Security Scanner
         // Reference: https://github.com/shenril/Sitadel
-        $string4 = /\s\-\-attack\svulns\s/ nocase ascii wide
+        $string4 = " --attack vulns " nocase ascii wide
         // Description: Web Application Security Scanner
         // Reference: https://github.com/shenril/Sitadel
         $string5 = /\ssitadel\.py/ nocase ascii wide
@@ -37,16 +37,16 @@ rule Sitadel
         $string9 = /\\sitadel\.log/ nocase ascii wide
         // Description: Web Application Security Scanner
         // Reference: https://github.com/shenril/Sitadel
-        $string10 = /docker\srun\ssitadel/ nocase ascii wide
+        $string10 = "docker run sitadel" nocase ascii wide
         // Description: Web Application Security Scanner
         // Reference: https://github.com/shenril/Sitadel
-        $string11 = /python3\ssitadel/ nocase ascii wide
+        $string11 = "python3 sitadel" nocase ascii wide
         // Description: Web Application Security Scanner
         // Reference: https://github.com/shenril/Sitadel
-        $string12 = /sitadel\shttp\:\/\// nocase ascii wide
+        $string12 = "sitadel http://" nocase ascii wide
         // Description: Web Application Security Scanner
         // Reference: https://github.com/shenril/Sitadel
-        $string13 = /sitadel\shttps\:\/\// nocase ascii wide
+        $string13 = "sitadel https://" nocase ascii wide
         // Description: Web Application Security Scanner
         // Reference: https://github.com/shenril/Sitadel
         $string14 = /sitadel\.py\s/ nocase ascii wide

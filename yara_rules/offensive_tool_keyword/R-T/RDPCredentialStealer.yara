@@ -37,7 +37,7 @@ rule RDPCredentialStealer
         $string9 = /RDPCredentialStealer\.zip/ nocase ascii wide
         // Description: RDPCredentialStealer it's a malware that steal credentials provided by users in RDP using API Hooking with Detours in C++
         // Reference: https://github.com/S12cybersecurity/RDPCredentialStealer
-        $string10 = /RDPCredentialStealer\-main/ nocase ascii wide
+        $string10 = "RDPCredentialStealer-main" nocase ascii wide
         // Description: RDPCredentialStealer it's a malware that steal credentials provided by users in RDP using API Hooking with Detours in C++
         // Reference: https://github.com/S12cybersecurity/RDPCredentialStealer
         $string11 = /RDPCredsStealerDLL\./ nocase ascii wide
@@ -46,7 +46,7 @@ rule RDPCredentialStealer
         $string12 = /RDPCredsStealerDLL\.dll/ nocase ascii wide
         // Description: RDPCredentialStealer it's a malware that steal credentials provided by users in RDP using API Hooking with Detours in C++
         // Reference: https://github.com/S12cybersecurity/RDPCredentialStealer
-        $string13 = /S12cybersecurity\/RDPCredentialStealer/ nocase ascii wide
+        $string13 = "S12cybersecurity/RDPCredentialStealer" nocase ascii wide
 
     condition:
         any of them

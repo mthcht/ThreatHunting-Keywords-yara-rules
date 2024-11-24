@@ -10,7 +10,7 @@ rule GhostPack
     strings:
         // Description: A collection of security related toolsets.with known hacktools
         // Reference: https://github.com/GhostPack
-        $string1 = /GhostPack/ nocase ascii wide
+        $string1 = "GhostPack" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

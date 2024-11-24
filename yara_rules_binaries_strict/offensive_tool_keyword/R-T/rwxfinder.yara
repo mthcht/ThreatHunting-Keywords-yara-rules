@@ -13,13 +13,13 @@ rule rwxfinder
         $string1 = /\/RWXfinder\.git/ nocase ascii wide
         // Description: The program uses the Windows API functions to traverse through directories and locate DLL files with RWX section
         // Reference: https://github.com/pwnsauc3/RWXFinder
-        $string2 = /pwnsauc3\/RWXFinder/ nocase ascii wide
+        $string2 = "pwnsauc3/RWXFinder" nocase ascii wide
         // Description: The program uses the Windows API functions to traverse through directories and locate DLL files with RWX section
         // Reference: https://github.com/pwnsauc3/RWXFinder
         $string3 = /rwxfinder\./ nocase ascii wide
         // Description: The program uses the Windows API functions to traverse through directories and locate DLL files with RWX section
         // Reference: https://github.com/pwnsauc3/RWXFinder
-        $string4 = /RWXfinder\-main/ nocase ascii wide
+        $string4 = "RWXfinder-main" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

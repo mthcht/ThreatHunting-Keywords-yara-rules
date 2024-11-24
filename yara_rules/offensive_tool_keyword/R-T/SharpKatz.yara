@@ -19,7 +19,7 @@ rule SharpKatz
         $string3 = /\\SharpKatz\.pdb/ nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string4 = /\>SharpKatz\</ nocase ascii wide
+        $string4 = ">SharpKatz<" nocase ascii wide
 
     condition:
         any of them

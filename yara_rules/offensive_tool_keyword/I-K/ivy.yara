@@ -49,10 +49,10 @@ rule ivy
         $string13 = /\.\/Ivy\s\-/ nocase ascii wide
         // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
         // Reference: https://github.com/optiv/Ivy
-        $string14 = /\/Ivy\/Cryptor/ nocase ascii wide
+        $string14 = "/Ivy/Cryptor" nocase ascii wide
         // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
         // Reference: https://github.com/optiv/Ivy
-        $string15 = /\/Ivy\/Loader\// nocase ascii wide
+        $string15 = "/Ivy/Loader/" nocase ascii wide
         // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
         // Reference: https://github.com/optiv/Ivy
         $string16 = /\\Ivy\\Cryptor/ nocase ascii wide
@@ -61,7 +61,7 @@ rule ivy
         $string17 = /\\Ivy\\Loader\\/ nocase ascii wide
         // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
         // Reference: https://github.com/optiv/Ivy
-        $string18 = /7267a9321dd7ab890af5892975e257f89b2e53c70216c3708be9b0418e6b470e/ nocase ascii wide
+        $string18 = "7267a9321dd7ab890af5892975e257f89b2e53c70216c3708be9b0418e6b470e" nocase ascii wide
         // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
         // Reference: https://github.com/optiv/Ivy
         $string19 = /go\sbuild\sIvy\.go/ nocase ascii wide
@@ -82,7 +82,7 @@ rule ivy
         $string24 = /optiv\/Ivy\.git/ nocase ascii wide
         // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
         // Reference: https://github.com/optiv/Ivy
-        $string25 = /Tylous\/Ivy/ nocase ascii wide
+        $string25 = "Tylous/Ivy" nocase ascii wide
 
     condition:
         any of them

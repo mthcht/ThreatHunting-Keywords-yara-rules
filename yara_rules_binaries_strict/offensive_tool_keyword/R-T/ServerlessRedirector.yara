@@ -13,16 +13,16 @@ rule ServerlessRedirector
         $string1 = /\/ServerlessRedirector\.git/ nocase ascii wide
         // Description: Serverless Redirector in various cloud vendor for red team
         // Reference: https://github.com/KINGSABRI/ServerlessRedirector
-        $string2 = /C2FunctionAgent/ nocase ascii wide
+        $string2 = "C2FunctionAgent" nocase ascii wide
         // Description: Serverless Redirector in various cloud vendor for red team
         // Reference: https://github.com/KINGSABRI/ServerlessRedirector
-        $string3 = /https\:\/\/C2_SERVER_IP\// nocase ascii wide
+        $string3 = "https://C2_SERVER_IP/" nocase ascii wide
         // Description: Serverless Redirector in various cloud vendor for red team
         // Reference: https://github.com/KINGSABRI/ServerlessRedirector
-        $string4 = /KINGSABRI\/ServerlessRedirector/ nocase ascii wide
+        $string4 = "KINGSABRI/ServerlessRedirector" nocase ascii wide
         // Description: Serverless Redirector in various cloud vendor for red team
         // Reference: https://github.com/KINGSABRI/ServerlessRedirector
-        $string5 = /ServerlessRedirector\-main/ nocase ascii wide
+        $string5 = "ServerlessRedirector-main" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

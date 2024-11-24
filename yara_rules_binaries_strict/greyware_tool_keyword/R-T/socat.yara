@@ -10,7 +10,7 @@ rule socat
     strings:
         // Description: Shell spawning socat usage 
         // Reference: https://linuxfr.org/news/socat-un-outil-en-ligne-de-commande-pour-maitriser-vos-sockets
-        $string1 = /socat\sexec\:/ nocase ascii wide
+        $string1 = "socat exec:" nocase ascii wide
         // Description: socat bind shell
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
         $string2 = /socat\sFILE\:.{0,100}tty.{0,100}raw.{0,100}echo\=0\sTCP.{0,100}\:/ nocase ascii wide
@@ -19,19 +19,19 @@ rule socat
         $string3 = /socat\sfile\:.{0,100}tty.{0,100}raw.{0,100}echo\=0\stcp\-listen\:/ nocase ascii wide
         // Description: contains an IP address as part of a URL or network destination formatted in an unconventional but technically valid way (hexa - octal - binary)
         // Reference: https://x.com/CraigHRowland/status/1821176342999921040
-        $string4 = /socat\shttp\:\/\/0x0/ nocase ascii wide
+        $string4 = "socat http://0x0" nocase ascii wide
         // Description: contains an IP address as part of a URL or network destination formatted in an unconventional but technically valid way (hexa - octal - binary)
         // Reference: https://x.com/CraigHRowland/status/1821176342999921040
         $string5 = /socat\s\-lp\s.{0,100}\shttp\:\/\/0x0/ nocase ascii wide
         // Description: Shell spawning socat usage 
         // Reference: https://linuxfr.org/news/socat-un-outil-en-ligne-de-commande-pour-maitriser-vos-sockets
-        $string6 = /socat\s\-O\s\/tmp\// nocase ascii wide
+        $string6 = "socat -O /tmp/" nocase ascii wide
         // Description: linux commands abused by attackers
         // Reference: N/A
         $string7 = /socat\sTCP4\-LISTEN\:.{0,100}\sfork\sTCP4\:.{0,100}\:/ nocase ascii wide
         // Description: Shell spawning socat usage 
         // Reference: https://linuxfr.org/news/socat-un-outil-en-ligne-de-commande-pour-maitriser-vos-sockets
-        $string8 = /socat\stcp\-connect/ nocase ascii wide
+        $string8 = "socat tcp-connect" nocase ascii wide
         // Description: socat reverse shell
         // Reference: https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
         $string9 = /socat\stcp\-connect\:.{0,100}\:.{0,100}\sexec\:.{0,100}bash\s\-li.{0,100}.{0,100}pty.{0,100}stderr.{0,100}setsid.{0,100}sigint.{0,100}sane/ nocase ascii wide

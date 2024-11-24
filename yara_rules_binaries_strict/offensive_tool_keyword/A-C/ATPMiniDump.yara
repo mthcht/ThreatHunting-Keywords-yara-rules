@@ -10,7 +10,7 @@ rule ATPMiniDump
     strings:
         // Description: Dumping LSASS memory with MiniDumpWriteDump on PssCaptureSnapShot to evade WinDefender ATP credential-theft. Take a look at this blog post for details. ATPMiniDump was created starting from Outflank-Dumpert then big credits to @Cneelis
         // Reference: https://github.com/b4rtik/ATPMiniDump
-        $string1 = /ATPMiniDump/ nocase ascii wide
+        $string1 = "ATPMiniDump" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

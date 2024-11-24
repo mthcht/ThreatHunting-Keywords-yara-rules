@@ -16,7 +16,7 @@ rule NixImports
         $string2 = /\\Loader\\Loader\.csproj/ nocase ascii wide
         // Description: A .NET malware loader using API-Hashing to evade static analysis
         // Reference: https://github.com/dr4k0nia/NixImports
-        $string3 = /dr4k0nia\/NixImports/ nocase ascii wide
+        $string3 = "dr4k0nia/NixImports" nocase ascii wide
         // Description: A .NET malware loader using API-Hashing to evade static analysis
         // Reference: https://github.com/dr4k0nia/NixImports
         $string4 = /HInvokeHashGen\.cs/ nocase ascii wide
@@ -25,7 +25,7 @@ rule NixImports
         $string5 = /methodHash.{0,100}528465795/ nocase ascii wide
         // Description: A .NET malware loader using API-Hashing to evade static analysis
         // Reference: https://github.com/dr4k0nia/NixImports
-        $string6 = /NixImports\sby\sdr4k0nia/ nocase ascii wide
+        $string6 = "NixImports by dr4k0nia" nocase ascii wide
         // Description: A .NET malware loader using API-Hashing to evade static analysis
         // Reference: https://github.com/dr4k0nia/NixImports
         $string7 = /NixImports\.csproj/ nocase ascii wide
@@ -40,7 +40,7 @@ rule NixImports
         $string10 = /NixImports\.sln/ nocase ascii wide
         // Description: A .NET malware loader using API-Hashing to evade static analysis
         // Reference: https://github.com/dr4k0nia/NixImports
-        $string11 = /using\sNixImports/ nocase ascii wide
+        $string11 = "using NixImports" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

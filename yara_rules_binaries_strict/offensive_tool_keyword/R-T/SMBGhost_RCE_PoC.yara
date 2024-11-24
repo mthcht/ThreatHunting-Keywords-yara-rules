@@ -10,7 +10,7 @@ rule SMBGhost_RCE_PoC
     strings:
         // Description: RCE PoC for CVE-2020-0796 SMBGhost
         // Reference: https://github.com/chompie1337/SMBGhost_RCE_PoC
-        $string1 = /\/SMBGhost_RCE/ nocase ascii wide
+        $string1 = "/SMBGhost_RCE" nocase ascii wide
         // Description: RCE PoC for CVE-2020-0796 SMBGhost
         // Reference: https://github.com/chompie1337/SMBGhost_RCE_PoC
         $string2 = /smb_win\.py/ nocase ascii wide

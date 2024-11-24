@@ -10,10 +10,10 @@ rule krbjack
     strings:
         // Description: A Kerberos AP-REQ hijacking tool with DNS unsecure updates abuse.
         // Reference: https://github.com/almandin/krbjack
-        $string1 = /\sinstall\skrbjack/ nocase ascii wide
+        $string1 = " install krbjack" nocase ascii wide
         // Description: A Kerberos AP-REQ hijacking tool with DNS unsecure updates abuse.
         // Reference: https://github.com/almandin/krbjack
-        $string2 = /\sKRB\shijacking\smodule\s/ nocase ascii wide
+        $string2 = " KRB hijacking module " nocase ascii wide
         // Description: A Kerberos AP-REQ hijacking tool with DNS unsecure updates abuse.
         // Reference: https://github.com/almandin/krbjack
         $string3 = /\s\-\-target\-name\s.{0,1000}\s\-\-domain\s.{0,1000}\s\-\-dc\-ip\s.{0,1000}\s\-\-executable\s.{0,1000}\.exe/ nocase ascii wide
@@ -22,10 +22,10 @@ rule krbjack
         $string4 = /\/krbjack\.git/ nocase ascii wide
         // Description: A Kerberos AP-REQ hijacking tool with DNS unsecure updates abuse.
         // Reference: https://github.com/almandin/krbjack
-        $string5 = /almandin\/krbjack/ nocase ascii wide
+        $string5 = "almandin/krbjack" nocase ascii wide
         // Description: A Kerberos AP-REQ hijacking tool with DNS unsecure updates abuse.
         // Reference: https://github.com/almandin/krbjack
-        $string6 = /krbjack\s\-/ nocase ascii wide
+        $string6 = "krbjack -" nocase ascii wide
         // Description: A Kerberos AP-REQ hijacking tool with DNS unsecure updates abuse.
         // Reference: https://github.com/almandin/krbjack
         $string7 = /krbjack\.tcpforward/ nocase ascii wide
@@ -34,7 +34,7 @@ rule krbjack
         $string8 = /krbjacker\.py/ nocase ascii wide
         // Description: A Kerberos AP-REQ hijacking tool with DNS unsecure updates abuse.
         // Reference: https://github.com/almandin/krbjack
-        $string9 = /krbjack\-main/ nocase ascii wide
+        $string9 = "krbjack-main" nocase ascii wide
 
     condition:
         any of them

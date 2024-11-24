@@ -28,7 +28,7 @@ rule Powermad
         $string6 = /Powermad\.psm1/ nocase ascii wide
         // Description: PowerShell MachineAccountQuota and DNS exploit tools
         // Reference: https://github.com/Kevin-Robertson/Powermad
-        $string7 = /Powermad\-master/ nocase ascii wide
+        $string7 = "Powermad-master" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -16,19 +16,19 @@ rule polenum
         $string2 = /\/polenum\.py/ nocase ascii wide
         // Description: Uses Impacket Library to get the password policy from a windows machine
         // Reference: https://salsa.debian.org/pkg-security-team/polenum
-        $string3 = /\/usr\/bin\/polenum/ nocase ascii wide
+        $string3 = "/usr/bin/polenum" nocase ascii wide
         // Description: Uses Impacket Library to get the password policy from a windows machine
         // Reference: https://salsa.debian.org/pkg-security-team/polenum
         $string4 = /\\polenum\.py/ nocase ascii wide
         // Description: Uses Impacket Library to get the password policy from a windows machine
         // Reference: https://salsa.debian.org/pkg-security-team/polenum
-        $string5 = /apt\sinstall\spolenum/ nocase ascii wide
+        $string5 = "apt install polenum" nocase ascii wide
         // Description: Uses Impacket Library to get the password policy from a windows machine
         // Reference: https://salsa.debian.org/pkg-security-team/polenum
         $string6 = /polenum\s.{0,100}\-protocols\s/ nocase ascii wide
         // Description: Uses Impacket Library to get the password policy from a windows machine
         // Reference: https://salsa.debian.org/pkg-security-team/polenum
-        $string7 = /polenum\s\-h/ nocase ascii wide
+        $string7 = "polenum -h" nocase ascii wide
         // Description: Uses Impacket Library to get the password policy from a windows machine
         // Reference: https://salsa.debian.org/pkg-security-team/polenum
         $string8 = /polenum\s.{0,100}\:/ nocase ascii wide

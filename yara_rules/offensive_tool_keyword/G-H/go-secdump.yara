@@ -19,16 +19,16 @@ rule go_secdump
         $string3 = /\\go\-secdump/ nocase ascii wide
         // Description: Tool to remotely dump secrets from the Windows registry
         // Reference: https://github.com/jfjallid/go-secdump
-        $string4 = /go\-secdump\s\-/ nocase ascii wide
+        $string4 = "go-secdump -" nocase ascii wide
         // Description: Tool to remotely dump secrets from the Windows registry
         // Reference: https://github.com/jfjallid/go-secdump
         $string5 = /go\-secdump\.exe/ nocase ascii wide
         // Description: Tool to remotely dump secrets from the Windows registry
         // Reference: https://github.com/jfjallid/go-secdump
-        $string6 = /go\-secdump\-main/ nocase ascii wide
+        $string6 = "go-secdump-main" nocase ascii wide
         // Description: Tool to remotely dump secrets from the Windows registry
         // Reference: https://github.com/jfjallid/go-secdump
-        $string7 = /jfjallid\/go\-secdump/ nocase ascii wide
+        $string7 = "jfjallid/go-secdump" nocase ascii wide
 
     condition:
         any of them

@@ -19,7 +19,7 @@ rule hak5_cloudc2
         $string3 = /Riskware\.Hakc2/ nocase ascii wide
         // Description: Cloud C2 makes it easy for pentesters and security teams to deploy and manage Hak5 gear from the cloud
         // Reference: https://shop.hak5.org/products/c2?
-        $string4 = /Riskware\/Hakc2/ nocase ascii wide
+        $string4 = "Riskware/Hakc2" nocase ascii wide
         // Description: Cloud C2 makes it easy for pentesters and security teams to deploy and manage Hak5 gear from the cloud
         // Reference: https://shop.hak5.org/products/c2?
         $string5 = /Trojan\/Win32\.Hakc2/ nocase ascii wide

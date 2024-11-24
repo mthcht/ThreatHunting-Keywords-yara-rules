@@ -13,7 +13,7 @@ rule defender_control
         $string1 = /Application\.Hacktool\.DisableDefender\.F/ nocase ascii wide
         // Description: disable windows defender permanently
         // Reference: https://www.sordum.org/9480/defender-control-v2-1/
-        $string2 = /HackTool\:Win32\/DefenderControl/ nocase ascii wide
+        $string2 = "HackTool:Win32/DefenderControl" nocase ascii wide
         // Description: disable windows defender permanently
         // Reference: https://www.sordum.org/9480/defender-control-v2-1/
         $string3 = /PUA\.Win32\.DefenderControl/ nocase ascii wide

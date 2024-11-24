@@ -22,19 +22,19 @@ rule mimipy
         $string4 = /\/mimipy\.git/ nocase ascii wide
         // Description: Tool to dump passwords from various processes memory
         // Reference: https://github.com/n1nj4sec/mimipy
-        $string5 = /47042a24b908274eec6f075245339e4f6058834220e3c2469e235c881d8aa5eb/ nocase ascii wide
+        $string5 = "47042a24b908274eec6f075245339e4f6058834220e3c2469e235c881d8aa5eb" nocase ascii wide
         // Description: Tool to dump passwords from various processes memory
         // Reference: https://github.com/n1nj4sec/mimipy
-        $string6 = /fc22650b89b63d52f14ec5d17c0ee92b1d897825c6b7eb3db391e18268567d25/ nocase ascii wide
+        $string6 = "fc22650b89b63d52f14ec5d17c0ee92b1d897825c6b7eb3db391e18268567d25" nocase ascii wide
         // Description: Tool to dump passwords from various processes memory
         // Reference: https://github.com/n1nj4sec/mimipy
         $string7 = /loot_mysql_passwords\(/ nocase ascii wide
         // Description: Tool to dump passwords from various processes memory
         // Reference: https://github.com/n1nj4sec/mimipy
-        $string8 = /mimipy_loot_passwords/ nocase ascii wide
+        $string8 = "mimipy_loot_passwords" nocase ascii wide
         // Description: Tool to dump passwords from various processes memory
         // Reference: https://github.com/n1nj4sec/mimipy
-        $string9 = /n1nj4sec\/mimipy/ nocase ascii wide
+        $string9 = "n1nj4sec/mimipy" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

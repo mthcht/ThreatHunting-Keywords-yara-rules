@@ -10,19 +10,19 @@ rule NTDLLReflection
     strings:
         // Description: Bypass Userland EDR hooks by Loading Reflective Ntdll in memory from a remote server based on Windows ReleaseID to avoid opening a handle to ntdll and trigger exported APIs from the export table
         // Reference: https://github.com/TheD1rkMtr/NTDLLReflection
-        $string1 = /\sNtCr3at3Thr3adEx\s\@\s/ nocase ascii wide
+        $string1 = " NtCr3at3Thr3adEx @ " nocase ascii wide
         // Description: Bypass Userland EDR hooks by Loading Reflective Ntdll in memory from a remote server based on Windows ReleaseID to avoid opening a handle to ntdll and trigger exported APIs from the export table
         // Reference: https://github.com/TheD1rkMtr/NTDLLReflection
         $string2 = /\/NTDLLReflection\.git/ nocase ascii wide
         // Description: Bypass Userland EDR hooks by Loading Reflective Ntdll in memory from a remote server based on Windows ReleaseID to avoid opening a handle to ntdll and trigger exported APIs from the export table
         // Reference: https://github.com/TheD1rkMtr/NTDLLReflection
-        $string3 = /9D365106\-D7B8\-4B5E\-82CC\-6D6ABCDCA2B8/ nocase ascii wide
+        $string3 = "9D365106-D7B8-4B5E-82CC-6D6ABCDCA2B8" nocase ascii wide
         // Description: Bypass Userland EDR hooks by Loading Reflective Ntdll in memory from a remote server based on Windows ReleaseID to avoid opening a handle to ntdll and trigger exported APIs from the export table
         // Reference: https://github.com/TheD1rkMtr/NTDLLReflection
-        $string4 = /NTDLLReflection\-main/ nocase ascii wide
+        $string4 = "NTDLLReflection-main" nocase ascii wide
         // Description: Bypass Userland EDR hooks by Loading Reflective Ntdll in memory from a remote server based on Windows ReleaseID to avoid opening a handle to ntdll and trigger exported APIs from the export table
         // Reference: https://github.com/TheD1rkMtr/NTDLLReflection
-        $string5 = /NtWa1tF0rS1ngle0bj3ct\sExecuted/ nocase ascii wide
+        $string5 = "NtWa1tF0rS1ngle0bj3ct Executed" nocase ascii wide
         // Description: Bypass Userland EDR hooks by Loading Reflective Ntdll in memory from a remote server based on Windows ReleaseID to avoid opening a handle to ntdll and trigger exported APIs from the export table
         // Reference: https://github.com/TheD1rkMtr/NTDLLReflection
         $string6 = /ReflectiveNTDLL\.cpp/ nocase ascii wide
@@ -37,7 +37,7 @@ rule NTDLLReflection
         $string9 = /ReflectiveNTDLL\.vcxproj/ nocase ascii wide
         // Description: Bypass Userland EDR hooks by Loading Reflective Ntdll in memory from a remote server based on Windows ReleaseID to avoid opening a handle to ntdll and trigger exported APIs from the export table
         // Reference: https://github.com/TheD1rkMtr/NTDLLReflection
-        $string10 = /TheD1rkMtr\/NTDLLReflection/ nocase ascii wide
+        $string10 = "TheD1rkMtr/NTDLLReflection" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

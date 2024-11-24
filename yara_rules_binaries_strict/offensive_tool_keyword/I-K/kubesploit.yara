@@ -22,19 +22,19 @@ rule kubesploit
         $string4 = /bin\/dll\/merlin\.c/ nocase ascii wide
         // Description: Kubesploit is a cross-platform post-exploitation HTTP/2 Command & Control server and agent written in Golang
         // Reference: https://github.com/cyberark/kubesploit
-        $string5 = /c1090dbc\-f2f7\-4d90\-a241\-86e0c0217786/ nocase ascii wide
+        $string5 = "c1090dbc-f2f7-4d90-a241-86e0c0217786" nocase ascii wide
         // Description: Kubesploit is a cross-platform post-exploitation HTTP/2 Command & Control server and agent written in Golang
         // Reference: https://github.com/cyberark/kubesploit
         $string6 = /c2endpoint\.php/ nocase ascii wide
         // Description: Kubesploit is a cross-platform post-exploitation HTTP/2 Command & Control server and agent written in Golang
         // Reference: https://github.com/cyberark/kubesploit
-        $string7 = /cmd\/merlinagent\// nocase ascii wide
+        $string7 = "cmd/merlinagent/" nocase ascii wide
         // Description: Kubesploit is a cross-platform post-exploitation HTTP/2 Command & Control server and agent written in Golang
         // Reference: https://github.com/cyberark/kubesploit
-        $string8 = /cmd\/merlinagentdll\// nocase ascii wide
+        $string8 = "cmd/merlinagentdll/" nocase ascii wide
         // Description: Kubesploit is a cross-platform post-exploitation HTTP/2 Command & Control server and agent written in Golang
         // Reference: https://github.com/cyberark/kubesploit
-        $string9 = /cyberark\/kubesploit/ nocase ascii wide
+        $string9 = "cyberark/kubesploit" nocase ascii wide
         // Description: Kubesploit is a cross-platform post-exploitation HTTP/2 Command & Control server and agent written in Golang
         // Reference: https://github.com/cyberark/kubesploit
         $string10 = /DisableRealtimeMonitoring\s\$true/ nocase ascii wide
@@ -43,7 +43,7 @@ rule kubesploit
         $string11 = /html\/scripts\/merlin\.js/ nocase ascii wide
         // Description: Kubesploit is a cross-platform post-exploitation HTTP/2 Command & Control server and agent written in Golang
         // Reference: https://github.com/cyberark/kubesploit
-        $string12 = /Invoke\-ADSBackdoor/ nocase ascii wide
+        $string12 = "Invoke-ADSBackdoor" nocase ascii wide
         // Description: Kubesploit is a cross-platform post-exploitation HTTP/2 Command & Control server and agent written in Golang
         // Reference: https://github.com/cyberark/kubesploit
         $string13 = /Invoke\-Merlin\.ps1/ nocase ascii wide
@@ -52,28 +52,28 @@ rule kubesploit
         $string14 = /Invoke\-ReflectivePEInjection\.ps1/ nocase ascii wide
         // Description: Kubesploit is a cross-platform post-exploitation HTTP/2 Command & Control server and agent written in Golang
         // Reference: https://github.com/cyberark/kubesploit
-        $string15 = /Joey\sis\sthe\sbest\shacker\sin\sHackers/ nocase ascii wide
+        $string15 = "Joey is the best hacker in Hackers" nocase ascii wide
         // Description: Kubesploit is a cross-platform post-exploitation HTTP/2 Command & Control server and agent written in Golang
         // Reference: https://github.com/cyberark/kubesploit
         $string16 = /kubeletAttack\.json/ nocase ascii wide
         // Description: Kubesploit is a cross-platform post-exploitation HTTP/2 Command & Control server and agent written in Golang
         // Reference: https://github.com/cyberark/kubesploit
-        $string17 = /Kubesploit\sAgent/ nocase ascii wide
+        $string17 = "Kubesploit Agent" nocase ascii wide
         // Description: Kubesploit is a cross-platform post-exploitation HTTP/2 Command & Control server and agent written in Golang
         // Reference: https://github.com/cyberark/kubesploit
-        $string18 = /kubesploitAgent\-Darwin/ nocase ascii wide
+        $string18 = "kubesploitAgent-Darwin" nocase ascii wide
         // Description: Kubesploit is a cross-platform post-exploitation HTTP/2 Command & Control server and agent written in Golang
         // Reference: https://github.com/cyberark/kubesploit
-        $string19 = /kubesploitAgent\-Linux/ nocase ascii wide
+        $string19 = "kubesploitAgent-Linux" nocase ascii wide
         // Description: Kubesploit is a cross-platform post-exploitation HTTP/2 Command & Control server and agent written in Golang
         // Reference: https://github.com/cyberark/kubesploit
-        $string20 = /kubesploit\-main/ nocase ascii wide
+        $string20 = "kubesploit-main" nocase ascii wide
         // Description: Kubesploit is a cross-platform post-exploitation HTTP/2 Command & Control server and agent written in Golang
         // Reference: https://github.com/cyberark/kubesploit
-        $string21 = /kubesploitServer\-Darwin/ nocase ascii wide
+        $string21 = "kubesploitServer-Darwin" nocase ascii wide
         // Description: Kubesploit is a cross-platform post-exploitation HTTP/2 Command & Control server and agent written in Golang
         // Reference: https://github.com/cyberark/kubesploit
-        $string22 = /kubesploitServer\-Linux/ nocase ascii wide
+        $string22 = "kubesploitServer-Linux" nocase ascii wide
         // Description: Kubesploit is a cross-platform post-exploitation HTTP/2 Command & Control server and agent written in Golang
         // Reference: https://github.com/cyberark/kubesploit
         $string23 = /M\.i\.m\.i\.k\.a\.t\.z/ nocase ascii wide
@@ -103,10 +103,10 @@ rule kubesploit
         $string31 = /Password.{0,100}Winter2017/ nocase ascii wide
         // Description: Kubesploit is a cross-platform post-exploitation HTTP/2 Command & Control server and agent written in Golang
         // Reference: https://github.com/cyberark/kubesploit
-        $string32 = /Verified\sMerlin\sserver\s/ nocase ascii wide
+        $string32 = "Verified Merlin server " nocase ascii wide
         // Description: Kubesploit is a cross-platform post-exploitation HTTP/2 Command & Control server and agent written in Golang
         // Reference: https://github.com/cyberark/kubesploit
-        $string33 = /xZF7fvaGD6p2yeLyf9i7O9gBBHk05B0u/ nocase ascii wide
+        $string33 = "xZF7fvaGD6p2yeLyf9i7O9gBBHk05B0u" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

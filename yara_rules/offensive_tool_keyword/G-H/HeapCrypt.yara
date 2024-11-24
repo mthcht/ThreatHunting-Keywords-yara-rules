@@ -13,10 +13,10 @@ rule HeapCrypt
         $string1 = /\/HeapCrypt\.git/ nocase ascii wide
         // Description: Encypting the Heap while sleeping by hooking and modifying Sleep with our own sleep that encrypts the heap
         // Reference: https://github.com/TheD1rkMtr/HeapCrypt
-        $string2 = /83035080\-7788\-4EA3\-82EE\-6C06D2E6891F/ nocase ascii wide
+        $string2 = "83035080-7788-4EA3-82EE-6C06D2E6891F" nocase ascii wide
         // Description: Encypting the Heap while sleeping by hooking and modifying Sleep with our own sleep that encrypts the heap
         // Reference: https://github.com/TheD1rkMtr/HeapCrypt
-        $string3 = /HeapCrypt\-main/ nocase ascii wide
+        $string3 = "HeapCrypt-main" nocase ascii wide
         // Description: Encypting the Heap while sleeping by hooking and modifying Sleep with our own sleep that encrypts the heap
         // Reference: https://github.com/TheD1rkMtr/HeapCrypt
         $string4 = /HeapEncryptDecrypt\.cpp/ nocase ascii wide
@@ -31,7 +31,7 @@ rule HeapCrypt
         $string7 = /HeapEncryptDecrypt\.vcxproj/ nocase ascii wide
         // Description: Encypting the Heap while sleeping by hooking and modifying Sleep with our own sleep that encrypts the heap
         // Reference: https://github.com/TheD1rkMtr/HeapCrypt
-        $string8 = /TheD1rkMtr\/HeapCrypt/ nocase ascii wide
+        $string8 = "TheD1rkMtr/HeapCrypt" nocase ascii wide
 
     condition:
         any of them

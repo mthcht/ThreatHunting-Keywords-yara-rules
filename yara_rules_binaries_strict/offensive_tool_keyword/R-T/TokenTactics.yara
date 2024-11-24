@@ -13,7 +13,7 @@ rule TokenTactics
         $string1 = /\/CapBypass\.ps1/ nocase ascii wide
         // Description: Azure JWT Token Manipulation Toolset
         // Reference: https://github.com/rvrsh3ll/TokenTactics
-        $string2 = /\/rvrsh3ll\// nocase ascii wide
+        $string2 = "/rvrsh3ll/" nocase ascii wide
         // Description: Azure JWT Token Manipulation Toolset
         // Reference: https://github.com/rvrsh3ll/TokenTactics
         $string3 = /\/TokenTactics\.git/ nocase ascii wide
@@ -25,28 +25,28 @@ rule TokenTactics
         $string5 = /capturetokenphish\.py/ nocase ascii wide
         // Description: Azure JWT Token Manipulation Toolset
         // Reference: https://github.com/rvrsh3ll/TokenTactics
-        $string6 = /Connect\-AzureAD\s\-AadAccessToken\s\-AccountId\s/ nocase ascii wide
+        $string6 = "Connect-AzureAD -AadAccessToken -AccountId " nocase ascii wide
         // Description: Azure JWT Token Manipulation Toolset
         // Reference: https://github.com/rvrsh3ll/TokenTactics
         $string7 = /deploycaptureserver\.ps1/ nocase ascii wide
         // Description: Azure JWT Token Manipulation Toolset
         // Reference: https://github.com/rvrsh3ll/TokenTactics
-        $string8 = /Invoke\-DumpOWAMailboxViaMSGraphApi/ nocase ascii wide
+        $string8 = "Invoke-DumpOWAMailboxViaMSGraphApi" nocase ascii wide
         // Description: Azure JWT Token Manipulation Toolset
         // Reference: https://github.com/rvrsh3ll/TokenTactics
-        $string9 = /Invoke\-ForgeUserAgent/ nocase ascii wide
+        $string9 = "Invoke-ForgeUserAgent" nocase ascii wide
         // Description: Azure JWT Token Manipulation Toolset
         // Reference: https://github.com/rvrsh3ll/TokenTactics
-        $string10 = /Invoke\-OpenOWAMailboxInBrowser/ nocase ascii wide
+        $string10 = "Invoke-OpenOWAMailboxInBrowser" nocase ascii wide
         // Description: Azure JWT Token Manipulation Toolset
         // Reference: https://github.com/rvrsh3ll/TokenTactics
-        $string11 = /Invoke\-RefreshToMSGraphToken\s\-domain\s\-ClientId\s/ nocase ascii wide
+        $string11 = "Invoke-RefreshToMSGraphToken -domain -ClientId " nocase ascii wide
         // Description: Azure JWT Token Manipulation Toolset
         // Reference: https://github.com/rvrsh3ll/TokenTactics
         $string12 = /OutlookEmailAbuse\.ps1/ nocase ascii wide
         // Description: Azure JWT Token Manipulation Toolset
         // Reference: https://github.com/rvrsh3ll/TokenTactics
-        $string13 = /rvrsh3ll\/TokenTactics/ nocase ascii wide
+        $string13 = "rvrsh3ll/TokenTactics" nocase ascii wide
         // Description: Azure JWT Token Manipulation Toolset
         // Reference: https://github.com/rvrsh3ll/TokenTactics
         $string14 = /TokenTactics\.psd1/ nocase ascii wide

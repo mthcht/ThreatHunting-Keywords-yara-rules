@@ -37,7 +37,7 @@ rule badrats
         $string9 = /\/dbsclrxcvg\/b\.js/ nocase ascii wide
         // Description: control tool (C2) using Python server - Jscript - Powershell and C# implants and communicates via HTTP(S) and SMB
         // Reference: https://gitlab.com/KevinJClark/badrats
-        $string10 = /\/rats\/badrat_cs\// nocase ascii wide
+        $string10 = "/rats/badrat_cs/" nocase ascii wide
         // Description: control tool (C2) using Python server - Jscript - Powershell and C# implants and communicates via HTTP(S) and SMB
         // Reference: https://gitlab.com/KevinJClark/badrats
         $string11 = /\[\!\]\sFeature\sis\sunsupported\sfor\sPS1\srats/ nocase ascii wide
@@ -67,7 +67,7 @@ rule badrats
         $string19 = /\]\sCleared\sall\srat\scommand\squeues\!/ nocase ascii wide
         // Description: control tool (C2) using Python server - Jscript - Powershell and C# implants and communicates via HTTP(S) and SMB
         // Reference: https://gitlab.com/KevinJClark/badrats
-        $string20 = /79520C3A\-4931\-46EB\-92D7\-334DA7FC9013/ nocase ascii wide
+        $string20 = "79520C3A-4931-46EB-92D7-334DA7FC9013" nocase ascii wide
         // Description: control tool (C2) using Python server - Jscript - Powershell and C# implants and communicates via HTTP(S) and SMB
         // Reference: https://gitlab.com/KevinJClark/badrats
         $string21 = /badrat\.smb\.hta/ nocase ascii wide
@@ -97,13 +97,13 @@ rule badrats
         $string29 = /Invoke\-Bloodhound\.ps1/ nocase ascii wide
         // Description: control tool (C2) using Python server - Jscript - Powershell and C# implants and communicates via HTTP(S) and SMB
         // Reference: https://gitlab.com/KevinJClark/badrats
-        $string30 = /Invoke\-ReverseSocksProxy/ nocase ascii wide
+        $string30 = "Invoke-ReverseSocksProxy" nocase ascii wide
         // Description: control tool (C2) using Python server - Jscript - Powershell and C# implants and communicates via HTTP(S) and SMB
         // Reference: https://gitlab.com/KevinJClark/badrats
         $string31 = /Invoke\-SocksProxy\.ps1/ nocase ascii wide
         // Description: control tool (C2) using Python server - Jscript - Powershell and C# implants and communicates via HTTP(S) and SMB
         // Reference: https://gitlab.com/KevinJClark/badrats
-        $string32 = /KevinJClark\/badrats/ nocase ascii wide
+        $string32 = "KevinJClark/badrats" nocase ascii wide
         // Description: control tool (C2) using Python server - Jscript - Powershell and C# implants and communicates via HTTP(S) and SMB
         // Reference: https://gitlab.com/KevinJClark/badrats
         $string33 = /rat\scommunications\sare\sNOT\sSECURE\.\sDo\snot\ssend\ssensitive\sinfo\sthrough\sthe\sC2\schannel\sunless\susing\sSSL/ nocase ascii wide
@@ -121,7 +121,7 @@ rule badrats
         $string37 = /sends\sthe\sjscript\sfile\sto\sthe\srat\s\(JS\sand\sHTA\sonly\)\sto\sbe\sevaulated\sin\sline\.\sUseful\sfor\sGadget2JS\spayloads/ nocase ascii wide
         // Description: control tool (C2) using Python server - Jscript - Powershell and C# implants and communicates via HTTP(S) and SMB
         // Reference: https://gitlab.com/KevinJClark/badrats
-        $string38 = /set\-shellcode\-process\sdefault/ nocase ascii wide
+        $string38 = "set-shellcode-process default" nocase ascii wide
         // Description: control tool (C2) using Python server - Jscript - Powershell and C# implants and communicates via HTTP(S) and SMB
         // Reference: https://gitlab.com/KevinJClark/badrats
         $string39 = /SharpDump\.exe/ nocase ascii wide
@@ -130,7 +130,7 @@ rule badrats
         $string40 = /shellcode_injectproc\.xml/ nocase ascii wide
         // Description: control tool (C2) using Python server - Jscript - Powershell and C# implants and communicates via HTTP(S) and SMB
         // Reference: https://gitlab.com/KevinJClark/badrats
-        $string41 = /unlink\s\-\-\stells\sthe\scurrent\srat\sto\sdisconnect\sfrom\sa\schild\srat\sgiven\sa\slocal\sfile\sor\sUNC\spath/ nocase ascii wide
+        $string41 = "unlink -- tells the current rat to disconnect from a child rat given a local file or UNC path" nocase ascii wide
         // Description: control tool (C2) using Python server - Jscript - Powershell and C# implants and communicates via HTTP(S) and SMB
         // Reference: https://gitlab.com/KevinJClark/badrats
         $string42 = /xor_crypt_and_encode\(/ nocase ascii wide

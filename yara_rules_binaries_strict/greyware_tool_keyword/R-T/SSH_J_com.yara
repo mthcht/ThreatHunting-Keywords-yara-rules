@@ -19,7 +19,7 @@ rule SSH_J_com
         $string3 = /sshjmpnoutfqotbj6r3acexiwoalgkth55y5kys7js3px2qqqrwuhqqd\.onion/ nocase ascii wide
         // Description: This is Dropbear SSH server modified to be used as a public SSH jump & port forwarding service
         // Reference: https://bitbucket.org/ValdikSS/dropbear-sshj/src/master/
-        $string4 = /ValdikSS\/dropbear\-sshj/ nocase ascii wide
+        $string4 = "ValdikSS/dropbear-sshj" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

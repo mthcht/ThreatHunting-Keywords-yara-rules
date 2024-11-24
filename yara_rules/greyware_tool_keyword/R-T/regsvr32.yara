@@ -10,7 +10,7 @@ rule regsvr32
     strings:
         // Description: suspicious service creation executing a desktop.ini file observed in a malware sample
         // Reference: https://www.virustotal.com/gui/file/faca8b6f046dad8f0e27a75fa2dc5477d3ccf44adced64481ef1b0dd968b4b0e/behavior
-        $string1 = /cmd\s\/c\sregsvr32\.exe\s\/s\sC\:\\.{0,1000}\\desktop\.ini\"\sstart\=\sauto/ nocase ascii wide
+        $string1 = /cmd\s\/c\sregsvr32\.exe\s\/s\sC\:\\.{0,1000}\\desktop\.ini\\"\sstart\=\sauto/ nocase ascii wide
         // Description: A fake AMSI Provider which can be used for persistence
         // Reference: https://github.com/netbiosX/AMSI-Provider
         $string2 = /regsvr32\sAmsiProvider\.dll/ nocase ascii wide

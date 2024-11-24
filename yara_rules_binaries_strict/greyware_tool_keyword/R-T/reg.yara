@@ -10,31 +10,31 @@ rule reg
     strings:
         // Description: disable protection features of Windows Defender
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string1 = /\s\/v\s\\"DisableAntiSpyware\\"\s\/t\sREG_DWORD\s\/d\s\\"1\\"\s\/f/ nocase ascii wide
+        $string1 = " /v \"DisableAntiSpyware\" /t REG_DWORD /d \"1\" /f" nocase ascii wide
         // Description: disable protection features of Windows Defender
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string2 = /\s\/v\s\\"DisableAntiVirus\\"\s\/t\sREG_DWORD\s\/d\s\\"1\\"\s\/f/ nocase ascii wide
+        $string2 = " /v \"DisableAntiVirus\" /t REG_DWORD /d \"1\" /f" nocase ascii wide
         // Description: disable protection features of Windows Defender
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string3 = /\s\/v\s\\"DisableIOAVProtection\\"\s\/t\sREG_DWORD\s\/d\s\\"1\\"\s\/f/ nocase ascii wide
+        $string3 = " /v \"DisableIOAVProtection\" /t REG_DWORD /d \"1\" /f" nocase ascii wide
         // Description: disable protection features of Windows Defender
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string4 = /\s\/v\s\\"DisableOnAccessProtection\\"\s\/t\sREG_DWORD\s\/d\s\\"1\\"\s\/f/ nocase ascii wide
+        $string4 = " /v \"DisableOnAccessProtection\" /t REG_DWORD /d \"1\" /f" nocase ascii wide
         // Description: disable protection features of Windows Defender
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string5 = /\s\/v\s\\"DisableRealtimeMonitoring\\"\s\/t\sREG_DWORD\s\/d\s\\"1\\"\s\/f/ nocase ascii wide
+        $string5 = " /v \"DisableRealtimeMonitoring\" /t REG_DWORD /d \"1\" /f" nocase ascii wide
         // Description: disable protection features of Windows Defender
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string6 = /\s\/v\s\\"DisableScanOnRealtimeEnable\\"\s\/t\sREG_DWORD\s\/d\s\\"1\\"\s\/f/ nocase ascii wide
+        $string6 = " /v \"DisableScanOnRealtimeEnable\" /t REG_DWORD /d \"1\" /f" nocase ascii wide
         // Description: disable protection features of Windows Defender
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string7 = /\s\/v\s\\"MpEnablePus\\"\s\/t\sREG_DWORD\s\/d\s\\"0\\"\s\/f/ nocase ascii wide
+        $string7 = " /v \"MpEnablePus\" /t REG_DWORD /d \"0\" /f" nocase ascii wide
         // Description: exporting registry keys
         // Reference: https://blog.talosintelligence.com/uat-5647-romcom/
-        $string8 = /cmd\s\/C\sreg\sexport\shkcu/ nocase ascii wide
+        $string8 = "cmd /C reg export hkcu" nocase ascii wide
         // Description: exporting registry keys
         // Reference: https://blog.talosintelligence.com/uat-5647-romcom/
-        $string9 = /cmd\s\/C\sreg\sexport\shklm/ nocase ascii wide
+        $string9 = "cmd /C reg export hklm" nocase ascii wide
         // Description: the commands are used to export the SAM and SYSTEM registry hives which contain sensitive Windows security data including hashed passwords for local accounts. By obtaining these hives an attacker can attempt to crack the hashes or use them in pass-the-hash attacks for unauthorized access.
         // Reference: N/A
         $string10 = /copy\s.{0,100}sam\.hive\s\\\\/ nocase ascii wide
@@ -58,7 +58,7 @@ rule reg
         $string16 = /powershell\.exe\s\-nop\s\-c\sAdd\-MpPreference\s\-ExclusionPath\s\\"F\:\\\\"/ nocase ascii wide
         // Description: disable protection features of Windows Defender
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string17 = /Real\-Time\sProtection\\"\s\/v\s\\"DisableBehaviorMonitoring\\"\s\/t\sREG_DWORD\s\/d\s\\"1\\"\s\/f/ nocase ascii wide
+        $string17 = "Real-Time Protection\" /v \"DisableBehaviorMonitoring\" /t REG_DWORD /d \"1\" /f" nocase ascii wide
         // Description: modifies the Windows Registry to enable Remote Desktop connections by setting the fDenyTSConnections value to 0
         // Reference: N/A
         $string18 = /reg\sadd\s\\"HKEY\sLOCAL\sMACHINE\\SYSTEM\\CurentControlSet\\Control\\Terminal\sServer\\"\s\/v\sfDenyTSConnections\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
@@ -373,10 +373,10 @@ rule reg
         $string121 = /reg\squery\s\\"HKEY_LOCAL_MACHINE\\SOFTWARE\\MICROSOFT\\WINDOWS\sNT\\CURRENTVERSION\\WINLOGON\\"\s\/v\sCACHEDLOGONSCOUNT/ nocase ascii wide
         // Description: associated with PEASS-ng - Privilege Escalation Awesome Scripts suite
         // Reference: https://github.com/peass-ng/PEASS-ng
-        $string122 = /reg\squery\sHKCU\s\/f\spassw\s\/t\sREG_SZ\s\/s/ nocase ascii wide
+        $string122 = "reg query HKCU /f passw /t REG_SZ /s" nocase ascii wide
         // Description: associated with PEASS-ng - Privilege Escalation Awesome Scripts suite
         // Reference: https://github.com/peass-ng/PEASS-ng
-        $string123 = /reg\squery\sHKCU\s\/f\spwd\s\/t\sREG_SZ\s\/s/ nocase ascii wide
+        $string123 = "reg query HKCU /f pwd /t REG_SZ /s" nocase ascii wide
         // Description: Query the Windows registry sensitive informations
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
         $string124 = /reg\squery\shkcu\\software\\.{0,100}\\putty\\session/ nocase ascii wide
@@ -394,13 +394,13 @@ rule reg
         $string128 = /reg\squery\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\\s\/v\sRunAsPPL/ nocase ascii wide
         // Description: associated with PEASS-ng - Privilege Escalation Awesome Scripts suite
         // Reference: https://github.com/peass-ng/PEASS-ng
-        $string129 = /reg\squery\sHKLM\s\/f\spassw\s\/t\sREG_SZ\s\/s/ nocase ascii wide
+        $string129 = "reg query HKLM /f passw /t REG_SZ /s" nocase ascii wide
         // Description: Searching the Registry for Passwords
         // Reference: N/A
-        $string130 = /reg\squery\sHKLM\s\/f\spassword\s\s\/t\sREG_SZ\s\s\/s\s/ nocase ascii wide
+        $string130 = "reg query HKLM /f password  /t REG_SZ  /s " nocase ascii wide
         // Description: associated with PEASS-ng - Privilege Escalation Awesome Scripts suite
         // Reference: https://github.com/peass-ng/PEASS-ng
-        $string131 = /reg\squery\sHKLM\s\/f\spwd\s\/t\sREG_SZ\s\/s/ nocase ascii wide
+        $string131 = "reg query HKLM /f pwd /t REG_SZ /s" nocase ascii wide
         // Description: Query the Windows registry sensitive informations
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
         $string132 = /reg\squery\shklm\\software\\OpenSSH/ nocase ascii wide

@@ -25,22 +25,22 @@ rule wiresocks
         $string5 = /\-c\s\/tmp\/redsocks\.conf/ nocase ascii wide
         // Description: Docker-compose and Dockerfile to setup a wireguard VPN connection forcing specific TCP traffic through a socks proxy.
         // Reference: https://github.com/sensepost/wiresocks
-        $string6 = /docker\-compose\slogs\swiresocks/ nocase ascii wide
+        $string6 = "docker-compose logs wiresocks" nocase ascii wide
         // Description: Docker-compose and Dockerfile to setup a wireguard VPN connection forcing specific TCP traffic through a socks proxy.
         // Reference: https://github.com/sensepost/wiresocks
-        $string7 = /iptables\s\-t\snat\s\-A\sREDSOCKS/ nocase ascii wide
+        $string7 = "iptables -t nat -A REDSOCKS" nocase ascii wide
         // Description: Docker-compose and Dockerfile to setup a wireguard VPN connection forcing specific TCP traffic through a socks proxy.
         // Reference: https://github.com/sensepost/wiresocks
         $string8 = /redsocks\-fw\.sh\sstop/ nocase ascii wide
         // Description: Docker-compose and Dockerfile to setup a wireguard VPN connection forcing specific TCP traffic through a socks proxy.
         // Reference: https://github.com/sensepost/wiresocks
-        $string9 = /sensepost\/wiresocks/ nocase ascii wide
+        $string9 = "sensepost/wiresocks" nocase ascii wide
         // Description: Docker-compose and Dockerfile to setup a wireguard VPN connection forcing specific TCP traffic through a socks proxy.
         // Reference: https://github.com/sensepost/wiresocks
-        $string10 = /wiresocks\-main/ nocase ascii wide
+        $string10 = "wiresocks-main" nocase ascii wide
         // Description: Docker-compose and Dockerfile to setup a wireguard VPN connection forcing specific TCP traffic through a socks proxy.
         // Reference: https://github.com/sensepost/wiresocks
-        $string11 = /wiresocks\-redsocks/ nocase ascii wide
+        $string11 = "wiresocks-redsocks" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

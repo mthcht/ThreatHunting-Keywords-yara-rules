@@ -10,7 +10,7 @@ rule socat
     strings:
         // Description: listening on port 1337 -observed in variousmalware and poc explitation tools
         // Reference: N/A
-        $string1 = /socat\stcp4\-listen\:1337/ nocase ascii wide
+        $string1 = "socat tcp4-listen:1337" nocase ascii wide
 
     condition:
         any of them

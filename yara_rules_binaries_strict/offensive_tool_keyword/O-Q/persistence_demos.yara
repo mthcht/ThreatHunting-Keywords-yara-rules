@@ -40,10 +40,10 @@ rule persistence_demos
         $string10 = /\\persistence_demos\-master/ nocase ascii wide
         // Description: Demos of various (also non standard) persistence methods used by malware
         // Reference: https://github.com/hasherezade/persistence_demos
-        $string11 = /hasherezade\/persistence_demos/ nocase ascii wide
+        $string11 = "hasherezade/persistence_demos" nocase ascii wide
         // Description: Demos of various (also non standard) persistence methods used by malware
         // Reference: https://github.com/hasherezade/persistence_demos
-        $string12 = /Hello\,\syou\shave\sbeen\spwned\!/ nocase ascii wide
+        $string12 = "Hello, you have been pwned!" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

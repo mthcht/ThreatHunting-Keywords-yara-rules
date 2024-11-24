@@ -10,7 +10,7 @@ rule C2_Tool_Collection
     strings:
         // Description: A collection of tools which integrate with Cobalt Strike (and possibly other C2 frameworks) through BOF and reflective DLL loading techniques
         // Reference: https://github.com/outflanknl/C2-Tool-Collection
-        $string1 = /\/C2\-Tool\-Collection\// nocase ascii wide
+        $string1 = "/C2-Tool-Collection/" nocase ascii wide
         // Description: A collection of tools which integrate with Cobalt Strike (and possibly other C2 frameworks) through BOF and reflective DLL loading techniques
         // Reference: https://github.com/outflanknl/C2-Tool-Collection
         $string2 = /\/SprayAD\.exe/ nocase ascii wide
@@ -58,7 +58,7 @@ rule C2_Tool_Collection
         $string16 = /TicketToHashcat\.py/ nocase ascii wide
         // Description: A collection of tools which integrate with Cobalt Strike (and possibly other C2 frameworks) through BOF and reflective DLL loading techniques
         // Reference: https://github.com/outflanknl/C2-Tool-Collection
-        $string17 = /Lapsdump\s/ nocase ascii wide
+        $string17 = "Lapsdump " nocase ascii wide
         // Description: A collection of tools which integrate with Cobalt Strike (and possibly other C2 frameworks) through BOF and reflective DLL loading techniques
         // Reference: https://github.com/outflanknl/C2-Tool-Collection
         $string18 = /SprayAD\s.{0,1000}\s.{0,1000}\s/ nocase ascii wide

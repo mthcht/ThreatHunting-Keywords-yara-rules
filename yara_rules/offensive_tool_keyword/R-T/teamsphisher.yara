@@ -25,7 +25,7 @@ rule teamsphisher
         $string5 = /myreallycooltotallyrealtenant\.onmicrosoft\.com/ nocase ascii wide
         // Description: Send phishing messages and attachments to Microsoft Teams users
         // Reference: https://github.com/Octoberfest7/TeamsPhisher
-        $string6 = /Octoberfest7\/TeamsPhisher/ nocase ascii wide
+        $string6 = "Octoberfest7/TeamsPhisher" nocase ascii wide
         // Description: Send phishing messages and attachments to Microsoft Teams users
         // Reference: https://github.com/Octoberfest7/TeamsPhisher
         $string7 = /TeamsPhisher\.git/ nocase ascii wide

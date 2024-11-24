@@ -19,40 +19,40 @@ rule Snaffler
         $string3 = /\/SnaffCon\.cs/ nocase ascii wide
         // Description: Snaffler is a tool for pentesters to help find delicious candy needles (creds mostly but it's flexible) in a bunch of horrible boring haystacks (a massive Windows/AD environment)
         // Reference: https://github.com/SnaffCon/Snaffler
-        $string4 = /\/SnaffCon\/Snaffler/ nocase ascii wide
+        $string4 = "/SnaffCon/Snaffler" nocase ascii wide
         // Description: Snaffler is a tool for pentesters to help find delicious candy needles (creds mostly but it's flexible) in a bunch of horrible boring haystacks (a massive Windows/AD environment)
         // Reference: https://github.com/SnaffCon/Snaffler
-        $string5 = /\/SnaffCore\// nocase ascii wide
+        $string5 = "/SnaffCore/" nocase ascii wide
         // Description: Snaffler is a tool for pentesters to help find delicious candy needles (creds mostly but it's flexible) in a bunch of horrible boring haystacks (a massive Windows/AD environment)
         // Reference: https://github.com/SnaffCon/Snaffler
-        $string6 = /\/snafflertest\// nocase ascii wide
+        $string6 = "/snafflertest/" nocase ascii wide
         // Description: Snaffler is a tool for pentesters to help find delicious candy needles (creds mostly but it's flexible) in a bunch of horrible boring haystacks (a massive Windows/AD environment)
         // Reference: https://github.com/SnaffCon/Snaffler
         $string7 = /\/TreeWalker\.cs/ nocase ascii wide
         // Description: Snaffler is a tool for pentesters and red teamers to help find delicious candy needles (creds mostly but it's flexible) in a bunch of horrible boring haystacks (a massive Windows/AD environment)
         // Reference: https://github.com/SnaffCon/Snaffler
-        $string8 = /SnaffCon\/Snaffler/ nocase ascii wide
+        $string8 = "SnaffCon/Snaffler" nocase ascii wide
         // Description: Snaffler is a tool for pentesters to help find delicious candy needles (creds mostly but it's flexible) in a bunch of horrible boring haystacks (a massive Windows/AD environment)
         // Reference: https://github.com/SnaffCon/Snaffler
         $string9 = /SnaffCore\.csproj/ nocase ascii wide
         // Description: Snaffler is a tool for pentesters to help find delicious candy needles (creds mostly but it's flexible) in a bunch of horrible boring haystacks (a massive Windows/AD environment)
         // Reference: https://github.com/SnaffCon/Snaffler
-        $string10 = /SnaffCore\/ActiveDirectory/ nocase ascii wide
+        $string10 = "SnaffCore/ActiveDirectory" nocase ascii wide
         // Description: Snaffler is a tool for pentesters to help find delicious candy needles (creds mostly but it's flexible) in a bunch of horrible boring haystacks (a massive Windows/AD environment)
         // Reference: https://github.com/SnaffCon/Snaffler
-        $string11 = /SnaffCore\/Classifiers/ nocase ascii wide
+        $string11 = "SnaffCore/Classifiers" nocase ascii wide
         // Description: Snaffler is a tool for pentesters to help find delicious candy needles (creds mostly but it's flexible) in a bunch of horrible boring haystacks (a massive Windows/AD environment)
         // Reference: https://github.com/SnaffCon/Snaffler
-        $string12 = /SnaffCore\/Concurrency/ nocase ascii wide
+        $string12 = "SnaffCore/Concurrency" nocase ascii wide
         // Description: Snaffler is a tool for pentesters to help find delicious candy needles (creds mostly but it's flexible) in a bunch of horrible boring haystacks (a massive Windows/AD environment)
         // Reference: https://github.com/SnaffCon/Snaffler
-        $string13 = /SnaffCore\/Config/ nocase ascii wide
+        $string13 = "SnaffCore/Config" nocase ascii wide
         // Description: Snaffler is a tool for pentesters to help find delicious candy needles (creds mostly but it's flexible) in a bunch of horrible boring haystacks (a massive Windows/AD environment)
         // Reference: https://github.com/SnaffCon/Snaffler
-        $string14 = /SnaffCore\/ShareFind/ nocase ascii wide
+        $string14 = "SnaffCore/ShareFind" nocase ascii wide
         // Description: Snaffler is a tool for pentesters to help find delicious candy needles (creds mostly but it's flexible) in a bunch of horrible boring haystacks (a massive Windows/AD environment)
         // Reference: https://github.com/SnaffCon/Snaffler
-        $string15 = /SnaffCore\/TreeWalk/ nocase ascii wide
+        $string15 = "SnaffCore/TreeWalk" nocase ascii wide
         // Description: Snaffler is a tool for pentesters and red teamers to help find delicious candy needles (creds mostly but it's flexible) in a bunch of horrible boring haystacks (a massive Windows/AD environment)
         // Reference: https://github.com/SnaffCon/Snaffler
         $string16 = /Snaffler\.csproj/ nocase ascii wide

@@ -10,7 +10,7 @@ rule RedPeanut
     strings:
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string1 = /\sEvilClippyManager/ nocase ascii wide
+        $string1 = " EvilClippyManager" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
         $string2 = /\/C2\/Http\/.{0,100}\.cs/ nocase ascii wide
@@ -25,7 +25,7 @@ rule RedPeanut
         $string5 = /\/DonutCS\/Donut\.cs/ nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string6 = /\/EvilClippy/ nocase ascii wide
+        $string6 = "/EvilClippy" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
         $string7 = /\/redpeanut\.cer/ nocase ascii wide
@@ -37,10 +37,10 @@ rule RedPeanut
         $string9 = /\/RedPeanut\.html/ nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string10 = /\/RedPeanutAgent\// nocase ascii wide
+        $string10 = "/RedPeanutAgent/" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string11 = /\/RedPeanutRP\// nocase ascii wide
+        $string11 = "/RedPeanutRP/" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
         $string12 = /\\EvilClippy/ nocase ascii wide
@@ -49,16 +49,16 @@ rule RedPeanut
         $string13 = /ahsten\.run\s\\.{0,100}powershell\.exe/ nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string14 = /AssmblyLoader/ nocase ascii wide
+        $string14 = "AssmblyLoader" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string15 = /AutoCompletionHandlerC2ServerManager/ nocase ascii wide
+        $string15 = "AutoCompletionHandlerC2ServerManager" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string16 = /b4rtik\/RedPeanut/ nocase ascii wide
+        $string16 = "b4rtik/RedPeanut" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string17 = /b4rtik\/RedPeanut/ nocase ascii wide
+        $string17 = "b4rtik/RedPeanut" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
         $string18 = /C2\/C2Server\./ nocase ascii wide
@@ -67,7 +67,7 @@ rule RedPeanut
         $string19 = /C2Server\.cs/ nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string20 = /CreateC2Server/ nocase ascii wide
+        $string20 = "CreateC2Server" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
         $string21 = /donut\s\-f\s.{0,100}\.dll\s\-c\s.{0,100}\s\-m\sRunProcess/ nocase ascii wide
@@ -79,7 +79,7 @@ rule RedPeanut
         $string23 = /DonutLoader\.cs/ nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string24 = /evilclippy\s/ nocase ascii wide
+        $string24 = "evilclippy " nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
         $string25 = /EvilClippy\.exe/ nocase ascii wide
@@ -88,28 +88,28 @@ rule RedPeanut
         $string26 = /EvilClippyManager\./ nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string27 = /EvilClippyMenu/ nocase ascii wide
+        $string27 = "EvilClippyMenu" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
         $string28 = /execute\-assembly.{0,100}Seatbelt/ nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string29 = /GenerateDllBase64Hta/ nocase ascii wide
+        $string29 = "GenerateDllBase64Hta" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string30 = /GenerateExeBase64/ nocase ascii wide
+        $string30 = "GenerateExeBase64" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string31 = /GetC2Server/ nocase ascii wide
+        $string31 = "GetC2Server" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string32 = /Get\-CompressedAgent/ nocase ascii wide
+        $string32 = "Get-CompressedAgent" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
         $string33 = /Get\-CompressedAgent\.ps1/ nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string34 = /Get\-CompressedShellcode/ nocase ascii wide
+        $string34 = "Get-CompressedShellcode" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
         $string35 = /Get\-CompressedShellcode\.ps1/ nocase ascii wide
@@ -121,10 +121,10 @@ rule RedPeanut
         $string37 = /HtaVBSGenerator\./ nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string38 = /HttpEvilClippyController/ nocase ascii wide
+        $string38 = "HttpEvilClippyController" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string39 = /Import\spowerview/ nocase ascii wide
+        $string39 = "Import powerview" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
         $string40 = /Keylogger\.cs/ nocase ascii wide
@@ -148,7 +148,7 @@ rule RedPeanut
         $string46 = /PowershellAgentGenerator\./ nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string47 = /PowershellAmsiGenerator/ nocase ascii wide
+        $string47 = "PowershellAmsiGenerator" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
         $string48 = /PowershellCradleGenerator\./ nocase ascii wide
@@ -163,7 +163,7 @@ rule RedPeanut
         $string51 = /PsExecMenu\(/ nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string52 = /RedPeanut\sSmb\sserver\sstarted/ nocase ascii wide
+        $string52 = "RedPeanut Smb server started" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
         $string53 = /RedPeanut\.Models/ nocase ascii wide
@@ -196,19 +196,19 @@ rule RedPeanut
         $string62 = /RedPeanutAgent\.Program/ nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string63 = /RedPeanutC2/ nocase ascii wide
+        $string63 = "RedPeanutC2" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string64 = /RedPeanutCLI/ nocase ascii wide
+        $string64 = "RedPeanutCLI" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string65 = /RedPeanutDBContext/ nocase ascii wide
+        $string65 = "RedPeanutDBContext" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string66 = /RedPeanutDBInitializer/ nocase ascii wide
+        $string66 = "RedPeanutDBInitializer" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string67 = /RedPeanutHtaPowerShellScript/ nocase ascii wide
+        $string67 = "RedPeanutHtaPowerShellScript" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
         $string68 = /RedPeanutHtaScript\.hta/ nocase ascii wide
@@ -226,7 +226,7 @@ rule RedPeanut
         $string72 = /RedPeanutMSBuildScript\.xml/ nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string73 = /RedPeanutPowershellScriptS/ nocase ascii wide
+        $string73 = "RedPeanutPowershellScriptS" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
         $string74 = /RedPeanutRP\.cs/ nocase ascii wide
@@ -247,85 +247,85 @@ rule RedPeanut
         $string79 = /rubeus\.txt/ nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string80 = /RubeusAskTgtMenu/ nocase ascii wide
+        $string80 = "RubeusAskTgtMenu" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string81 = /RubeusASREPRoastManager/ nocase ascii wide
+        $string81 = "RubeusASREPRoastManager" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string82 = /RubeusChangePwManager/ nocase ascii wide
+        $string82 = "RubeusChangePwManager" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string83 = /RubeusCreateNetOnlyManager/ nocase ascii wide
+        $string83 = "RubeusCreateNetOnlyManager" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string84 = /RubeusDescribeManager/ nocase ascii wide
+        $string84 = "RubeusDescribeManager" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string85 = /RubeusDumpManager/ nocase ascii wide
+        $string85 = "RubeusDumpManager" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string86 = /RubeusDumpMenu/ nocase ascii wide
+        $string86 = "RubeusDumpMenu" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string87 = /RubeusHarvestManager/ nocase ascii wide
+        $string87 = "RubeusHarvestManager" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string88 = /RubeusHarvestMenu/ nocase ascii wide
+        $string88 = "RubeusHarvestMenu" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string89 = /RubeusHashManager/ nocase ascii wide
+        $string89 = "RubeusHashManager" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string90 = /RubeusKerberoastManager/ nocase ascii wide
+        $string90 = "RubeusKerberoastManager" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string91 = /RubeusKerberoastMenu/ nocase ascii wide
+        $string91 = "RubeusKerberoastMenu" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string92 = /RubeusKlistManager/ nocase ascii wide
+        $string92 = "RubeusKlistManager" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string93 = /RubeusManager/ nocase ascii wide
+        $string93 = "RubeusManager" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string94 = /RubeusMonitorManager/ nocase ascii wide
+        $string94 = "RubeusMonitorManager" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string95 = /RubeusMonitorMenu/ nocase ascii wide
+        $string95 = "RubeusMonitorMenu" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string96 = /RubeusPttManager/ nocase ascii wide
+        $string96 = "RubeusPttManager" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string97 = /RubeusPttMenu/ nocase ascii wide
+        $string97 = "RubeusPttMenu" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string98 = /RubeusPurgeManager/ nocase ascii wide
+        $string98 = "RubeusPurgeManager" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string99 = /RubeusPurgeMenu/ nocase ascii wide
+        $string99 = "RubeusPurgeMenu" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string100 = /RubeusRenewManager/ nocase ascii wide
+        $string100 = "RubeusRenewManager" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string101 = /RubeusRenewMenu/ nocase ascii wide
+        $string101 = "RubeusRenewMenu" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string102 = /RubeusS4UManager/ nocase ascii wide
+        $string102 = "RubeusS4UManager" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string103 = /RubeusS4UMenu/ nocase ascii wide
+        $string103 = "RubeusS4UMenu" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string104 = /RubeusTgtDelegManager/ nocase ascii wide
+        $string104 = "RubeusTgtDelegManager" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string105 = /RubeusTgtDelegMenu/ nocase ascii wide
+        $string105 = "RubeusTgtDelegMenu" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string106 = /RubeusTriageManager/ nocase ascii wide
+        $string106 = "RubeusTriageManager" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
         $string107 = /SafetyKatz\.Program/ nocase ascii wide
@@ -334,52 +334,52 @@ rule RedPeanut
         $string108 = /safetykatz\.txt/ nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string109 = /SafetyKatzManager/ nocase ascii wide
+        $string109 = "SafetyKatzManager" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
         $string110 = /sharpadidnsdump\./ nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string111 = /SharpAdidnsdumpManager/ nocase ascii wide
+        $string111 = "SharpAdidnsdumpManager" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string112 = /SharpAdidnsdumpMenu/ nocase ascii wide
+        $string112 = "SharpAdidnsdumpMenu" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
         $string113 = /SharpCOMManager\.cs/ nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string114 = /SharpDPAPI/ nocase ascii wide
+        $string114 = "SharpDPAPI" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
         $string115 = /SharpDPAPIMachine.{0,100}\.cs/ nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string116 = /SharpGPOAddComputer/ nocase ascii wide
+        $string116 = "SharpGPOAddComputer" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string117 = /SharpGPOAddLocalAdmin/ nocase ascii wide
+        $string117 = "SharpGPOAddLocalAdmin" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
         $string118 = /SharpGPOAddUser.{0,100}Manager/ nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string119 = /Sharpkatz/ nocase ascii wide
+        $string119 = "Sharpkatz" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string120 = /SharpkatzManager/ nocase ascii wide
+        $string120 = "SharpkatzManager" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string121 = /SharpMiniDump/ nocase ascii wide
+        $string121 = "SharpMiniDump" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string122 = /SharpMiniDumpManager/ nocase ascii wide
+        $string122 = "SharpMiniDumpManager" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string123 = /sharppsexec/ nocase ascii wide
+        $string123 = "sharppsexec" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string124 = /SharpPsExecManager/ nocase ascii wide
+        $string124 = "SharpPsExecManager" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
         $string125 = /SharpPsExecService\./ nocase ascii wide
@@ -388,13 +388,13 @@ rule RedPeanut
         $string126 = /SharpSpawner\.cs/ nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string127 = /SharpSploitDomainRecon/ nocase ascii wide
+        $string127 = "SharpSploitDomainRecon" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string128 = /SharpSploitDomainReconImpl/ nocase ascii wide
+        $string128 = "SharpSploitDomainReconImpl" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string129 = /SharpUpManager/ nocase ascii wide
+        $string129 = "SharpUpManager" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
         $string130 = /SharpUpMenu\(/ nocase ascii wide
@@ -406,55 +406,55 @@ rule RedPeanut
         $string132 = /SharpWMI\.Program/ nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string133 = /SharpWmiManager/ nocase ascii wide
+        $string133 = "SharpWmiManager" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
         $string134 = /SpawnAsAgentManager\.cs/ nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string135 = /spawnasshellcode/ nocase ascii wide
+        $string135 = "spawnasshellcode" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string136 = /SpawnAsShellcodeManager/ nocase ascii wide
+        $string136 = "SpawnAsShellcodeManager" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string137 = /SpawnPPIDAgentManager/ nocase ascii wide
+        $string137 = "SpawnPPIDAgentManager" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
         $string138 = /SpawnShellcode\.cs/ nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string139 = /SpawnShellcodeManager/ nocase ascii wide
+        $string139 = "SpawnShellcodeManager" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string140 = /SSploitEnumeration/ nocase ascii wide
+        $string140 = "SSploitEnumeration" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string141 = /SSploitEnumerationDomain/ nocase ascii wide
+        $string141 = "SSploitEnumerationDomain" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string142 = /SSploitExecution_DynamicInvoke/ nocase ascii wide
+        $string142 = "SSploitExecution_DynamicInvoke" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string143 = /SSploitExecution_Injection/ nocase ascii wide
+        $string143 = "SSploitExecution_Injection" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string144 = /SSploitLateralMovement/ nocase ascii wide
+        $string144 = "SSploitLateralMovement" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string145 = /SSploitPersistence/ nocase ascii wide
+        $string145 = "SSploitPersistence" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string146 = /SSploitPrivilegeEscalation/ nocase ascii wide
+        $string146 = "SSploitPrivilegeEscalation" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
         $string147 = /UACTokenManipulationManager\.cs/ nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string148 = /using\sdonutCS/ nocase ascii wide
+        $string148 = "using donutCS" nocase ascii wide
         // Description: RedPeanut is a small RAT developed in .Net Core 2 and its agent in .Net 3.5 / 4.0.
         // Reference: https://github.com/b4rtik/RedPeanut
-        $string149 = /We\shad\sa\swoodoo/ nocase ascii wide
+        $string149 = "We had a woodoo" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -19,7 +19,7 @@ rule MockDirUACBypass
         $string3 = /hijackDll.{0,100}WINMM\.dll/ nocase ascii wide
         // Description: Creates a mock trusted directory C:\Windows \System32\ and moves an auto-elevating Windows executable into the mock directory. A user-supplied DLL which exports the appropriate functions is dropped and when the executable is run - the DLL is loaded and run as high integrity.
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/MockDirUACBypass
-        $string4 = /MockDirUACBypass/ nocase ascii wide
+        $string4 = "MockDirUACBypass" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

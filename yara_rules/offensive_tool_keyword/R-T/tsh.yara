@@ -10,13 +10,13 @@ rule tsh
     strings:
         // Description: UNIX backdoor
         // Reference: https://github.com/creaktive/tsh
-        $string1 = /\/bin\/tshd/ nocase ascii wide
+        $string1 = "/bin/tshd" nocase ascii wide
         // Description: UNIX backdoor
         // Reference: https://github.com/creaktive/tsh
-        $string2 = /\/tmp\/tshd/ nocase ascii wide
+        $string2 = "/tmp/tshd" nocase ascii wide
         // Description: UNIX backdoor
         // Reference: https://github.com/creaktive/tsh
-        $string3 = /creaktive\/tsh/ nocase ascii wide
+        $string3 = "creaktive/tsh" nocase ascii wide
         // Description: UNIX backdoor
         // Reference: https://github.com/creaktive/tsh
         $string4 = /devine\@cr0\.net/ nocase ascii wide

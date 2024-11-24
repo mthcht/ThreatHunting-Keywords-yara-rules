@@ -13,13 +13,13 @@ rule udmp_parser
         $string1 = /\/udmp\-parser\.git/ nocase ascii wide
         // Description: A Cross-Platform C++ parser library for Windows user minidumps.
         // Reference: https://github.com/0vercl0k/udmp-parser
-        $string2 = /0vercl0k\/udmp\-parser/ nocase ascii wide
+        $string2 = "0vercl0k/udmp-parser" nocase ascii wide
         // Description: A Cross-Platform C++ parser library for Windows user minidumps.
         // Reference: https://github.com/0vercl0k/udmp-parser
-        $string3 = /import\sudmp_parser/ nocase ascii wide
+        $string3 = "import udmp_parser" nocase ascii wide
         // Description: A Cross-Platform C++ parser library for Windows user minidumps.
         // Reference: https://github.com/0vercl0k/udmp-parser
-        $string4 = /install\sudmp_parser/ nocase ascii wide
+        $string4 = "install udmp_parser" nocase ascii wide
         // Description: A Cross-Platform C++ parser library for Windows user minidumps.
         // Reference: https://github.com/0vercl0k/udmp-parser
         $string5 = /parser\.exe\s\-a\s.{0,100}\.dmp/ nocase ascii wide
@@ -28,7 +28,7 @@ rule udmp_parser
         $string6 = /parser\.exe\s\-a\s.{0,100}\.dmp/ nocase ascii wide
         // Description: A Cross-Platform C++ parser library for Windows user minidumps.
         // Reference: https://github.com/0vercl0k/udmp-parser
-        $string7 = /udmp\-parser\-main/ nocase ascii wide
+        $string7 = "udmp-parser-main" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

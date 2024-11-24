@@ -31,7 +31,7 @@ rule PowershellKerberos
         $string7 = /injector\.ps1.{0,1000}\.kirbi/ nocase ascii wide
         // Description: Some scripts to abuse kerberos using Powershell
         // Reference: https://github.com/MzHmO/PowershellKerberos
-        $string8 = /PowershellKerberos\-main/ nocase ascii wide
+        $string8 = "PowershellKerberos-main" nocase ascii wide
 
     condition:
         any of them

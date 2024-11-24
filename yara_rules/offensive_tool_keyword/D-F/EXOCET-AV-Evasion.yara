@@ -34,7 +34,7 @@ rule EXOCET_AV_Evasion
         $string8 = /\\inline\-shellcode\-test\.c/ nocase ascii wide
         // Description: EXOCET - AV-evading undetectable payload delivery tool
         // Reference: https://github.com/tanc7/EXOCET-AV-Evasion
-        $string9 = /EXOCET\-AV\-Evasion\-master/ nocase ascii wide
+        $string9 = "EXOCET-AV-Evasion-master" nocase ascii wide
         // Description: EXOCET - AV-evading undetectable payload delivery tool
         // Reference: https://github.com/tanc7/EXOCET-AV-Evasion
         $string10 = /exocet\-shellcode\-exec\-redo\.go/ nocase ascii wide
@@ -46,10 +46,10 @@ rule EXOCET_AV_Evasion
         $string12 = /meterpreter\-in\-go\.exe/ nocase ascii wide
         // Description: EXOCET - AV-evading undetectable payload delivery tool
         // Reference: https://github.com/tanc7/EXOCET-AV-Evasion
-        $string13 = /Output\smalware\ssample\sselected\:\s/ nocase ascii wide
+        $string13 = "Output malware sample selected: " nocase ascii wide
         // Description: EXOCET - AV-evading undetectable payload delivery tool
         // Reference: https://github.com/tanc7/EXOCET-AV-Evasion
-        $string14 = /tanc7\/EXOCET\-AV\-Evasion/ nocase ascii wide
+        $string14 = "tanc7/EXOCET-AV-Evasion" nocase ascii wide
         // Description: EXOCET - AV-evading undetectable payload delivery tool
         // Reference: https://github.com/tanc7/EXOCET-AV-Evasion
         $string15 = /The\smalware\sGo\sfile\shas\sbeen\scompleted\./ nocase ascii wide

@@ -10,7 +10,7 @@ rule sed
     strings:
         // Description: allowing root login for ssh
         // Reference: N/A
-        $string1 = /sed\s\'s\/\#PermitRootLogin\sprohibit\-password\/PermitRootLogin\sYes\'\s\/etc\/ssh\/sshd_config/ nocase ascii wide
+        $string1 = "sed 's/#PermitRootLogin prohibit-password/PermitRootLogin Yes' /etc/ssh/sshd_config" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

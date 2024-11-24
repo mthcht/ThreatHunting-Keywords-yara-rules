@@ -19,16 +19,16 @@ rule beef
         $string3 = /\/beef\/extensions\/.{0,100}\.rb/ nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string4 = /\/beef_bind_shell\// nocase ascii wide
+        $string4 = "/beef_bind_shell/" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
         $string5 = /\/beef_common\.js/ nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string6 = /\/beefbind\// nocase ascii wide
+        $string6 = "/beefbind/" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string7 = /\/beefproject\// nocase ascii wide
+        $string7 = "/beefproject/" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
         $string8 = /\/bind_powershell\.rb/ nocase ascii wide
@@ -55,13 +55,13 @@ rule beef
         $string15 = /\/man_in_the_browser\/.{0,100}\.rb/ nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string16 = /\/shellcode_sources\// nocase ascii wide
+        $string16 = "/shellcode_sources/" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string17 = /\/simple_hijacker\// nocase ascii wide
+        $string17 = "/simple_hijacker/" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string18 = /\/thirdparty\/msf\// nocase ascii wide
+        $string18 = "/thirdparty/msf/" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
         $string19 = /_dns_hijack\/.{0,100}\.js/ nocase ascii wide
@@ -70,13 +70,13 @@ rule beef
         $string20 = /_dns_hijack\/.{0,100}\.rb/ nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string21 = /apache_felix_remote_shell/ nocase ascii wide
+        $string21 = "apache_felix_remote_shell" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
         $string22 = /Applet_ReverseTCP\.jar/ nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string23 = /beef\:beef/ nocase ascii wide
+        $string23 = "beef:beef" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
         $string24 = /beef_bind_tcp\-stage\.asm/ nocase ascii wide
@@ -97,13 +97,13 @@ rule beef
         $string29 = /beef_test\.rb/ nocase ascii wide
         // Description: The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string30 = /beefproject/ nocase ascii wide
+        $string30 = "beefproject" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string31 = /beef\-xss/ nocase ascii wide
+        $string31 = "beef-xss" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string32 = /browser_autopwn/ nocase ascii wide
+        $string32 = "browser_autopwn" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
         $string33 = /chromecertbeggar\.js/ nocase ascii wide
@@ -118,19 +118,19 @@ rule beef
         $string36 = /clickjack_victim\.html/ nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string37 = /coldfusion_dir_traversal_exploit/ nocase ascii wide
+        $string37 = "coldfusion_dir_traversal_exploit" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
         $string38 = /ContentHijacking\.swf/ nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string39 = /csrf_to_beef/ nocase ascii wide
+        $string39 = "csrf_to_beef" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string40 = /dlink_sharecenter_cmd_exec/ nocase ascii wide
+        $string40 = "dlink_sharecenter_cmd_exec" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string41 = /edge_wscript_wsh_injection/ nocase ascii wide
+        $string41 = "edge_wscript_wsh_injection" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
         $string42 = /exploit.{0,100}wordpress_add_admin/ nocase ascii wide
@@ -148,31 +148,31 @@ rule beef
         $string46 = /extract_cmd_exec.{0,100}\.rb/ nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string47 = /fake_evernote_clipper/ nocase ascii wide
+        $string47 = "fake_evernote_clipper" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string48 = /fake_flash_update/ nocase ascii wide
+        $string48 = "fake_flash_update" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string49 = /fake_lastpass\// nocase ascii wide
+        $string49 = "fake_lastpass/" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string50 = /fake_notification_ff\// nocase ascii wide
+        $string50 = "fake_notification_ff/" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string51 = /ff_osx_extension\-dropper/ nocase ascii wide
+        $string51 = "ff_osx_extension-dropper" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string52 = /firefox_extension_bindshell/ nocase ascii wide
+        $string52 = "firefox_extension_bindshell" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string53 = /firefox_extension_reverse_shell/ nocase ascii wide
+        $string53 = "firefox_extension_reverse_shell" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string54 = /freenas_reverse_root_shell_csrf/ nocase ascii wide
+        $string54 = "freenas_reverse_root_shell_csrf" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string55 = /glassfish_war_upload_xsrf/ nocase ascii wide
+        $string55 = "glassfish_war_upload_xsrf" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
         $string56 = /hookedbrowsers\.rb/ nocase ascii wide
@@ -187,19 +187,19 @@ rule beef
         $string59 = /http\:\/\/127\.0\.0\.1\:3000\/ui\/panel/ nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string60 = /http\:\/\/localhost\:3000\/ui\/panel/ nocase ascii wide
+        $string60 = "http://localhost:3000/ui/panel" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string61 = /ie_win_fakenotification\-clippy/ nocase ascii wide
+        $string61 = "ie_win_fakenotification-clippy" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
         $string62 = /ie_win_htapowershell\./ nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string63 = /ie_win_missingflash\-prettytheft/ nocase ascii wide
+        $string63 = "ie_win_missingflash-prettytheft" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string64 = /jboss_jmx_upload_exploit/ nocase ascii wide
+        $string64 = "jboss_jmx_upload_exploit" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
         $string65 = /lan_fingerprint_common\./ nocase ascii wide
@@ -226,10 +226,10 @@ rule beef
         $string72 = /portscanner\.js/ nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string73 = /replace_video_fake_plugin/ nocase ascii wide
+        $string73 = "replace_video_fake_plugin" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string74 = /ruby_nntpd_cmd_exec/ nocase ascii wide
+        $string74 = "ruby_nntpd_cmd_exec" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
         $string75 = /shell_shocked.{0,100}\.js/ nocase ascii wide
@@ -238,22 +238,22 @@ rule beef
         $string76 = /shell_shocked.{0,100}\.rb/ nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string77 = /social_engineering\/web_cloner/ nocase ascii wide
+        $string77 = "social_engineering/web_cloner" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string78 = /spring_framework_malicious_jar/ nocase ascii wide
+        $string78 = "spring_framework_malicious_jar" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string79 = /test_beef_debugs_spec/ nocase ascii wide
+        $string79 = "test_beef_debugs_spec" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string80 = /vtiger_crm_upload_exploit/ nocase ascii wide
+        $string80 = "vtiger_crm_upload_exploit" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string81 = /web_cloner\/interceptor/ nocase ascii wide
+        $string81 = "web_cloner/interceptor" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string82 = /wifi_pineapple_csrf/ nocase ascii wide
+        $string82 = "wifi_pineapple_csrf" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
         $string83 = /win_fake_malware\./ nocase ascii wide
@@ -274,7 +274,7 @@ rule beef
         $string88 = /xssraysscan\.rb/ nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string89 = /zenoss_3x_command_execution/ nocase ascii wide
+        $string89 = "zenoss_3x_command_execution" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
         $string90 = /\.\/beef/ nocase ascii wide

@@ -10,7 +10,7 @@ rule frampton
     strings:
         // Description: PE Binary Shellcode Injector - Automated code cave discovery. shellcode injection - ASLR bypass - x86/x64 compatible
         // Reference: https://github.com/ins1gn1a/Frampton
-        $string1 = /\s\-\-shellcode\s/ nocase ascii wide
+        $string1 = " --shellcode " nocase ascii wide
         // Description: PE Binary Shellcode Injector - Automated code cave discovery. shellcode injection - ASLR bypass - x86/x64 compatible
         // Reference: https://github.com/ins1gn1a/Frampton
         $string2 = /\.exe\s\-s\s.{0,100}\\x.{0,100}\\x.{0,100}\\x/ nocase ascii wide
@@ -22,13 +22,13 @@ rule frampton
         $string4 = /_backdoor\.exe/ nocase ascii wide
         // Description: PE Binary Shellcode Injector - Automated code cave discovery. shellcode injection - ASLR bypass - x86/x64 compatible
         // Reference: https://github.com/ins1gn1a/Frampton
-        $string5 = /Disabling\sASLR\s/ nocase ascii wide
+        $string5 = "Disabling ASLR " nocase ascii wide
         // Description: PE Binary Shellcode Injector - Automated code cave discovery. shellcode injection - ASLR bypass - x86/x64 compatible
         // Reference: https://github.com/ins1gn1a/Frampton
         $string6 = /frampton\.py/ nocase ascii wide
         // Description: PE Binary Shellcode Injector - Automated code cave discovery. shellcode injection - ASLR bypass - x86/x64 compatible
         // Reference: https://github.com/ins1gn1a/Frampton
-        $string7 = /ins1gn1a\/Frampton/ nocase ascii wide
+        $string7 = "ins1gn1a/Frampton" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -16,7 +16,7 @@ rule qwinsta
         $string2 = /cmd\.exe.{0,1000}qwinsta/ nocase ascii wide
         // Description: enumerate rdp session on a remote server
         // Reference: N/A
-        $string3 = /qwinsta\s\/server\:/ nocase ascii wide
+        $string3 = "qwinsta /server:" nocase ascii wide
 
     condition:
         any of them

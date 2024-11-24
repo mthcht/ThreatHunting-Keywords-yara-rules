@@ -10,25 +10,25 @@ rule wordlists
     strings:
         // Description: package contains the rockyou.txt wordlist
         // Reference: https://www.kali.org/tools/wordlists/
-        $string1 = /\sinstall\swordlists/ nocase ascii wide
+        $string1 = " install wordlists" nocase ascii wide
         // Description: Various wordlists FR & EN - Cracking French passwords
         // Reference: https://github.com/clem9669/wordlists
         $string2 = /\s\-u\swordlist\s.{0,100}\swordlist_uniq_sorted/ nocase ascii wide
         // Description: package contains the rockyou.txt wordlist
         // Reference: https://www.kali.org/tools/wordlists/
-        $string3 = /\/amass\/wordlists/ nocase ascii wide
+        $string3 = "/amass/wordlists" nocase ascii wide
         // Description: package contains the rockyou.txt wordlist
         // Reference: https://www.kali.org/tools/wordlists/
-        $string4 = /\/brutespray\// nocase ascii wide
+        $string4 = "/brutespray/" nocase ascii wide
         // Description: package contains the rockyou.txt wordlist
         // Reference: https://www.kali.org/tools/wordlists/
-        $string5 = /\/dirbuster\// nocase ascii wide
+        $string5 = "/dirbuster/" nocase ascii wide
         // Description: Various wordlists FR & EN - Cracking French passwords
         // Reference: https://github.com/clem9669/wordlists
         $string6 = /\/fb_firstlast\.7z/ nocase ascii wide
         // Description: package contains the rockyou.txt wordlist
         // Reference: https://www.kali.org/tools/wordlists/
-        $string7 = /\/fern\-wifi\-cracker\// nocase ascii wide
+        $string7 = "/fern-wifi-cracker/" nocase ascii wide
         // Description: package contains the rockyou.txt wordlist
         // Reference: https://www.kali.org/tools/wordlists/
         $string8 = /\/rockyou\.txt/ nocase ascii wide
@@ -52,7 +52,7 @@ rule wordlists
         $string14 = /clem9669_wordlist_small\.7z/ nocase ascii wide
         // Description: package contains the rockyou.txt wordlist
         // Reference: https://www.kali.org/tools/wordlists/
-        $string15 = /dirb\/wordlists/ nocase ascii wide
+        $string15 = "dirb/wordlists" nocase ascii wide
         // Description: package contains the rockyou.txt wordlist
         // Reference: https://www.kali.org/tools/wordlists/
         $string16 = /fasttrack\/wordlist\.txt/ nocase ascii wide
@@ -70,10 +70,10 @@ rule wordlists
         $string20 = /sqlmap\/data\/txt\/wordlist\.txt/ nocase ascii wide
         // Description: package contains the rockyou.txt wordlist
         // Reference: https://www.kali.org/tools/wordlists/
-        $string21 = /usr\/share\/seclists/ nocase ascii wide
+        $string21 = "usr/share/seclists" nocase ascii wide
         // Description: package contains the rockyou.txt wordlist
         // Reference: https://www.kali.org/tools/wordlists/
-        $string22 = /wfuzz\/wordlist/ nocase ascii wide
+        $string22 = "wfuzz/wordlist" nocase ascii wide
         // Description: package contains the rockyou.txt wordlist
         // Reference: https://www.kali.org/tools/wordlists/
         $string23 = /wordlist_TLAs\.txt/ nocase ascii wide

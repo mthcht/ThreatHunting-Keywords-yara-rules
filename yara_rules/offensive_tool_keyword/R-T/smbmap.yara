@@ -25,16 +25,16 @@ rule smbmap
         $string5 = /cmd\s\/c\s.{0,1000}if\sexist\s.{0,1000}\.txt\secho\sImHere/ nocase ascii wide
         // Description: SMBMap allows users to enumerate samba share drives across an entire domain. List share drives. drive permissions. share contents. upload/download functionality. file name auto-download pattern matching. and even execute remote commands. This tool was designed with pen testing in mind. and is intended to simplify searching for potentially sensitive data across large networks.
         // Reference: https://github.com/ShawnDEvans/smbmap
-        $string6 = /install\ssmbmap/ nocase ascii wide
+        $string6 = "install smbmap" nocase ascii wide
         // Description: SMBMap allows users to enumerate samba share drives across an entire domain. List share drives. drive permissions. share contents. upload/download functionality. file name auto-download pattern matching. and even execute remote commands. This tool was designed with pen testing in mind. and is intended to simplify searching for potentially sensitive data across large networks.
         // Reference: https://github.com/ShawnDEvans/smbmap
-        $string7 = /install\ssmbmap/ nocase ascii wide
+        $string7 = "install smbmap" nocase ascii wide
         // Description: SMBMap allows users to enumerate samba share drives across an entire domain. List share drives. drive permissions. share contents. upload/download functionality. file name auto-download pattern matching. and even execute remote commands. This tool was designed with pen testing in mind. and is intended to simplify searching for potentially sensitive data across large networks.
         // Reference: https://github.com/ShawnDEvans/smbmap
-        $string8 = /ShawnDEvans\/smbmap/ nocase ascii wide
+        $string8 = "ShawnDEvans/smbmap" nocase ascii wide
         // Description: SMBMap allows users to enumerate samba share drives across an entire domain. List share drives. drive permissions. share contents. upload/download functionality. file name auto-download pattern matching. and even execute remote commands. This tool was designed with pen testing in mind. and is intended to simplify searching for potentially sensitive data across large networks.
         // Reference: https://github.com/ShawnDEvans/smbmap
-        $string9 = /smbmap\s\-/ nocase ascii wide
+        $string9 = "smbmap -" nocase ascii wide
         // Description: SMBMap allows users to enumerate samba share drives across an entire domain. List share drives. drive permissions. share contents. upload/download functionality. file name auto-download pattern matching. and even execute remote commands. This tool was designed with pen testing in mind. and is intended to simplify searching for potentially sensitive data across large networks.
         // Reference: https://github.com/ShawnDEvans/smbmap
         $string10 = /smbmap\.py\s/ nocase ascii wide
@@ -43,7 +43,7 @@ rule smbmap
         $string11 = /smbmap\.smbmap/ nocase ascii wide
         // Description: SMBMap allows users to enumerate samba share drives across an entire domain. List share drives. drive permissions. share contents. upload/download functionality. file name auto-download pattern matching. and even execute remote commands. This tool was designed with pen testing in mind. and is intended to simplify searching for potentially sensitive data across large networks.
         // Reference: https://github.com/ShawnDEvans/smbmap
-        $string12 = /smbmap\-master/ nocase ascii wide
+        $string12 = "smbmap-master" nocase ascii wide
         // Description: SMBMap allows users to enumerate samba share drives across an entire domain. List share drives. drive permissions. share contents. upload/download functionality. file name auto-download pattern matching. and even execute remote commands. This tool was designed with pen testing in mind. and is intended to simplify searching for potentially sensitive data across large networks.
         // Reference: https://github.com/ShawnDEvans/smbmap
         $string13 = /\-x\s.{0,1000}net\sgroup\s.{0,1000}Domain\sAdmins.{0,1000}\s\/domain/ nocase ascii wide

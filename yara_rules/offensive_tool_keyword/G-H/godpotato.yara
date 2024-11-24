@@ -16,13 +16,13 @@ rule GodPotato
         $string2 = /\\GodPotato\.exe/ nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string3 = /\>GodPotato\</ nocase ascii wide
+        $string3 = ">GodPotato<" nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string4 = /GodPotatoContext\swas\snot\sinitialized/ nocase ascii wide
+        $string4 = "GodPotatoContext was not initialized" nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string5 = /ncacn_ip_tcp\:fuck\syou\s\!/ nocase ascii wide
+        $string5 = "ncacn_ip_tcp:fuck you !" nocase ascii wide
 
     condition:
         any of them

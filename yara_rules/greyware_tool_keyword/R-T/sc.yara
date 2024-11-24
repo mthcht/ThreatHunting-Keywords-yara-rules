@@ -10,10 +10,10 @@ rule sc
     strings:
         // Description: Get information about Windows Defender service
         // Reference: https://thedfirreport.com/2023/02/06/collect-exfiltrate-sleep-repeat/
-        $string1 = /\s\/c\ssc\squery\sWinDefend/ nocase ascii wide
+        $string1 = " /c sc query WinDefend" nocase ascii wide
         // Description: script to dismantle complete windows defender protection and even bypass tamper protection  - Disable Windows-Defender Permanently.
         // Reference: https://github.com/swagkarna/Defeat-Defender-V1.2.0
-        $string2 = /dnefedniw\s\seteled\scs/ nocase ascii wide
+        $string2 = "dnefedniw  eteled cs" nocase ascii wide
         // Description: start the RemoteRegistry service without Admin privileges
         // Reference: https://twitter.com/splinter_code/status/1715876413474025704
         $string3 = /echo\sstart\s\>\s\\\\\.\\pipe\\winreg/ nocase ascii wide
@@ -25,268 +25,268 @@ rule sc
         $string5 = /sc\screate\s.{0,1000}nc\.exe\s\-.{0,1000}cmd\.exe/ nocase ascii wide
         // Description: delete Kaspersky services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string6 = /sc\sdelete\s\"AVP18\.0\.0\"/ nocase ascii wide
+        $string6 = /sc\sdelete\s\\"AVP18\.0\.0\\"/ nocase ascii wide
         // Description: deletes the ESET service
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string7 = /sc\sdelete\s\"ekrn\"/ nocase ascii wide
+        $string7 = "sc delete \"ekrn\"" nocase ascii wide
         // Description: delete services related to the Firebird database 
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string8 = /sc\sdelete\s\"FirebirdGuardianDefaultInstance\"/ nocase ascii wide
+        $string8 = "sc delete \"FirebirdGuardianDefaultInstance\"" nocase ascii wide
         // Description: delete services related to the Firebird database 
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string9 = /sc\sdelete\s\"FirebirdServerDefaultInstance\"/ nocase ascii wide
+        $string9 = "sc delete \"FirebirdServerDefaultInstance\"" nocase ascii wide
         // Description: delete Hyper-V related services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string10 = /sc\sdelete\s\"hvdswvc\"/ nocase ascii wide
+        $string10 = "sc delete \"hvdswvc\"" nocase ascii wide
         // Description: delete Kaspersky services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string11 = /sc\sdelete\s\"klbackupdisk\"/ nocase ascii wide
+        $string11 = "sc delete \"klbackupdisk\"" nocase ascii wide
         // Description: delete Kaspersky services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string12 = /sc\sdelete\s\"klbackupflt\"/ nocase ascii wide
+        $string12 = "sc delete \"klbackupflt\"" nocase ascii wide
         // Description: delete Kaspersky services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string13 = /sc\sdelete\s\"klflt\"/ nocase ascii wide
+        $string13 = "sc delete \"klflt\"" nocase ascii wide
         // Description: delete Kaspersky services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string14 = /sc\sdelete\s\"klhk\"/ nocase ascii wide
+        $string14 = "sc delete \"klhk\"" nocase ascii wide
         // Description: delete Kaspersky services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string15 = /sc\sdelete\s\"KLIF\"/ nocase ascii wide
+        $string15 = "sc delete \"KLIF\"" nocase ascii wide
         // Description: delete Kaspersky services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string16 = /sc\sdelete\s\"klim6\"/ nocase ascii wide
+        $string16 = "sc delete \"klim6\"" nocase ascii wide
         // Description: delete Kaspersky services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string17 = /sc\sdelete\s\"klkbdflt\"/ nocase ascii wide
+        $string17 = "sc delete \"klkbdflt\"" nocase ascii wide
         // Description: delete Kaspersky services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string18 = /sc\sdelete\s\"klmouflt\"/ nocase ascii wide
+        $string18 = "sc delete \"klmouflt\"" nocase ascii wide
         // Description: delete Kaspersky services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string19 = /sc\sdelete\s\"klpd\"/ nocase ascii wide
+        $string19 = "sc delete \"klpd\"" nocase ascii wide
         // Description: delete Kaspersky services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string20 = /sc\sdelete\s\"kltap\"/ nocase ascii wide
+        $string20 = "sc delete \"kltap\"" nocase ascii wide
         // Description: delete Kaspersky services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string21 = /sc\sdelete\s\"KSDE1\.0\.0\"/ nocase ascii wide
+        $string21 = /sc\sdelete\s\\"KSDE1\.0\.0\\"/ nocase ascii wide
         // Description: delete Trend Micro services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string22 = /sc\sdelete\s\"ntrtscan\"/ nocase ascii wide
+        $string22 = "sc delete \"ntrtscan\"" nocase ascii wide
         // Description: delete Hyper-V related services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string23 = /sc\sdelete\s\"nvspwmi\"/ nocase ascii wide
+        $string23 = "sc delete \"nvspwmi\"" nocase ascii wide
         // Description: delete Trend Micro services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string24 = /sc\sdelete\s\"ofcservice\"/ nocase ascii wide
+        $string24 = "sc delete \"ofcservice\"" nocase ascii wide
         // Description: delete Hyper-V related services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string25 = /sc\sdelete\s\"storflt\"/ nocase ascii wide
+        $string25 = "sc delete \"storflt\"" nocase ascii wide
         // Description: delete Trend Micro services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string26 = /sc\sdelete\s\"TmCCSF\"/ nocase ascii wide
+        $string26 = "sc delete \"TmCCSF\"" nocase ascii wide
         // Description: delete Trend Micro services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string27 = /sc\sdelete\s\"TmFilter\"/ nocase ascii wide
+        $string27 = "sc delete \"TmFilter\"" nocase ascii wide
         // Description: delete Trend Micro services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string28 = /sc\sdelete\s\"TMiCRCScanService\"/ nocase ascii wide
+        $string28 = "sc delete \"TMiCRCScanService\"" nocase ascii wide
         // Description: delete Trend Micro services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string29 = /sc\sdelete\s\"tmlisten\"/ nocase ascii wide
+        $string29 = "sc delete \"tmlisten\"" nocase ascii wide
         // Description: delete Trend Micro services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string30 = /sc\sdelete\s\"TMLWCSService\"/ nocase ascii wide
+        $string30 = "sc delete \"TMLWCSService\"" nocase ascii wide
         // Description: delete Trend Micro services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string31 = /sc\sdelete\s\"TmPreFilter\"/ nocase ascii wide
+        $string31 = "sc delete \"TmPreFilter\"" nocase ascii wide
         // Description: delete Trend Micro services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string32 = /sc\sdelete\s\"TmProxy\"/ nocase ascii wide
+        $string32 = "sc delete \"TmProxy\"" nocase ascii wide
         // Description: delete Trend Micro services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string33 = /sc\sdelete\s\"TMSmartRelayService\"/ nocase ascii wide
+        $string33 = "sc delete \"TMSmartRelayService\"" nocase ascii wide
         // Description: delete Trend Micro services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string34 = /sc\sdelete\s\"tmusa\"/ nocase ascii wide
+        $string34 = "sc delete \"tmusa\"" nocase ascii wide
         // Description: delete Hyper-V related services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string35 = /sc\sdelete\s\"vmicguestinterface\"/ nocase ascii wide
+        $string35 = "sc delete \"vmicguestinterface\"" nocase ascii wide
         // Description: delete Hyper-V related services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string36 = /sc\sdelete\s\"vmicheartbeat\"/ nocase ascii wide
+        $string36 = "sc delete \"vmicheartbeat\"" nocase ascii wide
         // Description: delete Hyper-V related services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string37 = /sc\sdelete\s\"vmickvpexchange\"/ nocase ascii wide
+        $string37 = "sc delete \"vmickvpexchange\"" nocase ascii wide
         // Description: delete Hyper-V related services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string38 = /sc\sdelete\s\"vmicrdv\"/ nocase ascii wide
+        $string38 = "sc delete \"vmicrdv\"" nocase ascii wide
         // Description: delete Hyper-V related services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string39 = /sc\sdelete\s\"vmicshutdown\"/ nocase ascii wide
+        $string39 = "sc delete \"vmicshutdown\"" nocase ascii wide
         // Description: delete Hyper-V related services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string40 = /sc\sdelete\s\"vmictimesync\"/ nocase ascii wide
+        $string40 = "sc delete \"vmictimesync\"" nocase ascii wide
         // Description: delete Hyper-V related services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string41 = /sc\sdelete\s\"vmicvss\"/ nocase ascii wide
+        $string41 = "sc delete \"vmicvss\"" nocase ascii wide
         // Description: delete Trend Micro services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string42 = /sc\sdelete\s\"VSApiNt\"/ nocase ascii wide
+        $string42 = "sc delete \"VSApiNt\"" nocase ascii wide
         // Description: delete Hyper-V related services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string43 = /sc\sdelete\s\"wmms\"/ nocase ascii wide
+        $string43 = "sc delete \"wmms\"" nocase ascii wide
         // Description: deletes the Webroot service - disabling the antivirus
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string44 = /sc\sdelete\s\"WRSVC\"/ nocase ascii wide
+        $string44 = "sc delete \"WRSVC\"" nocase ascii wide
         // Description: delete Kaspersky services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
         $string45 = /sc\sdelete\sAVP18\.0\.0/ nocase ascii wide
         // Description: deletes the ESET service
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string46 = /sc\sdelete\sekrn/ nocase ascii wide
+        $string46 = "sc delete ekrn" nocase ascii wide
         // Description: delete services related to the Firebird database 
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string47 = /sc\sdelete\sFirebirdGuardianDefaultInstance/ nocase ascii wide
+        $string47 = "sc delete FirebirdGuardianDefaultInstance" nocase ascii wide
         // Description: delete services related to the Firebird database 
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string48 = /sc\sdelete\sFirebirdServerDefaultInstance/ nocase ascii wide
+        $string48 = "sc delete FirebirdServerDefaultInstance" nocase ascii wide
         // Description: delete Hyper-V related services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string49 = /sc\sdelete\shvdswvc/ nocase ascii wide
+        $string49 = "sc delete hvdswvc" nocase ascii wide
         // Description: delete Kaspersky services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string50 = /sc\sdelete\sklbackupdisk/ nocase ascii wide
+        $string50 = "sc delete klbackupdisk" nocase ascii wide
         // Description: delete Kaspersky services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string51 = /sc\sdelete\sklbackupflt/ nocase ascii wide
+        $string51 = "sc delete klbackupflt" nocase ascii wide
         // Description: delete Kaspersky services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string52 = /sc\sdelete\sklflt/ nocase ascii wide
+        $string52 = "sc delete klflt" nocase ascii wide
         // Description: delete Kaspersky services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string53 = /sc\sdelete\sklhk/ nocase ascii wide
+        $string53 = "sc delete klhk" nocase ascii wide
         // Description: delete Kaspersky services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string54 = /sc\sdelete\sKLIF/ nocase ascii wide
+        $string54 = "sc delete KLIF" nocase ascii wide
         // Description: delete Kaspersky services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string55 = /sc\sdelete\sklim6/ nocase ascii wide
+        $string55 = "sc delete klim6" nocase ascii wide
         // Description: delete Kaspersky services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string56 = /sc\sdelete\sklkbdflt/ nocase ascii wide
+        $string56 = "sc delete klkbdflt" nocase ascii wide
         // Description: delete Kaspersky services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string57 = /sc\sdelete\sklmouflt/ nocase ascii wide
+        $string57 = "sc delete klmouflt" nocase ascii wide
         // Description: delete Kaspersky services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string58 = /sc\sdelete\sklpd/ nocase ascii wide
+        $string58 = "sc delete klpd" nocase ascii wide
         // Description: delete Kaspersky services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string59 = /sc\sdelete\skltap/ nocase ascii wide
+        $string59 = "sc delete kltap" nocase ascii wide
         // Description: delete Kaspersky services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
         $string60 = /sc\sdelete\sKSDE1\.0\.0/ nocase ascii wide
         // Description: stop AV script
         // Reference: https://thedfirreport.com/wp-content/uploads/2023/12/19208-013.png
-        $string61 = /sc\sdelete\sMBAMProtection/ nocase ascii wide
+        $string61 = "sc delete MBAMProtection" nocase ascii wide
         // Description: stop AV script
         // Reference: https://thedfirreport.com/wp-content/uploads/2023/12/19208-013.png
-        $string62 = /sc\sdelete\sMBAMService/ nocase ascii wide
+        $string62 = "sc delete MBAMService" nocase ascii wide
         // Description: delete Trend Micro services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string63 = /sc\sdelete\sntrtscan/ nocase ascii wide
+        $string63 = "sc delete ntrtscan" nocase ascii wide
         // Description: delete Hyper-V related services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string64 = /sc\sdelete\snvspwmi/ nocase ascii wide
+        $string64 = "sc delete nvspwmi" nocase ascii wide
         // Description: delete Trend Micro services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string65 = /sc\sdelete\sofcservice/ nocase ascii wide
+        $string65 = "sc delete ofcservice" nocase ascii wide
         // Description: delete Hyper-V related services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string66 = /sc\sdelete\sstorflt/ nocase ascii wide
+        $string66 = "sc delete storflt" nocase ascii wide
         // Description: delete Trend Micro services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string67 = /sc\sdelete\sTmCCSF/ nocase ascii wide
+        $string67 = "sc delete TmCCSF" nocase ascii wide
         // Description: delete Trend Micro services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string68 = /sc\sdelete\sTmFilter/ nocase ascii wide
+        $string68 = "sc delete TmFilter" nocase ascii wide
         // Description: delete Trend Micro services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string69 = /sc\sdelete\sTMiCRCScanService/ nocase ascii wide
+        $string69 = "sc delete TMiCRCScanService" nocase ascii wide
         // Description: delete Trend Micro services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string70 = /sc\sdelete\stmlisten/ nocase ascii wide
+        $string70 = "sc delete tmlisten" nocase ascii wide
         // Description: delete Trend Micro services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string71 = /sc\sdelete\sTMLWCSService/ nocase ascii wide
+        $string71 = "sc delete TMLWCSService" nocase ascii wide
         // Description: delete Trend Micro services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string72 = /sc\sdelete\sTmPreFilter/ nocase ascii wide
+        $string72 = "sc delete TmPreFilter" nocase ascii wide
         // Description: delete Trend Micro services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string73 = /sc\sdelete\sTmProxy/ nocase ascii wide
+        $string73 = "sc delete TmProxy" nocase ascii wide
         // Description: delete Trend Micro services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string74 = /sc\sdelete\sTMSmartRelayService/ nocase ascii wide
+        $string74 = "sc delete TMSmartRelayService" nocase ascii wide
         // Description: delete Trend Micro services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string75 = /sc\sdelete\stmusa/ nocase ascii wide
+        $string75 = "sc delete tmusa" nocase ascii wide
         // Description: delete Hyper-V related services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string76 = /sc\sdelete\svmicguestinterface/ nocase ascii wide
+        $string76 = "sc delete vmicguestinterface" nocase ascii wide
         // Description: delete Hyper-V related services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string77 = /sc\sdelete\svmicheartbeat/ nocase ascii wide
+        $string77 = "sc delete vmicheartbeat" nocase ascii wide
         // Description: delete Hyper-V related services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string78 = /sc\sdelete\svmickvpexchange/ nocase ascii wide
+        $string78 = "sc delete vmickvpexchange" nocase ascii wide
         // Description: delete Hyper-V related services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string79 = /sc\sdelete\svmicrdv/ nocase ascii wide
+        $string79 = "sc delete vmicrdv" nocase ascii wide
         // Description: delete Hyper-V related services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string80 = /sc\sdelete\svmicshutdown/ nocase ascii wide
+        $string80 = "sc delete vmicshutdown" nocase ascii wide
         // Description: delete Hyper-V related services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string81 = /sc\sdelete\svmictimesync/ nocase ascii wide
+        $string81 = "sc delete vmictimesync" nocase ascii wide
         // Description: delete Hyper-V related services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string82 = /sc\sdelete\svmicvss/ nocase ascii wide
+        $string82 = "sc delete vmicvss" nocase ascii wide
         // Description: delete Trend Micro services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string83 = /sc\sdelete\sVSApiNt/ nocase ascii wide
+        $string83 = "sc delete VSApiNt" nocase ascii wide
         // Description: deleting the Volume Shadow Copy Service
         // Reference: N/A
-        $string84 = /sc\sdelete\sVSS/ nocase ascii wide
+        $string84 = "sc delete VSS" nocase ascii wide
         // Description: delete Hyper-V related services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string85 = /sc\sdelete\swmms/ nocase ascii wide
+        $string85 = "sc delete wmms" nocase ascii wide
         // Description: deletes the Webroot service - disabling the antivirus
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string86 = /sc\sdelete\sWRSVC/ nocase ascii wide
+        $string86 = "sc delete WRSVC" nocase ascii wide
         // Description: start the RemoteRegistry service without Admin privileges
         // Reference: https://twitter.com/splinter_code/status/1715876413474025704
-        $string87 = /sc\sqtriggerinfo\sRemoteRegistry/ nocase ascii wide
+        $string87 = "sc qtriggerinfo RemoteRegistry" nocase ascii wide
         // Description: creates a backdoor by weakening the security of the Service Control Manager allowing any user to manage services on the machine which can lead to privilege escalation and persistent access by an attacker
         // Reference: https://x.com/0gtweet/status/1628720819537936386
         $string88 = /sc\ssdset\sscmanager\sD\:\(A\;\;KA\;\;\;WD\)/ nocase ascii wide
         // Description: start the RemoteRegistry service without Admin privileges
         // Reference: https://twitter.com/splinter_code/status/1715876413474025704
-        $string89 = /sc\sstart\sRemoteRegistry/ nocase ascii wide
+        $string89 = "sc start RemoteRegistry" nocase ascii wide
         // Description: Stop EventLog service
         // Reference: https://www.virustotal.com/gui/file/00820a1f0972678cfe7885bc989ab3e5602b0febc96baf9bf3741d56aa374f03/behavior
-        $string90 = /sc\sstop\seventlog/ nocase ascii wide
+        $string90 = "sc stop eventlog" nocase ascii wide
         // Description: stop AV script
         // Reference: https://thedfirreport.com/wp-content/uploads/2023/12/19208-013.png
-        $string91 = /sc\sstop\sMBAMProtection/ nocase ascii wide
+        $string91 = "sc stop MBAMProtection" nocase ascii wide
         // Description: stop AV script
         // Reference: https://thedfirreport.com/wp-content/uploads/2023/12/19208-013.png
-        $string92 = /sc\sstop\sMBAMService/ nocase ascii wide
+        $string92 = "sc stop MBAMService" nocase ascii wide
         // Description: stop AV
         // Reference: N/A
-        $string93 = /sc\sstop\sSophos\sFile\sScanner\sService/ nocase ascii wide
+        $string93 = "sc stop Sophos File Scanner Service" nocase ascii wide
         // Description: creates a backdoor by weakening the security of the Service Control Manager allowing any user to manage services on the machine which can lead to privilege escalation and persistent access by an attacker
         // Reference: https://x.com/0gtweet/status/1628720819537936386
         $string94 = /sc\.exe\ssdset\sscmanager\sD\:\(A\;\;KA\;\;\;WD\)/ nocase ascii wide

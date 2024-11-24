@@ -16,7 +16,7 @@ rule Weevely3
         $string2 = /\/weevely\.py/ nocase ascii wide
         // Description: Weevely is a web shell designed for post-exploitation purposes that can be extended over the network at runtime
         // Reference: https://github.com/epinna/weevely3
-        $string3 = /epinna\/weevely3/ nocase ascii wide
+        $string3 = "epinna/weevely3" nocase ascii wide
         // Description: Weevely is a web shell designed for post-exploitation purposes that can be extended over the network at runtime
         // Reference: https://github.com/epinna/weevely3
         $string4 = /perl\s\-e\s\'use\sSocket\;\$i\=\\"\$\{lhost\}\\"\;\$p\=\$\{port\}/ nocase ascii wide
@@ -34,7 +34,7 @@ rule Weevely3
         $string8 = /sleep\s1\;\srm\s\-rf\s\/tmp\/f\;mkfifo\s\/tmp\/f\;cat\s\/tmp\/f\|\$\{shell\}\s\-i\s2\>\&1\|nc\s\$\{lhost\}\s\$\{port\}\s\>\/tmp\/f/ nocase ascii wide
         // Description: Weevely is a web shell designed for post-exploitation purposes that can be extended over the network at runtime
         // Reference: https://github.com/epinna/weevely3
-        $string9 = /weevely\sgenerate\s/ nocase ascii wide
+        $string9 = "weevely generate " nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

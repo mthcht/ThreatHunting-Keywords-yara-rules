@@ -19,7 +19,7 @@ rule AWS_Loot
         $string3 = /\.\/awsloot\.py/ nocase ascii wide
         // Description: Searches an AWS environment looking for secrets. by enumerating environment variables and source code. This tool allows quick enumeration over large sets of AWS instances and services.
         // Reference: https://github.com/sebastian-mora/AWS-Loot
-        $string4 = /\/AWS\-Loot/ nocase ascii wide
+        $string4 = "/AWS-Loot" nocase ascii wide
         // Description: Searches an AWS environment looking for secrets. by enumerating environment variables and source code. This tool allows quick enumeration over large sets of AWS instances and services.
         // Reference: https://github.com/sebastian-mora/AWS-Loot
         $string5 = /\/CodeBuildLooter\.py/ nocase ascii wide

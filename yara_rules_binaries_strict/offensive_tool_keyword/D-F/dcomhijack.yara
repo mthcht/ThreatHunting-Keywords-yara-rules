@@ -25,10 +25,10 @@ rule dcomhijack
         $string5 = /\\dcomhijack\.py/ nocase ascii wide
         // Description: Lateral Movement Using DCOM with impacket and DLL Hijacking
         // Reference: https://github.com/WKL-Sec/dcomhijack
-        $string6 = /2fe3e062aad09c372500bdef858a32344d95c7b8036d4cb5f0091a2db17b446f/ nocase ascii wide
+        $string6 = "2fe3e062aad09c372500bdef858a32344d95c7b8036d4cb5f0091a2db17b446f" nocase ascii wide
         // Description: Lateral Movement Using DCOM with impacket and DLL Hijacking
         // Reference: https://github.com/WKL-Sec/dcomhijack
-        $string7 = /9f1186262760c8424674045530bb64d541acbd5a5364e5e56f23cae01243a59e/ nocase ascii wide
+        $string7 = "9f1186262760c8424674045530bb64d541acbd5a5364e5e56f23cae01243a59e" nocase ascii wide
         // Description: Lateral Movement Using DCOM and DLL Hijacking
         // Reference: https://github.com/WKL-Sec/dcomhijack
         $string8 = /dcomhijack\.cna/ nocase ascii wide
@@ -40,16 +40,16 @@ rule dcomhijack
         $string10 = /dcomhijack\.py/ nocase ascii wide
         // Description: Lateral Movement Using DCOM and DLL Hijacking
         // Reference: https://github.com/WKL-Sec/dcomhijack
-        $string11 = /dcomhijack\-main/ nocase ascii wide
+        $string11 = "dcomhijack-main" nocase ascii wide
         // Description: Lateral Movement Using DCOM and DLL Hijacking
         // Reference: https://github.com/WKL-Sec/dcomhijack
         $string12 = /upload\-dll\s.{0,100}\s.{0,100}\.dll/ nocase ascii wide
         // Description: Lateral Movement Using DCOM with impacket and DLL Hijacking
         // Reference: https://github.com/WKL-Sec/dcomhijack
-        $string13 = /WKL\-Sec\/dcomhijack/ nocase ascii wide
+        $string13 = "WKL-Sec/dcomhijack" nocase ascii wide
         // Description: Lateral Movement Using DCOM and DLL Hijacking
         // Reference: https://github.com/WKL-Sec/dcomhijack
-        $string14 = /WKL\-Sec\/dcomhijack/ nocase ascii wide
+        $string14 = "WKL-Sec/dcomhijack" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

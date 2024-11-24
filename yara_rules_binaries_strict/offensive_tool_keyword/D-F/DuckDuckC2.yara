@@ -13,16 +13,16 @@ rule DuckDuckC2
         $string1 = /\/DuckDuckC2\.git/ nocase ascii wide
         // Description: A proof-of-concept C2 channel through DuckDuckGo's image proxy service
         // Reference: https://github.com/nopcorn/DuckDuckC2
-        $string2 = /cd\s\sDuckDuckC2/ nocase ascii wide
+        $string2 = "cd  DuckDuckC2" nocase ascii wide
         // Description: A proof-of-concept C2 channel through DuckDuckGo's image proxy service
         // Reference: https://github.com/nopcorn/DuckDuckC2
-        $string3 = /DuckDuckC2\-main/ nocase ascii wide
+        $string3 = "DuckDuckC2-main" nocase ascii wide
         // Description: A proof-of-concept C2 channel through DuckDuckGo's image proxy service
         // Reference: https://github.com/nopcorn/DuckDuckC2
         $string4 = /https\:\/\/proxy\.duckduckgo\.com\/iu\/\?u\=https\:\/\/pdxkmdcepvahysnnxe\.pythonanywhere\.com\/image\.jpg\?cmd\=/ nocase ascii wide
         // Description: A proof-of-concept C2 channel through DuckDuckGo's image proxy service
         // Reference: https://github.com/nopcorn/DuckDuckC2
-        $string5 = /nopcorn\/DuckDuckC2/ nocase ascii wide
+        $string5 = "nopcorn/DuckDuckC2" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -22,10 +22,10 @@ rule AndrewSpecial
         $string4 = /AndrewSpecial\.exe/ nocase ascii wide
         // Description: AndrewSpecial - dumping lsass memory stealthily
         // Reference: https://github.com/hoangprod/AndrewSpecial
-        $string5 = /AndrewSpecial\-master/ nocase ascii wide
+        $string5 = "AndrewSpecial-master" nocase ascii wide
         // Description: AndrewSpecial - dumping lsass memory stealthily
         // Reference: https://github.com/hoangprod/AndrewSpecial
-        $string6 = /hoangprod\/AndrewSpecial/ nocase ascii wide
+        $string6 = "hoangprod/AndrewSpecial" nocase ascii wide
 
     condition:
         any of them

@@ -22,7 +22,7 @@ rule Cordyceps
         $string4 = /nasm\s\-f\swin64\s\.\/syscalls\.asm\s\-o\s\.\/syscalls\.obj/ nocase ascii wide
         // Description: C++ self-Injecting dropper based on various EDR evasion techniques
         // Reference: https://github.com/pard0p/Cordyceps
-        $string5 = /pard0p\/Cordyceps/ nocase ascii wide
+        $string5 = "pard0p/Cordyceps" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -10,13 +10,13 @@ rule pyinstaller
     strings:
         // Description: PyInstaller bundles a Python application and all its dependencies into a single package executable.
         // Reference: https://www.pyinstaller.org/
-        $string1 = /\/pyinstaller\// nocase ascii wide
+        $string1 = "/pyinstaller/" nocase ascii wide
         // Description: PyInstaller bundles a Python application and all its dependencies into a single package executable.
         // Reference: https://www.pyinstaller.org/
-        $string2 = /import\sPyInstaller/ nocase ascii wide
+        $string2 = "import PyInstaller" nocase ascii wide
         // Description: PyInstaller bundles a Python application and all its dependencies into a single package executable.
         // Reference: https://www.pyinstaller.org/
-        $string3 = /install\spyinstaller/ nocase ascii wide
+        $string3 = "install pyinstaller" nocase ascii wide
         // Description: PyInstaller bundles a Python application and all its dependencies into a single package executable.
         // Reference: https://www.pyinstaller.org/
         $string4 = /pyinstaller\s.{0,1000}\.py/ nocase ascii wide
@@ -28,7 +28,7 @@ rule pyinstaller
         $string6 = /pyinstaller\.exe/ nocase ascii wide
         // Description: PyInstaller bundles a Python application and all its dependencies into a single package executable.
         // Reference: https://www.pyinstaller.org/
-        $string7 = /pyinstaller\/tarball/ nocase ascii wide
+        $string7 = "pyinstaller/tarball" nocase ascii wide
         // Description: PyInstaller bundles a Python application and all its dependencies into a single package executable.
         // Reference: https://www.pyinstaller.org/
         $string8 = /pyinstaller\-script\.py/ nocase ascii wide

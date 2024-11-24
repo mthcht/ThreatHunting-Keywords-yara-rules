@@ -10,7 +10,7 @@ rule tcpreplay
     strings:
         // Description: Tcpreplay is a suite of free Open Source utilities for editing and replaying previously captured network traffic. Originally designed to replay malicious traffic patterns to Intrusion Detection/Prevention Systems. it has seen many evolutions including capabilities to replay to web servers.
         // Reference: https://tcpreplay.appneta.com/
-        $string1 = /tcpreplay/ nocase ascii wide
+        $string1 = "tcpreplay" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

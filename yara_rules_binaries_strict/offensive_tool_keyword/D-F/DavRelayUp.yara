@@ -13,7 +13,7 @@ rule DavRelayUp
         $string1 = /\/DavRelayUp\.git/ nocase ascii wide
         // Description: DavRelayUp - a universal no-fix local privilege escalation in domain-joined windows workstations where LDAP signing is not enforced
         // Reference: https://github.com/ShorSec/DavRelayUp
-        $string2 = /\/DavRelayUp\// nocase ascii wide
+        $string2 = "/DavRelayUp/" nocase ascii wide
         // Description: DavRelayUp - a universal no-fix local privilege escalation in domain-joined windows workstations where LDAP signing is not enforced
         // Reference: https://github.com/ShorSec/DavRelayUp
         $string3 = /DavRelayUp\.csproj/ nocase ascii wide
@@ -25,13 +25,13 @@ rule DavRelayUp
         $string5 = /DavRelayUp\.sln/ nocase ascii wide
         // Description: DavRelayUp - a universal no-fix local privilege escalation in domain-joined windows workstations where LDAP signing is not enforced
         // Reference: https://github.com/ShorSec/DavRelayUp
-        $string6 = /DavRelayUp\-master/ nocase ascii wide
+        $string6 = "DavRelayUp-master" nocase ascii wide
         // Description: DavRelayUp - a universal no-fix local privilege escalation in domain-joined windows workstations where LDAP signing is not enforced
         // Reference: https://github.com/ShorSec/DavRelayUp
         $string7 = /GoRelayServer\.dll/ nocase ascii wide
         // Description: DavRelayUp - a universal no-fix local privilege escalation in domain-joined windows workstations where LDAP signing is not enforced
         // Reference: https://github.com/ShorSec/DavRelayUp
-        $string8 = /ShorSec\/DavRelayUp/ nocase ascii wide
+        $string8 = "ShorSec/DavRelayUp" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

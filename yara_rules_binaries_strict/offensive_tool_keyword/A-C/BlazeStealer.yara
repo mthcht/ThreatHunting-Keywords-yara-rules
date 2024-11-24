@@ -10,28 +10,28 @@ rule BlazeStealer
     strings:
         // Description: Malicious python packages
         // Reference: https://medium.com/checkmarx-security/python-obfuscation-traps-1acced941375
-        $string1 = /\/Pyobfadvance/ nocase ascii wide
+        $string1 = "/Pyobfadvance" nocase ascii wide
         // Description: Malicious python packages
         // Reference: https://medium.com/checkmarx-security/python-obfuscation-traps-1acced941375
-        $string2 = /\/Pyobfexecute/ nocase ascii wide
+        $string2 = "/Pyobfexecute" nocase ascii wide
         // Description: Malicious python packages
         // Reference: https://medium.com/checkmarx-security/python-obfuscation-traps-1acced941375
-        $string3 = /\/pyobfgood/ nocase ascii wide
+        $string3 = "/pyobfgood" nocase ascii wide
         // Description: Malicious python packages
         // Reference: https://medium.com/checkmarx-security/python-obfuscation-traps-1acced941375
-        $string4 = /\/Pyobflite/ nocase ascii wide
+        $string4 = "/Pyobflite" nocase ascii wide
         // Description: Malicious python packages
         // Reference: https://medium.com/checkmarx-security/python-obfuscation-traps-1acced941375
-        $string5 = /\/Pyobfpremium/ nocase ascii wide
+        $string5 = "/Pyobfpremium" nocase ascii wide
         // Description: Malicious python packages
         // Reference: https://medium.com/checkmarx-security/python-obfuscation-traps-1acced941375
-        $string6 = /\/Pyobftoexe/ nocase ascii wide
+        $string6 = "/Pyobftoexe" nocase ascii wide
         // Description: Malicious python packages
         // Reference: https://medium.com/checkmarx-security/python-obfuscation-traps-1acced941375
-        $string7 = /\/Pyobfuse/ nocase ascii wide
+        $string7 = "/Pyobfuse" nocase ascii wide
         // Description: Malicious python packages
         // Reference: https://medium.com/checkmarx-security/python-obfuscation-traps-1acced941375
-        $string8 = /\/Pyobfusfile/ nocase ascii wide
+        $string8 = "/Pyobfusfile" nocase ascii wide
         // Description: Malicious python packages
         // Reference: https://medium.com/checkmarx-security/python-obfuscation-traps-1acced941375
         $string9 = /\\Pyobfadvance/ nocase ascii wide

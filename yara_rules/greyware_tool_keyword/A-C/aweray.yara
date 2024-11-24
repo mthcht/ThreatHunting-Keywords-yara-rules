@@ -37,7 +37,7 @@ rule aweray
         $string9 = /\\Software\\AweSun\\SunLogin\\SunloginClient/ nocase ascii wide
         // Description: all-in-one secure remote access control and support solution
         // Reference: sun.aweray.com
-        $string10 = /\>AweRay\sLimited\</ nocase ascii wide
+        $string10 = ">AweRay Limited<" nocase ascii wide
         // Description: all-in-one secure remote access control and support solution
         // Reference: sun.aweray.com
         $string11 = /\>AweRay\sPte\.\sLtd\.\</ nocase ascii wide
@@ -46,7 +46,7 @@ rule aweray
         $string12 = /\>AweSun\.exe\</ nocase ascii wide
         // Description: all-in-one secure remote access control and support solution
         // Reference: sun.aweray.com
-        $string13 = /\>AweSun\</ nocase ascii wide
+        $string13 = ">AweSun<" nocase ascii wide
         // Description: all-in-one secure remote access control and support solution
         // Reference: sun.aweray.com
         $string14 = /asapi\.aweray\.net/ nocase ascii wide
@@ -73,7 +73,7 @@ rule aweray
         $string21 = /install\.bat\sAweSun/ nocase ascii wide
         // Description: all-in-one secure remote access control and support solution
         // Reference: sun.aweray.com
-        $string22 = /netsh\s\sadvfirewall\sfirewall\s.{0,1000}\srule\sname\=\"AweSun/ nocase ascii wide
+        $string22 = /netsh\s\sadvfirewall\sfirewall\s.{0,1000}\srule\sname\=\\"AweSun/ nocase ascii wide
 
     condition:
         any of them

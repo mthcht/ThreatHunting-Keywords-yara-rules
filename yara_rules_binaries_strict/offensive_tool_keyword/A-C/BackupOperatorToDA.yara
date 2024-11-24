@@ -16,7 +16,7 @@ rule BackupOperatorToDA
         $string2 = /\\BackupOperatorToDA/ nocase ascii wide
         // Description: From an account member of the group Backup Operators to Domain Admin without RDP or WinRM on the Domain Controller
         // Reference: https://github.com/mpgn/BackupOperatorToDA
-        $string3 = /0971A047\-A45A\-43F4\-B7D8\-16AC1114B524/ nocase ascii wide
+        $string3 = "0971A047-A45A-43F4-B7D8-16AC1114B524" nocase ascii wide
         // Description: From an account member of the group Backup Operators to Domain Admin without RDP or WinRM on the Domain Controller
         // Reference: https://github.com/mpgn/BackupOperatorToDA
         $string4 = /BackupOperatorToDA\.cpp/ nocase ascii wide
@@ -28,10 +28,10 @@ rule BackupOperatorToDA
         $string6 = /BackupOperatorToDA\.sln/ nocase ascii wide
         // Description: From an account member of the group Backup Operators to Domain Admin without RDP or WinRM on the Domain Controller
         // Reference: https://github.com/mpgn/BackupOperatorToDA
-        $string7 = /BackupOperatorToDA\-master/ nocase ascii wide
+        $string7 = "BackupOperatorToDA-master" nocase ascii wide
         // Description: From an account member of the group Backup Operators to Domain Admin without RDP or WinRM on the Domain Controller
         // Reference: https://github.com/mpgn/BackupOperatorToDA
-        $string8 = /mpgn\/BackupOperatorToDA/ nocase ascii wide
+        $string8 = "mpgn/BackupOperatorToDA" nocase ascii wide
         // Description: From an account member of the group Backup Operators to Domain Admin without RDP or WinRM on the Domain Controller
         // Reference: https://github.com/mpgn/BackupOperatorToDA
         $string9 = /secredump\.exe/ nocase ascii wide

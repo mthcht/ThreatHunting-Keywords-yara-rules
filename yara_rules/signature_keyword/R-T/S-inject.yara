@@ -10,7 +10,7 @@ rule S_inject
     strings:
         // Description: Windows injection of x86/x64 DLL and Shellcode
         // Reference: https://github.com/Joe1sn/S-inject
-        $string1 = /Trojan\:Win64\/CobaltStrike/ nocase ascii wide
+        $string1 = "Trojan:Win64/CobaltStrike" nocase ascii wide
 
     condition:
         any of them

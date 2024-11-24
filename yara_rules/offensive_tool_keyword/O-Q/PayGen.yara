@@ -22,10 +22,10 @@ rule PayGen
         $string4 = /shellcode\-runner\.py/ nocase ascii wide
         // Description: FUD metasploit Persistence RAT
         // Reference: https://github.com/youhacker55/PayGen
-        $string5 = /youhacker55\/PayGen/ nocase ascii wide
+        $string5 = "youhacker55/PayGen" nocase ascii wide
         // Description: FUD metasploit Persistence RAT
         // Reference: https://github.com/youhacker55/PayGen
-        $string6 = /cd\sPayGen/ nocase ascii wide
+        $string6 = "cd PayGen" nocase ascii wide
 
     condition:
         any of them

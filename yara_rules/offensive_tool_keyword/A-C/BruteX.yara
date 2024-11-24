@@ -10,7 +10,7 @@ rule BruteX
     strings:
         // Description: Automatically brute force all services running on a target. Open ports. Usernames Passwords
         // Reference: https://github.com/1N3/BruteX
-        $string1 = /BruteX/ nocase ascii wide
+        $string1 = "BruteX" nocase ascii wide
 
     condition:
         any of them

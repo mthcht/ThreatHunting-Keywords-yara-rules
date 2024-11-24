@@ -10,7 +10,7 @@ rule ShellPop
     strings:
         // Description: Shellpop is all about popping shells. With this tool you can generate easy and sophisticated reverse or bind shell commands to help you during penetration tests.
         // Reference: https://github.com/0x00-0x00/ShellPop
-        $string1 = /\/ShellPop/ nocase ascii wide
+        $string1 = "/ShellPop" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

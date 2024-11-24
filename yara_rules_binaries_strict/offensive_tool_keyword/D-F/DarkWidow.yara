@@ -49,19 +49,19 @@ rule DarkWidow
         $string13 = /\]\sShellcode\sDecryption\sStarted/ nocase ascii wide
         // Description: Indirect Dynamic Syscall SSN + Syscall address sorting via Modified TartarusGate approach + Remote Process Injection via APC Early Bird + Spawns a sacrificial Process as target process + (ACG+BlockDll) mitigation policy on spawned process + PPID spoofing (Emotet method) + Api resolving from TIB + API hashing
         // Reference: https://github.com/reveng007/DarkWidow
-        $string14 = /\=\=\=\=\=\=\=\=\=\=\=\sHavoc\sand\smsf\srevshell\s\=\=\=\=\=\=\=\=/ nocase ascii wide
+        $string14 = "=========== Havoc and msf revshell ========" nocase ascii wide
         // Description: Indirect Dynamic Syscall SSN + Syscall address sorting via Modified TartarusGate approach + Remote Process Injection via APC Early Bird + Spawns a sacrificial Process as target process + (ACG+BlockDll) mitigation policy on spawned process + PPID spoofing (Emotet method) + Api resolving from TIB + API hashing
         // Reference: https://github.com/reveng007/DarkWidow
-        $string15 = /4D1B765D\-1287\-45B1\-AEDC\-C4B96CF5CAA2/ nocase ascii wide
+        $string15 = "4D1B765D-1287-45B1-AEDC-C4B96CF5CAA2" nocase ascii wide
         // Description: Indirect Dynamic Syscall SSN + Syscall address sorting via Modified TartarusGate approach + Remote Process Injection via APC Early Bird + Spawns a sacrificial Process as target process + (ACG+BlockDll) mitigation policy on spawned process + PPID spoofing (Emotet method) + Api resolving from TIB + API hashing
         // Reference: https://github.com/reveng007/DarkWidow
-        $string16 = /6C9CF6A0\-C098\-4341\-8DD1\-2FCBA9594067/ nocase ascii wide
+        $string16 = "6C9CF6A0-C098-4341-8DD1-2FCBA9594067" nocase ascii wide
         // Description: Indirect Dynamic Syscall SSN + Syscall address sorting via Modified TartarusGate approach + Remote Process Injection via APC Early Bird + Spawns a sacrificial Process as target process + (ACG+BlockDll) mitigation policy on spawned process + PPID spoofing (Emotet method) + Api resolving from TIB + API hashing
         // Reference: https://github.com/reveng007/DarkWidow
-        $string17 = /DarkWidow\-main/ nocase ascii wide
+        $string17 = "DarkWidow-main" nocase ascii wide
         // Description: Indirect Dynamic Syscall SSN + Syscall address sorting via Modified TartarusGate approach + Remote Process Injection via APC Early Bird + Spawns a sacrificial Process as target process + (ACG+BlockDll) mitigation policy on spawned process + PPID spoofing (Emotet method) + Api resolving from TIB + API hashing
         // Reference: https://github.com/reveng007/DarkWidow
-        $string18 = /reveng007\/DarkWidow/ nocase ascii wide
+        $string18 = "reveng007/DarkWidow" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

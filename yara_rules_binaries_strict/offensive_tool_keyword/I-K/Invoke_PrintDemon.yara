@@ -10,7 +10,7 @@ rule Invoke_PrintDemon
     strings:
         // Description: This is an PowerShell Empire launcher PoC using PrintDemon and Faxhell. The module has the Faxhell DLL already embedded which leverages CVE-2020-1048 for privilege escalation. The vulnerability allows an unprivileged user to gain system-level privileges and is based on @ionescu007 PoC.
         // Reference: https://github.com/BC-SECURITY/Invoke-PrintDemon
-        $string1 = /Invoke\-PrintDemon/ nocase ascii wide
+        $string1 = "Invoke-PrintDemon" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

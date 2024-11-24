@@ -10,7 +10,7 @@ rule awesome_scapy
     strings:
         // Description: A Python tool and library for low level packet creation and manipulation
         // Reference: https://github.com/secdev/awesome-scapy
-        $string1 = /awesome\-scapy/ nocase ascii wide
+        $string1 = "awesome-scapy" nocase ascii wide
 
     condition:
         any of them

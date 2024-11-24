@@ -10,10 +10,10 @@ rule fakelogonscreen
     strings:
         // Description: FakeLogonScreen is a utility to fake the Windows logon screen in order to obtain the user password. The password entered is validated against the Active Directory or local machine to make sure it is correct and is then displayed to the console or saved to disk
         // Reference: https://github.com/bitsadmin/fakelogonscreen
-        $string1 = /\/fakelogonscreen/ nocase ascii wide
+        $string1 = "/fakelogonscreen" nocase ascii wide
         // Description: FakeLogonScreen is a utility to fake the Windows logon screen in order to obtain the user password. The password entered is validated against the Active Directory or local machine to make sure it is correct and is then displayed to the console or saved to disk
         // Reference: https://github.com/bitsadmin/fakelogonscreen
-        $string2 = /fakelogonscreen\s/ nocase ascii wide
+        $string2 = "fakelogonscreen " nocase ascii wide
         // Description: FakeLogonScreen is a utility to fake the Windows logon screen in order to obtain the user password. The password entered is validated against the Active Directory or local machine to make sure it is correct and is then displayed to the console or saved to disk
         // Reference: https://github.com/bitsadmin/fakelogonscreen
         $string3 = /fakelogonscreen.{0,1000}\.zip/ nocase ascii wide

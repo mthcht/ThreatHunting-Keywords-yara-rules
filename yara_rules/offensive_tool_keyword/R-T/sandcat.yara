@@ -16,7 +16,7 @@ rule sandcat
         $string2 = /syhunt\.com\/sandcat\// nocase ascii wide
         // Description: An open-source pentest oriented web browser
         // Reference: https://github.com/syhunt/sandcat
-        $string3 = /syhunt\/sandcat/ nocase ascii wide
+        $string3 = "syhunt/sandcat" nocase ascii wide
         // Description: An open-source pentest oriented web browser
         // Reference: https://github.com/syhunt/sandcat
         $string4 = /syhunt\-sandcat\-.{0,1000}\.exe/ nocase ascii wide

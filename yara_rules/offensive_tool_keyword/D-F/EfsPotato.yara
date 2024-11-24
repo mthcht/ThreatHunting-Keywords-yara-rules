@@ -34,7 +34,7 @@ rule EfsPotato
         $string8 = /EfsPotato.{0,1000}samr/ nocase ascii wide
         // Description: Exploit for EfsPotato(MS-EFSR EfsRpcOpenFileRaw with SeImpersonatePrivilege local privalege escalation vulnerability)
         // Reference: https://github.com/zcgonvh/EfsPotato
-        $string9 = /EfsPotato\-main/ nocase ascii wide
+        $string9 = "EfsPotato-main" nocase ascii wide
 
     condition:
         any of them

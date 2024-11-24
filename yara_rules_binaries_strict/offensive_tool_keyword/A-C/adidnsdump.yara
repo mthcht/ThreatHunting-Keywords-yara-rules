@@ -25,10 +25,10 @@ rule adidnsdump
         $string5 = /\\dnsdump\.py/ nocase ascii wide
         // Description: By default any user in Active Directory can enumerate all DNS records in the Domain or Forest DNS zones. similar to a zone transfer. This tool enables enumeration and exporting of all DNS records in the zone for recon purposes of internal networks.
         // Reference: https://github.com/dirkjanm/adidnsdump
-        $string6 = /adidnsdump/ nocase ascii wide
+        $string6 = "adidnsdump" nocase ascii wide
         // Description: By default any user in Active Directory can enumerate all DNS records in the Domain or Forest DNS zones. similar to a zone transfer. This tool enables enumeration and exporting of all DNS records in the zone for recon purposes of internal networks.
         // Reference: https://github.com/dirkjanm/adidnsdump
-        $string7 = /dirkjanm\/adidnsdump/ nocase ascii wide
+        $string7 = "dirkjanm/adidnsdump" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

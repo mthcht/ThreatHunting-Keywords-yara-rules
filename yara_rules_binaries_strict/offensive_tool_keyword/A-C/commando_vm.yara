@@ -16,7 +16,7 @@ rule commando_vm
         $string2 = /\.win7\.config\.fireeye/ nocase ascii wide
         // Description: CommandoVM - a fully customizable Windows-based security distribution for penetration testing and red teaming.
         // Reference: https://github.com/mandiant/commando-vm
-        $string3 = /\/commando\-vm/ nocase ascii wide
+        $string3 = "/commando-vm" nocase ascii wide
         // Description: CommandoVM - a fully customizable Windows-based security distribution for penetration testing and red teaming.
         // Reference: https://github.com/mandiant/commando-vm
         $string4 = /choco\sinstall\s.{0,100}\scommon\.fireeye/ nocase ascii wide
@@ -28,7 +28,7 @@ rule commando_vm
         $string6 = /commandovm\..{0,100}\.installer\.fireeye/ nocase ascii wide
         // Description: CommandoVM - a fully customizable Windows-based security distribution for penetration testing and red teaming.
         // Reference: https://github.com/mandiant/commando-vm
-        $string7 = /commando\-vm\-master/ nocase ascii wide
+        $string7 = "commando-vm-master" nocase ascii wide
         // Description: CommandoVM - a fully customizable Windows-based security distribution for penetration testing and red teaming.
         // Reference: https://github.com/mandiant/commando-vm
         $string8 = /\-ExecutionPolicy\sBypass\s\-File\sWin10\.ps1\s/ nocase ascii wide

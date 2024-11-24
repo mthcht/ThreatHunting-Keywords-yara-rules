@@ -13,7 +13,7 @@ rule Decrypt_RDCMan
         $string1 = /HackTool\.DecryptRDCMan/ nocase ascii wide
         // Description: decrypts passwords stored in Remote Desktop Connection Manager (RDCMan) using DPAPI
         // Reference: https://github.com/vmamuaya/Powershell/blob/master/Decrypt-RDCMan.ps1
-        $string2 = /HackTool\:PowerShell\/DecryptRDCMan/ nocase ascii wide
+        $string2 = "HackTool:PowerShell/DecryptRDCMan" nocase ascii wide
 
     condition:
         any of them

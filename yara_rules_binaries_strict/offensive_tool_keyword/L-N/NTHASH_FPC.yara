@@ -25,25 +25,25 @@ rule NTHASH_FPC
         $string5 = /\s\/dumpsecret\s\/input\:.{0,100}\s\/system/ nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
-        $string6 = /\s\/dumpsecret\s\/input\:defaultpassword/ nocase ascii wide
+        $string6 = " /dumpsecret /input:defaultpassword" nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
-        $string7 = /\s\/dumpsecret\s\/input\:dpapi_system\s\/offline/ nocase ascii wide
+        $string7 = " /dumpsecret /input:dpapi_system /offline" nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
         $string8 = /\s\/gethmac\s\/mode\:hashid\s\/input\:.{0,100}\s\/key\:/ nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
-        $string9 = /\s\/getlsasecret\s\/input\:/ nocase ascii wide
+        $string9 = " /getlsasecret /input:" nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
-        $string10 = /\s\/getntlmhash\s\/password\:/ nocase ascii wide
+        $string10 = " /getntlmhash /password:" nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
         $string11 = /\s\/getntlmhash\s\|\swtee\s.{0,100}\.ntlm/ nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
-        $string12 = /\s\/getsamkey\s\/offline/ nocase ascii wide
+        $string12 = " /getsamkey /offline" nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
         $string13 = /\s\/ptt\s\/binary\:.{0,100}\.kirbi/ nocase ascii wide
@@ -112,64 +112,64 @@ rule NTHASH_FPC
         $string34 = /\\wmiexec\.zip/ nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
-        $string35 = /_KIWI_BCRYPT_HANDLE_KEY/ nocase ascii wide
+        $string35 = "_KIWI_BCRYPT_HANDLE_KEY" nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
-        $string36 = /_KIWI_BCRYPT_KEY/ nocase ascii wide
+        $string36 = "_KIWI_BCRYPT_KEY" nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
-        $string37 = /_KIWI_BCRYPT_KEY81/ nocase ascii wide
+        $string37 = "_KIWI_BCRYPT_KEY81" nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
-        $string38 = /_KIWI_MASTERKEY_CACHE_ENTRY/ nocase ascii wide
+        $string38 = "_KIWI_MASTERKEY_CACHE_ENTRY" nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
-        $string39 = /_NT6_CLEAR_SECRET/ nocase ascii wide
+        $string39 = "_NT6_CLEAR_SECRET" nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
-        $string40 = /62f11b4ae2f0d26ed55efd4c918cfec1bd95036f507cf2dbf3295949831366ca/ nocase ascii wide
+        $string40 = "62f11b4ae2f0d26ed55efd4c918cfec1bd95036f507cf2dbf3295949831366ca" nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
-        $string41 = /69ace7287faa4854605ab46018d92332ba0d16ff926ebf17330359a4dbd7d693/ nocase ascii wide
+        $string41 = "69ace7287faa4854605ab46018d92332ba0d16ff926ebf17330359a4dbd7d693" nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
-        $string42 = /76c7648f79cc5a78f49e9ca24b26a82348e0292b3676ae04bdf22a88cb7eeadc/ nocase ascii wide
+        $string42 = "76c7648f79cc5a78f49e9ca24b26a82348e0292b3676ae04bdf22a88cb7eeadc" nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
-        $string43 = /806ffe052652b8848d19fe26c63ecc35742077d87bbe04102b048a7c9c644c22/ nocase ascii wide
+        $string43 = "806ffe052652b8848d19fe26c63ecc35742077d87bbe04102b048a7c9c644c22" nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
-        $string44 = /862f7ba58bbf77543812637ecc32d277fce062d21bc97587e5816e8fb05634e3/ nocase ascii wide
+        $string44 = "862f7ba58bbf77543812637ecc32d277fce062d21bc97587e5816e8fb05634e3" nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
-        $string45 = /8bb972b4dc7e0c5b8db0be349ecf62043e69ea1273d5298f8e55c02fa047712c/ nocase ascii wide
+        $string45 = "8bb972b4dc7e0c5b8db0be349ecf62043e69ea1273d5298f8e55c02fa047712c" nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
-        $string46 = /91502e94bd83b8803e91d20d1b231c112d65561f588b92e888982f7753374e8d/ nocase ascii wide
+        $string46 = "91502e94bd83b8803e91d20d1b231c112d65561f588b92e888982f7753374e8d" nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
-        $string47 = /bHNhc3MuZXhl/ nocase ascii wide
+        $string47 = "bHNhc3MuZXhl" nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
         $string48 = /c\:\\temp\\nc\.exe/ nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
-        $string49 = /c96ef7d84ab7d43b03330daf4e78c11aa9407662f4a18d1824fa1506694c8c56/ nocase ascii wide
+        $string49 = "c96ef7d84ab7d43b03330daf4e78c11aa9407662f4a18d1824fa1506694c8c56" nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
-        $string50 = /check\sthat\sour\sdll\sas\sbeen\sinjected\s\:\sNTHASH/ nocase ascii wide
+        $string50 = "check that our dll as been injected : NTHASH" nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
-        $string51 = /e685904d607a73c1916b6a7d9cc2eb42e4afd1cf2e77e728b7dbeb141eda2735/ nocase ascii wide
+        $string51 = "e685904d607a73c1916b6a7d9cc2eb42e4afd1cf2e77e728b7dbeb141eda2735" nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
-        $string52 = /erwan2212\/NTHASH\-FPC/ nocase ascii wide
+        $string52 = "erwan2212/NTHASH-FPC" nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
         $string53 = /Execute\(\'SELECT\sorigin_url\,username_value\,password_value\,length\(password_value/ nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
-        $string54 = /f56f11c598a47a0313a3f4e0929a45a6ed7529119189d7434fbe39721e190083/ nocase ascii wide
+        $string54 = "f56f11c598a47a0313a3f4e0929a45a6ed7529119189d7434fbe39721e190083" nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
         $string55 = /For\sfun\sand\s\(no\)\sprofit\s\:\slets\shook\srtlcomparememory\sin\slsass\.exe/ nocase ascii wide
@@ -187,7 +187,7 @@ rule NTHASH_FPC
         $string59 = /https\:\/\/hashtoolkit\.com\/generate\-hash\/\?text\=/ nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
-        $string60 = /KIWI_KERBEROS_BUFFER/ nocase ascii wide
+        $string60 = "KIWI_KERBEROS_BUFFER" nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
         $string61 = /kuhl_m_dpapi_chrome\.c/ nocase ascii wide
@@ -202,22 +202,22 @@ rule NTHASH_FPC
         $string64 = /nc64\s127\.0\.0\.1\s9000\s\-e\scmd\.exe/ nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
-        $string65 = /nc64\s\-L\s\-vv\s\-p\s9000/ nocase ascii wide
+        $string65 = "nc64 -L -vv -p 9000" nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
-        $string66 = /NTHASH\s\/enumproc\s/ nocase ascii wide
+        $string66 = "NTHASH /enumproc " nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
-        $string67 = /NTHASH\s\/runas\s/ nocase ascii wide
+        $string67 = "NTHASH /runas " nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
-        $string68 = /NTHASH\s\/runaschild\s\/pid/ nocase ascii wide
+        $string68 = "NTHASH /runaschild /pid" nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
-        $string69 = /NTHASH\s\/runastoken\s/ nocase ascii wide
+        $string69 = "NTHASH /runastoken " nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
-        $string70 = /NTHASH\s\/runwmi\s/ nocase ascii wide
+        $string70 = "NTHASH /runwmi " nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
         $string71 = /NTHASH.{0,100}\s\/cryptunprotectdata\s\/binary\:/ nocase ascii wide
@@ -256,13 +256,13 @@ rule NTHASH_FPC
         $string82 = /reg\.exe\squery\shklm\\security\\policy\\secrets/ nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
-        $string83 = /rem\scall\snthash\-win64\s\/getntlmhash/ nocase ascii wide
+        $string83 = "rem call nthash-win64 /getntlmhash" nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
         $string84 = /rem\scheap\sbruteforce\s\.\.\.\svery\sslow\s\.\.\.\sok\sfor\sa\sfew\spasswords/ nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
-        $string85 = /THASH\s\/runts\s\/user\:/ nocase ascii wide
+        $string85 = "THASH /runts /user:" nocase ascii wide
         // Description: various tools for retrieving windows secrets - Lateral Movement and C2
         // Reference: https://github.com/erwan2212/NTHASH-FPC
         $string86 = /toto\s\%3e\sc\:\\\\temp\\\\toto\.txt/ nocase ascii wide

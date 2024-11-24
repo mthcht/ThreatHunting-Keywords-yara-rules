@@ -10,7 +10,7 @@ rule Lovely_Potato
     strings:
         // Description: Lovely Potato (automating juicy potato) Powershell wrapper of Decoders JuicyPotato for easy exploitation. This entirely depends on the original Juicy Potato binary and utilizes his test_clsid.bat. another Local Privilege Escalation tool. from a Windows Service Accounts to NT AUTHORITY\SYSTEM
         // Reference: https://github.com/TsukiCTF/Lovely-Potato
-        $string1 = /Lovely\-Potato/ nocase ascii wide
+        $string1 = "Lovely-Potato" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

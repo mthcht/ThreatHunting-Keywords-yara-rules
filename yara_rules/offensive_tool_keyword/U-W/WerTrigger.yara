@@ -16,7 +16,7 @@ rule WerTrigger
         $string2 = /WerTrigger\.exe/ nocase ascii wide
         // Description: Weaponizing for privileged file writes bugs with windows problem reporting
         // Reference: https://github.com/sailay1996/WerTrigger
-        $string3 = /WerTrigger\-master/ nocase ascii wide
+        $string3 = "WerTrigger-master" nocase ascii wide
 
     condition:
         any of them

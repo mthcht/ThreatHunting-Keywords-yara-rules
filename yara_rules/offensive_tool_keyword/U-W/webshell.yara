@@ -28,7 +28,7 @@ rule webshell
         $string6 = /\\simple\-backdoor\.php/ nocase ascii wide
         // Description: A collection of webshell
         // Reference: https://github.com/Peaky-XD/webshell
-        $string7 = /Peaky\-XD\/webshell/ nocase ascii wide
+        $string7 = "Peaky-XD/webshell" nocase ascii wide
 
     condition:
         any of them

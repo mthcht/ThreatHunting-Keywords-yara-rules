@@ -16,13 +16,13 @@ rule Seth
         $string2 = /\.py\s.{0,1000}\s\s\-\-fake\-server/ nocase ascii wide
         // Description: Perform a MitM attack and extract clear text credentials from RDP connections
         // Reference: https://github.com/SySS-Research/Seth
-        $string3 = /arpspoof\s\-i\s/ nocase ascii wide
+        $string3 = "arpspoof -i " nocase ascii wide
         // Description: Perform a MitM attack and extract clear text credentials from RDP connections
         // Reference: https://github.com/SySS-Research/Seth
-        $string4 = /Server\senforces\sNLA\;\sswitching\sto\s\'fake\sserver\'\smode/ nocase ascii wide
+        $string4 = "Server enforces NLA; switching to 'fake server' mode" nocase ascii wide
         // Description: Perform a MitM attack and extract clear text credentials from RDP connections
         // Reference: https://github.com/SySS-Research/Seth
-        $string5 = /Seth\sby\sSySS\sGmbH/ nocase ascii wide
+        $string5 = "Seth by SySS GmbH" nocase ascii wide
         // Description: Perform a MitM attack and extract clear text credentials from RDP connections
         // Reference: https://github.com/SySS-Research/Seth
         $string6 = /seth\.py\s.{0,1000}\s\-j\sINJECT/ nocase ascii wide
@@ -31,7 +31,7 @@ rule Seth
         $string7 = /Seth\-master\.zip/ nocase ascii wide
         // Description: Perform a MitM attack and extract clear text credentials from RDP connections
         // Reference: https://github.com/SySS-Research/Seth
-        $string8 = /SySS\-Research\/Seth/ nocase ascii wide
+        $string8 = "SySS-Research/Seth" nocase ascii wide
 
     condition:
         any of them

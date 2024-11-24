@@ -10,7 +10,7 @@ rule tightvnc
     strings:
         // Description: TightVNC is a free and Open Source remote desktop software that lets you access and control a computer over the network - often abused by attackers
         // Reference: https://www.tightvnc.com
-        $string1 = /\s\-service\sTightVNC\sServer/ nocase ascii wide
+        $string1 = " -service TightVNC Server" nocase ascii wide
         // Description: TightVNC is a free and Open Source remote desktop software that lets you access and control a computer over the network - often abused by attackers
         // Reference: https://www.tightvnc.com
         $string2 = /\.\\TightVNC1/ nocase ascii wide
@@ -46,7 +46,7 @@ rule tightvnc
         $string12 = /\\TVN_log_pipe_public_name/ nocase ascii wide
         // Description: TightVNC is a free and Open Source remote desktop software that lets you access and control a computer over the network - often abused by attackers
         // Reference: https://www.tightvnc.com
-        $string13 = /\>TightVNC\sViewer\</ nocase ascii wide
+        $string13 = ">TightVNC Viewer<" nocase ascii wide
         // Description: TightVNC is a free and Open Source remote desktop software that lets you access and control a computer over the network - often abused by attackers
         // Reference: https://www.tightvnc.com
         $string14 = /00\:\\\.vnc\\/ nocase ascii wide
@@ -64,13 +64,13 @@ rule tightvnc
         $string18 = /ProgramData\\TightVNC/ nocase ascii wide
         // Description: TightVNC is a free and Open Source remote desktop software that lets you access and control a computer over the network - often abused by attackers
         // Reference: https://www.tightvnc.com
-        $string19 = /TightVNC\sService/ nocase ascii wide
+        $string19 = "TightVNC Service" nocase ascii wide
         // Description: TightVNC is a free and Open Source remote desktop software that lets you access and control a computer over the network - often abused by attackers
         // Reference: https://www.tightvnc.com
         $string20 = /TightVNC\sWeb\sSite\.url/ nocase ascii wide
         // Description: TightVNC is a free and Open Source remote desktop software that lets you access and control a computer over the network - often abused by attackers
         // Reference: https://www.tightvnc.com
-        $string21 = /tvnserver/ nocase ascii wide
+        $string21 = "tvnserver" nocase ascii wide
         // Description: TightVNC is a free and Open Source remote desktop software that lets you access and control a computer over the network - often abused by attackers
         // Reference: https://www.tightvnc.com
         $string22 = /tvnserver\.exe/ nocase ascii wide

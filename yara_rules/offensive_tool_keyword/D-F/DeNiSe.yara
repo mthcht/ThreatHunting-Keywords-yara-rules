@@ -22,7 +22,7 @@ rule DeNiSe
         $string4 = /dnslog\-\-airvent\.txt/ nocase ascii wide
         // Description: DeNiSe is a proof of concept for tunneling TCP over DNS in Python
         // Reference: https://github.com/mdornseif/DeNiSe
-        $string5 = /mdornseif\/DeNiSe/ nocase ascii wide
+        $string5 = "mdornseif/DeNiSe" nocase ascii wide
 
     condition:
         any of them

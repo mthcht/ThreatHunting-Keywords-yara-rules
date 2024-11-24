@@ -31,7 +31,7 @@ rule Procdump
         $string7 = /\<Data\sName\=\'PipeName\'\>\\lsass\<\/Data\>\<Data\sName\=\'Image\'\>.{0,100}procdump.{0,100}\<\/Data\>/ nocase ascii wide
         // Description: dump lsass process with procdump
         // Reference: https://learn.microsoft.com/en-us/sysinternals/downloads/procdump
-        $string8 = /\>ProcDump\</ nocase ascii wide
+        $string8 = ">ProcDump<" nocase ascii wide
         // Description: dump lsass process with procdump
         // Reference: https://learn.microsoft.com/en-us/sysinternals/downloads/procdump
         $string9 = /procdump.{0,100}lsass/ nocase ascii wide

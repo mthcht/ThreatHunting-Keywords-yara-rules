@@ -10,16 +10,16 @@ rule CIMplant
     strings:
         // Description: C# port of WMImplant which uses either CIM or WMI to query remote systems
         // Reference: https://github.com/RedSiege/CIMplant
-        $string1 = /\s\-c\sactive_users\s\-u\s/ nocase ascii wide
+        $string1 = " -c active_users -u " nocase ascii wide
         // Description: C# port of WMImplant which uses either CIM or WMI to query remote systems
         // Reference: https://github.com/RedSiege/CIMplant
-        $string2 = /\s\-c\scommand_exec\s\-\-execute\stasklist/ nocase ascii wide
+        $string2 = " -c command_exec --execute tasklist" nocase ascii wide
         // Description: C# port of WMImplant which uses either CIM or WMI to query remote systems
         // Reference: https://github.com/RedSiege/CIMplant
-        $string3 = /\s\-c\scommand_exec\s\-\-execute\swhoami/ nocase ascii wide
+        $string3 = " -c command_exec --execute whoami" nocase ascii wide
         // Description: C# port of WMImplant which uses either CIM or WMI to query remote systems
         // Reference: https://github.com/RedSiege/CIMplant
-        $string4 = /\s\-c\sedr_query\s/ nocase ascii wide
+        $string4 = " -c edr_query " nocase ascii wide
         // Description: C# port of WMImplant which uses either CIM or WMI to query remote systems
         // Reference: https://github.com/RedSiege/CIMplant
         $string5 = /\s\-c\slogon_events\s.{0,100}\s\-u\s/ nocase ascii wide
@@ -28,10 +28,10 @@ rule CIMplant
         $string6 = /\s\-c\sls\s\-\-directory\s.{0,100}\s\-u\s.{0,100}\s\-p\s/ nocase ascii wide
         // Description: C# port of WMImplant which uses either CIM or WMI to query remote systems
         // Reference: https://github.com/RedSiege/CIMplant
-        $string7 = /\s\-c\sprocess_kill\s\-\-process\s/ nocase ascii wide
+        $string7 = " -c process_kill --process " nocase ascii wide
         // Description: C# port of WMImplant which uses either CIM or WMI to query remote systems
         // Reference: https://github.com/RedSiege/CIMplant
-        $string8 = /\s\-c\sservice_mod\s\-\-execute\screate\s\-s\s/ nocase ascii wide
+        $string8 = " -c service_mod --execute create -s " nocase ascii wide
         // Description: C# port of WMImplant which uses either CIM or WMI to query remote systems
         // Reference: https://github.com/RedSiege/CIMplant
         $string9 = /\s\-c\supload\s\-\-fileto\s.{0,100}\s\-\-file\s/ nocase ascii wide
@@ -61,7 +61,7 @@ rule CIMplant
         $string17 = /\s\-s\s.{0,100}\s\-c\sremote_posh\s/ nocase ascii wide
         // Description: C# port of WMImplant which uses either CIM or WMI to query remote systems
         // Reference: https://github.com/RedSiege/CIMplant
-        $string18 = /\s\-\-service\sfortynorth/ nocase ascii wide
+        $string18 = " --service fortynorth" nocase ascii wide
         // Description: C# port of WMImplant which uses either CIM or WMI to query remote systems
         // Reference: https://github.com/RedSiege/CIMplant
         $string19 = /\.exe\s\-s\s.{0,100}\s\-c\sservice_mod\s/ nocase ascii wide
@@ -85,13 +85,13 @@ rule CIMplant
         $string25 = /CIMplant\.sln/ nocase ascii wide
         // Description: C# port of WMImplant which uses either CIM or WMI to query remote systems
         // Reference: https://github.com/RedSiege/CIMplant
-        $string26 = /CIMplant\-main/ nocase ascii wide
+        $string26 = "CIMplant-main" nocase ascii wide
         // Description: C# port of WMImplant which uses either CIM or WMI to query remote systems
         // Reference: https://github.com/RedSiege/CIMplant
-        $string27 = /FortyNorthSecurity\/CIMplant/ nocase ascii wide
+        $string27 = "FortyNorthSecurity/CIMplant" nocase ascii wide
         // Description: C# port of WMImplant which uses either CIM or WMI to query remote systems
         // Reference: https://github.com/RedSiege/CIMplant
-        $string28 = /RedSiege\/CIMplant/ nocase ascii wide
+        $string28 = "RedSiege/CIMplant" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

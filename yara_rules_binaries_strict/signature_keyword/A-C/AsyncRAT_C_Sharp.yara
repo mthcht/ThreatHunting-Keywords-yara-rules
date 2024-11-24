@@ -10,7 +10,7 @@ rule AsyncRAT_C_Sharp
     strings:
         // Description: Open-Source Remote Administration Tool For Windows C# (RAT)
         // Reference: https://github.com/NYAN-x-CAT/AsyncRAT-C-Sharp
-        $string1 = /RemoteAccess\:MSIL\/AsyncRAT/ nocase ascii wide
+        $string1 = "RemoteAccess:MSIL/AsyncRAT" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

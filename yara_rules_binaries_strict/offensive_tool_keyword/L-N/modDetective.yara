@@ -10,7 +10,7 @@ rule modDetective
     strings:
         // Description: modDetective is a small Python tool that chronologizes files based on modification time in order to investigate recent system activity. This can be used in red team engagements and CTFs in order to pinpoint where escalation and attack vectors may exist. This is especially true in CTFs. in which files associated with the challenges often have a much newer modification date than standard files that exist from install.
         // Reference: https://github.com/itsKindred/modDetective
-        $string1 = /modDetective/ nocase ascii wide
+        $string1 = "modDetective" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

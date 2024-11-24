@@ -10,13 +10,13 @@ rule FakeCmdLine
     strings:
         // Description: Simple demonstration (C source code and compiled .exe) of a less-known (but documented) behavior of CreateProcess() function. Effectively you can put any string into the child process Command Line field.
         // Reference: https://github.com/gtworek/PSBits/tree/master/FakeCmdLine
-        $string1 = /\/FakeCmdLine/ nocase ascii wide
+        $string1 = "/FakeCmdLine" nocase ascii wide
         // Description: Simple demonstration (C source code and compiled .exe) of a less-known (but documented) behavior of CreateProcess() function. Effectively you can put any string into the child process Command Line field.
         // Reference: https://github.com/gtworek/PSBits/tree/master/FakeCmdLine
         $string2 = /\\FakeCmdLine/ nocase ascii wide
         // Description: Simple demonstration (C source code and compiled .exe) of a less-known (but documented) behavior of CreateProcess() function. Effectively you can put any string into the child process Command Line field.
         // Reference: https://github.com/gtworek/PSBits/tree/master/FakeCmdLine
-        $string3 = /ExeToLaunch\sStringToBePutAsCmdline/ nocase ascii wide
+        $string3 = "ExeToLaunch StringToBePutAsCmdline" nocase ascii wide
         // Description: Simple demonstration (C source code and compiled .exe) of a less-known (but documented) behavior of CreateProcess() function. Effectively you can put any string into the child process Command Line field.
         // Reference: https://github.com/gtworek/PSBits/tree/master/FakeCmdLine
         $string4 = /FakeCmdLine\./ nocase ascii wide

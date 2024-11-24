@@ -25,10 +25,10 @@ rule goZulipC2
         $string5 = /goZulipC2\.go/ nocase ascii wide
         // Description: C2 leveraging Zulip Messaging Platform as Backend.
         // Reference: https://github.com/n1k7l4i/goZulipC2
-        $string6 = /goZulipC2\-main/ nocase ascii wide
+        $string6 = "goZulipC2-main" nocase ascii wide
         // Description: C2 leveraging Zulip Messaging Platform as Backend.
         // Reference: https://github.com/n1k7l4i/goZulipC2
-        $string7 = /n1k7l4i\/goZulipC2/ nocase ascii wide
+        $string7 = "n1k7l4i/goZulipC2" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

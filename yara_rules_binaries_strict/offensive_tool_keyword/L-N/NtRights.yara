@@ -10,7 +10,7 @@ rule NtRights
     strings:
         // Description: tool for adding privileges from the commandline
         // Reference: https://github.com/gtworek/PSBits/tree/master/NtRights
-        $string1 = /\/NtRights\// nocase ascii wide
+        $string1 = "/NtRights/" nocase ascii wide
         // Description: tool for adding privileges from the commandline
         // Reference: https://github.com/gtworek/PSBits/tree/master/NtRights
         $string2 = /\\NtRights\\/ nocase ascii wide

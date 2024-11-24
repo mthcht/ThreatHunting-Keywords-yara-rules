@@ -34,13 +34,13 @@ rule CLR_Injection
         $string8 = /\\CLR\-Injection\-main/ nocase ascii wide
         // Description: Use CLR to inject all the .NET apps
         // Reference: https://github.com/3gstudent/CLR-Injection
-        $string9 = /3gstudent\/CLR\-Injection/ nocase ascii wide
+        $string9 = "3gstudent/CLR-Injection" nocase ascii wide
         // Description: Use CLR to inject all the .NET apps
         // Reference: https://github.com/3gstudent/CLR-Injection
-        $string10 = /695d04c8162644e98cb0e68926b1cc9f47398e0ddd86255453c26b7619c88f10/ nocase ascii wide
+        $string10 = "695d04c8162644e98cb0e68926b1cc9f47398e0ddd86255453c26b7619c88f10" nocase ascii wide
         // Description: Use CLR to inject all the .NET apps
         // Reference: https://github.com/3gstudent/CLR-Injection
-        $string11 = /6cbd17824d093c835adebf81d9d2e3c1fd56db6dcec461c1cf72f0e3b5ba52f5/ nocase ascii wide
+        $string11 = "6cbd17824d093c835adebf81d9d2e3c1fd56db6dcec461c1cf72f0e3b5ba52f5" nocase ascii wide
         // Description: Use CLR to inject all the .NET apps
         // Reference: https://github.com/3gstudent/CLR-Injection
         $string12 = /https\:\/\/raw\.githubusercontent\.com\/.{0,1000}\/msg_x64\.dll/ nocase ascii wide
@@ -58,10 +58,10 @@ rule CLR_Injection
         $string16 = /REG\.EXE\sADD\s.{0,1000}\s\/VE\s\/T\sREG_SZ\s\/D\s.{0,1000}\\msg_x64\.dll/ nocase ascii wide
         // Description: Use CLR to inject all the .NET apps
         // Reference: https://github.com/3gstudent/CLR-Injection
-        $string17 = /wmic\sENVIRONMENT\screate\sname\=\"COR_ENABLE_PROFILING\"\,username\=\"\%username\%\"\,VariableValue\=\"1\"/ nocase ascii wide
+        $string17 = "wmic ENVIRONMENT create name=\"COR_ENABLE_PROFILING\",username=\"%username%\",VariableValue=\"1\"" nocase ascii wide
         // Description: Use CLR to inject all the .NET apps
         // Reference: https://github.com/3gstudent/CLR-Injection
-        $string18 = /wmic\sENVIRONMENT\screate\sname\=\"COR_PROFILER\"\,username\=\"\%username\%\"\,VariableValue\=\"\{11111111\-1111\-1111\-1111\-111111111111\}\"/ nocase ascii wide
+        $string18 = /wmic\sENVIRONMENT\screate\sname\=\\"COR_PROFILER\\"\,username\=\\"\%username\%\\"\,VariableValue\=\\"\{11111111\-1111\-1111\-1111\-111111111111\}\\"/ nocase ascii wide
 
     condition:
         any of them

@@ -10,7 +10,7 @@ rule WSUSpendu
     strings:
         // Description: At BlackHat USA 2015. the WSUSpect attack scenario has been released.Approximately at the same time. some french engineers have been wondering if it would be possible to use a compromised WSUS server to extend the compromise to its clients. similarly to this WSUSpect attack. After letting this topic rest for almost two years. we've been able. at Alsid and ANSSI. to demonstrate this attack.
         // Reference: https://github.com/AlsidOfficial/WSUSpendu
-        $string1 = /WSUSpendu/ nocase ascii wide
+        $string1 = "WSUSpendu" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

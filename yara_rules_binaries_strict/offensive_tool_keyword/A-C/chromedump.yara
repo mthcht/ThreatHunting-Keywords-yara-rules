@@ -10,7 +10,7 @@ rule chromedump
     strings:
         // Description: ChromeDump is a small tool to dump all JavaScript and other ressources going through the browser
         // Reference: https://github.com/g4l4drim/ChromeDump
-        $string1 = /\/ChromeDump\// nocase ascii wide
+        $string1 = "/ChromeDump/" nocase ascii wide
         // Description: ChromeDump is a small tool to dump all JavaScript and other ressources going through the browser
         // Reference: https://github.com/g4l4drim/ChromeDump
         $string2 = /\/dumpweb\.log/ nocase ascii wide

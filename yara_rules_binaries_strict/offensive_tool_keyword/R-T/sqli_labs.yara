@@ -10,7 +10,7 @@ rule sqli_labs
     strings:
         // Description: SQLI-LABS is a platform to learn SQLI Following labs are covered for GET and POST scenarios:
         // Reference: https://github.com/Audi-1/sqli-labs
-        $string1 = /Sqli\-lab/ nocase ascii wide
+        $string1 = "Sqli-lab" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

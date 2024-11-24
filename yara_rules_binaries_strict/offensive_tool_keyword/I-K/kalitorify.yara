@@ -10,7 +10,7 @@ rule kalitorify
     strings:
         // Description: kalitorify is a shell script for Kali Linux which use iptables settings to create a Transparent Proxy through the Tor Network. the program also allows you to perform various checks like checking the Tor Exit Node (i.e. your public IP when you are under Tor proxy). or if Tor has been configured correctly checking service and network settings.
         // Reference: https://github.com/brainfucksec/kalitorify
-        $string1 = /kalitorify/ nocase ascii wide
+        $string1 = "kalitorify" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

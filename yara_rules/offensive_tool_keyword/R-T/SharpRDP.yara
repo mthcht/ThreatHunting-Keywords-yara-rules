@@ -10,10 +10,10 @@ rule SharpRDP
     strings:
         // Description: Remote Desktop Protocol .NET Console Application for Authenticated Command Execution
         // Reference: https://github.com/0xthirteen/SharpRDP
-        $string1 = /\s\sExecute\scommand\selevated\sthrough\sRun\sDialog/ nocase ascii wide
+        $string1 = "  Execute command elevated through Run Dialog" nocase ascii wide
         // Description: Remote Desktop Protocol .NET Console Application for Authenticated Command Execution
         // Reference: https://github.com/0xthirteen/SharpRDP
-        $string2 = /\s\sExecute\scommand\selevated\sthrough\stask\smanager/ nocase ascii wide
+        $string2 = "  Execute command elevated through task manager" nocase ascii wide
         // Description: Remote Desktop Protocol .NET Console Application for Authenticated Command Execution
         // Reference: https://github.com/0xthirteen/SharpRDP
         $string3 = /\.exe\scomputername\=.{0,1000}\scommand\=.{0,1000}\susername\=.{0,1000}\spassword\=.{0,1000}\s\snla\=true/ nocase ascii wide
@@ -34,7 +34,7 @@ rule SharpRDP
         $string8 = /\.exe\scomputername\=.{0,1000}\scommand\=.{0,1000}\susername\=.{0,1000}\spassword\=.{0,1000}\sexec\=cmd/ nocase ascii wide
         // Description: Remote Desktop Protocol .NET Console Application for Authenticated Command Execution
         // Reference: https://github.com/0xthirteen/SharpRDP
-        $string9 = /\.WriteLine\(\"SharpRDP\"\)/ nocase ascii wide
+        $string9 = /\.WriteLine\(\\"SharpRDP\\"\)/ nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
         $string10 = /\/SharpRDP\.exe/ nocase ascii wide
@@ -52,19 +52,19 @@ rule SharpRDP
         $string14 = /\\SharpRDP\\/ nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string15 = /\>SharpRDP\</ nocase ascii wide
+        $string15 = ">SharpRDP<" nocase ascii wide
         // Description: Remote Desktop Protocol .NET Console Application for Authenticated Command Execution
         // Reference: https://github.com/0xthirteen/SharpRDP
-        $string16 = /0xthirteen\/SharpRDP/ nocase ascii wide
+        $string16 = "0xthirteen/SharpRDP" nocase ascii wide
         // Description: Remote Desktop Protocol .NET Console Application for Authenticated Command Execution
         // Reference: https://github.com/0xthirteen/SharpRDP
         $string17 = /Ask\sto\stake\sover\sRDP\ssession\sif\sanother\sused\sis\slogged\sin\s\(workstation\)/ nocase ascii wide
         // Description: Remote Desktop Protocol .NET Console Application for Authenticated Command Execution
         // Reference: https://github.com/0xthirteen/SharpRDP
-        $string18 = /b4726b5d0aa21ed0f06326fcf2f9bd0c6171c76b610287a357710174f06dea52/ nocase ascii wide
+        $string18 = "b4726b5d0aa21ed0f06326fcf2f9bd0c6171c76b610287a357710174f06dea52" nocase ascii wide
         // Description: Remote Desktop Protocol .NET Console Application for Authenticated Command Execution
         // Reference: https://github.com/0xthirteen/SharpRDP
-        $string19 = /F1DF1D0F\-FF86\-4106\-97A8\-F95AAF525C54/ nocase ascii wide
+        $string19 = "F1DF1D0F-FF86-4106-97A8-F95AAF525C54" nocase ascii wide
         // Description: Remote Desktop Protocol .NET Console Application for Authenticated Command Execution
         // Reference: https://github.com/0xthirteen/SharpRDP
         $string20 = /SharpRDP\..{0,1000}\.dll\.bin/ nocase ascii wide
@@ -79,7 +79,7 @@ rule SharpRDP
         $string23 = /SharpRDP\.sln/ nocase ascii wide
         // Description: Remote Desktop Protocol .NET Console Application for Authenticated Command Execution
         // Reference: https://github.com/0xthirteen/SharpRDP
-        $string24 = /SharpRDP\-master/ nocase ascii wide
+        $string24 = "SharpRDP-master" nocase ascii wide
 
     condition:
         any of them

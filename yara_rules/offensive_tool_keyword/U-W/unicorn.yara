@@ -34,7 +34,7 @@ rule unicorn
         $string8 = /ASBBypass\.ps1/ nocase ascii wide
         // Description: Unicorn is a simple tool for using a PowerShell downgrade attack and inject shellcode straight into memory
         // Reference: https://github.com/trustedsec/unicorn
-        $string9 = /trustedsec\/unicorn/ nocase ascii wide
+        $string9 = "trustedsec/unicorn" nocase ascii wide
         // Description: Unicorn is a simple tool for using a PowerShell downgrade attack and inject shellcode straight into memory
         // Reference: https://github.com/trustedsec/unicorn
         $string10 = /unicorn\.py\s/ nocase ascii wide

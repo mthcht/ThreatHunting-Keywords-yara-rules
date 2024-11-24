@@ -10,7 +10,7 @@ rule nikto
     strings:
         // Description: Nikto web server scanner
         // Reference: https://github.com/sullo/nikto
-        $string1 = /\sinstall\snikto/ nocase ascii wide
+        $string1 = " install nikto" nocase ascii wide
         // Description: Nikto web server scanner
         // Reference: https://github.com/sullo/nikto
         $string2 = /\snikto\.pl\s/ nocase ascii wide
@@ -25,13 +25,13 @@ rule nikto
         $string5 = /\/nikto\.pl/ nocase ascii wide
         // Description: Nikto web scanner tool
         // Reference: https://github.com/sullo/nikto
-        $string6 = /\/sullo\/nikto/ nocase ascii wide
+        $string6 = "/sullo/nikto" nocase ascii wide
         // Description: Nikto web server scanner
         // Reference: https://github.com/sullo/nikto
-        $string7 = /nikto\s\-C\sall\s/ nocase ascii wide
+        $string7 = "nikto -C all " nocase ascii wide
         // Description: Nikto web server scanner
         // Reference: https://github.com/sullo/nikto
-        $string8 = /nikto\/program/ nocase ascii wide
+        $string8 = "nikto/program" nocase ascii wide
         // Description: Nikto web scanner tool
         // Reference: https://github.com/sullo/nikto
         $string9 = /perl\snikto\.pl\s\-h/ nocase ascii wide
@@ -40,10 +40,10 @@ rule nikto
         $string10 = /program\/replay\.pl/ nocase ascii wide
         // Description: Nikto web server scanner
         // Reference: https://github.com/sullo/nikto
-        $string11 = /sullo\/nikto/ nocase ascii wide
+        $string11 = "sullo/nikto" nocase ascii wide
         // Description: Nikto web server scanner
         // Reference: https://github.com/sullo/nikto
-        $string12 = /nikto\s\-/ nocase ascii wide
+        $string12 = "nikto -" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

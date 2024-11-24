@@ -10,19 +10,19 @@ rule pywerview
     strings:
         // Description: A partial Python rewriting of PowerSploit PowerView
         // Reference: https://github.com/the-useless-one/pywerview
-        $string1 = /\/pywerview/ nocase ascii wide
+        $string1 = "/pywerview" nocase ascii wide
         // Description: A partial Python rewriting of PowerSploit PowerView
         // Reference: https://github.com/the-useless-one/pywerview
-        $string2 = /invoke\-checklocaladminaccess/ nocase ascii wide
+        $string2 = "invoke-checklocaladminaccess" nocase ascii wide
         // Description: A partial Python rewriting of PowerSploit PowerView
         // Reference: https://github.com/the-useless-one/pywerview
-        $string3 = /invoke\-eventhunter/ nocase ascii wide
+        $string3 = "invoke-eventhunter" nocase ascii wide
         // Description: A partial Python rewriting of PowerSploit PowerView
         // Reference: https://github.com/the-useless-one/pywerview
-        $string4 = /invoke\-processhunter/ nocase ascii wide
+        $string4 = "invoke-processhunter" nocase ascii wide
         // Description: A partial Python rewriting of PowerSploit PowerView
         // Reference: https://github.com/the-useless-one/pywerview
-        $string5 = /invoke\-userhunter/ nocase ascii wide
+        $string5 = "invoke-userhunter" nocase ascii wide
         // Description: A partial Python rewriting of PowerSploit PowerView
         // Reference: https://github.com/the-useless-one/pywerview
         $string6 = /pywerview\.py/ nocase ascii wide

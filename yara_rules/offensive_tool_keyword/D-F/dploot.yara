@@ -10,7 +10,7 @@ rule dploot
     strings:
         // Description: DPAPI looting remotely in Python
         // Reference: https://github.com/zblurx/dploot
-        $string1 = /\s\-m\srdrleakdiag\s\-M\smasterkeys/ nocase ascii wide
+        $string1 = " -m rdrleakdiag -M masterkeys" nocase ascii wide
         // Description: DPAPI looting remotely in Python
         // Reference: https://github.com/zblurx/dploot
         $string2 = /\/dploot\.git/ nocase ascii wide
@@ -22,10 +22,10 @@ rule dploot
         $string4 = /decrypt_chrome_password\(/ nocase ascii wide
         // Description: DPAPI looting remotely in Python
         // Reference: https://github.com/zblurx/dploot
-        $string5 = /dploot\s\-/ nocase ascii wide
+        $string5 = "dploot -" nocase ascii wide
         // Description: DPAPI looting remotely in Python
         // Reference: https://github.com/zblurx/dploot
-        $string6 = /dploot\ssccm\s\-d/ nocase ascii wide
+        $string6 = "dploot sccm -d" nocase ascii wide
         // Description: DPAPI looting remotely in Python
         // Reference: https://github.com/zblurx/dploot
         $string7 = /dploot.{0,1000}backupkey/ nocase ascii wide
@@ -76,31 +76,31 @@ rule dploot
         $string22 = /dploot\/releases\/download\/.{0,1000}\/dploot/ nocase ascii wide
         // Description: DPAPI looting remotely in Python
         // Reference: https://github.com/zblurx/dploot
-        $string23 = /dploot_linux_adm64/ nocase ascii wide
+        $string23 = "dploot_linux_adm64" nocase ascii wide
         // Description: DPAPI looting remotely in Python
         // Reference: https://github.com/zblurx/dploot
         $string24 = /dploot\-main\.zip/ nocase ascii wide
         // Description: DPAPI looting remotely in Python
         // Reference: https://github.com/zblurx/dploot
-        $string25 = /Dump\slooted\sSCCM\ssecrets\sto\sspecified\sdirectory/ nocase ascii wide
+        $string25 = "Dump looted SCCM secrets to specified directory" nocase ascii wide
         // Description: DPAPI looting remotely in Python
         // Reference: https://github.com/zblurx/dploot
-        $string26 = /Dump\sSCCM\ssecrets\sfrom\sWMI\srequests\sresults/ nocase ascii wide
+        $string26 = "Dump SCCM secrets from WMI requests results" nocase ascii wide
         // Description: DPAPI looting remotely in Python
         // Reference: https://github.com/zblurx/dploot
-        $string27 = /import\sDPLootSMBConnection/ nocase ascii wide
+        $string27 = "import DPLootSMBConnection" nocase ascii wide
         // Description: DPAPI looting remotely in Python
         // Reference: https://github.com/zblurx/dploot
-        $string28 = /install\sdploot/ nocase ascii wide
+        $string28 = "install dploot" nocase ascii wide
         // Description: DPAPI looting remotely in Python
         // Reference: https://github.com/zblurx/dploot
-        $string29 = /lsassy\s\-/ nocase ascii wide
+        $string29 = "lsassy -" nocase ascii wide
         // Description: DPAPI looting remotely in Python
         // Reference: https://github.com/zblurx/dploot
-        $string30 = /Password\:Waza1234/ nocase ascii wide
+        $string30 = "Password:Waza1234" nocase ascii wide
         // Description: DPAPI looting remotely in Python
         // Reference: https://github.com/zblurx/dploot
-        $string31 = /zblurx\/dploot/ nocase ascii wide
+        $string31 = "zblurx/dploot" nocase ascii wide
 
     condition:
         any of them

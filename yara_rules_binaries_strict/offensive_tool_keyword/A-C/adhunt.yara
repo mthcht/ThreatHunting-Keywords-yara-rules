@@ -43,7 +43,7 @@ rule adhunt
         $string11 = /delegation_unconstrained_objects\.txt/ nocase ascii wide
         // Description: Tool for exploiting Active Directory Enviroments - enumeration
         // Reference: https://github.com/karendm/ADHunt
-        $string12 = /karendm\/ADHunt/ nocase ascii wide
+        $string12 = "karendm/ADHunt" nocase ascii wide
         // Description: Tool for exploiting Active Directory Enviroments - enumeration
         // Reference: https://github.com/karendm/ADHunt
         $string13 = /objects_constrained_delegation_full\.txt/ nocase ascii wide

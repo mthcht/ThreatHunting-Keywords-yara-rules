@@ -31,7 +31,7 @@ rule RagingRotator
         $string7 = /\\RagingRotator\.go/ nocase ascii wide
         // Description: A tool for carrying out brute force attacks against Office 365 with built in IP rotation use AWS gateways.
         // Reference: https://github.com/nickzer0/RagingRotator
-        $string8 = /nickzer0\/RagingRotator/ nocase ascii wide
+        $string8 = "nickzer0/RagingRotator" nocase ascii wide
         // Description: A tool for carrying out brute force attacks against Office 365 with built in IP rotation use AWS gateways.
         // Reference: https://github.com/nickzer0/RagingRotator
         $string9 = /RagingRotator\-main\./ nocase ascii wide

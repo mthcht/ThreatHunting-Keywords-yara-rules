@@ -13,7 +13,7 @@ rule Crack_allDBs
         $string1 = /Crack\-allDBs\.git/ nocase ascii wide
         // Description: bruteforce script for various DB
         // Reference: https://github.com/d3ckx1/Crack-allDBs
-        $string2 = /Crack\-allDBs\-main/ nocase ascii wide
+        $string2 = "Crack-allDBs-main" nocase ascii wide
         // Description: bruteforce script for various DB
         // Reference: https://github.com/d3ckx1/Crack-allDBs
         $string3 = /crack\-allDBs\-v1\.py/ nocase ascii wide
@@ -22,7 +22,7 @@ rule Crack_allDBs
         $string4 = /crack\-allDBs\-v2\.py/ nocase ascii wide
         // Description: bruteforce script for various DB
         // Reference: https://github.com/d3ckx1/Crack-allDBs
-        $string5 = /d3ckx1\/Crack\-allDBs/ nocase ascii wide
+        $string5 = "d3ckx1/Crack-allDBs" nocase ascii wide
 
     condition:
         any of them

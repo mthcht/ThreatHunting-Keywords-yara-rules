@@ -10,7 +10,7 @@ rule Proxifier
     strings:
         // Description: allows to proxy connections for programs
         // Reference: https://www.proxifier.com/download/
-        $string1 = /\sstop\sProxifierDrv/ nocase ascii wide
+        $string1 = " stop ProxifierDrv" nocase ascii wide
         // Description: allows to proxy connections for programs
         // Reference: https://www.proxifier.com/download/
         $string2 = /\/Proxifier\.app\/Contents\/MacOS\/Proxifier/ nocase ascii wide
@@ -67,7 +67,7 @@ rule Proxifier
         $string19 = /\\Start\sMenu\\Programs\\Proxifier/ nocase ascii wide
         // Description: allows to proxy connections for programs
         // Reference: https://www.proxifier.com/download/
-        $string20 = /\>Proxifier\sSetup\</ nocase ascii wide
+        $string20 = ">Proxifier Setup<" nocase ascii wide
         // Description: allows to proxy connections for programs
         // Reference: https://www.proxifier.com/download/
         $string21 = /com\.initex\.proxifier\.v3\.macos/ nocase ascii wide

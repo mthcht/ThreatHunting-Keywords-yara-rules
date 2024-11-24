@@ -10,7 +10,7 @@ rule RemCom
     strings:
         // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
         // Reference: https://github.com/kavika13/RemCom
-        $string1 = /\s\\\\\\\\localhost\s\/user\:Username\s\/pwd\:Password\s\s\\\"C\:\\\\InstallMe\.bat/ nocase ascii wide
+        $string1 = /\s\\\\\\\\localhost\s\/user\:Username\s\/pwd\:Password\s\s\\\\"C\:\\\\InstallMe\.bat/ nocase ascii wide
         // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
         // Reference: https://github.com/kavika13/RemCom
         $string2 = /\sRemCom\.exe/ nocase ascii wide
@@ -61,37 +61,37 @@ rule RemCom
         $string17 = /\\Remote\sCommand\sExecutor\.sln/ nocase ascii wide
         // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
         // Reference: https://github.com/kavika13/RemCom
-        $string18 = /0d8f28ea01d3866ad7ee4abbdc5bdfd83d41702dcf029584ef30cb0055be8538/ nocase ascii wide
+        $string18 = "0d8f28ea01d3866ad7ee4abbdc5bdfd83d41702dcf029584ef30cb0055be8538" nocase ascii wide
         // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
         // Reference: https://github.com/kavika13/RemCom
-        $string19 = /29548EB7\-5E44\-21F9\-5C82\-15DDDC80449A/ nocase ascii wide
+        $string19 = "29548EB7-5E44-21F9-5C82-15DDDC80449A" nocase ascii wide
         // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
         // Reference: https://github.com/kavika13/RemCom
-        $string20 = /8CC59FFA\-00E0\-0AEA\-59E8\-E780672C3CB3/ nocase ascii wide
+        $string20 = "8CC59FFA-00E0-0AEA-59E8-E780672C3CB3" nocase ascii wide
         // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
         // Reference: https://github.com/kavika13/RemCom
-        $string21 = /C7038612\-8183\-67A7\-8A9C\-1379C2674156/ nocase ascii wide
+        $string21 = "C7038612-8183-67A7-8A9C-1379C2674156" nocase ascii wide
         // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
         // Reference: https://github.com/kavika13/RemCom
-        $string22 = /define\sRemComSVCEXE/ nocase ascii wide
+        $string22 = "define RemComSVCEXE" nocase ascii wide
         // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
         // Reference: https://github.com/kavika13/RemCom
-        $string23 = /eee20962a1056f525bbe1c99c656794511697e510221522e7d62efd943457190/ nocase ascii wide
+        $string23 = "eee20962a1056f525bbe1c99c656794511697e510221522e7d62efd943457190" nocase ascii wide
         // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
         // Reference: https://github.com/kavika13/RemCom
-        $string24 = /kavika13\/RemCom/ nocase ascii wide
+        $string24 = "kavika13/RemCom" nocase ascii wide
         // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
         // Reference: https://github.com/kavika13/RemCom
-        $string25 = /RemCom\s\-\sWin32\sDebug/ nocase ascii wide
+        $string25 = "RemCom - Win32 Debug" nocase ascii wide
         // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
         // Reference: https://github.com/kavika13/RemCom
-        $string26 = /RemCom\s\-\sWin32\sRelease/ nocase ascii wide
+        $string26 = "RemCom - Win32 Release" nocase ascii wide
         // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
         // Reference: https://github.com/kavika13/RemCom
-        $string27 = /RemComSvc\s\-\sWin32\sDebug/ nocase ascii wide
+        $string27 = "RemComSvc - Win32 Debug" nocase ascii wide
         // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
         // Reference: https://github.com/kavika13/RemCom
-        $string28 = /RemComSvc\s\-\sWin32\sRelease/ nocase ascii wide
+        $string28 = "RemComSvc - Win32 Release" nocase ascii wide
 
     condition:
         any of them

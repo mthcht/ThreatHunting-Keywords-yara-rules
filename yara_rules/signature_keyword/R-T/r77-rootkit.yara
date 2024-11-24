@@ -10,7 +10,7 @@ rule r77_rootkit
     strings:
         // Description: Fileless ring 3 rootkit with installer and persistence that hides processes, files, network connections
         // Reference: https://github.com/bytecode77/r77-rootkit
-        $string1 = /Trojan\:Win64\/r77RootKit/ nocase ascii wide
+        $string1 = "Trojan:Win64/r77RootKit" nocase ascii wide
 
     condition:
         any of them

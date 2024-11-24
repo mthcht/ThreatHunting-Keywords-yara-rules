@@ -19,19 +19,19 @@ rule RedGuard
         $string3 = /\/RedGuard\.go/ nocase ascii wide
         // Description: RedGuard is a C2 front flow control tool.Can avoid Blue Teams.AVs.EDRs check.
         // Reference: https://github.com/wikiZ/RedGuard
-        $string4 = /\/RedGuard_32/ nocase ascii wide
+        $string4 = "/RedGuard_32" nocase ascii wide
         // Description: RedGuard is a C2 front flow control tool.Can avoid Blue Teams.AVs.EDRs check.
         // Reference: https://github.com/wikiZ/RedGuard
-        $string5 = /\/RedGuard_64/ nocase ascii wide
+        $string5 = "/RedGuard_64" nocase ascii wide
         // Description: RedGuard is a C2 front flow control tool.Can avoid Blue Teams.AVs.EDRs check.
         // Reference: https://github.com/wikiZ/RedGuard
-        $string6 = /\/wikiZ\/RedGuard/ nocase ascii wide
+        $string6 = "/wikiZ/RedGuard" nocase ascii wide
         // Description: RedGuard is a C2 front flow control tool.Can avoid Blue Teams.AVs.EDRs check.
         // Reference: https://github.com/wikiZ/RedGuard
         $string7 = /\\RedGuard\s\-/ nocase ascii wide
         // Description: RedGuard is a C2 front flow control tool.Can avoid Blue Teams.AVs.EDRs check.
         // Reference: https://github.com/wikiZ/RedGuard
-        $string8 = /866e5289337ab033f89bc57c5274c7ca/ nocase ascii wide
+        $string8 = "866e5289337ab033f89bc57c5274c7ca" nocase ascii wide
         // Description: RedGuard is a C2 front flow control tool.Can avoid Blue Teams.AVs.EDRs check.
         // Reference: https://github.com/wikiZ/RedGuard
         $string9 = /OverrideLHOST\s360\.com/ nocase ascii wide
@@ -40,7 +40,7 @@ rule RedGuard
         $string10 = /RedGuard\.log/ nocase ascii wide
         // Description: RedGuard is a C2 front flow control tool.Can avoid Blue Teams.AVs.EDRs check.
         // Reference: https://github.com/wikiZ/RedGuard
-        $string11 = /RedGuard\/core/ nocase ascii wide
+        $string11 = "RedGuard/core" nocase ascii wide
         // Description: RedGuard is a C2 front flow control tool.Can avoid Blue Teams.AVs.EDRs check.
         // Reference: https://github.com/wikiZ/RedGuard
         $string12 = /RedGuard_x64\.exe/ nocase ascii wide

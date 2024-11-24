@@ -31,7 +31,7 @@ rule SentinelAgent
         $string7 = /TakeDump\s\-SentinelHelper\s.{0,100}\s\-ProcessId\s.{0,100}\s\-User\s.{0,100}\s\-Kernel\s/ nocase ascii wide
         // Description: dump a process with SentinelAgent.exe
         // Reference: https://gist.github.com/adamsvoboda/8e248c6b7fb812af5d04daba141c867e
-        $string8 = /Trying\sto\sdump\sSentinelAgent\sto\s/ nocase ascii wide
+        $string8 = "Trying to dump SentinelAgent to " nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

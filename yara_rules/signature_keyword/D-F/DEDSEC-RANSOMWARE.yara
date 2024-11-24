@@ -10,7 +10,7 @@ rule DEDSEC_RANSOMWARE
     strings:
         // Description: dedsec ransomware
         // Reference: https://github.com/xelroth/DEDSEC-RANSOMWARE
-        $string1 = /Ransom\:Win32\/Dedsec/ nocase ascii wide
+        $string1 = "Ransom:Win32/Dedsec" nocase ascii wide
 
     condition:
         any of them

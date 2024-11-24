@@ -31,16 +31,16 @@ rule TimeException
         $string7 = /\\TimeException\-main/ nocase ascii wide
         // Description: A tool to find folders excluded from AV real-time scanning using a time oracle
         // Reference: https://github.com/bananabr/TimeException
-        $string8 = /30fb8b27a7636a8922aff3018b2b612bf224a17bf7a9c9f2f2a01d4f7754c522/ nocase ascii wide
+        $string8 = "30fb8b27a7636a8922aff3018b2b612bf224a17bf7a9c9f2f2a01d4f7754c522" nocase ascii wide
         // Description: A tool to find folders excluded from AV real-time scanning using a time oracle
         // Reference: https://github.com/bananabr/TimeException
-        $string9 = /bananabr\/TimeException/ nocase ascii wide
+        $string9 = "bananabr/TimeException" nocase ascii wide
         // Description: A tool to find folders excluded from AV real-time scanning using a time oracle
         // Reference: https://github.com/bananabr/TimeException
-        $string10 = /c6a8d755e4764335fa9c5313c6ba641ac9a0228648065667f7d535457dbf0ceb/ nocase ascii wide
+        $string10 = "c6a8d755e4764335fa9c5313c6ba641ac9a0228648065667f7d535457dbf0ceb" nocase ascii wide
         // Description: A tool to find folders excluded from AV real-time scanning using a time oracle
         // Reference: https://github.com/bananabr/TimeException
-        $string11 = /e69f0324\-3afb\-485e\-92c7\-cb097ea47caf/ nocase ascii wide
+        $string11 = "e69f0324-3afb-485e-92c7-cb097ea47caf" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

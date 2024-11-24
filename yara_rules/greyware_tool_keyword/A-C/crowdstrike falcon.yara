@@ -10,10 +10,10 @@ rule crowdstrike_falcon
     strings:
         // Description: suspicious commands executed remotly by crowdstrike agent
         // Reference: N/A
-        $string1 = /runscript\s\-raw\=\`\`\`curl\s/ nocase ascii wide
+        $string1 = "runscript -raw=```curl " nocase ascii wide
         // Description: suspicious commands executed remotly by crowdstrike agent
         // Reference: N/A
-        $string2 = /runscript\s\-raw\=\`\`\`whoami/ nocase ascii wide
+        $string2 = "runscript -raw=```whoami" nocase ascii wide
 
     condition:
         any of them

@@ -19,10 +19,10 @@ rule HadesLdr
         $string3 = /\/scripts\/xor\.py/ nocase ascii wide
         // Description: Shellcode Loader Implementing Indirect Dynamic Syscall - API Hashing - Fileless Shellcode retrieving using Winsock2
         // Reference: https://github.com/CognisysGroup/HadesLdr
-        $string4 = /CognisysGroup\/HadesLdr/ nocase ascii wide
+        $string4 = "CognisysGroup/HadesLdr" nocase ascii wide
         // Description: Shellcode Loader Implementing Indirect Dynamic Syscall - API Hashing - Fileless Shellcode retrieving using Winsock2
         // Reference: https://github.com/CognisysGroup/HadesLdr
-        $string5 = /HadesLdr\-main/ nocase ascii wide
+        $string5 = "HadesLdr-main" nocase ascii wide
         // Description: Shellcode Loader Implementing Indirect Dynamic Syscall - API Hashing - Fileless Shellcode retrieving using Winsock2
         // Reference: https://github.com/CognisysGroup/HadesLdr
         $string6 = /IDSyscall\.exe/ nocase ascii wide
@@ -34,7 +34,7 @@ rule HadesLdr
         $string8 = /IDSyscall\.vcxproj/ nocase ascii wide
         // Description: Shellcode Loader Implementing Indirect Dynamic Syscall - API Hashing - Fileless Shellcode retrieving using Winsock2
         // Reference: https://github.com/CognisysGroup/HadesLdr
-        $string9 = /IDSyscall\/IDSyscall/ nocase ascii wide
+        $string9 = "IDSyscall/IDSyscall" nocase ascii wide
         // Description: Shellcode Loader Implementing Indirect Dynamic Syscall - API Hashing - Fileless Shellcode retrieving using Winsock2
         // Reference: https://github.com/CognisysGroup/HadesLdr
         $string10 = /IDSyscall\\IDSyscall/ nocase ascii wide

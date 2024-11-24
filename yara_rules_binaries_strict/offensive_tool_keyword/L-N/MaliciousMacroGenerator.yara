@@ -10,7 +10,7 @@ rule MaliciousMacroGenerator
     strings:
         // Description: Simple utility design to generate obfuscated macro that also include a AV / Sandboxes escape mechanism.
         // Reference: https://github.com/Mr-Un1k0d3r/MaliciousMacroGenerator
-        $string1 = /MaliciousMacroGenerator/ nocase ascii wide
+        $string1 = "MaliciousMacroGenerator" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

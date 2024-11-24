@@ -10,13 +10,13 @@ rule RemotePC
     strings:
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
-        $string1 = /\s\/f\s\/im\sRemotePCS/ nocase ascii wide
+        $string1 = " /f /im RemotePCS" nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
-        $string2 = /\screate\sRPCService\sstart\=/ nocase ascii wide
+        $string2 = " create RPCService start=" nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
-        $string3 = /\screate\sViewerService\sstart\=auto/ nocase ascii wide
+        $string3 = " create ViewerService start=auto" nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
         $string4 = /\s\-i\sremotepc\.deb/ nocase ascii wide
@@ -25,7 +25,7 @@ rule RemotePC
         $string5 = /\sRemotePC\.exe/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
-        $string6 = /\sRemotePCAttendedService\s/ nocase ascii wide
+        $string6 = " RemotePCAttendedService " nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
         $string7 = /\sremotepclauncher\.exe/ nocase ascii wide
@@ -46,7 +46,7 @@ rule RemotePC
         $string12 = /\sRPCWinXP\.exe/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
-        $string13 = /\"RemotePCAttendedService\"/ nocase ascii wide
+        $string13 = "\"RemotePCAttendedService\"" nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
         $string14 = /\.remotepc\.com/ nocase ascii wide
@@ -493,7 +493,7 @@ rule RemotePC
         $string161 = /login\.remotepc\.com/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
-        $string162 = /net\sstart\sRPCPerformanceService/ nocase ascii wide
+        $string162 = "net start RPCPerformanceService" nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
         $string163 = /program\sfiles\s\(x86\)\\remotepc\\/ nocase ascii wide
@@ -526,7 +526,7 @@ rule RemotePC
         $string172 = /RemotePCAttended\.exe/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
-        $string173 = /RemotePCAttendedService/ nocase ascii wide
+        $string173 = "RemotePCAttendedService" nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
         $string174 = /RemotePCBlackScreenApp\.exe/ nocase ascii wide
@@ -619,7 +619,7 @@ rule RemotePC
         $string203 = /RPCKeyMouseHandler\.txt/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
-        $string204 = /RPCPerformanceHealthCheck/ nocase ascii wide
+        $string204 = "RPCPerformanceHealthCheck" nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
         $string205 = /rpcperformanceservice\.exe/ nocase ascii wide
@@ -643,43 +643,43 @@ rule RemotePC
         $string211 = /RPCsuiteLaunch\.txt/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
-        $string212 = /rule\sname\=\"TransferServer\"/ nocase ascii wide
+        $string212 = "rule name=\"TransferServer\"" nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
-        $string213 = /sc\s\sdelete\s\"RPCService\"/ nocase ascii wide
+        $string213 = "sc  delete \"RPCService\"" nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
-        $string214 = /sc\s\sstart\s\"RPCService\"/ nocase ascii wide
+        $string214 = "sc  start \"RPCService\"" nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
-        $string215 = /sc\s\sstop\s\"RPCService\"/ nocase ascii wide
+        $string215 = "sc  stop \"RPCService\"" nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
-        $string216 = /sc\screate\sRPCService\sstart\=auto/ nocase ascii wide
+        $string216 = "sc create RPCService start=auto" nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
-        $string217 = /sc\screate\sRPCService/ nocase ascii wide
+        $string217 = "sc create RPCService" nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
-        $string218 = /sc\sdelete\s\"RPCService\"/ nocase ascii wide
+        $string218 = "sc delete \"RPCService\"" nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
-        $string219 = /sc\sdelete\sViewerService/ nocase ascii wide
+        $string219 = "sc delete ViewerService" nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
-        $string220 = /sc\sstart\sViewerService/ nocase ascii wide
+        $string220 = "sc start ViewerService" nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
-        $string221 = /sc\sstop\s\"RPCService\"/ nocase ascii wide
+        $string221 = "sc stop \"RPCService\"" nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
-        $string222 = /sc\sstop\sViewerService/ nocase ascii wide
+        $string222 = "sc stop ViewerService" nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
-        $string223 = /StartRPCPerformanceService/ nocase ascii wide
+        $string223 = "StartRPCPerformanceService" nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
-        $string224 = /StartRPCPerformanceServiceOnStart/ nocase ascii wide
+        $string224 = "StartRPCPerformanceServiceOnStart" nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
         $string225 = /static\.remotepc\.com/ nocase ascii wide

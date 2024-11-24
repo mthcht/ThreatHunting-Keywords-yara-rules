@@ -61,16 +61,16 @@ rule QuickAssist
         $string17 = /\\WinSxS\\amd64_microsoft\-windows\-quickassist_/ nocase ascii wide
         // Description: Sharing remote desktop with Microsoft Quick assit
         // Reference: https://apps.microsoft.com/detail/9p7bp5vnwkx5
-        $string18 = /\<Provider\sName\=\'Quick\sAssist\'\/\>/ nocase ascii wide
+        $string18 = "<Provider Name='Quick Assist'/>" nocase ascii wide
         // Description: Sharing remote desktop with Microsoft Quick assit
         // Reference: https://apps.microsoft.com/detail/9p7bp5vnwkx5
-        $string19 = /\>Quick\sAssist\sComponent\</ nocase ascii wide
+        $string19 = ">Quick Assist Component<" nocase ascii wide
         // Description: Sharing remote desktop with Microsoft Quick assit
         // Reference: https://apps.microsoft.com/detail/9p7bp5vnwkx5
         $string20 = /Assistencia\sRapida\sInstaller\.exe/ nocase ascii wide
         // Description: Sharing remote desktop with Microsoft Quick assit
         // Reference: https://apps.microsoft.com/detail/9p7bp5vnwkx5
-        $string21 = /Command\:\sbeginsharing\sResult\:\s\{\"responsename\"\:\"beginsharing\"/ nocase ascii wide
+        $string21 = /Command\:\sbeginsharing\sResult\:\s\{\\"responsename\\"\:\\"beginsharing\\"/ nocase ascii wide
         // Description: Sharing remote desktop with Microsoft Quick assit
         // Reference: https://apps.microsoft.com/detail/9p7bp5vnwkx5
         $string22 = /contactsupportrelays4\-prod\.eastus\.cloudapp\.azure\.com/ nocase ascii wide
@@ -82,13 +82,13 @@ rule QuickAssist
         $string24 = /https\:\/\/remoteassistance\.support\.services\.microsoft\.com\// nocase ascii wide
         // Description: Sharing remote desktop with Microsoft Quick assit
         // Reference: https://apps.microsoft.com/detail/9p7bp5vnwkx5
-        $string25 = /Incoming\scmd\sMessage\:\s\{\"command\"\:\"beginsharing\"/ nocase ascii wide
+        $string25 = /Incoming\scmd\sMessage\:\s\{\\"command\\"\:\\"beginsharing\\"/ nocase ascii wide
         // Description: Sharing remote desktop with Microsoft Quick assit
         // Reference: https://apps.microsoft.com/detail/9p7bp5vnwkx5
-        $string26 = /Info\:\s\{\"command\"\:\"forwardtoagent\"\,\s\"context\"\:\{\"command\"\:\"requestresponse\"\,\"context\"\:\{\"responsename\"\:\"beginsharing/ nocase ascii wide
+        $string26 = /Info\:\s\{\\"command\\"\:\\"forwardtoagent\\"\,\s\\"context\\"\:\{\\"command\\"\:\\"requestresponse\\"\,\\"context\\"\:\{\\"responsename\\"\:\\"beginsharing/ nocase ascii wide
         // Description: Sharing remote desktop with Microsoft Quick assit
         // Reference: https://apps.microsoft.com/detail/9p7bp5vnwkx5
-        $string27 = /Info\:\s\{\"command\"\:\"rdp_native_event\"\,\s\"context\"\:\{\s\"eventname\"\:\"rdp_native_relay_connection_succeeded\"\}\s/ nocase ascii wide
+        $string27 = /Info\:\s\{\\"command\\"\:\\"rdp_native_event\\"\,\s\\"context\\"\:\{\s\\"eventname\\"\:\\"rdp_native_relay_connection_succeeded\\"\}\s/ nocase ascii wide
         // Description: Sharing remote desktop with Microsoft Quick assit
         // Reference: https://apps.microsoft.com/detail/9p7bp5vnwkx5
         $string28 = /QuickAssist\.exe\slaunched/ nocase ascii wide

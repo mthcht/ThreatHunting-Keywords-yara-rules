@@ -16,7 +16,7 @@ rule spinningteacup
         $string2 = /\svbarandomizer\.py/ nocase ascii wide
         // Description: identify different parts of a vba script and perform substitutions
         // Reference: https://github.com/trustedsec/The_Shelf
-        $string3 = /\"This\sis\sa\smacro\sobfuscating\sframework\"/ nocase ascii wide
+        $string3 = "\"This is a macro obfuscating framework\"" nocase ascii wide
         // Description: identify different parts of a vba script and perform substitutions
         // Reference: https://github.com/trustedsec/The_Shelf
         $string4 = /\.py\s.{0,1000}\.vba\s.{0,1000}\.vba\s\s\-\-norandomvariables\s\-\-math/ nocase ascii wide
@@ -46,16 +46,16 @@ rule spinningteacup
         $string12 = /\\vbarandomizer\.py/ nocase ascii wide
         // Description: identify different parts of a vba script and perform substitutions
         // Reference: https://github.com/trustedsec/The_Shelf
-        $string13 = /577b85630ecfd64d6817de11c4abf256512d299f70998c8c531202272123b202/ nocase ascii wide
+        $string13 = "577b85630ecfd64d6817de11c4abf256512d299f70998c8c531202272123b202" nocase ascii wide
         // Description: identify different parts of a vba script and perform substitutions
         // Reference: https://github.com/trustedsec/The_Shelf
-        $string14 = /attempt\sto\srandomize\sscript\swithout\ssetting\sall\srandomizations\smethods/ nocase ascii wide
+        $string14 = "attempt to randomize script without setting all randomizations methods" nocase ascii wide
         // Description: identify different parts of a vba script and perform substitutions
         // Reference: https://github.com/trustedsec/The_Shelf
         $string15 = /from\srandomizers\.vbarandomizer\simport\svbaRandomizer/ nocase ascii wide
         // Description: identify different parts of a vba script and perform substitutions
         // Reference: https://github.com/trustedsec/The_Shelf
-        $string16 = /your\sscript\shas\sbeen\sobfuscated\sand\soutput\sto\s/ nocase ascii wide
+        $string16 = "your script has been obfuscated and output to " nocase ascii wide
 
     condition:
         any of them

@@ -13,7 +13,7 @@ rule Smbtouch_Scanner
         $string1 = /HackTool\.Equation/ nocase ascii wide
         // Description: Smbtouch detect whether the target is vulnerable of one of these vulnerabilities: ETERNALBLUE - ETERNALCHAMPION - ETERNALROMANCE - ETERNALSYNERGY
         // Reference: https://github.com/3gstudent/Smbtouch-Scanner
-        $string2 = /Trojan\:Win32\/Eqtonex\!rfn/ nocase ascii wide
+        $string2 = "Trojan:Win32/Eqtonex!rfn" nocase ascii wide
 
     condition:
         any of them

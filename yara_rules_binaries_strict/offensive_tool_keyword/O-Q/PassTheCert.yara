@@ -10,7 +10,7 @@ rule PassTheCert
     strings:
         // Description: tool to authenticate to an LDAP/S server with a certificate through Schannel
         // Reference: https://github.com/AlmondOffSec/PassTheCert
-        $string1 = /\s\-just\-dc\-ntlm\s\-just\-dc\-user\skrbtgt\s/ nocase ascii wide
+        $string1 = " -just-dc-ntlm -just-dc-user krbtgt " nocase ascii wide
         // Description: tool to authenticate to an LDAP/S server with a certificate through Schannel
         // Reference: https://github.com/AlmondOffSec/PassTheCert
         $string2 = /\s\-\-server\s.{0,100}\s\-\-cert\-path\s.{0,100}\.pfx\s\-\-elevate\s\-\-target\s.{0,100}\s\-\-restore\s/ nocase ascii wide
@@ -46,19 +46,19 @@ rule PassTheCert
         $string12 = /\\PassTheCert\.sln/ nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string13 = /\>PassTheCert\</ nocase ascii wide
+        $string13 = ">PassTheCert<" nocase ascii wide
         // Description: tool to authenticate to an LDAP/S server with a certificate through Schannel
         // Reference: https://github.com/AlmondOffSec/PassTheCert
-        $string14 = /51f92adcb4397e57d3809d3fa76bbf2cfb8ca772551b755ea8b0b3a6ba316334/ nocase ascii wide
+        $string14 = "51f92adcb4397e57d3809d3fa76bbf2cfb8ca772551b755ea8b0b3a6ba316334" nocase ascii wide
         // Description: tool to authenticate to an LDAP/S server with a certificate through Schannel
         // Reference: https://github.com/AlmondOffSec/PassTheCert
-        $string15 = /AlmondOffSec\/PassTheCert/ nocase ascii wide
+        $string15 = "AlmondOffSec/PassTheCert" nocase ascii wide
         // Description: tool to authenticate to an LDAP/S server with a certificate through Schannel
         // Reference: https://github.com/AlmondOffSec/PassTheCert
-        $string16 = /b0c674b496620842bae84b3e11231c4913ba57e9c4aa9458e670c153a66be810/ nocase ascii wide
+        $string16 = "b0c674b496620842bae84b3e11231c4913ba57e9c4aa9458e670c153a66be810" nocase ascii wide
         // Description: tool to authenticate to an LDAP/S server with a certificate through Schannel
         // Reference: https://github.com/AlmondOffSec/PassTheCert
-        $string17 = /BBCD0202\-C086\-437C\-A606\-015456F90C46/ nocase ascii wide
+        $string17 = "BBCD0202-C086-437C-A606-015456F90C46" nocase ascii wide
         // Description: tool to authenticate to an LDAP/S server with a certificate through Schannel
         // Reference: https://github.com/AlmondOffSec/PassTheCert
         $string18 = /can\snow\simpersonate\susers\son\s.{0,100}\svia\sS4U2Proxy/ nocase ascii wide

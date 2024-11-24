@@ -43,16 +43,16 @@ rule COM_Hunter
         $string11 = /\\COM\-Hunter\.sln/ nocase ascii wide
         // Description: COM-hunter is a COM Hijacking persistnce tool written in C#
         // Reference: https://github.com/nickvourd/COM-Hunter
-        $string12 = /09323E4D\-BE0F\-452A\-9CA8\-B07D2CFA9804/ nocase ascii wide
+        $string12 = "09323E4D-BE0F-452A-9CA8-B07D2CFA9804" nocase ascii wide
         // Description: COM-hunter is a COM Hijacking persistnce tool written in C#
         // Reference: https://github.com/nickvourd/COM-Hunter
         $string13 = /COM\-Hunter_v.{0,1000}\.zip/ nocase ascii wide
         // Description: COM-hunter is a COM Hijacking persistnce tool written in C#
         // Reference: https://github.com/nickvourd/COM-Hunter
-        $string14 = /COM\-Hunter\-main/ nocase ascii wide
+        $string14 = "COM-Hunter-main" nocase ascii wide
         // Description: COM-hunter is a COM Hijacking persistnce tool written in C#
         // Reference: https://github.com/nickvourd/COM-Hunter
-        $string15 = /nickvourd\/COM\-Hunter/ nocase ascii wide
+        $string15 = "nickvourd/COM-Hunter" nocase ascii wide
 
     condition:
         any of them

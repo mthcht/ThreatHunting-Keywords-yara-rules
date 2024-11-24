@@ -31,19 +31,19 @@ rule advanced_ip_scanner
         $string7 = /\\Start\sMenu\\Programs\\Advanced\sIP\sScanner\sv2/ nocase ascii wide
         // Description: The program shows all network devices. gives you access to shared folders. provides remote control of computers (via RDP and Radmin) and can even remotely switch computers off. It is easy to use and runs as a portable edition (abused by TA)
         // Reference: https://www.huntandhackett.com/blog/advanced-ip-scanner-the-preferred-scanner-in-the-apt-toolbox
-        $string8 = /\>Advanced\sIP\sScanner\sSetup\</ nocase ascii wide
+        $string8 = ">Advanced IP Scanner Setup<" nocase ascii wide
         // Description: The program shows all network devices. gives you access to shared folders. provides remote control of computers (via RDP and Radmin) and can even remotely switch computers off. It is easy to use and runs as a portable edition (abused by TA)
         // Reference: https://www.huntandhackett.com/blog/advanced-ip-scanner-the-preferred-scanner-in-the-apt-toolbox
-        $string9 = /\>Advanced\sIP\sScanner\</ nocase ascii wide
+        $string9 = ">Advanced IP Scanner<" nocase ascii wide
         // Description: The program shows all network devices. gives you access to shared folders. provides remote control of computers (via RDP and Radmin) and can even remotely switch computers off. It is easy to use and runs as a portable edition (abused by TA)
         // Reference: https://www.huntandhackett.com/blog/advanced-ip-scanner-the-preferred-scanner-in-the-apt-toolbox
-        $string10 = /26d5748ffe6bd95e3fee6ce184d388a1a681006dc23a0f08d53c083c593c193b/ nocase ascii wide
+        $string10 = "26d5748ffe6bd95e3fee6ce184d388a1a681006dc23a0f08d53c083c593c193b" nocase ascii wide
         // Description: The program shows all network devices. gives you access to shared folders. provides remote control of computers (via RDP and Radmin) and can even remotely switch computers off. It is easy to use and runs as a portable edition (abused by TA)
         // Reference: https://www.huntandhackett.com/blog/advanced-ip-scanner-the-preferred-scanner-in-the-apt-toolbox
-        $string11 = /26d5748ffe6bd95e3fee6ce184d388a1a681006dc23a0f08d53c083c593c193b/ nocase ascii wide
+        $string11 = "26d5748ffe6bd95e3fee6ce184d388a1a681006dc23a0f08d53c083c593c193b" nocase ascii wide
         // Description: The program shows all network devices. gives you access to shared folders. provides remote control of computers (via RDP and Radmin) and can even remotely switch computers off. It is easy to use and runs as a portable edition (abused by TA)
         // Reference: https://www.huntandhackett.com/blog/advanced-ip-scanner-the-preferred-scanner-in-the-apt-toolbox
-        $string12 = /Advanced\sIP\sScanner/ nocase ascii wide
+        $string12 = "Advanced IP Scanner" nocase ascii wide
         // Description: The program shows all network devices. gives you access to shared folders. provides remote control of computers (via RDP and Radmin) and can even remotely switch computers off. It is easy to use and runs as a portable edition (abused by TA)
         // Reference: https://www.huntandhackett.com/blog/advanced-ip-scanner-the-preferred-scanner-in-the-apt-toolbox
         $string13 = /Advanced_IP_Scanner.{0,1000}\.exe/ nocase ascii wide

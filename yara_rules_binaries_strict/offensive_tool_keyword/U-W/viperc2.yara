@@ -28,13 +28,13 @@ rule viperc2
         $string6 = /\/RGPerson\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string7 = /\/root\/viper\// nocase ascii wide
+        $string7 = "/root/viper/" nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string8 = /\/root\/viper\/dist/ nocase ascii wide
+        $string8 = "/root/viper/dist" nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string9 = /\/SHELLCODELOADER/ nocase ascii wide
+        $string9 = "/SHELLCODELOADER" nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
         $string10 = /\/stinger_client\.py/ nocase ascii wide
@@ -46,16 +46,16 @@ rule viperc2
         $string12 = /\/viper\.sln/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string13 = /\/viper\/Docker\// nocase ascii wide
+        $string13 = "/viper/Docker/" nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string14 = /\/viper\/Docker\/nginxconfig\/htpasswd/ nocase ascii wide
+        $string14 = "/viper/Docker/nginxconfig/htpasswd" nocase ascii wide
         // Description: vipermsf Metasploit - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/vipermsf
-        $string15 = /\/vipermsf/ nocase ascii wide
+        $string15 = "/vipermsf" nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string16 = /\/viperpython/ nocase ascii wide
+        $string16 = "/viperpython" nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
         $string17 = /\/viperpython\.git/ nocase ascii wide
@@ -64,7 +64,7 @@ rule viperc2
         $string18 = /_GetNetLoggedon\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string19 = /a7469955bff5e489d2270d9b389064e1/ nocase ascii wide
+        $string19 = "a7469955bff5e489d2270d9b389064e1" nocase ascii wide
         // Description: vipermsf Metasploit - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/vipermsf
         $string20 = /auto_pass_the_hash\./ nocase ascii wide
@@ -82,7 +82,7 @@ rule viperc2
         $string24 = /BrowserGhost\-N.{0,100}\.exe/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string25 = /cd40dbcdae84b1c8606f29342066547069ed5a33/ nocase ascii wide
+        $string25 = "cd40dbcdae84b1c8606f29342066547069ed5a33" nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
         $string26 = /Collection_ArchiveCollectedData_ArchiveViaCustomMethod\.py/ nocase ascii wide
@@ -289,13 +289,13 @@ rule viperc2
         $string93 = /filemsf\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string94 = /GeneratesShellcodeFromPEorDll/ nocase ascii wide
+        $string94 = "GeneratesShellcodeFromPEorDll" nocase ascii wide
         // Description: vipermsf Metasploit - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/vipermsf
         $string95 = /GetWindowsCredentials\.exe/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string96 = /http\:\/\/vpsip\:28888/ nocase ascii wide
+        $string96 = "http://vpsip:28888" nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
         $string97 = /HttpProxyScan_Log4J2\.py/ nocase ascii wide
@@ -367,19 +367,19 @@ rule viperc2
         $string119 = /MimikatzOnLocal\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string120 = /mitmdump\s\-/ nocase ascii wide
+        $string120 = "mitmdump -" nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
         $string121 = /msf\-json\-rpc\./ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string122 = /MsfModule/ nocase ascii wide
+        $string122 = "MsfModule" nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
         $string123 = /msfmodule\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string124 = /MsfModuleAsFunction/ nocase ascii wide
+        $string124 = "MsfModuleAsFunction" nocase ascii wide
         // Description: vipermsf Metasploit - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/vipermsf
         $string125 = /nextnet\.exe/ nocase ascii wide
@@ -526,10 +526,10 @@ rule viperc2
         $string172 = /viper\-dev\.conf/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string173 = /viperpython\-dev/ nocase ascii wide
+        $string173 = "viperpython-dev" nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string174 = /viperpython\-main/ nocase ascii wide
+        $string174 = "viperpython-main" nocase ascii wide
         // Description: vipermsf Metasploit - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/vipermsf
         $string175 = /viperzip\.exe/ nocase ascii wide

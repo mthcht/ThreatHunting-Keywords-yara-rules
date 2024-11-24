@@ -22,10 +22,10 @@ rule Alcatraz
         $string4 = /\/Alcatraz\/files\/.{0,100}\/Alcatraz\.zip/ nocase ascii wide
         // Description: x64 binary obfuscator
         // Reference: https://github.com/weak1337/Alcatraz
-        $string5 = /\/Alcatraz\/x64/ nocase ascii wide
+        $string5 = "/Alcatraz/x64" nocase ascii wide
         // Description: x64 binary obfuscator
         // Reference: https://github.com/weak1337/Alcatraz
-        $string6 = /\/Alcatraz\-gui/ nocase ascii wide
+        $string6 = "/Alcatraz-gui" nocase ascii wide
         // Description: x64 binary obfuscator
         // Reference: https://github.com/weak1337/Alcatraz
         $string7 = /\/obfuscator\/obfuscator\./ nocase ascii wide
@@ -40,7 +40,7 @@ rule Alcatraz
         $string10 = /Alcatraz\.vcxproj/ nocase ascii wide
         // Description: x64 binary obfuscator
         // Reference: https://github.com/weak1337/Alcatraz
-        $string11 = /Alcatraz\/obfuscator/ nocase ascii wide
+        $string11 = "Alcatraz/obfuscator" nocase ascii wide
         // Description: x64 binary obfuscator
         // Reference: https://github.com/weak1337/Alcatraz
         $string12 = /Alcatraz\-master\.zip/ nocase ascii wide
@@ -52,7 +52,7 @@ rule Alcatraz
         $string14 = /obfuscator\.cpp/ nocase ascii wide
         // Description: x64 binary obfuscator
         // Reference: https://github.com/weak1337/Alcatraz
-        $string15 = /weak1337\/Alcatraz/ nocase ascii wide
+        $string15 = "weak1337/Alcatraz" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

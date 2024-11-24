@@ -10,10 +10,10 @@ rule Invoke_WCMDump
     strings:
         // Description: PowerShell script to dump Windows credentials from the Credential Manager Invoke-WCMDump enumerates Windows credentials in the Credential Manager and then extracts available information about each one. Passwords are retrieved for Generic type credentials. but can not be retrived by the same method for Domain type credentials. Credentials are only returned for the current user
         // Reference: https://github.com/peewpw/Invoke-WCMDump
-        $string1 = /5a0976fef89e32ddcf62c790f9bb4c174a79004e627c3521604f46bf5cc7bea2/ nocase ascii wide
+        $string1 = "5a0976fef89e32ddcf62c790f9bb4c174a79004e627c3521604f46bf5cc7bea2" nocase ascii wide
         // Description: PowerShell script to dump Windows credentials from the Credential Manager Invoke-WCMDump enumerates Windows credentials in the Credential Manager and then extracts available information about each one. Passwords are retrieved for Generic type credentials. but can not be retrived by the same method for Domain type credentials. Credentials are only returned for the current user
         // Reference: https://github.com/peewpw/Invoke-WCMDump
-        $string2 = /Invoke\-WCMDump/ nocase ascii wide
+        $string2 = "Invoke-WCMDump" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

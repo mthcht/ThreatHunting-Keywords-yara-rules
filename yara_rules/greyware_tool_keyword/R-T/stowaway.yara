@@ -10,16 +10,16 @@ rule stowaway
     strings:
         // Description: Stowaway -- Multi-hop Proxy Tool for pentesters
         // Reference: https://github.com/ph4ntonn/Stowaway
-        $string1 = /\/linux_x64_admin/ nocase ascii wide
+        $string1 = "/linux_x64_admin" nocase ascii wide
         // Description: Stowaway -- Multi-hop Proxy Tool for pentesters
         // Reference: https://github.com/ph4ntonn/Stowaway
-        $string2 = /\/linux_x64_agent/ nocase ascii wide
+        $string2 = "/linux_x64_agent" nocase ascii wide
         // Description: Stowaway -- Multi-hop Proxy Tool for pentesters
         // Reference: https://github.com/ph4ntonn/Stowaway
-        $string3 = /\/linux_x86_admin/ nocase ascii wide
+        $string3 = "/linux_x86_admin" nocase ascii wide
         // Description: Stowaway -- Multi-hop Proxy Tool for pentesters
         // Reference: https://github.com/ph4ntonn/Stowaway
-        $string4 = /\/linux_x86_agent/ nocase ascii wide
+        $string4 = "/linux_x86_agent" nocase ascii wide
 
     condition:
         any of them

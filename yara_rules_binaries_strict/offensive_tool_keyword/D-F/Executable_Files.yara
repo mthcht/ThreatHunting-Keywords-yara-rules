@@ -25,7 +25,7 @@ rule Executable_Files
         $string5 = /\/Rubeus\.exe/ nocase ascii wide
         // Description: Database for custom made as well as publicly available stage-2 or beacons or stageless payloads used by loaders/stage-1/stagers or for further usage of C2 as well
         // Reference: https://github.com/reveng007/Executable_Files
-        $string6 = /\/XOR_b64_encrypted\// nocase ascii wide
+        $string6 = "/XOR_b64_encrypted/" nocase ascii wide
         // Description: Database for custom made as well as publicly available stage-2 or beacons or stageless payloads used by loaders/stage-1/stagers or for further usage of C2 as well
         // Reference: https://github.com/reveng007/Executable_Files
         $string7 = /\\exfiltrate\.exe/ nocase ascii wide
@@ -88,10 +88,10 @@ rule Executable_Files
         $string26 = /RegistryTinker\.exe/ nocase ascii wide
         // Description: Database for custom made as well as publicly available stage-2 or beacons or stageless payloads used by loaders/stage-1/stagers or for further usage of C2 as well
         // Reference: https://github.com/reveng007/Executable_Files
-        $string27 = /rev_kali_192_168_0_110_1234/ nocase ascii wide
+        $string27 = "rev_kali_192_168_0_110_1234" nocase ascii wide
         // Description: Database for custom made as well as publicly available stage-2 or beacons or stageless payloads used by loaders/stage-1/stagers or for further usage of C2 as well
         // Reference: https://github.com/reveng007/Executable_Files
-        $string28 = /reveng007\/Executable_Files/ nocase ascii wide
+        $string28 = "reveng007/Executable_Files" nocase ascii wide
         // Description: Database for custom made as well as publicly available stage-2 or beacons or stageless payloads used by loaders/stage-1/stagers or for further usage of C2 as well
         // Reference: https://github.com/reveng007/Executable_Files
         $string29 = /Rubeus\.exe\s/ nocase ascii wide

@@ -37,10 +37,10 @@ rule C2_Server
         $string9 = /192\.168\.0\.110\:1234/ nocase ascii wide
         // Description: C2 server to connect to a victim machine via reverse shell
         // Reference: https://github.com/reveng007/C2_Server
-        $string10 = /C\&C\s\=\>\s/ nocase ascii wide
+        $string10 = "C&C => " nocase ascii wide
         // Description: C2 server to connect to a victim machine via reverse shell
         // Reference: https://github.com/reveng007/C2_Server
-        $string11 = /C2_Server\-main/ nocase ascii wide
+        $string11 = "C2_Server-main" nocase ascii wide
         // Description: C2 server to connect to a victim machine via reverse shell
         // Reference: https://github.com/reveng007/C2_Server
         $string12 = /chrome_creds\.txt/ nocase ascii wide
@@ -49,25 +49,25 @@ rule C2_Server
         $string13 = /Invoke\-WebRequest\shttps\:\/\/tinyurl\.com\// nocase ascii wide
         // Description: C2 server to connect to a victim machine via reverse shell
         // Reference: https://github.com/reveng007/C2_Server
-        $string14 = /keylog_dump/ nocase ascii wide
+        $string14 = "keylog_dump" nocase ascii wide
         // Description: C2 server to connect to a victim machine via reverse shell
         // Reference: https://github.com/reveng007/C2_Server
-        $string15 = /keylog_off/ nocase ascii wide
+        $string15 = "keylog_off" nocase ascii wide
         // Description: C2 server to connect to a victim machine via reverse shell
         // Reference: https://github.com/reveng007/C2_Server
-        $string16 = /keylog_on/ nocase ascii wide
+        $string16 = "keylog_on" nocase ascii wide
         // Description: C2 server to connect to a victim machine via reverse shell
         // Reference: https://github.com/reveng007/C2_Server
         $string17 = /lnx_keylogger\.py/ nocase ascii wide
         // Description: C2 server to connect to a victim machine via reverse shell
         // Reference: https://github.com/reveng007/C2_Server
-        $string18 = /reveng007\/C2_Server/ nocase ascii wide
+        $string18 = "reveng007/C2_Server" nocase ascii wide
         // Description: C2 server to connect to a victim machine via reverse shell
         // Reference: https://github.com/reveng007/C2_Server
-        $string19 = /spoof_wani/ nocase ascii wide
+        $string19 = "spoof_wani" nocase ascii wide
         // Description: C2 server to connect to a victim machine via reverse shell
         // Reference: https://github.com/reveng007/C2_Server
-        $string20 = /spoof_wlan_creds/ nocase ascii wide
+        $string20 = "spoof_wlan_creds" nocase ascii wide
         // Description: C2 server to connect to a victim machine via reverse shell
         // Reference: https://github.com/reveng007/C2_Server
         $string21 = /win_chrome_password_extractor\.py/ nocase ascii wide

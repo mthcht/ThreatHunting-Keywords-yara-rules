@@ -22,7 +22,7 @@ rule HookDetector
         $string4 = /\\HookDetector\.exe/ nocase ascii wide
         // Description: Detects hooked Native API functions in the current process indicating the presence of EDR
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/HookDetector
-        $string5 = /master\/HookDetector/ nocase ascii wide
+        $string5 = "master/HookDetector" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

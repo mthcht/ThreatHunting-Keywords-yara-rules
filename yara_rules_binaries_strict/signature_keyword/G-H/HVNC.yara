@@ -10,7 +10,7 @@ rule HVNC
     strings:
         // Description: Standalone HVNC Client & Server Coded in C++ (Modified Tinynuke)
         // Reference: https://github.com/Meltedd/HVNC
-        $string1 = /TrojanSpy\:Win32\/Tinukebot/ nocase ascii wide
+        $string1 = "TrojanSpy:Win32/Tinukebot" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

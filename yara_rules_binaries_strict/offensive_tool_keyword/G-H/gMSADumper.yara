@@ -10,13 +10,13 @@ rule gMSADumper
     strings:
         // Description: Lists who can read any gMSA password blobs and parses them if the current user has access.
         // Reference: https://github.com/micahvandeusen/gMSADumper
-        $string1 = /\/gMSADumper/ nocase ascii wide
+        $string1 = "/gMSADumper" nocase ascii wide
         // Description: Lists who can read any gMSA password blobs and parses them if the current user has access.
         // Reference: https://github.com/micahvandeusen/gMSADumper
         $string2 = /gMSADumper\.py/ nocase ascii wide
         // Description: Lists who can read any gMSA password blobs and parses them if the current user has access.
         // Reference: https://github.com/micahvandeusen/gMSADumper
-        $string3 = /micahvandeusen\/gMSADumper/ nocase ascii wide
+        $string3 = "micahvandeusen/gMSADumper" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

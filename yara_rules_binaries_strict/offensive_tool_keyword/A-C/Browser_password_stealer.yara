@@ -22,7 +22,7 @@ rule Browser_password_stealer
         $string4 = /Browser\-password\-stealer\.git/ nocase ascii wide
         // Description: This python program gets all the saved passwords + credit cards and bookmarks from chromium based browsers supports chromium 80 and above!
         // Reference: https://github.com/henry-richard7/Browser-password-stealer
-        $string5 = /Browser\-password\-stealer\-master/ nocase ascii wide
+        $string5 = "Browser-password-stealer-master" nocase ascii wide
         // Description: This python program gets all the saved passwords + credit cards and bookmarks from chromium based browsers supports chromium 80 and above!
         // Reference: https://github.com/henry-richard7/Browser-password-stealer
         $string6 = /google\-chrome\/cookies\.txt/ nocase ascii wide
@@ -49,7 +49,7 @@ rule Browser_password_stealer
         $string13 = /google\-chrome\\login_data\.txt/ nocase ascii wide
         // Description: This python program gets all the saved passwords + credit cards and bookmarks from chromium based browsers supports chromium 80 and above!
         // Reference: https://github.com/henry-richard7/Browser-password-stealer
-        $string14 = /henry\-richard7\/Browser\-password\-stealer/ nocase ascii wide
+        $string14 = "henry-richard7/Browser-password-stealer" nocase ascii wide
         // Description: This python program gets all the saved passwords + credit cards and bookmarks from chromium based browsers supports chromium 80 and above!
         // Reference: https://github.com/henry-richard7/Browser-password-stealer
         $string15 = /microsoft\-edge\/cookies\.txt/ nocase ascii wide

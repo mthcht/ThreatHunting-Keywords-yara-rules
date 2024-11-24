@@ -22,10 +22,10 @@ rule Office_Persistence
         $string4 = /\#\sPop\sup\sthe\scalculator\swhen\syou\sstart\swinword\.exe/ nocase ascii wide
         // Description: Use powershell to test Office-based persistence methods
         // Reference: https://github.com/3gstudent/Office-Persistence
-        $string5 = /\$calcwllx64\s\=\s\"TVqQAAMAAAAEAAAA\/\/8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\+AAAAA4/ nocase ascii wide
+        $string5 = /\$calcwllx64\s\=\s\\"TVqQAAMAAAAEAAAA\/\/8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\+AAAAA4/ nocase ascii wide
         // Description: Use powershell to test Office-based persistence methods
         // Reference: https://github.com/3gstudent/Office-Persistence
-        $string6 = /\$calcwllx86\s\=\s\"TVqQAAMAAAAEAAAA\/\/8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAyAAAAA4/ nocase ascii wide
+        $string6 = /\$calcwllx86\s\=\s\\"TVqQAAMAAAAEAAAA\/\/8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAyAAAAA4/ nocase ascii wide
         // Description: Use powershell to test Office-based persistence methods
         // Reference: https://github.com/3gstudent/Office-Persistence
         $string7 = /\/Office\-Persistence\.git/ nocase ascii wide
@@ -40,10 +40,10 @@ rule Office_Persistence
         $string10 = /\\OfficePersistence\.ps1/ nocase ascii wide
         // Description: Use powershell to test Office-based persistence methods
         // Reference: https://github.com/3gstudent/Office-Persistence
-        $string11 = /3gstudent\/Office\-Persistence/ nocase ascii wide
+        $string11 = "3gstudent/Office-Persistence" nocase ascii wide
         // Description: Use powershell to test Office-based persistence methods
         // Reference: https://github.com/3gstudent/Office-Persistence
-        $string12 = /63a6bad64de560056ed496b6b7103056e4bdaf19f49011120997a5b87d141940/ nocase ascii wide
+        $string12 = "63a6bad64de560056ed496b6b7103056e4bdaf19f49011120997a5b87d141940" nocase ascii wide
 
     condition:
         any of them

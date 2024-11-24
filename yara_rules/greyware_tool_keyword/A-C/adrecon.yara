@@ -46,19 +46,19 @@ rule adrecon
         $string12 = /\\DefaultPasswordPolicy\.csv/ nocase ascii wide
         // Description: ADRecon is a tool which gathers information about the Active Directory and generates a report which can provide a holistic picture of the current state of the target AD environment.
         // Reference: https://github.com/adrecon/ADRecon
-        $string13 = /309a6b123ebdbb92766addeb8326311b86c26a21eb5cad30c8cde6c237019046/ nocase ascii wide
+        $string13 = "309a6b123ebdbb92766addeb8326311b86c26a21eb5cad30c8cde6c237019046" nocase ascii wide
         // Description: ADRecon is a tool which gathers information about the Active Directory and generates a report which can provide a holistic picture of the current state of the target AD environment.
         // Reference: https://github.com/adrecon/ADRecon
         $string14 = /ADRecon\s.{0,1000}\sby\sPrashant\sMahajan\s\(\@prashant3535\)/ nocase ascii wide
         // Description: ADRecon is a tool which gathers information about the Active Directory and generates a report which can provide a holistic picture of the current state of the target AD environment.
         // Reference: https://github.com/adrecon/ADRecon
-        $string15 = /ADRecon\s\-OutputDir\s/ nocase ascii wide
+        $string15 = "ADRecon -OutputDir " nocase ascii wide
         // Description: ADRecon is a tool which gathers information about the Active Directory and generates a report which can provide a holistic picture of the current state of the target AD environment.
         // Reference: https://github.com/adrecon/ADRecon
         $string16 = /ADRecon\.ps1/ nocase ascii wide
         // Description: ADRecon is a tool which gathers information about the Active Directory and generates a report which can provide a holistic picture of the current state of the target AD environment.
         // Reference: https://github.com/adrecon/ADRecon
-        $string17 = /adrecon\/ADRecon/ nocase ascii wide
+        $string17 = "adrecon/ADRecon" nocase ascii wide
         // Description: ADRecon is a tool which gathers information about the Active Directory and generates a report which can provide a holistic picture of the current state of the target AD environment.
         // Reference: https://github.com/adrecon/ADRecon
         $string18 = /ADRecon\-Console\-Log\.txt/ nocase ascii wide
@@ -67,7 +67,7 @@ rule adrecon
         $string19 = /ADRecon\-master\.zip/ nocase ascii wide
         // Description: ADRecon is a tool which gathers information about the Active Directory and generates a report which can provide a holistic picture of the current state of the target AD environment.
         // Reference: https://github.com/adrecon/ADRecon
-        $string20 = /ADRecon\-Report\-/ nocase ascii wide
+        $string20 = "ADRecon-Report-" nocase ascii wide
         // Description: ADRecon is a tool which gathers information about the Active Directory and generates a report which can provide a holistic picture of the current state of the target AD environment.
         // Reference: https://github.com/adrecon/ADRecon
         $string21 = /\-ADRecon\-Report\.xlsx/ nocase ascii wide
@@ -76,10 +76,10 @@ rule adrecon
         $string22 = /Get\-LAPSPasswords\.ps1/ nocase ascii wide
         // Description: ADRecon is a tool which gathers information about the Active Directory and generates a report which can provide a holistic picture of the current state of the target AD environment.
         // Reference: https://github.com/adrecon/ADRecon
-        $string23 = /Invoke\-ADRecon/ nocase ascii wide
+        $string23 = "Invoke-ADRecon" nocase ascii wide
         // Description: ADRecon is a tool which gathers information about the Active Directory and generates a report which can provide a holistic picture of the current state of the target AD environment.
         // Reference: https://github.com/adrecon/ADRecon
-        $string24 = /Invoke\-UserImpersonation\s\-Credential\s/ nocase ascii wide
+        $string24 = "Invoke-UserImpersonation -Credential " nocase ascii wide
 
     condition:
         any of them

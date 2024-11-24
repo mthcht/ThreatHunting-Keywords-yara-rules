@@ -91,13 +91,13 @@ rule OffensiveLua
         $string27 = /downloadexec_UACbypass\.lua/ nocase ascii wide
         // Description: Offensive Lua is a collection of offensive security scripts written in Lua with FFI
         // Reference: https://github.com/hackerhouse-opensource/OffensiveLua
-        $string28 = /hackerhouse\-opensource\/OffensiveLua/ nocase ascii wide
+        $string28 = "hackerhouse-opensource/OffensiveLua" nocase ascii wide
         // Description: Offensive Lua is a collection of offensive security scripts written in Lua with FFI
         // Reference: https://github.com/hackerhouse-opensource/OffensiveLua
         $string29 = /http\:\/\/127\.0\.0\.1\/Renge_x64\.exe/ nocase ascii wide
         // Description: Offensive Lua is a collection of offensive security scripts written in Lua with FFI
         // Reference: https://github.com/hackerhouse-opensource/OffensiveLua
-        $string30 = /OffensiveLua\-main/ nocase ascii wide
+        $string30 = "OffensiveLua-main" nocase ascii wide
         // Description: Offensive Lua is a collection of offensive security scripts written in Lua with FFI
         // Reference: https://github.com/hackerhouse-opensource/OffensiveLua
         $string31 = /uac_bypass_bluetooth_win10\.lua/ nocase ascii wide

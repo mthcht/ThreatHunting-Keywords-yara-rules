@@ -13,16 +13,16 @@ rule dialupass
         $string1 = /\\Dialupass\.cfg/ nocase ascii wide
         // Description: This utility enumerates all dialup/VPN entries on your computers. and displays their logon details: User Name. Password. and Domain. You can use it to recover a lost password of your Internet connection or VPN.
         // Reference: https://www.nirsoft.net/utils/dialupass.html
-        $string2 = /1e3ec12fbe9825c1eb044994d27c6fb97e5b2cee352d114b0ae6f8862e2a2dd5/ nocase ascii wide
+        $string2 = "1e3ec12fbe9825c1eb044994d27c6fb97e5b2cee352d114b0ae6f8862e2a2dd5" nocase ascii wide
         // Description: This utility enumerates all dialup/VPN entries on your computers. and displays their logon details: User Name. Password. and Domain. You can use it to recover a lost password of your Internet connection or VPN.
         // Reference: https://www.nirsoft.net/utils/dialupass.html
-        $string3 = /598555a7e053c7456ee8a06a892309386e69d473c73284de9bbc0ba73b17e70a/ nocase ascii wide
+        $string3 = "598555a7e053c7456ee8a06a892309386e69d473c73284de9bbc0ba73b17e70a" nocase ascii wide
         // Description: This utility enumerates all dialup/VPN entries on your computers. and displays their logon details: User Name. Password. and Domain. You can use it to recover a lost password of your Internet connection or VPN.
         // Reference: https://www.nirsoft.net/utils/dialupass.html
-        $string4 = /Dialup\/VPN\sPassword\sRecovery/ nocase ascii wide
+        $string4 = "Dialup/VPN Password Recovery" nocase ascii wide
         // Description: This utility enumerates all dialup/VPN entries on your computers. and displays their logon details: User Name. Password. and Domain. You can use it to recover a lost password of your Internet connection or VPN.
         // Reference: https://www.nirsoft.net/utils/dialupass.html
-        $string5 = /Dialup\/VPN\sPasswords\sList/ nocase ascii wide
+        $string5 = "Dialup/VPN Passwords List" nocase ascii wide
         // Description: This utility enumerates all dialup/VPN entries on your computers. and displays their logon details: User Name. Password. and Domain. You can use it to recover a lost password of your Internet connection or VPN.
         // Reference: https://www.nirsoft.net/utils/dialupass.html
         $string6 = /Dialupass\.exe/ nocase ascii wide

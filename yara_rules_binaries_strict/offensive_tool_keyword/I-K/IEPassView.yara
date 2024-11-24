@@ -31,16 +31,16 @@ rule IEPassView
         $string7 = /_iepv\.zip\./ nocase ascii wide
         // Description: IE PassView scans all Internet Explorer passwords in your system and display them on the main window.
         // Reference: https://www.nirsoft.net/utils/internet_explorer_password.html
-        $string8 = /\>IE\sPass\sView\</ nocase ascii wide
+        $string8 = ">IE Pass View<" nocase ascii wide
         // Description: IE PassView scans all Internet Explorer passwords in your system and display them on the main window.
         // Reference: https://www.nirsoft.net/utils/internet_explorer_password.html
-        $string9 = /\>IE\sPasswords\sViewer\</ nocase ascii wide
+        $string9 = ">IE Passwords Viewer<" nocase ascii wide
         // Description: IE PassView scans all Internet Explorer passwords in your system and display them on the main window.
         // Reference: https://www.nirsoft.net/utils/internet_explorer_password.html
-        $string10 = /70aaf2b367b97fa35d599a6db4d08875206ef18c99d8c8c5b5f25e4f5509931a/ nocase ascii wide
+        $string10 = "70aaf2b367b97fa35d599a6db4d08875206ef18c99d8c8c5b5f25e4f5509931a" nocase ascii wide
         // Description: IE PassView scans all Internet Explorer passwords in your system and display them on the main window.
         // Reference: https://www.nirsoft.net/utils/internet_explorer_password.html
-        $string11 = /Description\'\>IE\sPasswords\sViewer/ nocase ascii wide
+        $string11 = "Description'>IE Passwords Viewer" nocase ascii wide
         // Description: IE PassView scans all Internet Explorer passwords in your system and display them on the main window.
         // Reference: https://www.nirsoft.net/utils/internet_explorer_password.html
         $string12 = /iepv\.exe\s\/stext\s/ nocase ascii wide

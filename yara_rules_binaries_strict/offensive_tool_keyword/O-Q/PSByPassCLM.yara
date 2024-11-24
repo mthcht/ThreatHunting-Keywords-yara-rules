@@ -10,7 +10,7 @@ rule PSByPassCLM
     strings:
         // Description: Bypass for PowerShell Constrained Language Mode
         // Reference: https://github.com/padovah4ck/PSByPassCLM
-        $string1 = /PSByPassCLM/ nocase ascii wide
+        $string1 = "PSByPassCLM" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

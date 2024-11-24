@@ -22,7 +22,7 @@ rule Jormungandr
         $string4 = /COFFLdr\.exe/ nocase ascii wide
         // Description: Jormungandr is a kernel implementation of a COFF loader allowing kernel developers to load and execute their COFFs in the kernel
         // Reference: https://github.com/Idov31/Jormungandr
-        $string5 = /Idov31\/Jormungandr/ nocase ascii wide
+        $string5 = "Idov31/Jormungandr" nocase ascii wide
         // Description: Jormungandr is a kernel implementation of a COFF loader allowing kernel developers to load and execute their COFFs in the kernel
         // Reference: https://github.com/Idov31/Jormungandr
         $string6 = /Jormungandr\.cpp/ nocase ascii wide
@@ -31,7 +31,7 @@ rule Jormungandr
         $string7 = /Jormungandr\.exe/ nocase ascii wide
         // Description: Jormungandr is a kernel implementation of a COFF loader allowing kernel developers to load and execute their COFFs in the kernel
         // Reference: https://github.com/Idov31/Jormungandr
-        $string8 = /Jormungandr\-master/ nocase ascii wide
+        $string8 = "Jormungandr-master" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

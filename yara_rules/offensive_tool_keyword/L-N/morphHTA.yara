@@ -10,7 +10,7 @@ rule morphHTA
     strings:
         // Description: morphHTA - Morphing Cobalt Strikes evil.HTA payload generator
         // Reference: https://github.com/vysecurity/morphHTA
-        $string1 = /morphHTA/ nocase ascii wide
+        $string1 = "morphHTA" nocase ascii wide
 
     condition:
         any of them

@@ -16,10 +16,10 @@ rule webBrowserPassView
         $string2 = /PSWTool\.Win32\.PassView/ nocase ascii wide
         // Description: WebBrowserPassView is a password recovery tool that reveals the passwords stored by the following Web browsers: Internet Explorer (Version 4.0 - 11.0). Mozilla Firefox (All Versions). Google Chrome. Safari. and Opera. This tool can be used to recover your lost/forgotten password of any Website. including popular Web sites. like Facebook. Yahoo. Google. and GMail. as long as the password is stored by your Web Browser.
         // Reference: https://www.nirsoft.net/utils/web_browser_password.html
-        $string3 = /PUA\:Win32\/PassShow/ nocase ascii wide
+        $string3 = "PUA:Win32/PassShow" nocase ascii wide
         // Description: WebBrowserPassView is a password recovery tool that reveals the passwords stored by the following Web browsers: Internet Explorer (Version 4.0 - 11.0). Mozilla Firefox (All Versions). Google Chrome. Safari. and Opera. This tool can be used to recover your lost/forgotten password of any Website. including popular Web sites. like Facebook. Yahoo. Google. and GMail. as long as the password is stored by your Web Browser.
         // Reference: https://www.nirsoft.net/utils/web_browser_password.html
-        $string4 = /Riskware\/WebBrowserPassView/ nocase ascii wide
+        $string4 = "Riskware/WebBrowserPassView" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

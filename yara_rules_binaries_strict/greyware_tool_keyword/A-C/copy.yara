@@ -17,6 +17,9 @@ rule copy
         // Description: copy the NTDS.dit file from a Volume Shadow Copy which contains sensitive Active Directory data including password hashes for all domain users
         // Reference: N/A
         $string3 = /copy\s.{0,100}NTDS\\NTDS\.dit.{0,100}Temp/ nocase ascii wide
+        // Description: copy dll from Programdata to a remote computer
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string4 = /copy.{0,100}C\:\\ProgramData\\.{0,100}\.dll.{0,100}\\c\$\\/ nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

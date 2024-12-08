@@ -20,6 +20,9 @@ rule ren
         // Description: automated sticky keys backdoor + credentials harvesting
         // Reference: https://github.com/l3m0n/WinPirate
         $string4 = /ren\ssethcold\.exe\ssethc\.exe/ nocase ascii wide
+        // Description: renaming some AV sys files - allows bypass
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string5 = /ren\sSophosED\.sys\sSophosED\.sys\.old/ nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

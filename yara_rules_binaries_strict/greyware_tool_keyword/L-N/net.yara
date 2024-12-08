@@ -8,792 +8,900 @@ rule net
         rule_category = "greyware_tool_keyword"
 
     strings:
+        // Description: command used in the Dispossessor ransomware group notes
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string1 = " localgroup Administrators localadm /ADD " nocase ascii wide
         // Description: Enumerate local accounts
         // Reference: https://thedfirreport.com/2023/02/06/collect-exfiltrate-sleep-repeat/
-        $string1 = /\\net\.exe\\"\saccounts/ nocase ascii wide
+        $string2 = /\\net\.exe\\"\saccounts/ nocase ascii wide
         // Description: showing users in a privileged group. 
-        // Reference: N/A
-        $string2 = /\\net\.exe.{0,100}\slocalgroup\sadmin/ nocase ascii wide
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string3 = /\\net\.exe.{0,100}\slocalgroup\sadmin/ nocase ascii wide
         // Description: List active SMB session
         // Reference: N/A
-        $string3 = /\\net\.exe.{0,100}\ssessions/ nocase ascii wide
+        $string4 = /\\net\.exe.{0,100}\ssessions/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string4 = /\\net\.exe.{0,100}\sview\s.{0,100}\/domain/ nocase ascii wide
+        $string5 = /\\net\.exe.{0,100}\sview\s.{0,100}\/domain/ nocase ascii wide
         // Description: List active SMB session
         // Reference: N/A
-        $string5 = /\\net1\ssessions/ nocase ascii wide
+        $string6 = /\\net1\ssessions/ nocase ascii wide
         // Description: Query users from domain admins in current domain
         // Reference: N/A
-        $string6 = "net  group \"domain admins\" /domain" nocase ascii wide
+        $string7 = "net  group \"domain admins\" /domain" nocase ascii wide
         // Description: Query users from domain admins in current domain
         // Reference: N/A
-        $string7 = "net  group \"Domain Computers\" /domain" nocase ascii wide
+        $string8 = "net  group \"Domain Computers\" /domain" nocase ascii wide
         // Description: Query users from domain admins in current domain
         // Reference: N/A
-        $string8 = "net  group \"domain computers\" /domain" nocase ascii wide
+        $string9 = "net  group \"domain computers\" /domain" nocase ascii wide
         // Description: Query users from domain admins in current domain
         // Reference: N/A
-        $string9 = "net  group \"enterprise admins\" /domain" nocase ascii wide
+        $string10 = "net  group \"enterprise admins\" /domain" nocase ascii wide
         // Description: potential CVE-2024-37085 exploitation
         // Reference: https://www.microsoft.com/en-us/security/blog/2024/07/29/ransomware-operators-exploit-esxi-hypervisor-vulnerability-for-mass-encryption/
-        $string10 = "net  group \"ESX Admins\" /domain /add" nocase ascii wide
+        $string11 = "net  group \"ESX Admins\" /domain /add" nocase ascii wide
         // Description: potential CVE-2024-37085 exploitation
         // Reference: https://www.microsoft.com/en-us/security/blog/2024/07/29/ransomware-operators-exploit-esxi-hypervisor-vulnerability-for-mass-encryption/
-        $string11 = "net  group \"ESX Admins\"" nocase ascii wide
+        $string12 = "net  group \"ESX Admins\"" nocase ascii wide
         // Description: potential CVE-2024-37085 exploitation
         // Reference: https://www.microsoft.com/en-us/security/blog/2024/07/29/ransomware-operators-exploit-esxi-hypervisor-vulnerability-for-mass-encryption/
-        $string12 = "net  user admin P@ssw0rd!" nocase ascii wide
+        $string13 = "net  user admin P@ssw0rd!" nocase ascii wide
         // Description: potential CVE-2024-37085 exploitation
         // Reference: https://www.microsoft.com/en-us/security/blog/2024/07/29/ransomware-operators-exploit-esxi-hypervisor-vulnerability-for-mass-encryption/
-        $string13 = /net\s\.exe.{0,100}\sgroup\s\\"ESX\sAdmins\\"/ nocase ascii wide
+        $string14 = /net\s\.exe.{0,100}\sgroup\s\\"ESX\sAdmins\\"/ nocase ascii wide
+        // Description: command used in the Dispossessor ransomware group notes
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string15 = "net accounts /maxpwage:unlimited" nocase ascii wide
+        // Description: discovery commands used by Dispossessor ransomware group and many others
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string16 = /net\sgroup\s\\"Admins\.\sdel\sdominio\\"\s\/domain/ nocase ascii wide
+        // Description: discovery commands used by Dispossessor ransomware group and many others
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string17 = /net\sgroup\s\\"Dom.{0,100}nen\-Admins\\"\s\/domain/ nocase ascii wide
+        // Description: discovery commands used by Dispossessor ransomware group and many others
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string18 = "net group \"Domain Administrateurs\" /domain" nocase ascii wide
+        // Description: discovery commands used by Dispossessor ransomware group and many others
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string19 = "net group \"Domain Admins\" /domain" nocase ascii wide
         // Description: Query users from domain admins in current domain
         // Reference: N/A
-        $string14 = "net group \"Domain Admins\" /domain" nocase ascii wide
+        $string20 = "net group \"Domain Admins\" /domain" nocase ascii wide
+        // Description: discovery commands used by Dispossessor ransomware group
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string21 = "net group \"Domain Admins\" support /add" nocase ascii wide
         // Description: List PCs connected to the domain
         // Reference: https://github.com/alperenugurlu/AD_Enumeration_Hunt/blob/alperen_ugurlu_hack/AD_Enumeration_Hunt.ps1
-        $string15 = "net group \"domain computers\" /domain" nocase ascii wide
+        $string22 = "net group \"domain computers\" /domain" nocase ascii wide
+        // Description: discovery commands used by Dispossessor ransomware group and many others
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string23 = "net group \"Enterprise admins\" /domain" nocase ascii wide
+        // Description: Enumerate SQL Admin group membership on the domain
+        // Reference: N/A
+        $string24 = "net group \"SQL Admins\" /domain" nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string16 = /net\sgroup\s.{0,100}Account\sOperators.{0,100}\s\/domain/ nocase ascii wide
+        $string25 = /net\sgroup\s.{0,100}Account\sOperators.{0,100}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string17 = /net\sgroup\s.{0,100}Backup\sOperators.{0,100}\s\/domain/ nocase ascii wide
+        $string26 = /net\sgroup\s.{0,100}Backup\sOperators.{0,100}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string18 = /net\sgroup\s.{0,100}Domain\sComputers.{0,100}\s\/domain/ nocase ascii wide
+        $string27 = /net\sgroup\s.{0,100}Domain\sComputers.{0,100}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string19 = /net\sgroup\s.{0,100}Domain\sControllers.{0,100}\s\/domain/ nocase ascii wide
+        $string28 = /net\sgroup\s.{0,100}Domain\sControllers.{0,100}\s\/domain/ nocase ascii wide
         // Description: Query Domain Comtrollers Computers in the current domain
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs
-        $string20 = /net\sgroup\s.{0,100}Domain\sControllers.{0,100}\/domain/ nocase ascii wide
+        $string29 = /net\sgroup\s.{0,100}Domain\sControllers.{0,100}\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string21 = /net\sgroup\s.{0,100}Enterprise\sAdmins.{0,100}\s\/domain/ nocase ascii wide
+        $string30 = /net\sgroup\s.{0,100}Enterprise\sAdmins.{0,100}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string22 = /net\sgroup\s.{0,100}Exchange\sTrusted\sSubsystem.{0,100}\s\/domain/ nocase ascii wide
+        $string31 = /net\sgroup\s.{0,100}Exchange\sTrusted\sSubsystem.{0,100}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string23 = /net\sgroup\s.{0,100}Microsoft\sExchange\sServers.{0,100}\s\/domain/ nocase ascii wide
+        $string32 = /net\sgroup\s.{0,100}Microsoft\sExchange\sServers.{0,100}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string24 = /net\sgroup\s.{0,100}Print\sOperators.{0,100}\s\/domain/ nocase ascii wide
+        $string33 = /net\sgroup\s.{0,100}Print\sOperators.{0,100}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string25 = /net\sgroup\s.{0,100}Schema\sAdmins.{0,100}\s\/domain/ nocase ascii wide
+        $string34 = /net\sgroup\s.{0,100}Schema\sAdmins.{0,100}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string26 = /net\sgroup\s.{0,100}Server\sOperators.{0,100}\s\/domain/ nocase ascii wide
+        $string35 = /net\sgroup\s.{0,100}Server\sOperators.{0,100}\s\/domain/ nocase ascii wide
         // Description: Query users from domain admins in current domain
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs
-        $string27 = /net\sgroup\s\/domain\s.{0,100}Domain\sAdmins/ nocase ascii wide
+        $string36 = /net\sgroup\s\/domain\s.{0,100}Domain\sAdmins/ nocase ascii wide
         // Description: showing users in a privileged group. 
         // Reference: N/A
-        $string28 = "net group administrators /domain" nocase ascii wide
+        $string37 = "net group administrators /domain" nocase ascii wide
+        // Description: discovery commands used by Dispossessor ransomware group and many others
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string38 = /net\sgroup\sAdmins\.\sdel\sdominio\s\/domain/ nocase ascii wide
+        // Description: command used in the Dispossessor ransomware group notes
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string39 = "net localgroup \"Cert Publishers\" /domain" nocase ascii wide
         // Description: Adds a user account to the local Remote
         // Reference: N/A
-        $string29 = /net\slocalgroup\s\\"Remote\sDesktop\sUsers\\"\s.{0,100}\s\/add/ nocase ascii wide
+        $string40 = /net\slocalgroup\s\\"Remote\sDesktop\sUsers\\"\s.{0,100}\s\/add/ nocase ascii wide
         // Description: discover local admins group
         // Reference: N/A
-        $string30 = /net\slocalgroup\s.{0,100}Backup\sOperators/ nocase ascii wide
+        $string41 = /net\slocalgroup\s.{0,100}Backup\sOperators/ nocase ascii wide
+        // Description: command used in the Dispossessor ransomware group notes
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string42 = /net\slocalgroup\s\\\\"Remote\sDesktop\sUsers\\\\"\sSupport\s\/add/ nocase ascii wide
         // Description: discover local admins group
         // Reference: N/A
-        $string31 = "net localgroup admin" nocase ascii wide
+        $string43 = "net localgroup admin" nocase ascii wide
+        // Description: discovery commands used by Dispossessor ransomware group
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string44 = "net localgroup Administrators support /add" nocase ascii wide
+        // Description: command used in the Dispossessor ransomware group notes
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string45 = "net localgroup Administrators Support /add" nocase ascii wide
         // Description: create shared folders for various drive letters
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string32 = /net\sshare\sc\=c\:\\\s\/GRANT\:Everyone\,FULL/ nocase ascii wide
+        $string46 = /net\sshare\sc\=c\:\\\s\/GRANT\:Everyone\,FULL/ nocase ascii wide
         // Description: create shared folders for various drive letters
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string33 = /net\sshare\sd\=d\:\\\s\/GRANT\:Everyone\,FULL/ nocase ascii wide
+        $string47 = /net\sshare\sd\=d\:\\\s\/GRANT\:Everyone\,FULL/ nocase ascii wide
         // Description: create shared folders for various drive letters
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string34 = /net\sshare\se\=e\:\\\s\/GRANT\:Everyone\,FULL/ nocase ascii wide
+        $string48 = /net\sshare\se\=e\:\\\s\/GRANT\:Everyone\,FULL/ nocase ascii wide
         // Description: create shared folders for various drive letters
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string35 = /net\sshare\se\=e\:\\\s\/GRANT\:Everyone\,FULL/ nocase ascii wide
+        $string49 = /net\sshare\se\=e\:\\\s\/GRANT\:Everyone\,FULL/ nocase ascii wide
         // Description: create shared folders for various drive letters
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string36 = /net\sshare\sf\=f\:\\\s\/GRANT\:Everyone\,FULL/ nocase ascii wide
+        $string50 = /net\sshare\sf\=f\:\\\s\/GRANT\:Everyone\,FULL/ nocase ascii wide
         // Description: create shared folders for various drive letters
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string37 = /net\sshare\sg\=g\:\\\s\/GRANT\:Everyone\,FULL/ nocase ascii wide
+        $string51 = /net\sshare\sg\=g\:\\\s\/GRANT\:Everyone\,FULL/ nocase ascii wide
         // Description: create shared folders for various drive letters
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string38 = /net\sshare\sh\=h\:\\\s\/GRANT\:Everyone\,FULL/ nocase ascii wide
+        $string52 = /net\sshare\sh\=h\:\\\s\/GRANT\:Everyone\,FULL/ nocase ascii wide
         // Description: create shared folders for various drive letters
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string39 = /net\sshare\si\=i\:\\\s\/GRANT\:Everyone\,FULL/ nocase ascii wide
+        $string53 = /net\sshare\si\=i\:\\\s\/GRANT\:Everyone\,FULL/ nocase ascii wide
         // Description: create shared folders for various drive letters
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string40 = /net\sshare\sj\=j\:\\\s\/GRANT\:Everyone\,FULL/ nocase ascii wide
+        $string54 = /net\sshare\sj\=j\:\\\s\/GRANT\:Everyone\,FULL/ nocase ascii wide
         // Description: create shared folders for various drive letters
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string41 = /net\sshare\sk\=k\:\\\s\/GRANT\:Everyone\,FULL/ nocase ascii wide
+        $string55 = /net\sshare\sk\=k\:\\\s\/GRANT\:Everyone\,FULL/ nocase ascii wide
         // Description: observed used by lslsass sample (dump active logon session password hashes from the lsass process (old tool for vista and older))
         // Reference: https://www.virustotal.com/gui/file/b24ab1f8cb68547932dd8a5c81e9b2133763a7ddf48aa431456530c1340b939e/details
-        $string42 = /net\sstop\s\\"\.NET\sRuntime\sOptimization\sService\\"/ nocase ascii wide
+        $string56 = /net\sstop\s\\"\.NET\sRuntime\sOptimization\sService\\"/ nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string43 = /net\sstop\s\\"IBM\sDomino\sDiagnostics\s\(CProgramFilesIBMDomino\)\\"/ nocase ascii wide
+        $string57 = /net\sstop\s\\"IBM\sDomino\sDiagnostics\s\(CProgramFilesIBMDomino\)\\"/ nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string44 = /net\sstop\s\\"IBM\sDomino\sServer\s\(CProgramFilesIBMDominodata\)\\"/ nocase ascii wide
+        $string58 = /net\sstop\s\\"IBM\sDomino\sServer\s\(CProgramFilesIBMDominodata\)\\"/ nocase ascii wide
+        // Description: Stop All Sophos Services
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string59 = "net stop \"SAVAdminService\"" nocase ascii wide
+        // Description: Stop All Sophos Services
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string60 = "net stop \"SAVService\"" nocase ascii wide
+        // Description: Stop All Sophos Services
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string61 = "net stop \"SAVService\"" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string45 = "net stop \"Simply Accounting Database Connection Manager\"" nocase ascii wide
+        $string62 = "net stop \"Simply Accounting Database Connection Manager\"" nocase ascii wide
+        // Description: Stop All Sophos Services
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string63 = "net stop \"SntpService\"" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string46 = "net stop \"Sophos " nocase ascii wide
+        $string64 = "net stop \"Sophos " nocase ascii wide
+        // Description: Stop All Sophos Services
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string65 = "net stop \"Sophos Agent\"" nocase ascii wide
+        // Description: Stop All Sophos Services
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string66 = "net stop \"Sophos Anti-Virus\"" nocase ascii wide
+        // Description: Stop All Sophos Services
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string67 = "net stop \"Sophos AutoUpdate Service\"" nocase ascii wide
+        // Description: Stop All Sophos Services
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string68 = "net stop \"Sophos AutoUpdate Service\"" nocase ascii wide
+        // Description: Stop All Sophos Services
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string69 = "net stop \"Sophos Endpoint Defense Service\"" nocase ascii wide
+        // Description: Stop All Sophos Services
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string70 = "net stop \"Sophos Message Router\"" nocase ascii wide
+        // Description: Stop All Sophos Services
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string71 = "net stop \"Sophos System Protection Service\"" nocase ascii wide
+        // Description: Stop All Sophos Services
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string72 = "net stop \"Sophos Web Control Service\"" nocase ascii wide
+        // Description: Stop All Sophos Services
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string73 = "net stop \"Sophos Web Control Service\"" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string47 = "net stop \"SQL Backups\"" nocase ascii wide
+        $string74 = "net stop \"SQL Backups\"" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string48 = "net stop \"SQLsafe Backup Service\"" nocase ascii wide
+        $string75 = "net stop \"SQLsafe Backup Service\"" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string49 = /net\sstop\s\\"storagecraft\simagemanager.{0,100}\\"/ nocase ascii wide
+        $string76 = /net\sstop\s\\"storagecraft\simagemanager.{0,100}\\"/ nocase ascii wide
+        // Description: Stop All Sophos Services
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string77 = "net stop \"swi_service\"" nocase ascii wide
+        // Description: Stop All Sophos Services
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string78 = "net stop \"swi_update\"" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string50 = "net stop \"Symantec System Recovery\"" nocase ascii wide
+        $string79 = "net stop \"Symantec System Recovery\"" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string51 = "net stop \"Veeam Backup Catalog Data Service\"" nocase ascii wide
+        $string80 = "net stop \"Veeam Backup Catalog Data Service\"" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string52 = "net stop \"Zoolz 2 Service\"" nocase ascii wide
+        $string81 = "net stop \"Zoolz 2 Service\"" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string53 = "net stop acronisagent" nocase ascii wide
+        $string82 = "net stop acronisagent" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string54 = "net stop AcronisAgent" nocase ascii wide
+        $string83 = "net stop AcronisAgent" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string55 = "net stop acrsch2svc" nocase ascii wide
+        $string84 = "net stop acrsch2svc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string56 = "net stop AcrSch2Svc" nocase ascii wide
+        $string85 = "net stop AcrSch2Svc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string57 = "net stop agntsvc" nocase ascii wide
+        $string86 = "net stop agntsvc" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string58 = "net stop Antivirus" nocase ascii wide
+        $string87 = "net stop Antivirus" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string59 = "net stop ARSM /y" nocase ascii wide
+        $string88 = "net stop ARSM /y" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string60 = "net stop arsm" nocase ascii wide
+        $string89 = "net stop arsm" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string61 = "net stop AVP" nocase ascii wide
+        $string90 = "net stop AVP" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string62 = "net stop backp" nocase ascii wide
+        $string91 = "net stop backp" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string63 = "net stop backup" nocase ascii wide
+        $string92 = "net stop backup" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string64 = "net stop BackupExec" nocase ascii wide
+        $string93 = "net stop BackupExec" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string65 = "net stop BackupExecAgent" nocase ascii wide
+        $string94 = "net stop BackupExecAgent" nocase ascii wide
         // Description: Wannacry Ransomware & NOODLERAT behavior
         // Reference: https://www.virustotal.com/gui/file/cde4ca499282045eecd4fc15ac80a232294556a59b3c8c8a7a593e8333cfd3c7/behavior
-        $string66 = "net stop badrv" nocase ascii wide
+        $string95 = "net stop badrv" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string67 = "net stop bedbg /y" nocase ascii wide
+        $string96 = "net stop bedbg /y" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string68 = "net stop cbservi" nocase ascii wide
+        $string97 = "net stop cbservi" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string69 = "net stop cbvscserv" nocase ascii wide
+        $string98 = "net stop cbvscserv" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string70 = "net stop DCAgent" nocase ascii wide
+        $string99 = "net stop DCAgent" nocase ascii wide
         // Description: observed used by lslsass sample (dump active logon session password hashes from the lsass process (old tool for vista and older))
         // Reference: https://www.virustotal.com/gui/file/b24ab1f8cb68547932dd8a5c81e9b2133763a7ddf48aa431456530c1340b939e/details
-        $string71 = "net stop dnscache" nocase ascii wide
+        $string100 = "net stop dnscache" nocase ascii wide
         // Description: observed used by lslsass sample (dump active logon session password hashes from the lsass process (old tool for vista and older))
         // Reference: https://www.virustotal.com/gui/file/b24ab1f8cb68547932dd8a5c81e9b2133763a7ddf48aa431456530c1340b939e/details
-        $string72 = "net stop DPS" nocase ascii wide
+        $string101 = "net stop DPS" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string73 = "net stop EhttpSrv" nocase ascii wide
+        $string102 = "net stop EhttpSrv" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string74 = "net stop ekrn" nocase ascii wide
+        $string103 = "net stop ekrn" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string75 = /net\sstop\sEPSecurityService.{0,100}\s\s\s\s/ nocase ascii wide
+        $string104 = /net\sstop\sEPSecurityService.{0,100}\s\s\s\s/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string76 = /net\sstop\sEPUpdateService.{0,100}\s\s\s\s\s\s\s/ nocase ascii wide
+        $string105 = /net\sstop\sEPUpdateService.{0,100}\s\s\s\s\s\s\s/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string77 = "net stop EsgShKernel" nocase ascii wide
+        $string106 = "net stop EsgShKernel" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string78 = "net stop ESHASRV" nocase ascii wide
+        $string107 = "net stop ESHASRV" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string79 = "net stop FA_Scheduler" nocase ascii wide
+        $string108 = "net stop FA_Scheduler" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string80 = "net stop firebirdguardiandefaultinstance" nocase ascii wide
+        $string109 = "net stop firebirdguardiandefaultinstance" nocase ascii wide
         // Description: observed used by lslsass sample (dump active logon session password hashes from the lsass process (old tool for vista and older))
         // Reference: https://www.virustotal.com/gui/file/b24ab1f8cb68547932dd8a5c81e9b2133763a7ddf48aa431456530c1340b939e/details
-        $string81 = "net stop gupdatem" nocase ascii wide
+        $string110 = "net stop gupdatem" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string82 = "net stop ibmiasrw" nocase ascii wide
+        $string111 = "net stop ibmiasrw" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string83 = "net stop IISADMIN" nocase ascii wide
+        $string112 = "net stop IISADMIN" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string84 = "net stop IISADMIN" nocase ascii wide
+        $string113 = "net stop IISADMIN" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string85 = "net stop IMAP4Svc" nocase ascii wide
+        $string114 = "net stop IMAP4Svc" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string86 = "net stop KAVFS" nocase ascii wide
+        $string115 = "net stop KAVFS" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string87 = "net stop KAVFSGT" nocase ascii wide
+        $string116 = "net stop KAVFSGT" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string88 = "net stop kavfsslp" nocase ascii wide
+        $string117 = "net stop kavfsslp" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string89 = "net stop klnagent" nocase ascii wide
+        $string118 = "net stop klnagent" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string90 = "net stop macmnsvc" nocase ascii wide
+        $string119 = "net stop macmnsvc" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string91 = "net stop masvc" nocase ascii wide
+        $string120 = "net stop masvc" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string92 = "net stop MBAMService" nocase ascii wide
+        $string121 = "net stop MBAMService" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string93 = /net\sstop\sMBEndpointAgent.{0,100}\s\s\s\s/ nocase ascii wide
+        $string122 = /net\sstop\sMBEndpointAgent.{0,100}\s\s\s\s/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string94 = /net\sstop\sMcAfeeEngineService.{0,100}\s\s\s\s/ nocase ascii wide
+        $string123 = /net\sstop\sMcAfeeEngineService.{0,100}\s\s\s\s/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string95 = "net stop McAfeeFramework" nocase ascii wide
+        $string124 = "net stop McAfeeFramework" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string96 = "net stop McAfeeFrameworkMcAfeeFramework" nocase ascii wide
+        $string125 = "net stop McAfeeFrameworkMcAfeeFramework" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string97 = "net stop McShield" nocase ascii wide
+        $string126 = "net stop McShield" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string98 = "net stop mfefire" nocase ascii wide
+        $string127 = "net stop mfefire" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string99 = "net stop mfemms" nocase ascii wide
+        $string128 = "net stop mfemms" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string100 = "net stop mfevtp" nocase ascii wide
+        $string129 = "net stop mfevtp" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string101 = "net stop mozyprobackup" nocase ascii wide
+        $string130 = "net stop mozyprobackup" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string102 = "net stop mr2kserv" nocase ascii wide
+        $string131 = "net stop mr2kserv" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string103 = "net stop MsDtsServer" nocase ascii wide
+        $string132 = "net stop MsDtsServer" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string104 = "net stop MsDtsServer100" nocase ascii wide
+        $string133 = "net stop MsDtsServer100" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string105 = "net stop MsDtsServer110" nocase ascii wide
+        $string134 = "net stop MsDtsServer110" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string106 = "net stop MSExchangeADTopology" nocase ascii wide
+        $string135 = "net stop MSExchangeADTopology" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string107 = "net stop MSExchangeFBA" nocase ascii wide
+        $string136 = "net stop MSExchangeFBA" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string108 = "net stop MSExchangeIS" nocase ascii wide
+        $string137 = "net stop MSExchangeIS" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string109 = "net stop MSExchangeSA" nocase ascii wide
+        $string138 = "net stop MSExchangeSA" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string110 = /net\sstop\smsftesql\$PROD/ nocase ascii wide
+        $string139 = /net\sstop\smsftesql\$PROD/ nocase ascii wide
         // Description: observed used by lslsass sample (dump active logon session password hashes from the lsass process (old tool for vista and older))
         // Reference: https://www.virustotal.com/gui/file/b24ab1f8cb68547932dd8a5c81e9b2133763a7ddf48aa431456530c1340b939e/details
-        $string111 = "net stop msiserver" nocase ascii wide
+        $string140 = "net stop msiserver" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string112 = /net\sstop\sMSOLAP\$SQL_2008/ nocase ascii wide
+        $string141 = /net\sstop\sMSOLAP\$SQL_2008/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string113 = /net\sstop\sMSOLAP\$SYSTEM_BGC/ nocase ascii wide
+        $string142 = /net\sstop\sMSOLAP\$SYSTEM_BGC/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string114 = /net\sstop\sMSOLAP\$TPS/ nocase ascii wide
+        $string143 = /net\sstop\sMSOLAP\$TPS/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string115 = /net\sstop\sMSOLAP\$TPSAMA/ nocase ascii wide
+        $string144 = /net\sstop\sMSOLAP\$TPSAMA/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string116 = /net\sstop\sMSSQL\$BKUPEXEC/ nocase ascii wide
+        $string145 = /net\sstop\sMSSQL\$BKUPEXEC/ nocase ascii wide
         // Description: VoidCrypt ransomware
         // Reference: https://github.com/rivitna/Malware
-        $string117 = /net\sstop\sMSSQL\$CONTOSO1/ nocase ascii wide
+        $string146 = /net\sstop\sMSSQL\$CONTOSO1/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string118 = /net\sstop\sMSSQL\$ECWDB2/ nocase ascii wide
+        $string147 = /net\sstop\sMSSQL\$ECWDB2/ nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string119 = /net\sstop\sMSSQL\$ISARS/ nocase ascii wide
+        $string148 = /net\sstop\sMSSQL\$ISARS/ nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string120 = /net\sstop\sMSSQL\$MSFW/ nocase ascii wide
+        $string149 = /net\sstop\sMSSQL\$MSFW/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string121 = /net\sstop\sMSSQL\$PRACTICEMGT/ nocase ascii wide
+        $string150 = /net\sstop\sMSSQL\$PRACTICEMGT/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string122 = /net\sstop\sMSSQL\$PRACTTICEBGC/ nocase ascii wide
+        $string151 = /net\sstop\sMSSQL\$PRACTTICEBGC/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string123 = /net\sstop\sMSSQL\$PROD/ nocase ascii wide
+        $string152 = /net\sstop\sMSSQL\$PROD/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string124 = /net\sstop\sMSSQL\$PROFXENGAGEMENT/ nocase ascii wide
+        $string153 = /net\sstop\sMSSQL\$PROFXENGAGEMENT/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string125 = /net\sstop\sMSSQL\$SBSMONITORING/ nocase ascii wide
+        $string154 = /net\sstop\sMSSQL\$SBSMONITORING/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string126 = /net\sstop\sMSSQL\$SHAREPOINT/ nocase ascii wide
+        $string155 = /net\sstop\sMSSQL\$SHAREPOINT/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string127 = /net\sstop\sMSSQL\$SOPHOS/ nocase ascii wide
+        $string156 = /net\sstop\sMSSQL\$SOPHOS/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string128 = /net\sstop\sMSSQL\$SQL_2008/ nocase ascii wide
+        $string157 = /net\sstop\sMSSQL\$SQL_2008/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string129 = /net\sstop\sMSSQL\$SQLEXPRESS/ nocase ascii wide
+        $string158 = /net\sstop\sMSSQL\$SQLEXPRESS/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string130 = /net\sstop\sMSSQL\$SYSTEM_BGC/ nocase ascii wide
+        $string159 = /net\sstop\sMSSQL\$SYSTEM_BGC/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string131 = /net\sstop\sMSSQL\$TPS/ nocase ascii wide
+        $string160 = /net\sstop\sMSSQL\$TPS/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string132 = /net\sstop\sMSSQL\$TPSAMA/ nocase ascii wide
+        $string161 = /net\sstop\sMSSQL\$TPSAMA/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string133 = /net\sstop\sMSSQL\$VEEAMSQL/ nocase ascii wide
+        $string162 = /net\sstop\sMSSQL\$VEEAMSQL/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string134 = /net\sstop\sMSSQL\$VEEAMSQL/ nocase ascii wide
+        $string163 = /net\sstop\sMSSQL\$VEEAMSQL/ nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string135 = "net stop MSSQLServerADHelper100" nocase ascii wide
+        $string164 = "net stop MSSQLServerADHelper100" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string136 = "net stop MSSQLServerADHelper100" nocase ascii wide
+        $string165 = "net stop MSSQLServerADHelper100" nocase ascii wide
         // Description: observed used by lslsass sample (dump active logon session password hashes from the lsass process (old tool for vista and older))
         // Reference: https://www.virustotal.com/gui/file/b24ab1f8cb68547932dd8a5c81e9b2133763a7ddf48aa431456530c1340b939e/details
-        $string137 = "net stop OfficeClickToRun" nocase ascii wide
+        $string166 = "net stop OfficeClickToRun" nocase ascii wide
         // Description: observed used by lslsass sample (dump active logon session password hashes from the lsass process (old tool for vista and older))
         // Reference: https://www.virustotal.com/gui/file/b24ab1f8cb68547932dd8a5c81e9b2133763a7ddf48aa431456530c1340b939e/details
-        $string138 = "net stop PcaSvc" nocase ascii wide
+        $string167 = "net stop PcaSvc" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string139 = "net stop QBCFMonitorService" nocase ascii wide
+        $string168 = "net stop QBCFMonitorService" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string140 = "net stop QBPOSDBServiceV12" nocase ascii wide
+        $string169 = "net stop QBPOSDBServiceV12" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string141 = "net stop QBVSS" nocase ascii wide
+        $string170 = "net stop QBVSS" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string142 = "net stop QuickBooksDB1" nocase ascii wide
+        $string171 = "net stop QuickBooksDB1" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string143 = "net stop QuickBooksDB2" nocase ascii wide
+        $string172 = "net stop QuickBooksDB2" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string144 = "net stop QuickBooksDB3" nocase ascii wide
+        $string173 = "net stop QuickBooksDB3" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string145 = "net stop QuickBooksDB4" nocase ascii wide
+        $string174 = "net stop QuickBooksDB4" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string146 = "net stop QuickBooksDB5" nocase ascii wide
+        $string175 = "net stop QuickBooksDB5" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string147 = /net\sstop\sReportServer\$ISARS/ nocase ascii wide
+        $string176 = /net\sstop\sReportServer\$ISARS/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string148 = "net stop sacsvr" nocase ascii wide
+        $string177 = "net stop sacsvr" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string149 = "net stop SAVAdminService" nocase ascii wide
+        $string178 = "net stop SAVAdminService" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string150 = "net stop SAVService" nocase ascii wide
+        $string179 = "net stop SAVService" nocase ascii wide
         // Description: observed used by lslsass sample (dump active logon session password hashes from the lsass process (old tool for vista and older))
         // Reference: https://www.virustotal.com/gui/file/b24ab1f8cb68547932dd8a5c81e9b2133763a7ddf48aa431456530c1340b939e/details
-        $string151 = "net stop sedsvc" nocase ascii wide
+        $string180 = "net stop sedsvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string152 = "net stop shadowprotectsvc" nocase ascii wide
+        $string181 = "net stop shadowprotectsvc" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string153 = "net stop ShadowProtectSvc" nocase ascii wide
+        $string182 = "net stop ShadowProtectSvc" nocase ascii wide
         // Description: stopping shared access
         // Reference: N/A
-        $string154 = "net stop sharedaccess" nocase ascii wide
+        $string183 = "net stop sharedaccess" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string155 = "net stop ShMonitor" nocase ascii wide
+        $string184 = "net stop ShMonitor" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string156 = "net stop Smcinst" nocase ascii wide
+        $string185 = "net stop Smcinst" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string157 = "net stop SmcService" nocase ascii wide
+        $string186 = "net stop SmcService" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string158 = "net stop sms_site_sql_backup" nocase ascii wide
+        $string187 = "net stop sms_site_sql_backup" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string159 = /net\sstop\sSntpService.{0,100}\s\s\s\s/ nocase ascii wide
+        $string188 = /net\sstop\sSntpService.{0,100}\s\s\s\s/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string160 = "net stop sophossps" nocase ascii wide
+        $string189 = "net stop sophossps" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string161 = "net stop SPAdminV4" nocase ascii wide
+        $string190 = "net stop SPAdminV4" nocase ascii wide
         // Description: observed used by lslsass sample (dump active logon session password hashes from the lsass process (old tool for vista and older))
         // Reference: https://www.virustotal.com/gui/file/b24ab1f8cb68547932dd8a5c81e9b2133763a7ddf48aa431456530c1340b939e/details
-        $string162 = "net stop sppsvc" nocase ascii wide
+        $string191 = "net stop sppsvc" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string163 = "net stop SPSearch4" nocase ascii wide
+        $string192 = "net stop SPSearch4" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string164 = "net stop SPTimerV4" nocase ascii wide
+        $string193 = "net stop SPTimerV4" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string165 = "net stop SPTraceV4" nocase ascii wide
+        $string194 = "net stop SPTraceV4" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string166 = "net stop SPUserCodeV4" nocase ascii wide
+        $string195 = "net stop SPUserCodeV4" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string167 = "net stop SPWriterV4" nocase ascii wide
+        $string196 = "net stop SPWriterV4" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string168 = "net stop spxservice" nocase ascii wide
+        $string197 = "net stop spxservice" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string169 = "net stop sqbcoreservice" nocase ascii wide
+        $string198 = "net stop sqbcoreservice" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string170 = /net\sstop\sSQLAgent\$ISARS/ nocase ascii wide
+        $string199 = /net\sstop\sSQLAgent\$ISARS/ nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string171 = /net\sstop\sSQLAgent\$MSFW/ nocase ascii wide
+        $string200 = /net\sstop\sSQLAgent\$MSFW/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string172 = /net\sstop\sSQLAgent\$SOPH/ nocase ascii wide
+        $string201 = /net\sstop\sSQLAgent\$SOPH/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string173 = /net\sstop\sSQLAgent\$VEEAMSQL/ nocase ascii wide
+        $string202 = /net\sstop\sSQLAgent\$VEEAMSQL/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string174 = /net\sstop\sSQLAgent\$VEEAMSQL/ nocase ascii wide
+        $string203 = /net\sstop\sSQLAgent\$VEEAMSQL/ nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string175 = "net stop SQLBrowser" nocase ascii wide
+        $string204 = "net stop SQLBrowser" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string176 = "net stop SQLWriter" nocase ascii wide
+        $string205 = "net stop SQLWriter" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string177 = "net stop stc_endpt_svc" nocase ascii wide
+        $string206 = "net stop stc_endpt_svc" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string178 = "net stop stop SepMasterService" nocase ascii wide
+        $string207 = "net stop stop SepMasterService" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string179 = "net stop svcGenericHost" nocase ascii wide
+        $string208 = "net stop svcGenericHost" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string180 = "net stop swi_filter" nocase ascii wide
+        $string209 = "net stop swi_filter" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string181 = "net stop swi_service" nocase ascii wide
+        $string210 = "net stop swi_service" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string182 = "net stop swi_update" nocase ascii wide
+        $string211 = "net stop swi_update" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string183 = "net stop swi_update_64" nocase ascii wide
+        $string212 = "net stop swi_update_64" nocase ascii wide
         // Description: observed used by lslsass sample (dump active logon session password hashes from the lsass process (old tool for vista and older))
         // Reference: https://www.virustotal.com/gui/file/b24ab1f8cb68547932dd8a5c81e9b2133763a7ddf48aa431456530c1340b939e/details
-        $string184 = "net stop SysMain" nocase ascii wide
+        $string213 = "net stop SysMain" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string185 = "net stop TmCCSF" nocase ascii wide
+        $string214 = "net stop TmCCSF" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string186 = "net stop tmlisten" nocase ascii wide
+        $string215 = "net stop tmlisten" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string187 = "net stop TrueKey" nocase ascii wide
+        $string216 = "net stop TrueKey" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string188 = /net\sstop\sTrueKeyScheduler.{0,100}\s\s\s\s/ nocase ascii wide
+        $string217 = /net\sstop\sTrueKeyScheduler.{0,100}\s\s\s\s/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string189 = "net stop TrueKeyServiceHel" nocase ascii wide
+        $string218 = "net stop TrueKeyServiceHel" nocase ascii wide
         // Description: observed used by lslsass sample (dump active logon session password hashes from the lsass process (old tool for vista and older))
         // Reference: https://www.virustotal.com/gui/file/b24ab1f8cb68547932dd8a5c81e9b2133763a7ddf48aa431456530c1340b939e/details
-        $string190 = "net stop TrustedInstaller" nocase ascii wide
+        $string219 = "net stop TrustedInstaller" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string191 = /net\sstop\svapiendpoint.{0,100}\s\s\s\s\s\s\s/ nocase ascii wide
+        $string220 = /net\sstop\svapiendpoint.{0,100}\s\s\s\s\s\s\s/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string192 = "net stop VeeamBackupSvc" nocase ascii wide
+        $string221 = "net stop VeeamBackupSvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string193 = "net stop VeeamBrokerSvc " nocase ascii wide
+        $string222 = "net stop VeeamBrokerSvc " nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string194 = "net stop VeeamCatalogSvc" nocase ascii wide
+        $string223 = "net stop VeeamCatalogSvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string195 = "net stop VeeamCloudSvc" nocase ascii wide
+        $string224 = "net stop VeeamCloudSvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string196 = "net stop VeeamDeploymentService" nocase ascii wide
+        $string225 = "net stop VeeamDeploymentService" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string197 = "net stop VeeamDeploySvc" nocase ascii wide
+        $string226 = "net stop VeeamDeploySvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string198 = /net\sstop\sVeeamDeploySvc.{0,100}\s\s\s\s/ nocase ascii wide
+        $string227 = /net\sstop\sVeeamDeploySvc.{0,100}\s\s\s\s/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string199 = "net stop VeeamEnterpriseManagerSvc" nocase ascii wide
+        $string228 = "net stop VeeamEnterpriseManagerSvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string200 = "net stop VeeamHvIntegrationSvc" nocase ascii wide
+        $string229 = "net stop VeeamHvIntegrationSvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string201 = "net stop VeeamMountSvc" nocase ascii wide
+        $string230 = "net stop VeeamMountSvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string202 = "net stop VeeamNFSSvc" nocase ascii wide
+        $string231 = "net stop VeeamNFSSvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string203 = "net stop VeeamRESTSvc" nocase ascii wide
+        $string232 = "net stop VeeamRESTSvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string204 = "net stop VeeamTransportSvc" nocase ascii wide
+        $string233 = "net stop VeeamTransportSvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string205 = "net stop vsnapvss" nocase ascii wide
+        $string234 = "net stop vsnapvss" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string206 = "net stop vssvc" nocase ascii wide
+        $string235 = "net stop vssvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string207 = "net stop wbengine" nocase ascii wide
+        $string236 = "net stop wbengine" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string208 = "net stop wbengine" nocase ascii wide
+        $string237 = "net stop wbengine" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string209 = "net stop WinDefend" nocase ascii wide
+        $string238 = "net stop WinDefend" nocase ascii wide
         // Description: stopping AV services
         // Reference: N/A
-        $string210 = "net stop WinDefend" nocase ascii wide
+        $string239 = "net stop WinDefend" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string211 = "net stop WRSVC" nocase ascii wide
+        $string240 = "net stop WRSVC" nocase ascii wide
         // Description: connect to the "IPC$" share on a remote system often for lateral movement or remote administration purposes
         // Reference: N/A
-        $string212 = /net\suse\s\\\\.{0,100}\\IPC\$\s\/user\:/ nocase ascii wide
+        $string241 = /net\suse\s\\\\.{0,100}\\IPC\$\s\/user\:/ nocase ascii wide
         // Description: manipulation of an hidden local account with the net command
         // Reference: N/A
-        $string213 = /net\suser\s.{0,100}\$.{0,100}\s\// nocase ascii wide
+        $string242 = /net\suser\s.{0,100}\$.{0,100}\s\// nocase ascii wide
         // Description: Create list of domain users
         // Reference: N/A
-        $string214 = "net user /domain >" nocase ascii wide
+        $string243 = "net user /domain >" nocase ascii wide
+        // Description: command used in the Dispossessor ransomware group notes
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string244 = "net user BitdefenderBounty " nocase ascii wide
         // Description: activate the guest account in Windows
         // Reference: N/A
-        $string215 = "NET USER GUEST /ACTIVE:YES" nocase ascii wide
+        $string245 = "NET USER GUEST /ACTIVE:YES" nocase ascii wide
+        // Description: adding the user localadm - observed used by the Dispossessor Ransomware group 
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string246 = "net user localadm " nocase ascii wide
+        // Description: command used in the Dispossessor ransomware group notes
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string247 = "net user localadm " nocase ascii wide
+        // Description: command used in the Dispossessor ransomware group notes
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string248 = /net\suser\sSupport\s.{0,100}\s\/add\s/ nocase ascii wide
+        // Description: discovery commands used by Dispossessor ransomware group
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string249 = "net user support /active:yes" nocase ascii wide
+        // Description: discovery commands used by Dispossessor ransomware group
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string250 = /net\suser\ssupport\sPa\$\$wo0rd\s\/add/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string216 = "net view /all /domain" nocase ascii wide
+        $string251 = "net view /all /domain" nocase ascii wide
         // Description: display all domain names on the network
         // Reference: https://github.com/alperenugurlu/AD_Enumeration_Hunt/blob/alperen_ugurlu_hack/AD_Enumeration_Hunt.ps1
-        $string217 = "net view /domain" nocase ascii wide
+        $string252 = "net view /domain" nocase ascii wide
         // Description: retrieves a list of shared resources on a remote machine
         // Reference: N/A
-        $string218 = /net\sview\s\\\\.{0,100}\s\/all/ nocase ascii wide
+        $string253 = /net\sview\s\\\\.{0,100}\s\/all/ nocase ascii wide
         // Description: adding a user to a privileged group. This action can be used by adversaries to maintain unauthorized access or escalate privileges within the targeted environment.
         // Reference: N/A
-        $string219 = /net.{0,100}\sgroup\sAdministrator.{0,100}\s\/add\s\/domain/ nocase ascii wide
+        $string254 = /net.{0,100}\sgroup\sAdministrator.{0,100}\s\/add\s\/domain/ nocase ascii wide
         // Description: Adds a user account to the local Remote
         // Reference: N/A
-        $string220 = /net\.exe\slocalgroup\s\\"Remote\sDesktop\sUsers\\"\s.{0,100}\s\/add/ nocase ascii wide
+        $string255 = /net\.exe\slocalgroup\s\\"Remote\sDesktop\sUsers\\"\s.{0,100}\s\/add/ nocase ascii wide
         // Description: discover local admins group
         // Reference: N/A
-        $string221 = /net\.exe\slocalgroup\s.{0,100}Backup\sOperators/ nocase ascii wide
+        $string256 = /net\.exe\slocalgroup\s.{0,100}Backup\sOperators/ nocase ascii wide
         // Description: discover local admins group
         // Reference: N/A
-        $string222 = /net\.exe\\"\slocalgroup\s.{0,100}Backup\sOperators/ nocase ascii wide
+        $string257 = /net\.exe\\"\slocalgroup\s.{0,100}Backup\sOperators/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string223 = /net\.exe.{0,100}\sgroup\s.{0,100}Account\sOperators.{0,100}\s\/domain/ nocase ascii wide
+        $string258 = /net\.exe.{0,100}\sgroup\s.{0,100}Account\sOperators.{0,100}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string224 = /net\.exe.{0,100}\sgroup\s.{0,100}Backup\sOperators.{0,100}\s\/domain/ nocase ascii wide
+        $string259 = /net\.exe.{0,100}\sgroup\s.{0,100}Backup\sOperators.{0,100}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string225 = /net\.exe.{0,100}\sgroup\s.{0,100}Domain\sComputers.{0,100}\s\/domain/ nocase ascii wide
+        $string260 = /net\.exe.{0,100}\sgroup\s.{0,100}Domain\sComputers.{0,100}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string226 = /net\.exe.{0,100}\sgroup\s.{0,100}Domain\sControllers.{0,100}\s\/domain/ nocase ascii wide
+        $string261 = /net\.exe.{0,100}\sgroup\s.{0,100}Domain\sControllers.{0,100}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string227 = /net\.exe.{0,100}\sgroup\s.{0,100}Enterprise\sAdmins.{0,100}\s\/domain/ nocase ascii wide
+        $string262 = /net\.exe.{0,100}\sgroup\s.{0,100}Enterprise\sAdmins.{0,100}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string228 = /net\.exe.{0,100}\sgroup\s.{0,100}Exchange\sTrusted\sSubsystem.{0,100}\s\/domain/ nocase ascii wide
+        $string263 = /net\.exe.{0,100}\sgroup\s.{0,100}Exchange\sTrusted\sSubsystem.{0,100}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string229 = /net\.exe.{0,100}\sgroup\s.{0,100}Microsoft\sExchange\sServers.{0,100}\s\/domain/ nocase ascii wide
+        $string264 = /net\.exe.{0,100}\sgroup\s.{0,100}Microsoft\sExchange\sServers.{0,100}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string230 = /net\.exe.{0,100}\sgroup\s.{0,100}Print\sOperators.{0,100}\s\/domain/ nocase ascii wide
+        $string265 = /net\.exe.{0,100}\sgroup\s.{0,100}Print\sOperators.{0,100}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string231 = /net\.exe.{0,100}\sgroup\s.{0,100}Schema\sAdmins.{0,100}\s\/domain/ nocase ascii wide
+        $string266 = /net\.exe.{0,100}\sgroup\s.{0,100}Schema\sAdmins.{0,100}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string232 = /net\.exe.{0,100}\sgroup\s.{0,100}Server\sOperators.{0,100}\s\/domain/ nocase ascii wide
+        $string267 = /net\.exe.{0,100}\sgroup\s.{0,100}Server\sOperators.{0,100}\s\/domain/ nocase ascii wide
         // Description: Query users from domain admins in current domain
         // Reference: N/A
-        $string233 = "net1  group \"domain admins\" /domain" nocase ascii wide
+        $string268 = "net1  group \"domain admins\" /domain" nocase ascii wide
         // Description: Query users from domain admins in current domain
         // Reference: N/A
-        $string234 = "net1  group \"Domain Computers\" /domain" nocase ascii wide
+        $string269 = "net1  group \"Domain Computers\" /domain" nocase ascii wide
         // Description: Query users from domain admins in current domain
         // Reference: N/A
-        $string235 = "net1  group \"domain computers\" /domain" nocase ascii wide
+        $string270 = "net1  group \"domain computers\" /domain" nocase ascii wide
         // Description: Query users from domain admins in current domain
         // Reference: N/A
-        $string236 = "net1  group \"enterprise admins\" /domain" nocase ascii wide
+        $string271 = "net1  group \"enterprise admins\" /domain" nocase ascii wide
         // Description: Query users from domain admins in current domain
         // Reference: N/A
-        $string237 = "net1 group \"Domain Admins\" /domain" nocase ascii wide
+        $string272 = "net1 group \"Domain Admins\" /domain" nocase ascii wide
+        // Description: Enumerate SQL Admin group membership on the domain
+        // Reference: N/A
+        $string273 = "net1 group \"SQL Admins\" /domain" nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string238 = /net1\sgroup\s.{0,100}Account\sOperators.{0,100}\s\/domain/ nocase ascii wide
+        $string274 = /net1\sgroup\s.{0,100}Account\sOperators.{0,100}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string239 = /net1\sgroup\s.{0,100}Backup\sOperators.{0,100}\s\/domain/ nocase ascii wide
+        $string275 = /net1\sgroup\s.{0,100}Backup\sOperators.{0,100}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string240 = /net1\sgroup\s.{0,100}Domain\sComputers.{0,100}\s\/domain/ nocase ascii wide
+        $string276 = /net1\sgroup\s.{0,100}Domain\sComputers.{0,100}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string241 = /net1\sgroup\s.{0,100}Domain\sControllers.{0,100}\s\/domain/ nocase ascii wide
+        $string277 = /net1\sgroup\s.{0,100}Domain\sControllers.{0,100}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string242 = /net1\sgroup\s.{0,100}Enterprise\sAdmins.{0,100}\s\/domain/ nocase ascii wide
+        $string278 = /net1\sgroup\s.{0,100}Enterprise\sAdmins.{0,100}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string243 = /net1\sgroup\s.{0,100}Exchange\sTrusted\sSubsystem.{0,100}\s\/domain/ nocase ascii wide
+        $string279 = /net1\sgroup\s.{0,100}Exchange\sTrusted\sSubsystem.{0,100}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string244 = /net1\sgroup\s.{0,100}Microsoft\sExchange\sServers.{0,100}\s\/domain/ nocase ascii wide
+        $string280 = /net1\sgroup\s.{0,100}Microsoft\sExchange\sServers.{0,100}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string245 = /net1\sgroup\s.{0,100}Print\sOperators.{0,100}\s\/domain/ nocase ascii wide
+        $string281 = /net1\sgroup\s.{0,100}Print\sOperators.{0,100}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string246 = /net1\sgroup\s.{0,100}Schema\sAdmins.{0,100}\s\/domain/ nocase ascii wide
+        $string282 = /net1\sgroup\s.{0,100}Schema\sAdmins.{0,100}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string247 = /net1\sgroup\s.{0,100}Server\sOperators.{0,100}\s\/domain/ nocase ascii wide
+        $string283 = /net1\sgroup\s.{0,100}Server\sOperators.{0,100}\s\/domain/ nocase ascii wide
         // Description: Adds a user account to the local Remote
         // Reference: N/A
-        $string248 = /net1\slocalgroup\s\\"Remote\sDesktop\sUsers\\"\s.{0,100}\s\/add/ nocase ascii wide
+        $string284 = /net1\slocalgroup\s\\"Remote\sDesktop\sUsers\\"\s.{0,100}\s\/add/ nocase ascii wide
         // Description: discover local admins group
         // Reference: N/A
-        $string249 = /net1\slocalgroup\s.{0,100}Backup\sOperators/ nocase ascii wide
+        $string285 = /net1\slocalgroup\s.{0,100}Backup\sOperators/ nocase ascii wide
         // Description: showing users in a privileged group. 
         // Reference: N/A
-        $string250 = "net1 localgroup admin" nocase ascii wide
+        $string286 = "net1 localgroup admin" nocase ascii wide
         // Description: Wannacry Ransomware & NOODLERAT behavior
         // Reference: https://www.virustotal.com/gui/file/cde4ca499282045eecd4fc15ac80a232294556a59b3c8c8a7a593e8333cfd3c7/behavior
-        $string251 = "net1 stop badrv" nocase ascii wide
+        $string287 = "net1 stop badrv" nocase ascii wide
         // Description: observed used by lslsass sample (dump active logon session password hashes from the lsass process (old tool for vista and older))
         // Reference: https://www.virustotal.com/gui/file/b24ab1f8cb68547932dd8a5c81e9b2133763a7ddf48aa431456530c1340b939e/details
-        $string252 = "net1 stop gupdatem" nocase ascii wide
+        $string288 = "net1 stop gupdatem" nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string253 = /net1\.exe.{0,100}\sgroup\s.{0,100}Account\sOperators.{0,100}\s\/domain/ nocase ascii wide
+        $string289 = /net1\.exe.{0,100}\sgroup\s.{0,100}Account\sOperators.{0,100}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string254 = /net1\.exe.{0,100}\sgroup\s.{0,100}Backup\sOperators.{0,100}\s\/domain/ nocase ascii wide
+        $string290 = /net1\.exe.{0,100}\sgroup\s.{0,100}Backup\sOperators.{0,100}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string255 = /net1\.exe.{0,100}\sgroup\s.{0,100}Domain\sComputers.{0,100}\s\/domain/ nocase ascii wide
+        $string291 = /net1\.exe.{0,100}\sgroup\s.{0,100}Domain\sComputers.{0,100}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string256 = /net1\.exe.{0,100}\sgroup\s.{0,100}Domain\sControllers.{0,100}\s\/domain/ nocase ascii wide
+        $string292 = /net1\.exe.{0,100}\sgroup\s.{0,100}Domain\sControllers.{0,100}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string257 = /net1\.exe.{0,100}\sgroup\s.{0,100}Enterprise\sAdmins.{0,100}\s\/domain/ nocase ascii wide
+        $string293 = /net1\.exe.{0,100}\sgroup\s.{0,100}Enterprise\sAdmins.{0,100}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string258 = /net1\.exe.{0,100}\sgroup\s.{0,100}Exchange\sTrusted\sSubsystem.{0,100}\s\/domain/ nocase ascii wide
+        $string294 = /net1\.exe.{0,100}\sgroup\s.{0,100}Exchange\sTrusted\sSubsystem.{0,100}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string259 = /net1\.exe.{0,100}\sgroup\s.{0,100}Microsoft\sExchange\sServers.{0,100}\s\/domain/ nocase ascii wide
+        $string295 = /net1\.exe.{0,100}\sgroup\s.{0,100}Microsoft\sExchange\sServers.{0,100}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string260 = /net1\.exe.{0,100}\sgroup\s.{0,100}Print\sOperators.{0,100}\s\/domain/ nocase ascii wide
+        $string296 = /net1\.exe.{0,100}\sgroup\s.{0,100}Print\sOperators.{0,100}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string261 = /net1\.exe.{0,100}\sgroup\s.{0,100}Schema\sAdmins.{0,100}\s\/domain/ nocase ascii wide
+        $string297 = /net1\.exe.{0,100}\sgroup\s.{0,100}Schema\sAdmins.{0,100}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string262 = /net1\.exe.{0,100}\sgroup\s.{0,100}Server\sOperators.{0,100}\s\/domain/ nocase ascii wide
+        $string298 = /net1\.exe.{0,100}\sgroup\s.{0,100}Server\sOperators.{0,100}\s\/domain/ nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

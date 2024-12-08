@@ -17,6 +17,9 @@ rule rundll32
         // Description: Rundll32 can be use by Cobalt Strike with StartW function to load DLLs from the command line.
         // Reference: https://github.com/MichaelKoczwara/Awesome-CobaltStrike-Defence
         $string3 = /rundll32.{0,1000}\.dll.{0,1000}StartW/ nocase ascii wide
+        // Description: dumping lsass
+        // Reference: https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/win_meterpreter_or_cobaltstrike_getsystem_service_start.yml
+        $string4 = /rundll32\.exe\s.{0,1000}comsvcs\.dll\,\sMiniDump\s.{0,1000}lsass.{0,1000}full/ nocase ascii wide
 
     condition:
         any of them

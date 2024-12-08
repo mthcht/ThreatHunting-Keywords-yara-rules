@@ -25,55 +25,64 @@ rule Certipy
         $string5 = /\sshadow\sauto\s\-u\s.{0,100}\s\-p\s.{0,100}\s\-account\s/ nocase ascii wide
         // Description: Tool for Active Directory Certificate Services enumeration and abuse
         // Reference: https://github.com/ly4k/Certipy
-        $string6 = /\/Certipy\.git/ nocase ascii wide
+        $string6 = /\.exe\sfind\s\-username\s.{0,100}\s\-dc\-ip\s/ nocase ascii wide
         // Description: Tool for Active Directory Certificate Services enumeration and abuse
         // Reference: https://github.com/ly4k/Certipy
-        $string7 = "/Certipy/" nocase ascii wide
+        $string7 = /\/Certipy\.git/ nocase ascii wide
         // Description: Tool for Active Directory Certificate Services enumeration and abuse
         // Reference: https://github.com/ly4k/Certipy
-        $string8 = "certipy account " nocase ascii wide
+        $string8 = "/Certipy/" nocase ascii wide
         // Description: Tool for Active Directory Certificate Services enumeration and abuse
         // Reference: https://github.com/ly4k/Certipy
-        $string9 = "certipy auth " nocase ascii wide
+        $string9 = /\/certipy64\.exe/ nocase ascii wide
         // Description: Tool for Active Directory Certificate Services enumeration and abuse
         // Reference: https://github.com/ly4k/Certipy
-        $string10 = "certipy ca " nocase ascii wide
+        $string10 = /\\certipy64\.exe/ nocase ascii wide
         // Description: Tool for Active Directory Certificate Services enumeration and abuse
         // Reference: https://github.com/ly4k/Certipy
-        $string11 = "certipy ca -backup" nocase ascii wide
+        $string11 = "certipy account " nocase ascii wide
         // Description: Tool for Active Directory Certificate Services enumeration and abuse
         // Reference: https://github.com/ly4k/Certipy
-        $string12 = "certipy cert " nocase ascii wide
+        $string12 = "certipy auth " nocase ascii wide
         // Description: Tool for Active Directory Certificate Services enumeration and abuse
         // Reference: https://github.com/ly4k/Certipy
-        $string13 = "certipy find " nocase ascii wide
+        $string13 = "certipy ca " nocase ascii wide
         // Description: Tool for Active Directory Certificate Services enumeration and abuse
         // Reference: https://github.com/ly4k/Certipy
-        $string14 = "certipy forge " nocase ascii wide
+        $string14 = "certipy ca -backup" nocase ascii wide
         // Description: Tool for Active Directory Certificate Services enumeration and abuse
         // Reference: https://github.com/ly4k/Certipy
-        $string15 = "certipy forge " nocase ascii wide
+        $string15 = "certipy cert " nocase ascii wide
         // Description: Tool for Active Directory Certificate Services enumeration and abuse
         // Reference: https://github.com/ly4k/Certipy
-        $string16 = "certipy relay " nocase ascii wide
+        $string16 = "certipy find " nocase ascii wide
         // Description: Tool for Active Directory Certificate Services enumeration and abuse
         // Reference: https://github.com/ly4k/Certipy
-        $string17 = "certipy req " nocase ascii wide
+        $string17 = "certipy forge " nocase ascii wide
         // Description: Tool for Active Directory Certificate Services enumeration and abuse
         // Reference: https://github.com/ly4k/Certipy
-        $string18 = "certipy shadow " nocase ascii wide
+        $string18 = "certipy forge " nocase ascii wide
         // Description: Tool for Active Directory Certificate Services enumeration and abuse
         // Reference: https://github.com/ly4k/Certipy
-        $string19 = "certipy template " nocase ascii wide
+        $string19 = "certipy relay " nocase ascii wide
         // Description: Tool for Active Directory Certificate Services enumeration and abuse
         // Reference: https://github.com/ly4k/Certipy
-        $string20 = /certipy\-master\.zip/ nocase ascii wide
+        $string20 = "certipy req " nocase ascii wide
         // Description: Tool for Active Directory Certificate Services enumeration and abuse
         // Reference: https://github.com/ly4k/Certipy
-        $string21 = "ly4k/Certipy" nocase ascii wide
+        $string21 = "certipy shadow " nocase ascii wide
         // Description: Tool for Active Directory Certificate Services enumeration and abuse
         // Reference: https://github.com/ly4k/Certipy
-        $string22 = "certipy " nocase ascii wide
+        $string22 = "certipy template " nocase ascii wide
+        // Description: Tool for Active Directory Certificate Services enumeration and abuse
+        // Reference: https://github.com/ly4k/Certipy
+        $string23 = /certipy\-master\.zip/ nocase ascii wide
+        // Description: Tool for Active Directory Certificate Services enumeration and abuse
+        // Reference: https://github.com/ly4k/Certipy
+        $string24 = "ly4k/Certipy" nocase ascii wide
+        // Description: Tool for Active Directory Certificate Services enumeration and abuse
+        // Reference: https://github.com/ly4k/Certipy
+        $string25 = "certipy " nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

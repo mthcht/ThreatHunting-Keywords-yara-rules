@@ -457,148 +457,145 @@ rule Amnesiac
         $string149 = "Invoke-Kirby" nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string150 = "Invoke-Kirby" nocase ascii wide
+        $string150 = "Invoke-LSADump " nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string151 = "Invoke-LSADump " nocase ascii wide
+        $string151 = "Invoke-LSADump" nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string152 = "Invoke-LSADump" nocase ascii wide
+        $string152 = "Invoke-PassSpray" nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
         $string153 = "Invoke-PassSpray" nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string154 = "Invoke-PassSpray" nocase ascii wide
+        $string154 = /Invoke\-Patamenia\.ps1/ nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string155 = /Invoke\-Patamenia\.ps1/ nocase ascii wide
+        $string155 = "Invoke-RevertToSelf" nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string156 = "Invoke-RevertToSelf" nocase ascii wide
+        $string156 = "Invoke-SAMDump " nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string157 = "Invoke-SAMDump " nocase ascii wide
+        $string157 = "Invoke-SAMDump" nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string158 = "Invoke-SAMDump" nocase ascii wide
+        $string158 = "Invoke-SessionHunter" nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string159 = "Invoke-SessionHunter" nocase ascii wide
+        $string159 = /Invoke\-SessionHunter\.ps1/ nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string160 = /Invoke\-SessionHunter\.ps1/ nocase ascii wide
+        $string160 = "Invoke-SMBRemoting" nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string161 = "Invoke-SMBRemoting" nocase ascii wide
+        $string161 = /Invoke\-SMBRemoting\.ps1/ nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string162 = /Invoke\-SMBRemoting\.ps1/ nocase ascii wide
+        $string162 = "Invoke-WMIRemoting" nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string163 = "Invoke-WMIRemoting" nocase ascii wide
+        $string163 = /leo4j\.gitbook\.io\/amnesiac/ nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string164 = /leo4j\.gitbook\.io\/amnesiac/ nocase ascii wide
+        $string164 = "Leo4j/Amnesiac" nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
         $string165 = "Leo4j/Amnesiac" nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string166 = "Leo4j/Amnesiac" nocase ascii wide
+        $string166 = /MakeMeEnterpriseAdmin\.ps1/ nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
         $string167 = /MakeMeEnterpriseAdmin\.ps1/ nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string168 = /MakeMeEnterpriseAdmin\.ps1/ nocase ascii wide
+        $string168 = "msfvenom -p windows/x64/exec" nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string169 = "msfvenom -p windows/x64/exec" nocase ascii wide
+        $string169 = "MzHmO/PowershellKerberos" nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string170 = "MzHmO/PowershellKerberos" nocase ascii wide
+        $string170 = /PassSpray\.ps1/ nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string171 = /PassSpray\.ps1/ nocase ascii wide
+        $string171 = /powershell\.exe\s\-enc\s\$B64ServerScript/ nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string172 = /powershell\.exe\s\-enc\s\$B64ServerScript/ nocase ascii wide
+        $string172 = /PowerView\.ps1/ nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string173 = /PowerView\.ps1/ nocase ascii wide
+        $string173 = "quser;net sessions;query session;klist sessions" nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string174 = "quser;net sessions;query session;klist sessions" nocase ascii wide
+        $string174 = /RDPKeylog\.exe/ nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string175 = /RDPKeylog\.exe/ nocase ascii wide
+        $string175 = /Remove\-Item\s\-Path\s.{0,100}\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history\.txt/ nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string176 = /Remove\-Item\s\-Path\s.{0,100}\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history\.txt/ nocase ascii wide
+        $string176 = "Rubeus createnetonly " nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string177 = "Rubeus createnetonly " nocase ascii wide
+        $string177 = "shell_smbadmin -Targets " nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string178 = "shell_smbadmin -Targets " nocase ascii wide
+        $string178 = /shell_tknadmin\s\-Domain\s.{0,100}\s\-DomainController\s/ nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string179 = /shell_tknadmin\s\-Domain\s.{0,100}\s\-DomainController\s/ nocase ascii wide
+        $string179 = "shell_tknadmin -Targets " nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string180 = "shell_tknadmin -Targets " nocase ascii wide
+        $string180 = /shell_wmiadmin\s\-Domain\s.{0,100}\s\-DomainController/ nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string181 = /shell_wmiadmin\s\-Domain\s.{0,100}\s\-DomainController/ nocase ascii wide
+        $string181 = /ShellGen\spowershell\.exe\s\-ep\sbypass\s/ nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string182 = /ShellGen\spowershell\.exe\s\-ep\sbypass\s/ nocase ascii wide
+        $string182 = "Spray an empty password across the Domain" nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string183 = "Spray an empty password across the Domain" nocase ascii wide
+        $string183 = /TGT_Monitor\.ps1/ nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string184 = /TGT_Monitor\.ps1/ nocase ascii wide
+        $string184 = /Tkn_Access_Check\.ps1/ nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string185 = /Tkn_Access_Check\.ps1/ nocase ascii wide
+        $string185 = "tmenochet/PowerDump" nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
         $string186 = "tmenochet/PowerDump" nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string187 = "tmenochet/PowerDump" nocase ascii wide
+        $string187 = "Token-Impersonation -MakeToken -Username " nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string188 = "Token-Impersonation -MakeToken -Username " nocase ascii wide
+        $string188 = "Token-Impersonation -Rev2Self" nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
         $string189 = "Token-Impersonation -Rev2Self" nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string190 = "Token-Impersonation -Rev2Self" nocase ascii wide
+        $string190 = "Token-Impersonation -Steal" nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string191 = "Token-Impersonation -Steal" nocase ascii wide
+        $string191 = /Token\-Impersonation\.ps1/ nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string192 = /Token\-Impersonation\.ps1/ nocase ascii wide
+        $string192 = "vletoux/MakeMeEnterpriseAdmin" nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string193 = "vletoux/MakeMeEnterpriseAdmin" nocase ascii wide
+        $string193 = /wevtutil\sel\s\|\sForEach\-Object\s\{wevtutil\scl\s/ nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string194 = /wevtutil\sel\s\|\sForEach\-Object\s\{wevtutil\scl\s/ nocase ascii wide
+        $string194 = /\-WindowS\sHidden\s\-ep\sBypass\s\-enc\s\$b64FileServerMonitoringScript/ nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string195 = /\-WindowS\sHidden\s\-ep\sBypass\s\-enc\s\$b64FileServerMonitoringScript/ nocase ascii wide
+        $string195 = /\-WindowS\sHidden\s\-ep\sBypass\s\-enc\s\$b64monitoringScript/ nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string196 = /\-WindowS\sHidden\s\-ep\sBypass\s\-enc\s\$b64monitoringScript/ nocase ascii wide
-        // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with Lateral Movement within Active Directory environments
-        // Reference: https://github.com/Leo4j/Amnesiac
-        $string197 = "wmic startup get Caption,Command,Location,User" nocase ascii wide
+        $string196 = "wmic startup get Caption,Command,Location,User" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

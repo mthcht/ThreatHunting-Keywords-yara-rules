@@ -32,6 +32,9 @@ rule TDSKiller
         // Description: TDSKiller detect and remove malware - including rootkits but is also abused by attackers to disable antivirus
         // Reference: https://www.majorgeeks.com/files/details/kaspersky_tdsskiller.html
         $string8 = /http\:\/\/support\.kaspersky\.com\/viruses\/tdsskiller\.xmlt/ nocase ascii wide
+        // Description: TDSKiller detect and remove malware - including rootkits but is also abused by attackers to disable antivirus
+        // Reference: https://www.majorgeeks.com/files/details/kaspersky_tdsskiller.html
+        $string9 = "tdsskiller -dcsvc " nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

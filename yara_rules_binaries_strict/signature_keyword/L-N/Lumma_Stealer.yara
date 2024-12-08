@@ -1,16 +1,16 @@
-rule Avast
+rule Lumma_Stealer
 {
     meta:
-        description = "Detection patterns for the tool 'Avast' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Lumma Stealer' taken from the ThreatHunting-Keywords github project" 
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "Avast"
-        rule_category = "greyware_tool_keyword"
+        tool = "Lumma Stealer"
+        rule_category = "signature_keyword"
 
     strings:
-        // Description: Avast AV to dump LSASS (C:\Program Files\Avast Software\Avast)
-        // Reference: https://rosesecurity.gitbook.io/red-teaming-ttps/windows#av-lsass-dump
-        $string1 = /AvDump\.exe\s\-\-pid\s.{0,100}\s\-\-dump_file\s.{0,100}\.dmp/ nocase ascii wide
+        // Description: Antiviurs signature_keyword
+        // Reference: N/A
+        $string1 = "Trojan:Win64/Lumma" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

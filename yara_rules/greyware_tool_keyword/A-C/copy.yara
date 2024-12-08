@@ -17,6 +17,9 @@ rule copy
         // Description: copy the NTDS.dit file from a Volume Shadow Copy which contains sensitive Active Directory data including password hashes for all domain users
         // Reference: N/A
         $string3 = /copy\s.{0,1000}NTDS\\NTDS\.dit.{0,1000}Temp/ nocase ascii wide
+        // Description: copy dll from Programdata to a remote computer
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string4 = /copy.{0,1000}C\:\\ProgramData\\.{0,1000}\.dll.{0,1000}\\c\$\\/ nocase ascii wide
 
     condition:
         any of them

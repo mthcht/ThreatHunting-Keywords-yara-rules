@@ -32,12 +32,18 @@ rule attrib
         // Description: suspicious attrib command
         // Reference: https://github.com/petikvx/vx-ezine/blob/cfaf09bb089a08a9f33254929209fb32ebd52806/darkcodes/dc1/Sources/Sph1nX_Sources/DeskLock/DeskLock.txt#L13
         $string8 = /attrib\s\-R\s\-S\s\-H\sC\:\\WINDOWS\\System32\\explorer\.exe/ nocase ascii wide
+        // Description: CleanRDP.bat script erasing RDP traces used by Dispossessor ransomware group
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string9 = "attrib -s -h %userprofile%" nocase ascii wide
+        // Description: CleanRDP.bat script erasing RDP traces used by Dispossessor ransomware group
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string10 = /attrib\s\-s\s\-h\s\%userprofile\%\\documents\\Default\.rdp/ nocase ascii wide
         // Description: NTLM Leak via Desktop.ini
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
-        $string9 = /echo\s\[\.ShellClassInfo\]\s\>\sdesktop\.ini/ nocase ascii wide
+        $string11 = /echo\s\[\.ShellClassInfo\]\s\>\sdesktop\.ini/ nocase ascii wide
         // Description: NTLM Leak via Desktop.ini
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
-        $string10 = /echo\sIconResource\=\\\\.{0,1000}\\.{0,1000}\s\>\>\sdesktop\.ini/ nocase ascii wide
+        $string12 = /echo\sIconResource\=\\\\.{0,1000}\\.{0,1000}\s\>\>\sdesktop\.ini/ nocase ascii wide
 
     condition:
         any of them

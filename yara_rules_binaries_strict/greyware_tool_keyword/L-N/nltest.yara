@@ -29,18 +29,21 @@ rule nltest
         // Description: Force a re-discovery of trusted domains
         // Reference: N/A
         $string7 = /nltest\s\/dsgetdc\:.{0,100}\s\/force/ nocase ascii wide
+        // Description: used in combinaison with adfind byb threat actors
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string8 = "nltest /jbc_trusts /all_trusts" nocase ascii wide
         // Description: Force a re-authentication on the secure channel
         // Reference: N/A
-        $string8 = "nltest /sc_reset /force" nocase ascii wide
+        $string9 = "nltest /sc_reset /force" nocase ascii wide
         // Description: List information about all trusted domains from a specific server
         // Reference: N/A
-        $string9 = /nltest\s\/server\:.{0,100}\s\/domain_trusts/ nocase ascii wide
+        $string10 = /nltest\s\/server\:.{0,100}\s\/domain_trusts/ nocase ascii wide
         // Description: Check all trusted domains of a specific server (verbose mode)
         // Reference: N/A
-        $string10 = /nltest\s\/server\:.{0,100}\s\/trusted_domains\s\/v/ nocase ascii wide
+        $string11 = /nltest\s\/server\:.{0,100}\s\/trusted_domains\s\/v/ nocase ascii wide
         // Description: enumerate domain trusts with nltest
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
-        $string11 = "nltest -dsgetdc" nocase ascii wide
+        $string12 = "nltest -dsgetdc" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

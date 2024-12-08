@@ -277,40 +277,43 @@ rule havoc
         $string89 = /PowershellRunner\.h/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string90 = /ServiceHavoc\.exe/ nocase ascii wide
+        $string90 = /profiles\/havoc\.yaotl/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string91 = "set havoc " nocase ascii wide
+        $string91 = /ServiceHavoc\.exe/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string92 = "shellcode inject " nocase ascii wide
+        $string92 = "set havoc " nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string93 = "shellcode spawn " nocase ascii wide
+        $string93 = "shellcode inject " nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string94 = /Shellcode\.x64\.bin/ nocase ascii wide
+        $string94 = "shellcode spawn " nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string95 = "token find-tokens" nocase ascii wide
+        $string95 = /Shellcode\.x64\.bin/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string96 = "token impersonate " nocase ascii wide
+        $string96 = "token find-tokens" nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string97 = "token privs-get" nocase ascii wide
+        $string97 = "token impersonate " nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string98 = "token privs-list" nocase ascii wide
+        $string98 = "token privs-get" nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string99 = "token steal " nocase ascii wide
+        $string99 = "token privs-list" nocase ascii wide
+        // Description: Havoc is a modern and malleable post-exploitation command and control framework
+        // Reference: https://github.com/HavocFramework/Havoc
+        $string100 = "token steal " nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/its-a-feature/Mythic
-        $string100 = "x-ishavocframework" nocase ascii wide
+        $string101 = "x-ishavocframework" nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string101 = "dcenum " nocase ascii wide
+        $string102 = "dcenum " nocase ascii wide
 
     condition:
         any of them

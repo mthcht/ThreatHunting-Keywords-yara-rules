@@ -97,22 +97,25 @@ rule proxychains
         $string29 = "proxychains_proxy_count" nocase ascii wide
         // Description: proxychains - a tool that forces any TCP connection made by any given application to follow through proxy like TOR or any other SOCKS4 SOCKS5 or HTTP(S) proxy
         // Reference: https://github.com/haad/proxychains
-        $string30 = "proxychains4" nocase ascii wide
+        $string30 = /proxychains4\s\-q\s.{0,1000}\ssmb\s1/ nocase ascii wide
         // Description: proxychains - a tool that forces any TCP connection made by any given application to follow through proxy like TOR or any other SOCKS4 SOCKS5 or HTTP(S) proxy
         // Reference: https://github.com/haad/proxychains
-        $string31 = "proxychains-master" nocase ascii wide
+        $string31 = "proxychains4" nocase ascii wide
         // Description: proxychains - a tool that forces any TCP connection made by any given application to follow through proxy like TOR or any other SOCKS4 SOCKS5 or HTTP(S) proxy
         // Reference: https://github.com/haad/proxychains
-        $string32 = /proxychains\-other\.conf/ nocase ascii wide
+        $string32 = "proxychains-master" nocase ascii wide
         // Description: proxychains - a tool that forces any TCP connection made by any given application to follow through proxy like TOR or any other SOCKS4 SOCKS5 or HTTP(S) proxy
         // Reference: https://github.com/haad/proxychains
-        $string33 = "proxyresolv " nocase ascii wide
+        $string33 = /proxychains\-other\.conf/ nocase ascii wide
         // Description: proxychains - a tool that forces any TCP connection made by any given application to follow through proxy like TOR or any other SOCKS4 SOCKS5 or HTTP(S) proxy
         // Reference: https://github.com/haad/proxychains
-        $string34 = "rofl0r/proxychains" nocase ascii wide
+        $string34 = "proxyresolv " nocase ascii wide
+        // Description: proxychains - a tool that forces any TCP connection made by any given application to follow through proxy like TOR or any other SOCKS4 SOCKS5 or HTTP(S) proxy
+        // Reference: https://github.com/haad/proxychains
+        $string35 = "rofl0r/proxychains" nocase ascii wide
         // Description: (TOR default) proxychains - a tool that forces any TCP connection made by any given application to follow through proxy like TOR or any other SOCKS4 SOCKS5 or HTTP(S) proxy
         // Reference: https://github.com/haad/proxychains
-        $string35 = /socks.{0,1000}127\.0\.0\.1\s9050/ nocase ascii wide
+        $string36 = /socks.{0,1000}127\.0\.0\.1\s9050/ nocase ascii wide
 
     condition:
         any of them

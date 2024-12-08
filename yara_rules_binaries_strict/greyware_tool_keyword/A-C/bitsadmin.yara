@@ -12,8 +12,11 @@ rule bitsadmin
         // Reference: N/A
         $string1 = /b\^i\^t\^s\^a\^d\^min\^\s\/t\^ra\^n\^s\^f\^e\^r\^\s\^\/\^d\^o\^w\^n\^l\^o\^a\^d/ nocase ascii wide
         // Description: bitsadmin suspicious transfer
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string2 = "bitsadmin /transfer " nocase ascii wide
+        // Description: bitsadmin suspicious transfer
         // Reference: N/A
-        $string2 = /bitsadmin\s\/transfer\sdebjob\s\/download\s\/priority\snormal\s\\.{0,100}\\C\$\\Windows\\.{0,100}\.dll/ nocase ascii wide
+        $string3 = /bitsadmin\s\/transfer\sdebjob\s\/download\s\/priority\snormal\s\\.{0,100}\\C\$\\Windows\\.{0,100}\.dll/ nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

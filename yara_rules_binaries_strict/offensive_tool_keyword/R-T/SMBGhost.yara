@@ -12,8 +12,11 @@ rule SMBGhost
         // Reference: https://github.com/ollypwn/SMBGhost
         $string1 = /\/SMBGhost\/scanner\.py/ nocase ascii wide
         // Description: Simple scanner for CVE-2020-0796 - SMBv3 RCE.
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string2 = /smb_ghost\.py/ nocase ascii wide
+        // Description: Simple scanner for CVE-2020-0796 - SMBv3 RCE.
         // Reference: https://github.com/ollypwn/SMBGhost
-        $string2 = /SMBGhost\.pcap/ nocase ascii wide
+        $string3 = /SMBGhost\.pcap/ nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

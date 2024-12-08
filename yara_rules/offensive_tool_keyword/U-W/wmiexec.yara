@@ -40,16 +40,22 @@ rule wmiexec
         $string10 = /cmd\.exe\s\/Q\s\/c\squser\s1\s\>\s\\\\127\.0\.0\.1\\ADMIN\$\\/ nocase ascii wide
         // Description: Set of python scripts which perform different ways of command execution via WMI protocol
         // Reference: https://github.com/WKL-Sec/wmiexec
-        $string11 = /WMIExec\.git/ nocase ascii wide
+        $string11 = /wmiexec\.exe\s\-hashes\s/ nocase ascii wide
         // Description: Set of python scripts which perform different ways of command execution via WMI protocol
         // Reference: https://github.com/WKL-Sec/wmiexec
-        $string12 = /wmiexec_scheduledjob\.py/ nocase ascii wide
+        $string12 = /wmiexec\.exe\\"\s\-hashes\s/ nocase ascii wide
         // Description: Set of python scripts which perform different ways of command execution via WMI protocol
         // Reference: https://github.com/WKL-Sec/wmiexec
-        $string13 = /wmiexec_win32process\.py/ nocase ascii wide
+        $string13 = /WMIExec\.git/ nocase ascii wide
         // Description: Set of python scripts which perform different ways of command execution via WMI protocol
         // Reference: https://github.com/WKL-Sec/wmiexec
-        $string14 = "WMIExec-main" nocase ascii wide
+        $string14 = /wmiexec_scheduledjob\.py/ nocase ascii wide
+        // Description: Set of python scripts which perform different ways of command execution via WMI protocol
+        // Reference: https://github.com/WKL-Sec/wmiexec
+        $string15 = /wmiexec_win32process\.py/ nocase ascii wide
+        // Description: Set of python scripts which perform different ways of command execution via WMI protocol
+        // Reference: https://github.com/WKL-Sec/wmiexec
+        $string16 = "WMIExec-main" nocase ascii wide
 
     condition:
         any of them

@@ -21,80 +21,98 @@ rule adfind
         // Reference: https://www.virustotal.com/gui/file/484dd00e85c033fbfd506b956ac0acd29b30f239755ed753a2788a842425b384/behavior
         $string4 = /\s\-f\s\\"\(objectcategory\=trustedDomain\)\\"\s\-s\ssubtree\sname\strustAttributes\strustDirection\strustType/ nocase ascii wide
         // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
-        // Reference: https://thedfirreport.com/2022/08/08/bumblebee-roasts-its-way-to-domain-admin/
-        $string5 = " -sc trustdump" nocase ascii wide
-        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
-        // Reference: https://github.com/aancw/community-threats/blob/82ece2dec931d175ed47276d426f526610aa8262/Ryuk/VFS/adf.bat#L4
-        $string6 = /\.exe\s\-gcb\s\-sc\strustdmp\s\>\s/ nocase ascii wide
-        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
-        // Reference: https://github.com/aancw/community-threats/blob/82ece2dec931d175ed47276d426f526610aa8262/Ryuk/VFS/adf.bat#L4
-        $string7 = /\.exe\s\-sc\sadinfo\s\>\s/ nocase ascii wide
-        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
-        // Reference: https://github.com/aancw/community-threats/blob/82ece2dec931d175ed47276d426f526610aa8262/Ryuk/VFS/adf.bat#L4
-        $string8 = /\.exe\s\-sc\sdclist\s\>\s/ nocase ascii wide
-        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
-        // Reference: https://github.com/aancw/community-threats/blob/82ece2dec931d175ed47276d426f526610aa8262/Ryuk/VFS/adf.bat#L4
-        $string9 = /\.exe\s\-sc\strustdmp\s\>\s/ nocase ascii wide
-        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
-        // Reference: https://github.com/aancw/community-threats/blob/82ece2dec931d175ed47276d426f526610aa8262/Ryuk/VFS/adf.bat#L4
-        $string10 = /\.exe\s\-subnets\s\-f\s\(objectCategory\=subnet\)\s\>\s/ nocase ascii wide
-        // Description: adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers are abusing it to gather valuable information about the network environment
-        // Reference: https://www.virustotal.com/gui/file/484dd00e85c033fbfd506b956ac0acd29b30f239755ed753a2788a842425b384/behavior
-        $string11 = /\/AdFind\.zip/ nocase ascii wide
-        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
-        // Reference: https://github.com/aancw/community-threats/blob/82ece2dec931d175ed47276d426f526610aa8262/Ryuk/VFS/adf.bat#L4
-        $string12 = /\\adf\.bat/ nocase ascii wide
-        // Description: adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers are abusing it to gather valuable information about the network environment
-        // Reference: https://www.virustotal.com/gui/file/484dd00e85c033fbfd506b956ac0acd29b30f239755ed753a2788a842425b384/behavior
-        $string13 = /\\adfind\.cf/ nocase ascii wide
-        // Description: adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers are abusing it to gather valuable information about the network environment
-        // Reference: https://www.virustotal.com/gui/file/484dd00e85c033fbfd506b956ac0acd29b30f239755ed753a2788a842425b384/behavior
-        $string14 = /\\AdFind\.zip/ nocase ascii wide
-        // Description: adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers are abusing it to gather valuable information about the network environment
-        // Reference: https://www.virustotal.com/gui/file/484dd00e85c033fbfd506b956ac0acd29b30f239755ed753a2788a842425b384/behavior
-        $string15 = ">AdFind<" nocase ascii wide
-        // Description: adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers are abusing it to gather valuable information about the network environment
-        // Reference: https://www.virustotal.com/gui/file/484dd00e85c033fbfd506b956ac0acd29b30f239755ed753a2788a842425b384/behavior
-        $string16 = "484dd00e85c033fbfd506b956ac0acd29b30f239755ed753a2788a842425b384" nocase ascii wide
+        // Reference: N/A
+        $string5 = " -sc getacls -sddlfilter " nocase ascii wide
         // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
         // Reference: https://thedfirreport.com/2022/08/08/bumblebee-roasts-its-way-to-domain-admin/
-        $string17 = "adfind -f " nocase ascii wide
+        $string6 = " -sc trustdump" nocase ascii wide
+        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
+        // Reference: https://github.com/aancw/community-threats/blob/82ece2dec931d175ed47276d426f526610aa8262/Ryuk/VFS/adf.bat#L4
+        $string7 = /\.exe\s\-gcb\s\-sc\strustdmp\s\>\s/ nocase ascii wide
+        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
+        // Reference: https://github.com/aancw/community-threats/blob/82ece2dec931d175ed47276d426f526610aa8262/Ryuk/VFS/adf.bat#L4
+        $string8 = /\.exe\s\-sc\sadinfo\s\>\s/ nocase ascii wide
+        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
+        // Reference: https://github.com/aancw/community-threats/blob/82ece2dec931d175ed47276d426f526610aa8262/Ryuk/VFS/adf.bat#L4
+        $string9 = /\.exe\s\-sc\sdclist\s\>\s/ nocase ascii wide
+        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string10 = /\.exe\s\-sc\sgetacls\s\-sddlfilter\s/ nocase ascii wide
+        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
+        // Reference: https://github.com/aancw/community-threats/blob/82ece2dec931d175ed47276d426f526610aa8262/Ryuk/VFS/adf.bat#L4
+        $string11 = /\.exe\s\-sc\strustdmp\s\>\s/ nocase ascii wide
+        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
+        // Reference: https://github.com/aancw/community-threats/blob/82ece2dec931d175ed47276d426f526610aa8262/Ryuk/VFS/adf.bat#L4
+        $string12 = /\.exe\s\-subnets\s\-f\s\(objectCategory\=subnet\)\s\>\s/ nocase ascii wide
+        // Description: adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers are abusing it to gather valuable information about the network environment
+        // Reference: https://www.virustotal.com/gui/file/484dd00e85c033fbfd506b956ac0acd29b30f239755ed753a2788a842425b384/behavior
+        $string13 = /\/AdFind\.zip/ nocase ascii wide
+        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
+        // Reference: https://github.com/aancw/community-threats/blob/82ece2dec931d175ed47276d426f526610aa8262/Ryuk/VFS/adf.bat#L4
+        $string14 = /\\adf\.bat/ nocase ascii wide
+        // Description: adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers are abusing it to gather valuable information about the network environment
+        // Reference: https://www.virustotal.com/gui/file/484dd00e85c033fbfd506b956ac0acd29b30f239755ed753a2788a842425b384/behavior
+        $string15 = /\\adfind\.cf/ nocase ascii wide
+        // Description: adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers are abusing it to gather valuable information about the network environment
+        // Reference: https://www.virustotal.com/gui/file/484dd00e85c033fbfd506b956ac0acd29b30f239755ed753a2788a842425b384/behavior
+        $string16 = /\\AdFind\.zip/ nocase ascii wide
+        // Description: adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers are abusing it to gather valuable information about the network environment
+        // Reference: https://www.virustotal.com/gui/file/484dd00e85c033fbfd506b956ac0acd29b30f239755ed753a2788a842425b384/behavior
+        $string17 = ">AdFind<" nocase ascii wide
+        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string18 = "20b1918318148e410159d729ffcc373932073e2a68e993cc4440fc7df214471d" nocase ascii wide
+        // Description: adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers are abusing it to gather valuable information about the network environment
+        // Reference: https://www.virustotal.com/gui/file/484dd00e85c033fbfd506b956ac0acd29b30f239755ed753a2788a842425b384/behavior
+        $string19 = "484dd00e85c033fbfd506b956ac0acd29b30f239755ed753a2788a842425b384" nocase ascii wide
+        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string20 = "776a81b705827758d8810b9985a23ac59dc4cfd7ac616f0f08373d188d8291e6" nocase ascii wide
+        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string21 = "8f4662a487860ced024b2b38e6386a97ff7986313778a54a559eb0fc52e98606" nocase ascii wide
+        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string22 = "93c99378e20e88a9b81826b6619fde2bf261b278cfc2cdb79697a1575f9120fc" nocase ascii wide
+        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
+        // Reference: https://thedfirreport.com/2022/08/08/bumblebee-roasts-its-way-to-domain-admin/
+        $string23 = "adfind -f " nocase ascii wide
         // Description: query domain trusts with adfind
         // Reference: N/A
-        $string18 = "adfind -f objectclass=trusteddomain" nocase ascii wide
+        $string24 = "adfind -f objectclass=trusteddomain" nocase ascii wide
         // Description: query domain trusts with adfind
         // Reference: N/A
-        $string19 = "adfind -sc trustdmp" nocase ascii wide
+        $string25 = "adfind -sc trustdmp" nocase ascii wide
         // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
         // Reference: https://thedfirreport.com/2022/08/08/bumblebee-roasts-its-way-to-domain-admin/
-        $string20 = /adfind\.bat/ nocase ascii wide
+        $string26 = /adfind\.bat/ nocase ascii wide
         // Description: query domain trusts with adfind
         // Reference: N/A
-        $string21 = /adfind\.exe\s\-f\sobjectclass\=trusteddomain/ nocase ascii wide
+        $string27 = /adfind\.exe\s\-f\sobjectclass\=trusteddomain/ nocase ascii wide
         // Description: query domain trusts with adfind
         // Reference: N/A
-        $string22 = /adfind\.exe\s\-sc\strustdmp/ nocase ascii wide
+        $string28 = /adfind\.exe\s\-sc\strustdmp/ nocase ascii wide
         // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
         // Reference: https://thedfirreport.com/2022/08/08/bumblebee-roasts-its-way-to-domain-admin/
-        $string23 = /adfind\.exe/ nocase ascii wide
+        $string29 = /adfind\.exe/ nocase ascii wide
         // Description: adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers are abusing it to gather valuable information about the network environment
         // Reference: https://www.virustotal.com/gui/file/484dd00e85c033fbfd506b956ac0acd29b30f239755ed753a2788a842425b384/behavior
-        $string24 = /AdFind\\AdFind\.cpp/ nocase ascii wide
+        $string30 = /AdFind\\AdFind\.cpp/ nocase ascii wide
         // Description: adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers are abusing it to gather valuable information about the network environment
         // Reference: https://www.virustotal.com/gui/file/484dd00e85c033fbfd506b956ac0acd29b30f239755ed753a2788a842425b384/behavior
-        $string25 = /AdFind_original\.exe/ nocase ascii wide
+        $string31 = /AdFind_original\.exe/ nocase ascii wide
+        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string32 = "ce7c494c2959f874740bab1c74b444d776c9d6550337c8c046a1ddd795194b98" nocase ascii wide
         // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
         // Reference: https://thedfirreport.com/2022/08/08/bumblebee-roasts-its-way-to-domain-admin/
-        $string26 = "computers_pwdnotreqd" nocase ascii wide
+        $string33 = "computers_pwdnotreqd" nocase ascii wide
         // Description: adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers are abusing it to gather valuable information about the network environment
         // Reference: https://www.virustotal.com/gui/file/484dd00e85c033fbfd506b956ac0acd29b30f239755ed753a2788a842425b384/behavior
-        $string27 = /joeware_default_adfind\.cf/ nocase ascii wide
+        $string34 = /joeware_default_adfind\.cf/ nocase ascii wide
         // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
         // Reference: https://thedfirreport.com/2022/08/08/bumblebee-roasts-its-way-to-domain-admin/
-        $string28 = /name\=.{0,100}Domain\sAdmins/ nocase ascii wide
-        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
-        // Reference: https://thedfirreport.com/2022/08/08/bumblebee-roasts-its-way-to-domain-admin/
-        $string29 = "tools/adfind" nocase ascii wide
+        $string35 = "tools/adfind" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

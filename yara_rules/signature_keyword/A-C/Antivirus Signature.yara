@@ -170,21 +170,21 @@ rule Antivirus_Signature
         // Description: Antiviurs signature_keyword
         // Reference: N/A
         $string54 = "HKTL_NETCAT" nocase ascii wide
-        // Description: AV signature for exploitation tools
-        // Reference: N/A
-        $string55 = "HTool" nocase ascii wide
         // Description: Generic hacktool Engine signature
         // Reference: N/A
-        $string56 = "HTool/WCE" nocase ascii wide
+        $string55 = "HTool/WCE" nocase ascii wide
         // Description: AV signature for exploitation tools
         // Reference: N/A
-        $string57 = "impacket" nocase ascii wide
+        $string56 = "impacket" nocase ascii wide
         // Description: AV signature of noodlerat malware
         // Reference: N/A
-        $string58 = /Linux\.Backdoor/ nocase ascii wide
+        $string57 = /Linux\.Backdoor/ nocase ascii wide
         // Description: Dump LSASS memory through a process snapshot (-r) avoiding interacting with it directly
         // Reference: lsass dump malware signature
-        $string59 = "Lsass-Mdump" nocase ascii wide
+        $string58 = "Lsass-Mdump" nocase ascii wide
+        // Description: AV signature for exploitation tools
+        // Reference: N/A
+        $string59 = /Malware\.Htool/ nocase ascii wide
         // Description: AV signature for exploitation tools
         // Reference: N/A
         $string60 = "MSFPsExeCommand" nocase ascii wide
@@ -242,72 +242,72 @@ rule Antivirus_Signature
         // Description: Antiviurs signature_keyword
         // Reference: N/A
         $string78 = /TROJ_ZIPBOMB\./ nocase ascii wide
-        // Description: Antiviurs signature_keyword
-        // Reference: N/A
-        $string79 = /Trojan\.Linux/ nocase ascii wide
-        // Description: Antiviurs signature_keyword
-        // Reference: N/A
-        $string80 = /Trojan\.Win32\..{0,1000}\./ nocase ascii wide
-        // Description: Antiviurs signature_keyword
-        // Reference: N/A
-        $string81 = /Trojan\.Win64/ nocase ascii wide
-        // Description: Antiviurs signature_keyword
-        // Reference: N/A
-        $string82 = /Trojan\.WinGo/ nocase ascii wide
-        // Description: Antiviurs signature_keyword
-        // Reference: N/A
-        $string83 = "Trojan/Win32" nocase ascii wide
-        // Description: Antiviurs signature_keyword
-        // Reference: N/A
-        $string84 = "Trojan/Win64" nocase ascii wide
-        // Description: Antiviurs signature_keyword
-        // Reference: N/A
-        $string85 = "Trojan:MacOS" nocase ascii wide
-        // Description: Antiviurs signature_keyword for xeno rat client.exe
-        // Reference: N/A
-        $string86 = /Trojan\:MSIL\/Dothetuk\./ nocase ascii wide
         // Description: AV signature for exploitation tools
         // Reference: N/A
-        $string87 = "Trojan:PowerShell" nocase ascii wide
+        $string79 = /Trojan\.HTool/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string88 = "Trojan:PowerShell/BatLoader" nocase ascii wide
+        $string80 = /Trojan\.Linux/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string89 = "Trojan:Python/BatLoader" nocase ascii wide
+        $string81 = /Trojan\.Win32\..{0,1000}\./ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string90 = "Trojan:Win32" nocase ascii wide
+        $string82 = /Trojan\.Win64/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string91 = "Trojan:Win32/Batloader" nocase ascii wide
+        $string83 = /Trojan\.WinGo/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string92 = "Trojan:Win32/EugenLoader" nocase ascii wide
+        $string84 = "Trojan/Win32" nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string93 = "Trojan:Win32/Gozi" nocase ascii wide
+        $string85 = "Trojan/Win64" nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string94 = "Trojan:Win32/IceId" nocase ascii wide
+        $string86 = "Trojan:MacOS" nocase ascii wide
+        // Description: Antiviurs signature_keyword for xeno rat client.exe
+        // Reference: N/A
+        $string87 = /Trojan\:MSIL\/Dothetuk\./ nocase ascii wide
+        // Description: AV signature for exploitation tools
+        // Reference: N/A
+        $string88 = "Trojan:PowerShell" nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string95 = "Trojan:Win32/Smokeloader" nocase ascii wide
+        $string89 = "Trojan:PowerShell/BatLoader" nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string96 = "Trojan:Win32/Trickbot" nocase ascii wide
+        $string90 = "Trojan:Python/BatLoader" nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string97 = "Trojan:Win64" nocase ascii wide
+        $string91 = "Trojan:Win32" nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string98 = "Trojan:Win64/IcedID" nocase ascii wide
+        $string92 = "Trojan:Win32/Batloader" nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string99 = "Trojan:Win64/IceId" nocase ascii wide
+        $string93 = "Trojan:Win32/EugenLoader" nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string100 = "Trojan:Win64/Lumma" nocase ascii wide
+        $string94 = "Trojan:Win32/Gozi" nocase ascii wide
+        // Description: Antiviurs signature_keyword
+        // Reference: N/A
+        $string95 = "Trojan:Win32/IceId" nocase ascii wide
+        // Description: Antiviurs signature_keyword
+        // Reference: N/A
+        $string96 = "Trojan:Win32/Smokeloader" nocase ascii wide
+        // Description: Antiviurs signature_keyword
+        // Reference: N/A
+        $string97 = "Trojan:Win32/Trickbot" nocase ascii wide
+        // Description: Antiviurs signature_keyword
+        // Reference: N/A
+        $string98 = "Trojan:Win64" nocase ascii wide
+        // Description: Antiviurs signature_keyword
+        // Reference: N/A
+        $string99 = "Trojan:Win64/IcedID" nocase ascii wide
+        // Description: Antiviurs signature_keyword
+        // Reference: N/A
+        $string100 = "Trojan:Win64/IceId" nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
         $string101 = "TrojanDownloader:PowerShell/EugenLoader" nocase ascii wide

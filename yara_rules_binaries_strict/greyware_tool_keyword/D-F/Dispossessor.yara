@@ -1,16 +1,19 @@
-rule binwalk
+rule Dispossessor
 {
     meta:
-        description = "Detection patterns for the tool 'binwalk' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Dispossessor' taken from the ThreatHunting-Keywords github project" 
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "binwalk"
+        tool = "Dispossessor"
         rule_category = "greyware_tool_keyword"
 
     strings:
-        // Description: Binwalk is a fast. easy to use tool for analyzing. reverse engineering. and extracting firmware images.
-        // Reference: https://github.com/ReFirmLabs/binwalk
-        $string1 = "binwalk" nocase ascii wide
+        // Description: tool used by Dispossessor ransomware group to remove AV
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string1 = /\\BEST_uninstallTool\.exe/ nocase ascii wide
+        // Description: powershell script to find a spn - abused by Dispossessor ransomware group
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string2 = /\\findspn\.ps1/ nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

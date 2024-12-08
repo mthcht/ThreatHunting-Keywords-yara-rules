@@ -15,7 +15,7 @@ rule tasklist
         // Reference: https://github.com/ice-wzl/wmiexec2
         $string2 = /tasklist\s\/svc\s\|\sfindstr\s\/i\s\\"vmtoolsd\.exe\\"/ nocase ascii wide
         // Description: get LSASS process ID
-        // Reference: 
+        // Reference: N/A
         $string3 = /tasklist\s\|\sfindstr\slsass/ nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii

@@ -14,13 +14,13 @@ rule psexec
         // Description: Adversaries may place the PsExec executable in the temp directory and execute it from there as part of their offensive activities. By doing so. they can leverage PsExec to execute commands or launch processes on remote systems. enabling Lateral Movement. privilege escalation. or the execution of malicious payloads.
         // Reference: https://learn.microsoft.com/fr-fr/sysinternals/downloads/psexec
         $string2 = /\.exe\s\-i\s\-s\scmd\.exe/ nocase ascii wide
-        // Description: Adversaries may place the PsExec executable in the temp directory and execute it from there as part of their offensive activities. By doing so. they can leverage PsExec to execute commands or launch processes on remote systems. enabling Lateral Movement. privilege escalation. or the execution of malicious payloads.
+        // Description: PsExec is a legitimate Microsoft tool for remote administration. However. attackers can misuse it to execute malicious commands or software on other network machines. install persistent threats. and evade some security systems. 
         // Reference: https://learn.microsoft.com/fr-fr/sysinternals/downloads/psexec
         $string3 = /\\PsExec\.exe/ nocase ascii wide
         // Description: PsExec is a legitimate Microsoft tool for remote administration. However. attackers can misuse it to execute malicious commands or software on other network machines. install persistent threats. and evade some security systems. 
         // Reference: https://learn.microsoft.com/fr-fr/sysinternals/downloads/psexec
         $string4 = /\\SOFTWARE\\Sysinternals\\PsExec\\EulaAccepted/ nocase ascii wide
-        // Description: Adversaries may place the PsExec executable in the temp directory and execute it from there as part of their offensive activities. By doing so. they can leverage PsExec to execute commands or launch processes on remote systems. enabling Lateral Movement. privilege escalation. or the execution of malicious payloads.
+        // Description: PsExec is a legitimate Microsoft tool for remote administration. However. attackers can misuse it to execute malicious commands or software on other network machines. install persistent threats. and evade some security systems. 
         // Reference: https://learn.microsoft.com/fr-fr/sysinternals/downloads/psexec
         $string5 = /\\Windows\\Prefetch\\PSEXEC/ nocase ascii wide
         // Description: .key file created and deleted on the target system
@@ -29,18 +29,21 @@ rule psexec
         // Description: .key file created and deleted on the target system
         // Reference: https://learn.microsoft.com/fr-fr/sysinternals/downloads/psexec
         $string7 = /PSEXEC\-.{0,1000}\.key/ nocase ascii wide
-        // Description: Adversaries may place the PsExec executable in the temp directory and execute it from there as part of their offensive activities. By doing so. they can leverage PsExec to execute commands or launch processes on remote systems. enabling Lateral Movement. privilege escalation. or the execution of malicious payloads.
-        // Reference: https://learn.microsoft.com/fr-fr/sysinternals/downloads/psexec
-        $string8 = /PsExec\[1\]\.exe/ nocase ascii wide
-        // Description: Adversaries may place the PsExec executable in the temp directory and execute it from there as part of their offensive activities. By doing so. they can leverage PsExec to execute commands or launch processes on remote systems. enabling Lateral Movement. privilege escalation. or the execution of malicious payloads.
-        // Reference: https://learn.microsoft.com/fr-fr/sysinternals/downloads/psexec
-        $string9 = /PsExec64\.exe/ nocase ascii wide
         // Description: PsExec is a legitimate Microsoft tool for remote administration. However. attackers can misuse it to execute malicious commands or software on other network machines. install persistent threats. and evade some security systems. 
         // Reference: https://learn.microsoft.com/fr-fr/sysinternals/downloads/psexec
-        $string10 = "PSEXECSVC" nocase ascii wide
+        $string8 = /PsExec\.exe\s\/accepteula/ nocase ascii wide
+        // Description: Adversaries may place the PsExec executable in the temp directory and execute it from there as part of their offensive activities. By doing so. they can leverage PsExec to execute commands or launch processes on remote systems. enabling Lateral Movement. privilege escalation. or the execution of malicious payloads.
+        // Reference: https://learn.microsoft.com/fr-fr/sysinternals/downloads/psexec
+        $string9 = /PsExec\[1\]\.exe/ nocase ascii wide
+        // Description: Adversaries may place the PsExec executable in the temp directory and execute it from there as part of their offensive activities. By doing so. they can leverage PsExec to execute commands or launch processes on remote systems. enabling Lateral Movement. privilege escalation. or the execution of malicious payloads.
+        // Reference: https://learn.microsoft.com/fr-fr/sysinternals/downloads/psexec
+        $string10 = /PsExec64\.exe/ nocase ascii wide
+        // Description: PsExec is a legitimate Microsoft tool for remote administration. However. attackers can misuse it to execute malicious commands or software on other network machines. install persistent threats. and evade some security systems. 
+        // Reference: https://learn.microsoft.com/fr-fr/sysinternals/downloads/psexec
+        $string11 = "PSEXECSVC" nocase ascii wide
         // Description: prefetch - .key file created and deleted on the target system
         // Reference: https://learn.microsoft.com/fr-fr/sysinternals/downloads/psexec
-        $string11 = /PSEXECSVC\.EXE\-.{0,1000}\.pf/ nocase ascii wide
+        $string12 = /PSEXECSVC\.EXE\-.{0,1000}\.pf/ nocase ascii wide
 
     condition:
         any of them

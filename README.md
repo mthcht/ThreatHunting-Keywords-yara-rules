@@ -47,9 +47,4 @@ Example of the json output file using `-o` or `--output`:
 ![image](https://github.com/user-attachments/assets/f9298af0-7f1d-4c75-96ef-cc7b304aa5d7)
 
 
-## Integrated with bincapz
-
-Enumerates program capabilities and malicious behaviors with [bincapz](https://github.com/chainguard-dev/bincapz) and this project rules:
-`bincapz -third-party -all -stats myfolder`
-
 

@@ -1,7 +1,7 @@
 rule metasploit_payloads
 {
     meta:
-        description = "Detection patterns for the tool 'metasploit-payloads' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'metasploit-payloads' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "metasploit-payloads"
@@ -10,16 +10,16 @@ rule metasploit_payloads
     strings:
         // Description: shell payload
         // Reference: https://github.com/rapid7/metasploit-payloads
-        $string1 = "/credentials/enum_cred_store" nocase ascii wide
+        $string1 = "/credentials/enum_cred_store"
         // Description: shell payload
         // Reference: https://github.com/rapid7/metasploit-payloads
-        $string2 = "/credentials/enum_laps" nocase ascii wide
+        $string2 = "/credentials/enum_laps"
         // Description: shell payload
         // Reference: https://github.com/rapid7/metasploit-payloads
-        $string3 = "/gather/phish_windows_credentials" nocase ascii wide
+        $string3 = "/gather/phish_windows_credentials"
         // Description: shell payload
         // Reference: https://github.com/rapid7/metasploit-payloads
-        $string4 = "/local_exploit_suggester" nocase ascii wide
+        $string4 = "/local_exploit_suggester"
         // Description: shell payload
         // Reference: https://github.com/rapid7/metasploit-payloads
         $string5 = "capture/lockout_keylogger" nocase ascii wide

@@ -1,7 +1,7 @@
 rule htshells
 {
     meta:
-        description = "Detection patterns for the tool 'htshells' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'htshells' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "htshells"
@@ -10,13 +10,13 @@ rule htshells
     strings:
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
-        $string1 = /\sprepare\.sh\sshell\/mod_.{0,1000}\.htaccess/ nocase ascii wide
+        $string1 = /\sprepare\.sh\sshell\/mod_.{0,1000}\.htaccess/
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
         $string2 = /\/htshells\.git/ nocase ascii wide
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
-        $string3 = /\/prepare\.sh\sshell\/mod_.{0,1000}\.htaccess/ nocase ascii wide
+        $string3 = /\/prepare\.sh\sshell\/mod_.{0,1000}\.htaccess/
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
         $string4 = "htshells-master" nocase ascii wide
@@ -40,7 +40,7 @@ rule htshells
         $string10 = /mod_caucho\.shell\.htaccess/ nocase ascii wide
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
-        $string11 = /mod_cgi\.shell\.bash\.htaccess/ nocase ascii wide
+        $string11 = /mod_cgi\.shell\.bash\.htaccess/
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
         $string12 = /mod_cgi\.shell\.bind\.htaccess/ nocase ascii wide

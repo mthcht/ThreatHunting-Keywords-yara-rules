@@ -1,7 +1,7 @@
 rule hak5_cloudc2
 {
     meta:
-        description = "Detection patterns for the tool 'hak5 cloudc2' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'hak5 cloudc2' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "hak5 cloudc2"
@@ -25,13 +25,13 @@ rule hak5_cloudc2
         $string5 = /\/c2\-3\.4\.0\.zip/ nocase ascii wide
         // Description: Cloud C2 makes it easy for pentesters and security teams to deploy and manage Hak5 gear from the cloud
         // Reference: https://shop.hak5.org/products/c2?
-        $string6 = /\/c2\-3\.4\.0_amd64_darwin/ nocase ascii wide
+        $string6 = /\/c2\-3\.4\.0_amd64_darwin/
         // Description: Cloud C2 makes it easy for pentesters and security teams to deploy and manage Hak5 gear from the cloud
         // Reference: https://shop.hak5.org/products/c2?
         $string7 = /\/c2\-3\.4\.0_amd64_windows\.exe/ nocase ascii wide
         // Description: Cloud C2 makes it easy for pentesters and security teams to deploy and manage Hak5 gear from the cloud
         // Reference: https://shop.hak5.org/products/c2?
-        $string8 = /\/c2\-3\.4\.0_arm64_darwin/ nocase ascii wide
+        $string8 = /\/c2\-3\.4\.0_arm64_darwin/
         // Description: Cloud C2 makes it easy for pentesters and security teams to deploy and manage Hak5 gear from the cloud
         // Reference: https://shop.hak5.org/products/c2?
         $string9 = /\/c2\-3\.4\.0_i386_windows\.exe/ nocase ascii wide
@@ -40,7 +40,7 @@ rule hak5_cloudc2
         $string10 = /\/c2\-3\.4\.0_i386_windows\.exe/ nocase ascii wide
         // Description: Cloud C2 makes it easy for pentesters and security teams to deploy and manage Hak5 gear from the cloud
         // Reference: https://shop.hak5.org/products/c2?
-        $string11 = /\/hak5\/cc\-server\/database\.Log/ nocase ascii wide
+        $string11 = /\/hak5\/cc\-server\/database\.Log/
         // Description: Cloud C2 makes it easy for pentesters and security teams to deploy and manage Hak5 gear from the cloud
         // Reference: https://shop.hak5.org/products/c2?
         $string12 = /\\c2_setup_token\.txt/ nocase ascii wide

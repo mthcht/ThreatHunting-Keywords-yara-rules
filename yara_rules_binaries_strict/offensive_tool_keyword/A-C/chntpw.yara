@@ -1,7 +1,7 @@
 rule chntpw
 {
     meta:
-        description = "Detection patterns for the tool 'chntpw' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'chntpw' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "chntpw"
@@ -16,34 +16,34 @@ rule chntpw
         $string2 = /\ssam_reset_all_pw\(/ nocase ascii wide
         // Description: reset a password on your system
         // Reference: https://pogostick.net/~pnh/ntpasswd/chntpw-source-140201.zip
-        $string3 = "/chntpw -" nocase ascii wide
+        $string3 = "/chntpw -"
         // Description: reset a password on your system
         // Reference: https://pogostick.net/~pnh/ntpasswd/chntpw-source-140201.zip
         $string4 = "/chntpw-140201" nocase ascii wide
         // Description: reset a password on your system
         // Reference: https://pogostick.net/~pnh/ntpasswd/chntpw-source-140201.zip
-        $string5 = "/sampasswd" nocase ascii wide
+        $string5 = "/sampasswd"
         // Description: reset a password on your system
         // Reference: https://pogostick.net/~pnh/ntpasswd/chntpw-source-140201.zip
-        $string6 = /\/samusrgrp\./ nocase ascii wide
+        $string6 = /\/samusrgrp\./
         // Description: reset a password on your system
         // Reference: https://pogostick.net/~pnh/ntpasswd/chntpw-source-140201.zip
-        $string7 = "/sbin/chntpw" nocase ascii wide
+        $string7 = "/sbin/chntpw"
         // Description: reset a password on your system
         // Reference: https://pogostick.net/~pnh/ntpasswd/chntpw-source-140201.zip
-        $string8 = "/sbin/sampasswd" nocase ascii wide
+        $string8 = "/sbin/sampasswd"
         // Description: reset a password on your system
         // Reference: https://pogostick.net/~pnh/ntpasswd/chntpw-source-140201.zip
-        $string9 = "/sbin/samunlock" nocase ascii wide
+        $string9 = "/sbin/samunlock"
         // Description: reset a password on your system
         // Reference: https://pogostick.net/~pnh/ntpasswd/chntpw-source-140201.zip
-        $string10 = "/sbin/samusrgrp" nocase ascii wide
+        $string10 = "/sbin/samusrgrp"
         // Description: reset a password on your system
         // Reference: https://pogostick.net/~pnh/ntpasswd/chntpw-source-140201.zip
         $string11 = /\/usb140201\.zip/ nocase ascii wide
         // Description: reset a password on your system
         // Reference: https://pogostick.net/~pnh/ntpasswd/chntpw-source-140201.zip
-        $string12 = "/usr/share/doc/chntpw" nocase ascii wide
+        $string12 = "/usr/share/doc/chntpw"
         // Description: reset a password on your system
         // Reference: https://pogostick.net/~pnh/ntpasswd/chntpw-source-140201.zip
         $string13 = /\\chntpw\.c/ nocase ascii wide

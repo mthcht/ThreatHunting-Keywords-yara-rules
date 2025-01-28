@@ -1,7 +1,7 @@
 rule duckdns_org
 {
     meta:
-        description = "Detection patterns for the tool 'duckdns.org' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'duckdns.org' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "duckdns.org"
@@ -19,7 +19,7 @@ rule duckdns_org
         $string3 = /\/DuckDNS\.zip\\"/ nocase ascii wide
         // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
         // Reference: https://www.duckdns.org/install.jsp
-        $string4 = /\/duckdns\/duck\.log/ nocase ascii wide
+        $string4 = /\/duckdns\/duck\.log/
         // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
         // Reference: https://www.duckdns.org/install.jsp
         $string5 = /\/duckdns\/duck\.sh/ nocase ascii wide
@@ -28,7 +28,7 @@ rule duckdns_org
         $string6 = /\/duckdns\-powershell\.git/ nocase ascii wide
         // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
         // Reference: https://www.duckdns.org/install.jsp
-        $string7 = "/opt/duckdns/" nocase ascii wide
+        $string7 = "/opt/duckdns/"
         // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
         // Reference: https://www.duckdns.org/install.jsp
         $string8 = /\\DuckDNS\.cfg/ nocase ascii wide
@@ -58,7 +58,7 @@ rule duckdns_org
         $string16 = "ataylor32/duckdns-powershell" nocase ascii wide
         // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
         // Reference: https://www.duckdns.org/install.jsp
-        $string17 = /chmod\s700\sduck\.sh/ nocase ascii wide
+        $string17 = /chmod\s700\sduck\.sh/
         // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
         // Reference: https://www.duckdns.org/install.jsp
         $string18 = /https\:\/\/www\.duckdns\.org\/update\?domains\=/ nocase ascii wide

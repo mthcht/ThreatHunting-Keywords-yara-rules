@@ -1,7 +1,7 @@
 rule Luna_Grabber
 {
     meta:
-        description = "Detection patterns for the tool 'Luna-Grabber' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Luna-Grabber' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Luna-Grabber"
@@ -19,7 +19,7 @@ rule Luna_Grabber
         $string3 = /\ssigthief\.py/ nocase ascii wide
         // Description: discord token grabber made in python
         // Reference: https://github.com/Smug246/Luna-Grabber
-        $string4 = /\.\/Obfuscated_.{0,1000}\.py/ nocase ascii wide
+        $string4 = /\.\/Obfuscated_.{0,1000}\.py/
         // Description: discord token grabber made in python
         // Reference: https://github.com/Smug246/Luna-Grabber
         $string5 = /\/Disable_defender\.py/ nocase ascii wide
@@ -28,7 +28,7 @@ rule Luna_Grabber
         $string6 = /\/Kill_protector\.py/ nocase ascii wide
         // Description: discord token grabber made in python
         // Reference: https://github.com/Smug246/Luna-Grabber
-        $string7 = /\/luna\.log/ nocase ascii wide
+        $string7 = /\/luna\.log/
         // Description: discord token grabber made in python
         // Reference: https://github.com/Smug246/Luna-Grabber
         $string8 = /\/Luna\-Grabber\.git/ nocase ascii wide
@@ -49,7 +49,7 @@ rule Luna_Grabber
         $string13 = /\/sigthief\.py/ nocase ascii wide
         // Description: discord token grabber made in python
         // Reference: https://github.com/Smug246/Luna-Grabber
-        $string14 = /\/tools\/obfuscation\.py\s\-i\s/ nocase ascii wide
+        $string14 = /\/tools\/obfuscation\.py\s\-i\s/
         // Description: discord token grabber made in python
         // Reference: https://github.com/Smug246/Luna-Grabber
         $string15 = /\\Disable_defender\.py/ nocase ascii wide

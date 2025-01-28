@@ -1,7 +1,7 @@
 rule IMDSpoof
 {
     meta:
-        description = "Detection patterns for the tool 'IMDSpoof' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'IMDSpoof' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "IMDSpoof"
@@ -10,7 +10,7 @@ rule IMDSpoof
     strings:
         // Description: IMDSPOOF is a cyber deception tool that spoofs the AWS IMDS service to return HoneyTokens that can be alerted on.
         // Reference: https://github.com/grahamhelton/IMDSpoof
-        $string1 = /\/etc\/systemd\/system\/IMDS\.service/ nocase ascii wide
+        $string1 = /\/etc\/systemd\/system\/IMDS\.service/
         // Description: IMDSPOOF is a cyber deception tool that spoofs the AWS IMDS service to return HoneyTokens that can be alerted on.
         // Reference: https://github.com/grahamhelton/IMDSpoof
         $string2 = /\/IMDSpoof\.git/ nocase ascii wide

@@ -1,7 +1,7 @@
 rule lsarelayx
 {
     meta:
-        description = "Detection patterns for the tool 'lsarelayx' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'lsarelayx' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "lsarelayx"
@@ -13,7 +13,7 @@ rule lsarelayx
         $string1 = /\/lsarelayx\.git/ nocase ascii wide
         // Description: lsarelayx is system wide NTLM relay tool designed to relay incoming NTLM based authentication to the host it is running on
         // Reference: https://github.com/CCob/lsarelayx
-        $string2 = "/root/lsarelayx" nocase ascii wide
+        $string2 = "/root/lsarelayx"
         // Description: lsarelayx is system wide NTLM relay tool designed to relay incoming NTLM based authentication to the host it is running on
         // Reference: https://github.com/CCob/lsarelayx
         $string3 = /\\\\\.\\\\pipe\\\\lsarelayx/ nocase ascii wide

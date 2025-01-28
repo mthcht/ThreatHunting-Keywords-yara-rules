@@ -1,7 +1,7 @@
 rule godoh
 {
     meta:
-        description = "Detection patterns for the tool 'godoh' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'godoh' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "godoh"
@@ -175,16 +175,16 @@ rule godoh
         $string55 = /godoh.{0,100}\s\-\-domain\s.{0,100}send\s\-\-file\s/ nocase ascii wide
         // Description: godoh is a proof of concept Command and Control framework. written in Golang. that uses DNS-over-HTTPS as a transport medium. Currently supported providers include Google. Cloudflare but also contains the ability to use traditional DNS.
         // Reference: https://github.com/sensepost/godoh
-        $string56 = "godoh-darwin64" nocase ascii wide
+        $string56 = "godoh-darwin64"
         // Description: godoh is a proof of concept Command and Control framework. written in Golang. that uses DNS-over-HTTPS as a transport medium. Currently supported providers include Google. Cloudflare but also contains the ability to use traditional DNS.
         // Reference: https://github.com/sensepost/godoh
-        $string57 = "godoh-darwin64" nocase ascii wide
+        $string57 = "godoh-darwin64"
         // Description: godoh is a proof of concept Command and Control framework. written in Golang. that uses DNS-over-HTTPS as a transport medium. Currently supported providers include Google. Cloudflare but also contains the ability to use traditional DNS.
         // Reference: https://github.com/sensepost/godoh
-        $string58 = "godoh-linux64" nocase ascii wide
+        $string58 = "godoh-linux64"
         // Description: godoh is a proof of concept Command and Control framework. written in Golang. that uses DNS-over-HTTPS as a transport medium. Currently supported providers include Google. Cloudflare but also contains the ability to use traditional DNS.
         // Reference: https://github.com/sensepost/godoh
-        $string59 = "godoh-linux64" nocase ascii wide
+        $string59 = "godoh-linux64"
         // Description: godoh is a proof of concept Command and Control framework. written in Golang. that uses DNS-over-HTTPS as a transport medium. Currently supported providers include Google. Cloudflare but also contains the ability to use traditional DNS.
         // Reference: https://github.com/sensepost/godoh
         $string60 = /godoh\-windows32\./ nocase ascii wide

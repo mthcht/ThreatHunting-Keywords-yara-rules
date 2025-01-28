@@ -1,7 +1,7 @@
 rule quarkspwdump
 {
     meta:
-        description = "Detection patterns for the tool 'quarkspwdump' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'quarkspwdump' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "quarkspwdump"
@@ -32,11 +32,11 @@ rule quarkspwdump
         // Description: Quarks PwDump is a native Win32 tool to extract credentials from Windows operating systems
         // Reference: https://github.com/peterdocter/quarkspwdump
         $string8 = " --ntds-file " nocase ascii wide
-        // Description: Quarks PwDump is a native Win32 tool to extract credentials from Windows operating systems
-        // Reference: https://github.com/peterdocter/quarkspwdump
-        $string9 = /\/quarkspwdump\.git/ nocase ascii wide
         // Description: Dump various types of Windows credentials without injecting in any process
         // Reference: https://github.com/quarkslab/quarkspwdump
+        $string9 = /\/quarkspwdump\.git/ nocase ascii wide
+        // Description: Quarks PwDump is a native Win32 tool to extract credentials from Windows operating systems
+        // Reference: https://github.com/peterdocter/quarkspwdump
         $string10 = /\/quarkspwdump\.git/ nocase ascii wide
         // Description: Quarks PwDump is a native Win32 tool to extract credentials from Windows operating systems
         // Reference: https://github.com/peterdocter/quarkspwdump

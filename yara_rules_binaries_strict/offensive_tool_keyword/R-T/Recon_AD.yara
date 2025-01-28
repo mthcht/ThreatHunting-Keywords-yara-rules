@@ -1,7 +1,7 @@
 rule Recon_AD
 {
     meta:
-        description = "Detection patterns for the tool 'Recon-AD' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Recon-AD' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Recon-AD"

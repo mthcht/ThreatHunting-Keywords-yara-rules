@@ -1,7 +1,7 @@
 rule TotalRecall
 {
     meta:
-        description = "Detection patterns for the tool 'TotalRecall' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'TotalRecall' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "TotalRecall"
@@ -31,7 +31,7 @@ rule TotalRecall
         $string7 = /\/totalrecall\.py/ nocase ascii wide
         // Description: extracts and displays data from the Recall feature in Windows 11
         // Reference: https://github.com/xaitax/TotalRecall
-        $string8 = /\/TotalRecall\.txt/ nocase ascii wide
+        $string8 = /\/TotalRecall\.txt/
         // Description: extracts and displays data from the Recall feature in Windows 11
         // Reference: https://github.com/xaitax/TotalRecall
         $string9 = /\\2024\-.{0,1000}_Recall_Extraction\\/ nocase ascii wide

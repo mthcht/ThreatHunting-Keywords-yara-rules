@@ -1,7 +1,7 @@
 rule BYOVD_kill_av_edr
 {
     meta:
-        description = "Detection patterns for the tool 'BYOVD_kill_av_edr' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'BYOVD_kill_av_edr' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "BYOVD_kill_av_edr"

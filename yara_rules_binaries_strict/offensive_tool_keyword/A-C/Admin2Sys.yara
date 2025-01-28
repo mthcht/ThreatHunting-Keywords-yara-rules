@@ -1,7 +1,7 @@
 rule Admin2Sys
 {
     meta:
-        description = "Detection patterns for the tool 'Admin2Sys' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Admin2Sys' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Admin2Sys"

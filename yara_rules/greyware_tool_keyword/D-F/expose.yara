@@ -1,7 +1,7 @@
 rule expose
 {
     meta:
-        description = "Detection patterns for the tool 'expose' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'expose' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "expose"
@@ -10,7 +10,7 @@ rule expose
     strings:
         // Description: tunneling service - written in pure PHP
         // Reference: https://github.com/beyondcode/expose
-        $string1 = " /usr/local/bin/expose" nocase ascii wide
+        $string1 = " /usr/local/bin/expose"
         // Description: tunneling service - written in pure PHP
         // Reference: https://github.com/beyondcode/expose
         $string2 = /\/expose\/database\/expose\.db/ nocase ascii wide
@@ -19,7 +19,7 @@ rule expose
         $string3 = "/expose/raw/master/builds/expose" nocase ascii wide
         // Description: tunneling service - written in pure PHP
         // Reference: https://github.com/beyondcode/expose
-        $string4 = "/src/expose serve " nocase ascii wide
+        $string4 = "/src/expose serve "
         // Description: tunneling service - written in pure PHP
         // Reference: https://github.com/beyondcode/expose
         $string5 = "beyondcode/expose" nocase ascii wide

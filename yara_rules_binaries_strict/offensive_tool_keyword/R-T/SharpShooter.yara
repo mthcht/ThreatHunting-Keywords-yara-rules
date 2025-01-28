@@ -1,7 +1,7 @@
 rule SharpShooter
 {
     meta:
-        description = "Detection patterns for the tool 'SharpShooter' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'SharpShooter' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "SharpShooter"
@@ -22,7 +22,7 @@ rule SharpShooter
         $string4 = /\s\-\-payload\s.{0,100}\s\-\-output\s.{0,100}\s\-\-rawscfile\s.{0,100}\s\-\-smuggle\s/ nocase ascii wide
         // Description: Payload Generation Framework
         // Reference: https://github.com/mdsecactivebreach/SharpShooter
-        $string5 = /\s\-\-rawscfile\s\.\/x86payload\.bin/ nocase ascii wide
+        $string5 = /\s\-\-rawscfile\s\.\/x86payload\.bin/
         // Description: Payload Generation Framework
         // Reference: https://github.com/mdsecactivebreach/SharpShooter
         $string6 = " --smuggle --template mcafee --com " nocase ascii wide
@@ -124,16 +124,13 @@ rule SharpShooter
         $string38 = "mdsecactivebreach/SharpShooter" nocase ascii wide
         // Description: Payload Generation Framework
         // Reference: https://github.com/mdsecactivebreach/SharpShooter
-        $string39 = "SharpShooter" nocase ascii wide
+        $string39 = /SharpShooter\.py/ nocase ascii wide
         // Description: Payload Generation Framework
         // Reference: https://github.com/mdsecactivebreach/SharpShooter
-        $string40 = /SharpShooter\.py/ nocase ascii wide
+        $string40 = "Stageless payloads require the --rawscfile argument" nocase ascii wide
         // Description: Payload Generation Framework
         // Reference: https://github.com/mdsecactivebreach/SharpShooter
-        $string41 = "Stageless payloads require the --rawscfile argument" nocase ascii wide
-        // Description: Payload Generation Framework
-        // Reference: https://github.com/mdsecactivebreach/SharpShooter
-        $string42 = "ZXMARGVidWdnaW5nTW9kZXMAZ2V0X1JlZmVyZW5jZWRBc3NlbWJsaWVzAEdldElQR2xvYmFsUHJv" nocase ascii wide
+        $string41 = "ZXMARGVidWdnaW5nTW9kZXMAZ2V0X1JlZmVyZW5jZWRBc3NlbWJsaWVzAEdldElQR2xvYmFsUHJv" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

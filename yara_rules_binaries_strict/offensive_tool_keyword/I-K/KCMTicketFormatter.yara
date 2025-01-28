@@ -1,7 +1,7 @@
 rule KCMTicketFormatter
 {
     meta:
-        description = "Detection patterns for the tool 'KCMTicketFormatter' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'KCMTicketFormatter' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "KCMTicketFormatter"
@@ -10,7 +10,7 @@ rule KCMTicketFormatter
     strings:
         // Description: Format SSSD Raw Kerberos Payloads into CCACHE files for use on Windows systems
         // Reference: https://github.com/blacklanternsecurity/KCMTicketFormatter
-        $string1 = "/KCMTicketFormatter" nocase ascii wide
+        $string1 = "/KCMTicketFormatter"
         // Description: Format SSSD Raw Kerberos Payloads into CCACHE files for use on Windows systems
         // Reference: https://github.com/blacklanternsecurity/KCMTicketFormatter
         $string2 = /\\KCMTicketFormatter/ nocase ascii wide

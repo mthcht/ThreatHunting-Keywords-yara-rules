@@ -1,7 +1,7 @@
 rule smbscan
 {
     meta:
-        description = "Detection patterns for the tool 'smbscan' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'smbscan' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "smbscan"
@@ -16,10 +16,10 @@ rule smbscan
         $string2 = /\ssmbscan\.py\s/ nocase ascii wide
         // Description: SMBScan is a tool to enumerate file shares on an internal network.
         // Reference: https://github.com/jeffhacks/smbscan
-        $string3 = /\/smbscan\-.{0,100}\.csv/ nocase ascii wide
+        $string3 = /\/smbscan\-.{0,100}\.csv/
         // Description: SMBScan is a tool to enumerate file shares on an internal network.
         // Reference: https://github.com/jeffhacks/smbscan
-        $string4 = /\/smbscan\-.{0,100}\.log/ nocase ascii wide
+        $string4 = /\/smbscan\-.{0,100}\.log/
         // Description: SMBScan is a tool to enumerate file shares on an internal network.
         // Reference: https://github.com/jeffhacks/smbscan
         $string5 = /\/smbscan\.git/ nocase ascii wide

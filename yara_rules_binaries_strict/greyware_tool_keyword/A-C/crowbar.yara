@@ -1,7 +1,7 @@
 rule crowbar
 {
     meta:
-        description = "Detection patterns for the tool 'crowbar' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'crowbar' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "crowbar"
@@ -13,10 +13,10 @@ rule crowbar
         $string1 = /\/crowbar\.git/ nocase ascii wide
         // Description: Tunnel TCP over a plain HTTP session
         // Reference: https://github.com/q3k/crowbar
-        $string2 = /\/crowbar_1\.0\.0_darwin_386\.zip/ nocase ascii wide
+        $string2 = /\/crowbar_1\.0\.0_darwin_386\.zip/
         // Description: Tunnel TCP over a plain HTTP session
         // Reference: https://github.com/q3k/crowbar
-        $string3 = /\/crowbar_1\.0\.0_darwin_amd64\.zip/ nocase ascii wide
+        $string3 = /\/crowbar_1\.0\.0_darwin_amd64\.zip/
         // Description: Tunnel TCP over a plain HTTP session
         // Reference: https://github.com/q3k/crowbar
         $string4 = /\/crowbar_1\.0\.0_freebsd_386\.zip/ nocase ascii wide
@@ -28,13 +28,13 @@ rule crowbar
         $string6 = /\/crowbar_1\.0\.0_freebsd_arm\.zip/ nocase ascii wide
         // Description: Tunnel TCP over a plain HTTP session
         // Reference: https://github.com/q3k/crowbar
-        $string7 = /\/crowbar_1\.0\.0_linux_386\.tar\.gz/ nocase ascii wide
+        $string7 = /\/crowbar_1\.0\.0_linux_386\.tar\.gz/
         // Description: Tunnel TCP over a plain HTTP session
         // Reference: https://github.com/q3k/crowbar
-        $string8 = /\/crowbar_1\.0\.0_linux_amd64\.tar\.gz/ nocase ascii wide
+        $string8 = /\/crowbar_1\.0\.0_linux_amd64\.tar\.gz/
         // Description: Tunnel TCP over a plain HTTP session
         // Reference: https://github.com/q3k/crowbar
-        $string9 = /\/crowbar_1\.0\.0_linux_arm\.tar\.gz/ nocase ascii wide
+        $string9 = /\/crowbar_1\.0\.0_linux_arm\.tar\.gz/
         // Description: Tunnel TCP over a plain HTTP session
         // Reference: https://github.com/q3k/crowbar
         $string10 = /\/crowbar_1\.0\.0_openbsd_386\.zip/ nocase ascii wide
@@ -49,10 +49,10 @@ rule crowbar
         $string13 = /\/crowbar_1\.0\.0_windows_amd64\.zip/ nocase ascii wide
         // Description: Tunnel TCP over a plain HTTP session
         // Reference: https://github.com/q3k/crowbar
-        $string14 = "/etc/crowbar/" nocase ascii wide
+        $string14 = "/etc/crowbar/"
         // Description: Tunnel TCP over a plain HTTP session
         // Reference: https://github.com/q3k/crowbar
-        $string15 = /\/etc\/crowbard\.conf/ nocase ascii wide
+        $string15 = /\/etc\/crowbard\.conf/
         // Description: Tunnel TCP over a plain HTTP session
         // Reference: https://github.com/q3k/crowbar
         $string16 = "47e4818c3db3471c950cdb4c4732232bafc584997098c92ada8a0f720e2ad448" nocase ascii wide
@@ -85,7 +85,7 @@ rule crowbar
         $string25 = "b4bed3b73a07c019ea853ee051e35932c97a1547809697dfa495a00710dec8eb" nocase ascii wide
         // Description: Tunnel TCP over a plain HTTP session
         // Reference: https://github.com/q3k/crowbar
-        $string26 = "chown crowbar:crowbar " nocase ascii wide
+        $string26 = "chown crowbar:crowbar "
         // Description: Tunnel TCP over a plain HTTP session
         // Reference: https://github.com/q3k/crowbar
         $string27 = "cmd/crowbard/" nocase ascii wide

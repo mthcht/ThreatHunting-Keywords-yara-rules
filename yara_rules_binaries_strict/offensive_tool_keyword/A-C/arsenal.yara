@@ -1,7 +1,7 @@
 rule arsenal
 {
     meta:
-        description = "Detection patterns for the tool 'arsenal' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'arsenal' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "arsenal"
@@ -88,7 +88,7 @@ rule arsenal
         $string26 = /\/HostRecon\.ps1/ nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string27 = /\/kerberoastables\.txt/ nocase ascii wide
+        $string27 = /\/kerberoastables\.txt/
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
         $string28 = /\/lazagne\.exe/ nocase ascii wide
@@ -103,7 +103,7 @@ rule arsenal
         $string31 = /\/msfstaged\.exe/ nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string32 = /\/owa\-valid\-users\.txt/ nocase ascii wide
+        $string32 = /\/owa\-valid\-users\.txt/
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
         $string33 = /\/payload\.exe/ nocase ascii wide
@@ -121,7 +121,7 @@ rule arsenal
         $string37 = /\/privexchange\.py/ nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string38 = /\/ruler\s\-k\s\-d\s.{0,100}\sdump\s\-o\s/ nocase ascii wide
+        $string38 = /\/ruler\s\-k\s\-d\s.{0,100}\sdump\s\-o\s/
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
         $string39 = /\/spray\-results\.txt/ nocase ascii wide
@@ -133,10 +133,10 @@ rule arsenal
         $string41 = /\/ticketConverter\.py/ nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string42 = /\/ticketer\.py/ nocase ascii wide
+        $string42 = /\/ticketer\.py/
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string43 = /\/ysoserial\.jar/ nocase ascii wide
+        $string43 = /\/ysoserial\.jar/
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
         $string44 = /\\\\\.\\pipe\\test\\pipe\\spoolss\s/ nocase ascii wide
@@ -370,7 +370,7 @@ rule arsenal
         $string120 = "use scanner/smb/smb_enum_gpp" nocase ascii wide
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
-        $string121 = "use scanner/ssh/ssh_enumusers" nocase ascii wide
+        $string121 = "use scanner/ssh/ssh_enumusers"
         // Description: Arsenal is just a quick inventory and launcher for hacking programs
         // Reference: https://github.com/Orange-Cyberdefense/arsenal
         $string122 = /VirTool\:PowerShell\/Scanpatch\.A/ nocase ascii wide

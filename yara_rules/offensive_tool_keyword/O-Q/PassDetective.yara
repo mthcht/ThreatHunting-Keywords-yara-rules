@@ -1,7 +1,7 @@
 rule PassDetective
 {
     meta:
-        description = "Detection patterns for the tool 'PassDetective' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'PassDetective' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "PassDetective"
@@ -13,7 +13,7 @@ rule PassDetective
         $string1 = " extract --secrets --zsh" nocase ascii wide
         // Description: PassDetective is a command-line tool that scans shell command history to detect mistakenly written passwords - API keys and secrets
         // Reference: https://github.com/aydinnyunus/PassDetective
-        $string2 = /\.\/Passdetective/ nocase ascii wide
+        $string2 = /\.\/Passdetective/
         // Description: PassDetective is a command-line tool that scans shell command history to detect mistakenly written passwords - API keys and secrets
         // Reference: https://github.com/aydinnyunus/PassDetective
         $string3 = /\/PassDetective\.git/ nocase ascii wide

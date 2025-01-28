@@ -1,7 +1,7 @@
 rule merlin_agent
 {
     meta:
-        description = "Detection patterns for the tool 'merlin-agent' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'merlin-agent' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "merlin-agent"
@@ -16,7 +16,7 @@ rule merlin_agent
         $string2 = /\s\-o\smerlin\.dll\smerlin\.c\s/ nocase ascii wide
         // Description: Merlin is a post-exploit Command & Control (C2) tool also known as a Remote Access Tool (RAT)
         // Reference: https://github.com/Ne0nd0g/merlin-agent
-        $string3 = "/app/bin/merlinAgent" nocase ascii wide
+        $string3 = "/app/bin/merlinAgent"
         // Description: Merlin is a post-exploit Command & Control (C2) tool also known as a Remote Access Tool (RAT)
         // Reference: https://github.com/Ne0nd0g/merlin-agent
         $string4 = /\/c2endpoint\.php/ nocase ascii wide
@@ -40,10 +40,10 @@ rule merlin_agent
         $string10 = "/merlin-agent/zipball/v" nocase ascii wide
         // Description: Merlin is a post-exploit Command & Control (C2) tool also known as a Remote Access Tool (RAT)
         // Reference: https://github.com/Ne0nd0g/merlin-agent
-        $string11 = "/merlinAgent-Linux-x64" nocase ascii wide
+        $string11 = "/merlinAgent-Linux-x64"
         // Description: Merlin is a post-exploit Command & Control (C2) tool also known as a Remote Access Tool (RAT)
         // Reference: https://github.com/Ne0nd0g/merlin-agent
-        $string12 = "/usr/bin/merlinAgent" nocase ascii wide
+        $string12 = "/usr/bin/merlinAgent"
         // Description: Merlin is a post-exploit Command & Control (C2) tool also known as a Remote Access Tool (RAT)
         // Reference: https://github.com/Ne0nd0g/merlin-agent
         $string13 = /\\\\\.\\pipe\\merlin/ nocase ascii wide
@@ -109,7 +109,7 @@ rule merlin_agent
         $string33 = /DllInstall\sis\sused\swhen\sexecuting\sthe\sMerlin\sagent\swith\sregsvr32\.exe/ nocase ascii wide
         // Description: Merlin is a post-exploit Command & Control (C2) tool also known as a Remote Access Tool (RAT)
         // Reference: https://github.com/Ne0nd0g/merlin-agent
-        $string34 = /docker\sbuild\s\-t\smerlin\-agent\:.{0,1000}\-linux/ nocase ascii wide
+        $string34 = /docker\sbuild\s\-t\smerlin\-agent\:.{0,1000}\-linux/
         // Description: Merlin is a post-exploit Command & Control (C2) tool also known as a Remote Access Tool (RAT)
         // Reference: https://github.com/Ne0nd0g/merlin-agent
         $string35 = /docs\.mythic\-c2\.net/ nocase ascii wide
@@ -124,16 +124,16 @@ rule merlin_agent
         $string38 = "MAGENT=merlinAgent" nocase ascii wide
         // Description: Merlin is a post-exploit Command & Control (C2) tool also known as a Remote Access Tool (RAT)
         // Reference: https://github.com/Ne0nd0g/merlin-agent
-        $string39 = "merlinAgent-Darwin-x64-" nocase ascii wide
+        $string39 = "merlinAgent-Darwin-x64-"
         // Description: Merlin is a post-exploit Command & Control (C2) tool also known as a Remote Access Tool (RAT)
         // Reference: https://github.com/Ne0nd0g/merlin-agent
-        $string40 = /merlinAgent\-Darwin\-x64\./ nocase ascii wide
+        $string40 = /merlinAgent\-Darwin\-x64\./
         // Description: Merlin is a post-exploit Command & Control (C2) tool also known as a Remote Access Tool (RAT)
         // Reference: https://github.com/Ne0nd0g/merlin-agent
-        $string41 = "merlinAgent-Linux-x64-" nocase ascii wide
+        $string41 = "merlinAgent-Linux-x64-"
         // Description: Merlin is a post-exploit Command & Control (C2) tool also known as a Remote Access Tool (RAT)
         // Reference: https://github.com/Ne0nd0g/merlin-agent
-        $string42 = /merlinAgent\-Linux\-x64\./ nocase ascii wide
+        $string42 = /merlinAgent\-Linux\-x64\./
         // Description: Merlin is a post-exploit Command & Control (C2) tool also known as a Remote Access Tool (RAT)
         // Reference: https://github.com/Ne0nd0g/merlin-agent
         $string43 = "merlinAgent-Windows-x64-" nocase ascii wide
@@ -142,10 +142,10 @@ rule merlin_agent
         $string44 = /merlinAgent\-Windows\-x64\./ nocase ascii wide
         // Description: Merlin is a post-exploit Command & Control (C2) tool also known as a Remote Access Tool (RAT)
         // Reference: https://github.com/Ne0nd0g/merlin-agent
-        $string45 = /merlinAgent\-Windows\-x64\.exe\s/ nocase ascii wide
+        $string45 = /merlinAgent\-Windows\-x64\.exe/ nocase ascii wide
         // Description: Merlin is a post-exploit Command & Control (C2) tool also known as a Remote Access Tool (RAT)
         // Reference: https://github.com/Ne0nd0g/merlin-agent
-        $string46 = /merlinAgent\-Windows\-x86\.exe\s/ nocase ascii wide
+        $string46 = /merlinAgent\-Windows\-x86\.exe/ nocase ascii wide
         // Description: Merlin is a post-exploit Command & Control (C2) tool also known as a Remote Access Tool (RAT)
         // Reference: https://github.com/Ne0nd0g/merlin-agent
         $string47 = /merlin\-c2\.readthedocs\.io/ nocase ascii wide

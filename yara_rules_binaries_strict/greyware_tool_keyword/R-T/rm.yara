@@ -1,7 +1,7 @@
 rule rm
 {
     meta:
-        description = "Detection patterns for the tool 'rm' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'rm' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "rm"
@@ -13,19 +13,19 @@ rule rm
         $string1 = /rm\s\$HISTFILE/ nocase ascii wide
         // Description: deleting bash history
         // Reference: N/A
-        $string2 = /rm\s\.bash_history/ nocase ascii wide
+        $string2 = /rm\s\.bash_history/
         // Description: deleting log files
         // Reference: N/A
-        $string3 = /rm\s\/var\/log\/.{0,100}\.log/ nocase ascii wide
+        $string3 = /rm\s\/var\/log\/.{0,100}\.log/
         // Description: deleting bash history
         // Reference: N/A
-        $string4 = /rm\s\~\/\.bash_history/ nocase ascii wide
+        $string4 = /rm\s\~\/\.bash_history/
         // Description: delete bash history
         // Reference: N/A
-        $string5 = /rm\s\-rf\s\.bash_history/ nocase ascii wide
+        $string5 = /rm\s\-rf\s\.bash_history/
         // Description: delete bash history
         // Reference: N/A
-        $string6 = /rm\s\-rf\s\~\/\.bash_history/ nocase ascii wide
+        $string6 = /rm\s\-rf\s\~\/\.bash_history/
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

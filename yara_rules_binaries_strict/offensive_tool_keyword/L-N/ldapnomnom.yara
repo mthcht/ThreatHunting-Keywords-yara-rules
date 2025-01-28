@@ -1,7 +1,7 @@
 rule ldapnomnom
 {
     meta:
-        description = "Detection patterns for the tool 'ldapnomnom' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'ldapnomnom' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "ldapnomnom"
@@ -412,10 +412,10 @@ rule ldapnomnom
         $string134 = /ldapnomnom.{0,100}\-obfuscated/ nocase ascii wide
         // Description: Anonymously bruteforce Active Directory usernames from Domain Controllers by abusing LDAP Ping requests (cLDAP)
         // Reference: https://github.com/lkarlslund/ldapnomnom
-        $string135 = "ldapnomnom-darwin-" nocase ascii wide
+        $string135 = "ldapnomnom-darwin-"
         // Description: Anonymously bruteforce Active Directory usernames from Domain Controllers by abusing LDAP Ping requests (cLDAP)
         // Reference: https://github.com/lkarlslund/ldapnomnom
-        $string136 = "ldapnomnom-linux-" nocase ascii wide
+        $string136 = "ldapnomnom-linux-"
         // Description: Anonymously bruteforce Active Directory usernames from Domain Controllers by abusing LDAP Ping requests (cLDAP)
         // Reference: https://github.com/lkarlslund/ldapnomnom
         $string137 = "ldapnomnom-main" nocase ascii wide

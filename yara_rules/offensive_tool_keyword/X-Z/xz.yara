@@ -1,7 +1,7 @@
 rule xz
 {
     meta:
-        description = "Detection patterns for the tool 'xz' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'xz' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "xz"
@@ -10,10 +10,10 @@ rule xz
     strings:
         // Description: backdoor in upstream xz/liblzma leading to ssh server compromise - rule author: @cyb3rops - link: https://github.com/Neo23x0/signature-base/blob/07daba7eb7bc44e6f73e199c6b9892241ab1b3d7/yara/bkdr_xz_util_cve_2024_3094.yar#L2
         // Reference: https://www.openwall.com/lists/oss-security/2024/03/29/4
-        $string1 = /\/bad\-3\-corrupt_lzma2\.xz\s\|\str\s/ nocase ascii wide
+        $string1 = /\/bad\-3\-corrupt_lzma2\.xz\s\|\str\s/
         // Description: backdoor in upstream xz/liblzma leading to ssh server compromise - rule author: @cyb3rops - link: https://github.com/Neo23x0/signature-base/blob/07daba7eb7bc44e6f73e199c6b9892241ab1b3d7/yara/bkdr_xz_util_cve_2024_3094.yar#L2
         // Reference: https://www.openwall.com/lists/oss-security/2024/03/29/4
-        $string2 = /\/tests\/files\/good\-large_compressed\.lzma\|eval\s\$i\|tail\s\-c\s\+31265\|/ nocase ascii wide
+        $string2 = /\/tests\/files\/good\-large_compressed\.lzma\|eval\s\$i\|tail\s\-c\s\+31265\|/
         // Description: backdoor in upstream xz/liblzma leading to ssh server compromise
         // Reference: https://securelist.com/xz-backdoor-story-part-1/112354/
         $string3 = "0f5c81f14171b74fcc9777d302304d964e63ffc2d7b634ef023a7249d9b5d875" nocase ascii wide
@@ -82,7 +82,7 @@ rule xz
         $string24 = /G1Q\+4a0TgAHnlq2B8BKLZUP6wDHsjX6F5nVtUTU3dBQ/ nocase ascii wide
         // Description: backdoor in upstream xz/liblzma leading to ssh server compromise - rule author: Elastic Security - link: https://raw.githubusercontent.com/elastic/protections-artifacts/main/yara/rules/Linux_Trojan_XZBackdoor.yar
         // Reference: https://www.openwall.com/lists/oss-security/2024/03/29/4
-        $string25 = "yolAbejyiejuvnup=Evjtgvsh5okmkAvj" nocase ascii wide
+        $string25 = "yolAbejyiejuvnup=Evjtgvsh5okmkAvj"
 
     condition:
         any of them

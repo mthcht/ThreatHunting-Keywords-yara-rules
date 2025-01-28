@@ -1,7 +1,7 @@
 rule spraycharles
 {
     meta:
-        description = "Detection patterns for the tool 'spraycharles' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'spraycharles' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "spraycharles"
@@ -25,16 +25,16 @@ rule spraycharles
         $string5 = /\sspraycharles\.py/ nocase ascii wide
         // Description: Low and slow password spraying tool
         // Reference: https://github.com/Tw1sm/spraycharles
-        $string6 = /\/\.spraycharles\/logs/ nocase ascii wide
+        $string6 = /\/\.spraycharles\/logs/
         // Description: Low and slow password spraying tool
         // Reference: https://github.com/Tw1sm/spraycharles
-        $string7 = /\/\.spraycharles\/out/ nocase ascii wide
+        $string7 = /\/\.spraycharles\/out/
         // Description: Low and slow password spraying tool
         // Reference: https://github.com/Tw1sm/spraycharles
-        $string8 = /\/\.spraycharles\:\/root\/\.spraycharles/ nocase ascii wide
+        $string8 = /\/\.spraycharles\:\/root\/\.spraycharles/
         // Description: Low and slow password spraying tool
         // Reference: https://github.com/Tw1sm/spraycharles
-        $string9 = /\/root\/\.local\/bin\/spraycharles/ nocase ascii wide
+        $string9 = /\/root\/\.local\/bin\/spraycharles/
         // Description: Low and slow password spraying tool
         // Reference: https://github.com/Tw1sm/spraycharles
         $string10 = /\/spraycharles\.git/ nocase ascii wide
@@ -43,7 +43,7 @@ rule spraycharles
         $string11 = /\/spraycharles\.py/ nocase ascii wide
         // Description: Low and slow password spraying tool
         // Reference: https://github.com/Tw1sm/spraycharles
-        $string12 = /\/tmp\/passwords\.txt/ nocase ascii wide
+        $string12 = /\/tmp\/passwords\.txt/
         // Description: Low and slow password spraying tool
         // Reference: https://github.com/Tw1sm/spraycharles
         $string13 = /\\spraycharles\.py/ nocase ascii wide

@@ -1,7 +1,7 @@
 rule Modlishka_
 {
     meta:
-        description = "Detection patterns for the tool 'Modlishka ' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Modlishka ' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Modlishka "
@@ -25,13 +25,13 @@ rule Modlishka_
         $string5 = "MODLISHKA_BIN" nocase ascii wide
         // Description: Modlishka is a powerful and flexible HTTP reverse proxy. It implements an entirely new and interesting approach of handling browser-based HTTP traffic flow.  which allows to transparently proxy multi-domain destination traffic.  both TLS and non-TLS.  over a single domain.  without a requirement of installing any additional certificate on the client.
         // Reference: https://github.com/drk1wi/Modlishka
-        $string6 = "Modlishka-linux-amd64" nocase ascii wide
+        $string6 = "Modlishka-linux-amd64"
         // Description: Modlishka is a powerful and flexible HTTP reverse proxy. It implements an entirely new and interesting approach of handling browser-based HTTP traffic flow.  which allows to transparently proxy multi-domain destination traffic.  both TLS and non-TLS.  over a single domain.  without a requirement of installing any additional certificate on the client.
         // Reference: https://github.com/drk1wi/Modlishka
         $string7 = /Modlishka\-windows\-.{0,100}\-amd64\.exe/ nocase ascii wide
         // Description: Modlishka is a powerful and flexible HTTP reverse proxy. It implements an entirely new and interesting approach of handling browser-based HTTP traffic flow.  which allows to transparently proxy multi-domain destination traffic.  both TLS and non-TLS.  over a single domain.  without a requirement of installing any additional certificate on the client.
         // Reference: https://github.com/drk1wi/Modlishka
-        $string8 = "proxy_linux_amd64" nocase ascii wide
+        $string8 = "proxy_linux_amd64"
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

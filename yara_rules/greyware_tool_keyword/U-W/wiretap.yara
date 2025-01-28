@@ -1,7 +1,7 @@
 rule wiretap
 {
     meta:
-        description = "Detection patterns for the tool 'wiretap' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'wiretap' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "wiretap"
@@ -25,10 +25,10 @@ rule wiretap
         $string5 = /\swiretap\.exe/ nocase ascii wide
         // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
         // Reference: https://github.com/sandialabs/wiretap
-        $string6 = /\.\/chisel\sclient\s/ nocase ascii wide
+        $string6 = /\.\/chisel\sclient\s/
         // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
         // Reference: https://github.com/sandialabs/wiretap
-        $string7 = /\.\/wiretap\sremove/ nocase ascii wide
+        $string7 = /\.\/wiretap\sremove/
         // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
         // Reference: https://github.com/sandialabs/wiretap
         $string8 = /\/Wireguard\.zip/ nocase ascii wide
@@ -43,10 +43,10 @@ rule wiretap
         $string11 = /\/wireguard\-installer\.rar/ nocase ascii wide
         // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
         // Reference: https://github.com/sandialabs/wiretap
-        $string12 = "/wiretap add client" nocase ascii wide
+        $string12 = "/wiretap add client"
         // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
         // Reference: https://github.com/sandialabs/wiretap
-        $string13 = /\/wiretap\.conf/ nocase ascii wide
+        $string13 = /\/wiretap\.conf/
         // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
         // Reference: https://github.com/sandialabs/wiretap
         $string14 = /\/wiretap\.Dockerfile/ nocase ascii wide
@@ -58,22 +58,22 @@ rule wiretap
         $string16 = /\/wiretap\.git/ nocase ascii wide
         // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
         // Reference: https://github.com/sandialabs/wiretap
-        $string17 = /\/wiretap\.log/ nocase ascii wide
+        $string17 = /\/wiretap\.log/
         // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
         // Reference: https://github.com/sandialabs/wiretap
         $string18 = "/wiretap/releases/download/" nocase ascii wide
         // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
         // Reference: https://github.com/sandialabs/wiretap
-        $string19 = /\/wiretap_.{0,1000}_linux_386\.tar\.gz/ nocase ascii wide
+        $string19 = /\/wiretap_.{0,1000}_linux_386\.tar\.gz/
         // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
         // Reference: https://github.com/sandialabs/wiretap
-        $string20 = /\/wiretap_.{0,1000}_linux_amd64\.tar\.gz/ nocase ascii wide
+        $string20 = /\/wiretap_.{0,1000}_linux_amd64\.tar\.gz/
         // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
         // Reference: https://github.com/sandialabs/wiretap
-        $string21 = /\/wiretap_.{0,1000}_linux_arm64\.tar\.gz/ nocase ascii wide
+        $string21 = /\/wiretap_.{0,1000}_linux_arm64\.tar\.gz/
         // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
         // Reference: https://github.com/sandialabs/wiretap
-        $string22 = /\/wiretap_.{0,1000}_linux_armv6\.tar\.gz/ nocase ascii wide
+        $string22 = /\/wiretap_.{0,1000}_linux_armv6\.tar\.gz/
         // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
         // Reference: https://github.com/sandialabs/wiretap
         $string23 = /\/wiretap_.{0,1000}_windows_386\.tar\.gz/ nocase ascii wide
@@ -88,16 +88,16 @@ rule wiretap
         $string26 = /\/wiretap_.{0,1000}_windows_armv6\.tar\.gz/ nocase ascii wide
         // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
         // Reference: https://github.com/sandialabs/wiretap
-        $string27 = /\/wiretap_relay\.conf/ nocase ascii wide
+        $string27 = /\/wiretap_relay\.conf/
         // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
         // Reference: https://github.com/sandialabs/wiretap
-        $string28 = /\/wiretap_relay_1\.conf/ nocase ascii wide
+        $string28 = /\/wiretap_relay_1\.conf/
         // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
         // Reference: https://github.com/sandialabs/wiretap
-        $string29 = /\/wiretap_server\.conf/ nocase ascii wide
+        $string29 = /\/wiretap_server\.conf/
         // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
         // Reference: https://github.com/sandialabs/wiretap
-        $string30 = /\/wiretap_server_1\.conf/ nocase ascii wide
+        $string30 = /\/wiretap_server_1\.conf/
         // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
         // Reference: https://github.com/sandialabs/wiretap
         $string31 = /\\WireGuard\.lnk/ nocase ascii wide
@@ -232,7 +232,7 @@ rule wiretap
         $string74 = "d59838007c4724beca80ad34c6adc749c526f6de636d79e06565499d0e390110" nocase ascii wide
         // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
         // Reference: https://github.com/sandialabs/wiretap
-        $string75 = "docker exec -it wiretap-client-1 bash" nocase ascii wide
+        $string75 = "docker exec -it wiretap-client-1 bash"
         // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
         // Reference: https://github.com/sandialabs/wiretap
         $string76 = /download\.wireguard\.com\/windows\-client\// nocase ascii wide

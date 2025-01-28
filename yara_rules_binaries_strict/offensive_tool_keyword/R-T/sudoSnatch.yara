@@ -1,7 +1,7 @@
 rule sudoSnatch
 {
     meta:
-        description = "Detection patterns for the tool 'sudoSnatch' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'sudoSnatch' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "sudoSnatch"
@@ -10,10 +10,10 @@ rule sudoSnatch
     strings:
         // Description: sudoSnatch payload grabs sudo password in plain text and imediately after target uses sudo command and sends it back to attacker remotely/locally.
         // Reference: https://github.com/hak5/omg-payloads/tree/master/payloads/library/credentials/SudoSnatch
-        $string1 = "/credentials/SudoSnatch" nocase ascii wide
+        $string1 = "/credentials/SudoSnatch"
         // Description: sudoSnatch payload grabs sudo password in plain text and imediately after target uses sudo command and sends it back to attacker remotely/locally.
         // Reference: https://github.com/hak5/omg-payloads/tree/master/payloads/library/credentials/SudoSnatch
-        $string2 = /nIFS\=.{0,100}\sread\s\-s\spass\\necho\s\-e\s.{0,100}User\=.{0,100}\$\(whoami\).{0,100}Password\=.{0,100}\$pass.{0,100}\>\s\/var\/tmp/ nocase ascii wide
+        $string2 = /nIFS\=.{0,100}\sread\s\-s\spass\\necho\s\-e\s.{0,100}User\=.{0,100}\$\(whoami\).{0,100}Password\=.{0,100}\$pass.{0,100}\>\s\/var\/tmp/
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

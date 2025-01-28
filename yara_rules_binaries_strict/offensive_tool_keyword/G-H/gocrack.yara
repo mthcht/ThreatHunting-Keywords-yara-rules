@@ -1,7 +1,7 @@
 rule gocrack
 {
     meta:
-        description = "Detection patterns for the tool 'gocrack' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'gocrack' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "gocrack"
@@ -13,25 +13,25 @@ rule gocrack
         $string1 = /\/gocrack\.git/ nocase ascii wide
         // Description: GoCrack is a management frontend for password cracking tools written in Go
         // Reference: https://github.com/mandiant/gocrack
-        $string2 = /\/gocrack\/\.hashcat/ nocase ascii wide
+        $string2 = /\/gocrack\/\.hashcat/
         // Description: GoCrack is a management frontend for password cracking tools written in Go
         // Reference: https://github.com/mandiant/gocrack
-        $string3 = "/gocrack/server" nocase ascii wide
+        $string3 = "/gocrack/server"
         // Description: GoCrack is a management frontend for password cracking tools written in Go
         // Reference: https://github.com/mandiant/gocrack
-        $string4 = "/gocrack_server" nocase ascii wide
+        $string4 = "/gocrack_server"
         // Description: GoCrack is a management frontend for password cracking tools written in Go
         // Reference: https://github.com/mandiant/gocrack
-        $string5 = "/gocrack_worker" nocase ascii wide
+        $string5 = "/gocrack_worker"
         // Description: GoCrack is a management frontend for password cracking tools written in Go
         // Reference: https://github.com/mandiant/gocrack
-        $string6 = /\/gocrack\-1\.0\.zip/ nocase ascii wide
+        $string6 = /\/gocrack\-1\.0\.zip/
         // Description: GoCrack is a management frontend for password cracking tools written in Go
         // Reference: https://github.com/mandiant/gocrack
-        $string7 = "/opt/gocrack/files/engine" nocase ascii wide
+        $string7 = "/opt/gocrack/files/engine"
         // Description: GoCrack is a management frontend for password cracking tools written in Go
         // Reference: https://github.com/mandiant/gocrack
-        $string8 = "/opt/gocrack/files/task" nocase ascii wide
+        $string8 = "/opt/gocrack/files/task"
         // Description: GoCrack is a management frontend for password cracking tools written in Go
         // Reference: https://github.com/mandiant/gocrack
         $string9 = /\\gocrack\-1\.0\.zip/ nocase ascii wide
@@ -43,10 +43,10 @@ rule gocrack
         $string11 = /gocrack\@password\.crackers\.local/ nocase ascii wide
         // Description: GoCrack is a management frontend for password cracking tools written in Go
         // Reference: https://github.com/mandiant/gocrack
-        $string12 = /gocrack_v.{0,100}_darwin_x64_hashcat_v3_6_0\.zip/ nocase ascii wide
+        $string12 = /gocrack_v.{0,100}_darwin_x64_hashcat_v3_6_0\.zip/
         // Description: GoCrack is a management frontend for password cracking tools written in Go
         // Reference: https://github.com/mandiant/gocrack
-        $string13 = /gocrack_v.{0,100}_linux_x64_hashcat_v3_6_0\.zip/ nocase ascii wide
+        $string13 = /gocrack_v.{0,100}_linux_x64_hashcat_v3_6_0\.zip/
         // Description: GoCrack is a management frontend for password cracking tools written in Go
         // Reference: https://github.com/mandiant/gocrack
         $string14 = "iAmAnIndependentStrongPassswordThatNeedsToBeSecure" nocase ascii wide

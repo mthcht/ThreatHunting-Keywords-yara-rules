@@ -1,7 +1,7 @@
 rule octopus
 {
     meta:
-        description = "Detection patterns for the tool 'octopus' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'octopus' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "octopus"
@@ -16,7 +16,7 @@ rule octopus
         $string2 = /\soctopus\.py/ nocase ascii wide
         // Description: Octopus is an open source. pre-operation C2 server based on python which can control an Octopus powershell agent through HTTP/S.
         // Reference: https://github.com/mhaskar/Octopus
-        $string3 = /\.\/.{0,100}octopus\.py/ nocase ascii wide
+        $string3 = /\.\/.{0,100}octopus\.py/
         // Description: Octopus is an open source. pre-operation C2 server based on python which can control an Octopus powershell agent through HTTP/S.
         // Reference: https://github.com/mhaskar/Octopus
         $string4 = /\/agent\.ps1\.oct/ nocase ascii wide

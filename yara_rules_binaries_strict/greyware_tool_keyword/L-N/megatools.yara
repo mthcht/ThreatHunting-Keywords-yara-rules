@@ -1,7 +1,7 @@
 rule megatools
 {
     meta:
-        description = "Detection patterns for the tool 'megatools' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'megatools' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "megatools"

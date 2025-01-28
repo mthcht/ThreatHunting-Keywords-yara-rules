@@ -1,7 +1,7 @@
 rule kiglogger
 {
     meta:
-        description = "Detection patterns for the tool 'kiglogger' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'kiglogger' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "kiglogger"
@@ -10,22 +10,22 @@ rule kiglogger
     strings:
         // Description: malware parental control software - keylogger
         // Reference: https://kidlogger.net/download.html
-        $string1 = "/bin/kidlogger" nocase ascii wide
+        $string1 = "/bin/kidlogger"
         // Description: malware parental control software - keylogger
         // Reference: https://kidlogger.net/download.html
-        $string2 = "/etc/kidlogger" nocase ascii wide
+        $string2 = "/etc/kidlogger"
         // Description: malware parental control software - keylogger
         // Reference: https://kidlogger.net/download.html
-        $string3 = /\/KidLogger\.app\// nocase ascii wide
+        $string3 = /\/KidLogger\.app\//
         // Description: malware parental control software - keylogger
         // Reference: https://kidlogger.net/download.html
-        $string4 = /\/kidlogger\.desktop/ nocase ascii wide
+        $string4 = /\/kidlogger\.desktop/
         // Description: malware parental control software - keylogger
         // Reference: https://kidlogger.net/download.html
-        $string5 = "/srv/kidlogger" nocase ascii wide
+        $string5 = "/srv/kidlogger"
         // Description: malware parental control software - keylogger
         // Reference: https://kidlogger.net/download.html
-        $string6 = "/usr/share/kidlogger" nocase ascii wide
+        $string6 = "/usr/share/kidlogger"
         // Description: malware parental control software - keylogger
         // Reference: https://kidlogger.net/download.html
         $string7 = /\\KidLogger\\/ nocase ascii wide

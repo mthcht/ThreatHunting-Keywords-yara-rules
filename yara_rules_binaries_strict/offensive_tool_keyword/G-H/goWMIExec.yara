@@ -1,7 +1,7 @@
 rule goWMIExec
 {
     meta:
-        description = "Detection patterns for the tool 'goWMIExec' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'goWMIExec' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "goWMIExec"
@@ -10,7 +10,7 @@ rule goWMIExec
     strings:
         // Description: re-implementation of invoke-wmiexec (Lateral Movement)
         // Reference: https://github.com/C-Sto/goWMIExec
-        $string1 = " goWMIExec_linux_" nocase ascii wide
+        $string1 = " goWMIExec_linux_"
         // Description: re-implementation of invoke-wmiexec (Lateral Movement)
         // Reference: https://github.com/C-Sto/goWMIExec
         $string2 = " goWMIExec_mac_" nocase ascii wide
@@ -22,7 +22,7 @@ rule goWMIExec
         $string4 = /\/goWMIExec\.git/ nocase ascii wide
         // Description: re-implementation of invoke-wmiexec (Lateral Movement)
         // Reference: https://github.com/C-Sto/goWMIExec
-        $string5 = "/goWMIExec_linux_" nocase ascii wide
+        $string5 = "/goWMIExec_linux_"
         // Description: re-implementation of invoke-wmiexec (Lateral Movement)
         // Reference: https://github.com/C-Sto/goWMIExec
         $string6 = "/goWMIExec_mac_" nocase ascii wide

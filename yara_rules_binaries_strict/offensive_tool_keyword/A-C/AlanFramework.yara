@@ -1,7 +1,7 @@
 rule AlanFramework
 {
     meta:
-        description = "Detection patterns for the tool 'AlanFramework' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'AlanFramework' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "AlanFramework"
@@ -10,7 +10,7 @@ rule AlanFramework
     strings:
         // Description: Alan Framework is a post-exploitation framework useful during red-team activities.
         // Reference: https://github.com/enkomio/AlanFramework
-        $string1 = /\/alan\.log/ nocase ascii wide
+        $string1 = /\/alan\.log/
         // Description: Alan Framework is a post-exploitation framework useful during red-team activities.
         // Reference: https://github.com/enkomio/AlanFramework
         $string2 = /\/Alan\.v.{0,100}\.zip/ nocase ascii wide
@@ -97,7 +97,7 @@ rule AlanFramework
         $string29 = /c\:\\agent\.exe/ nocase ascii wide
         // Description: Alan Framework is a post-exploitation framework useful during red-team activities.
         // Reference: https://github.com/enkomio/AlanFramework
-        $string30 = /dotnet\s\.\/Server\.dll/ nocase ascii wide
+        $string30 = /dotnet\s\.\/Server\.dll/
         // Description: Alan Framework is a post-exploitation framework useful during red-team activities.
         // Reference: https://github.com/enkomio/AlanFramework
         $string31 = /DownloadString.{0,100}https\:\/\/checkip\.amazonaws\.com/ nocase ascii wide

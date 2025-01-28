@@ -1,7 +1,7 @@
 rule _4everproxy
 {
     meta:
-        description = "Detection patterns for the tool '4everproxy' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool '4everproxy' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "4everproxy"

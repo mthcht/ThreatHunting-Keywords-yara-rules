@@ -1,7 +1,7 @@
 rule lolminer
 {
     meta:
-        description = "Detection patterns for the tool 'lolminer' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'lolminer' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "lolminer"

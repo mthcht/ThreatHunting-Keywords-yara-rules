@@ -1,7 +1,7 @@
 rule Pyramid
 {
     meta:
-        description = "Detection patterns for the tool 'Pyramid' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Pyramid' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Pyramid"
@@ -55,10 +55,10 @@ rule Pyramid
         $string15 = /\/pyramid\.py/ nocase ascii wide
         // Description: a tool to help operate in EDRs' blind spots
         // Reference: https://github.com/naksyn/Pyramid
-        $string16 = /\/pythonmemorymodule\.py/ nocase ascii wide
+        $string16 = /\/pythonmemorymodule\.py/
         // Description: a tool to help operate in EDRs' blind spots
         // Reference: https://github.com/naksyn/Pyramid
-        $string17 = /\/tunnel\-socks5\.py/ nocase ascii wide
+        $string17 = /\/tunnel\-socks5\.py/
         // Description: a tool to help operate in EDRs' blind spots
         // Reference: https://github.com/naksyn/Pyramid
         $string18 = /\@WanaDecryptor\@\.exe/ nocase ascii wide

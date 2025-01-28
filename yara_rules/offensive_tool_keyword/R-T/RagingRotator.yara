@@ -1,7 +1,7 @@
 rule RagingRotator
 {
     meta:
-        description = "Detection patterns for the tool 'RagingRotator' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'RagingRotator' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "RagingRotator"
@@ -13,7 +13,7 @@ rule RagingRotator
         $string1 = /\sRagingRotator\.go/ nocase ascii wide
         // Description: A tool for carrying out brute force attacks against Office 365 with built in IP rotation use AWS gateways.
         // Reference: https://github.com/nickzer0/RagingRotator
-        $string2 = /\s\-userpassfile\s\.\/userpass_file\.txt/ nocase ascii wide
+        $string2 = /\s\-userpassfile\s\.\/userpass_file\.txt/
         // Description: A tool for carrying out brute force attacks against Office 365 with built in IP rotation use AWS gateways.
         // Reference: https://github.com/nickzer0/RagingRotator
         $string3 = /\/RagingRotator\.git/ nocase ascii wide

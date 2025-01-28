@@ -1,7 +1,7 @@
 rule localtonet
 {
     meta:
-        description = "Detection patterns for the tool 'localtonet' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'localtonet' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "localtonet"
@@ -22,13 +22,13 @@ rule localtonet
         $string4 = /\/localtonet\.git/ nocase ascii wide
         // Description: LocaltoNet is a reverse proxy that enables you to expose your localhost services to the internet
         // Reference: https://github.com/engineseller/localtonet
-        $string5 = /\/localtonet\.service/ nocase ascii wide
+        $string5 = /\/localtonet\.service/
         // Description: LocaltoNet is a reverse proxy that enables you to expose your localhost services to the internet
         // Reference: https://github.com/engineseller/localtonet
         $string6 = "/localtonet-win" nocase ascii wide
         // Description: LocaltoNet is a reverse proxy that enables you to expose your localhost services to the internet
         // Reference: https://github.com/engineseller/localtonet
-        $string7 = "/opt/localtonet" nocase ascii wide
+        $string7 = "/opt/localtonet"
         // Description: LocaltoNet is a reverse proxy that enables you to expose your localhost services to the internet
         // Reference: https://github.com/engineseller/localtonet
         $string8 = /\\localtonet\.dll/ nocase ascii wide

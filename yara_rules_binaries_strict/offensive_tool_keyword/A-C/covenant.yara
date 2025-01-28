@@ -1,7 +1,7 @@
 rule covenant
 {
     meta:
-        description = "Detection patterns for the tool 'covenant' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'covenant' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "covenant"
@@ -49,7 +49,7 @@ rule covenant
         $string13 = /\/Models\/ShellCodeLauncher\./ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string14 = "/opt/Covenant/Covenant/" nocase ascii wide
+        $string14 = "/opt/Covenant/Covenant/"
         // Description: Covenant commands - Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
         $string15 = "/SharpDump" nocase ascii wide

@@ -1,7 +1,7 @@
 rule DLHell
 {
     meta:
-        description = "Detection patterns for the tool 'DLHell' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'DLHell' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "DLHell"

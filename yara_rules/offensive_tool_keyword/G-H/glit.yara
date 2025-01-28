@@ -1,7 +1,7 @@
 rule glit
 {
     meta:
-        description = "Detection patterns for the tool 'glit' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'glit' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "glit"
@@ -16,10 +16,10 @@ rule glit
         $string2 = /\/glit\.git/ nocase ascii wide
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
-        $string3 = "/glit-cli" nocase ascii wide
+        $string3 = "/glit-cli"
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
-        $string4 = "/glit-core" nocase ascii wide
+        $string4 = "/glit-core"
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
         $string5 = /\\glit\.exe/ nocase ascii wide
@@ -55,13 +55,13 @@ rule glit
         $string15 = /glit\-main\.zip/ nocase ascii wide
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
-        $string16 = "glit-x86_64-apple-darwin" nocase ascii wide
+        $string16 = "glit-x86_64-apple-darwin"
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
         $string17 = "glit-x86_64-pc-windows-msvc" nocase ascii wide
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
-        $string18 = "glit-x86_64-unknown-linux-gnu" nocase ascii wide
+        $string18 = "glit-x86_64-unknown-linux-gnu"
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
         $string19 = "shadawck/glit" nocase ascii wide

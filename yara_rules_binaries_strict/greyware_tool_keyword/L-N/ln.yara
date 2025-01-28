@@ -1,7 +1,7 @@
 rule ln
 {
     meta:
-        description = "Detection patterns for the tool 'ln' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'ln' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "ln"
@@ -10,7 +10,7 @@ rule ln
     strings:
         // Description: covering history tracks on linux system
         // Reference: https://rosesecurity.gitbook.io/red-teaming-ttps/linux
-        $string1 = /ln\s\/dev\/null\s\-\/\.bash_history\s\-sf/ nocase ascii wide
+        $string1 = /ln\s\/dev\/null\s\-\/\.bash_history\s\-sf/
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

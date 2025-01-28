@@ -1,7 +1,7 @@
 rule ADPassHunt
 {
     meta:
-        description = "Detection patterns for the tool 'ADPassHunt' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'ADPassHunt' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "ADPassHunt"

@@ -1,7 +1,7 @@
 rule BeRoot
 {
     meta:
-        description = "Detection patterns for the tool 'BeRoot' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'BeRoot' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "BeRoot"
@@ -10,37 +10,37 @@ rule BeRoot
     strings:
         // Description: Privilege Escalation Project - Windows / Linux / Mac 
         // Reference: https://github.com/AlessandroZ/BeRoot
-        $string1 = /\sbeRoot\.exe/ nocase ascii wide
+        $string1 = /\sbeRoot\.exe/
         // Description: Privilege Escalation Project - Windows / Linux / Mac 
         // Reference: https://github.com/AlessandroZ/BeRoot
-        $string2 = /\sbeRoot\.py/ nocase ascii wide
+        $string2 = /\sbeRoot\.py/
         // Description: BeRoot Project is a post exploitation tool to check common misconfigurations to find a way to escalate our privilege.
         // Reference: https://github.com/AlessandroZ/BeRoot
         $string3 = "-------------- Get System Priv with WebClient --------------" nocase ascii wide
         // Description: Privilege Escalation Project - Windows / Linux / Mac 
         // Reference: https://github.com/AlessandroZ/BeRoot
-        $string4 = /\/beRoot\.exe/ nocase ascii wide
+        $string4 = /\/beRoot\.exe/
         // Description: Privilege Escalation Project - Windows / Linux / Mac 
         // Reference: https://github.com/AlessandroZ/BeRoot
-        $string5 = /\/BeRoot\.git/ nocase ascii wide
+        $string5 = /\/BeRoot\.git/
         // Description: Privilege Escalation Project - Windows / Linux / Mac 
         // Reference: https://github.com/AlessandroZ/BeRoot
-        $string6 = /\/beRoot\.py/ nocase ascii wide
+        $string6 = /\/beRoot\.py/
         // Description: Privilege Escalation Project - Windows / Linux / Mac 
         // Reference: https://github.com/AlessandroZ/BeRoot
-        $string7 = /\/beRoot\.zip/ nocase ascii wide
+        $string7 = /\/beRoot\.zip/
         // Description: BeRoot Project is a post exploitation tool to check common misconfigurations to find a way to escalate our privilege.
         // Reference: https://github.com/AlessandroZ/BeRoot
-        $string8 = "/BeRoot/Linux/" nocase ascii wide
+        $string8 = "/BeRoot/Linux/"
         // Description: BeRoot Project is a post exploitation tool to check common misconfigurations to find a way to escalate our privilege.
         // Reference: https://github.com/AlessandroZ/BeRoot
         $string9 = /\/beroot\/modules\/.{0,1000}\.py/ nocase ascii wide
         // Description: Privilege Escalation Project - Windows / Linux / Mac 
         // Reference: https://github.com/AlessandroZ/BeRoot
-        $string10 = /\/gtfobins\.py/ nocase ascii wide
+        $string10 = /\/gtfobins\.py/
         // Description: Privilege Escalation Project - Windows / Linux / Mac 
         // Reference: https://github.com/AlessandroZ/BeRoot
-        $string11 = /\\beRoot\.exe/ nocase ascii wide
+        $string11 = /\\beRoot\.exe/
         // Description: BeRoot Project is a post exploitation tool to check common misconfigurations to find a way to escalate our privilege.
         // Reference: https://github.com/AlessandroZ/BeRoot
         $string12 = /\\beRoot\.zip/ nocase ascii wide
@@ -58,13 +58,13 @@ rule BeRoot
         $string16 = "AlessandroZ/BeRoot" nocase ascii wide
         // Description: Privilege Escalation Project - Windows / Linux / Mac 
         // Reference: https://github.com/AlessandroZ/BeRoot
-        $string17 = /beRoot\.exe\s\-/ nocase ascii wide
+        $string17 = /beRoot\.exe\s\-/
         // Description: Privilege Escalation Project - Windows / Linux / Mac 
         // Reference: https://github.com/AlessandroZ/BeRoot
-        $string18 = /beroot\.py\s\-/ nocase ascii wide
+        $string18 = /beroot\.py\s\-/
         // Description: Privilege Escalation Project - Windows / Linux / Mac 
         // Reference: https://github.com/AlessandroZ/BeRoot
-        $string19 = "BeRoot-master" nocase ascii wide
+        $string19 = "BeRoot-master"
         // Description: BeRoot Project is a post exploitation tool to check common misconfigurations to find a way to escalate our privilege.
         // Reference: https://github.com/AlessandroZ/BeRoot
         $string20 = /from\s\.modules\.exploit\simport\sExploit/ nocase ascii wide
@@ -79,10 +79,10 @@ rule BeRoot
         $string23 = "import check_currrent_user_privilege" nocase ascii wide
         // Description: BeRoot Project is a post exploitation tool to check common misconfigurations to find a way to escalate our privilege.
         // Reference: https://github.com/AlessandroZ/BeRoot
-        $string24 = "import check_sudoers_misconfigurations" nocase ascii wide
+        $string24 = "import check_sudoers_misconfigurations"
         // Description: Privilege Escalation Project - Windows / Linux / Mac 
         // Reference: https://github.com/AlessandroZ/BeRoot
-        $string25 = "linux-exploit-suggester" nocase ascii wide
+        $string25 = "linux-exploit-suggester"
         // Description: BeRoot Project is a post exploitation tool to check common misconfigurations to find a way to escalate our privilege.
         // Reference: https://github.com/AlessandroZ/BeRoot
         $string26 = /modules\.gtfobins\simport\sGTFOBins/ nocase ascii wide

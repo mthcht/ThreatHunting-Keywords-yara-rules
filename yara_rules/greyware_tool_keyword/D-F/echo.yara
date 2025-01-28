@@ -1,7 +1,7 @@
 rule echo
 {
     meta:
-        description = "Detection patterns for the tool 'echo' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'echo' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "echo"
@@ -28,22 +28,49 @@ rule echo
         $string6 = /cmd\.exe\s\/c\secho\s.{0,1000}\s\>\s\\\\\.\\pipe\\/ nocase ascii wide
         // Description: covering history tracks on linux system
         // Reference: https://rosesecurity.gitbook.io/red-teaming-ttps/linux
-        $string7 = /echo\s\'\'\'\'\s\-\/\.bash\shistory/ nocase ascii wide
+        $string7 = /echo\s\'\'\'\'\s\-\/\.bash\shistory/
         // Description: delete bash history
         // Reference: N/A
-        $string8 = /echo\s\'\'\s\>\s\~\/\.bash_history/ nocase ascii wide
+        $string8 = /echo\s\'\'\s\>\s\~\/\.bash_history/
         // Description: covering history tracks on linux system
         // Reference: https://rosesecurity.gitbook.io/red-teaming-ttps/linux
-        $string9 = /echo\s\\"\\"\s\>\s\/var\/log\/auth\.log\s/ nocase ascii wide
+        $string9 = /echo\s\\"\\"\s\>\s\/var\/log\/auth\.log\s/
+        // Description: clearing logs to cover traces
+        // Reference: N/A
+        $string10 = "echo \"\" > /var/log/cron"
+        // Description: clearing logs to cover traces
+        // Reference: N/A
+        $string11 = "echo \"\" > /var/log/secure"
+        // Description: clearing logs to cover traces
+        // Reference: N/A
+        $string12 = "echo \"\" > /var/log/wtmp"
+        // Description: clearing logs to cover traces
+        // Reference: N/A
+        $string13 = "echo \"\" > /var/spool/mail/root"
+        // Description: writing an ASPX file to C:\inetpub\wwwroot\ (potential Web shell deployment)
+        // Reference: N/A
+        $string14 = /echo\s\>\sC\:\\inetpub\\wwwroot\\.{0,1000}\\.{0,1000}\.aspx/ nocase ascii wide
         // Description: This command disables kprobes by writing '0' to the enabled file. Kprobes are dynamic breakpoints in the Linux kernel that can be used to intercept functions and gather information for debugging or monitoring.
         // Reference: N/A
-        $string10 = "echo 0 > /sys/kernel/debug/kprobes/enabled" nocase ascii wide
+        $string15 = "echo 0 > /sys/kernel/debug/kprobes/enabled"
         // Description: This command turns off tracing for a specific instance
         // Reference: N/A
-        $string11 = /echo\s0\s\>\s\/sys\/kernel\/debug\/tracing\/instances\/\$.{0,1000}\/tracing_on/ nocase ascii wide
+        $string16 = /echo\s0\s\>\s\/sys\/kernel\/debug\/tracing\/instances\/\$.{0,1000}\/tracing_on/
+        // Description: clearing logs to cover traces
+        // Reference: N/A
+        $string17 = "echo 0 > /var/log/cron"
+        // Description: clearing logs to cover traces
+        // Reference: N/A
+        $string18 = "echo 0 > /var/log/secure"
+        // Description: clearing logs to cover traces
+        // Reference: N/A
+        $string19 = "echo 0 > /var/log/wtmp"
+        // Description: clearing logs to cover traces
+        // Reference: N/A
+        $string20 = "echo 0 > /var/spool/mail/root"
         // Description: linux command abused by attacker
         // Reference: N/A
-        $string12 = /echo\s\'set\s\+o\shistory\'\s\>\>\s\/etc\/profile/ nocase ascii wide
+        $string21 = /echo\s\'set\s\+o\shistory\'\s\>\>\s\/etc\/profile/
 
     condition:
         any of them

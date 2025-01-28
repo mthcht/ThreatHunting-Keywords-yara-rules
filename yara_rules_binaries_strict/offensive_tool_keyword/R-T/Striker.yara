@@ -1,7 +1,7 @@
 rule Striker
 {
     meta:
-        description = "Detection patterns for the tool 'Striker' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Striker' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Striker"
@@ -10,7 +10,7 @@ rule Striker
     strings:
         // Description: Striker is a simple Command and Control (C2) program.
         // Reference: https://github.com/4g3nt47/Striker
-        $string1 = /\.\/redirector\.py\s/ nocase ascii wide
+        $string1 = /\.\/redirector\.py\s/
         // Description: Striker is a simple Command and Control (C2) program.
         // Reference: https://github.com/4g3nt47/Striker
         $string2 = /\.striker\.local/ nocase ascii wide

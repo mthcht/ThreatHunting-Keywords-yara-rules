@@ -1,7 +1,7 @@
 rule tsh_go
 {
     meta:
-        description = "Detection patterns for the tool 'tsh-go' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'tsh-go' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "tsh-go"
@@ -10,16 +10,16 @@ rule tsh_go
     strings:
         // Description: Tiny SHell Go - An open-source backdoor written in Go
         // Reference: https://github.com/CykuTW/tsh-go
-        $string1 = "/tsh_linux_amd64" nocase ascii wide
+        $string1 = "/tsh_linux_amd64"
         // Description: Tiny SHell Go - An open-source backdoor written in Go
         // Reference: https://github.com/CykuTW/tsh-go
         $string2 = /\/tsh_windows_amd64\.exe/ nocase ascii wide
         // Description: Tiny SHell Go - An open-source backdoor written in Go
         // Reference: https://github.com/CykuTW/tsh-go
-        $string3 = /\/tshd\.go/ nocase ascii wide
+        $string3 = /\/tshd\.go/
         // Description: Tiny SHell Go - An open-source backdoor written in Go
         // Reference: https://github.com/CykuTW/tsh-go
-        $string4 = "/tshd_linux_amd64" nocase ascii wide
+        $string4 = "/tshd_linux_amd64"
         // Description: Tiny SHell Go - An open-source backdoor written in Go
         // Reference: https://github.com/CykuTW/tsh-go
         $string5 = /\/tshd_windows\.go/ nocase ascii wide
@@ -67,10 +67,10 @@ rule tsh_go
         $string19 = "CykuTW/tsh-go" nocase ascii wide
         // Description: Tiny SHell Go - An open-source backdoor written in Go
         // Reference: https://github.com/CykuTW/tsh-go
-        $string20 = "tsh_linux_amd64 " nocase ascii wide
+        $string20 = "tsh_linux_amd64 "
         // Description: Tiny SHell Go - An open-source backdoor written in Go
         // Reference: https://github.com/CykuTW/tsh-go
-        $string21 = "tshd_linux_amd64 " nocase ascii wide
+        $string21 = "tshd_linux_amd64 "
         // Description: Tiny SHell Go - An open-source backdoor written in Go
         // Reference: https://github.com/CykuTW/tsh-go
         $string22 = /tshd_windows_amd64\.exe\s/ nocase ascii wide

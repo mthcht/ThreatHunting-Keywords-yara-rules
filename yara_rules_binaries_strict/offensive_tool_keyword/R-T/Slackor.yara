@@ -1,7 +1,7 @@
 rule Slackor
 {
     meta:
-        description = "Detection patterns for the tool 'Slackor' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Slackor' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Slackor"
@@ -46,7 +46,7 @@ rule Slackor
         $string12 = /\/common\/beacon\.go/ nocase ascii wide
         // Description: A Golang implant that uses Slack as a command and control server
         // Reference: https://github.com/Coalfire-Research/Slackor
-        $string13 = /\/defanger\.go/ nocase ascii wide
+        $string13 = /\/defanger\.go/
         // Description: A Golang implant that uses Slack as a command and control server
         // Reference: https://github.com/Coalfire-Research/Slackor
         $string14 = /\/keyscan\.go/ nocase ascii wide

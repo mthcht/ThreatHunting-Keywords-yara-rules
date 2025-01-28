@@ -1,7 +1,7 @@
 rule ngrok
 {
     meta:
-        description = "Detection patterns for the tool 'ngrok' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'ngrok' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "ngrok"
@@ -22,13 +22,13 @@ rule ngrok
         $string4 = /\/ngrok\.go/ nocase ascii wide
         // Description: ngrok - abused by attackers for C2 usage
         // Reference: https://github.com/inconshreveable/ngrok
-        $string5 = /\/ngrok\.log/ nocase ascii wide
+        $string5 = /\/ngrok\.log/
         // Description: ngrok - abused by attackers for C2 usage
         // Reference: https://github.com/inconshreveable/ngrok
         $string6 = /\/ngrokd\.go/ nocase ascii wide
         // Description: ngrok - abused by attackers for C2 usage
         // Reference: https://github.com/inconshreveable/ngrok
-        $string7 = /\/ngrokroot\.crt/ nocase ascii wide
+        $string7 = /\/ngrokroot\.crt/
         // Description: ngrok - abused by attackers for C2 usage
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
         $string8 = /\\ngrok\.exe/ nocase ascii wide

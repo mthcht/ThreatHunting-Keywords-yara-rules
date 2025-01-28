@@ -1,7 +1,7 @@
 rule mythic
 {
     meta:
-        description = "Detection patterns for the tool 'mythic' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'mythic' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "mythic"
@@ -148,7 +148,7 @@ rule mythic
         $string46 = /\/athena_utils\/.{0,100}\.py/ nocase ascii wide
         // Description: Athena is a fully-featured cross-platform agent designed using the .NET 6. Athena is designed for Mythic 2.2 and newer
         // Reference: https://github.com/MythicAgents/Athena
-        $string47 = "/AthenaPlugins/bin/" nocase ascii wide
+        $string47 = "/AthenaPlugins/bin/"
         // Description: Athena is a fully-featured cross-platform agent designed using the .NET 6. Athena is designed for Mythic 2.2 and newer
         // Reference: https://github.com/MythicAgents/Athena
         $string48 = "/AthenaSMB/" nocase ascii wide
@@ -157,7 +157,7 @@ rule mythic
         $string49 = /\/AthenaTests\/.{0,100}\./ nocase ascii wide
         // Description: mythic C2 agent
         // Reference: https://github.com/MythicAgents/freyja/
-        $string50 = /\/bash_executor\/.{0,100}\.go/ nocase ascii wide
+        $string50 = /\/bash_executor\/.{0,100}\.go/
         // Description: A collaborative multi-platform red teaming framework
         // Reference: https://github.com/its-a-feature/Mythic
         $string51 = /\/c2_code\/.{0,100}\.html/ nocase ascii wide
@@ -304,7 +304,7 @@ rule mythic
         $string98 = "/thanatos/releases/latest" nocase ascii wide
         // Description: Thanatos is a Windows and Linux C2 agent written in rust.
         // Reference: https://github.com/MythicAgents/thanatos
-        $string99 = "/thanatos/thanatos/agent_code/" nocase ascii wide
+        $string99 = "/thanatos/thanatos/agent_code/"
         // Description: Athena is a fully-featured cross-platform agent designed using the .NET 6. Athena is designed for Mythic 2.2 and newer
         // Reference: https://github.com/MythicAgents/Athena
         $string100 = /\/timestomp\.py/ nocase ascii wide
@@ -391,7 +391,7 @@ rule mythic
         $string127 = "ae136c5aa1e9a4524f30350fc8fc45993e2a81d0ffab2d7c4bd0f9ae7cea2060" nocase ascii wide
         // Description: mythic C2 agent
         // Reference: https://github.com/MythicAgents/freyja/
-        $string128 = "agent_code/bash_executor" nocase ascii wide
+        $string128 = "agent_code/bash_executor"
         // Description: Athena is a fully-featured cross-platform agent designed using the .NET 6. Athena is designed for Mythic 2.2 and newer
         // Reference: https://github.com/MythicAgents/Athena
         $string129 = /Athena\.Forwarders\.SMB/ nocase ascii wide
@@ -403,7 +403,7 @@ rule mythic
         $string131 = /AthenaPlugins\.csproj/ nocase ascii wide
         // Description: mythic C2 agent
         // Reference: https://github.com/MythicAgents/freyja/
-        $string132 = "bash_executor " nocase ascii wide
+        $string132 = "bash_executor "
         // Description: Thanatos is a Windows and Linux C2 agent written in rust.
         // Reference: https://github.com/MythicAgents/thanatos
         $string133 = "bdf481e2b241169231c72a3f811c69f97526db060e11c2e7e7c1e39dadf4ac89" nocase ascii wide

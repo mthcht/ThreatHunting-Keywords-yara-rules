@@ -1,7 +1,7 @@
 rule pyrdp
 {
     meta:
-        description = "Detection patterns for the tool 'pyrdp' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'pyrdp' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "pyrdp"
@@ -16,46 +16,46 @@ rule pyrdp
         $string2 = /\spyrdp\.mitm\./ nocase ascii wide
         // Description: RDP monster-in-the-middle (mitm) and library for Python with the ability to watch connections live or after the fact
         // Reference: https://github.com/GoSecure/pyrdp
-        $string3 = /\/AttackerMITM\.py/ nocase ascii wide
+        $string3 = /\/AttackerMITM\.py/
         // Description: RDP monster-in-the-middle (mitm) and library for Python with the ability to watch connections live or after the fact
         // Reference: https://github.com/GoSecure/pyrdp
-        $string4 = /\/ClipboardMITM\.py/ nocase ascii wide
+        $string4 = /\/ClipboardMITM\.py/
         // Description: RDP monster-in-the-middle (mitm) and library for Python with the ability to watch connections live or after the fact
         // Reference: https://github.com/GoSecure/pyrdp
-        $string5 = /\/FastPathMITM\.py/ nocase ascii wide
+        $string5 = /\/FastPathMITM\.py/
         // Description: RDP monster-in-the-middle (mitm) and library for Python with the ability to watch connections live or after the fact
         // Reference: https://github.com/GoSecure/pyrdp
-        $string6 = /\/FileCrawlerMITM\.py/ nocase ascii wide
+        $string6 = /\/FileCrawlerMITM\.py/
         // Description: RDP monster-in-the-middle (mitm) and library for Python with the ability to watch connections live or after the fact
         // Reference: https://github.com/GoSecure/pyrdp
-        $string7 = "/home/pyrdp/" nocase ascii wide
+        $string7 = "/home/pyrdp/"
         // Description: RDP monster-in-the-middle (mitm) and library for Python with the ability to watch connections live or after the fact
         // Reference: https://github.com/GoSecure/pyrdp
-        $string8 = /\/MITMRecorder\.py/ nocase ascii wide
+        $string8 = /\/MITMRecorder\.py/
         // Description: RDP monster-in-the-middle (mitm) and library for Python with the ability to watch connections live or after the fact
         // Reference: https://github.com/GoSecure/pyrdp
-        $string9 = /\/pyrdp\.git/ nocase ascii wide
+        $string9 = /\/pyrdp\.git/
         // Description: RDP monster-in-the-middle (mitm) and library for Python with the ability to watch connections live or after the fact
         // Reference: https://github.com/GoSecure/pyrdp
-        $string10 = /\/pyrdp\.git/ nocase ascii wide
+        $string10 = /\/pyrdp\.git/
         // Description: RDP monster-in-the-middle (mitm) and library for Python with the ability to watch connections live or after the fact
         // Reference: https://github.com/GoSecure/pyrdp
-        $string11 = "/pyrdp:latest" nocase ascii wide
+        $string11 = "/pyrdp:latest"
         // Description: RDP monster-in-the-middle (mitm) and library for Python with the ability to watch connections live or after the fact
         // Reference: https://github.com/GoSecure/pyrdp
-        $string12 = "/pyrdp_mitm-" nocase ascii wide
+        $string12 = "/pyrdp_mitm-"
         // Description: RDP monster-in-the-middle (mitm) and library for Python with the ability to watch connections live or after the fact
         // Reference: https://github.com/GoSecure/pyrdp
-        $string13 = /\/RDPMITM\.py/ nocase ascii wide
+        $string13 = /\/RDPMITM\.py/
         // Description: RDP monster-in-the-middle (mitm) and library for Python with the ability to watch connections live or after the fact
         // Reference: https://github.com/GoSecure/pyrdp
-        $string14 = /\/rdp\-sniffer\.cap/ nocase ascii wide
+        $string14 = /\/rdp\-sniffer\.cap/
         // Description: RDP monster-in-the-middle (mitm) and library for Python with the ability to watch connections live or after the fact
         // Reference: https://github.com/GoSecure/pyrdp
-        $string15 = /\/SlowPathMITM\.py/ nocase ascii wide
+        $string15 = /\/SlowPathMITM\.py/
         // Description: RDP monster-in-the-middle (mitm) and library for Python with the ability to watch connections live or after the fact
         // Reference: https://github.com/GoSecure/pyrdp
-        $string16 = /\/TCPMITM\.py/ nocase ascii wide
+        $string16 = /\/TCPMITM\.py/
         // Description: RDP monster-in-the-middle (mitm) and library for Python with the ability to watch connections live or after the fact
         // Reference: https://github.com/GoSecure/pyrdp
         $string17 = /\\AttackerMITM\.py/ nocase ascii wide

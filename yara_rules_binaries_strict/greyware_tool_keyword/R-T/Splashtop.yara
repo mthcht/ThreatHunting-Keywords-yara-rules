@@ -1,7 +1,7 @@
 rule Splashtop
 {
     meta:
-        description = "Detection patterns for the tool 'Splashtop' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Splashtop' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Splashtop"
@@ -16,10 +16,10 @@ rule Splashtop
         $string2 = /\.relay\.splashtop\.com/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://ruler-project.github.io/ruler-project/RULER/remote/Splashtop/
-        $string3 = /\/Library\/Logs\/SPLog\.txt/ nocase ascii wide
+        $string3 = /\/Library\/Logs\/SPLog\.txt/
         // Description: control remote machines- abused by threat actors
         // Reference: https://ruler-project.github.io/ruler-project/RULER/remote/Splashtop/
-        $string4 = /\/SplashtopStreamer\/SPLog\.txt/ nocase ascii wide
+        $string4 = /\/SplashtopStreamer\/SPLog\.txt/
         // Description: control remote machines- abused by threat actors
         // Reference: https://hybrid-analysis.com/sample/18c10b0235bd341e065ac5c53ca04b68eaeacd98a120e043fb4883628baf644e/6267eb693836e7217b1a3c72
         $string5 = /\\slave\\workspace\\GIT_WIN_SRS_Formal\\Source\\irisserver\\/ nocase ascii wide

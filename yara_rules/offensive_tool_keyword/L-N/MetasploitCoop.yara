@@ -1,7 +1,7 @@
 rule MetasploitCoop
 {
     meta:
-        description = "Detection patterns for the tool 'MetasploitCoop' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'MetasploitCoop' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "MetasploitCoop"
@@ -34,7 +34,7 @@ rule MetasploitCoop
         $string8 = /\/msfws\.py/ nocase ascii wide
         // Description: Post-exploitation collaboration platform based on MSF
         // Reference: https://github.com/0x727/MetasploitCoop-Backend
-        $string9 = "/pymetasploit/" nocase ascii wide
+        $string9 = "/pymetasploit/"
         // Description: Post-exploitation collaboration platform based on MSF
         // Reference: https://github.com/0x727/MetasploitCoop_0x727
         $string10 = /\[MetasploitCoop\-Backend\]/ nocase ascii wide

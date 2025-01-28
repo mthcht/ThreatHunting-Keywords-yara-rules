@@ -1,7 +1,7 @@
 rule pysnaffler
 {
     meta:
-        description = "Detection patterns for the tool 'pysnaffler' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'pysnaffler' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "pysnaffler"
@@ -13,7 +13,7 @@ rule pysnaffler
         $string1 = /\ssnaffler\.py\s/ nocase ascii wide
         // Description: This project is a Python version of the well-known Snaffler project. Not a full implementation of that project - only focusing on SMB share/dir/file enumeration and download and parse.
         // Reference: https://github.com/skelsec/pysnaffler
-        $string2 = /\.\/snaffler_downloads/ nocase ascii wide
+        $string2 = /\.\/snaffler_downloads/
         // Description: This project is a Python version of the well-known Snaffler project. Not a full implementation of that project - only focusing on SMB share/dir/file enumeration and download and parse.
         // Reference: https://github.com/skelsec/pysnaffler
         $string3 = /\/pysnaffler\.git/ nocase ascii wide

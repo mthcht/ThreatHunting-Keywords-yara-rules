@@ -1,7 +1,7 @@
 rule SocialBox_Termux
 {
     meta:
-        description = "Detection patterns for the tool 'SocialBox-Termux' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'SocialBox-Termux' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "SocialBox-Termux"
@@ -85,7 +85,7 @@ rule SocialBox_Termux
         $string25 = /Ox\-Bruter\.pl/ nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://github.com/samsesh/SocialBox-Termux
-        $string26 = "thelinuxchoice/tweetshell" nocase ascii wide
+        $string26 = "thelinuxchoice/tweetshell"
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://raw.githubusercontent.com/Sup3r-Us3r/scripts/master/fb-brute.pl
         $string27 = "Yuuup!! Pass Cracked" nocase ascii wide

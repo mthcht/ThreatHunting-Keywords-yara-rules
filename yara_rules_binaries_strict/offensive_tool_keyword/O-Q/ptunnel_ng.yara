@@ -1,7 +1,7 @@
 rule ptunnel_ng
 {
     meta:
-        description = "Detection patterns for the tool 'ptunnel-ng' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'ptunnel-ng' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "ptunnel-ng"
@@ -16,7 +16,7 @@ rule ptunnel_ng
         $string2 = "/ptunnel-ng" nocase ascii wide
         // Description: Tunnel TCP connections through ICMP.
         // Reference: https://github.com/utoni/ptunnel-ng
-        $string3 = "/var/lib/ptunnel" nocase ascii wide
+        $string3 = "/var/lib/ptunnel"
         // Description: Tunnel TCP connections through ICMP.
         // Reference: https://github.com/utoni/ptunnel-ng
         $string4 = /nc\s127\.0\.0\.1\s4000/ nocase ascii wide

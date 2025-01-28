@@ -1,7 +1,7 @@
 rule curlshell
 {
     meta:
-        description = "Detection patterns for the tool 'curlshell' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'curlshell' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "curlshell"
@@ -10,19 +10,19 @@ rule curlshell
     strings:
         // Description: reverse shell using curl
         // Reference: https://github.com/irsl/curlshell
-        $string1 = /\scurlshell\.py/ nocase ascii wide
+        $string1 = /\scurlshell\.py/
         // Description: reverse shell using curl
         // Reference: https://github.com/irsl/curlshell
-        $string2 = /\.py\s.{0,100}0\.0\.0\.0.{0,100}\-\-serve\-forever/ nocase ascii wide
+        $string2 = /\.py\s.{0,100}0\.0\.0\.0.{0,100}\-\-serve\-forever/
         // Description: reverse shell using curl
         // Reference: https://github.com/irsl/curlshell
-        $string3 = /\.py\s.{0,100}\-\-dependabot\-workaround/ nocase ascii wide
+        $string3 = /\.py\s.{0,100}\-\-dependabot\-workaround/
         // Description: reverse shell using curl
         // Reference: https://github.com/irsl/curlshell
-        $string4 = /\.py\s\-\-certificate\s.{0,100}\.pem\s\-\-private\-key\s.{0,100}\.pem\s\-\-listen\-port\s/ nocase ascii wide
+        $string4 = /\.py\s\-\-certificate\s.{0,100}\.pem\s\-\-private\-key\s.{0,100}\.pem\s\-\-listen\-port\s/
         // Description: reverse shell using curl
         // Reference: https://github.com/irsl/curlshell
-        $string5 = /\.py\s\-\-certificate\sfullchain\.pem\s\-\-private\-key\sprivkey\.pem\s\-\-listen\-port\s/ nocase ascii wide
+        $string5 = /\.py\s\-\-certificate\sfullchain\.pem\s\-\-private\-key\sprivkey\.pem\s\-\-listen\-port\s/
         // Description: reverse shell using curl
         // Reference: https://github.com/irsl/curlshell
         $string6 = /\/curlshell\.git/ nocase ascii wide
@@ -52,22 +52,19 @@ rule curlshell
         $string14 = "b8285e421d702738eab45670ecae439a7228994e7068b04cb51740e47efbfb41" nocase ascii wide
         // Description: reverse shell using curl
         // Reference: https://github.com/irsl/curlshell
-        $string15 = "curl https://curlshell" nocase ascii wide
+        $string15 = "curl https://curlshell"
         // Description: reverse shell using curl
         // Reference: https://github.com/irsl/curlshell
-        $string16 = /curlshell\.py/ nocase ascii wide
+        $string16 = /curlshell\.py/
         // Description: reverse shell using curl
         // Reference: https://github.com/irsl/curlshell
-        $string17 = "https://curlshell:" nocase ascii wide
+        $string17 = "https://curlshell:"
         // Description: reverse shell using curl
         // Reference: https://github.com/irsl/curlshell
-        $string18 = /https\:\/\/curlshell\:.{0,100}\s\|\sbash/ nocase ascii wide
+        $string18 = /https\:\/\/curlshell\:.{0,100}\s\|\sbash/
         // Description: reverse shell using curl
         // Reference: https://github.com/irsl/curlshell
-        $string19 = "irsl/curlshell" nocase ascii wide
-        // Description: reverse shell using curl
-        // Reference: https://github.com/irsl/curlshell
-        $string20 = "irsl/curlshell" nocase ascii wide
+        $string19 = "irsl/curlshell"
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii
@@ -89,10 +86,10 @@ rule curlshell
             uint32(0) == 0xD0CF11E0 or // MSI Installer Package
             uint16(0) == 0x2321 or // Shebang (#!)
             uint16(0) == 0x3c3f // PHP and other script
-        )) and 2 of ($string*)) or
+        )) and any of ($string*)) or
         (filesize < 2MB and
         (
-            2 of ($string*) and
+            any of ($string*) and
             for any of ($metadata_regex_*) : ( @ <= 20000 )
         ))
 }

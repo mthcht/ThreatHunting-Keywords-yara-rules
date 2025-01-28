@@ -1,7 +1,7 @@
 rule dnscat2
 {
     meta:
-        description = "Detection patterns for the tool 'dnscat2' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'dnscat2' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "dnscat2"
@@ -10,7 +10,7 @@ rule dnscat2
     strings:
         // Description: This tool is designed to create an encrypted command-and-control (C&C) channel over the DNS protocol
         // Reference: https://github.com/iagox86/dnscat2
-        $string1 = /\.\/dnscat/ nocase ascii wide
+        $string1 = /\.\/dnscat/
         // Description: This tool is designed to create an encrypted command-and-control (C&C) channel over the DNS protocol
         // Reference: https://github.com/iagox86/dnscat2
         $string2 = /\/dnscat\.c/ nocase ascii wide

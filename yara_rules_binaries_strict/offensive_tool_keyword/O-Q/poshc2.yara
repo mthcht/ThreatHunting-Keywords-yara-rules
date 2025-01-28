@@ -1,7 +1,7 @@
 rule poshc2
 {
     meta:
-        description = "Detection patterns for the tool 'poshc2' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'poshc2' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "poshc2"
@@ -40,7 +40,7 @@ rule poshc2
         $string10 = " SharpSocks " nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and Lateral Movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string11 = "/bin/posh" nocase ascii wide
+        $string11 = "/bin/posh"
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and Lateral Movement.
         // Reference: https://github.com/nettitude/PoshC2
         $string12 = /\/C2Server\.py/ nocase ascii wide
@@ -121,7 +121,7 @@ rule poshc2
         $string37 = "createdaisypayload" nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and Lateral Movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string38 = "createlinuxpayload" nocase ascii wide
+        $string38 = "createlinuxpayload"
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and Lateral Movement.
         // Reference: https://github.com/nettitude/PoshC2
         $string39 = "createnewpayload" nocase ascii wide
@@ -331,7 +331,7 @@ rule poshc2
         $string107 = "ldap-searcher " nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and Lateral Movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string108 = "linuxprivchecker" nocase ascii wide
+        $string108 = "linuxprivchecker"
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and Lateral Movement.
         // Reference: https://github.com/nettitude/PoshC2
         $string109 = /loadmodule\s.{0,100}\.ps1/ nocase ascii wide
@@ -524,12 +524,6 @@ rule poshc2
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and Lateral Movement.
         // Reference: https://github.com/nettitude/PoshC2
         $string172 = "posh -u " nocase ascii wide
-        // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and Lateral Movement.
-        // Reference: https://github.com/nettitude/PoshC2
-        $string173 = /runof\s.{0,100}\.o/ nocase ascii wide
-        // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and Lateral Movement.
-        // Reference: https://github.com/nettitude/PoshC2
-        $string174 = /runpe\s.{0,100}\.exe/ nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -1,7 +1,7 @@
 rule advanced_port_scanner
 {
     meta:
-        description = "Detection patterns for the tool 'advanced port scanner' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'advanced port scanner' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "advanced port scanner"

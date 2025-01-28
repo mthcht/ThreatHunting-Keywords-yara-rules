@@ -1,7 +1,7 @@
 rule Crack_allDBs
 {
     meta:
-        description = "Detection patterns for the tool 'Crack-allDBs' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Crack-allDBs' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Crack-allDBs"

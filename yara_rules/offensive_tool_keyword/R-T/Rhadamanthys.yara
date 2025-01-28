@@ -1,7 +1,7 @@
 rule Rhadamanthys
 {
     meta:
-        description = "Detection patterns for the tool 'Rhadamanthys' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Rhadamanthys' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Rhadamanthys"
@@ -16,7 +16,7 @@ rule Rhadamanthys
         $string2 = /\/XWorm\.exe/ nocase ascii wide
         // Description: Fake Xworm - Rhadamanthys infostealer
         // Reference: https://github.com/koyaxZ/XWorm-v5-Remote-Access-Tool
-        $string3 = /\/XWorm\.rar/ nocase ascii wide
+        $string3 = /\/XWorm\.rar/
         // Description: Fake Xworm - Rhadamanthys infostealer
         // Reference: https://github.com/koyaxZ/XWorm-v5-Remote-Access-Tool
         $string4 = /\\XKlog\.txt/ nocase ascii wide

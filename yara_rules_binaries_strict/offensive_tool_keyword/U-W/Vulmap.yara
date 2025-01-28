@@ -1,7 +1,7 @@
 rule Vulmap
 {
     meta:
-        description = "Detection patterns for the tool 'Vulmap' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Vulmap' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Vulmap"
@@ -10,7 +10,10 @@ rule Vulmap
     strings:
         // Description: Vulmap is an open-source online local vulnerability scanner project. It consists of online local vulnerability scanning programs for Windows and Linux operating systems. These scripts can be used for defensive and offensive purposes. It is possible to make vulnerability assessments using these scripts. Also. they can be used for privilege escalation by pentesters/red teamers.
         // Reference: https://github.com/vulmon/Vulmap
-        $string1 = /vulmon.{0,100}Vulmap/ nocase ascii wide
+        $string1 = /\.\/vulmap\// nocase ascii wide
+        // Description: Vulmap is an open-source online local vulnerability scanner project. It consists of online local vulnerability scanning programs for Windows and Linux operating systems. These scripts can be used for defensive and offensive purposes. It is possible to make vulnerability assessments using these scripts. Also. they can be used for privilege escalation by pentesters/red teamers.
+        // Reference: https://github.com/vulmon/Vulmap
+        $string2 = /vulmon.{0,100}Vulmap/
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

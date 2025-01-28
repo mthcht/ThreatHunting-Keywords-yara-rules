@@ -1,7 +1,7 @@
 rule Okta_Password_Sprayer
 {
     meta:
-        description = "Detection patterns for the tool 'Okta-Password-Sprayer' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Okta-Password-Sprayer' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Okta-Password-Sprayer"
@@ -10,7 +10,7 @@ rule Okta_Password_Sprayer
     strings:
         // Description: This script is a multi-threaded Okta password sprayer.
         // Reference: https://github.com/Rhynorater/Okta-Password-Sprayer
-        $string1 = /\/oSpray\.py/ nocase ascii wide
+        $string1 = /\/oSpray\.py/
         // Description: This script is a multi-threaded Okta password sprayer.
         // Reference: https://github.com/Rhynorater/Okta-Password-Sprayer
         $string2 = /\\oSpray\.py/ nocase ascii wide

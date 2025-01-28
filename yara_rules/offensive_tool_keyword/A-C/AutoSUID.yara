@@ -1,7 +1,7 @@
 rule AutoSUID
 {
     meta:
-        description = "Detection patterns for the tool 'AutoSUID' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'AutoSUID' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "AutoSUID"
@@ -19,16 +19,16 @@ rule AutoSUID
         $string3 = /\spwn_python\.me/ nocase ascii wide
         // Description: automate harvesting the SUID executable files and to find a way for further escalating the privileges
         // Reference: https://github.com/IvanGlinkin/AutoSUID
-        $string4 = /\.\/AutoSUID\.sh/ nocase ascii wide
+        $string4 = /\.\/AutoSUID\.sh/
         // Description: automate harvesting the SUID executable files and to find a way for further escalating the privileges
         // Reference: https://github.com/IvanGlinkin/AutoSUID
         $string5 = /\/AutoSUID\.git/ nocase ascii wide
         // Description: automate harvesting the SUID executable files and to find a way for further escalating the privileges
         // Reference: https://github.com/IvanGlinkin/AutoSUID
-        $string6 = /\/pwn_php\.me/ nocase ascii wide
+        $string6 = /\/pwn_php\.me/
         // Description: automate harvesting the SUID executable files and to find a way for further escalating the privileges
         // Reference: https://github.com/IvanGlinkin/AutoSUID
-        $string7 = /\/pwn_python\.me/ nocase ascii wide
+        $string7 = /\/pwn_python\.me/
         // Description: automate harvesting the SUID executable files and to find a way for further escalating the privileges
         // Reference: https://github.com/IvanGlinkin/AutoSUID
         $string8 = /AutoSUID\-main\./ nocase ascii wide

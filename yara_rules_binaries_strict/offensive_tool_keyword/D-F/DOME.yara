@@ -1,7 +1,7 @@
 rule DOME
 {
     meta:
-        description = "Detection patterns for the tool 'DOME' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'DOME' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "DOME"
@@ -13,7 +13,7 @@ rule DOME
         $string1 = /\sdome\.py/ nocase ascii wide
         // Description: DOME - A subdomain enumeration tool
         // Reference: https://github.com/v4d1/Dome
-        $string2 = /\.\/dome\.py/ nocase ascii wide
+        $string2 = /\.\/dome\.py/
         // Description: DOME - A subdomain enumeration tool
         // Reference: https://github.com/v4d1/Dome
         $string3 = /\/Dome\.git/ nocase ascii wide

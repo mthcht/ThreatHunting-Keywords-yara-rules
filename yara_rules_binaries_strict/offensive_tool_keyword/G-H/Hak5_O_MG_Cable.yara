@@ -1,7 +1,7 @@
 rule Hak5_O_MG_Cable
 {
     meta:
-        description = "Detection patterns for the tool 'Hak5 O.MG Cable' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Hak5 O.MG Cable' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Hak5 O.MG Cable"

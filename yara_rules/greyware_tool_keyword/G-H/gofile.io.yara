@@ -1,7 +1,7 @@
 rule gofile_io
 {
     meta:
-        description = "Detection patterns for the tool 'gofile.io' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'gofile.io' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "gofile.io"

@@ -1,7 +1,7 @@
 rule ransomware_notes
 {
     meta:
-        description = "Detection patterns for the tool 'ransomware_notes' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'ransomware_notes' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "ransomware_notes"
@@ -10,691 +10,691 @@ rule ransomware_notes
     strings:
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string1 = /\\"deritim\@proton\.me\\"/ nocase ascii wide
+        $string1 = /\/atomsilo\.hta/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string2 = /\/atomsilo\.hta/ nocase ascii wide
+        $string2 = /\/crytox\.hta/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string3 = /\/crytox\.hta/ nocase ascii wide
+        $string3 = /\@evilmail\.to/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string4 = /\@evilmail\.to/ nocase ascii wide
+        $string4 = /\\\!\!\!file\swas\sstolen\!\!\!\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string5 = /\\\!\!\!file\swas\sstolen\!\!\!\.txt/ nocase ascii wide
+        $string5 = /\\\!\!\!READ_ME_MEDUSA\!\!\!\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string6 = /\\\!\!\!READ_ME_MEDUSA\!\!\!\.txt/ nocase ascii wide
+        $string6 = /\\\!\!\!start\sleak\sfile\!\!\!\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string7 = /\\\!\!\!start\sleak\sfile\!\!\!\.txt/ nocase ascii wide
+        $string7 = /\\\!_\^_README_NOTES_RAGNAR_\^_\!\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string8 = /\\\!_\^_README_NOTES_RAGNAR_\^_\!\.txt/ nocase ascii wide
+        $string8 = /\\\!_karakurt_READ_ME_\!\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string9 = /\\\!_karakurt_READ_ME_\!\.txt/ nocase ascii wide
+        $string9 = /\\\!_WHATS_HAPPENED_\!\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string10 = /\\\!_WHATS_HAPPENED_\!\.txt/ nocase ascii wide
+        $string10 = /\\\!_WHY_FILES_ARE_ENCRYPTED_\!\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string11 = /\\\!_WHY_FILES_ARE_ENCRYPTED_\!\.txt/ nocase ascii wide
+        $string11 = /\\\#BlackHunt_ReadMe\.html/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string12 = /\\\#BlackHunt_ReadMe\.html/ nocase ascii wide
+        $string12 = /\\\.README_TO_RESTORE/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string13 = /\\\.README_TO_RESTORE/ nocase ascii wide
+        $string13 = /\\_Locky_recover_instructions\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string14 = /\\_Locky_recover_instructions\.txt/ nocase ascii wide
+        $string14 = /\\_READ_THIS_FILE_HBE8_\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string15 = /\\_READ_THIS_FILE_HBE8_\.txt/ nocase ascii wide
+        $string15 = /\\\+README\-WARNING\+\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string16 = /\\\+README\-WARNING\+\.txt/ nocase ascii wide
+        $string16 = /\\523XaDi1i\.README\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string17 = /\\523XaDi1i\.README\.txt/ nocase ascii wide
+        $string17 = /\\8base_note\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string18 = /\\8base_note\.txt/ nocase ascii wide
+        $string18 = /\\AAA_READ_AAA\.TXT/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string19 = /\\AAA_READ_AAA\.TXT/ nocase ascii wide
+        $string19 = /\\akira_readme\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string20 = /\\akira_readme\.txt/ nocase ascii wide
+        $string20 = /\\alphv1\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string21 = /\\alphv1\.txt/ nocase ascii wide
+        $string21 = /\\alphv2\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string22 = /\\alphv2\.txt/ nocase ascii wide
+        $string22 = /\\alphv3\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string23 = /\\alphv3\.txt/ nocase ascii wide
+        $string23 = /\\atomsilo\.hta/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string24 = /\\atomsilo\.hta/ nocase ascii wide
+        $string24 = /\\avaddon\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string25 = /\\avaddon\.txt/ nocase ascii wide
+        $string25 = /\\avoslocker\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string26 = /\\avoslocker\.txt/ nocase ascii wide
+        $string26 = /\\AWAYOKON\-readme\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string27 = /\\AWAYOKON\-readme\.txt/ nocase ascii wide
+        $string27 = /\\BB_Readme\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string28 = /\\BB_Readme\.txt/ nocase ascii wide
+        $string28 = /\\BB_Readme2\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string29 = /\\BB_Readme2\.txt/ nocase ascii wide
+        $string29 = /\\bidon_readme\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string30 = /\\bidon_readme\.txt/ nocase ascii wide
+        $string30 = /\\biglock\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string31 = /\\biglock\.txt/ nocase ascii wide
+        $string31 = /\\bitpaymer_v1\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string32 = /\\bitpaymer_v1\.txt/ nocase ascii wide
+        $string32 = /\\bitpaymer_v2\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string33 = /\\bitpaymer_v2\.txt/ nocase ascii wide
+        $string33 = /\\bitransomware\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string34 = /\\bitransomware\.txt/ nocase ascii wide
+        $string34 = /\\blackbasta1\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string35 = /\\blackbasta1\.txt/ nocase ascii wide
+        $string35 = /\\blackbasta2\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string36 = /\\blackbasta2\.txt/ nocase ascii wide
+        $string36 = /\\blackbasta3\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string37 = /\\blackbasta3\.txt/ nocase ascii wide
+        $string37 = /\\blackbasta4\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string38 = /\\blackbasta4\.txt/ nocase ascii wide
+        $string38 = /\\blackbyte_v2\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string39 = /\\blackbyte_v2\.txt/ nocase ascii wide
+        $string39 = /\\cAcTuS\.readme\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string40 = /\\cAcTuS\.readme\.txt/ nocase ascii wide
+        $string40 = /\\cAcTuS\.readme_2\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string41 = /\\cAcTuS\.readme_2\.txt/ nocase ascii wide
+        $string41 = /\\cAcTuS\.readme_3\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string42 = /\\cAcTuS\.readme_3\.txt/ nocase ascii wide
+        $string42 = /\\cAcTuS\.readme_4\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string43 = /\\cAcTuS\.readme_4\.txt/ nocase ascii wide
+        $string43 = /\\cAcTuS\.readme_5\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string44 = /\\cAcTuS\.readme_5\.txt/ nocase ascii wide
+        $string44 = /\\clop1\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string45 = /\\clop1\.txt/ nocase ascii wide
+        $string45 = /\\clop2\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string46 = /\\clop2\.txt/ nocase ascii wide
+        $string46 = /\\conti1\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string47 = /\\conti1\.txt/ nocase ascii wide
+        $string47 = /\\conti2\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string48 = /\\conti2\.txt/ nocase ascii wide
+        $string48 = /\\conti3\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string49 = /\\conti3\.txt/ nocase ascii wide
+        $string49 = /\\conti4\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string50 = /\\conti4\.txt/ nocase ascii wide
+        $string50 = /\\CriticalBreachDetected\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string51 = /\\CriticalBreachDetected\.txt/ nocase ascii wide
+        $string51 = /\\cryptomix\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string52 = /\\cryptomix\.txt/ nocase ascii wide
+        $string52 = /\\crytox\.hta/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string53 = /\\crytox\.hta/ nocase ascii wide
+        $string53 = /\\ctblocker\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string54 = /\\ctblocker\.txt/ nocase ascii wide
+        $string54 = /\\d0nut\.html/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string55 = /\\d0nut\.html/ nocase ascii wide
+        $string55 = /\\dagonlocker\.html/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string56 = /\\dagonlocker\.html/ nocase ascii wide
+        $string56 = /\\darkangels\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string57 = /\\darkangels\.txt/ nocase ascii wide
+        $string57 = /\\Data\sbreach\swarning\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string58 = /\\Data\sbreach\swarning\.txt/ nocase ascii wide
+        $string58 = /\\DECRYPT\-FILES\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string59 = /\\DECRYPT\-FILES\.txt/ nocase ascii wide
+        $string59 = /\\diavol1\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string60 = /\\diavol1\.txt/ nocase ascii wide
+        $string60 = /\\diavol2\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string61 = /\\diavol2\.txt/ nocase ascii wide
+        $string61 = /\\doppelpaymer1\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string62 = /\\doppelpaymer1\.txt/ nocase ascii wide
+        $string62 = /\\doppelpaymer2\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string63 = /\\doppelpaymer2\.txt/ nocase ascii wide
+        $string63 = /\\doppelpaymer3\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string64 = /\\doppelpaymer3\.txt/ nocase ascii wide
+        $string64 = /\\doppelpaymer4\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string65 = /\\doppelpaymer4\.txt/ nocase ascii wide
+        $string65 = /\\DtMXQFOCos\-RECOVER\-README\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string66 = /\\DtMXQFOCos\-RECOVER\-README\.txt/ nocase ascii wide
+        $string66 = /\\FILE\sRECOVERY\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string67 = /\\FILE\sRECOVERY\.txt/ nocase ascii wide
+        $string67 = /\\gandcrab\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string68 = /\\gandcrab\.txt/ nocase ascii wide
+        $string68 = /\\gwisinlocker\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string69 = /\\gwisinlocker\.txt/ nocase ascii wide
+        $string69 = /\\h0lygh0st\.html/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string70 = /\\h0lygh0st\.html/ nocase ascii wide
+        $string70 = /\\HELP_SECURITY_EVENT\.html/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string71 = /\\HELP_SECURITY_EVENT\.html/ nocase ascii wide
+        $string71 = /\\HOW\sTO\sRECOVER\sYOUR\sFILES\.TXT/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string72 = /\\HOW\sTO\sRECOVER\sYOUR\sFILES\.TXT/ nocase ascii wide
+        $string72 = /\\HOW\sTO\sRECOVERY\sFILES\.TXT/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string73 = /\\HOW\sTO\sRECOVERY\sFILES\.TXT/ nocase ascii wide
+        $string73 = /\\How\sto\sRestore\sYour\sFiles\.html/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string74 = /\\How\sto\sRestore\sYour\sFiles\.html/ nocase ascii wide
+        $string74 = /\\How\sTo\sRestore\sYour\sFiles\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string75 = /\\How\sTo\sRestore\sYour\sFiles\.txt/ nocase ascii wide
+        $string75 = /\\HOW_RETURN_YOUR_DATA\.TXT/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string76 = /\\HOW_RETURN_YOUR_DATA\.TXT/ nocase ascii wide
+        $string76 = /\\how_to_decrypt\.hta/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string77 = /\\how_to_decrypt\.hta/ nocase ascii wide
+        $string77 = /\\HOW_TO_DECRYPT\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string78 = /\\HOW_TO_DECRYPT\.txt/ nocase ascii wide
+        $string78 = /\\HOW_TO_RECOVER_DATA\.html/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string79 = /\\HOW_TO_RECOVER_DATA\.html/ nocase ascii wide
+        $string79 = /\\HOW_TO_RECOVER_FILES\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string80 = /\\HOW_TO_RECOVER_FILES\.txt/ nocase ascii wide
+        $string80 = /\\HOW_TO_RECOVER_FILES_no_personal_id\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string81 = /\\HOW_TO_RECOVER_FILES_no_personal_id\.txt/ nocase ascii wide
+        $string81 = /\\HOW_TO_RECOVER_FILES_no_personal_id2\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string82 = /\\HOW_TO_RECOVER_FILES_no_personal_id2\.txt/ nocase ascii wide
+        $string82 = /\\HOW_TO_RECOVERY_FILES\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string83 = /\\HOW_TO_RECOVERY_FILES\.txt/ nocase ascii wide
+        $string83 = /\\How_To_Restore_Your_Files\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string84 = /\\How_To_Restore_Your_Files\.txt/ nocase ascii wide
+        $string84 = /\\iFire\-readme\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string85 = /\\iFire\-readme\.txt/ nocase ascii wide
+        $string85 = /\\INC\-README\.html/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string86 = /\\INC\-README\.html/ nocase ascii wide
+        $string86 = /\\INC\-README\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string87 = /\\INC\-README\.txt/ nocase ascii wide
+        $string87 = /\\INC\-README2\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string88 = /\\INC\-README2\.txt/ nocase ascii wide
+        $string88 = /\\INC\-README3\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string89 = /\\INC\-README3\.txt/ nocase ascii wide
+        $string89 = /\\INC\-README4\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string90 = /\\INC\-README4\.txt/ nocase ascii wide
+        $string90 = /\\JX34qQm7\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string91 = /\\JX34qQm7\.txt/ nocase ascii wide
+        $string91 = /\\KARMA\-ENCRYPTED\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string92 = /\\KARMA\-ENCRYPTED\.txt/ nocase ascii wide
+        $string92 = /\\lilith\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string93 = /\\lilith\.txt/ nocase ascii wide
+        $string93 = /\\lockbit2\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string94 = /\\lockbit2\.txt/ nocase ascii wide
+        $string94 = /\\lockbit3\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string95 = /\\lockbit3\.txt/ nocase ascii wide
+        $string95 = /\\Look\sat\sthis\sinstruction\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string96 = /\\Look\sat\sthis\sinstruction\.txt/ nocase ascii wide
+        $string96 = /\\nemty_v1\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string97 = /\\nemty_v1\.txt/ nocase ascii wide
+        $string97 = /\\nemty_v16\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string98 = /\\nemty_v16\.txt/ nocase ascii wide
+        $string98 = /\\nemty_v25\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string99 = /\\nemty_v25\.txt/ nocase ascii wide
+        $string99 = /\\netwalker\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string100 = /\\netwalker\.txt/ nocase ascii wide
+        $string100 = /\\prometheus\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string101 = /\\prometheus\.txt/ nocase ascii wide
+        $string101 = /\\quantumlocker\.html/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string102 = /\\quantumlocker\.html/ nocase ascii wide
+        $string102 = /\\R3ADM3\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string103 = /\\R3ADM3\.txt/ nocase ascii wide
+        $string103 = /\\ragnarlocker1\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string104 = /\\ragnarlocker1\.txt/ nocase ascii wide
+        $string104 = /\\ragnarok\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string105 = /\\ragnarok\.txt/ nocase ascii wide
+        $string105 = /\\ransomexx1\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string106 = /\\ransomexx1\.txt/ nocase ascii wide
+        $string106 = /\\ransomexx2\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string107 = /\\ransomexx2\.txt/ nocase ascii wide
+        $string107 = /\\RansomNote\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string108 = /\\RansomNote\.txt/ nocase ascii wide
+        $string108 = /\\README\.BlackSuit\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string109 = /\\README\.BlackSuit\.txt/ nocase ascii wide
+        $string109 = /\\README_FOR_DECRYPT\.txtt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string110 = /\\README_FOR_DECRYPT\.txtt/ nocase ascii wide
+        $string110 = /\\readme_for_unlock\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string111 = /\\readme_for_unlock\.txt/ nocase ascii wide
+        $string111 = /\\readme_for_unlock_2\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string112 = /\\readme_for_unlock_2\.txt/ nocase ascii wide
+        $string112 = /\\readme_for_unlock_3\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string113 = /\\readme_for_unlock_3\.txt/ nocase ascii wide
+        $string113 = /\\README_TO_DECRYPT\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string114 = /\\README_TO_DECRYPT\.txt/ nocase ascii wide
+        $string114 = /\\RECOVER\-FILES\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string115 = /\\RECOVER\-FILES\.txt/ nocase ascii wide
+        $string115 = /\\RECOVERY_DARKBIT\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string116 = /\\RECOVERY_DARKBIT\.txt/ nocase ascii wide
+        $string116 = /\\RECOVERY_INSTRUCTIONS\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string117 = /\\RECOVERY_INSTRUCTIONS\.txt/ nocase ascii wide
+        $string117 = /\\Restore\sYour\sFiles\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string118 = /\\Restore\sYour\sFiles\.txt/ nocase ascii wide
+        $string118 = /\\RESTORE_FILES\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string119 = /\\RESTORE_FILES\.txt/ nocase ascii wide
+        $string119 = /\\RESTORE\-FILES\-Q7ILknn7k\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string120 = /\\RESTORE\-FILES\-Q7ILknn7k\.txt/ nocase ascii wide
+        $string120 = /\\revil1\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string121 = /\\revil1\.txt/ nocase ascii wide
+        $string121 = /\\revil2\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string122 = /\\revil2\.txt/ nocase ascii wide
+        $string122 = /\\revil3\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string123 = /\\revil3\.txt/ nocase ascii wide
+        $string123 = /\\RFNCW\-DECRYPT\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string124 = /\\RFNCW\-DECRYPT\.txt/ nocase ascii wide
+        $string124 = /\\Risen_Guide\.hta/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string125 = /\\Risen_Guide\.hta/ nocase ascii wide
+        $string125 = /\\Risen_Guide2\.hta/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string126 = /\\Risen_Guide2\.hta/ nocase ascii wide
+        $string126 = /\\Risen_Note\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string127 = /\\Risen_Note\.txt/ nocase ascii wide
+        $string127 = /\\suncrypt\.html/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string128 = /\\suncrypt\.html/ nocase ascii wide
+        $string128 = /\\teslacrypt\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string129 = /\\teslacrypt\.txt/ nocase ascii wide
+        $string129 = /\\UNLOCK_FILES\..{0,100}\.HTML/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string130 = /\\UNLOCK_FILES\..{0,100}\.HTML/ nocase ascii wide
-        // Description: detection patterns retrieved in ransomware notes archives
-        // Reference: https://github.com/threatlabz/ransomware_notes
-        $string131 = /\\UNLOCK_MY_FILES\.txt/ nocase ascii wide
+        $string130 = /\\UNLOCK_MY_FILES\.txt/ nocase ascii wide
         // Description: ransomware note from knight ransomware
         // Reference: https://tria.ge/230901-c2fbqacb36
-        $string132 = /\\Users\\How\sTo\sRestore\sYour\sFiles\.txt/ nocase ascii wide
+        $string131 = /\\Users\\How\sTo\sRestore\sYour\sFiles\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string133 = /\\vicesociety\.txt/ nocase ascii wide
+        $string132 = /\\vicesociety\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string134 = /\\wastedlocker\.txt/ nocase ascii wide
+        $string133 = /\\wastedlocker\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string135 = /\\White_Rabbit\.txt/ nocase ascii wide
+        $string134 = /\\White_Rabbit\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string136 = /\\yanluowang\.txt/ nocase ascii wide
+        $string135 = /\\yanluowang\.txt/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string137 = "<h1>All your files was encrypted!" nocase ascii wide
+        $string136 = "<h1>All your files was encrypted!" nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string138 = /15010050\@tutamail\.com/ nocase ascii wide
+        $string137 = /15010050\@tutamail\.com/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string139 = /1cd05248c2diffczd\.zgpnnj5ikwfugnfvmxzn3qaafstcrdwue4eevw2lzx57rx5bfkia6ryd\.onion/ nocase ascii wide
+        $string138 = /1cd05248c2diffczd\.zgpnnj5ikwfugnfvmxzn3qaafstcrdwue4eevw2lzx57rx5bfkia6ryd\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string140 = /2020host2021\@tutanota\.com/ nocase ascii wide
+        $string139 = /2020host2021\@tutanota\.com/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string141 = /3nvzqyo6l4wkrzumzu5aod7zbosq4ipgf7ifgj3hsvbcr5vcasordvqd\.onion/ nocase ascii wide
+        $string140 = /3nvzqyo6l4wkrzumzu5aod7zbosq4ipgf7ifgj3hsvbcr5vcasordvqd\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string142 = /3pktcrcbmssvrnwe5skburdwe2h3v6ibdnn5kbjqihsg6eu6s6b7ryqd\.onion/ nocase ascii wide
+        $string141 = /3pktcrcbmssvrnwe5skburdwe2h3v6ibdnn5kbjqihsg6eu6s6b7ryqd\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string143 = /3r7zqtidvujbmfhx52sb34u4vwkh66baefmqzlbqpcnwm3krzipy37yd\.onion/ nocase ascii wide
+        $string142 = /3r7zqtidvujbmfhx52sb34u4vwkh66baefmqzlbqpcnwm3krzipy37yd\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string144 = /3wugtklp46ufx7dnr6j5cd6ate7wnvnivsyvwuni7hqcqt7hm5r72nid\.onion/ nocase ascii wide
+        $string143 = /3wugtklp46ufx7dnr6j5cd6ate7wnvnivsyvwuni7hqcqt7hm5r72nid\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string145 = /3x55o3u2b7cjs54eifja5m3ottxntlubhjzt6k6htp5nrocjmsxxh7ad\.onion/ nocase ascii wide
+        $string144 = /3x55o3u2b7cjs54eifja5m3ottxntlubhjzt6k6htp5nrocjmsxxh7ad\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string146 = /3ytm3d25hfzvbylkxiwyqmpvzys5of7l4pbosm7ol7czlkplgukjq6yd\.onion/ nocase ascii wide
+        $string145 = /3ytm3d25hfzvbylkxiwyqmpvzys5of7l4pbosm7ol7czlkplgukjq6yd\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string147 = /47266\@AIRMAIL\.CC/ nocase ascii wide
+        $string146 = /47266\@AIRMAIL\.CC/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string148 = /47h4pwve4scndaneljfnxdhzoulgsyfzbgayyonbwztfz74gsdprz5qd\.onion/ nocase ascii wide
+        $string147 = /47h4pwve4scndaneljfnxdhzoulgsyfzbgayyonbwztfz74gsdprz5qd\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string149 = /54783\@thesecure\.biz/ nocase ascii wide
+        $string148 = /54783\@thesecure\.biz/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string150 = /5ntlvn7lmkezscee2vhatjaigkcu2rzj3bwhqaz32snmqc4jha3gcjad\.onion/ nocase ascii wide
+        $string149 = /5ntlvn7lmkezscee2vhatjaigkcu2rzj3bwhqaz32snmqc4jha3gcjad\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string151 = /6dtxgqam4crv6rr6\.onion/ nocase ascii wide
+        $string150 = /6dtxgqam4crv6rr6\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string152 = /6dtxgqam4crv6rr6\.onion\.cab/ nocase ascii wide
+        $string151 = /6dtxgqam4crv6rr6\.onion\.cab/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string153 = /6dtxgqam4crv6rr6\.onion\.link/ nocase ascii wide
+        $string152 = /6dtxgqam4crv6rr6\.onion\.link/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string154 = /6dtxgqam4crv6rr6\.onion\.to/ nocase ascii wide
+        $string153 = /6dtxgqam4crv6rr6\.onion\.to/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string155 = /6dtxgqam4crv6rr6\.tor2web\.org/ nocase ascii wide
+        $string154 = /6dtxgqam4crv6rr6\.tor2web\.org/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string156 = /6v4q5w7di74grj2vtmikzgx2tnq5eagyg2cubpcnqrvvee2ijpmprzqd\.onion/ nocase ascii wide
+        $string155 = /6v4q5w7di74grj2vtmikzgx2tnq5eagyg2cubpcnqrvvee2ijpmprzqd\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string157 = /6yofnrq7evqrtz3tzi3dkbrdovtywd35lx3iqbc5dyh367nrdh4jgfyd\.onion/ nocase ascii wide
+        $string156 = /6yofnrq7evqrtz3tzi3dkbrdovtywd35lx3iqbc5dyh367nrdh4jgfyd\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string158 = /7tkffbh3qiumpfjfq77plcorjmfohmbj6nwq5je6herbpya6kmgoafid\.onion/ nocase ascii wide
+        $string157 = /7tkffbh3qiumpfjfq77plcorjmfohmbj6nwq5je6herbpya6kmgoafid\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string159 = /88828\@PROTONMAIL\.CH/ nocase ascii wide
+        $string158 = /88828\@PROTONMAIL\.CH/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string160 = /897243728161\@thesecure\.biz/ nocase ascii wide
+        $string159 = /897243728161\@thesecure\.biz/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string161 = /8filesback\@onionmail\.org/ nocase ascii wide
+        $string160 = /8filesback\@onionmail\.org/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string162 = /a2dbso6dijaqsmut36r6y4nps4cwivmfog5bpzf6uojovce6f3gl36id\.onion/ nocase ascii wide
+        $string161 = /a2dbso6dijaqsmut36r6y4nps4cwivmfog5bpzf6uojovce6f3gl36id\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string163 = /aazsbsgya565vlu2c6bzy6yfiebkcbtvvcytvolt33s77xypi7nypxyd\.onion/ nocase ascii wide
+        $string162 = /aazsbsgya565vlu2c6bzy6yfiebkcbtvvcytvolt33s77xypi7nypxyd\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string164 = /admin\@cuba\-supp\.com/ nocase ascii wide
+        $string163 = /admin\@cuba\-supp\.com/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string165 = /akiral2iz6a7qgd3ayp3l6yub7xx2uep76idk3u2kollpj5z3z636bad\.onion/ nocase ascii wide
+        $string164 = /akiral2iz6a7qgd3ayp3l6yub7xx2uep76idk3u2kollpj5z3z636bad\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string166 = /akiralkzxzq2dsrzsrvbr2xgbbu2wgsmxryd4csgfameg52n7efvr2id\.onion/ nocase ascii wide
+        $string165 = /akiralkzxzq2dsrzsrvbr2xgbbu2wgsmxryd4csgfameg52n7efvr2id\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string167 = "All Your <span>Important Files</span> Have Been Encrypted" nocase ascii wide
+        $string166 = "All Your <span>Important Files</span> Have Been Encrypted" nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string168 = "All Your Important Files Have Been Encrypted" nocase ascii wide
+        $string167 = "All Your Important Files Have Been Encrypted" nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string169 = /alphvmmm27o3abo3r2mlmjrpdmzle3rykajqc5xsj7j7ejksbpsa36ad\.onion/ nocase ascii wide
+        $string168 = /alphvmmm27o3abo3r2mlmjrpdmzle3rykajqc5xsj7j7ejksbpsa36ad\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string170 = /aoacugmutagkwctu\.onion/ nocase ascii wide
+        $string169 = /aoacugmutagkwctu\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string171 = /aplebzu47wgazapdqks6vrcv6zcnjppkbxbr6wketf56nf6aq2nmyoyd\.onion/ nocase ascii wide
+        $string170 = /aplebzu47wgazapdqks6vrcv6zcnjppkbxbr6wketf56nf6aq2nmyoyd\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string172 = /apvc24autvavxuc6\.onion/ nocase ascii wide
+        $string171 = /apvc24autvavxuc6\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string173 = /apvc24autvavxuc6\.onion\.cab/ nocase ascii wide
+        $string172 = /apvc24autvavxuc6\.onion\.cab/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string174 = /apvc24autvavxuc6\.onion\.city/ nocase ascii wide
+        $string173 = /apvc24autvavxuc6\.onion\.city/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string175 = /apvc24autvavxuc6\.onion\.to/ nocase ascii wide
+        $string174 = /apvc24autvavxuc6\.onion\.to/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string176 = /arvato\@atomsilo\.com/ nocase ascii wide
+        $string175 = /arvato\@atomsilo\.com/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string177 = /asgardmaster5\@protonmail\.com/ nocase ascii wide
+        $string176 = /asgardmaster5\@protonmail\.com/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string178 = /Ashley\.Mowat\@protonmail\.com/ nocase ascii wide
+        $string177 = /Ashley\.Mowat\@protonmail\.com/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string179 = /avaddonbotrxmuyl\.onion/ nocase ascii wide
+        $string178 = /avaddonbotrxmuyl\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string180 = /avaddongun7rngel\.onion/ nocase ascii wide
+        $string179 = /avaddongun7rngel\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string181 = /avosjon4pfh3y7ew3jdwz6ofw7lljcxlbk7hcxxmnxlh5kvf2akcqjad\.onion/ nocase ascii wide
+        $string180 = /avosjon4pfh3y7ew3jdwz6ofw7lljcxlbk7hcxxmnxlh5kvf2akcqjad\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string182 = /avosqxh72b5ia23dl5fgwcpndkctuzqvh2iefk5imp3pi5gfhel5klad\.onion/ nocase ascii wide
+        $string181 = /avosqxh72b5ia23dl5fgwcpndkctuzqvh2iefk5imp3pi5gfhel5klad\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string183 = /basemmnnqwxevlymli5bs36o5ynti55xojzvn246spahniugwkff2pad\.onion/ nocase ascii wide
+        $string182 = /basemmnnqwxevlymli5bs36o5ynti55xojzvn246spahniugwkff2pad\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string184 = /bastad5huzwkepdixedg2gekg7jk22ato24zyllp6lnjx7wdtyctgvyd\.onion/ nocase ascii wide
+        $string183 = /bastad5huzwkepdixedg2gekg7jk22ato24zyllp6lnjx7wdtyctgvyd\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string185 = /Bernardocarlos\@tutanota\.com/ nocase ascii wide
+        $string184 = /Bernardocarlos\@tutanota\.com/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string186 = /bianlianlbc5an4kgnay3opdemgcryg2kpfcbgczopmm3dnbz3uaunad\.onion/ nocase ascii wide
+        $string185 = /bianlianlbc5an4kgnay3opdemgcryg2kpfcbgczopmm3dnbz3uaunad\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string187 = /bianlivemqbawcco4cx4a672k2fip3guyxudzurfqvdszafam3ofqgqd\.onion/ nocase ascii wide
+        $string186 = /bianlivemqbawcco4cx4a672k2fip3guyxudzurfqvdszafam3ofqgqd\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string188 = /blacksnaketeam\@armormail\.net/ nocase ascii wide
+        $string187 = /blacksnaketeam\@armormail\.net/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string189 = /blacksnaketeam\@dnmx\.org/ nocase ascii wide
+        $string188 = /blacksnaketeam\@dnmx\.org/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string190 = /blacksnaketeam\@evilmail\.to/ nocase ascii wide
+        $string189 = /blacksnaketeam\@evilmail\.to/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string191 = /blacksnaketeam\@onionmail\.org/ nocase ascii wide
+        $string190 = /blacksnaketeam\@onionmail\.org/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string192 = /blacksnaketeam\@protonmail\.com/ nocase ascii wide
+        $string191 = /blacksnaketeam\@protonmail\.com/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string193 = /blogvl7tjyjvsfthobttze52w36wwiz34hrfcmorgvdzb6hikucb7aqd\.onion/ nocase ascii wide
+        $string192 = /blogvl7tjyjvsfthobttze52w36wwiz34hrfcmorgvdzb6hikucb7aqd\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string194 = /blogxxu75w63ujqarv476otld7cyjkq4yoswzt4ijadkjwvg3vrvd5yd\.onion/ nocase ascii wide
+        $string193 = /blogxxu75w63ujqarv476otld7cyjkq4yoswzt4ijadkjwvg3vrvd5yd\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string195 = /bluecrap\@my\.com/ nocase ascii wide
+        $string194 = /bluecrap\@my\.com/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string196 = /brain\.support\@cyberfear\.com/ nocase ascii wide
+        $string195 = /brain\.support\@cyberfear\.com/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string197 = /btpsupport\@protonmail\.com/ nocase ascii wide
+        $string196 = /btpsupport\@protonmail\.com/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string198 = /bwjbbpbcihglahwxxusmyy2nxqdc4oqy4rvyhayn4dxhqzji4qi7taid\.onion/ nocase ascii wide
+        $string197 = /bwjbbpbcihglahwxxusmyy2nxqdc4oqy4rvyhayn4dxhqzji4qi7taid\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string199 = /cactus\@mexicomail\.com/ nocase ascii wide
+        $string198 = /cactus\@mexicomail\.com/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string200 = /cactus787835\@proton\.me/ nocase ascii wide
+        $string199 = /cactus787835\@proton\.me/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string201 = /cactusbloguuodvqjmnzlwetjlpj6aggc6iocwhuupb47laukux7ckid\.onion/ nocase ascii wide
+        $string200 = /cactusbloguuodvqjmnzlwetjlpj6aggc6iocwhuupb47laukux7ckid\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string202 = /cartelirsn5l54ehcbalyyqtfb3j7be2rpvf6ujayaf5qqmg3vlwiayd\.onion/ nocase ascii wide
+        $string201 = /cartelirsn5l54ehcbalyyqtfb3j7be2rpvf6ujayaf5qqmg3vlwiayd\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string203 = /ccpyeuptrlatb2piua4ukhnhi7lrxgerrcrj4p2b5uhbzqm2xgdjaqid\.onion/ nocase ascii wide
+        $string202 = /ccpyeuptrlatb2piua4ukhnhi7lrxgerrcrj4p2b5uhbzqm2xgdjaqid\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string204 = /chatc46k7dqtvvrgfqjs6vxrwnmudko2ptiqvlb7doqxxqtjc22tsiad\.onion/ nocase ascii wide
+        $string203 = /chatc46k7dqtvvrgfqjs6vxrwnmudko2ptiqvlb7doqxxqtjc22tsiad\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string205 = /cki3klxqycazagx3r5prae3nmfvxmwa34beknr3il4uf76vxd76akqid\.onion/ nocase ascii wide
+        $string204 = /cki3klxqycazagx3r5prae3nmfvxmwa34beknr3il4uf76vxd76akqid\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string206 = /clientcuworpelkdwecucgvfhp5uz5n7uohsnokndrlhm2zkntyg3had\.onion/ nocase ascii wide
+        $string205 = /clientcuworpelkdwecucgvfhp5uz5n7uohsnokndrlhm2zkntyg3had\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string207 = /closetrap\@aol\.com/ nocase ascii wide
+        $string206 = /closetrap\@aol\.com/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string208 = /contirec7nchr45rx6ympez5rjldibnqzh7lsa56lvjvaeywhvoj3wad\.onion/ nocase ascii wide
+        $string207 = /contirec7nchr45rx6ympez5rjldibnqzh7lsa56lvjvaeywhvoj3wad\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string209 = /contirecj4hbzmyzuydyzrvm2c65blmvhoj2cvf25zqj2dwrrqcq5oad\.onion/ nocase ascii wide
+        $string208 = /contirecj4hbzmyzuydyzrvm2c65blmvhoj2cvf25zqj2dwrrqcq5oad\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string210 = /contiuevxdgdhn3zl2kubpajtfgqq4ssj2ipv6ujw7fwhggev3rk6hqd\.onion/ nocase ascii wide
+        $string209 = /contiuevxdgdhn3zl2kubpajtfgqq4ssj2ipv6ujw7fwhggev3rk6hqd\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string211 = /cryptr3fmuv4di5uiczofjuypopr63x2gltlsvhur2ump4ebru2xd3yd\.onion/ nocase ascii wide
+        $string210 = /cryptr3fmuv4di5uiczofjuypopr63x2gltlsvhur2ump4ebru2xd3yd\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string212 = /cuba_support\@exploit\.im/ nocase ascii wide
+        $string211 = /cuba_support\@exploit\.im/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string213 = /cuba4ikm4jakjgmkezytyawtdgr2xymvy6nvzgw5cglswg3si76icnqd\.onion/ nocase ascii wide
+        $string212 = /cuba4ikm4jakjgmkezytyawtdgr2xymvy6nvzgw5cglswg3si76icnqd\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string214 = /cyberarkrules\@gmail\.com/ nocase ascii wide
+        $string213 = /cyberarkrules\@gmail\.com/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string215 = /d75itpgjjfe2ys2qivqplbvmw3yyx7o5e4ppt2esit2lluhngulz4hqd\.onion/ nocase ascii wide
+        $string214 = /d75itpgjjfe2ys2qivqplbvmw3yyx7o5e4ppt2esit2lluhngulz4hqd\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string216 = /dark24zz36xm4y2phwe7yvnkkkkhxionhfrwp67awpb3r3bdcneivoqd\.onion/ nocase ascii wide
+        $string215 = /dark24zz36xm4y2phwe7yvnkkkkhxionhfrwp67awpb3r3bdcneivoqd\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string217 = /davtdavm734bl4hkr3sr4dvfzpdzuzei2zrcor4vte4a3xuok2rxcmyd\.onion/ nocase ascii wide
+        $string216 = /davtdavm734bl4hkr3sr4dvfzpdzuzei2zrcor4vte4a3xuok2rxcmyd\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string218 = /Deanlivermore\@protonmail\.com/ nocase ascii wide
+        $string217 = /Deanlivermore\@protonmail\.com/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string219 = /Decfile\@cyberfear\.com/ nocase ascii wide
+        $string218 = /Decfile\@cyberfear\.com/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string220 = /DecFile\@tutanota\.com/ nocase ascii wide
+        $string219 = /DecFile\@tutanota\.com/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string221 = /decrypttozxybarc\.dconnect\.eu/ nocase ascii wide
+        $string220 = /decrypttozxybarc\.dconnect\.eu/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string222 = /decrypttozxybarc\.onion/ nocase ascii wide
+        $string221 = /decrypttozxybarc\.onion/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string223 = /decrypttozxybarc\.onion\.cab/ nocase ascii wide
+        $string222 = /decrypttozxybarc\.onion\.cab/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string224 = /decrypttozxybarc\.onion\.link/ nocase ascii wide
+        $string223 = /decrypttozxybarc\.onion\.link/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string225 = /decrypttozxybarc\.onion\.to/ nocase ascii wide
+        $string224 = /decrypttozxybarc\.onion\.to/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string226 = /decrypttozxybarc\.tor2web\.org/ nocase ascii wide
+        $string225 = /decrypttozxybarc\.tor2web\.org/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string227 = /dectokyo\@cock\.li/ nocase ascii wide
+        $string226 = /dectokyo\@cock\.li/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string228 = /dectokyo\@onionmail\.org/ nocase ascii wide
+        $string227 = /dectokyo\@onionmail\.org/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
-        $string229 = /derdiarikucisv\@gmx\.de/ nocase ascii wide
+        $string228 = /derdiarikucisv\@gmx\.de/ nocase ascii wide
+        // Description: detection patterns retrieved in ransomware notes archives
+        // Reference: https://github.com/threatlabz/ransomware_notes
+        $string229 = /deritim\@proton\.me/ nocase ascii wide
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
         $string230 = /dgnh6p5uq234zry7qx7bh73hj5ht3jqisgfet6s7j7uyas5i46xfdkyd\.onion/ nocase ascii wide

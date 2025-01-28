@@ -1,7 +1,7 @@
 rule pyinstaller
 {
     meta:
-        description = "Detection patterns for the tool 'pyinstaller' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'pyinstaller' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "pyinstaller"
@@ -10,7 +10,7 @@ rule pyinstaller
     strings:
         // Description: PyInstaller bundles a Python application and all its dependencies into a single package executable.
         // Reference: https://www.pyinstaller.org/
-        $string1 = "/pyinstaller/" nocase ascii wide
+        $string1 = "/pyinstaller/"
         // Description: PyInstaller bundles a Python application and all its dependencies into a single package executable.
         // Reference: https://www.pyinstaller.org/
         $string2 = "import PyInstaller" nocase ascii wide

@@ -1,7 +1,7 @@
 rule Poshito
 {
     meta:
-        description = "Detection patterns for the tool 'Poshito' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Poshito' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Poshito"
@@ -22,7 +22,7 @@ rule Poshito
         $string4 = /\/Poshito\.git/ nocase ascii wide
         // Description: Poshito is a Windows C2 over Telegram
         // Reference: https://github.com/itaymigdal/Poshito
-        $string5 = "/Poshito/Poshito/Agent" nocase ascii wide
+        $string5 = "/Poshito/Poshito/Agent"
         // Description: Poshito is a Windows C2 over Telegram
         // Reference: https://github.com/itaymigdal/Poshito
         $string6 = /\/PowerShdll\.exe/ nocase ascii wide

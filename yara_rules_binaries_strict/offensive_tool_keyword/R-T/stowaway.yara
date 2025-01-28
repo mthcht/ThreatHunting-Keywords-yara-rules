@@ -1,7 +1,7 @@
 rule stowaway
 {
     meta:
-        description = "Detection patterns for the tool 'stowaway' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'stowaway' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "stowaway"
@@ -19,16 +19,16 @@ rule stowaway
         $string3 = /\sProxyStream\s.{0,100}Stowaway/ nocase ascii wide
         // Description: Stowaway -- Multi-hop Proxy Tool for pentesters
         // Reference: https://github.com/ph4ntonn/Stowaway
-        $string4 = /\/script\/reuse\.py/ nocase ascii wide
+        $string4 = /\/script\/reuse\.py/
         // Description: Stowaway -- Multi-hop Proxy Tool for pentesters
         // Reference: https://github.com/ph4ntonn/Stowaway
         $string5 = /\/Stowaway\.git/ nocase ascii wide
         // Description: Stowaway -- Multi-hop Proxy Tool for pentesters
         // Reference: https://github.com/ph4ntonn/Stowaway
-        $string6 = "/stowaway_admin" nocase ascii wide
+        $string6 = "/stowaway_admin"
         // Description: Stowaway -- Multi-hop Proxy Tool for pentesters
         // Reference: https://github.com/ph4ntonn/Stowaway
-        $string7 = "/stowaway_agent" nocase ascii wide
+        $string7 = "/stowaway_agent"
         // Description: Stowaway -- Multi-hop Proxy Tool for pentesters
         // Reference: https://github.com/ph4ntonn/Stowaway
         $string8 = /\/windows_x64_admin\.exe/ nocase ascii wide
@@ -79,7 +79,7 @@ rule stowaway
         $string23 = "ac9215db682509ab2bdcba7fe924d84dafa1d8aade87172c1c6328b2cb6c9e52" nocase ascii wide
         // Description: Stowaway -- Multi-hop Proxy Tool for pentesters
         // Reference: https://github.com/ph4ntonn/Stowaway
-        $string24 = /linux_x64_agent\s\-\-report\s.{0,100}\s\-l\s.{0,100}\s\-s\sph4ntom/ nocase ascii wide
+        $string24 = /linux_x64_agent\s\-\-report\s.{0,100}\s\-l\s.{0,100}\s\-s\sph4ntom/
         // Description: Stowaway -- Multi-hop Proxy Tool for pentesters
         // Reference: https://github.com/ph4ntonn/Stowaway
         $string25 = "ph4ntonn/Stowaway" nocase ascii wide

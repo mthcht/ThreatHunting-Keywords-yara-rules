@@ -1,7 +1,7 @@
 rule hakrawler
 {
     meta:
-        description = "Detection patterns for the tool 'hakrawler' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'hakrawler' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "hakrawler"
@@ -10,34 +10,34 @@ rule hakrawler
     strings:
         // Description: Simple fast web crawler designed for easy and quick discovery of endpoints and assets within a web application
         // Reference: https://github.com/hakluke/hakrawler
-        $string1 = "/bin/hakrawler" nocase ascii wide
+        $string1 = "/bin/hakrawler"
         // Description: Simple fast web crawler designed for easy and quick discovery of endpoints and assets within a web application
         // Reference: https://github.com/hakluke/hakrawler
-        $string2 = /\/hakrawler\.git/ nocase ascii wide
+        $string2 = /\/hakrawler\.git/
         // Description: Simple fast web crawler designed for easy and quick discovery of endpoints and assets within a web application
         // Reference: https://github.com/hakluke/hakrawler
-        $string3 = /\|\shakrawler/ nocase ascii wide
+        $string3 = /\|\shakrawler/
         // Description: Simple fast web crawler designed for easy and quick discovery of endpoints and assets within a web application
         // Reference: https://github.com/hakluke/hakrawler
-        $string4 = "hakluke/hakrawler" nocase ascii wide
+        $string4 = "hakluke/hakrawler"
         // Description: Simple fast web crawler designed for easy and quick discovery of endpoints and assets within a web application
         // Reference: https://github.com/hakluke/hakrawler
-        $string5 = "hakrawler -" nocase ascii wide
+        $string5 = "hakrawler -"
         // Description: Simple fast web crawler designed for easy and quick discovery of endpoints and assets within a web application
         // Reference: https://github.com/hakluke/hakrawler
-        $string6 = /hakrawler\.go/ nocase ascii wide
+        $string6 = /hakrawler\.go/
         // Description: Simple fast web crawler designed for easy and quick discovery of endpoints and assets within a web application
         // Reference: https://github.com/hakluke/hakrawler
-        $string7 = "hakrawler@latest" nocase ascii wide
+        $string7 = "hakrawler@latest"
         // Description: Simple fast web crawler designed for easy and quick discovery of endpoints and assets within a web application
         // Reference: https://github.com/hakluke/hakrawler
-        $string8 = "hakrawler-master" nocase ascii wide
+        $string8 = "hakrawler-master"
         // Description: Simple fast web crawler designed for easy and quick discovery of endpoints and assets within a web application
         // Reference: https://github.com/hakluke/hakrawler
-        $string9 = "haktrails subdomains" nocase ascii wide
+        $string9 = "haktrails subdomains"
         // Description: Simple fast web crawler designed for easy and quick discovery of endpoints and assets within a web application
         // Reference: https://github.com/hakluke/hakrawler
-        $string10 = "install hakrawler" nocase ascii wide
+        $string10 = "install hakrawler"
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

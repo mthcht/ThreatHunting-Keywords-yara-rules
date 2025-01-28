@@ -1,7 +1,7 @@
 rule Ninja
 {
     meta:
-        description = "Detection patterns for the tool 'Ninja' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Ninja' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Ninja"
@@ -16,7 +16,7 @@ rule Ninja
         $string2 = /\sstart_campaign\.py/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string3 = /\.\/Ninja\.py/ nocase ascii wide
+        $string3 = /\.\/Ninja\.py/
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
         $string4 = "/ahmedkhlief/Ninja/" nocase ascii wide

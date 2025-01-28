@@ -1,7 +1,7 @@
 rule pico
 {
     meta:
-        description = "Detection patterns for the tool 'pico' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'pico' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "pico"
@@ -10,7 +10,7 @@ rule pico
     strings:
         // Description: hacker labs - open source and managed web services leveraging SSH
         // Reference: https://github.com/picosh/pico
-        $string1 = "/cmd/pico/ssh" nocase ascii wide
+        $string1 = "/cmd/pico/ssh"
         // Description: hacker labs - open source and managed web services leveraging SSH
         // Reference: https://github.com/picosh/pico
         $string2 = /\/pico_plus_user\.sql/ nocase ascii wide
@@ -214,7 +214,7 @@ rule pico
         $string68 = /ghcr\.io\/picosh\/pico\// nocase ascii wide
         // Description: hacker labs - open source and managed web services leveraging SSH
         // Reference: https://github.com/picosh/pico
-        $string69 = /git\sdiff\s\|\sssh\spastes\.sh\schanges\.patch/ nocase ascii wide
+        $string69 = /git\sdiff\s\|\sssh\spastes\.sh\schanges\.patch/
         // Description: hacker labs - open source and managed web services leveraging SSH
         // Reference: https://github.com/picosh/pico
         $string70 = /hello\@pico\.sh/ nocase ascii wide

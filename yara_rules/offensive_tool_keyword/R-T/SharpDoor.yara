@@ -1,7 +1,7 @@
 rule SharpDoor
 {
     meta:
-        description = "Detection patterns for the tool 'SharpDoor' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'SharpDoor' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "SharpDoor"
@@ -20,10 +20,10 @@ rule SharpDoor
         // Description: SharpDoor is alternative RDPWrap written in C# to allowed multiple RDP (Remote Desktop) sessions by patching termsrv.dll file
         // Reference: https://github.com/infosecn1nja/SharpDoor
         $string4 = /\/SharpDoor\.exe/ nocase ascii wide
-        // Description: SharpDoor is alternative RDPWrap written in C# to allowed multiple RDP (Remote Desktop) sessions by patching termsrv.dll file.
+        // Description: SharpDoor is alternative RDPWrap written in C# to allowed multiple RDP (Remote Desktop) sessions by patching termsrv.dll file
         // Reference: https://github.com/infosecn1nja/SharpDoor
         $string5 = /\/SharpDoor\.git/ nocase ascii wide
-        // Description: SharpDoor is alternative RDPWrap written in C# to allowed multiple RDP (Remote Desktop) sessions by patching termsrv.dll file
+        // Description: SharpDoor is alternative RDPWrap written in C# to allowed multiple RDP (Remote Desktop) sessions by patching termsrv.dll file.
         // Reference: https://github.com/infosecn1nja/SharpDoor
         $string6 = /\/SharpDoor\.git/ nocase ascii wide
         // Description: SharpDoor is alternative RDPWrap written in C# to allowed multiple RDP (Remote Desktop) sessions by patching termsrv.dll file

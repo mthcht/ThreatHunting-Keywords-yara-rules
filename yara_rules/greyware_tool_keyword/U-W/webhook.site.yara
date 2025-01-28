@@ -1,7 +1,7 @@
 rule webhook_site
 {
     meta:
-        description = "Detection patterns for the tool 'webhook.site' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'webhook.site' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "webhook.site"
@@ -22,7 +22,7 @@ rule webhook_site
         $string4 = /webhooksite\/webhook\.site/ nocase ascii wide
         // Description: test HTTP webhooks with this handy tool that displays requests instantly - abused by attacker for payload callback confirmation
         // Reference: https://github.com/webhooksite/webhook.site
-        $string5 = /whcli\sforward\s\-\-token\=.{0,1000}\-.{0,1000}\-.{0,1000}\s\-\-target\=https\:\/\/localhost/ nocase ascii wide
+        $string5 = /whcli\sforward\s\-\-token\=.{0,1000}\-.{0,1000}\-.{0,1000}\s\-\-target\=https\:\/\/localhost/
 
     condition:
         any of them

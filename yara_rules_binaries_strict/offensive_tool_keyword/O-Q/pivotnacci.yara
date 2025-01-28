@@ -1,7 +1,7 @@
 rule pivotnacci
 {
     meta:
-        description = "Detection patterns for the tool 'pivotnacci' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'pivotnacci' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "pivotnacci"
@@ -13,7 +13,7 @@ rule pivotnacci
         $string1 = /\/pivotnacci\.git/ nocase ascii wide
         // Description: A tool to make socks connections through HTTP agents
         // Reference: https://github.com/blackarrowsec/pivotnacci
-        $string2 = "/pivotnaccilib" nocase ascii wide
+        $string2 = "/pivotnaccilib"
         // Description: A tool to make socks connections through HTTP agents
         // Reference: https://github.com/blackarrowsec/pivotnacci
         $string3 = "blackarrowsec/pivotnacci" nocase ascii wide

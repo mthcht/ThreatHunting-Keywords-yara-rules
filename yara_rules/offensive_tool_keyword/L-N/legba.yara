@@ -1,7 +1,7 @@
 rule legba
 {
     meta:
-        description = "Detection patterns for the tool 'legba' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'legba' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "legba"
@@ -16,10 +16,10 @@ rule legba
         $string2 = /\/legba\.git/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string3 = "/legba/target/release/legba" nocase ascii wide
+        $string3 = "/legba/target/release/legba"
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string4 = "/usr/bin/legba" nocase ascii wide
+        $string4 = "/usr/bin/legba"
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
         $string5 = "A fast multi protocol credential bruteforcer/sprayer/enumerator" nocase ascii wide

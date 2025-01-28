@@ -1,7 +1,7 @@
 rule sudoers
 {
     meta:
-        description = "Detection patterns for the tool 'sudoers' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'sudoers' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "sudoers"
@@ -10,10 +10,10 @@ rule sudoers
     strings:
         // Description: use SUDO without password
         // Reference: N/A
-        $string1 = /echo\s.{0,100}\sALL\=\(ALL\)\sNOPASSWD\:\sALL.{0,100}\s\>\>\/etc\/sudoers/ nocase ascii wide
+        $string1 = /echo\s.{0,100}\sALL\=\(ALL\)\sNOPASSWD\:\sALL.{0,100}\s\>\>\/etc\/sudoers/
         // Description: use SUDO without password
         // Reference: N/A
-        $string2 = /echo\s.{0,100}\sALL\=NOPASSWD\:\s\/bin\/bash.{0,100}\s\>\>\/etc\/sudoers/ nocase ascii wide
+        $string2 = /echo\s.{0,100}\sALL\=NOPASSWD\:\s\/bin\/bash.{0,100}\s\>\>\/etc\/sudoers/
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -1,7 +1,7 @@
 rule OffensiveNotion
 {
     meta:
-        description = "Detection patterns for the tool 'OffensiveNotion' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'OffensiveNotion' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "OffensiveNotion"
@@ -25,7 +25,7 @@ rule OffensiveNotion
         $string5 = "/OffensiveNotion/osxcross/target/bin" nocase ascii wide
         // Description: Notion (yes the notetaking app) as a C2.
         // Reference: https://github.com/mttaggart/OffensiveNotion
-        $string6 = "/OffensiveNotion/utils" nocase ascii wide
+        $string6 = "/OffensiveNotion/utils"
         // Description: Notion (yes the notetaking app) as a C2.
         // Reference: https://github.com/mttaggart/OffensiveNotion
         $string7 = "cddownloadelevategetprivsinjectpersistportscanpspwdrunassaveshellshutdownsleep" nocase ascii wide
@@ -37,10 +37,10 @@ rule OffensiveNotion
         $string9 = /offensive_notion\.exe/ nocase ascii wide
         // Description: Notion (yes the notetaking app) as a C2.
         // Reference: https://github.com/mttaggart/OffensiveNotion
-        $string10 = "offensive_notion_darwin_" nocase ascii wide
+        $string10 = "offensive_notion_darwin_"
         // Description: Notion (yes the notetaking app) as a C2.
         // Reference: https://github.com/mttaggart/OffensiveNotion
-        $string11 = "offensive_notion_linux_" nocase ascii wide
+        $string11 = "offensive_notion_linux_"
         // Description: Notion (yes the notetaking app) as a C2.
         // Reference: https://github.com/mttaggart/OffensiveNotion
         $string12 = /offensive_notion_win_.{0,1000}\.exe/ nocase ascii wide

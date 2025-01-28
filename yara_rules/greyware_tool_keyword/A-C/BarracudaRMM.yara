@@ -1,7 +1,7 @@
 rule BarracudaRMM
 {
     meta:
-        description = "Detection patterns for the tool 'BarracudaRMM' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'BarracudaRMM' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "BarracudaRMM"
@@ -13,7 +13,7 @@ rule BarracudaRMM
         $string1 = /\.apitest\.barracudamsp\.com/ nocase ascii wide
         // Description: Deliver remote support services - formely AVG
         // Reference: https://www.barracudamsp.com/products/rmm/barracuda-rmm
-        $string2 = "/Applications/Managed Workplace/Onsite Manager/logs/" nocase ascii wide
+        $string2 = "/Applications/Managed Workplace/Onsite Manager/logs/"
         // Description: Deliver remote support services - formely AVG
         // Reference: https://www.barracudamsp.com/products/rmm/barracuda-rmm
         $string3 = /\\BRMM_2024\.1\-Release/ nocase ascii wide

@@ -1,7 +1,7 @@
 rule gsocket
 {
     meta:
-        description = "Detection patterns for the tool 'gsocket' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'gsocket' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "gsocket"
@@ -22,31 +22,31 @@ rule gsocket
         $string4 = " install gsocket" nocase ascii wide
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Mostly abused by attackers 
         // Reference: https://github.com/hackerschoice/gsocket
-        $string5 = "/bin/gs-netcat" nocase ascii wide
+        $string5 = "/bin/gs-netcat"
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Mostly abused by attackers 
         // Reference: https://github.com/hackerschoice/gsocket
-        $string6 = "/etc/systemd/gsc" nocase ascii wide
+        $string6 = "/etc/systemd/gsc"
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Mostly abused by attackers 
         // Reference: https://github.com/hackerschoice/gsocket
-        $string7 = "/gs-netcat " nocase ascii wide
+        $string7 = "/gs-netcat "
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Mostly abused by attackers 
         // Reference: https://github.com/hackerschoice/gsocket
-        $string8 = /\/gsocket\.1/ nocase ascii wide
+        $string8 = /\/gsocket\.1/
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Mostly abused by attackers 
         // Reference: https://github.com/hackerschoice/gsocket
         $string9 = /\/gsocket\.git/ nocase ascii wide
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Mostly abused by attackers 
         // Reference: https://github.com/hackerschoice/gsocket
-        $string10 = /\/gsocket\-ssl\.h/ nocase ascii wide
+        $string10 = /\/gsocket\-ssl\.h/
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Mostly abused by attackers 
         // Reference: https://github.com/hackerschoice/gsocket
         $string11 = "/gsocket-tor" nocase ascii wide
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Mostly abused by attackers 
         // Reference: https://github.com/hackerschoice/gsocket
-        $string12 = /\/gsocket\-util\.c/ nocase ascii wide
+        $string12 = /\/gsocket\-util\.c/
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Mostly abused by attackers 
         // Reference: https://github.com/hackerschoice/gsocket
-        $string13 = "/gs-sftp" nocase ascii wide
+        $string13 = "/gs-sftp"
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Mostly abused by attackers 
         // Reference: https://github.com/hackerschoice/gsocket
         $string14 = /\\gs\-netcat\s/ nocase ascii wide
@@ -55,7 +55,7 @@ rule gsocket
         $string15 = /\\gs\-sftp/ nocase ascii wide
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Mostly abused by attackers 
         // Reference: https://github.com/hackerschoice/gsocket
-        $string16 = /blitz\s\/.{0,100}\s.{0,100}\/etc\// nocase ascii wide
+        $string16 = /blitz\s\/.{0,100}\s.{0,100}\/etc\//
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Mostly abused by attackers 
         // Reference: https://github.com/hackerschoice/gsocket
         $string17 = "blitz -l" nocase ascii wide
@@ -121,31 +121,31 @@ rule gsocket
         $string37 = "GSOCKET_ARGS=" nocase ascii wide
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Mostly abused by attackers 
         // Reference: https://github.com/hackerschoice/gsocket
-        $string38 = /gsocket_linux\-aarch64\.tar\.gz/ nocase ascii wide
+        $string38 = /gsocket_linux\-aarch64\.tar\.gz/
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Mostly abused by attackers 
         // Reference: https://github.com/hackerschoice/gsocket
-        $string39 = /gsocket_linux\-arm\.tar\.gz/ nocase ascii wide
+        $string39 = /gsocket_linux\-arm\.tar\.gz/
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Mostly abused by attackers 
         // Reference: https://github.com/hackerschoice/gsocket
-        $string40 = /gsocket_linux\-armv6\.tar\.gz/ nocase ascii wide
+        $string40 = /gsocket_linux\-armv6\.tar\.gz/
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Mostly abused by attackers 
         // Reference: https://github.com/hackerschoice/gsocket
-        $string41 = /gsocket_linux\-armv7l\.tar\.gz/ nocase ascii wide
+        $string41 = /gsocket_linux\-armv7l\.tar\.gz/
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Mostly abused by attackers 
         // Reference: https://github.com/hackerschoice/gsocket
-        $string42 = /gsocket_linux\-i686\.tar\.gz/ nocase ascii wide
+        $string42 = /gsocket_linux\-i686\.tar\.gz/
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Mostly abused by attackers 
         // Reference: https://github.com/hackerschoice/gsocket
-        $string43 = /gsocket_linux\-mips32\.tar\.gz/ nocase ascii wide
+        $string43 = /gsocket_linux\-mips32\.tar\.gz/
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Mostly abused by attackers 
         // Reference: https://github.com/hackerschoice/gsocket
-        $string44 = /gsocket_linux\-mips64\.tar\.gz/ nocase ascii wide
+        $string44 = /gsocket_linux\-mips64\.tar\.gz/
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Mostly abused by attackers 
         // Reference: https://github.com/hackerschoice/gsocket
-        $string45 = /gsocket_linux\-mipsel\.tar\.gz/ nocase ascii wide
+        $string45 = /gsocket_linux\-mipsel\.tar\.gz/
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Mostly abused by attackers 
         // Reference: https://github.com/hackerschoice/gsocket
-        $string46 = /gsocket_linux\-x86_64\.tar\.gz/ nocase ascii wide
+        $string46 = /gsocket_linux\-x86_64\.tar\.gz/
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Mostly abused by attackers 
         // Reference: https://github.com/hackerschoice/gsocket
         $string47 = /gsocket_macOS\.tar\.gz/ nocase ascii wide
@@ -181,7 +181,7 @@ rule gsocket
         $string57 = "hackerschoice/gsocket-relay" nocase ascii wide
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Mostly abused by attackers 
         // Reference: https://github.com/hackerschoice/gsocket
-        $string58 = "kalilinux/kali-rolling" nocase ascii wide
+        $string58 = "kalilinux/kali-rolling"
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

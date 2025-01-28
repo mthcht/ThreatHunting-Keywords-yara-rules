@@ -1,7 +1,7 @@
 rule dns_black_cat
 {
     meta:
-        description = "Detection patterns for the tool 'dns-black-cat' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'dns-black-cat' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "dns-black-cat"

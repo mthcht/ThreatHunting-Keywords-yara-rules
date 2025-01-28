@@ -1,7 +1,7 @@
 rule Seth
 {
     meta:
-        description = "Detection patterns for the tool 'Seth' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Seth' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Seth"
@@ -10,7 +10,7 @@ rule Seth
     strings:
         // Description: Perform a MitM attack and extract clear text credentials from RDP connections
         // Reference: https://github.com/SySS-Research/Seth
-        $string1 = /\.\/seth\.sh\s.{0,100}\s/ nocase ascii wide
+        $string1 = /\.\/seth\.sh\s.{0,100}\s/
         // Description: Perform a MitM attack and extract clear text credentials from RDP connections
         // Reference: https://github.com/SySS-Research/Seth
         $string2 = /\.py\s.{0,100}\s\s\-\-fake\-server/ nocase ascii wide

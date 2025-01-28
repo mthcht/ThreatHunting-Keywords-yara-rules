@@ -1,7 +1,7 @@
 rule pth_toolkit
 {
     meta:
-        description = "Detection patterns for the tool 'pth-toolkit' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'pth-toolkit' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "pth-toolkit"

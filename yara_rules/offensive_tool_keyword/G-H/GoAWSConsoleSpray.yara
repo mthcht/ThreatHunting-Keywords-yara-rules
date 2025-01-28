@@ -1,7 +1,7 @@
 rule GoAWSConsoleSpray
 {
     meta:
-        description = "Detection patterns for the tool 'GoAWSConsoleSpray' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'GoAWSConsoleSpray' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "GoAWSConsoleSpray"
@@ -10,7 +10,7 @@ rule GoAWSConsoleSpray
     strings:
         // Description: brute-force AWS IAM Console credentials to discover valid logins for user accounts
         // Reference: https://github.com/WhiteOakSecurity/GoAWSConsoleSpray
-        $string1 = /\.\/GoAWSConsoleSpray/ nocase ascii wide
+        $string1 = /\.\/GoAWSConsoleSpray/
         // Description: brute-force AWS IAM Console credentials to discover valid logins for user accounts
         // Reference: https://github.com/WhiteOakSecurity/GoAWSConsoleSpray
         $string2 = /\/GoAWSConsoleSpray\.git/ nocase ascii wide

@@ -1,7 +1,7 @@
 rule ncat
 {
     meta:
-        description = "Detection patterns for the tool 'ncat' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'ncat' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "ncat"
@@ -10,10 +10,10 @@ rule ncat
     strings:
         // Description: reverse shell persistence
         // Reference: N/A
-        $string1 = /\sncat\s.{0,1000}\s\-e\s\/bin\/bash.{0,1000}\|crontab/ nocase ascii wide
+        $string1 = /\sncat\s.{0,1000}\s\-e\s\/bin\/bash.{0,1000}\|crontab/
         // Description: linux commands abused by attackers
         // Reference: N/A
-        $string2 = /ncat\s.{0,1000}\s\-p\s4444/ nocase ascii wide
+        $string2 = /ncat\s.{0,1000}\s\-p\s4444/
 
     condition:
         any of them

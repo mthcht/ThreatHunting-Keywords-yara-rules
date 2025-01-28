@@ -1,7 +1,7 @@
 rule Hola_Free_VPN
 {
     meta:
-        description = "Detection patterns for the tool 'Hola Free VPN' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Hola Free VPN' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Hola Free VPN"

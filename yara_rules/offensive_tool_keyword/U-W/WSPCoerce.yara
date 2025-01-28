@@ -1,7 +1,7 @@
 rule WSPCoerce
 {
     meta:
-        description = "Detection patterns for the tool 'WSPCoerce' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'WSPCoerce' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "WSPCoerce"
@@ -13,7 +13,7 @@ rule WSPCoerce
         $string1 = /\sWSPCoerce\.cs/ nocase ascii wide
         // Description: PoC to coerce authentication from Windows hosts using MS-WSP
         // Reference: https://github.com/slemire/WSPCoerce
-        $string2 = /\/WSPCoerce\.git/ nocase ascii wide
+        $string2 = /\/WSPCoerce\.git/
         // Description: PoC to coerce authentication from Windows hosts using MS-WSP
         // Reference: https://github.com/slemire/WSPCoerce
         $string3 = /\\WSPCoerce\.cs/ nocase ascii wide

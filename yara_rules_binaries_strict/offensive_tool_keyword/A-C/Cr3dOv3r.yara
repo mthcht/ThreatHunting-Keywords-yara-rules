@@ -1,7 +1,7 @@
 rule Cr3dOv3r
 {
     meta:
-        description = "Detection patterns for the tool 'Cr3dOv3r' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Cr3dOv3r' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Cr3dOv3r"

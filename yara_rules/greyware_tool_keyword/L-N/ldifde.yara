@@ -1,7 +1,7 @@
 rule ldifde
 {
     meta:
-        description = "Detection patterns for the tool 'ldifde' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'ldifde' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "ldifde"

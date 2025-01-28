@@ -1,7 +1,7 @@
 rule Spartacus
 {
     meta:
-        description = "Detection patterns for the tool 'Spartacus' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Spartacus' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Spartacus"
@@ -34,7 +34,7 @@ rule Spartacus
         $string8 = /Data\\VulnerableCOM\.csv/ nocase ascii wide
         // Description: Spartacus DLL/COM Hijacking Toolkit
         // Reference: https://github.com/Accenture/Spartacus
-        $string9 = /exports\s\-\-dll\s.{0,1000}\.dll\s\-\-prototypes\s\.\/Assets\/prototypes\.csv/ nocase ascii wide
+        $string9 = /exports\s\-\-dll\s.{0,1000}\.dll\s\-\-prototypes\s\.\/Assets\/prototypes\.csv/
         // Description: Spartacus DLL/COM Hijacking Toolkit
         // Reference: https://github.com/Accenture/Spartacus
         $string10 = /help\\dll\.txt/ nocase ascii wide

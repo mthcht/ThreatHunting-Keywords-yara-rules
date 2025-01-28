@@ -1,7 +1,7 @@
 rule PSSW100AVB
 {
     meta:
-        description = "Detection patterns for the tool 'PSSW100AVB' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'PSSW100AVB' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "PSSW100AVB"

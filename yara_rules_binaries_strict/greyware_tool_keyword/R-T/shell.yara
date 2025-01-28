@@ -1,7 +1,7 @@
 rule shell
 {
     meta:
-        description = "Detection patterns for the tool 'shell' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'shell' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "shell"
@@ -10,10 +10,10 @@ rule shell
     strings:
         // Description: Reverse Shell Command Line
         // Reference: https://github.com/SigmaHQ/sigma/blob/master/rules/linux/lnx_shell_susp_rev_shells.yml
-        $string1 = /\/bin\/sh\s\|\snc/ nocase ascii wide
+        $string1 = /\/bin\/sh\s\|\snc/
         // Description: Reverse Shell Command Line
         // Reference: https://github.com/SigmaHQ/sigma/blob/master/rules/linux/lnx_shell_susp_rev_shells.yml
-        $string2 = "/bin/sh -i <&3 >&3 2>&3" nocase ascii wide
+        $string2 = "/bin/sh -i <&3 >&3 2>&3"
         // Description: Reverse Shell Command Line
         // Reference: https://github.com/SigmaHQ/sigma/blob/master/rules/linux/lnx_shell_susp_rev_shells.yml
         $string3 = /rm\s\-f\sbackpipe.{0,100}\smknod\s\/tmp\/backpipe\sp\s\&\&\snc\s/ nocase ascii wide
@@ -34,10 +34,10 @@ rule shell
         $string8 = /STDIN\-\>fdopen\(\$c.{0,100}r\).{0,100}\$\~\-\>fdopen\(\$c.{0,100}w\).{0,100}system\$_\swhile\<\>/ nocase ascii wide
         // Description: Reverse Shell Command Line
         // Reference: https://github.com/SigmaHQ/sigma/blob/master/rules/linux/lnx_shell_susp_rev_shells.yml
-        $string9 = /uname\s\-a.{0,100}\sw.{0,100}\sid.{0,100}\s\/bin\/bash\s\-i/ nocase ascii wide
+        $string9 = /uname\s\-a.{0,100}\sw.{0,100}\sid.{0,100}\s\/bin\/bash\s\-i/
         // Description: Adversaries may disable security tools to avoid possible detection of their tools and activities. This can take the form of killing security software or event logging processes* deleting Registry keys so that tools do not start at run time* or other methods to interfere with security tools scanning or reporting information.
         // Reference: https://attack.mitre.org/techniques/T1562/001/
-        $string10 = "setenforce 0" nocase ascii wide
+        $string10 = "setenforce 0"
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

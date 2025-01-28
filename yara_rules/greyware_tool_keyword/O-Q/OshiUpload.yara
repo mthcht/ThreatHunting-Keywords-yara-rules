@@ -1,7 +1,7 @@
 rule OshiUpload
 {
     meta:
-        description = "Detection patterns for the tool 'OshiUpload' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'OshiUpload' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "OshiUpload"
@@ -16,7 +16,7 @@ rule OshiUpload
         $string2 = /\s\-\-socks5\-hostname\s127\.0\.0\.1\:9050/ nocase ascii wide
         // Description: Ephemeral file sharing engine
         // Reference: https://github.com/somenonymous/OshiUpload
-        $string3 = /\/oshi_run\.pl/ nocase ascii wide
+        $string3 = /\/oshi_run\.pl/
         // Description: Ephemeral file sharing engine
         // Reference: https://github.com/somenonymous/OshiUpload
         $string4 = /\/OshiUpload\.git/ nocase ascii wide

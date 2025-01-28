@@ -1,7 +1,7 @@
 rule wce
 {
     meta:
-        description = "Detection patterns for the tool 'wce' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'wce' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "wce"
@@ -13,7 +13,7 @@ rule wce
         $string1 = "/returnvar/wce/" nocase ascii wide
         // Description: Windows Credentials Editor
         // Reference: https://www.kali.org/tools/wce/
-        $string2 = "/share/windows-resources/wce" nocase ascii wide
+        $string2 = "/share/windows-resources/wce"
         // Description: Windows Credentials Editor
         // Reference: https://www.kali.org/tools/wce/
         $string3 = /\/wce32\.exe/ nocase ascii wide

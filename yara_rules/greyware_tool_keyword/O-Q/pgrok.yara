@@ -1,7 +1,7 @@
 rule pgrok
 {
     meta:
-        description = "Detection patterns for the tool 'pgrok' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'pgrok' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "pgrok"
@@ -19,7 +19,7 @@ rule pgrok
         $string3 = /\spgrokd\.exe/ nocase ascii wide
         // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
         // Reference: https://github.com/pgrok/pgrok
-        $string4 = "/app/pgrokd/" nocase ascii wide
+        $string4 = "/app/pgrokd/"
         // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
         // Reference: https://github.com/jerson/pgrok
         $string5 = /\/pgrok\.exe/ nocase ascii wide
@@ -28,19 +28,19 @@ rule pgrok
         $string6 = /\/pgrok\.git/ nocase ascii wide
         // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
         // Reference: https://github.com/pgrok/pgrok
-        $string7 = /\/pgrok\.yml/ nocase ascii wide
+        $string7 = /\/pgrok\.yml/
         // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
         // Reference: https://github.com/jerson/pgrok
         $string8 = /\/pgrokd\.exe/ nocase ascii wide
         // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
         // Reference: https://github.com/pgrok/pgrok
-        $string9 = /\/pgrokd\.yml/ nocase ascii wide
+        $string9 = /\/pgrokd\.yml/
         // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
         // Reference: https://github.com/pgrok/pgrok
         $string10 = /\/pgrokd_.{0,1000}\.zip/ nocase ascii wide
         // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
         // Reference: https://github.com/pgrok/pgrok
-        $string11 = "/var/opt/pgrokd" nocase ascii wide
+        $string11 = "/var/opt/pgrokd"
         // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
         // Reference: https://github.com/jerson/pgrok
         $string12 = /\\pgrok\.exe/ nocase ascii wide

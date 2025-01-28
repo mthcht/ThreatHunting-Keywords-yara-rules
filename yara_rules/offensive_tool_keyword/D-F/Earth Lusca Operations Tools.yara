@@ -1,7 +1,7 @@
 rule Earth_Lusca_Operations_Tools
 {
     meta:
-        description = "Detection patterns for the tool 'Earth Lusca Operations Tools' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Earth Lusca Operations Tools' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Earth Lusca Operations Tools"
@@ -13,10 +13,10 @@ rule Earth_Lusca_Operations_Tools
         $string1 = " hackergu " nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf
-        $string2 = /\.\/agscript\s/ nocase ascii wide
+        $string2 = /\.\/agscript\s/
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf
-        $string3 = /\.\/teamserver\s/ nocase ascii wide
+        $string3 = /\.\/teamserver\s/
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf
         $string4 = /\/m\s.{0,1000}\.lnk.{0,1000}\s\/c\s.{0,1000}cmd\s\/c\secho\sf\|xcopy\s\@file\s\%temp\%/ nocase ascii wide
@@ -55,10 +55,10 @@ rule Earth_Lusca_Operations_Tools
         $string15 = /frpc\.exe\s\-c\sfrpc\.in/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf
-        $string16 = /libxselinux\.old/ nocase ascii wide
+        $string16 = /libxselinux\.old/
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf
-        $string17 = /libxselinux\.so/ nocase ascii wide
+        $string17 = /libxselinux\.so/
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf
         $string18 = /megacmd\s\-conf\s.{0,1000}\sput\s.{0,1000}mega\:/ nocase ascii wide

@@ -1,7 +1,7 @@
 rule NetRipper
 {
     meta:
-        description = "Detection patterns for the tool 'NetRipper' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'NetRipper' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "NetRipper"
@@ -34,7 +34,7 @@ rule NetRipper
         $string8 = /\/NetRipper\.x86\.exe/ nocase ascii wide
         // Description: NetRipper - Smart traffic sniffing for penetration testers
         // Reference: https://github.com/NytroRST/NetRipper
-        $string9 = /\/NetRipperLog\.txt/ nocase ascii wide
+        $string9 = /\/NetRipperLog\.txt/
         // Description: NetRipper - Smart traffic sniffing for penetration testers
         // Reference: https://github.com/NytroRST/NetRipper
         $string10 = "/windows/gather/netripper" nocase ascii wide

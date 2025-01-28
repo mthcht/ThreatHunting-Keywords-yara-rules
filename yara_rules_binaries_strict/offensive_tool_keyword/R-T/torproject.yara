@@ -1,7 +1,7 @@
 rule torproject
 {
     meta:
-        description = "Detection patterns for the tool 'torproject' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'torproject' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "torproject"
@@ -10,7 +10,7 @@ rule torproject
     strings:
         // Description: Browse Privately. Explore Freely. Defend yourself against tracking and surveillance. Circumvent censorship.
         // Reference: torproject.org
-        $string1 = /\s\.\/tor\.keyring\s/ nocase ascii wide
+        $string1 = /\s\.\/tor\.keyring\s/
         // Description: Browse Privately. Explore Freely. Defend yourself against tracking and surveillance. Circumvent censorship.
         // Reference: torproject.org
         $string2 = /\s\.\\tor\.keyring\s/ nocase ascii wide
@@ -25,10 +25,10 @@ rule torproject
         $string5 = /\/tor\-0\..{0,100}\.tar\.gz/ nocase ascii wide
         // Description: Browse Privately. Explore Freely. Defend yourself against tracking and surveillance. Circumvent censorship.
         // Reference: torproject.org
-        $string6 = /\/torbrowser\-install\-.{0,100}\.exe\s\s/ nocase ascii wide
+        $string6 = /\/torbrowser\-install\-.{0,100}\.exe\s\s/
         // Description: Browse Privately. Explore Freely. Defend yourself against tracking and surveillance. Circumvent censorship.
         // Reference: torproject.org
-        $string7 = /\/tor\-browser\-linux.{0,100}\./ nocase ascii wide
+        $string7 = /\/tor\-browser\-linux.{0,100}\./
         // Description: Browse Privately. Explore Freely. Defend yourself against tracking and surveillance. Circumvent censorship.
         // Reference: torproject.org
         $string8 = /\/tor\-browser\-osx64.{0,100}\./ nocase ascii wide
@@ -70,7 +70,7 @@ rule torproject
         $string20 = /deb\.torproject\.org\/torproject\.org\/.{0,100}\.asc/ nocase ascii wide
         // Description: Browse Privately. Explore Freely. Defend yourself against tracking and surveillance. Circumvent censorship.
         // Reference: torproject.org
-        $string21 = "dnf install tor -y" nocase ascii wide
+        $string21 = "dnf install tor -y"
         // Description: Detects suspicious TOR usage which anonymizes user's web traffic through a relay network
         // Reference: torproject.org
         $string22 = /http\:\/\/.{0,100}\.onion/ nocase ascii wide
@@ -91,7 +91,7 @@ rule torproject
         $string27 = /https\:\/\/.{0,100}\.torlink/ nocase ascii wide
         // Description: Browse Privately. Explore Freely. Defend yourself against tracking and surveillance. Circumvent censorship.
         // Reference: torproject.org
-        $string28 = /install\stor\sdeb\.torproject\.org\-keyring/ nocase ascii wide
+        $string28 = /install\stor\sdeb\.torproject\.org\-keyring/
         // Description: Browse Privately. Explore Freely. Defend yourself against tracking and surveillance. Circumvent censorship.
         // Reference: torproject.org
         $string29 = /rpm\.torproject\.org\/.{0,100}public_gpg\.key/ nocase ascii wide
@@ -115,7 +115,7 @@ rule torproject
         $string35 = "torbrowser-install-win64" nocase ascii wide
         // Description: Browse Privately. Explore Freely. Defend yourself against tracking and surveillance. Circumvent censorship.
         // Reference: torproject.org
-        $string36 = /tor\-browser\-linux.{0,100}_ALL\.tar\.xz/ nocase ascii wide
+        $string36 = /tor\-browser\-linux.{0,100}_ALL\.tar\.xz/
         // Description: Browse Privately. Explore Freely. Defend yourself against tracking and surveillance. Circumvent censorship.
         // Reference: torproject.org
         $string37 = /torproject\.org\/dist\/torbrowser\/.{0,100}\./ nocase ascii wide

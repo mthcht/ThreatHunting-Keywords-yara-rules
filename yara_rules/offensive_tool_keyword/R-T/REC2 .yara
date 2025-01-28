@@ -1,7 +1,7 @@
 rule REC2_
 {
     meta:
-        description = "Detection patterns for the tool 'REC2 ' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'REC2 ' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "REC2 "
@@ -28,7 +28,7 @@ rule REC2_
         $string6 = "c2server_debug" nocase ascii wide
         // Description: REC2 (Rusty External Command and Control) is client and server tool allowing auditor to execute command from VirusTotal and Mastodon APIs written in Rust.
         // Reference: https://github.com/g0h4n/REC2
-        $string7 = "c2server_linux" nocase ascii wide
+        $string7 = "c2server_linux"
         // Description: REC2 (Rusty External Command and Control) is client and server tool allowing auditor to execute command from VirusTotal and Mastodon APIs written in Rust.
         // Reference: https://github.com/g0h4n/REC2
         $string8 = "c2server_macos" nocase ascii wide

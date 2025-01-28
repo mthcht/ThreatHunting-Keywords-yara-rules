@@ -1,7 +1,7 @@
 rule rs_shell
 {
     meta:
-        description = "Detection patterns for the tool 'rs-shell' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'rs-shell' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "rs-shell"
@@ -19,7 +19,7 @@ rule rs_shell
         $string3 = "/rs-shell/zipball/" nocase ascii wide
         // Description: rust reverse shell
         // Reference: https://github.com/BlWasp/rs-shell
-        $string4 = "/rs-shell-linux " nocase ascii wide
+        $string4 = "/rs-shell-linux "
         // Description: rust reverse shell
         // Reference: https://github.com/BlWasp/rs-shell
         $string5 = /\/rs\-shell\-windows\.exe/ nocase ascii wide

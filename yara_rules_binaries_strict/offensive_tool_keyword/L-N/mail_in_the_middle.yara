@@ -1,7 +1,7 @@
 rule mail_in_the_middle
 {
     meta:
-        description = "Detection patterns for the tool 'mail-in-the-middle' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'mail-in-the-middle' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "mail-in-the-middle"
@@ -16,13 +16,13 @@ rule mail_in_the_middle
         $string2 = /\/forwardedemails\.txt/ nocase ascii wide
         // Description: This script sits in the middle between a legitimate sender of an email and the legitimate recipient of that email. This means that we (the attackers) are receiving sensitive information not originally destined to us
         // Reference: https://github.com/sensepost/mail-in-the-middle
-        $string3 = /\/Maitm\/Bells\.py/ nocase ascii wide
+        $string3 = /\/Maitm\/Bells\.py/
         // Description: This script sits in the middle between a legitimate sender of an email and the legitimate recipient of that email. This means that we (the attackers) are receiving sensitive information not originally destined to us
         // Reference: https://github.com/sensepost/mail-in-the-middle
-        $string4 = /\/tmp\/Phishing\/documentation\.pdf\.zip/ nocase ascii wide
+        $string4 = /\/tmp\/Phishing\/documentation\.pdf\.zip/
         // Description: This script sits in the middle between a legitimate sender of an email and the legitimate recipient of that email. This means that we (the attackers) are receiving sensitive information not originally destined to us
         // Reference: https://github.com/sensepost/mail-in-the-middle
-        $string5 = /\/var\/log\/apache2\/forensic_log\-10080\.log/ nocase ascii wide
+        $string5 = /\/var\/log\/apache2\/forensic_log\-10080\.log/
         // Description: This script sits in the middle between a legitimate sender of an email and the legitimate recipient of that email. This means that we (the attackers) are receiving sensitive information not originally destined to us
         // Reference: https://github.com/sensepost/mail-in-the-middle
         $string6 = /\[\!\]\sInvalid\ssandbox\sevasion\stechnique\sprovided\!/ nocase ascii wide

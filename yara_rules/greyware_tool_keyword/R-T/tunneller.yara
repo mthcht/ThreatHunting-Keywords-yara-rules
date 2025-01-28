@@ -1,7 +1,7 @@
 rule tunneller
 {
     meta:
-        description = "Detection patterns for the tool 'tunneller' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'tunneller' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "tunneller"
@@ -16,28 +16,28 @@ rule tunneller
         $string2 = "/tunneller/releases/" nocase ascii wide
         // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
         // Reference: https://github.com/skx/tunneller
-        $string3 = "/tunneller-darwin-amd64" nocase ascii wide
+        $string3 = "/tunneller-darwin-amd64"
         // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
         // Reference: https://github.com/skx/tunneller
-        $string4 = "/tunneller-darwin-amd64" nocase ascii wide
+        $string4 = "/tunneller-darwin-amd64"
         // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
         // Reference: https://github.com/skx/tunneller
-        $string5 = "/tunneller-darwin-amd64" nocase ascii wide
+        $string5 = "/tunneller-darwin-amd64"
         // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
         // Reference: https://github.com/skx/tunneller
-        $string6 = "/tunneller-darwin-amd64" nocase ascii wide
+        $string6 = "/tunneller-darwin-amd64"
         // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
         // Reference: https://github.com/skx/tunneller
-        $string7 = "/tunneller-darwin-i386" nocase ascii wide
+        $string7 = "/tunneller-darwin-i386"
         // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
         // Reference: https://github.com/skx/tunneller
-        $string8 = "/tunneller-darwin-i386" nocase ascii wide
+        $string8 = "/tunneller-darwin-i386"
         // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
         // Reference: https://github.com/skx/tunneller
-        $string9 = "/tunneller-darwin-i386" nocase ascii wide
+        $string9 = "/tunneller-darwin-i386"
         // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
         // Reference: https://github.com/skx/tunneller
-        $string10 = "/tunneller-darwin-i386" nocase ascii wide
+        $string10 = "/tunneller-darwin-i386"
         // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
         // Reference: https://github.com/skx/tunneller
         $string11 = "/tunneller-freebsd-amd64" nocase ascii wide
@@ -64,28 +64,28 @@ rule tunneller
         $string18 = "/tunneller-freebsd-i386" nocase ascii wide
         // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
         // Reference: https://github.com/skx/tunneller
-        $string19 = "/tunneller-linux-amd64" nocase ascii wide
+        $string19 = "/tunneller-linux-amd64"
         // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
         // Reference: https://github.com/skx/tunneller
-        $string20 = "/tunneller-linux-amd64" nocase ascii wide
+        $string20 = "/tunneller-linux-amd64"
         // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
         // Reference: https://github.com/skx/tunneller
-        $string21 = "/tunneller-linux-amd64" nocase ascii wide
+        $string21 = "/tunneller-linux-amd64"
         // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
         // Reference: https://github.com/skx/tunneller
-        $string22 = "/tunneller-linux-amd64" nocase ascii wide
+        $string22 = "/tunneller-linux-amd64"
         // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
         // Reference: https://github.com/skx/tunneller
-        $string23 = "/tunneller-linux-i386" nocase ascii wide
+        $string23 = "/tunneller-linux-i386"
         // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
         // Reference: https://github.com/skx/tunneller
-        $string24 = "/tunneller-linux-i386" nocase ascii wide
+        $string24 = "/tunneller-linux-i386"
         // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
         // Reference: https://github.com/skx/tunneller
-        $string25 = "/tunneller-linux-i386" nocase ascii wide
+        $string25 = "/tunneller-linux-i386"
         // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
         // Reference: https://github.com/skx/tunneller
-        $string26 = "/tunneller-linux-i386" nocase ascii wide
+        $string26 = "/tunneller-linux-i386"
         // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
         // Reference: https://github.com/skx/tunneller
         $string27 = "087dae4b718907c400d19d3e497619042ad74036da714be2812ab423e0a86e84" nocase ascii wide

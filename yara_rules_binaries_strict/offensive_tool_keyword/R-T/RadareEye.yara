@@ -1,7 +1,7 @@
 rule RadareEye
 {
     meta:
-        description = "Detection patterns for the tool 'RadareEye' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'RadareEye' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "RadareEye"
@@ -16,7 +16,7 @@ rule RadareEye
         $string2 = "souravbaghz/RadareEye" nocase ascii wide
         // Description: Tool for especially scanning nearby devices and execute a given command on its own system while the target device comes in range.
         // Reference: https://github.com/souravbaghz/RadareEye
-        $string3 = /\.\/radare\s/ nocase ascii wide
+        $string3 = /\.\/radare\s/
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

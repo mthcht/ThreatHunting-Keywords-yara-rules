@@ -1,7 +1,7 @@
 rule wstunnel
 {
     meta:
-        description = "Detection patterns for the tool 'wstunnel' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'wstunnel' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "wstunnel"
@@ -79,10 +79,10 @@ rule wstunnel
         $string23 = /\swstunnel\.exe/ nocase ascii wide
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
-        $string24 = "/home/app/wstunnel" nocase ascii wide
+        $string24 = "/home/app/wstunnel"
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
-        $string25 = "/wstunnel wstunnel" nocase ascii wide
+        $string25 = "/wstunnel wstunnel"
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
         $string26 = /\/wstunnel\.exe/ nocase ascii wide
@@ -91,7 +91,7 @@ rule wstunnel
         $string27 = /\/wstunnel\.git/ nocase ascii wide
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
-        $string28 = "/wstunnel/certs/" nocase ascii wide
+        $string28 = "/wstunnel/certs/"
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
         $string29 = "/wstunnel:latest" nocase ascii wide
@@ -166,16 +166,16 @@ rule wstunnel
         $string52 = "wstunnel/pkgs/container/wstunnel" nocase ascii wide
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
-        $string53 = /wstunnel_.{0,1000}_darwin_amd64\.tar\.gz/ nocase ascii wide
+        $string53 = /wstunnel_.{0,1000}_darwin_amd64\.tar\.gz/
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
-        $string54 = /wstunnel_.{0,1000}_linux_amd64\.tar\.gz/ nocase ascii wide
+        $string54 = /wstunnel_.{0,1000}_linux_amd64\.tar\.gz/
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
-        $string55 = /wstunnel_.{0,1000}_linux_arm64\.tar\.gz/ nocase ascii wide
+        $string55 = /wstunnel_.{0,1000}_linux_arm64\.tar\.gz/
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
-        $string56 = /wstunnel_.{0,1000}_linux_armv7\.tar\.gz/ nocase ascii wide
+        $string56 = /wstunnel_.{0,1000}_linux_armv7\.tar\.gz/
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
         $string57 = /wstunnel_.{0,1000}_windows_386\.tar\.gz/ nocase ascii wide

@@ -1,7 +1,7 @@
 rule vncviewer
 {
     meta:
-        description = "Detection patterns for the tool 'vncviewer' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'vncviewer' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "vncviewer"
@@ -22,7 +22,7 @@ rule vncviewer
         $string4 = /RealVNC\.VNCViewer/ nocase ascii wide
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
-        $string5 = /vncviewer\s.{0,1000}\..{0,1000}\:5901/ nocase ascii wide
+        $string5 = /vncviewer\s.{0,1000}\..{0,1000}\:5901/
         // Description: VNCViewer is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: N/A
         $string6 = /VNCViewer\.exe/ nocase ascii wide

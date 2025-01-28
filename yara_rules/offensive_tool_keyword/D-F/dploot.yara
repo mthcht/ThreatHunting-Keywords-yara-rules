@@ -1,7 +1,7 @@
 rule dploot
 {
     meta:
-        description = "Detection patterns for the tool 'dploot' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'dploot' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "dploot"
@@ -76,7 +76,7 @@ rule dploot
         $string22 = /dploot\/releases\/download\/.{0,1000}\/dploot/ nocase ascii wide
         // Description: DPAPI looting remotely in Python
         // Reference: https://github.com/zblurx/dploot
-        $string23 = "dploot_linux_adm64" nocase ascii wide
+        $string23 = "dploot_linux_adm64"
         // Description: DPAPI looting remotely in Python
         // Reference: https://github.com/zblurx/dploot
         $string24 = /dploot\-main\.zip/ nocase ascii wide

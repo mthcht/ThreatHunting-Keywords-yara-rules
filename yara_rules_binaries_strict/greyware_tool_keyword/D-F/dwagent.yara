@@ -1,7 +1,7 @@
 rule dwagent
 {
     meta:
-        description = "Detection patterns for the tool 'dwagent' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'dwagent' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "dwagent"
@@ -10,13 +10,13 @@ rule dwagent
     strings:
         // Description: The DWService to remotly control your machine - abused by attackers
         // Reference: https://github.com/dwservice/agent
-        $string1 = /\/dwagent\.desktop/ nocase ascii wide
+        $string1 = /\/dwagent\.desktop/
         // Description: The DWService to remotly control your machine - abused by attackers
         // Reference: https://github.com/dwservice/agent
-        $string2 = /\/dwagent\.service/ nocase ascii wide
+        $string2 = /\/dwagent\.service/
         // Description: The DWService to remotly control your machine - abused by attackers
         // Reference: https://github.com/dwservice/agent
-        $string3 = "/dwagsystray" nocase ascii wide
+        $string3 = "/dwagsystray"
         // Description: The DWService to remotly control your machine - abused by attackers
         // Reference: https://github.com/dwservice/agent
         $string4 = /\\\.dwagent\\/ nocase ascii wide

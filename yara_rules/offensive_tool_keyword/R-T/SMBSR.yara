@@ -1,7 +1,7 @@
 rule SMBSR
 {
     meta:
-        description = "Detection patterns for the tool 'SMBSR' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'SMBSR' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "SMBSR"
@@ -25,7 +25,7 @@ rule SMBSR
         $string5 = /\/SMBSR\.git/ nocase ascii wide
         // Description: Lookup for interesting stuff in SMB shares
         // Reference: https://github.com/oldboy21/SMBSR
-        $string6 = /\/smbsr\.log/ nocase ascii wide
+        $string6 = /\/smbsr\.log/
         // Description: Lookup for interesting stuff in SMB shares
         // Reference: https://github.com/oldboy21/SMBSR
         $string7 = /smbsr\.py/ nocase ascii wide

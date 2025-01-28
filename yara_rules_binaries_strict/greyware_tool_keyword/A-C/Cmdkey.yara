@@ -1,7 +1,7 @@
 rule Cmdkey
 {
     meta:
-        description = "Detection patterns for the tool 'Cmdkey' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Cmdkey' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Cmdkey"
@@ -10,7 +10,10 @@ rule Cmdkey
     strings:
         // Description: List Saved Credentials
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-290a
-        $string1 = "Cmdkey /list" nocase ascii wide
+        $string1 = /\\cmdkey\.exe\\"\s\/list/ nocase ascii wide
+        // Description: List Saved Credentials
+        // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-290a
+        $string2 = "Cmdkey /list" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

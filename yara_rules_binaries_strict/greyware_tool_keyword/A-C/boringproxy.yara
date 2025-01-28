@@ -1,7 +1,7 @@
 rule boringproxy
 {
     meta:
-        description = "Detection patterns for the tool 'boringproxy' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'boringproxy' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "boringproxy"
@@ -19,10 +19,10 @@ rule boringproxy
         $string3 = " -m boringproxy" nocase ascii wide
         // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
         // Reference: https://github.com/boringproxy/boringproxy
-        $string4 = /\.\/boringproxy\sserver/ nocase ascii wide
+        $string4 = /\.\/boringproxy\sserver/
         // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
         // Reference: https://github.com/boringproxy/boringproxy
-        $string5 = "/bin/boringproxy" nocase ascii wide
+        $string5 = "/bin/boringproxy"
         // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
         // Reference: https://github.com/boringproxy/boringproxy
         $string6 = /\/boringproxy\.git/ nocase ascii wide
@@ -34,10 +34,10 @@ rule boringproxy
         $string8 = /\/boringproxy\-server\.service/ nocase ascii wide
         // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
         // Reference: https://github.com/boringproxy/boringproxy
-        $string9 = "/home/boringproxy" nocase ascii wide
+        $string9 = "/home/boringproxy"
         // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
         // Reference: https://github.com/boringproxy/boringproxy
-        $string10 = "/tmp/boringproxy-client" nocase ascii wide
+        $string10 = "/tmp/boringproxy-client"
         // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
         // Reference: https://github.com/boringproxy/boringproxy
         $string11 = "23d61c88520628dc2ab58b25e556df92640327ca4f946cd8ea30eb813897d107" nocase ascii wide
@@ -85,7 +85,7 @@ rule boringproxy
         $string25 = /boringproxy\-client\@default\.service/ nocase ascii wide
         // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
         // Reference: https://github.com/boringproxy/boringproxy
-        $string26 = "chown boringproxy:boringproxy " nocase ascii wide
+        $string26 = "chown boringproxy:boringproxy "
         // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
         // Reference: https://github.com/boringproxy/boringproxy
         $string27 = "cmd/boringproxy" nocase ascii wide

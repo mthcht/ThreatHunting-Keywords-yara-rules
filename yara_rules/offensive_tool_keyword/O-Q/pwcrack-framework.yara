@@ -1,7 +1,7 @@
 rule pwcrack_framework
 {
     meta:
-        description = "Detection patterns for the tool 'pwcrack-framework' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'pwcrack-framework' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "pwcrack-framework"
@@ -22,10 +22,10 @@ rule pwcrack_framework
         $string4 = /\/md5cracker\.rb/ nocase ascii wide
         // Description: Password Crack Framework
         // Reference: https://github.com/L-codes/pwcrack-framework
-        $string5 = /\/mobaxterm\.rb/ nocase ascii wide
+        $string5 = /\/mobaxterm\.rb/
         // Description: Password Crack Framework
         // Reference: https://github.com/L-codes/pwcrack-framework
-        $string6 = "/pwcrack banner" nocase ascii wide
+        $string6 = "/pwcrack banner"
         // Description: Password Crack Framework
         // Reference: https://github.com/L-codes/pwcrack-framework
         $string7 = /\/pwcrack\-framework\.git/ nocase ascii wide

@@ -1,7 +1,7 @@
 rule DoHC2
 {
     meta:
-        description = "Detection patterns for the tool 'DoHC2' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'DoHC2' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "DoHC2"
@@ -25,7 +25,7 @@ rule DoHC2
         $string5 = "/ExternalC2/" nocase ascii wide
         // Description: DoHC2 allows the ExternalC2 library from Ryan Hanson (https://github.com/ryhanson/ExternalC2) to be leveraged for command and control (C2) via DNS over HTTPS (DoH). This is built for the popular Adversary Simulation and Red Team Operations Software Cobalt Strike
         // Reference: https://github.com/SpiderLabs/DoHC2
-        $string6 = /\/WebC2\.cs/ nocase ascii wide
+        $string6 = /\/WebC2\.cs/
         // Description: DoHC2 allows the ExternalC2 library from Ryan Hanson (https://github.com/ryhanson/ExternalC2) to be leveraged for command and control (C2) via DNS over HTTPS (DoH). This is built for the popular Adversary Simulation and Red Team Operations Software Cobalt Strike
         // Reference: https://github.com/SpiderLabs/DoHC2
         $string7 = /\/WebSocketC2\.cs/ nocase ascii wide

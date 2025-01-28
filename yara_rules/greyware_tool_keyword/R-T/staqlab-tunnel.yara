@@ -1,7 +1,7 @@
 rule staqlab_tunnel
 {
     meta:
-        description = "Detection patterns for the tool 'staqlab-tunnel' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'staqlab-tunnel' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "staqlab-tunnel"
@@ -10,10 +10,10 @@ rule staqlab_tunnel
     strings:
         // Description: Expose localhost to internet
         // Reference: https://github.com/cocoflan/Staqlab-tunnel
-        $string1 = /\.\/staqlab\-tunnel\s/ nocase ascii wide
+        $string1 = /\.\/staqlab\-tunnel\s/
         // Description: Expose localhost to internet
         // Reference: https://github.com/cocoflan/Staqlab-tunnel
-        $string2 = "/bin/staqlab-tunnel" nocase ascii wide
+        $string2 = "/bin/staqlab-tunnel"
         // Description: Expose localhost to internet
         // Reference: https://github.com/cocoflan/Staqlab-tunnel
         $string3 = "6510fdf42becdab665232ef6393e40a559dd2b3b2b7927333c9f30a62bf7de3f" nocase ascii wide

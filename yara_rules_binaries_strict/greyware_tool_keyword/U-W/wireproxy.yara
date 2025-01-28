@@ -1,7 +1,7 @@
 rule wireproxy
 {
     meta:
-        description = "Detection patterns for the tool 'wireproxy' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'wireproxy' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "wireproxy"
@@ -10,40 +10,40 @@ rule wireproxy
     strings:
         // Description: Wireguard client that exposes itself as a socks5 proxy
         // Reference: https://github.com/pufferffish/wireproxy
-        $string1 = /\swireproxy\.service/ nocase ascii wide
+        $string1 = /\swireproxy\.service/
         // Description: Wireguard client that exposes itself as a socks5 proxy
         // Reference: https://github.com/pufferffish/wireproxy
-        $string2 = "/bin/wireproxy" nocase ascii wide
+        $string2 = "/bin/wireproxy"
         // Description: Wireguard client that exposes itself as a socks5 proxy
         // Reference: https://github.com/pufferffish/wireproxy
-        $string3 = /\/wireproxy\.conf/ nocase ascii wide
+        $string3 = /\/wireproxy\.conf/
         // Description: Wireguard client that exposes itself as a socks5 proxy
         // Reference: https://github.com/pufferffish/wireproxy
         $string4 = /\/wireproxy\.git/ nocase ascii wide
         // Description: Wireguard client that exposes itself as a socks5 proxy
         // Reference: https://github.com/pufferffish/wireproxy
-        $string5 = /\/wireproxy\.service/ nocase ascii wide
+        $string5 = /\/wireproxy\.service/
         // Description: Wireguard client that exposes itself as a socks5 proxy
         // Reference: https://github.com/pufferffish/wireproxy
         $string6 = "/wireproxy/releases/" nocase ascii wide
         // Description: Wireguard client that exposes itself as a socks5 proxy
         // Reference: https://github.com/pufferffish/wireproxy
-        $string7 = "/wireproxy_darwin" nocase ascii wide
+        $string7 = "/wireproxy_darwin"
         // Description: Wireguard client that exposes itself as a socks5 proxy
         // Reference: https://github.com/pufferffish/wireproxy
-        $string8 = "/wireproxy_linux_" nocase ascii wide
+        $string8 = "/wireproxy_linux_"
         // Description: Wireguard client that exposes itself as a socks5 proxy
         // Reference: https://github.com/pufferffish/wireproxy
         $string9 = "/wireproxy_windows" nocase ascii wide
         // Description: Wireguard client that exposes itself as a socks5 proxy
         // Reference: https://github.com/pufferffish/wireproxy
-        $string10 = "/wireproxy-ci-test" nocase ascii wide
+        $string10 = "/wireproxy-ci-test"
         // Description: Wireguard client that exposes itself as a socks5 proxy
         // Reference: https://github.com/pufferffish/wireproxy
-        $string11 = "/wireproxy-master" nocase ascii wide
+        $string11 = "/wireproxy-master"
         // Description: Wireguard client that exposes itself as a socks5 proxy
         // Reference: https://github.com/pufferffish/wireproxy
-        $string12 = "/wireproxy-udp" nocase ascii wide
+        $string12 = "/wireproxy-udp"
         // Description: Wireguard client that exposes itself as a socks5 proxy
         // Reference: https://github.com/pufferffish/wireproxy
         $string13 = /\\wireguard\.go/ nocase ascii wide
@@ -391,16 +391,16 @@ rule wireproxy
         $string127 = "pufferffish/wireproxy" nocase ascii wide
         // Description: Wireguard client that exposes itself as a socks5 proxy
         // Reference: https://github.com/pufferffish/wireproxy
-        $string128 = "wireproxy --" nocase ascii wide
+        $string128 = "wireproxy --"
         // Description: Wireguard client that exposes itself as a socks5 proxy
         // Reference: https://github.com/pufferffish/wireproxy
-        $string129 = "wireproxy -c " nocase ascii wide
+        $string129 = "wireproxy -c "
         // Description: Wireguard client that exposes itself as a socks5 proxy
         // Reference: https://github.com/pufferffish/wireproxy
-        $string130 = "wireproxy -n " nocase ascii wide
+        $string130 = "wireproxy -n "
         // Description: Wireguard client that exposes itself as a socks5 proxy
         // Reference: https://github.com/pufferffish/wireproxy
-        $string131 = "wireproxy -s" nocase ascii wide
+        $string131 = "wireproxy -s"
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -1,7 +1,7 @@
 rule AmsiBypass
 {
     meta:
-        description = "Detection patterns for the tool 'AmsiBypass' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'AmsiBypass' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "AmsiBypass"
@@ -16,7 +16,7 @@ rule AmsiBypass
         $string2 = /\/Amsi\-Bypass\-Powershell\.git/ nocase ascii wide
         // Description: bypassing Anti-Malware Scanning Interface (AMSI) features
         // Reference: https://github.com/S3cur3Th1sSh1t/Amsi-Bypass-Powershell
-        $string3 = "/opt/Projects/AmsiBypass/" nocase ascii wide
+        $string3 = "/opt/Projects/AmsiBypass/"
         // Description: bypassing Anti-Malware Scanning Interface (AMSI) features
         // Reference: https://github.com/S3cur3Th1sSh1t/Amsi-Bypass-Powershell
         $string4 = /\\AmsiBypass\./ nocase ascii wide

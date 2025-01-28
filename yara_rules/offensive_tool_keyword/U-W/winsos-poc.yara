@@ -1,7 +1,7 @@
 rule winsos_poc
 {
     meta:
-        description = "Detection patterns for the tool 'winsos-poc' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'winsos-poc' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "winsos-poc"

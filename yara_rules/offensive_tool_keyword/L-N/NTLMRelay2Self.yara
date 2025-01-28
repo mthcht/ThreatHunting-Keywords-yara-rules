@@ -1,7 +1,7 @@
 rule NTLMRelay2Self
 {
     meta:
-        description = "Detection patterns for the tool 'NTLMRelay2Self' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'NTLMRelay2Self' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "NTLMRelay2Self"

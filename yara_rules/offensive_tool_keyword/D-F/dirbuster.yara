@@ -1,7 +1,7 @@
 rule dirbuster
 {
     meta:
-        description = "Detection patterns for the tool 'dirbuster' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'dirbuster' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "dirbuster"
@@ -10,7 +10,7 @@ rule dirbuster
     strings:
         // Description: Dirbuster plugin for Burp Suite
         // Reference: https://github.com/vulnersCom/burp-Dirbuster
-        $string1 = "/burp-Dirbuster" nocase ascii wide
+        $string1 = "/burp-Dirbuster"
 
     condition:
         any of them

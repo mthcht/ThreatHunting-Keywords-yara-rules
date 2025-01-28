@@ -1,28 +1,31 @@
 rule certutil
 {
     meta:
-        description = "Detection patterns for the tool 'certutil' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'certutil' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "certutil"
         rule_category = "greyware_tool_keyword"
 
     strings:
+        // Description: Certutil download behavior observed by APT41 group
+        // Reference: https://detect.fyi/playbook-hunting-chinese-apt-379a6b950492
+        $string1 = /certutil\s\-urlcache\s\-split\s\-f\shttp.{0,100}\.exe/ nocase ascii wide
         // Description: LOLBAS execution - downloading payload from discord with certutil
         // Reference: N/A
-        $string1 = /certutil\.exe\s\-urlcache\s\-split\s\-f\s.{0,100}https\:\/\/cdn\.discordapp\.com\/attachments\// nocase ascii wide
+        $string2 = /certutil\.exe\s\-urlcache\s\-split\s\-f\s.{0,100}https\:\/\/cdn\.discordapp\.com\/attachments\// nocase ascii wide
         // Description: Certutil download behavior observed by the Dispossessor ransomware group
         // Reference: N/A
-        $string2 = /certutil\.exe\s\-urlcache\s\-split\s\-f\shttp.{0,100}\.bat\sC\:\\ProgramData\\/ nocase ascii wide
+        $string3 = /certutil\.exe\s\-urlcache\s\-split\s\-f\shttp.{0,100}\.bat\sC\:\\ProgramData\\/ nocase ascii wide
         // Description: Certutil download behavior observed by the Dispossessor ransomware group
         // Reference: N/A
-        $string3 = /certutil\.exe\s\-urlcache\s\-split\s\-f\shttp.{0,100}\.ps1\sC\:\\ProgramData\\/ nocase ascii wide
+        $string4 = /certutil\.exe\s\-urlcache\s\-split\s\-f\shttp.{0,100}\.ps1\sC\:\\ProgramData\\/ nocase ascii wide
         // Description: Certutil download behavior observed by the Dispossessor ransomware group
         // Reference: N/A
-        $string4 = /certutil\.exe\s\-urlcache\s\-split\s\-f\shttp.{0,100}\.vbs\sC\:\\ProgramData\\/ nocase ascii wide
+        $string5 = /certutil\.exe\s\-urlcache\s\-split\s\-f\shttp.{0,100}\.vbs\sC\:\\ProgramData\\/ nocase ascii wide
         // Description: Certutil Download from github
         // Reference: N/A
-        $string5 = /certutil\.exe\s\-urlcache\s\-split\s\-f\shttps\:\/\/raw\.githubusercontent\.com\// nocase ascii wide
+        $string6 = /certutil\.exe\s\-urlcache\s\-split\s\-f\shttps\:\/\/raw\.githubusercontent\.com\// nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

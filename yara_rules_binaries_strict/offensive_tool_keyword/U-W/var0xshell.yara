@@ -1,7 +1,7 @@
 rule var0xshell
 {
     meta:
-        description = "Detection patterns for the tool 'var0xshell' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'var0xshell' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "var0xshell"
@@ -22,7 +22,7 @@ rule var0xshell
         $string4 = /\/Obfuscated\-Code\.py/ nocase ascii wide
         // Description: var0xshell - shell with xor encryption
         // Reference: https://github.com/yehia-mamdouh/var0xshell/tree/main
-        $string5 = /\/var0xshell\.git/ nocase ascii wide
+        $string5 = /\/var0xshell\.git/
         // Description: var0xshell - shell with xor encryption
         // Reference: https://github.com/yehia-mamdouh/var0xshell/tree/main
         $string6 = /\\Obfuscated\-Code\.py/ nocase ascii wide

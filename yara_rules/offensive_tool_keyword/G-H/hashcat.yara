@@ -1,7 +1,7 @@
 rule hashcat
 {
     meta:
-        description = "Detection patterns for the tool 'hashcat' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'hashcat' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "hashcat"
@@ -10,22 +10,22 @@ rule hashcat
     strings:
         // Description: Worlds fastest and most advanced password recovery utility.
         // Reference: https://github.com/hashcat/hashcat
-        $string1 = /\s\-\-dc\-ip\s.{0,1000}\s\-request\s.{0,1000}\s\-format\shashcat/ nocase ascii wide
+        $string1 = /\s\-\-dc\-ip\s.{0,1000}\s\-request\s.{0,1000}\s\-format\shashcat/
         // Description: Worlds fastest and most advanced password recovery utility.
         // Reference: https://github.com/hashcat/hashcat
-        $string2 = /\sntlm\.wordlist\s.{0,1000}\-\-hex\-wordlist/ nocase ascii wide
+        $string2 = /\sntlm\.wordlist\s.{0,1000}\-\-hex\-wordlist/
         // Description: Worlds fastest and most advanced password recovery utility.
         // Reference: https://github.com/hashcat/hashcat
-        $string3 = "hashcat" nocase ascii wide
+        $string3 = "hashcat"
         // Description: Worlds fastest and most advanced password recovery utility.
         // Reference: https://github.com/hashcat/hashcat
-        $string4 = /hashcat\-.{0,1000}\.7z/ nocase ascii wide
+        $string4 = /hashcat\-.{0,1000}\.7z/
         // Description: Worlds fastest and most advanced password recovery utility.
         // Reference: https://github.com/hashcat/hashcat
-        $string5 = /hashcat\.git/ nocase ascii wide
+        $string5 = /hashcat\.git/
         // Description: Worlds fastest and most advanced password recovery utility.
         // Reference: https://github.com/hashcat/hashcat
-        $string6 = "hashcat/hashcat" nocase ascii wide
+        $string6 = "hashcat/hashcat"
 
     condition:
         any of them

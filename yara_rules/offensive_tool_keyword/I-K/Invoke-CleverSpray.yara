@@ -1,7 +1,7 @@
 rule Invoke_CleverSpray
 {
     meta:
-        description = "Detection patterns for the tool 'Invoke-CleverSpray' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Invoke-CleverSpray' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Invoke-CleverSpray"

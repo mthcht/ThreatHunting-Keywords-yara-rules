@@ -1,7 +1,7 @@
 rule nmap
 {
     meta:
-        description = "Detection patterns for the tool 'nmap' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'nmap' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "nmap"
@@ -13,10 +13,10 @@ rule nmap
         $string1 = " --script smb-vuln-ms08-067,smb-vuln-ms17-010" nocase ascii wide
         // Description: A very common tool. Network host vuln and port detector.
         // Reference: https://github.com/nmap/nmap
-        $string2 = /\.\/nmap/ nocase ascii wide
+        $string2 = /\.\/nmap/
         // Description: Install and update external NSE script for nmap
         // Reference: https://github.com/shadawck/nse-install
-        $string3 = /\.\/test\/nmap.{0,100}\/.{0,100}\.nse/ nocase ascii wide
+        $string3 = /\.\/test\/nmap.{0,100}\/.{0,100}\.nse/
         // Description: Nmap (Network Mapper) is a free and open source utility for network discovery and security auditing
         // Reference: https://github.com/nmap/nmap/blob/635675b1430a89e950f71112d3bfc74feee4b19a/nselib/http.lua#L2600
         $string4 = "/Nmap/folder/check15" nocase ascii wide
@@ -37,7 +37,7 @@ rule nmap
         $string9 = "/nmaplowercheck17" nocase ascii wide
         // Description: Install and update external NSE script for nmap
         // Reference: https://github.com/shadawck/nse-install
-        $string10 = "/nmap-nse-scripts" nocase ascii wide
+        $string10 = "/nmap-nse-scripts"
         // Description: Install and update external NSE script for nmap
         // Reference: https://github.com/shadawck/nse-install
         $string11 = "/nmap-scada" nocase ascii wide
@@ -55,13 +55,13 @@ rule nmap
         $string15 = "/nmap-vulners" nocase ascii wide
         // Description: Install and update external NSE script for nmap
         // Reference: https://github.com/shadawck/nse-install
-        $string16 = "/nse_install/" nocase ascii wide
+        $string16 = "/nse_install/"
         // Description: Install and update external NSE script for nmap
         // Reference: https://github.com/shadawck/nse-install
         $string17 = /\/nse\-install\.git/ nocase ascii wide
         // Description: Install and update external NSE script for nmap
         // Reference: https://github.com/shadawck/nse-install
-        $string18 = "/s4n7h0/NSE" nocase ascii wide
+        $string18 = "/s4n7h0/NSE"
         // Description: When Nmap is used on Windows systems. it can perform various types of scans such as TCP SYN scans. UDP scans. and service/version detection. These scans enable the identification of open ports. services running on those ports. and potential vulnerabilities in target systems.
         // Reference: N/A
         $string19 = /\\nmap\.exe.{0,100}\/24/ nocase ascii wide
@@ -106,7 +106,7 @@ rule nmap
         $string32 = "OCSAF/freevulnsearch" nocase ascii wide
         // Description: Nmap Privilege Escalation
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string33 = /os\.execute\(.{0,100}\/bin\/.{0,100}nmap\s\-\-script\=\$/ nocase ascii wide
+        $string33 = /os\.execute\(.{0,100}\/bin\/.{0,100}nmap\s\-\-script\=\$/
         // Description: Install and update external NSE script for nmap
         // Reference: https://github.com/shadawck/nse-install
         $string34 = "psc4re/NSE-scripts" nocase ascii wide

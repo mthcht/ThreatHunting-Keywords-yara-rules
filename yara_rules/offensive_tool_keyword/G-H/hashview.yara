@@ -1,7 +1,7 @@
 rule hashview
 {
     meta:
-        description = "Detection patterns for the tool 'hashview' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'hashview' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "hashview"
@@ -16,7 +16,7 @@ rule hashview
         $string2 = " hashview-agent " nocase ascii wide
         // Description: A web front-end for password cracking and analytics
         // Reference: https://github.com/hashview/hashview
-        $string3 = /\.\/hashview\// nocase ascii wide
+        $string3 = /\.\/hashview\//
         // Description: A web front-end for password cracking and analytics
         // Reference: https://github.com/hashview/hashview
         $string4 = /\/hashview\.py/ nocase ascii wide

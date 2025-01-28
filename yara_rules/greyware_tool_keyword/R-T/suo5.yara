@@ -1,7 +1,7 @@
 rule suo5
 {
     meta:
-        description = "Detection patterns for the tool 'suo5' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'suo5' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "suo5"
@@ -16,25 +16,25 @@ rule suo5
         $string2 = "/suo5/releases/" nocase ascii wide
         // Description: http proxy tunneling tool
         // Reference: https://github.com/zema1/suo5
-        $string3 = "/suo5-darwin-amd64" nocase ascii wide
+        $string3 = "/suo5-darwin-amd64"
         // Description: http proxy tunneling tool
         // Reference: https://github.com/zema1/suo5
-        $string4 = "/suo5-darwin-arm64" nocase ascii wide
+        $string4 = "/suo5-darwin-arm64"
         // Description: http proxy tunneling tool
         // Reference: https://github.com/zema1/suo5
-        $string5 = /\/suo5\-gui\-darwin\.app\.zip/ nocase ascii wide
+        $string5 = /\/suo5\-gui\-darwin\.app\.zip/
         // Description: http proxy tunneling tool
         // Reference: https://github.com/zema1/suo5
-        $string6 = "/suo5-gui-linux" nocase ascii wide
+        $string6 = "/suo5-gui-linux"
         // Description: http proxy tunneling tool
         // Reference: https://github.com/zema1/suo5
         $string7 = /\/suo5\-gui\-windows\.exe/ nocase ascii wide
         // Description: http proxy tunneling tool
         // Reference: https://github.com/zema1/suo5
-        $string8 = "/suo5-linux-amd64" nocase ascii wide
+        $string8 = "/suo5-linux-amd64"
         // Description: http proxy tunneling tool
         // Reference: https://github.com/zema1/suo5
-        $string9 = "/suo5-linux-arm64" nocase ascii wide
+        $string9 = "/suo5-linux-arm64"
         // Description: http proxy tunneling tool
         // Reference: https://github.com/zema1/suo5
         $string10 = /\/suo5\-windows\-amd64\.exe/ nocase ascii wide
@@ -43,7 +43,7 @@ rule suo5
         $string11 = /\:8070\/tomcat\/code\/suo5\.jsp/ nocase ascii wide
         // Description: http proxy tunneling tool
         // Reference: https://github.com/zema1/suo5
-        $string12 = /\\suo5\-gui\-darwin\.app\.zip/ nocase ascii wide
+        $string12 = /\\suo5\-gui\-darwin\.app\.zip/
         // Description: http proxy tunneling tool
         // Reference: https://github.com/zema1/suo5
         $string13 = /\\suo5\-gui\-windows\.exe/ nocase ascii wide

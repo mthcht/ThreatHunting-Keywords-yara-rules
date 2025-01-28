@@ -1,7 +1,7 @@
 rule go_lsass
 {
     meta:
-        description = "Detection patterns for the tool 'go-lsass' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'go-lsass' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "go-lsass"
@@ -43,7 +43,7 @@ rule go_lsass
         $string11 = "db5a054172dcde3aebfb86b08e3bf8992f9df3d22e2028fd5154c647e7361ceb" nocase ascii wide
         // Description: dumping LSASS process remotely
         // Reference: https://github.com/jfjallid/go-lsass
-        $string12 = "go-lsass --host " nocase ascii wide
+        $string12 = "go-lsass --host "
         // Description: dumping LSASS process remotely
         // Reference: https://github.com/jfjallid/go-lsass
         $string13 = "jfjallid/go-lsass" nocase ascii wide

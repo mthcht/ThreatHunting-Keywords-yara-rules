@@ -1,7 +1,7 @@
 rule TeamFiltration
 {
     meta:
-        description = "Detection patterns for the tool 'TeamFiltration' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'TeamFiltration' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "TeamFiltration"
@@ -178,7 +178,7 @@ rule TeamFiltration
         $string56 = /TeamFiltration\\Program\.cs/ nocase ascii wide
         // Description: TeamFiltration is a cross-platform framework for enumerating, spraying, exfiltrating, and backdooring O365 AAD accounts
         // Reference: https://github.com/Flangvik/TeamFiltration
-        $string57 = /TeamFiltration\-v.{0,1000}\-linux\-x86_64\.zip/ nocase ascii wide
+        $string57 = /TeamFiltration\-v.{0,1000}\-linux\-x86_64\.zip/
         // Description: TeamFiltration is a cross-platform framework for enumerating, spraying, exfiltrating, and backdooring O365 AAD accounts
         // Reference: https://github.com/Flangvik/TeamFiltration
         $string58 = /TeamFiltration\-v.{0,1000}\-macOS\-arm64\.zip/ nocase ascii wide

@@ -1,7 +1,7 @@
 rule Rust_Localtunnels
 {
     meta:
-        description = "Detection patterns for the tool 'Rust Localtunnels' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Rust Localtunnels' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Rust Localtunnels"
@@ -10,10 +10,10 @@ rule Rust_Localtunnels
     strings:
         // Description: Localtunnel implementation in Rust - exposes your localhost endpoint to the world
         // Reference: https://github.com/kaichaosun/rlt
-        $string1 = /\/etc\/systemd\/system\/localtunnel\.service/ nocase ascii wide
+        $string1 = /\/etc\/systemd\/system\/localtunnel\.service/
         // Description: Localtunnel implementation in Rust - exposes your localhost endpoint to the world
         // Reference: https://github.com/kaichaosun/rlt
-        $string2 = /\/localtunnel\-linux\-.{0,100}\.tar/ nocase ascii wide
+        $string2 = /\/localtunnel\-linux\-.{0,100}\.tar/
         // Description: Localtunnel implementation in Rust - exposes your localhost endpoint to the world
         // Reference: https://github.com/kaichaosun/rlt
         $string3 = "027e4741b0ffea0c4a7b7d89fe584de5655ac140bc60994df35e0d19565f0817" nocase ascii wide

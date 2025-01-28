@@ -1,7 +1,7 @@
 rule powershell
 {
     meta:
-        description = "Detection patterns for the tool 'powershell' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'powershell' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "powershell"
@@ -143,6 +143,9 @@ rule powershell
         // Description: removing powershell console logging to avoid detection
         // Reference: N/A
         $string45 = "Set-PSReadlineOption -HistorySaveStyle SaveNothing" nocase ascii wide
+        // Description: amsi bypass base64 string
+        // Reference: N/A
+        $string46 = "YQBtAHMAaQBJAG4AaQB0AEYAYQBpAGwAZQBkAA==" nocase ascii wide
 
     condition:
         any of them

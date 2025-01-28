@@ -1,7 +1,7 @@
 rule rathole
 {
     meta:
-        description = "Detection patterns for the tool 'rathole' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'rathole' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "rathole"
@@ -13,10 +13,10 @@ rule rathole
         $string1 = /\srathole\.exe/ nocase ascii wide
         // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
         // Reference: https://github.com/rapiz1/rathole
-        $string2 = /\/frpc\-mem\.log/ nocase ascii wide
+        $string2 = /\/frpc\-mem\.log/
         // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
         // Reference: https://github.com/rapiz1/rathole
-        $string3 = /\/frps\-mem\.log/ nocase ascii wide
+        $string3 = /\/frps\-mem\.log/
         // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
         // Reference: https://github.com/rapiz1/rathole
         $string4 = /\/rathole\.exe/ nocase ascii wide

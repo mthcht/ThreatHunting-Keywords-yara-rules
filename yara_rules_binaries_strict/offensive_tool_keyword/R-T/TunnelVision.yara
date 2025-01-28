@@ -1,7 +1,7 @@
 rule TunnelVision
 {
     meta:
-        description = "Detection patterns for the tool 'TunnelVision' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'TunnelVision' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "TunnelVision"
@@ -25,7 +25,7 @@ rule TunnelVision
         $string5 = /\/configdhcpserver\.sh/ nocase ascii wide
         // Description: TunnelVision uses DHCP option 121 to manipulate routing tables and decloak VPN traffic
         // Reference: https://github.com/leviathansecurity/TunnelVision
-        $string6 = /\/dhcpd\-noroute\.conf/ nocase ascii wide
+        $string6 = /\/dhcpd\-noroute\.conf/
         // Description: TunnelVision uses DHCP option 121 to manipulate routing tables and decloak VPN traffic
         // Reference: https://github.com/leviathansecurity/TunnelVision
         $string7 = /\/norouteconfig\.sh/ nocase ascii wide
@@ -73,10 +73,10 @@ rule TunnelVision
         $string21 = "leviathansecurity/TunnelVision" nocase ascii wide
         // Description: TunnelVision uses DHCP option 121 to manipulate routing tables and decloak VPN traffic
         // Reference: https://github.com/leviathansecurity/TunnelVision
-        $string22 = /Replacing\s\/etc\/dhcp\/dhcpd\.conf\swith\sno\sroute\spush\sconfig/ nocase ascii wide
+        $string22 = /Replacing\s\/etc\/dhcp\/dhcpd\.conf\swith\sno\sroute\spush\sconfig/
         // Description: TunnelVision uses DHCP option 121 to manipulate routing tables and decloak VPN traffic
         // Reference: https://github.com/leviathansecurity/TunnelVision
-        $string23 = /sudo\s\.\/startup\.sh/ nocase ascii wide
+        $string23 = /sudo\s\.\/startup\.sh/
         // Description: TunnelVision uses DHCP option 121 to manipulate routing tables and decloak VPN traffic
         // Reference: https://github.com/leviathansecurity/TunnelVision
         $string24 = /TunnelVision\/pushrouteconfig\.sh/ nocase ascii wide

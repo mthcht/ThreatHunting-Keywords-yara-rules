@@ -1,7 +1,7 @@
 rule wiresocks
 {
     meta:
-        description = "Detection patterns for the tool 'wiresocks' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'wiresocks' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "wiresocks"
@@ -13,10 +13,10 @@ rule wiresocks
         $string1 = /\sredsocks\.sh/ nocase ascii wide
         // Description: Docker-compose and Dockerfile to setup a wireguard VPN connection forcing specific TCP traffic through a socks proxy.
         // Reference: https://github.com/sensepost/wiresocks
-        $string2 = /\/redsocks\.sh/ nocase ascii wide
+        $string2 = /\/redsocks\.sh/
         // Description: Docker-compose and Dockerfile to setup a wireguard VPN connection forcing specific TCP traffic through a socks proxy.
         // Reference: https://github.com/sensepost/wiresocks
-        $string3 = /\/redsocks\-fw\.sh/ nocase ascii wide
+        $string3 = /\/redsocks\-fw\.sh/
         // Description: Docker-compose and Dockerfile to setup a wireguard VPN connection forcing specific TCP traffic through a socks proxy.
         // Reference: https://github.com/sensepost/wiresocks
         $string4 = /\/wiresocks\.git/ nocase ascii wide
@@ -31,7 +31,7 @@ rule wiresocks
         $string7 = "iptables -t nat -A REDSOCKS" nocase ascii wide
         // Description: Docker-compose and Dockerfile to setup a wireguard VPN connection forcing specific TCP traffic through a socks proxy.
         // Reference: https://github.com/sensepost/wiresocks
-        $string8 = /redsocks\-fw\.sh\sstop/ nocase ascii wide
+        $string8 = /redsocks\-fw\.sh\sstop/
         // Description: Docker-compose and Dockerfile to setup a wireguard VPN connection forcing specific TCP traffic through a socks proxy.
         // Reference: https://github.com/sensepost/wiresocks
         $string9 = "sensepost/wiresocks" nocase ascii wide

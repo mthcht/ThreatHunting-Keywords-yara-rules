@@ -1,7 +1,7 @@
 rule SchTask_0x727
 {
     meta:
-        description = "Detection patterns for the tool 'SchTask_0x727' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'SchTask_0x727' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "SchTask_0x727"

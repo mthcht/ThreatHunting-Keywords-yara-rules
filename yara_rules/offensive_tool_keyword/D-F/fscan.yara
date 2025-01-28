@@ -1,7 +1,7 @@
 rule fscan
 {
     meta:
-        description = "Detection patterns for the tool 'fscan' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'fscan' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "fscan"
@@ -28,7 +28,7 @@ rule fscan
         $string6 = /\sfscanarmv7\.exe/ nocase ascii wide
         // Description: Vulnerability scanner
         // Reference: https://github.com/shadow1ng/fscan
-        $string7 = /\.\/fscan/ nocase ascii wide
+        $string7 = /\.\/fscan/
         // Description: Vulnerability scanner
         // Reference: https://github.com/shadow1ng/fscan
         $string8 = /\/fscan\.exe/ nocase ascii wide
@@ -40,25 +40,25 @@ rule fscan
         $string10 = "/fscan/releases/download/" nocase ascii wide
         // Description: Vulnerability scanner
         // Reference: https://github.com/shadow1ng/fscan
-        $string11 = "/fscan_freebsd_arm64" nocase ascii wide
+        $string11 = "/fscan_freebsd_arm64"
         // Description: Vulnerability scanner
         // Reference: https://github.com/shadow1ng/fscan
-        $string12 = "/fscan_mac_arm64" nocase ascii wide
+        $string12 = "/fscan_mac_arm64"
         // Description: Vulnerability scanner
         // Reference: https://github.com/shadow1ng/fscan
-        $string13 = "/fscan32 " nocase ascii wide
+        $string13 = "/fscan32 "
         // Description: Vulnerability scanner
         // Reference: https://github.com/shadow1ng/fscan
         $string14 = /\/fscan32\.exe/ nocase ascii wide
         // Description: Vulnerability scanner
         // Reference: https://github.com/shadow1ng/fscan
-        $string15 = "/fscan386 " nocase ascii wide
+        $string15 = "/fscan386 "
         // Description: Vulnerability scanner
         // Reference: https://github.com/shadow1ng/fscan
         $string16 = /\/fscan64\.exe/ nocase ascii wide
         // Description: Vulnerability scanner
         // Reference: https://github.com/shadow1ng/fscan
-        $string17 = "/fscanamd64 " nocase ascii wide
+        $string17 = "/fscanamd64 "
         // Description: Vulnerability scanner
         // Reference: https://github.com/shadow1ng/fscan
         $string18 = /\/fscanarm64\.exe/ nocase ascii wide
@@ -241,7 +241,7 @@ rule fscan
         $string77 = "shadow1ng/fscan" nocase ascii wide
         // Description: Vulnerability scanner
         // Reference: https://github.com/shadow1ng/fscan
-        $string78 = /User\-Agent\:\s.{0,1000}echo\;\secho\;\s\/bin\/bash\s\-c\s/ nocase ascii wide
+        $string78 = /User\-Agent\:\s.{0,1000}echo\;\secho\;\s\/bin\/bash\s\-c\s/
 
     condition:
         any of them

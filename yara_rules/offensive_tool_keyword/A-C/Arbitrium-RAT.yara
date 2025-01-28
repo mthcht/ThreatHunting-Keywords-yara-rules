@@ -1,7 +1,7 @@
 rule Arbitrium_RAT
 {
     meta:
-        description = "Detection patterns for the tool 'Arbitrium-RAT' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Arbitrium-RAT' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Arbitrium-RAT"
@@ -10,7 +10,7 @@ rule Arbitrium_RAT
     strings:
         // Description: cross-platform fully undetectable remote access trojan to control Android Windows and Linux
         // Reference: https://github.com/im-hanzou/Arbitrium-RAT
-        $string1 = /\sa\s\-r\s\-cfg\s\-sfx\s\-z\\"SFXAutoInstaller\.conf\\"\sStandalone\.exe/ nocase ascii wide
+        $string1 = /\sa\s\-r\s\-cfg\s\-sfx\s\-z\\"SFXAutoInstaller\.conf\\"\sStandalone\.exe/
         // Description: cross-platform fully undetectable remote access trojan to control Android Windows and Linux
         // Reference: https://github.com/im-hanzou/Arbitrium-RAT
         $string2 = /\/Arbitrium\-RAT\.git/ nocase ascii wide
@@ -70,7 +70,7 @@ rule Arbitrium_RAT
         $string20 = /New\-Object\sNet\.WebClient\)\.DownloadString.{0,1000}\s\-DumpCreds/ nocase ascii wide
         // Description: cross-platform fully undetectable remote access trojan to control Android Windows and Linux
         // Reference: https://github.com/im-hanzou/Arbitrium-RAT
-        $string21 = /pip\sinstall\sflask\sflask_cors\s\&\&\s\.\/runserver\.sh/ nocase ascii wide
+        $string21 = /pip\sinstall\sflask\sflask_cors\s\&\&\s\.\/runserver\.sh/
         // Description: cross-platform fully undetectable remote access trojan to control Android Windows and Linux
         // Reference: https://github.com/im-hanzou/Arbitrium-RAT
         $string22 = /Popen\(\\"exec\s\$\(nc\s\-l\s0\.0\.0\.0\s\-p\s/ nocase ascii wide

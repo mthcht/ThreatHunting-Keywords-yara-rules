@@ -1,7 +1,7 @@
 rule fileless_elf_exec
 {
     meta:
-        description = "Detection patterns for the tool 'fileless-elf-exec' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'fileless-elf-exec' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "fileless-elf-exec"
@@ -10,34 +10,34 @@ rule fileless_elf_exec
     strings:
         // Description: Execute ELF files without dropping them on disk
         // Reference: https://github.com/nnsee/fileless-elf-exec
-        $string1 = /\.\/fee\.py/ nocase ascii wide
+        $string1 = /\.\/fee\.py/
         // Description: Execute ELF files without dropping them on disk
         // Reference: https://github.com/nnsee/fileless-elf-exec
-        $string2 = /fee\s.{0,100}\/.{0,100}\s\-l\spl\s\|\sperl/ nocase ascii wide
+        $string2 = /fee\s.{0,100}\/.{0,100}\s\-l\spl\s\|\sperl/
         // Description: Execute ELF files without dropping them on disk
         // Reference: https://github.com/nnsee/fileless-elf-exec
-        $string3 = /fee\s.{0,100}\/.{0,100}\s\-l\spl\s\|\sruby/ nocase ascii wide
+        $string3 = /fee\s.{0,100}\/.{0,100}\s\-l\spl\s\|\sruby/
         // Description: Execute ELF files without dropping them on disk
         // Reference: https://github.com/nnsee/fileless-elf-exec
-        $string4 = /fee\s\-a\s.{0,100}killall\ssshd.{0,100}\s.{0,100}busybox/ nocase ascii wide
+        $string4 = /fee\s\-a\s.{0,100}killall\ssshd.{0,100}\s.{0,100}busybox/
         // Description: Execute ELF files without dropping them on disk
         // Reference: https://github.com/nnsee/fileless-elf-exec
-        $string5 = /fee\s\-c\s.{0,100}\/.{0,100}\s\|\sssh\s.{0,100}\@/ nocase ascii wide
+        $string5 = /fee\s\-c\s.{0,100}\/.{0,100}\s\|\sssh\s.{0,100}\@/
         // Description: Execute ELF files without dropping them on disk
         // Reference: https://github.com/nnsee/fileless-elf-exec
-        $string6 = /fee\s\-c\s.{0,100}\/.{0,100}\s\-w\s64\s\|\s/ nocase ascii wide
+        $string6 = /fee\s\-c\s.{0,100}\/.{0,100}\s\-w\s64\s\|\s/
         // Description: Execute ELF files without dropping them on disk
         // Reference: https://github.com/nnsee/fileless-elf-exec
         $string7 = "fileless-elf-exec" nocase ascii wide
         // Description: Execute ELF files without dropping them on disk
         // Reference: https://github.com/nnsee/fileless-elf-exec
-        $string8 = "pip install --user fee" nocase ascii wide
+        $string8 = "pip install --user fee"
         // Description: Execute ELF files without dropping them on disk
         // Reference: https://github.com/nnsee/fileless-elf-exec
-        $string9 = "pipx install fee" nocase ascii wide
+        $string9 = "pipx install fee"
         // Description: Execute ELF files without dropping them on disk
         // Reference: https://github.com/nnsee/fileless-elf-exec
-        $string10 = /python3\sfee\.py/ nocase ascii wide
+        $string10 = /python3\sfee\.py/
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

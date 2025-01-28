@@ -1,7 +1,7 @@
 rule crackmd5_ru
 {
     meta:
-        description = "Detection patterns for the tool 'crackmd5.ru' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'crackmd5.ru' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "crackmd5.ru"

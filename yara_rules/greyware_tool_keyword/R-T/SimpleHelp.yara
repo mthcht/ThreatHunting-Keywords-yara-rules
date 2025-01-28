@@ -1,7 +1,7 @@
 rule SimpleHelp
 {
     meta:
-        description = "Detection patterns for the tool 'SimpleHelp' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'SimpleHelp' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "SimpleHelp"
@@ -121,28 +121,28 @@ rule SimpleHelp
         $string37 = /Remote\sAccessECompatibility\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string38 = /Remote\sAccess\-linux32arm\-offline\.tar/ nocase ascii wide
+        $string38 = /Remote\sAccess\-linux32arm\-offline\.tar/
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string39 = /Remote\sAccess\-linux32arm\-online\.tar/ nocase ascii wide
+        $string39 = /Remote\sAccess\-linux32arm\-online\.tar/
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string40 = /Remote\sAccess\-linux32\-offline\.tar/ nocase ascii wide
+        $string40 = /Remote\sAccess\-linux32\-offline\.tar/
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string41 = /Remote\sAccess\-linux32\-online\.tar/ nocase ascii wide
+        $string41 = /Remote\sAccess\-linux32\-online\.tar/
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string42 = /Remote\sAccess\-linux64arm\-offline\.tar/ nocase ascii wide
+        $string42 = /Remote\sAccess\-linux64arm\-offline\.tar/
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string43 = /Remote\sAccess\-linux64arm\-online\.tar/ nocase ascii wide
+        $string43 = /Remote\sAccess\-linux64arm\-online\.tar/
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string44 = /Remote\sAccess\-linux64\-offline\.tar/ nocase ascii wide
+        $string44 = /Remote\sAccess\-linux64\-offline\.tar/
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string45 = /Remote\sAccess\-linux64\-online\.tar/ nocase ascii wide
+        $string45 = /Remote\sAccess\-linux64\-online\.tar/
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
         $string46 = /Remote\sAccess\-macos\-intel\-offline\.dmg/ nocase ascii wide
@@ -175,28 +175,28 @@ rule SimpleHelp
         $string55 = /Remote\sSupport\-java\-online\.jar/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string56 = /Remote\sSupport\-linux32arm\-offline\.tar/ nocase ascii wide
+        $string56 = /Remote\sSupport\-linux32arm\-offline\.tar/
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string57 = /Remote\sSupport\-linux32arm\-online\.tar/ nocase ascii wide
+        $string57 = /Remote\sSupport\-linux32arm\-online\.tar/
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string58 = /Remote\sSupport\-linux32\-offline\.tar/ nocase ascii wide
+        $string58 = /Remote\sSupport\-linux32\-offline\.tar/
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string59 = /Remote\sSupport\-linux32\-online\.tar/ nocase ascii wide
+        $string59 = /Remote\sSupport\-linux32\-online\.tar/
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string60 = /Remote\sSupport\-linux64arm\-offline\.tar/ nocase ascii wide
+        $string60 = /Remote\sSupport\-linux64arm\-offline\.tar/
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string61 = /Remote\sSupport\-linux64arm\-online\.tar/ nocase ascii wide
+        $string61 = /Remote\sSupport\-linux64arm\-online\.tar/
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string62 = /Remote\sSupport\-linux64\-offline\.tar/ nocase ascii wide
+        $string62 = /Remote\sSupport\-linux64\-offline\.tar/
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string63 = /Remote\sSupport\-linux64\-online\.tar/ nocase ascii wide
+        $string63 = /Remote\sSupport\-linux64\-online\.tar/
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
         $string64 = /Remote\sSupport\-macos\-intel\-offline\.dmg/ nocase ascii wide
@@ -253,28 +253,28 @@ rule SimpleHelp
         $string81 = /SimpleHelp\sTechnician\-java\-online\.jar/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string82 = /SimpleHelp\sTechnician\-linux32arm\-offline\.tar/ nocase ascii wide
+        $string82 = /SimpleHelp\sTechnician\-linux32arm\-offline\.tar/
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string83 = /SimpleHelp\sTechnician\-linux32arm\-online\.tar/ nocase ascii wide
+        $string83 = /SimpleHelp\sTechnician\-linux32arm\-online\.tar/
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string84 = /SimpleHelp\sTechnician\-linux32\-offline\.tar/ nocase ascii wide
+        $string84 = /SimpleHelp\sTechnician\-linux32\-offline\.tar/
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string85 = /SimpleHelp\sTechnician\-linux32\-online\.tar/ nocase ascii wide
+        $string85 = /SimpleHelp\sTechnician\-linux32\-online\.tar/
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string86 = /SimpleHelp\sTechnician\-linux64arm\-offline\.tar/ nocase ascii wide
+        $string86 = /SimpleHelp\sTechnician\-linux64arm\-offline\.tar/
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string87 = /SimpleHelp\sTechnician\-linux64arm\-online\.tar/ nocase ascii wide
+        $string87 = /SimpleHelp\sTechnician\-linux64arm\-online\.tar/
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string88 = /SimpleHelp\sTechnician\-linux64\-offline\.tar/ nocase ascii wide
+        $string88 = /SimpleHelp\sTechnician\-linux64\-offline\.tar/
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string89 = /SimpleHelp\sTechnician\-linux64\-online\.tar/ nocase ascii wide
+        $string89 = /SimpleHelp\sTechnician\-linux64\-online\.tar/
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
         $string90 = /SimpleHelp\sTechnician\-macos\-intel\-offline\.dmg/ nocase ascii wide

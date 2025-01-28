@@ -1,7 +1,7 @@
 rule sish
 {
     meta:
-        description = "Detection patterns for the tool 'sish' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'sish' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "sish"
@@ -13,16 +13,16 @@ rule sish
         $string1 = " sish -c date" nocase ascii wide
         // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
         // Reference: https://github.com/antoniomika/sish
-        $string2 = "/_sish/console" nocase ascii wide
+        $string2 = "/_sish/console"
         // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
         // Reference: https://github.com/antoniomika/sish
         $string3 = /\/sish\.git/ nocase ascii wide
         // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
         // Reference: https://github.com/antoniomika/sish
-        $string4 = /\/sish\.log/ nocase ascii wide
+        $string4 = /\/sish\.log/
         // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
         // Reference: https://github.com/antoniomika/sish
-        $string5 = "/sish/cmd/" nocase ascii wide
+        $string5 = "/sish/cmd/"
         // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
         // Reference: https://github.com/antoniomika/sish
         $string6 = /\\sish\.log/ nocase ascii wide

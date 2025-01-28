@@ -1,7 +1,7 @@
 rule AV_Evasion_Tool
 {
     meta:
-        description = "Detection patterns for the tool 'AV_Evasion_Tool' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'AV_Evasion_Tool' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "AV_Evasion_Tool"

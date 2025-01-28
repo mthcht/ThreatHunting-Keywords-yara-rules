@@ -1,7 +1,7 @@
 rule dropbear
 {
     meta:
-        description = "Detection patterns for the tool 'dropbear' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'dropbear' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "dropbear"
@@ -10,43 +10,43 @@ rule dropbear
     strings:
         // Description: A smallish SSH server and client
         // Reference: https://github.com/mkj/dropbear
-        $string1 = /\.\/dropbear\s/ nocase ascii wide
+        $string1 = /\.\/dropbear\s/
         // Description: A smallish SSH server and client
         // Reference: https://github.com/mkj/dropbear
-        $string2 = /\/\.ssh\/dropbear/ nocase ascii wide
+        $string2 = /\/\.ssh\/dropbear/
         // Description: A smallish SSH server and client
         // Reference: https://github.com/mkj/dropbear
-        $string3 = "/bin/dropbear" nocase ascii wide
+        $string3 = "/bin/dropbear"
         // Description: A smallish SSH server and client
         // Reference: https://github.com/mkj/dropbear
         $string4 = /\/dropbear\.git/ nocase ascii wide
         // Description: A smallish SSH server and client
         // Reference: https://github.com/mkj/dropbear
-        $string5 = /\/dropbear\.init/ nocase ascii wide
+        $string5 = /\/dropbear\.init/
         // Description: A smallish SSH server and client
         // Reference: https://github.com/mkj/dropbear
-        $string6 = /\/dropbear\.log/ nocase ascii wide
+        $string6 = /\/dropbear\.log/
         // Description: A smallish SSH server and client
         // Reference: https://github.com/mkj/dropbear
         $string7 = "/dropbear/releases/" nocase ascii wide
         // Description: A smallish SSH server and client
         // Reference: https://github.com/mkj/dropbear
-        $string8 = "/dropbear_dss_host_key" nocase ascii wide
+        $string8 = "/dropbear_dss_host_key"
         // Description: A smallish SSH server and client
         // Reference: https://github.com/mkj/dropbear
-        $string9 = "/dropbear_rsa_host_key" nocase ascii wide
+        $string9 = "/dropbear_rsa_host_key"
         // Description: A smallish SSH server and client
         // Reference: https://github.com/mkj/dropbear
-        $string10 = "/etc/default/dropbear" nocase ascii wide
+        $string10 = "/etc/default/dropbear"
         // Description: A smallish SSH server and client
         // Reference: https://github.com/mkj/dropbear
-        $string11 = "/etc/dropbear/" nocase ascii wide
+        $string11 = "/etc/dropbear/"
         // Description: A smallish SSH server and client
         // Reference: https://github.com/mkj/dropbear
-        $string12 = "/sbin/dropbear" nocase ascii wide
+        $string12 = "/sbin/dropbear"
         // Description: A smallish SSH server and client
         // Reference: https://github.com/mkj/dropbear
-        $string13 = "/tmp/dropbear" nocase ascii wide
+        $string13 = "/tmp/dropbear"
         // Description: A smallish SSH server and client
         // Reference: https://github.com/mkj/dropbear
         $string14 = "1a338c455c8cf9b8499c16e26cfa7e4b34109cf441045a6d006a8d9aa8d852bb" nocase ascii wide

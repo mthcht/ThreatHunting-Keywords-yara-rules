@@ -1,7 +1,7 @@
 rule bloodyAD
 {
     meta:
-        description = "Detection patterns for the tool 'bloodyAD' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'bloodyAD' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "bloodyAD"

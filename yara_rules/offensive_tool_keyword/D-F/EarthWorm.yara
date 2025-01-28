@@ -1,7 +1,7 @@
 rule EarthWorm
 {
     meta:
-        description = "Detection patterns for the tool 'EarthWorm' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'EarthWorm' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "EarthWorm"
@@ -13,19 +13,19 @@ rule EarthWorm
         $string1 = /\/earthworm\.exe/ nocase ascii wide
         // Description: SOCKS v5 proxy service used for data forwarding in complex network environments
         // Reference: https://github.com/rootkiter/Binary-files/tree/212c43b40e2e4c2e2703400caaa732557b6080a4
-        $string2 = "/ew -s lcx_listen -" nocase ascii wide
+        $string2 = "/ew -s lcx_listen -"
         // Description: SOCKS v5 proxy service used for data forwarding in complex network environments
         // Reference: https://github.com/rootkiter/Binary-files/tree/212c43b40e2e4c2e2703400caaa732557b6080a4
-        $string3 = "/ew -s lcx_slave -" nocase ascii wide
+        $string3 = "/ew -s lcx_slave -"
         // Description: SOCKS v5 proxy service used for data forwarding in complex network environments
         // Reference: https://github.com/rootkiter/Binary-files/tree/212c43b40e2e4c2e2703400caaa732557b6080a4
-        $string4 = "/ew -s lcx_tran -" nocase ascii wide
+        $string4 = "/ew -s lcx_tran -"
         // Description: SOCKS v5 proxy service used for data forwarding in complex network environments
         // Reference: https://github.com/rootkiter/Binary-files/tree/212c43b40e2e4c2e2703400caaa732557b6080a4
-        $string5 = "/ew -s rcsocks -" nocase ascii wide
+        $string5 = "/ew -s rcsocks -"
         // Description: SOCKS v5 proxy service used for data forwarding in complex network environments
         // Reference: https://github.com/rootkiter/Binary-files/tree/212c43b40e2e4c2e2703400caaa732557b6080a4
-        $string6 = "/ew -s ssocksd -" nocase ascii wide
+        $string6 = "/ew -s ssocksd -"
         // Description: SOCKS v5 proxy service used for data forwarding in complex network environments
         // Reference: https://github.com/rootkiter/Binary-files/tree/212c43b40e2e4c2e2703400caaa732557b6080a4
         $string7 = /\\earthworm\.exe/ nocase ascii wide

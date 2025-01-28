@@ -1,7 +1,7 @@
 rule htran
 {
     meta:
-        description = "Detection patterns for the tool 'htran' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'htran' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "htran"
@@ -16,7 +16,7 @@ rule htran
         $string2 = " -tran <ConnectPort> <TransmitHost> <TransmitPort>" nocase ascii wide
         // Description: proxies connections through intermediate hops and aids users in disguising their true geographical location. It can be used by adversaries to hide their location when interacting with the victim networks
         // Reference: https://github.com/HiwinCN/Htran
-        $string3 = "/bin/htran" nocase ascii wide
+        $string3 = "/bin/htran"
         // Description: proxies connections through intermediate hops and aids users in disguising their true geographical location. It can be used by adversaries to hide their location when interacting with the victim networks
         // Reference: https://github.com/HiwinCN/Htran
         $string4 = /\/htran\.exe/ nocase ascii wide

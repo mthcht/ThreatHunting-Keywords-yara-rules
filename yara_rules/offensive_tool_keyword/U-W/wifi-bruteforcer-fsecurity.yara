@@ -1,7 +1,7 @@
 rule wifi_bruteforcer_fsecurity
 {
     meta:
-        description = "Detection patterns for the tool 'wifi-bruteforcer-fsecurity' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'wifi-bruteforcer-fsecurity' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "wifi-bruteforcer-fsecurity"

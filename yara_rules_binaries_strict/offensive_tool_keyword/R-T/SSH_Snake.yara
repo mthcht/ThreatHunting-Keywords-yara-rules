@@ -1,7 +1,7 @@
 rule SSH_Snake
 {
     meta:
-        description = "Detection patterns for the tool 'SSH-Snake' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'SSH-Snake' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "SSH-Snake"
@@ -10,16 +10,16 @@ rule SSH_Snake
     strings:
         // Description: SSH-Snake is a self-propagating - self-replicating - file-less script that automates the post-exploitation task of SSH private key and host discovery
         // Reference: https://github.com/MegaManSec/SSH-Snake
-        $string1 = /\sSnake\.sh\s/ nocase ascii wide
+        $string1 = /\sSnake\.sh\s/
         // Description: SSH-Snake is a self-propagating - self-replicating - file-less script that automates the post-exploitation task of SSH private key and host discovery
         // Reference: https://github.com/MegaManSec/SSH-Snake
         $string2 = /\sSnake\.sh/ nocase ascii wide
         // Description: SSH-Snake is a self-propagating - self-replicating - file-less script that automates the post-exploitation task of SSH private key and host discovery
         // Reference: https://github.com/MegaManSec/SSH-Snake
-        $string3 = /\/badcert\.pem/ nocase ascii wide
+        $string3 = /\/badcert\.pem/
         // Description: SSH-Snake is a self-propagating - self-replicating - file-less script that automates the post-exploitation task of SSH private key and host discovery
         // Reference: https://github.com/MegaManSec/SSH-Snake
-        $string4 = /\/badkey\.pem/ nocase ascii wide
+        $string4 = /\/badkey\.pem/
         // Description: SSH-Snake is a self-propagating - self-replicating - file-less script that automates the post-exploitation task of SSH private key and host discovery
         // Reference: https://github.com/MegaManSec/SSH-Snake
         $string5 = /\/Snake\.nocomments\.sh/ nocase ascii wide

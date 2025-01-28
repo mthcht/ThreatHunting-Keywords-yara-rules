@@ -1,7 +1,7 @@
 rule nanorobeus
 {
     meta:
-        description = "Detection patterns for the tool 'nanorobeus' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'nanorobeus' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "nanorobeus"
@@ -22,7 +22,7 @@ rule nanorobeus
         $string4 = /\/kerberoast\.c/ nocase ascii wide
         // Description: COFF file (BOF) for managing Kerberos tickets.
         // Reference: https://github.com/wavvs/nanorobeus
-        $string5 = /\/modules\/kull_m_crypto_system\.h/ nocase ascii wide
+        $string5 = /\/modules\/kull_m_crypto_system\.h/
         // Description: COFF file (BOF) for managing Kerberos tickets.
         // Reference: https://github.com/wavvs/nanorobeus
         $string6 = /\/nanorobeus\.git/ nocase ascii wide

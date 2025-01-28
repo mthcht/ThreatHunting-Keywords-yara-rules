@@ -1,7 +1,7 @@
 rule gsocket
 {
     meta:
-        description = "Detection patterns for the tool 'gsocket' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'gsocket' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "gsocket"
@@ -40,10 +40,10 @@ rule gsocket
         $string10 = " status gs-sshd" nocase ascii wide
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
         // Reference: https://github.com/hackerschoice/gsocket
-        $string11 = "/bin/gs-netcat" nocase ascii wide
+        $string11 = "/bin/gs-netcat"
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
         // Reference: https://github.com/hackerschoice/gsocket
-        $string12 = /\/etc\/gsocket\.conf/ nocase ascii wide
+        $string12 = /\/etc\/gsocket\.conf/
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
         // Reference: https://github.com/hackerschoice/gsocket
         $string13 = /\/gsocket\-.{0,100}\.tar\.gz/ nocase ascii wide
@@ -112,31 +112,31 @@ rule gsocket
         $string34 = /\/gs\-root\-shell\.service/ nocase ascii wide
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
         // Reference: https://github.com/hackerschoice/gsocket
-        $string35 = /\/lib\/gsocket_.{0,100}\.so/ nocase ascii wide
+        $string35 = /\/lib\/gsocket_.{0,100}\.so/
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
         // Reference: https://github.com/hackerschoice/gsocket
         $string36 = "/raw/main/gsocket/" nocase ascii wide
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
         // Reference: https://github.com/hackerschoice/gsocket
-        $string37 = /\/root\/\.gs_with_tor/ nocase ascii wide
+        $string37 = /\/root\/\.gs_with_tor/
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
         // Reference: https://github.com/hackerschoice/gsocket
-        $string38 = "/share/gsocket/" nocase ascii wide
+        $string38 = "/share/gsocket/"
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
         // Reference: https://github.com/hackerschoice/gsocket
-        $string39 = "/tools/gs-pipe " nocase ascii wide
+        $string39 = "/tools/gs-pipe "
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
         // Reference: https://github.com/hackerschoice/gsocket
-        $string40 = "/usr/bin/gs-mount" nocase ascii wide
+        $string40 = "/usr/bin/gs-mount"
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
         // Reference: https://github.com/hackerschoice/gsocket
-        $string41 = "/usr/bin/gs-netcat" nocase ascii wide
+        $string41 = "/usr/bin/gs-netcat"
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
         // Reference: https://github.com/hackerschoice/gsocket
-        $string42 = "/usr/bin/gsocket" nocase ascii wide
+        $string42 = "/usr/bin/gsocket"
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
         // Reference: https://github.com/hackerschoice/gsocket
-        $string43 = "/usr/bin/gs-sftp" nocase ascii wide
+        $string43 = "/usr/bin/gs-sftp"
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
         // Reference: https://github.com/hackerschoice/gsocket
         $string44 = /\\gsocket\-.{0,100}\.tar\.gz/ nocase ascii wide
@@ -577,40 +577,40 @@ rule gsocket
         $string189 = "gs-netcat -" nocase ascii wide
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
         // Reference: https://github.com/hackerschoice/gsocket
-        $string190 = /gs\-netcat\s.{0,100}\.tar\.gz/ nocase ascii wide
+        $string190 = /gs\-netcat\s.{0,100}\.tar\.gz/
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
         // Reference: https://github.com/hackerschoice/gsocket
         $string191 = "gs-netcat_freebsd-x86_64" nocase ascii wide
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
         // Reference: https://github.com/hackerschoice/gsocket
-        $string192 = "gs-netcat_linux-aarch64" nocase ascii wide
+        $string192 = "gs-netcat_linux-aarch64"
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
         // Reference: https://github.com/hackerschoice/gsocket
-        $string193 = "gs-netcat_linux-arm" nocase ascii wide
+        $string193 = "gs-netcat_linux-arm"
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
         // Reference: https://github.com/hackerschoice/gsocket
-        $string194 = "gs-netcat_linux-armhf" nocase ascii wide
+        $string194 = "gs-netcat_linux-armhf"
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
         // Reference: https://github.com/hackerschoice/gsocket
-        $string195 = "gs-netcat_linux-armv6" nocase ascii wide
+        $string195 = "gs-netcat_linux-armv6"
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
         // Reference: https://github.com/hackerschoice/gsocket
-        $string196 = "gs-netcat_linux-armv7l" nocase ascii wide
+        $string196 = "gs-netcat_linux-armv7l"
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
         // Reference: https://github.com/hackerschoice/gsocket
-        $string197 = "gs-netcat_linux-i686" nocase ascii wide
+        $string197 = "gs-netcat_linux-i686"
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
         // Reference: https://github.com/hackerschoice/gsocket
-        $string198 = "gs-netcat_linux-mips32" nocase ascii wide
+        $string198 = "gs-netcat_linux-mips32"
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
         // Reference: https://github.com/hackerschoice/gsocket
-        $string199 = "gs-netcat_linux-mips64" nocase ascii wide
+        $string199 = "gs-netcat_linux-mips64"
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
         // Reference: https://github.com/hackerschoice/gsocket
-        $string200 = "gs-netcat_linux-mipsel" nocase ascii wide
+        $string200 = "gs-netcat_linux-mipsel"
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
         // Reference: https://github.com/hackerschoice/gsocket
-        $string201 = "gs-netcat_linux-x86_64" nocase ascii wide
+        $string201 = "gs-netcat_linux-x86_64"
         // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
         // Reference: https://github.com/hackerschoice/gsocket
         $string202 = "gs-netcat_macOS" nocase ascii wide

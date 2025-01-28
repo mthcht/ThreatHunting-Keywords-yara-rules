@@ -1,7 +1,7 @@
 rule proxychains
 {
     meta:
-        description = "Detection patterns for the tool 'proxychains' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'proxychains' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "proxychains"
@@ -19,16 +19,16 @@ rule proxychains
         $string3 = "!!!need more proxies!!!" nocase ascii wide
         // Description: proxychains - a tool that forces any TCP connection made by any given application to follow through proxy like TOR or any other SOCKS4 SOCKS5 or HTTP(S) proxy
         // Reference: https://github.com/haad/proxychains
-        $string4 = /\/\.proxychains\// nocase ascii wide
+        $string4 = /\/\.proxychains\//
         // Description: proxychains - a tool that forces any TCP connection made by any given application to follow through proxy like TOR or any other SOCKS4 SOCKS5 or HTTP(S) proxy
         // Reference: https://github.com/haad/proxychains
-        $string5 = /\/etc\/proxychains\.conf/ nocase ascii wide
+        $string5 = /\/etc\/proxychains\.conf/
         // Description: proxychains - a tool that forces any TCP connection made by any given application to follow through proxy like TOR or any other SOCKS4 SOCKS5 or HTTP(S) proxy
         // Reference: https://github.com/haad/proxychains
         $string6 = /\/proxychains\-.{0,1000}\.zip/ nocase ascii wide
         // Description: proxychains - a tool that forces any TCP connection made by any given application to follow through proxy like TOR or any other SOCKS4 SOCKS5 or HTTP(S) proxy
         // Reference: https://github.com/haad/proxychains
-        $string7 = /\/proxychains\.conf/ nocase ascii wide
+        $string7 = /\/proxychains\.conf/
         // Description: proxychains - a tool that forces any TCP connection made by any given application to follow through proxy like TOR or any other SOCKS4 SOCKS5 or HTTP(S) proxy
         // Reference: https://github.com/haad/proxychains
         $string8 = /\/proxychains\.git/ nocase ascii wide
@@ -97,7 +97,7 @@ rule proxychains
         $string29 = "proxychains_proxy_count" nocase ascii wide
         // Description: proxychains - a tool that forces any TCP connection made by any given application to follow through proxy like TOR or any other SOCKS4 SOCKS5 or HTTP(S) proxy
         // Reference: https://github.com/haad/proxychains
-        $string30 = /proxychains4\s\-q\s.{0,1000}\ssmb\s1/ nocase ascii wide
+        $string30 = /proxychains4\s\-q\s.{0,1000}\ssmb\s1/
         // Description: proxychains - a tool that forces any TCP connection made by any given application to follow through proxy like TOR or any other SOCKS4 SOCKS5 or HTTP(S) proxy
         // Reference: https://github.com/haad/proxychains
         $string31 = "proxychains4" nocase ascii wide

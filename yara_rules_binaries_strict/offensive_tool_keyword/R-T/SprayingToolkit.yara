@@ -1,7 +1,7 @@
 rule SprayingToolkit
 {
     meta:
-        description = "Detection patterns for the tool 'SprayingToolkit' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'SprayingToolkit' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "SprayingToolkit"
@@ -25,10 +25,10 @@ rule SprayingToolkit
         $string5 = /\svaporizer\.py\s/ nocase ascii wide
         // Description: Scripts to make password spraying attacks against Lync/S4B. OWA & O365 a lot quicker. less painful and more efficient
         // Reference: https://github.com/byt3bl33d3r/SprayingToolkit
-        $string6 = /\/aerosol\.py/ nocase ascii wide
+        $string6 = /\/aerosol\.py/
         // Description: Scripts to make password spraying attacks against Lync/S4B. OWA & O365 a lot quicker. less painful and more efficient
         // Reference: https://github.com/byt3bl33d3r/SprayingToolkit
-        $string7 = /\/atomizer\.py/ nocase ascii wide
+        $string7 = /\/atomizer\.py/
         // Description: Scripts to make password spraying attacks against Lync/S4B. OWA & O365 a lot quicker. less painful and more efficient
         // Reference: https://github.com/byt3bl33d3r/SprayingToolkit
         $string8 = /\/LyncSniper\.ps1/ nocase ascii wide
@@ -43,7 +43,7 @@ rule SprayingToolkit
         $string11 = "/SprayingToolkit" nocase ascii wide
         // Description: Scripts to make password spraying attacks against Lync/S4B. OWA & O365 a lot quicker. less painful and more efficient
         // Reference: https://github.com/byt3bl33d3r/SprayingToolkit
-        $string12 = /\/SprayingToolkit\.git/ nocase ascii wide
+        $string12 = /\/SprayingToolkit\.git/
         // Description: Scripts to make password spraying attacks against Lync/S4B. OWA & O365 a lot quicker. less painful and more efficient
         // Reference: https://github.com/byt3bl33d3r/SprayingToolkit
         $string13 = /\\LyncSniper\.ps1/ nocase ascii wide

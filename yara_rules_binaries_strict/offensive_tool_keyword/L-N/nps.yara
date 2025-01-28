@@ -1,7 +1,7 @@
 rule nps
 {
     meta:
-        description = "Detection patterns for the tool 'nps' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'nps' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "nps"
@@ -10,10 +10,10 @@ rule nps
     strings:
         // Description: chinese intranet penetration proxy server
         // Reference: https://github.com/yisier/nps
-        $string1 = /\.\/nps\sinstall\s/ nocase ascii wide
+        $string1 = /\.\/nps\sinstall\s/
         // Description: chinese intranet penetration proxy server
         // Reference: https://github.com/yisier/nps
-        $string2 = "/etc/nps/conf/" nocase ascii wide
+        $string2 = "/etc/nps/conf/"
         // Description: chinese intranet penetration proxy server
         // Reference: https://github.com/yisier/nps
         $string3 = "/nps/releases/download/" nocase ascii wide
@@ -1321,10 +1321,10 @@ rule nps
         $string437 = /go\sbuild\scmd\/nps\/nps\.go/ nocase ascii wide
         // Description: chinese intranet penetration proxy server
         // Reference: https://github.com/yisier/nps
-        $string438 = /nohup\s\.\/nps\s\&/ nocase ascii wide
+        $string438 = /nohup\s\.\/nps\s\&/
         // Description: chinese intranet penetration proxy server
         // Reference: https://github.com/yisier/nps
-        $string439 = "sudo nps start" nocase ascii wide
+        $string439 = "sudo nps start"
         // Description: chinese intranet penetration proxy server
         // Reference: https://github.com/yisier/nps
         $string440 = "yisier/nps" nocase ascii wide

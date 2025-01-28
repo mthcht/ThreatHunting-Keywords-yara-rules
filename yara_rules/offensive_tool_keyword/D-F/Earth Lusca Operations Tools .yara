@@ -1,7 +1,7 @@
 rule Earth_Lusca_Operations_Tools_
 {
     meta:
-        description = "Detection patterns for the tool 'Earth Lusca Operations Tools ' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Earth Lusca Operations Tools ' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Earth Lusca Operations Tools "

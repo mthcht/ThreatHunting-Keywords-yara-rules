@@ -1,7 +1,7 @@
 rule RustHound
 {
     meta:
-        description = "Detection patterns for the tool 'RustHound' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'RustHound' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "RustHound"
@@ -49,7 +49,7 @@ rule RustHound
         $string13 = "rusthound -d " nocase ascii wide
         // Description: Active Directory data collector for BloodHound written in Rust
         // Reference: https://github.com/OPENCYBER-FR/RustHound
-        $string14 = "rusthound rusthound linux" nocase ascii wide
+        $string14 = "rusthound rusthound linux"
         // Description: Active Directory data collector for BloodHound written in Rust
         // Reference: https://github.com/OPENCYBER-FR/RustHound
         $string15 = "rusthound rusthound windows" nocase ascii wide

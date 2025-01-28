@@ -1,7 +1,7 @@
 rule Antivirus_Signature
 {
     meta:
-        description = "Detection patterns for the tool 'Antivirus Signature' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Antivirus Signature' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Antivirus Signature"
@@ -109,7 +109,7 @@ rule Antivirus_Signature
         $string33 = /HackTool\.Java\..{0,1000}\./ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string34 = /Hacktool\.Linux/ nocase ascii wide
+        $string34 = /Hacktool\.Linux/
         // Description: Antiviurs signature_keyword
         // Reference: N/A
         $string35 = /HackTool\.PHP\..{0,1000}\./ nocase ascii wide

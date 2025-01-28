@@ -1,7 +1,7 @@
 rule AD_Miner
 {
     meta:
-        description = "Detection patterns for the tool 'AD_Miner' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'AD_Miner' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "AD_Miner"

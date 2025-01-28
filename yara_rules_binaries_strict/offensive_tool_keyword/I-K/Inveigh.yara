@@ -1,7 +1,7 @@
 rule Inveigh
 {
     meta:
-        description = "Detection patterns for the tool 'Inveigh' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Inveigh' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Inveigh"
@@ -37,19 +37,19 @@ rule Inveigh
         $string9 = /\/Inveigh\.ps1/ nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string10 = /\/Inveigh\-Cleartext\.txt/ nocase ascii wide
+        $string10 = /\/Inveigh\-Cleartext\.txt/
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string11 = /\/Inveigh\-FormInput\.txt/ nocase ascii wide
+        $string11 = /\/Inveigh\-FormInput\.txt/
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string12 = /\/Inveigh\-Log\.txt/ nocase ascii wide
+        $string12 = /\/Inveigh\-Log\.txt/
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string13 = /\/Inveigh\-NTLMv1\.txt/ nocase ascii wide
+        $string13 = /\/Inveigh\-NTLMv1\.txt/
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string14 = /\/Inveigh\-NTLMv2\.txt/ nocase ascii wide
+        $string14 = /\/Inveigh\-NTLMv2\.txt/
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
         $string15 = /\\Inveigh\.exe/ nocase ascii wide

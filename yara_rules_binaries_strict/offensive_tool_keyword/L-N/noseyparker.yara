@@ -1,7 +1,7 @@
 rule noseyparker
 {
     meta:
-        description = "Detection patterns for the tool 'noseyparker' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'noseyparker' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "noseyparker"
@@ -43,7 +43,7 @@ rule noseyparker
         $string11 = /noseyparker\-v.{0,100}\-universal\-macos/ nocase ascii wide
         // Description: Nosey Parker is a command-line program that finds secrets and sensitive information in textual data and Git history.
         // Reference: https://github.com/praetorian-inc/noseyparker
-        $string12 = /noseyparker\-v.{0,100}\-x86_64\-unknown\-linux\-gnu/ nocase ascii wide
+        $string12 = /noseyparker\-v.{0,100}\-x86_64\-unknown\-linux\-gnu/
         // Description: Nosey Parker is a command-line program that finds secrets and sensitive information in textual data and Git history.
         // Reference: https://github.com/praetorian-inc/noseyparker
         $string13 = "praetorian-inc/noseyparker" nocase ascii wide

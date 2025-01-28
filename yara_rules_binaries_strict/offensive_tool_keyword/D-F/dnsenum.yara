@@ -1,7 +1,7 @@
 rule dnsenum
 {
     meta:
-        description = "Detection patterns for the tool 'dnsenum' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'dnsenum' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "dnsenum"
@@ -10,7 +10,7 @@ rule dnsenum
     strings:
         // Description: multithreaded perl script to enumerate DNS information of a domain and to discover non-contiguous ip blocks.
         // Reference: https://github.com/fwaeytens/dnsenum
-        $string1 = /dnsenum\.pl/ nocase ascii wide
+        $string1 = /dnsenum\.pl/
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

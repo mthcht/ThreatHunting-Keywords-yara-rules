@@ -1,7 +1,7 @@
 rule phishing_HTML_linter
 {
     meta:
-        description = "Detection patterns for the tool 'phishing-HTML-linter' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'phishing-HTML-linter' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "phishing-HTML-linter"

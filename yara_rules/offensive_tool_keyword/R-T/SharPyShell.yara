@@ -1,7 +1,7 @@
 rule SharPyShell
 {
     meta:
-        description = "Detection patterns for the tool 'SharPyShell' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'SharPyShell' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "SharPyShell"
@@ -22,7 +22,7 @@ rule SharPyShell
         $string4 = "/SharPyShell" nocase ascii wide
         // Description: SharPyShell - tiny and obfuscated ASP.NET webshell for C# web
         // Reference: https://github.com/antonioCoco/SharPyShell
-        $string5 = /\/tmp\/revshell\.exe/ nocase ascii wide
+        $string5 = /\/tmp\/revshell\.exe/
         // Description: SharPyShell - tiny and obfuscated ASP.NET webshell for C# web
         // Reference: https://github.com/antonioCoco/SharPyShell
         $string6 = /\\inject_shellcode\.py/ nocase ascii wide

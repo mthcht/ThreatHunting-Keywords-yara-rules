@@ -1,7 +1,7 @@
 rule anydesk
 {
     meta:
-        description = "Detection patterns for the tool 'anydesk' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'anydesk' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "anydesk"
@@ -19,16 +19,16 @@ rule anydesk
         $string3 = /\sInvoke\-WebRequest\s\-Uri\shttp\:\/\/download\.anydesk\.com\/AnyDesk\.exe/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
-        $string4 = /\/\.anydesk\/\.anydesk\.trace/ nocase ascii wide
+        $string4 = /\/\.anydesk\/\.anydesk\.trace/
         // Description: Anydesk RMM usage
         // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
-        $string5 = /\/\.anydesk\/service\.conf/ nocase ascii wide
+        $string5 = /\/\.anydesk\/service\.conf/
         // Description: Anydesk RMM usage
         // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
-        $string6 = /\/\.anydesk\/system\.conf/ nocase ascii wide
+        $string6 = /\/\.anydesk\/system\.conf/
         // Description: Anydesk RMM usage
         // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
-        $string7 = /\/\.anydesk\/user\.conf/ nocase ascii wide
+        $string7 = /\/\.anydesk\/user\.conf/
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
         $string8 = /\/Anydesk\.exe/ nocase ascii wide
@@ -37,127 +37,136 @@ rule anydesk
         $string9 = /\/Applications\/Anydesk\.app\// nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
-        $string10 = /\/etc\/systemd\/system\/anydesk\.service/ nocase ascii wide
+        $string10 = /\/etc\/systemd\/system\/anydesk\.service/
         // Description: Anydesk RMM usage
         // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
-        $string11 = /\/home\/.{0,1000}\/\.anydesk\// nocase ascii wide
+        $string11 = /\/home\/.{0,1000}\/\.anydesk\//
         // Description: Anydesk RMM usage
         // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
-        $string12 = /\/log\/anydesk\.trace/ nocase ascii wide
+        $string12 = /\/log\/anydesk\.trace/
         // Description: Anydesk RMM usage
         // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
-        $string13 = "/usr/bin/anydesk" nocase ascii wide
+        $string13 = "/usr/bin/anydesk"
         // Description: Anydesk RMM usage
         // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
-        $string14 = "/usr/lib64/anydesk" nocase ascii wide
+        $string14 = "/usr/lib64/anydesk"
         // Description: Anydesk RMM usage
         // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
-        $string15 = "/usr/libexec/anydesk" nocase ascii wide
+        $string15 = "/usr/libexec/anydesk"
+        // Description: Anydesk RMM usage
+        // Reference: https://www.inversecos.com/2021/02/forensic-analysis-of-anydesk-logs.html
+        $string16 = /\\ad_svc\.trace/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string16 = /\\adprinterpipe/ nocase ascii wide
+        $string17 = /\\adprinterpipe/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string17 = /\\AnyDesk\s\(1\)\.exe/ nocase ascii wide
+        $string18 = /\\AnyDesk\s\(1\)\.exe/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string18 = /\\AnyDesk\.exe/ nocase ascii wide
+        $string19 = /\\AnyDesk\.exe/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string19 = /\\AnyDesk\.lnk/ nocase ascii wide
+        $string20 = /\\AnyDesk\.lnk/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
-        $string20 = /\\AnyDesk\\ad\.trace/ nocase ascii wide
+        $string21 = /\\AnyDesk\\ad\.trace/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
-        $string21 = /\\AnyDesk\\ad_svc\.trace/ nocase ascii wide
+        $string22 = /\\AnyDesk\\ad_svc\.trace/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string22 = /\\AnyDesk\\connection_trace\.txt/ nocase ascii wide
-        // Description: Anydesk RMM usage
-        // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
         $string23 = /\\AnyDesk\\connection_trace\.txt/ nocase ascii wide
         // Description: Anydesk RMM usage
-        // Reference: https://anydesk.com/
-        $string24 = /\\anydesk\\printer_driver/ nocase ascii wide
+        // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
+        $string24 = /\\AnyDesk\\connection_trace\.txt/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string25 = /\\AnyDesk\\service\.conf/ nocase ascii wide
+        $string25 = /\\anydesk\\printer_driver/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string26 = /\\AnyDeskPrintDriver\.cat/ nocase ascii wide
+        $string26 = /\\AnyDesk\\service\.conf/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string27 = /\\anydeskprintdriver\.inf/ nocase ascii wide
+        $string27 = /\\AnyDeskPrintDriver\.cat/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string28 = /\\AppData\\Roaming\\AnyDesk\\system\.conf/ nocase ascii wide
+        $string28 = /\\anydeskprintdriver\.inf/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string29 = /\\AppData\\Roaming\\AnyDesk\\user\.conf/ nocase ascii wide
+        $string29 = /\\AppData\\Roaming\\AnyDesk\\system\.conf/ nocase ascii wide
+        // Description: Anydesk RMM usage
+        // Reference: https://anydesk.com/
+        $string30 = /\\AppData\\Roaming\\AnyDesk\\user\.conf/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
-        $string30 = /\\ControlSet001\\Services\\AnyDesk/ nocase ascii wide
+        $string31 = /\\ControlSet001\\Services\\AnyDesk/ nocase ascii wide
         // Description: anydesk added in safeboot - abused by attackers to maintain persistence and bypass detection
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string31 = /\\CurrentControlSet\\Control\\SafeBoot\\Network\\AnyDesk/ nocase ascii wide
+        $string32 = /\\CurrentControlSet\\Control\\SafeBoot\\Network\\AnyDesk/ nocase ascii wide
+        // Description: Anydesk RMM usage
+        // Reference: https://upadhyayraj.medium.com/beyond-connection-logs-understanding-file-transfer-artifacts-in-anydesk-forensics-b5812c817aad
+        $string33 = /\\file_transfer_trace\.txt/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string32 = /\\Pictures\\AnyDesk/ nocase ascii wide
+        $string34 = /\\Pictures\\AnyDesk/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string33 = /\\Prefetch\\ANYDESK\.EXE/ nocase ascii wide
+        $string35 = /\\Prefetch\\ANYDESK\.EXE/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string34 = /\\ProgramFile.{0,1000}\\previous\-version/ nocase ascii wide
+        $string36 = /\\ProgramFile.{0,1000}\\previous\-version/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
-        $string35 = /\\SOFTWARE\\Clients\\Media\\AnyDesk/ nocase ascii wide
+        $string37 = /\\SOFTWARE\\Clients\\Media\\AnyDesk/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string36 = /\\Temp\\AnyDeskUninst/ nocase ascii wide
+        $string38 = /\\Temp\\AnyDeskUninst/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string37 = /\\Videos\\AnyDesk/ nocase ascii wide
+        $string39 = /\\Videos\\AnyDesk/ nocase ascii wide
         // Description: Anydesk RMM usage - compromised certificate - https://anydesk.com/en/changelog/windows
         // Reference: https://anydesk.com/
-        $string38 = "0DBF152DEAF0B981A8A938D53F769DB8" nocase ascii wide
+        $string40 = "0DBF152DEAF0B981A8A938D53F769DB8" nocase ascii wide
         // Description: Anydesk RMM usage - compromised certificate - https://anydesk.com/en/changelog/windows
         // Reference: https://anydesk.com/
-        $string39 = "9CD1DDB78ED05282353B20CDFE8FA0A4FB6C1ECE" nocase ascii wide
+        $string41 = "9CD1DDB78ED05282353B20CDFE8FA0A4FB6C1ECE" nocase ascii wide
         // Description: Anydesk RMM usage - compromised certificate - https://anydesk.com/en/changelog/windows
         // Reference: https://anydesk.com/
-        $string40 = "9D7620A4CEBA92370E8828B3CB1007AEFF63AB36A2CBE5F044FDDE14ABAB1EBF" nocase ascii wide
+        $string42 = "9D7620A4CEBA92370E8828B3CB1007AEFF63AB36A2CBE5F044FDDE14ABAB1EBF" nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string41 = "AnyDesk Software GmbH" nocase ascii wide
+        $string43 = "AnyDesk Software GmbH" nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string42 = /Anydesk.{0,1000}\s\-\-start\-with\-win\s\-\-silent/ nocase ascii wide
+        $string44 = /Anydesk.{0,1000}\s\-\-start\-with\-win\s\-\-silent/ nocase ascii wide
         // Description: setting the AnyDesk service password manually
         // Reference: https://thedfirreport.com/2023/04/03/malicious-iso-file-leads-to-domain-wide-ransomware/
-        $string43 = /anydesk\.exe\s\-\-set\-password/ nocase ascii wide
+        $string45 = /anydesk\.exe\s\-\-set\-password/ nocase ascii wide
+        // Description: Anydesk RMM usage
+        // Reference: https://www.inversecos.com/2021/02/forensic-analysis-of-anydesk-logs.html
+        $string46 = /Anydesk\\ad\.trace/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string44 = /boot\.net\.anydesk\.com/ nocase ascii wide
+        $string47 = /boot\.net\.anydesk\.com/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string45 = /C\:\\Program\sFiles\s\(x86\)\\AnyDesk/ nocase ascii wide
+        $string48 = /C\:\\Program\sFiles\s\(x86\)\\AnyDesk/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string46 = /Desktop\\AnyDesk\.lnk/ nocase ascii wide
+        $string49 = /Desktop\\AnyDesk\.lnk/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string47 = /download\.anydesk\.com/ nocase ascii wide
+        $string50 = /download\.anydesk\.com/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string48 = /HKCR\\\.anydesk\\/ nocase ascii wide
+        $string51 = /HKCR\\\.anydesk\\/ nocase ascii wide
         // Description: command line used with anydesk in the notes of the Dispossessor ransomware group
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string49 = /programdata\\.{0,1000}\s\-\-start\-with\-win\s\-\-remove\-first\s\-\-silent\s\-\-start\-service/ nocase ascii wide
+        $string52 = /programdata\\.{0,1000}\s\-\-start\-with\-win\s\-\-remove\-first\s\-\-silent\s\-\-start\-service/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string50 = /relay\-.{0,1000}\.net\.anydesk\.com/ nocase ascii wide
+        $string53 = /relay\-.{0,1000}\.net\.anydesk\.com/ nocase ascii wide
 
     condition:
         any of them

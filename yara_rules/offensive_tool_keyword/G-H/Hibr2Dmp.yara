@@ -1,7 +1,7 @@
 rule Hibr2Dmp
 {
     meta:
-        description = "Detection patterns for the tool 'Hibr2Dmp' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Hibr2Dmp' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Hibr2Dmp"

@@ -1,7 +1,7 @@
 rule DEDSEC_RANSOMWARE
 {
     meta:
-        description = "Detection patterns for the tool 'DEDSEC-RANSOMWARE' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'DEDSEC-RANSOMWARE' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "DEDSEC-RANSOMWARE"
@@ -10,7 +10,7 @@ rule DEDSEC_RANSOMWARE
     strings:
         // Description: dedsec ransomware
         // Reference: https://github.com/xelroth/DEDSEC-RANSOMWARE
-        $string1 = /\.\/dedsec_ransomware/ nocase ascii wide
+        $string1 = /\.\/dedsec_ransomware/
         // Description: dedsec ransomware
         // Reference: https://github.com/xelroth/DEDSEC-RANSOMWARE
         $string2 = /\/DEDSEC\-RANSOMWARE\.git/ nocase ascii wide

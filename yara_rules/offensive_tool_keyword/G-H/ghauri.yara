@@ -1,7 +1,7 @@
 rule ghauri
 {
     meta:
-        description = "Detection patterns for the tool 'ghauri' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'ghauri' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "ghauri"
@@ -16,7 +16,7 @@ rule ghauri
         $string2 = /\.py\s.{0,1000}\s\-\-sql\-shell/ nocase ascii wide
         // Description: A cross-platform python based advanced sql injections detection & exploitation tool
         // Reference: https://github.com/r0oth3x49/ghauri
-        $string3 = /\/dbms\/fingerprint\.py/ nocase ascii wide
+        $string3 = /\/dbms\/fingerprint\.py/
         // Description: A cross-platform python based advanced sql injections detection & exploitation tool
         // Reference: https://github.com/r0oth3x49/ghauri
         $string4 = /\/ghauri\.git/ nocase ascii wide
@@ -25,7 +25,7 @@ rule ghauri
         $string5 = /\/ghauri\.py/ nocase ascii wide
         // Description: A cross-platform python based advanced sql injections detection & exploitation tool
         // Reference: https://github.com/r0oth3x49/ghauri
-        $string6 = "/ghauri/ghauri/" nocase ascii wide
+        $string6 = "/ghauri/ghauri/"
         // Description: A cross-platform python based advanced sql injections detection & exploitation tool
         // Reference: https://github.com/r0oth3x49/ghauri
         $string7 = /\\dbms\\fingerprint\.py/ nocase ascii wide

@@ -1,7 +1,7 @@
 rule cheetah
 {
     meta:
-        description = "Detection patterns for the tool 'cheetah' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'cheetah' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "cheetah"
@@ -19,7 +19,7 @@ rule cheetah
         $string3 = /\/cheetah\.git/ nocase ascii wide
         // Description: a very fast brute force webshell password tool
         // Reference: https://github.com/shmilylty/cheetah
-        $string4 = /\/cheetah\.py/ nocase ascii wide
+        $string4 = /\/cheetah\.py/
         // Description: a very fast brute force webshell password tool
         // Reference: https://github.com/shmilylty/cheetah
         $string5 = /\\big_shell_pwd\.7z/ nocase ascii wide

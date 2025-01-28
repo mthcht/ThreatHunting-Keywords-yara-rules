@@ -1,7 +1,7 @@
 rule VenomousSway
 {
     meta:
-        description = "Detection patterns for the tool 'VenomousSway' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'VenomousSway' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "VenomousSway"
@@ -61,7 +61,7 @@ rule VenomousSway
         $string17 = /\/Corrupt_AMSI\.vba/ nocase ascii wide
         // Description: VBA payload generation framework
         // Reference: https://github.com/trustedsec/The_Shelf
-        $string18 = /\/data\/payload\.log/ nocase ascii wide
+        $string18 = /\/data\/payload\.log/
         // Description: VBA payload generation framework
         // Reference: https://github.com/trustedsec/The_Shelf
         $string19 = /\/EnableAllMacros_AMSI\.py/ nocase ascii wide

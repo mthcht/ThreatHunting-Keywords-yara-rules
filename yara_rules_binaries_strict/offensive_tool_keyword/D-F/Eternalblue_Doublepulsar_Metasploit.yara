@@ -1,7 +1,7 @@
 rule Eternalblue_Doublepulsar_Metasploit
 {
     meta:
-        description = "Detection patterns for the tool 'Eternalblue-Doublepulsar-Metasploit' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Eternalblue-Doublepulsar-Metasploit' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Eternalblue-Doublepulsar-Metasploit"

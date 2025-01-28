@@ -1,7 +1,7 @@
 rule curl
 {
     meta:
-        description = "Detection patterns for the tool 'curl' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'curl' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "curl"
@@ -13,10 +13,10 @@ rule curl
         $string1 = /cmd\.exe.{0,100}\s\/c\secho\scurl\shttps\:\/\/.{0,100}\s\-\-output\s\\"\%temp\%.{0,100}\s\-\-ssl\sno\-revoke\s\-\-insecure\s\-\-location\s\>\s\\"\%temp\%/ nocase ascii wide
         // Description: potential malicious command with curl (|sh)
         // Reference: https://x.com/CraigHRowland/status/1782938242108837896
-        $string2 = /curl\shttp\:\/\/.{0,100}\.png\s\-k\|dd\sskip\=2446\sbs\=1\|sh/ nocase ascii wide
+        $string2 = /curl\shttp\:\/\/.{0,100}\.png\s\-k\|dd\sskip\=2446\sbs\=1\|sh/
         // Description: potential malicious command with curl (|sh)
         // Reference: https://x.com/CraigHRowland/status/1782938242108837896
-        $string3 = /curl\shttps\:\/\/.{0,100}\.png\s\-k\|dd\sskip\=2446\sbs\=1\|sh/ nocase ascii wide
+        $string3 = /curl\shttps\:\/\/.{0,100}\.png\s\-k\|dd\sskip\=2446\sbs\=1\|sh/
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

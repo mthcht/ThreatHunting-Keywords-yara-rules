@@ -1,7 +1,7 @@
 rule crossc2
 {
     meta:
-        description = "Detection patterns for the tool 'crossc2' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'crossc2' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "crossc2"
@@ -16,7 +16,7 @@ rule crossc2
         $string2 = "/mimipenguin/" nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
-        $string3 = /\/tmp\/c2\-rebind\.so/ nocase ascii wide
+        $string3 = /\/tmp\/c2\-rebind\.so/
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
         $string4 = /c2profile\.profile/ nocase ascii wide
@@ -43,7 +43,7 @@ rule crossc2
         $string11 = /CrossC2\.git/ nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
-        $string12 = /CrossC2\.Linux/ nocase ascii wide
+        $string12 = /CrossC2\.Linux/
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
         $string13 = /CrossC2\.MacOS/ nocase ascii wide

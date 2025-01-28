@@ -1,7 +1,7 @@
 rule Pulseway
 {
     meta:
-        description = "Detection patterns for the tool 'Pulseway' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Pulseway' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Pulseway"
@@ -28,7 +28,7 @@ rule Pulseway
         $string6 = /\spulseway_x86\.deb/ nocase ascii wide
         // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
         // Reference: https://www.pulseway.com/
-        $string7 = /\/etc\/pulseway\/config\.xml/ nocase ascii wide
+        $string7 = /\/etc\/pulseway\/config\.xml/
         // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
         // Reference: https://www.pulseway.com/
         $string8 = /\/PCMonitorManager\.exe/ nocase ascii wide
@@ -52,10 +52,10 @@ rule Pulseway
         $string14 = /\/systemd\/system\/pulseway\.service/ nocase ascii wide
         // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
         // Reference: https://www.pulseway.com/
-        $string15 = "/usr/sbin/pulseway" nocase ascii wide
+        $string15 = "/usr/sbin/pulseway"
         // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
         // Reference: https://www.pulseway.com/
-        $string16 = "/usr/sbin/pulsewayd" nocase ascii wide
+        $string16 = "/usr/sbin/pulsewayd"
         // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
         // Reference: https://www.pulseway.com/
         $string17 = /\\AppData\\Roaming\\.{0,100}\\RemoteDesktop\.exe/ nocase ascii wide

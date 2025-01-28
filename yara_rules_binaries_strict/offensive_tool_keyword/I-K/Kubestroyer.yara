@@ -1,7 +1,7 @@
 rule Kubestroyer
 {
     meta:
-        description = "Detection patterns for the tool 'Kubestroyer' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Kubestroyer' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Kubestroyer"
@@ -10,7 +10,7 @@ rule Kubestroyer
     strings:
         // Description: Kubestroyer aims to exploit Kubernetes clusters misconfigurations and be the swiss army knife of your Kubernetes pentests
         // Reference: https://github.com/Rolix44/Kubestroyer
-        $string1 = /\.\/kubestroyer/ nocase ascii wide
+        $string1 = /\.\/kubestroyer/
         // Description: Kubestroyer aims to exploit Kubernetes clusters misconfigurations and be the swiss army knife of your Kubernetes pentests
         // Reference: https://github.com/Rolix44/Kubestroyer
         $string2 = /\/Kubestroyer\.git/ nocase ascii wide
@@ -25,7 +25,7 @@ rule Kubestroyer
         $string5 = "Kubestroyer@latest" nocase ascii wide
         // Description: Kubestroyer aims to exploit Kubernetes clusters misconfigurations and be the swiss army knife of your Kubernetes pentests
         // Reference: https://github.com/Rolix44/Kubestroyer
-        $string6 = "kubestroyer_linux_x64" nocase ascii wide
+        $string6 = "kubestroyer_linux_x64"
         // Description: Kubestroyer aims to exploit Kubernetes clusters misconfigurations and be the swiss army knife of your Kubernetes pentests
         // Reference: https://github.com/Rolix44/Kubestroyer
         $string7 = "kubestroyer_macos_arm64" nocase ascii wide

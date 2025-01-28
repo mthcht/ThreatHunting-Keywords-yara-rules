@@ -1,7 +1,7 @@
 rule ComodoRMM__Itarian_RMM_
 {
     meta:
-        description = "Detection patterns for the tool 'ComodoRMM (Itarian RMM)' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'ComodoRMM (Itarian RMM)' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "ComodoRMM (Itarian RMM)"
@@ -16,13 +16,13 @@ rule ComodoRMM__Itarian_RMM_
         $string2 = /\/RemoteControlSetup\.exe/ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string3 = /\/tmp\/.{0,1000}\/enroll\.sh/ nocase ascii wide
+        $string3 = /\/tmp\/.{0,1000}\/enroll\.sh/
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string4 = /\/tmp\/.{0,1000}\/itsm\.service/ nocase ascii wide
+        $string4 = /\/tmp\/.{0,1000}\/itsm\.service/
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string5 = /\/tmp\/.{0,1000}\/itsm\-linux/ nocase ascii wide
+        $string5 = /\/tmp\/.{0,1000}\/itsm\-linux/
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
         $string6 = /\\AppData\\Local\\Temp\\ITarian_Remote_Access_/ nocase ascii wide
@@ -109,7 +109,7 @@ rule ComodoRMM__Itarian_RMM_
         $string33 = /ITarianRemoteAccessSetup\.exe/ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string34 = /Linux\sITSM\sAgent\/.{0,1000}\s\-e\s\/tmp\/install\.sh\s/ nocase ascii wide
+        $string34 = /Linux\sITSM\sAgent\/.{0,1000}\s\-e\s\/tmp\/install\.sh\s/
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
         $string35 = /mdmsupport\.comodo\.com/ nocase ascii wide

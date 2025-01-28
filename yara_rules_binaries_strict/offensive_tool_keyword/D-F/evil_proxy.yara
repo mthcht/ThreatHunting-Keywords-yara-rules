@@ -1,7 +1,7 @@
 rule evil_proxy
 {
     meta:
-        description = "Detection patterns for the tool 'evil-proxy' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'evil-proxy' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "evil-proxy"
@@ -19,7 +19,7 @@ rule evil_proxy
         $string3 = " install evil-proxy" nocase ascii wide
         // Description: A ruby http/https proxy to do EVIL things
         // Reference: https://github.com/bbtfr/evil-proxy
-        $string4 = /\.\/evil\-proxy/ nocase ascii wide
+        $string4 = /\.\/evil\-proxy/
         // Description: A ruby http/https proxy to do EVIL things
         // Reference: https://github.com/bbtfr/evil-proxy
         $string5 = /\/evil\-proxy\.git/ nocase ascii wide
@@ -28,7 +28,7 @@ rule evil_proxy
         $string6 = /\/evil\-proxy\.rb/ nocase ascii wide
         // Description: A ruby http/https proxy to do EVIL things
         // Reference: https://github.com/bbtfr/evil-proxy
-        $string7 = "/evil-proxy/" nocase ascii wide
+        $string7 = "/evil-proxy/"
         // Description: A ruby http/https proxy to do EVIL things
         // Reference: https://github.com/bbtfr/evil-proxy
         $string8 = "@mitm_pattern = " nocase ascii wide

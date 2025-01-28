@@ -1,7 +1,7 @@
 rule CredMaster
 {
     meta:
-        description = "Detection patterns for the tool 'CredMaster' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'CredMaster' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "CredMaster"
@@ -46,10 +46,10 @@ rule CredMaster
         $string12 = /\/CredMaster\-master\.zip/ nocase ascii wide
         // Description: CredKing password spraying tool - uses FireProx APIs to rotate IP addresses
         // Reference: https://github.com/knavesec/CredMaster
-        $string13 = /\/credmaster\-success\.txt/ nocase ascii wide
+        $string13 = /\/credmaster\-success\.txt/
         // Description: CredKing password spraying tool - uses FireProx APIs to rotate IP addresses
         // Reference: https://github.com/knavesec/CredMaster
-        $string14 = /\/credmaster\-validusers\.txt/ nocase ascii wide
+        $string14 = /\/credmaster\-validusers\.txt/
         // Description: CredKing password spraying tool - uses FireProx APIs to rotate IP addresses
         // Reference: https://github.com/knavesec/CredMaster
         $string15 = /\/ntlmdecoder\.py/ nocase ascii wide

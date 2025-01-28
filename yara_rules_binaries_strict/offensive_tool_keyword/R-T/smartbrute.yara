@@ -1,7 +1,7 @@
 rule smartbrute
 {
     meta:
-        description = "Detection patterns for the tool 'smartbrute' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'smartbrute' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "smartbrute"
@@ -34,7 +34,7 @@ rule smartbrute
         $string8 = /\/smartbrute\.git/ nocase ascii wide
         // Description: Password spraying and bruteforcing tool for Active Directory Domain Services
         // Reference: https://github.com/ShutdownRepo/smartbrute
-        $string9 = "/smartbrute-main" nocase ascii wide
+        $string9 = "/smartbrute-main"
         // Description: Password spraying and bruteforcing tool for Active Directory Domain Services
         // Reference: https://github.com/ShutdownRepo/smartbrute
         $string10 = /\[bruteforce_mode\]/ nocase ascii wide

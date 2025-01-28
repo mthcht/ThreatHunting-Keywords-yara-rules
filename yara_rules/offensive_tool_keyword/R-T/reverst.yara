@@ -1,7 +1,7 @@
 rule reverst
 {
     meta:
-        description = "Detection patterns for the tool 'reverst' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'reverst' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "reverst"
@@ -19,16 +19,16 @@ rule reverst
         $string3 = /\.reverst\.tunnel\:/ nocase ascii wide
         // Description: Reverse Tunnels in Go over HTTP/3 and QUIC
         // Reference: https://github.com/flipt-io/reverst
-        $string4 = "/cmd/reverst/" nocase ascii wide
+        $string4 = "/cmd/reverst/"
         // Description: Reverse Tunnels in Go over HTTP/3 and QUIC
         // Reference: https://github.com/flipt-io/reverst
-        $string5 = "/etc/reverst/" nocase ascii wide
+        $string5 = "/etc/reverst/"
         // Description: Reverse Tunnels in Go over HTTP/3 and QUIC
         // Reference: https://github.com/flipt-io/reverst
-        $string6 = "/etc/reverst/" nocase ascii wide
+        $string6 = "/etc/reverst/"
         // Description: Reverse Tunnels in Go over HTTP/3 and QUIC
         // Reference: https://github.com/flipt-io/reverst
-        $string7 = "/quic-go/quic-go/http3" nocase ascii wide
+        $string7 = "/quic-go/quic-go/http3"
         // Description: Reverse Tunnels in Go over HTTP/3 and QUIC
         // Reference: https://github.com/flipt-io/reverst
         $string8 = /\/reverst\.git/ nocase ascii wide
@@ -37,10 +37,10 @@ rule reverst
         $string9 = /\/reverst\.git/ nocase ascii wide
         // Description: Reverse Tunnels in Go over HTTP/3 and QUIC
         // Reference: https://github.com/flipt-io/reverst
-        $string10 = "/usr/local/bin/reverst" nocase ascii wide
+        $string10 = "/usr/local/bin/reverst"
         // Description: Reverse Tunnels in Go over HTTP/3 and QUIC
         // Reference: https://github.com/flipt-io/reverst
-        $string11 = "/usr/local/bin/reverst" nocase ascii wide
+        $string11 = "/usr/local/bin/reverst"
         // Description: Reverse Tunnels in Go over HTTP/3 and QUIC
         // Reference: https://github.com/flipt-io/reverst
         $string12 = "1d2c6cbd5fc288ffb92db49344a394eba6d3418df04bd6178007a33b8d82178e" nocase ascii wide
@@ -58,7 +58,7 @@ rule reverst
         $string16 = "flipt-io/reverst" nocase ascii wide
         // Description: Reverse Tunnels in Go over HTTP/3 and QUIC
         // Reference: https://github.com/flipt-io/reverst
-        $string17 = /go\srun\s\.\/cmd\/reverst\// nocase ascii wide
+        $string17 = /go\srun\s\.\/cmd\/reverst\//
         // Description: Reverse Tunnels in Go over HTTP/3 and QUIC
         // Reference: https://github.com/flipt-io/reverst
         $string18 = /go\.flipt\.io\/reverst\// nocase ascii wide

@@ -1,7 +1,7 @@
 rule persistence_demos
 {
     meta:
-        description = "Detection patterns for the tool 'persistence_demos' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'persistence_demos' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "persistence_demos"

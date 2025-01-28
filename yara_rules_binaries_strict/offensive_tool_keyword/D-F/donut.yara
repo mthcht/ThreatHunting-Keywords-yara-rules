@@ -1,7 +1,7 @@
 rule donut
 {
     meta:
-        description = "Detection patterns for the tool 'donut' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'donut' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "donut"
@@ -34,7 +34,7 @@ rule donut
         $string8 = /\s\-u\shttp.{0,100}\s\-f\s.{0,100}\.dll\s.{0,100}\s\-p\s/ nocase ascii wide
         // Description: Donut is a position-independent code that enables in-memory execution of VBScript. JScript. EXE. DLL files and dotNET assemblies. A module created by Donut can either be staged from a HTTP server or embedded directly in the loader itself
         // Reference: https://github.com/TheWover/donut
-        $string9 = /\/donut\s.{0,100}\.exe/ nocase ascii wide
+        $string9 = /\/donut\s.{0,100}\.exe/
         // Description: Donut is a position-independent code that enables in-memory execution of VBScript. JScript. EXE. DLL files and dotNET assemblies. A module created by Donut can either be staged from a HTTP server or embedded directly in the loader itself
         // Reference: https://github.com/TheWover/donut
         $string10 = /\/donut\.exe/ nocase ascii wide

@@ -1,7 +1,7 @@
 rule modproble
 {
     meta:
-        description = "Detection patterns for the tool 'modproble' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'modproble' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "modproble"

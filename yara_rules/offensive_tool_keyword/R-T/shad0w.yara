@@ -1,7 +1,7 @@
 rule shad0w
 {
     meta:
-        description = "Detection patterns for the tool 'shad0w' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'shad0w' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "shad0w"
@@ -31,13 +31,13 @@ rule shad0w
         $string7 = /\/shad0w\/beacon\/beacon\.dll/ nocase ascii wide
         // Description: A post exploitation framework designed to operate covertly on heavily monitored environments
         // Reference: https://github.com/bats3c/shad0w
-        $string8 = /\/sharpsocks\.log/ nocase ascii wide
+        $string8 = /\/sharpsocks\.log/
         // Description: A post exploitation framework designed to operate covertly on heavily monitored environments
         // Reference: https://github.com/bats3c/shad0w
         $string9 = /\/SharpSocksServerCore\.dll/ nocase ascii wide
         // Description: A post exploitation framework designed to operate covertly on heavily monitored environments
         // Reference: https://github.com/bats3c/shad0w
-        $string10 = "/usr/bin/shad0w" nocase ascii wide
+        $string10 = "/usr/bin/shad0w"
         // Description: A post exploitation framework designed to operate covertly on heavily monitored environments
         // Reference: https://github.com/bats3c/shad0w
         $string11 = /\[\+\]\sGot\sSystem\!\!\!\\n/ nocase ascii wide

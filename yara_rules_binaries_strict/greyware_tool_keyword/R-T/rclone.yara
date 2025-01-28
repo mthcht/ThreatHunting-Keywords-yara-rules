@@ -1,7 +1,7 @@
 rule rclone
 {
     meta:
-        description = "Detection patterns for the tool 'rclone' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'rclone' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "rclone"
@@ -34,10 +34,10 @@ rule rclone
         $string8 = "/rclone/releases/download/" nocase ascii wide
         // Description: Rclone is a command line program for syncing files with cloud storage services - abused by a lot of ransomware groups
         // Reference: https://github.com/rclone/rclone
-        $string9 = "/usr/bin/rclone" nocase ascii wide
+        $string9 = "/usr/bin/rclone"
         // Description: Rclone is a command line program for syncing files with cloud storage services - abused by a lot of ransomware groups
         // Reference: https://github.com/rclone/rclone
-        $string10 = "/usr/share/doc/rclone/" nocase ascii wide
+        $string10 = "/usr/share/doc/rclone/"
         // Description: Rclone is a command line program for syncing files with cloud storage services - abused by a lot of ransomware groups
         // Reference: https://github.com/rclone/rclone
         $string11 = /\\\.config\\rclone\\/ nocase ascii wide
@@ -4123,67 +4123,64 @@ rule rclone
         $string1371 = "fff35786bf9ee9320037db69e239df83768b8f756bae2343253ba6512e70d86c" nocase ascii wide
         // Description: Rclone is a command line program for syncing files with cloud storage services - abused by a lot of ransomware groups
         // Reference: https://github.com/rclone/rclone
-        $string1372 = "file_hash_sha256" nocase ascii wide
+        $string1372 = "from rclone import " nocase ascii wide
         // Description: Rclone is a command line program for syncing files with cloud storage services - abused by a lot of ransomware groups
         // Reference: https://github.com/rclone/rclone
-        $string1373 = "from rclone import " nocase ascii wide
+        $string1373 = /https\:\/\/rclone\.org\/install\.sh/ nocase ascii wide
         // Description: Rclone is a command line program for syncing files with cloud storage services - abused by a lot of ransomware groups
         // Reference: https://github.com/rclone/rclone
-        $string1374 = /https\:\/\/rclone\.org\/install\.sh/ nocase ascii wide
+        $string1374 = /rclone\s\scopy\s.{0,100}\:/ nocase ascii wide
         // Description: Rclone is a command line program for syncing files with cloud storage services - abused by a lot of ransomware groups
         // Reference: https://github.com/rclone/rclone
-        $string1375 = /rclone\s\scopy\s.{0,100}\:/ nocase ascii wide
+        $string1375 = "rclone config" nocase ascii wide
         // Description: Rclone is a command line program for syncing files with cloud storage services - abused by a lot of ransomware groups
         // Reference: https://github.com/rclone/rclone
-        $string1376 = "rclone config" nocase ascii wide
+        $string1376 = /rclone\scopy\s.{0,100}\:/ nocase ascii wide
         // Description: Rclone is a command line program for syncing files with cloud storage services - abused by a lot of ransomware groups
         // Reference: https://github.com/rclone/rclone
-        $string1377 = /rclone\scopy\s.{0,100}\:/ nocase ascii wide
+        $string1377 = "rclone copy" nocase ascii wide
         // Description: Rclone is a command line program for syncing files with cloud storage services - abused by a lot of ransomware groups
         // Reference: https://github.com/rclone/rclone
-        $string1378 = "rclone copy" nocase ascii wide
+        $string1378 = "rclone obscure" nocase ascii wide
         // Description: Rclone is a command line program for syncing files with cloud storage services - abused by a lot of ransomware groups
         // Reference: https://github.com/rclone/rclone
-        $string1379 = "rclone obscure" nocase ascii wide
+        $string1379 = "rclone rcat " nocase ascii wide
         // Description: Rclone is a command line program for syncing files with cloud storage services - abused by a lot of ransomware groups
         // Reference: https://github.com/rclone/rclone
-        $string1380 = "rclone rcat " nocase ascii wide
+        $string1380 = /rclone\.exe\sconfig\screate\sremote\smega\suser\s/ nocase ascii wide
         // Description: Rclone is a command line program for syncing files with cloud storage services - abused by a lot of ransomware groups
         // Reference: https://github.com/rclone/rclone
-        $string1381 = /rclone\.exe\sconfig\screate\sremote\smega\suser\s/ nocase ascii wide
+        $string1381 = /rclone\.exe\sconfig/ nocase ascii wide
         // Description: Rclone is a command line program for syncing files with cloud storage services - abused by a lot of ransomware groups
         // Reference: https://github.com/rclone/rclone
-        $string1382 = /rclone\.exe\sconfig/ nocase ascii wide
+        $string1382 = /rclone\.exe\scopy/ nocase ascii wide
         // Description: Rclone is a command line program for syncing files with cloud storage services - abused by a lot of ransomware groups
         // Reference: https://github.com/rclone/rclone
-        $string1383 = /rclone\.exe\scopy/ nocase ascii wide
+        $string1383 = /rclone\.exe\screate/ nocase ascii wide
         // Description: Rclone is a command line program for syncing files with cloud storage services - abused by a lot of ransomware groups
         // Reference: https://github.com/rclone/rclone
-        $string1384 = /rclone\.exe\screate/ nocase ascii wide
+        $string1384 = /rclone\.exe\smega/ nocase ascii wide
         // Description: Rclone is a command line program for syncing files with cloud storage services - abused by a lot of ransomware groups
         // Reference: https://github.com/rclone/rclone
-        $string1385 = /rclone\.exe\smega/ nocase ascii wide
+        $string1385 = /rclone\.exe\sremote/ nocase ascii wide
         // Description: Rclone is a command line program for syncing files with cloud storage services - abused by a lot of ransomware groups
         // Reference: https://github.com/rclone/rclone
-        $string1386 = /rclone\.exe\sremote/ nocase ascii wide
+        $string1386 = /rclone\.exe.{0,100}\scopy\s.{0,100}\:/ nocase ascii wide
         // Description: Rclone is a command line program for syncing files with cloud storage services - abused by a lot of ransomware groups
         // Reference: https://github.com/rclone/rclone
-        $string1387 = /rclone\.exe.{0,100}\scopy\s.{0,100}\:/ nocase ascii wide
+        $string1387 = /rclone\.exe.{0,100}\s\-l\s.{0,100}\s.{0,100}\:/ nocase ascii wide
         // Description: Rclone is a command line program for syncing files with cloud storage services - abused by a lot of ransomware groups
         // Reference: https://github.com/rclone/rclone
-        $string1388 = /rclone\.exe.{0,100}\s\-l\s.{0,100}\s.{0,100}\:/ nocase ascii wide
+        $string1388 = "rclone/imagekit" nocase ascii wide
         // Description: Rclone is a command line program for syncing files with cloud storage services - abused by a lot of ransomware groups
         // Reference: https://github.com/rclone/rclone
-        $string1389 = "rclone/imagekit" nocase ascii wide
+        $string1389 = "rclone/rclone" nocase ascii wide
         // Description: Rclone is a command line program for syncing files with cloud storage services - abused by a lot of ransomware groups
         // Reference: https://github.com/rclone/rclone
-        $string1390 = "rclone/rclone" nocase ascii wide
+        $string1390 = /rclone\-beta\-latest\-windows\-amd64\.zip/ nocase ascii wide
         // Description: Rclone is a command line program for syncing files with cloud storage services - abused by a lot of ransomware groups
         // Reference: https://github.com/rclone/rclone
-        $string1391 = /rclone\-beta\-latest\-windows\-amd64\.zip/ nocase ascii wide
-        // Description: Rclone is a command line program for syncing files with cloud storage services - abused by a lot of ransomware groups
-        // Reference: https://github.com/rclone/rclone
-        $string1392 = /rclone\-current\-windows\-arm64\.zip/ nocase ascii wide
+        $string1391 = /rclone\-current\-windows\-arm64\.zip/ nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

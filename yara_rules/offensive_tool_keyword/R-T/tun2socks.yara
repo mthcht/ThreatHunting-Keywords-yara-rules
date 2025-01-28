@@ -1,7 +1,7 @@
 rule tun2socks
 {
     meta:
-        description = "Detection patterns for the tool 'tun2socks' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'tun2socks' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "tun2socks"
@@ -10,13 +10,13 @@ rule tun2socks
     strings:
         // Description: socks tunneling
         // Reference: https://github.com/xjasonlyu/tun2socks
-        $string1 = " tun2socks-darwin" nocase ascii wide
+        $string1 = " tun2socks-darwin"
         // Description: socks tunneling
         // Reference: https://github.com/xjasonlyu/tun2socks
         $string2 = " tun2socks-freebsd" nocase ascii wide
         // Description: socks tunneling
         // Reference: https://github.com/xjasonlyu/tun2socks
-        $string3 = " tun2socks-linux" nocase ascii wide
+        $string3 = " tun2socks-linux"
         // Description: socks tunneling
         // Reference: https://github.com/xjasonlyu/tun2socks
         $string4 = " tun2socks-openbsd" nocase ascii wide
@@ -31,13 +31,13 @@ rule tun2socks
         $string7 = "/tun2socks/" nocase ascii wide
         // Description: socks tunneling
         // Reference: https://github.com/xjasonlyu/tun2socks
-        $string8 = "/tun2socks-darwin" nocase ascii wide
+        $string8 = "/tun2socks-darwin"
         // Description: socks tunneling
         // Reference: https://github.com/xjasonlyu/tun2socks
         $string9 = "/tun2socks-freebsd" nocase ascii wide
         // Description: socks tunneling
         // Reference: https://github.com/xjasonlyu/tun2socks
-        $string10 = "/tun2socks-linux" nocase ascii wide
+        $string10 = "/tun2socks-linux"
         // Description: socks tunneling
         // Reference: https://github.com/xjasonlyu/tun2socks
         $string11 = "/tun2socks-openbsd" nocase ascii wide

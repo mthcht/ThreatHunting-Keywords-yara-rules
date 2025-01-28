@@ -1,7 +1,7 @@
 rule Lumma_Stealer
 {
     meta:
-        description = "Detection patterns for the tool 'Lumma Stealer' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Lumma Stealer' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Lumma Stealer"

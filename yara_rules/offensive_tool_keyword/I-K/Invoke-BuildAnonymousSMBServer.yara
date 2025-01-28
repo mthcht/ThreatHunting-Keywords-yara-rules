@@ -1,7 +1,7 @@
 rule Invoke_BuildAnonymousSMBServer
 {
     meta:
-        description = "Detection patterns for the tool 'Invoke-BuildAnonymousSMBServer' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Invoke-BuildAnonymousSMBServer' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Invoke-BuildAnonymousSMBServer"

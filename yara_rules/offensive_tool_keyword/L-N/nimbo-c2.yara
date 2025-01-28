@@ -1,7 +1,7 @@
 rule nimbo_c2
 {
     meta:
-        description = "Detection patterns for the tool 'nimbo-c2' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'nimbo-c2' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "nimbo-c2"
@@ -34,7 +34,7 @@ rule nimbo_c2
         $string8 = "C2 Framework for villains" nocase ascii wide
         // Description: Nimbo-C2 is yet another (simple and lightweight) C2 framework
         // Reference: https://github.com/itaymigdal/Nimbo-C2
-        $string9 = "download /etc/passwd" nocase ascii wide
+        $string9 = "download /etc/passwd"
         // Description: Nimbo-C2 is yet another (simple and lightweight) C2 framework
         // Reference: https://github.com/itaymigdal/Nimbo-C2
         $string10 = "dump_lsass" nocase ascii wide

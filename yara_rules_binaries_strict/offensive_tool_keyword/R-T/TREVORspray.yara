@@ -1,7 +1,7 @@
 rule TREVORspray
 {
     meta:
-        description = "Detection patterns for the tool 'TREVORspray' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'TREVORspray' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "TREVORspray"
@@ -16,7 +16,7 @@ rule TREVORspray
         $string2 = /\/trevorspray\.log/ nocase ascii wide
         // Description: TREVORspray is a modular password sprayer with threading - clever proxying - loot modules and more
         // Reference: https://github.com/blacklanternsecurity/TREVORspray
-        $string3 = /\/tried_logins\.txt/ nocase ascii wide
+        $string3 = /\/tried_logins\.txt/
         // Description: TREVORspray is a modular password sprayer with threading - clever proxying - loot modules and more
         // Reference: https://github.com/blacklanternsecurity/TREVORspray
         $string4 = "blacklanternsecurity/trevorproxy" nocase ascii wide

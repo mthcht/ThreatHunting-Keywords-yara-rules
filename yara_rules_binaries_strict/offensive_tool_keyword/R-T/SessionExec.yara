@@ -1,7 +1,7 @@
 rule SessionExec
 {
     meta:
-        description = "Detection patterns for the tool 'SessionExec' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'SessionExec' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "SessionExec"
@@ -13,7 +13,7 @@ rule SessionExec
         $string1 = /\/SessionExec\.exe/ nocase ascii wide
         // Description: Execute commands in other Sessions
         // Reference: https://github.com/Leo4j/SessionExec
-        $string2 = /\?function\sInvoke\-SessionExec/ nocase ascii wide
+        $string2 = "function Invoke-SessionExec" nocase ascii wide
         // Description: Execute commands in other Sessions
         // Reference: https://github.com/Leo4j/SessionExec
         $string3 = /\\SessionExec\.exe/ nocase ascii wide

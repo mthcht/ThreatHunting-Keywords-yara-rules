@@ -1,7 +1,7 @@
 rule pacu
 {
     meta:
-        description = "Detection patterns for the tool 'pacu' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'pacu' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "pacu"
@@ -13,49 +13,49 @@ rule pacu
         $string1 = " --pacu-help" nocase ascii wide
         // Description: The AWS exploitation framework designed for testing the security of Amazon Web Services environments.
         // Reference: https://github.com/RhinoSecurityLabs/pacu
-        $string2 = /\/\.local\/share\/pacu\// nocase ascii wide
+        $string2 = /\/\.local\/share\/pacu\//
         // Description: The AWS exploitation framework designed for testing the security of Amazon Web Services environments.
         // Reference: https://github.com/RhinoSecurityLabs/pacu
-        $string3 = /\/acm_enum_cas_.{0,100}\.json/ nocase ascii wide
+        $string3 = /\/acm_enum_cas_.{0,100}\.json/
         // Description: The AWS exploitation framework designed for testing the security of Amazon Web Services environments.
         // Reference: https://github.com/RhinoSecurityLabs/pacu
-        $string4 = /\/acm_enum_certs_.{0,100}\.json/ nocase ascii wide
+        $string4 = /\/acm_enum_certs_.{0,100}\.json/
         // Description: The AWS exploitation framework designed for testing the security of Amazon Web Services environments.
         // Reference: https://github.com/RhinoSecurityLabs/pacu
-        $string5 = /\/acm_enum_certs_chain_.{0,100}\.json/ nocase ascii wide
+        $string5 = /\/acm_enum_certs_chain_.{0,100}\.json/
         // Description: The AWS exploitation framework designed for testing the security of Amazon Web Services environments.
         // Reference: https://github.com/RhinoSecurityLabs/pacu
-        $string6 = /\/acm_enum_certs_expired_.{0,100}\.json/ nocase ascii wide
+        $string6 = /\/acm_enum_certs_expired_.{0,100}\.json/
         // Description: The AWS exploitation framework designed for testing the security of Amazon Web Services environments.
         // Reference: https://github.com/RhinoSecurityLabs/pacu
-        $string7 = /\/acm_enum_certs_info_.{0,100}\.json/ nocase ascii wide
+        $string7 = /\/acm_enum_certs_info_.{0,100}\.json/
         // Description: The AWS exploitation framework designed for testing the security of Amazon Web Services environments.
         // Reference: https://github.com/RhinoSecurityLabs/pacu
-        $string8 = "/aws__enum_account" nocase ascii wide
+        $string8 = "/aws__enum_account"
         // Description: The AWS exploitation framework designed for testing the security of Amazon Web Services environments.
         // Reference: https://github.com/RhinoSecurityLabs/pacu
-        $string9 = /\/aws__enum_account\/main\.py/ nocase ascii wide
+        $string9 = /\/aws__enum_account\/main\.py/
         // Description: The AWS exploitation framework designed for testing the security of Amazon Web Services environments.
         // Reference: https://github.com/RhinoSecurityLabs/pacu
         $string10 = /\/backdoor_all_users\.py/ nocase ascii wide
         // Description: The AWS exploitation framework designed for testing the security of Amazon Web Services environments.
         // Reference: https://github.com/RhinoSecurityLabs/pacu
-        $string11 = "/cfn__resource_injection_lambda" nocase ascii wide
+        $string11 = "/cfn__resource_injection_lambda"
         // Description: The AWS exploitation framework designed for testing the security of Amazon Web Services environments.
         // Reference: https://github.com/RhinoSecurityLabs/pacu
-        $string12 = /\/cmd_log\.txt/ nocase ascii wide
+        $string12 = /\/cmd_log\.txt/
         // Description: The AWS exploitation framework designed for testing the security of Amazon Web Services environments.
         // Reference: https://github.com/RhinoSecurityLabs/pacu
         $string13 = "/ec2__backdoor_ec2_sec_groups" nocase ascii wide
         // Description: The AWS exploitation framework designed for testing the security of Amazon Web Services environments.
         // Reference: https://github.com/RhinoSecurityLabs/pacu
-        $string14 = /\/ec2__check_termination_protection.{0,100}\.py/ nocase ascii wide
+        $string14 = /\/ec2__check_termination_protection.{0,100}\.py/
         // Description: The AWS exploitation framework designed for testing the security of Amazon Web Services environments.
         // Reference: https://github.com/RhinoSecurityLabs/pacu
-        $string15 = /\/ec2__startup_shell_script\/main\.py/ nocase ascii wide
+        $string15 = /\/ec2__startup_shell_script\/main\.py/
         // Description: The AWS exploitation framework designed for testing the security of Amazon Web Services environments.
         // Reference: https://github.com/RhinoSecurityLabs/pacu
-        $string16 = /\/ec2_public_ips_.{0,100}_.{0,100}\.txt/ nocase ascii wide
+        $string16 = /\/ec2_public_ips_.{0,100}_.{0,100}\.txt/
         // Description: The AWS exploitation framework designed for testing the security of Amazon Web Services environments.
         // Reference: https://github.com/RhinoSecurityLabs/pacu
         $string17 = /\/enum__secrets\/.{0,100}\.py/ nocase ascii wide
@@ -67,7 +67,7 @@ rule pacu
         $string19 = "/iam__bruteforce_permissions/" nocase ascii wide
         // Description: The AWS exploitation framework designed for testing the security of Amazon Web Services environments.
         // Reference: https://github.com/RhinoSecurityLabs/pacu
-        $string20 = "/iam__privesc_scan" nocase ascii wide
+        $string20 = "/iam__privesc_scan"
         // Description: The AWS exploitation framework designed for testing the security of Amazon Web Services environments.
         // Reference: https://github.com/RhinoSecurityLabs/pacu
         $string21 = "/lambda__backdoor_new_roles" nocase ascii wide
@@ -85,7 +85,7 @@ rule pacu
         $string25 = "/vpc__enum_lateral_movement" nocase ascii wide
         // Description: The AWS exploitation framework designed for testing the security of Amazon Web Services environments.
         // Reference: https://github.com/RhinoSecurityLabs/pacu
-        $string26 = /\/waf__enum\/main\.py/ nocase ascii wide
+        $string26 = /\/waf__enum\/main\.py/
         // Description: The AWS exploitation framework designed for testing the security of Amazon Web Services environments.
         // Reference: https://github.com/RhinoSecurityLabs/pacu
         $string27 = /\=MSEXCEL.{0,100}regsvr32\s\/s\s\/n\s\/u\s\/i\:http.{0,100}\/SCTLauncher\.sct\sscrobj\.dll/ nocase ascii wide

@@ -1,7 +1,7 @@
 rule Mobile_Security_Framework_MobSF
 {
     meta:
-        description = "Detection patterns for the tool 'Mobile-Security-Framework-MobSF' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Mobile-Security-Framework-MobSF' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Mobile-Security-Framework-MobSF"

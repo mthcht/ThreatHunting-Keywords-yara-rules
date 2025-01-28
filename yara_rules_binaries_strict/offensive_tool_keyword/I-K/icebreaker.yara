@@ -1,7 +1,7 @@
 rule icebreaker
 {
     meta:
-        description = "Detection patterns for the tool 'icebreaker' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'icebreaker' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "icebreaker"
@@ -28,10 +28,10 @@ rule icebreaker
         $string6 = /\.py.{0,100}found\-users\.txt/ nocase ascii wide
         // Description: Gets plaintext Active Directory credentials if you're on the internal network but outside the AD environment
         // Reference: https://github.com/DanMcInerney/icebreaker
-        $string7 = "/DanMcInerney/ridenum" nocase ascii wide
+        $string7 = "/DanMcInerney/ridenum"
         // Description: Gets plaintext Active Directory credentials if you're on the internal network but outside the AD environment
         // Reference: https://github.com/DanMcInerney/icebreaker
-        $string8 = /\/DeathStar\/DeathStar\.py/ nocase ascii wide
+        $string8 = /\/DeathStar\/DeathStar\.py/
         // Description: Gets plaintext Active Directory credentials if you're on the internal network but outside the AD environment
         // Reference: https://github.com/DanMcInerney/icebreaker
         $string9 = /\/icebreaker\.git/ nocase ascii wide
@@ -40,31 +40,31 @@ rule icebreaker
         $string10 = /\/icebreaker\.py/ nocase ascii wide
         // Description: Gets plaintext Active Directory credentials if you're on the internal network but outside the AD environment
         // Reference: https://github.com/DanMcInerney/icebreaker
-        $string11 = "/lgandx/Responder" nocase ascii wide
+        $string11 = "/lgandx/Responder"
         // Description: Gets plaintext Active Directory credentials if you're on the internal network but outside the AD environment
         // Reference: https://github.com/DanMcInerney/icebreaker
-        $string12 = "/opt/icebreaker" nocase ascii wide
+        $string12 = "/opt/icebreaker"
         // Description: Gets plaintext Active Directory credentials if you're on the internal network but outside the AD environment
         // Reference: https://github.com/DanMcInerney/icebreaker
-        $string13 = /\/Responder\/Responder\.conf/ nocase ascii wide
+        $string13 = /\/Responder\/Responder\.conf/
         // Description: Gets plaintext Active Directory credentials if you're on the internal network but outside the AD environment
         // Reference: https://github.com/DanMcInerney/icebreaker
-        $string14 = /\/ridenum\/ridenum\.py/ nocase ascii wide
+        $string14 = /\/ridenum\/ridenum\.py/
         // Description: Gets plaintext Active Directory credentials if you're on the internal network but outside the AD environment
         // Reference: https://github.com/DanMcInerney/icebreaker
-        $string15 = /\/shares\-with\-SCF\.txt/ nocase ascii wide
+        $string15 = /\/shares\-with\-SCF\.txt/
         // Description: Gets plaintext Active Directory credentials if you're on the internal network but outside the AD environment
         // Reference: https://github.com/DanMcInerney/icebreaker
-        $string16 = /\/smb\-cmds\.txt/ nocase ascii wide
+        $string16 = /\/smb\-cmds\.txt/
         // Description: Gets plaintext Active Directory credentials if you're on the internal network but outside the AD environment
         // Reference: https://github.com/DanMcInerney/icebreaker
-        $string17 = /\/smb\-signing\-disabled\-hosts\.txt/ nocase ascii wide
+        $string17 = /\/smb\-signing\-disabled\-hosts\.txt/
         // Description: Gets plaintext Active Directory credentials if you're on the internal network but outside the AD environment
         // Reference: https://github.com/DanMcInerney/icebreaker
-        $string18 = /\/theHarvester\.py/ nocase ascii wide
+        $string18 = /\/theHarvester\.py/
         // Description: Gets plaintext Active Directory credentials if you're on the internal network but outside the AD environment
         // Reference: https://github.com/DanMcInerney/icebreaker
-        $string19 = "/virtualenvs/icebreaker" nocase ascii wide
+        $string19 = "/virtualenvs/icebreaker"
         // Description: Gets plaintext Active Directory credentials if you're on the internal network but outside the AD environment
         // Reference: https://github.com/DanMcInerney/icebreaker
         $string20 = /\\icebreaker\.py/ nocase ascii wide
@@ -133,7 +133,7 @@ rule icebreaker
         $string41 = /ntlmrelayx\.py\.log/ nocase ascii wide
         // Description: Gets plaintext Active Directory credentials if you're on the internal network but outside the AD environment
         // Reference: https://github.com/DanMcInerney/icebreaker
-        $string42 = "sudo tmux new -s icebreaker" nocase ascii wide
+        $string42 = "sudo tmux new -s icebreaker"
         // Description: Gets plaintext Active Directory credentials if you're on the internal network but outside the AD environment
         // Reference: https://github.com/DanMcInerney/icebreaker
         $string43 = /\-\-wordlist\=.{0,100}\-passwords\.txt/ nocase ascii wide

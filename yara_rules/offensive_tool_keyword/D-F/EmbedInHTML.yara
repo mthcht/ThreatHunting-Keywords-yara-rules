@@ -1,7 +1,7 @@
 rule EmbedInHTML
 {
     meta:
-        description = "Detection patterns for the tool 'EmbedInHTML' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'EmbedInHTML' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "EmbedInHTML"
@@ -64,25 +64,31 @@ rule EmbedInHTML
         $string18 = "/EmbedInHTML/" nocase ascii wide
         // Description: What this tool does is taking a file (any type of file). encrypt it. and embed it into an HTML file as ressource. along with an automatic download routine simulating a user clicking on the embedded ressource.
         // Reference: https://github.com/Arno0x/EmbedInHTML
-        $string19 = "Arno0x/EmbedInHTML" nocase ascii wide
+        $string19 = "36ff05fc406bf6a2e677374028ba00cb622b2219e44c198d5dd6efae4ae963c3" nocase ascii wide
         // Description: What this tool does is taking a file (any type of file). encrypt it. and embed it into an HTML file as ressource. along with an automatic download routine simulating a user clicking on the embedded ressource.
         // Reference: https://github.com/Arno0x/EmbedInHTML
-        $string20 = /embedInHTML\.html/ nocase ascii wide
+        $string20 = "809f540f580fc0e192a1c0432ec04105a3faf51f9d7c20f5e15423b78774052d" nocase ascii wide
         // Description: What this tool does is taking a file (any type of file). encrypt it. and embed it into an HTML file as ressource. along with an automatic download routine simulating a user clicking on the embedded ressource.
         // Reference: https://github.com/Arno0x/EmbedInHTML
-        $string21 = /embedInHTML\.py/ nocase ascii wide
+        $string21 = "Arno0x/EmbedInHTML" nocase ascii wide
         // Description: What this tool does is taking a file (any type of file). encrypt it. and embed it into an HTML file as ressource. along with an automatic download routine simulating a user clicking on the embedded ressource.
         // Reference: https://github.com/Arno0x/EmbedInHTML
-        $string22 = "EmbedInHTML-master" nocase ascii wide
+        $string22 = /embedInHTML\.html/ nocase ascii wide
         // Description: What this tool does is taking a file (any type of file). encrypt it. and embed it into an HTML file as ressource. along with an automatic download routine simulating a user clicking on the embedded ressource.
         // Reference: https://github.com/Arno0x/EmbedInHTML
-        $string23 = /\-f\spayloads_examples\/calc\./ nocase ascii wide
+        $string23 = /embedInHTML\.py/ nocase ascii wide
         // Description: What this tool does is taking a file (any type of file). encrypt it. and embed it into an HTML file as ressource. along with an automatic download routine simulating a user clicking on the embedded ressource.
         // Reference: https://github.com/Arno0x/EmbedInHTML
-        $string24 = /payloads_examples.{0,1000}calc\.js/ nocase ascii wide
+        $string24 = "EmbedInHTML-master" nocase ascii wide
         // Description: What this tool does is taking a file (any type of file). encrypt it. and embed it into an HTML file as ressource. along with an automatic download routine simulating a user clicking on the embedded ressource.
         // Reference: https://github.com/Arno0x/EmbedInHTML
-        $string25 = /payloads_examples.{0,1000}calc\.xll/ nocase ascii wide
+        $string25 = /\-f\spayloads_examples\/calc\./ nocase ascii wide
+        // Description: What this tool does is taking a file (any type of file). encrypt it. and embed it into an HTML file as ressource. along with an automatic download routine simulating a user clicking on the embedded ressource.
+        // Reference: https://github.com/Arno0x/EmbedInHTML
+        $string26 = /payloads_examples.{0,1000}calc\.js/ nocase ascii wide
+        // Description: What this tool does is taking a file (any type of file). encrypt it. and embed it into an HTML file as ressource. along with an automatic download routine simulating a user clicking on the embedded ressource.
+        // Reference: https://github.com/Arno0x/EmbedInHTML
+        $string27 = /payloads_examples.{0,1000}calc\.xll/ nocase ascii wide
 
     condition:
         any of them

@@ -1,7 +1,7 @@
 rule C2_Server
 {
     meta:
-        description = "Detection patterns for the tool 'C2_Server' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'C2_Server' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "C2_Server"

@@ -1,7 +1,7 @@
 rule lyncsmash
 {
     meta:
-        description = "Detection patterns for the tool 'lyncsmash' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'lyncsmash' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "lyncsmash"
@@ -43,7 +43,7 @@ rule lyncsmash
         $string11 = /brute_force_ntlm\.sh/ nocase ascii wide
         // Description: a collection of tools to enumerate and attack self-hosted Skype for Business and Microsoft Lync installations 
         // Reference: https://github.com/nyxgeek/lyncsmash
-        $string12 = /find_domain\.sh\s/ nocase ascii wide
+        $string12 = /find_domain\.sh\s/
         // Description: a collection of tools to enumerate and attack self-hosted Skype for Business and Microsoft Lync installations
         // Reference: https://github.com/nyxgeek/lyncsmash
         $string13 = "lyncsmash" nocase ascii wide

@@ -1,7 +1,7 @@
 rule rsocx
 {
     meta:
-        description = "Detection patterns for the tool 'rsocx' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'rsocx' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "rsocx"
@@ -10,10 +10,10 @@ rule rsocx
     strings:
         // Description: A bind/reverse Socks5 proxy server.
         // Reference: https://github.com/b23r0/rsocx
-        $string1 = /\.\/rsocx\s\-/ nocase ascii wide
+        $string1 = /\.\/rsocx\s\-/
         // Description: A bind/reverse Socks5 proxy server.
         // Reference: https://github.com/b23r0/rsocx
-        $string2 = /\/rsocx\-.{0,1000}\-linux\-x86\-64\.zip/ nocase ascii wide
+        $string2 = /\/rsocx\-.{0,1000}\-linux\-x86\-64\.zip/
         // Description: A bind/reverse Socks5 proxy server.
         // Reference: https://github.com/b23r0/rsocx
         $string3 = /\/rsocx\-.{0,1000}\-windows\-x86\-64\.zip/ nocase ascii wide

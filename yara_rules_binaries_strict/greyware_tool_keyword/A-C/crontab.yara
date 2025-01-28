@@ -1,7 +1,7 @@
 rule crontab
 {
     meta:
-        description = "Detection patterns for the tool 'crontab' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'crontab' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "crontab"
@@ -10,7 +10,7 @@ rule crontab
     strings:
         // Description: linux commands abused by attackers
         // Reference: N/A
-        $string1 = /crontab.{0,100}\ssleep\s.{0,100}ncat\s.{0,100}\s\-e\s\/bin\/bash.{0,100}crontab/ nocase ascii wide
+        $string1 = /crontab.{0,100}\ssleep\s.{0,100}ncat\s.{0,100}\s\-e\s\/bin\/bash.{0,100}crontab/
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

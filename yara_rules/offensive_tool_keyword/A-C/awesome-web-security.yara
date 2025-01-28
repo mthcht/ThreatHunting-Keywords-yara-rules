@@ -1,7 +1,7 @@
 rule awesome_web_security
 {
     meta:
-        description = "Detection patterns for the tool 'awesome-web-security' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'awesome-web-security' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "awesome-web-security"

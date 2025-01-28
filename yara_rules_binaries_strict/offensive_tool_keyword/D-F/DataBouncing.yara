@@ -1,7 +1,7 @@
 rule DataBouncing
 {
     meta:
-        description = "Detection patterns for the tool 'DataBouncing' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'DataBouncing' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "DataBouncing"
@@ -43,7 +43,7 @@ rule DataBouncing
         $string11 = /\\nightCrawler\.ps1/ nocase ascii wide
         // Description: Data Bouncing is a technique for transmitting data between two endpoints using DNS lookups and HTTP header manipulation
         // Reference: https://github.com/Unit-259/DataBouncing
-        $string12 = /bash\s\.\/bounce\.sh/ nocase ascii wide
+        $string12 = /bash\s\.\/bounce\.sh/
         // Description: Data Bouncing is a technique for transmitting data between two endpoints using DNS lookups and HTTP header manipulation
         // Reference: https://github.com/Unit-259/DataBouncing
         $string13 = /clndh3qilvdv6403g1n0hs3rhd6xpfmjn\.oast\.online/ nocase ascii wide
@@ -55,7 +55,7 @@ rule DataBouncing
         $string15 = /exfil\s\-regex.{0,100}\s\-domain.{0,100}\-url\s.{0,100}\s\-filepath\s/ nocase ascii wide
         // Description: Data Bouncing is a technique for transmitting data between two endpoints using DNS lookups and HTTP header manipulation
         // Reference: https://github.com/Unit-259/DataBouncing
-        $string16 = /Find\-Secret\s\-FilePath\s\.\/logs\.txt\s\-Regex\s/ nocase ascii wide
+        $string16 = /Find\-Secret\s\-FilePath\s\.\/logs\.txt\s\-Regex\s/
         // Description: Data Bouncing is a technique for transmitting data between two endpoints using DNS lookups and HTTP header manipulation
         // Reference: https://github.com/Unit-259/DataBouncing
         $string17 = /https\:\/\/unit259\.fyi\/db/ nocase ascii wide

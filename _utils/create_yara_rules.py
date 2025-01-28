@@ -4,7 +4,7 @@ from collections import defaultdict
 import re
 
 # List of YARA reserved keywords
-yara_reserved_keywords = set([
+yara_reserved_keywords = {
     "all", "and", "any", "ascii", "at", "base64", "base64wide", "condition",
     "contains", "endswith", "entrypoint", "false", "filesize", "for", "fullword",
     "global", "import", "icontains", "iendswith", "iequals", "in", "include", "int16",
@@ -12,7 +12,7 @@ yara_reserved_keywords = set([
     "nocase", "none", "not", "of", "or", "private", "rule", "startswith", "strings",
     "them", "true", "uint16", "uint16be", "uint32", "uint32be", "uint8", "uint8be",
     "wide", "xor", "defined"
-])
+}
 
 def get_subdirectory_name(tool):
     first_letter = tool[0].upper()
@@ -35,12 +35,15 @@ def safe_tool_name(tool):
     sanitized_tool = tool
     if tool[0].isdigit() or tool.lower() in yara_reserved_keywords:
         sanitized_tool = f"_{tool}"
-    return sanitized_tool.replace('-', '_').replace(' ', '_').replace('.', '_') \
-                         .replace('&', '_and_').replace('$', '').replace('(', '_') \
-                         .replace(')', '_')
+    return (sanitized_tool.replace('-', '_')
+                          .replace(' ', '_')
+                          .replace('.', '_')
+                          .replace('&', '_and_')
+                          .replace('$', '')
+                          .replace('(', '_')
+                          .replace(')', '_'))
 
 def clean_all_letter_directories(base_directory):
-    # Go through each letter subdirectory in each base category and clean it once
     for category in os.listdir(base_directory):
         category_path = os.path.join(base_directory, category)
         if os.path.isdir(category_path):
@@ -57,7 +60,6 @@ def generate_yara_rules(base_directory):
     csv_file_path = os.path.join(script_directory, 'threathunting-keywords.csv')
     base_directory = os.path.join(script_directory, base_directory)
     
-    # Clean each letter directory once at the start
     clean_all_letter_directories(base_directory)
     
     aggregated_data = defaultdict(list)
@@ -70,12 +72,18 @@ def generate_yara_rules(base_directory):
             description = row['metadata_description']
             reference = row['metadata_link']
             keyword_type = row['metadata_keyword_type']
-            aggregated_data[(tool, keyword_type)].append((keyword, description, reference))
+            metadata_tags = row.get('metadata_tags', "")
+            # New fallback field
+            keyword_regex = row.get('metadata_keyword_regex', "")
+
+            aggregated_data[(tool, keyword_type)].append(
+                (keyword, description, reference, metadata_tags, keyword_regex)
+            )
     
     if not os.path.exists(base_directory):
         os.makedirs(base_directory)
         
-    for (tool, keyword_type), keywords in aggregated_data.items():
+    for (tool, keyword_type), items in aggregated_data.items():
         keyword_type_dir = os.path.join(base_directory, keyword_type)
         subdirectory_name = get_subdirectory_name(tool)
         final_directory = os.path.join(keyword_type_dir, subdirectory_name)
@@ -85,48 +93,84 @@ def generate_yara_rules(base_directory):
 
         sanitized_tool = safe_tool_name(tool)
         
-        # os.path.join to make it work on any OS
         with open(os.path.join(final_directory, f"{tool}.yara"), 'w') as outfile:
             outfile.write(f"rule {sanitized_tool}\n")
             outfile.write("{\n")
             outfile.write("    meta:\n")
-            outfile.write(f"        description = \"Detection patterns for the tool \'{tool}\' taken from the ThreatHunting-Keywords github project\" \n")
+            outfile.write(f"        description = \"Detection patterns for the tool '{tool}' taken from the ThreatHunting-Keywords github project\"\n")
             outfile.write(f"        author = \"@mthcht\"\n")
             outfile.write(f"        reference = \"https://github.com/mthcht/ThreatHunting-Keywords\"\n")
             outfile.write(f"        tool = \"{tool}\"\n")
             outfile.write(f"        rule_category = \"{keyword_type}\"\n")
             outfile.write("\n    strings:\n")
             
-            for idx, (keyword, description, reference) in enumerate(keywords):
+            for idx, (keyword, description, reference, metadata_tags, keyword_regex) in enumerate(items):
                 description_sanitized = description.replace("\n", " ")
                 outfile.write(f"        // Description: {description_sanitized}\n")
                 outfile.write(f"        // Reference: {reference}\n")
 
-                # Remove leading and trailing '*'
-                keyword_stripped = keyword.strip('*')
-
-                # Check if keyword contains wildcards or special characters
-                if '*' in keyword_stripped or re.search(r'[.^$+?{}\[\]\\|()]', keyword_stripped):
-                    needs_regex_flag = True
+                if not keyword.strip():
+                    # If 'keyword' is empty, use the raw regex from 'metadata_keyword_regex'
+                    actual_keyword = keyword_regex
+                    is_regex = True
                 else:
-                    needs_regex_flag = False
+                    actual_keyword = keyword.strip('*')
+                    # Check if it contains wildcard or special chars
+                    is_regex = bool(re.search(r'[.^$+?{}\[\]\\|()*]', actual_keyword))
 
-                if needs_regex_flag:
-                    escaped_keyword = keyword_stripped.replace("\\", "\\\\").replace("\"", "\\\"") \
-                        .replace(" ", r"\s").replace("|", r"\|").replace("/", r"\/").replace(".", r"\.") \
-                        .replace("(", r"\(").replace(")", r"\)").replace('+', r"\+").replace("&", r"\&") \
-                        .replace('?', r"\?").replace('[', r"\[").replace(']', r"\]").replace("'", r"\'").replace('-', r"\-") \
-                        .replace('!', r"\!").replace('#', r"\#").replace('"', r"\"").replace('^', r"\^").replace('%', r"\%") \
-                        .replace('=', r"\=").replace('$', r"\$").replace(';', r"\;").replace('<', r"\<").replace('>', r"\>") \
-                        .replace('@', r"\@").replace('}', r"\}").replace('{', r"\{").replace(',', r"\,").replace('`', r"\`") \
-                        .replace('~', r"\~").replace(':', r"\:").replace('*', '.{0,1000}')
-
-                    outfile.write(f"        $string{idx+1} = /{escaped_keyword}/ nocase ascii wide\n")
+                # Decide whether to include modifiers
+                if "#linux" in metadata_tags.lower():
+                    modifiers = ""
                 else:
-                    # Use simple string
-                    # Escape backslash and double quote
-                    escaped_keyword = keyword_stripped.replace("\\", "\\\\").replace("\"", "\\\"")
-                    outfile.write(f"        $string{idx+1} = \"{escaped_keyword}\" nocase ascii wide\n")
+                    modifiers = " nocase ascii wide"
+
+                if is_regex and keyword.strip():
+                    # 'keyword' is not empty but has special chars => escape
+                    escaped_keyword = (actual_keyword.replace("\\", "\\\\")
+                                                  .replace("\"", "\\\"")
+                                                  .replace(" ", r"\s")
+                                                  .replace("|", r"\|")
+                                                  .replace("/", r"\/")
+                                                  .replace(".", r"\.")
+                                                  .replace("(", r"\(")
+                                                  .replace(")", r"\)")
+                                                  .replace('+', r"\+")
+                                                  .replace("&", r"\&")
+                                                  .replace('?', r"\?")
+                                                  .replace('[', r"\[")
+                                                  .replace(']', r"\]")
+                                                  .replace("'", r"\'")
+                                                  .replace('-', r"\-")
+                                                  .replace('!', r"\!")
+                                                  .replace('#', r"\#")
+                                                  .replace('"', r"\"")
+                                                  .replace('^', r"\^")
+                                                  .replace('%', r"\%")
+                                                  .replace('=', r"\=")
+                                                  .replace('$', r"\$")
+                                                  .replace(';', r"\;")
+                                                  .replace('<', r"\<")
+                                                  .replace('>', r"\>")
+                                                  .replace('@', r"\@")
+                                                  .replace('}', r"\}")
+                                                  .replace('{', r"\{")
+                                                  .replace(',', r"\,")
+                                                  .replace('`', r"\`")
+                                                  .replace('~', r"\~")
+                                                  .replace(':', r"\:")
+                                                  .replace('*', '.{0,1000}'))
+                    outfile.write(f"        $string{idx+1} = /{escaped_keyword}/{modifiers}\n")
+
+                elif is_regex and not keyword.strip():
+                    # 'keyword' is empty, so we rely purely on 'metadata_keyword_regex'
+                    outfile.write(f"        $string{idx+1} = /{actual_keyword}/{modifiers}\n")
+
+                else:
+                    # Normal string
+                    escaped_keyword = (actual_keyword
+                                       .replace("\\", "\\\\")
+                                       .replace("\"", "\\\""))
+                    outfile.write(f"        $string{idx+1} = \"{escaped_keyword}\"{modifiers}\n")
                 
             outfile.write("\n    condition:\n")
             outfile.write("        any of them\n")

@@ -1,7 +1,7 @@
 rule dll_hijack_by_proxying
 {
     meta:
-        description = "Detection patterns for the tool 'dll-hijack-by-proxying' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'dll-hijack-by-proxying' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "dll-hijack-by-proxying"

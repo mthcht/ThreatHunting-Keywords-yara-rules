@@ -1,7 +1,7 @@
 rule AutoBlue_MS17_010
 {
     meta:
-        description = "Detection patterns for the tool 'AutoBlue-MS17-010' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'AutoBlue-MS17-010' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "AutoBlue-MS17-010"

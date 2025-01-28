@@ -1,7 +1,7 @@
 rule ligolo
 {
     meta:
-        description = "Detection patterns for the tool 'ligolo' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'ligolo' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "ligolo"
@@ -16,67 +16,82 @@ rule ligolo
         $string2 = /\/ligolo\.git/ nocase ascii wide
         // Description: ligolo is a simple and lightweight tool for establishing SOCKS5 or TCP tunnels from a reverse connection in complete safety (TLS certificate with elliptical curve)
         // Reference: https://github.com/sysdream/ligolo
-        $string3 = "/ligolo-ng" nocase ascii wide
+        $string3 = "/ligolo_agent"
         // Description: ligolo is a simple and lightweight tool for establishing SOCKS5 or TCP tunnels from a reverse connection in complete safety (TLS certificate with elliptical curve)
         // Reference: https://github.com/sysdream/ligolo
-        $string4 = /127\.0\.0\.1\:1080/ nocase ascii wide
+        $string4 = /\/ligolo_agent\.exe/ nocase ascii wide
         // Description: ligolo is a simple and lightweight tool for establishing SOCKS5 or TCP tunnels from a reverse connection in complete safety (TLS certificate with elliptical curve)
         // Reference: https://github.com/sysdream/ligolo
-        $string5 = /127\.0\.0\.1\:5555/ nocase ascii wide
+        $string5 = "/ligolo-ng" nocase ascii wide
         // Description: ligolo is a simple and lightweight tool for establishing SOCKS5 or TCP tunnels from a reverse connection in complete safety (TLS certificate with elliptical curve)
         // Reference: https://github.com/sysdream/ligolo
-        $string6 = "bin/ligolo" nocase ascii wide
+        $string6 = "/ligolo-proxy" nocase ascii wide
         // Description: ligolo is a simple and lightweight tool for establishing SOCKS5 or TCP tunnels from a reverse connection in complete safety (TLS certificate with elliptical curve)
         // Reference: https://github.com/sysdream/ligolo
-        $string7 = "bin/localrelay" nocase ascii wide
+        $string7 = "/ligolo-selfcert" nocase ascii wide
         // Description: ligolo is a simple and lightweight tool for establishing SOCKS5 or TCP tunnels from a reverse connection in complete safety (TLS certificate with elliptical curve)
         // Reference: https://github.com/sysdream/ligolo
-        $string8 = "cd ligolo" nocase ascii wide
+        $string8 = /\\ligolo_agent\.exe/ nocase ascii wide
         // Description: ligolo is a simple and lightweight tool for establishing SOCKS5 or TCP tunnels from a reverse connection in complete safety (TLS certificate with elliptical curve)
         // Reference: https://github.com/sysdream/ligolo
-        $string9 = "cmd/ligolo" nocase ascii wide
+        $string9 = /\\ligolo\-proxy/ nocase ascii wide
         // Description: ligolo is a simple and lightweight tool for establishing SOCKS5 or TCP tunnels from a reverse connection in complete safety (TLS certificate with elliptical curve)
         // Reference: https://github.com/sysdream/ligolo
-        $string10 = "cmd/ligolo" nocase ascii wide
+        $string10 = /127\.0\.0\.1\:1080/ nocase ascii wide
         // Description: ligolo is a simple and lightweight tool for establishing SOCKS5 or TCP tunnels from a reverse connection in complete safety (TLS certificate with elliptical curve)
         // Reference: https://github.com/sysdream/ligolo
-        $string11 = "cmd/localrelay" nocase ascii wide
+        $string11 = /127\.0\.0\.1\:5555/ nocase ascii wide
         // Description: ligolo is a simple and lightweight tool for establishing SOCKS5 or TCP tunnels from a reverse connection in complete safety (TLS certificate with elliptical curve)
         // Reference: https://github.com/sysdream/ligolo
-        $string12 = "ip link set ligolo up" nocase ascii wide
+        $string12 = "bin/ligolo" nocase ascii wide
         // Description: ligolo is a simple and lightweight tool for establishing SOCKS5 or TCP tunnels from a reverse connection in complete safety (TLS certificate with elliptical curve)
         // Reference: https://github.com/sysdream/ligolo
-        $string13 = /ligolo\.lan/ nocase ascii wide
+        $string13 = "bin/localrelay" nocase ascii wide
         // Description: ligolo is a simple and lightweight tool for establishing SOCKS5 or TCP tunnels from a reverse connection in complete safety (TLS certificate with elliptical curve)
         // Reference: https://github.com/sysdream/ligolo
-        $string14 = "ligolo_darwin" nocase ascii wide
+        $string14 = "cd ligolo" nocase ascii wide
         // Description: ligolo is a simple and lightweight tool for establishing SOCKS5 or TCP tunnels from a reverse connection in complete safety (TLS certificate with elliptical curve)
         // Reference: https://github.com/sysdream/ligolo
-        $string15 = "ligolo_linux" nocase ascii wide
+        $string15 = "cmd/ligolo" nocase ascii wide
         // Description: ligolo is a simple and lightweight tool for establishing SOCKS5 or TCP tunnels from a reverse connection in complete safety (TLS certificate with elliptical curve)
         // Reference: https://github.com/sysdream/ligolo
-        $string16 = /ligolo_windows.{0,100}\.exe/ nocase ascii wide
+        $string16 = "cmd/localrelay" nocase ascii wide
         // Description: ligolo is a simple and lightweight tool for establishing SOCKS5 or TCP tunnels from a reverse connection in complete safety (TLS certificate with elliptical curve)
         // Reference: https://github.com/sysdream/ligolo
-        $string17 = "ligolo-master" nocase ascii wide
+        $string17 = "ip link set ligolo up"
         // Description: ligolo is a simple and lightweight tool for establishing SOCKS5 or TCP tunnels from a reverse connection in complete safety (TLS certificate with elliptical curve)
         // Reference: https://github.com/sysdream/ligolo
-        $string18 = "localrelay_linux_amd64" nocase ascii wide
+        $string18 = /ligolo\.lan/
+        // Description: ligolo is a simple and lightweight tool for establishing SOCKS5 or TCP tunnels from a reverse connection in complete safety (TLS certificate with elliptical curve)
+        // Reference: https://github.com/sysdream/ligolo
+        $string19 = "ligolo_darwin"
+        // Description: ligolo is a simple and lightweight tool for establishing SOCKS5 or TCP tunnels from a reverse connection in complete safety (TLS certificate with elliptical curve)
+        // Reference: https://github.com/sysdream/ligolo
+        $string20 = "ligolo_linux"
+        // Description: ligolo is a simple and lightweight tool for establishing SOCKS5 or TCP tunnels from a reverse connection in complete safety (TLS certificate with elliptical curve)
+        // Reference: https://github.com/sysdream/ligolo
+        $string21 = /ligolo_windows.{0,100}\.exe/ nocase ascii wide
+        // Description: ligolo is a simple and lightweight tool for establishing SOCKS5 or TCP tunnels from a reverse connection in complete safety (TLS certificate with elliptical curve)
+        // Reference: https://github.com/sysdream/ligolo
+        $string22 = "ligolo-master" nocase ascii wide
+        // Description: ligolo is a simple and lightweight tool for establishing SOCKS5 or TCP tunnels from a reverse connection in complete safety (TLS certificate with elliptical curve)
+        // Reference: https://github.com/sysdream/ligolo
+        $string23 = "localrelay_linux_amd64"
         // Description: proxychains used with ligolo is a simple and lightweight tool for establishing SOCKS5 or TCP tunnels from a reverse connection in complete safety (TLS certificate with elliptical curve)
         // Reference: https://github.com/sysdream/ligolo
-        $string19 = /proxychains\snmap\s\-sT\s.{0,100}\s\-p\s.{0,100}\s\-Pn\s\-A/ nocase ascii wide
+        $string24 = /proxychains\snmap\s\-sT\s.{0,100}\s\-p\s.{0,100}\s\-Pn\s\-A/ nocase ascii wide
         // Description: ligolo is a simple and lightweight tool for establishing SOCKS5 or TCP tunnels from a reverse connection in complete safety (TLS certificate with elliptical curve)
         // Reference: https://github.com/sysdream/ligolo
-        $string20 = "proxychains rdesktop " nocase ascii wide
+        $string25 = "proxychains rdesktop " nocase ascii wide
         // Description: ligolo is a simple and lightweight tool for establishing SOCKS5 or TCP tunnels from a reverse connection in complete safety (TLS certificate with elliptical curve)
         // Reference: https://github.com/sysdream/ligolo
-        $string21 = "src/ligolo" nocase ascii wide
+        $string26 = "src/ligolo" nocase ascii wide
         // Description: ligolo is a simple and lightweight tool for establishing SOCKS5 or TCP tunnels from a reverse connection in complete safety (TLS certificate with elliptical curve)
         // Reference: https://github.com/sysdream/ligolo
-        $string22 = "sysdream/ligolo" nocase ascii wide
+        $string27 = "sysdream/ligolo" nocase ascii wide
         // Description: ligolo is a simple and lightweight tool for establishing SOCKS5 or TCP tunnels from a reverse connection in complete safety (TLS certificate with elliptical curve)
         // Reference: https://github.com/sysdream/ligolo
-        $string23 = "tools/ligolo" nocase ascii wide
+        $string28 = "tools/ligolo" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

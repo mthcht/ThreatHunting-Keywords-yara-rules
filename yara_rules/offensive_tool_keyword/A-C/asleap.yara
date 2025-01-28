@@ -1,7 +1,7 @@
 rule asleap
 {
     meta:
-        description = "Detection patterns for the tool 'asleap' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'asleap' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "asleap"
@@ -25,7 +25,7 @@ rule asleap
         $string5 = /asleap\s\-r\s.{0,1000}\.dump\s/ nocase ascii wide
         // Description: Exploiting a serious deficiency in proprietary Cisco LEAP networks
         // Reference: https://github.com/joswr1ght/asleap
-        $string6 = /https\:\/\/gitlab\.com\/kalilinux\/packages\/asleap/ nocase ascii wide
+        $string6 = /https\:\/\/gitlab\.com\/kalilinux\/packages\/asleap/
 
     condition:
         any of them

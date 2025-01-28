@@ -1,7 +1,7 @@
 rule PrivFu
 {
     meta:
-        description = "Detection patterns for the tool 'PrivFu' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'PrivFu' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "PrivFu"

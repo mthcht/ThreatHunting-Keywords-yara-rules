@@ -1,7 +1,7 @@
 rule stunnel
 {
     meta:
-        description = "Detection patterns for the tool 'stunnel' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'stunnel' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "stunnel"
@@ -13,7 +13,7 @@ rule stunnel
         $string1 = /\srsync\.stunnel\.org\:\:stunnel\s/ nocase ascii wide
         // Description: Stunnel is a proxy designed to add TLS encryption functionality to existing clients and servers without any changes in the programs
         // Reference: https://www.stunnel.org/index.html
-        $string2 = /\/stunnel\-.{0,100}\.tar\.gz/ nocase ascii wide
+        $string2 = /\/stunnel\-.{0,100}\.tar\.gz/
         // Description: Stunnel is a proxy designed to add TLS encryption functionality to existing clients and servers without any changes in the programs
         // Reference: https://www.stunnel.org/index.html
         $string3 = /\/stunnel\-latest\.tar\.gz/ nocase ascii wide
@@ -25,7 +25,7 @@ rule stunnel
         $string5 = /\/stunnel\-latest\-win64\-installer\.exe/ nocase ascii wide
         // Description: Stunnel is a proxy designed to add TLS encryption functionality to existing clients and servers without any changes in the programs
         // Reference: https://www.stunnel.org/index.html
-        $string6 = "/tmp/stunnel" nocase ascii wide
+        $string6 = "/tmp/stunnel"
         // Description: Stunnel is a proxy designed to add TLS encryption functionality to existing clients and servers without any changes in the programs
         // Reference: https://www.stunnel.org/index.html
         $string7 = /\\CurrentVersion\\Uninstall\\stunnel/ nocase ascii wide

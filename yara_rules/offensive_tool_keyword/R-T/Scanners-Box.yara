@@ -1,7 +1,7 @@
 rule Scanners_Box
 {
     meta:
-        description = "Detection patterns for the tool 'Scanners-Box' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Scanners-Box' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Scanners-Box"

@@ -1,7 +1,7 @@
 rule r77_rootkit
 {
     meta:
-        description = "Detection patterns for the tool 'r77-rootkit' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'r77-rootkit' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "r77-rootkit"

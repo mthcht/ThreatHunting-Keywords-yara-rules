@@ -1,7 +1,7 @@
 rule python
 {
     meta:
-        description = "Detection patterns for the tool 'python' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'python' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "python"
@@ -13,13 +13,13 @@ rule python
         $string1 = /\s\,exec\(__import__\(\'base64\'\)\.b64decode\(\\"/ nocase ascii wide
         // Description: interactive shell
         // Reference: N/A
-        $string2 = /\s\-c\s\'import\spty\;pty\.spawn\(\\"\/bin\/bash/ nocase ascii wide
+        $string2 = /\s\-c\s\'import\spty\;pty\.spawn\(\\"\/bin\/bash/
         // Description: interactive shell
         // Reference: N/A
-        $string3 = /\s\-c\s\'import\spty\;pty\.spawn\(\\"\/bin\/sh/ nocase ascii wide
+        $string3 = /\s\-c\s\'import\spty\;pty\.spawn\(\\"\/bin\/sh/
         // Description: interactive shell
         // Reference: N/A
-        $string4 = /\s\-c\s\'import\spty\;pty\.spawn\(\\\\"\/bin\/sh/ nocase ascii wide
+        $string4 = /\s\-c\s\'import\spty\;pty\.spawn\(\\\\"\/bin\/sh/
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

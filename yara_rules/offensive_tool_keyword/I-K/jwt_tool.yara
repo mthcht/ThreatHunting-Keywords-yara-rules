@@ -1,7 +1,7 @@
 rule jwt_tool
 {
     meta:
-        description = "Detection patterns for the tool 'jwt_tool' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'jwt_tool' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "jwt_tool"

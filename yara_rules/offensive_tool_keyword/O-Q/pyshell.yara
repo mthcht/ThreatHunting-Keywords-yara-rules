@@ -1,7 +1,7 @@
 rule pyshell
 {
     meta:
-        description = "Detection patterns for the tool 'pyshell' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'pyshell' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "pyshell"
@@ -10,7 +10,7 @@ rule pyshell
     strings:
         // Description: PyShell is Multiplatform Python WebShell. This tool helps you to obtain a shell-like interface on a web server to be remotely accessed. Unlike other webshells the main goal of the tool is to use as little code as possible on the server side regardless of the language used or the operating system of the server.
         // Reference: https://github.com/JoelGMSec/PyShell
-        $string1 = /\.\/PyShell\s/ nocase ascii wide
+        $string1 = /\.\/PyShell\s/
         // Description: PyShell is Multiplatform Python WebShell. This tool helps you to obtain a shell-like interface on a web server to be remotely accessed. Unlike other webshells the main goal of the tool is to use as little code as possible on the server side regardless of the language used or the operating system of the server.
         // Reference: https://github.com/JoelGMSec/PyShell
         $string2 = "/JoelGMSec/PyShell" nocase ascii wide

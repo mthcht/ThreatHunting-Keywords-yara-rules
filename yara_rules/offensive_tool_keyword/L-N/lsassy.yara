@@ -1,7 +1,7 @@
 rule lsassy
 {
     meta:
-        description = "Detection patterns for the tool 'lsassy' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'lsassy' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "lsassy"
@@ -46,7 +46,7 @@ rule lsassy
         $string12 = /\sSQLDmpr0001\.mdmp/ nocase ascii wide
         // Description: Extract credentials from lsass remotely
         // Reference: https://github.com/login-securite/lsassy
-        $string13 = /\/\.config\/lsassy/ nocase ascii wide
+        $string13 = /\/\.config\/lsassy/
         // Description: Extract credentials from lsass remotely
         // Reference: https://github.com/login-securite/lsassy
         $string14 = /\/comsvcs_stealth\.py/ nocase ascii wide
@@ -79,10 +79,10 @@ rule lsassy
         $string23 = /\/silentprocessexit\.py/ nocase ascii wide
         // Description: Extract credentials from lsass remotely
         // Reference: https://github.com/login-securite/lsassy
-        $string24 = /\/tmp\/credentials\.txt/ nocase ascii wide
+        $string24 = /\/tmp\/credentials\.txt/
         // Description: Extract credentials from lsass remotely
         // Reference: https://github.com/login-securite/lsassy
-        $string25 = "/tmp/kerberos_tickets" nocase ascii wide
+        $string25 = "/tmp/kerberos_tickets"
         // Description: Extract credentials from lsass remotely
         // Reference: https://github.com/login-securite/lsassy
         $string26 = /\\comsvcs_stealth\.py/ nocase ascii wide
@@ -280,7 +280,7 @@ rule lsassy
         $string90 = "lsassy/dumpmethod" nocase ascii wide
         // Description: Extract credentials from lsass remotely
         // Reference: https://github.com/login-securite/lsassy
-        $string91 = "lsassy_linux_amd64" nocase ascii wide
+        $string91 = "lsassy_linux_amd64"
         // Description: Extract credentials from lsass remotely
         // Reference: https://github.com/login-securite/lsassy
         $string92 = /lsassy_logger\./ nocase ascii wide
@@ -289,7 +289,7 @@ rule lsassy
         $string93 = "lsassy_windows_amd64" nocase ascii wide
         // Description: Extract credentials from lsass remotely
         // Reference: https://github.com/login-securite/lsassy
-        $string94 = "lsassy-linux-x64-" nocase ascii wide
+        $string94 = "lsassy-linux-x64-"
         // Description: Extract credentials from lsass remotely
         // Reference: https://github.com/login-securite/lsassy
         $string95 = "lsassy-MacOS-x64-" nocase ascii wide

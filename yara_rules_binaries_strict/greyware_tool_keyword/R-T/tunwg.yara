@@ -1,7 +1,7 @@
 rule tunwg
 {
     meta:
-        description = "Detection patterns for the tool 'tunwg' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'tunwg' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "tunwg"
@@ -13,13 +13,13 @@ rule tunwg
         $string1 = /\stunwg\.exe/ nocase ascii wide
         // Description: End to end encrypted secure tunnel to local servers
         // Reference: https://github.com/ntnj/tunwg
-        $string2 = /\.\/tunwg\s\-\-/ nocase ascii wide
+        $string2 = /\.\/tunwg\s\-\-/
         // Description: End to end encrypted secure tunnel to local servers
         // Reference: https://github.com/ntnj/tunwg
         $string3 = /\.l\.tunwg\.com/ nocase ascii wide
         // Description: End to end encrypted secure tunnel to local servers
         // Reference: https://github.com/ntnj/tunwg
-        $string4 = "/bin/tunwg" nocase ascii wide
+        $string4 = "/bin/tunwg"
         // Description: End to end encrypted secure tunnel to local servers
         // Reference: https://github.com/ntnj/tunwg
         $string5 = "/latest/download/tunwg" nocase ascii wide

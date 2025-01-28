@@ -1,7 +1,7 @@
 rule exegol
 {
     meta:
-        description = "Detection patterns for the tool 'exegol' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'exegol' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "exegol"
@@ -58,7 +58,7 @@ rule exegol
         $string16 = /\shttp\-put\-server\.py/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string17 = /\/http\-put\-server\.py/ nocase ascii wide
+        $string17 = /\/http\-put\-server\.py/
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
         $string18 = /dig\saxfr\s.{0,100}\s\@/ nocase ascii wide

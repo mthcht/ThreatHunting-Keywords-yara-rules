@@ -1,7 +1,7 @@
 rule wso_webshell
 {
     meta:
-        description = "Detection patterns for the tool 'wso-webshell' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'wso-webshell' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "wso-webshell"
@@ -22,49 +22,49 @@ rule wso_webshell
         $string4 = "fa769dac7a0a94ee47d8ebe021eaba9e" nocase ascii wide
         // Description: wso php webshell
         // Reference: https://github.com/mIcHyAmRaNe/wso-webshell
-        $string5 = /find\s\.\s\-perm\s\-2\s\-ls/ nocase ascii wide
+        $string5 = /find\s\.\s\-perm\s\-2\s\-ls/
         // Description: wso php webshell
         // Reference: https://github.com/mIcHyAmRaNe/wso-webshell
-        $string6 = /find\s\.\s\-type\sf\s\-name\s\.bash_history/ nocase ascii wide
+        $string6 = /find\s\.\s\-type\sf\s\-name\s\.bash_history/
         // Description: wso php webshell
         // Reference: https://github.com/mIcHyAmRaNe/wso-webshell
-        $string7 = /find\s\.\s\-type\sf\s\-name\s\.fetchmailrc/ nocase ascii wide
+        $string7 = /find\s\.\s\-type\sf\s\-name\s\.fetchmailrc/
         // Description: wso php webshell
         // Reference: https://github.com/mIcHyAmRaNe/wso-webshell
-        $string8 = /find\s\.\s\-type\sf\s\-name\s\.htpasswd/ nocase ascii wide
+        $string8 = /find\s\.\s\-type\sf\s\-name\s\.htpasswd/
         // Description: wso php webshell
         // Reference: https://github.com/mIcHyAmRaNe/wso-webshell
-        $string9 = /find\s\.\s\-type\sf\s\-name\sservice\.pwd/ nocase ascii wide
+        $string9 = /find\s\.\s\-type\sf\s\-name\sservice\.pwd/
         // Description: wso php webshell
         // Reference: https://github.com/mIcHyAmRaNe/wso-webshell
-        $string10 = /find\s\.\s\-type\sf\s\-perm\s\-02000\s\-ls/ nocase ascii wide
+        $string10 = /find\s\.\s\-type\sf\s\-perm\s\-02000\s\-ls/
         // Description: wso php webshell
         // Reference: https://github.com/mIcHyAmRaNe/wso-webshell
-        $string11 = /find\s\.\s\-type\sf\s\-perm\s\-04000\s\-ls/ nocase ascii wide
+        $string11 = /find\s\.\s\-type\sf\s\-perm\s\-04000\s\-ls/
         // Description: wso php webshell
         // Reference: https://github.com/mIcHyAmRaNe/wso-webshell
-        $string12 = "find / -perm -2 -ls" nocase ascii wide
+        $string12 = "find / -perm -2 -ls"
         // Description: wso php webshell
         // Reference: https://github.com/mIcHyAmRaNe/wso-webshell
-        $string13 = /find\s\/\s\-type\sf\s\-name\s\.bash_history/ nocase ascii wide
+        $string13 = /find\s\/\s\-type\sf\s\-name\s\.bash_history/
         // Description: wso php webshell
         // Reference: https://github.com/mIcHyAmRaNe/wso-webshell
-        $string14 = /find\s\/\s\-type\sf\s\-name\s\.fetchmailrc/ nocase ascii wide
+        $string14 = /find\s\/\s\-type\sf\s\-name\s\.fetchmailrc/
         // Description: wso php webshell
         // Reference: https://github.com/mIcHyAmRaNe/wso-webshell
-        $string15 = /find\s\/\s\-type\sf\s\-name\s\.htpasswd/ nocase ascii wide
+        $string15 = /find\s\/\s\-type\sf\s\-name\s\.htpasswd/
         // Description: wso php webshell
         // Reference: https://github.com/mIcHyAmRaNe/wso-webshell
-        $string16 = /find\s\/\s\-type\sf\s\-name\sconfig\.inc\.php/ nocase ascii wide
+        $string16 = /find\s\/\s\-type\sf\s\-name\sconfig\.inc\.php/
         // Description: wso php webshell
         // Reference: https://github.com/mIcHyAmRaNe/wso-webshell
-        $string17 = /find\s\/\s\-type\sf\s\-name\sservice\.pwd/ nocase ascii wide
+        $string17 = /find\s\/\s\-type\sf\s\-name\sservice\.pwd/
         // Description: wso php webshell
         // Reference: https://github.com/mIcHyAmRaNe/wso-webshell
-        $string18 = "find / -type f -perm -02000 -ls" nocase ascii wide
+        $string18 = "find / -type f -perm -02000 -ls"
         // Description: wso php webshell
         // Reference: https://github.com/mIcHyAmRaNe/wso-webshell
-        $string19 = "find / -type f -perm -04000 -ls" nocase ascii wide
+        $string19 = "find / -type f -perm -04000 -ls"
         // Description: wso php webshell
         // Reference: https://github.com/mIcHyAmRaNe/wso-webshell
         $string20 = /function\sactionBruteforce\(\)\s\{/ nocase ascii wide

@@ -1,7 +1,7 @@
 rule Google_Remote_Desktop
 {
     meta:
-        description = "Detection patterns for the tool 'Google Remote Desktop' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Google Remote Desktop' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Google Remote Desktop"
@@ -16,7 +16,7 @@ rule Google_Remote_Desktop
         $string2 = /\.chrome\-remote\-desktop\-session/ nocase ascii wide
         // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string3 = "/system/chrome-remote-desktop@" nocase ascii wide
+        $string3 = "/system/chrome-remote-desktop@"
         // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
         $string4 = /\\Chrome\sRemote\sDesktop\\host\.json/ nocase ascii wide

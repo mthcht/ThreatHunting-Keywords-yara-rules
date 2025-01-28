@@ -1,7 +1,7 @@
 rule _365_Stealer
 {
     meta:
-        description = "Detection patterns for the tool '365-Stealer' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool '365-Stealer' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "365-Stealer"

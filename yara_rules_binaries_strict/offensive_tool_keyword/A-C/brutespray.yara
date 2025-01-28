@@ -1,7 +1,7 @@
 rule brutespray
 {
     meta:
-        description = "Detection patterns for the tool 'brutespray' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'brutespray' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "brutespray"
@@ -22,7 +22,7 @@ rule brutespray
         $string4 = "/brutespray_" nocase ascii wide
         // Description: BruteSpray takes nmap GNMAP/XML output or newline seperated JSONS and automatically brute-forces services with default credentials using Medusa. BruteSpray can even find non-standard ports by using the -sV inside Nmap.
         // Reference: https://github.com/x90skysn3k/brutespray
-        $string5 = "/usr/share/brutespray" nocase ascii wide
+        $string5 = "/usr/share/brutespray"
         // Description: BruteSpray takes nmap GNMAP/XML output or newline seperated JSONS and automatically brute-forces services with default credentials using Medusa. BruteSpray can even find non-standard ports by using the -sV inside Nmap.
         // Reference: https://github.com/x90skysn3k/brutespray
         $string6 = "0e2e76930ff8d2bea66b82db863243f3895d39e761893eb6de025325747774b6" nocase ascii wide

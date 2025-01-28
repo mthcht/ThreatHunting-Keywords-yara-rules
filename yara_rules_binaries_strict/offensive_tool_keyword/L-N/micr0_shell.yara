@@ -1,7 +1,7 @@
 rule micr0_shell
 {
     meta:
-        description = "Detection patterns for the tool 'micr0_shell' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'micr0_shell' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "micr0_shell"

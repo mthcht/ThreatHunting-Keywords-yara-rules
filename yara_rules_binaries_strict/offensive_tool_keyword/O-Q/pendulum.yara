@@ -1,7 +1,7 @@
 rule pendulum
 {
     meta:
-        description = "Detection patterns for the tool 'pendulum' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'pendulum' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "pendulum"
@@ -10,16 +10,16 @@ rule pendulum
     strings:
         // Description: Linux Sleep Obfuscation
         // Reference: https://github.com/kyleavery/pendulum
-        $string1 = /\/pendulum\.git/ nocase ascii wide
+        $string1 = /\/pendulum\.git/
         // Description: Linux Sleep Obfuscation
         // Reference: https://github.com/kyleavery/pendulum
-        $string2 = /\/src\/pendulum\.c/ nocase ascii wide
+        $string2 = /\/src\/pendulum\.c/
         // Description: Linux Sleep Obfuscation
         // Reference: https://github.com/kyleavery/pendulum
-        $string3 = /\/src\/pendulum\.h/ nocase ascii wide
+        $string3 = /\/src\/pendulum\.h/
         // Description: Linux Sleep Obfuscation
         // Reference: https://github.com/kyleavery/pendulum
-        $string4 = "kyleavery/pendulum" nocase ascii wide
+        $string4 = "kyleavery/pendulum"
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

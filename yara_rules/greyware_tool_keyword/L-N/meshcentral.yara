@@ -1,7 +1,7 @@
 rule meshcentral
 {
     meta:
-        description = "Detection patterns for the tool 'meshcentral' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'meshcentral' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "meshcentral"
@@ -22,13 +22,13 @@ rule meshcentral
         $string4 = /\.meshagent\.pid/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string5 = "/bin/meshagent" nocase ascii wide
+        $string5 = "/bin/meshagent"
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string6 = "/bin/MeshCommander" nocase ascii wide
+        $string6 = "/bin/MeshCommander"
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string7 = "/MeshAgent --" nocase ascii wide
+        $string7 = "/MeshAgent --"
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshAgent
         $string8 = /\/MeshAgent\.git/ nocase ascii wide
@@ -37,7 +37,7 @@ rule meshcentral
         $string9 = /\/MeshCentral\.git/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string10 = /\/meshcentral\.service/ nocase ascii wide
+        $string10 = /\/meshcentral\.service/
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
         $string11 = /\/meshinstall\.sh/ nocase ascii wide
@@ -46,10 +46,10 @@ rule meshcentral
         $string12 = /\/meshinstall\-bsd\-rcd\.sh/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string13 = "/system/meshagent" nocase ascii wide
+        $string13 = "/system/meshagent"
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string14 = "/system/MeshCommander" nocase ascii wide
+        $string14 = "/system/MeshCommander"
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
         $string15 = /\\\\MeshAgent/ nocase ascii wide
@@ -376,10 +376,10 @@ rule meshcentral
         $string122 = "MeshAgent-ChromeOS" nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string123 = "MeshAgent-Linux-ARM-PlugPC" nocase ascii wide
+        $string123 = "MeshAgent-Linux-ARM-PlugPC"
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string124 = "MeshAgent-Linux-XEN-x86-32" nocase ascii wide
+        $string124 = "MeshAgent-Linux-XEN-x86-32"
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
         $string125 = "MeshAgent-NodeJS" nocase ascii wide
@@ -472,7 +472,7 @@ rule meshcentral
         $string154 = /meshinstall\-initd\.sh/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string155 = /meshinstall\-linux\.sh/ nocase ascii wide
+        $string155 = /meshinstall\-linux\.sh/
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
         $string156 = /MeshService\.exe/ nocase ascii wide

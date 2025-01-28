@@ -1,7 +1,7 @@
 rule adidnsdump
 {
     meta:
-        description = "Detection patterns for the tool 'adidnsdump' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'adidnsdump' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "adidnsdump"
@@ -19,7 +19,7 @@ rule adidnsdump
         $string3 = /\/adidnsdump\.git/ nocase ascii wide
         // Description: By default any user in Active Directory can enumerate all DNS records in the Domain or Forest DNS zones. similar to a zone transfer. This tool enables enumeration and exporting of all DNS records in the zone for recon purposes of internal networks.
         // Reference: https://github.com/dirkjanm/adidnsdump
-        $string4 = /\/dnsdump\.py/ nocase ascii wide
+        $string4 = /\/dnsdump\.py/
         // Description: By default any user in Active Directory can enumerate all DNS records in the Domain or Forest DNS zones. similar to a zone transfer. This tool enables enumeration and exporting of all DNS records in the zone for recon purposes of internal networks.
         // Reference: https://github.com/dirkjanm/adidnsdump
         $string5 = /\\dnsdump\.py/ nocase ascii wide

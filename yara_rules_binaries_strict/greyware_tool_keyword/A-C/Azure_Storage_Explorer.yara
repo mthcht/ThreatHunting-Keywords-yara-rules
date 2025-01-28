@@ -1,7 +1,7 @@
 rule Azure_Storage_Explorer
 {
     meta:
-        description = "Detection patterns for the tool 'Azure Storage Explorer' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Azure Storage Explorer' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Azure Storage Explorer"
@@ -40,7 +40,7 @@ rule Azure_Storage_Explorer
         $string10 = /Microsoft\sAzure\sStorage\sExplorer\.app\/Contents\// nocase ascii wide
         // Description: legitimate microsoft software - threat actors have been abusing Azure Storage Explorer for Data Exfiltration
         // Reference: https://azure.microsoft.com/en-us/products/storage/storage-explorer
-        $string11 = /StorageExplorer\-linux\-x64\.tar\.gz/ nocase ascii wide
+        $string11 = /StorageExplorer\-linux\-x64\.tar\.gz/
         // Description: legitimate microsoft software - threat actors have been abusing Azure Storage Explorer for Data Exfiltration
         // Reference: https://azure.microsoft.com/en-us/products/storage/storage-explorer
         $string12 = /StorageExplorer\-windows\-x64\.exe/ nocase ascii wide

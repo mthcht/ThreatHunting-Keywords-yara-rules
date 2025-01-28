@@ -1,7 +1,7 @@
 rule GTFONow
 {
     meta:
-        description = "Detection patterns for the tool 'GTFONow' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'GTFONow' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "GTFONow"
@@ -31,25 +31,25 @@ rule GTFONow
         $string7 = /\/gtfonow\.py/ nocase ascii wide
         // Description: Automatic privilege escalation for misconfigured capabilities - sudo and suid binaries using GTFOBins.
         // Reference: https://github.com/Frissi0n/GTFONow
-        $string8 = "/home/lowpriv/" nocase ascii wide
+        $string8 = "/home/lowpriv/"
         // Description: Automatic privilege escalation for misconfigured capabilities - sudo and suid binaries using GTFOBins.
         // Reference: https://github.com/Frissi0n/GTFONow
         $string9 = /\/test_privesc\.py/ nocase ascii wide
         // Description: Automatic privilege escalation for misconfigured capabilities - sudo and suid binaries using GTFOBins.
         // Reference: https://github.com/Frissi0n/GTFONow
-        $string10 = /\/tmp\/gtfokey\.pub/ nocase ascii wide
+        $string10 = /\/tmp\/gtfokey\.pub/
         // Description: Automatic privilege escalation for misconfigured capabilities - sudo and suid binaries using GTFOBins.
         // Reference: https://github.com/Frissi0n/GTFONow
-        $string11 = /\/tmp\/libpwn\.c/ nocase ascii wide
+        $string11 = /\/tmp\/libpwn\.c/
         // Description: Automatic privilege escalation for misconfigured capabilities - sudo and suid binaries using GTFOBins.
         // Reference: https://github.com/Frissi0n/GTFONow
-        $string12 = /\/tmp\/libpwn\.so/ nocase ascii wide
+        $string12 = /\/tmp\/libpwn\.so/
         // Description: Automatic privilege escalation for misconfigured capabilities - sudo and suid binaries using GTFOBins.
         // Reference: https://github.com/Frissi0n/GTFONow
         $string13 = /\[\!\]\sFound\sexploitable\ssgid\sbinary/ nocase ascii wide
         // Description: Automatic privilege escalation for misconfigured capabilities - sudo and suid binaries using GTFOBins.
         // Reference: https://github.com/Frissi0n/GTFONow
-        $string14 = /\[\!\]\sFound\sexploitable\sSudo\sNOPASSWD\sbinary/ nocase ascii wide
+        $string14 = /\[\!\]\sFound\sexploitable\sSudo\sNOPASSWD\sbinary/
         // Description: Automatic privilege escalation for misconfigured capabilities - sudo and suid binaries using GTFOBins.
         // Reference: https://github.com/Frissi0n/GTFONow
         $string15 = /\[\!\]\sFound\sexploitable\ssuid\sbinary/ nocase ascii wide
@@ -67,7 +67,7 @@ rule GTFONow
         $string19 = "7c8dcea2da2cd78b706f7e08ff49f7733008ce357fba21777d17334abf0458a6" nocase ascii wide
         // Description: Automatic privilege escalation for misconfigured capabilities - sudo and suid binaries using GTFOBins.
         // Reference: https://github.com/Frissi0n/GTFONow
-        $string20 = /check_sudo_nopasswd_binaries\(/ nocase ascii wide
+        $string20 = /check_sudo_nopasswd_binaries\(/
         // Description: Automatic privilege escalation for misconfigured capabilities - sudo and suid binaries using GTFOBins.
         // Reference: https://github.com/Frissi0n/GTFONow
         $string21 = /cron_priv_esc\(payload/ nocase ascii wide

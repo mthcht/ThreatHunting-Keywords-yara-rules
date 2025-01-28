@@ -1,7 +1,7 @@
 rule tor2web
 {
     meta:
-        description = "Detection patterns for the tool 'tor2web' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'tor2web' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "tor2web"
@@ -22,19 +22,19 @@ rule tor2web
         $string4 = /\.tor2web\s/ nocase ascii wide
         // Description: Tor2web is an HTTP proxy software that enables access to Tor Hidden Services by mean of common web browsers
         // Reference: https://github.com/tor2web/Tor2web
-        $string5 = "/bin/tor2web" nocase ascii wide
+        $string5 = "/bin/tor2web"
         // Description: Tor2web is an HTTP proxy software that enables access to Tor Hidden Services by mean of common web browsers
         // Reference: https://github.com/tor2web/Tor2web
-        $string6 = /\/etc\/init\.d\/tor/ nocase ascii wide
+        $string6 = /\/etc\/init\.d\/tor/
         // Description: Tor2web is an HTTP proxy software that enables access to Tor Hidden Services by mean of common web browsers
         // Reference: https://github.com/tor2web/Tor2web
-        $string7 = /\/etc\/init\.d\/tor2web/ nocase ascii wide
+        $string7 = /\/etc\/init\.d\/tor2web/
         // Description: Tor2web is an HTTP proxy software that enables access to Tor Hidden Services by mean of common web browsers
         // Reference: https://github.com/tor2web/Tor2web
-        $string8 = "/home/tor2web/" nocase ascii wide
+        $string8 = "/home/tor2web/"
         // Description: Tor2web is an HTTP proxy software that enables access to Tor Hidden Services by mean of common web browsers
         // Reference: https://github.com/tor2web/Tor2web
-        $string9 = /\/t2w\.py/ nocase ascii wide
+        $string9 = /\/t2w\.py/
         // Description: Tor2web is an HTTP proxy software that enables access to Tor Hidden Services by mean of common web browsers
         // Reference: https://github.com/tor2web/Tor2web
         $string10 = /\/Tor2web\-.{0,1000}\.tar\.gz/ nocase ascii wide
@@ -43,7 +43,7 @@ rule tor2web
         $string11 = /\/Tor2web\-.{0,1000}\.zip/ nocase ascii wide
         // Description: Tor2web is an HTTP proxy software that enables access to Tor Hidden Services by mean of common web browsers
         // Reference: https://github.com/tor2web/Tor2web
-        $string12 = /\/tor2web\.conf/ nocase ascii wide
+        $string12 = /\/tor2web\.conf/
         // Description: Tor2web is an HTTP proxy software that enables access to Tor Hidden Services by mean of common web browsers
         // Reference: https://github.com/tor2web/Tor2web
         $string13 = /\/Tor2web\.git/ nocase ascii wide

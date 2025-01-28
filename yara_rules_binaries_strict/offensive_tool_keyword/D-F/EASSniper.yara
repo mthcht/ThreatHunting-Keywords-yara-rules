@@ -1,7 +1,7 @@
 rule EASSniper
 {
     meta:
-        description = "Detection patterns for the tool 'EASSniper' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'EASSniper' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "EASSniper"
@@ -25,10 +25,10 @@ rule EASSniper
         $string5 = /\/EASSniper\.ps1/ nocase ascii wide
         // Description: EASSniper is a penetration testing tool for account enumeration and brute force attacks against Exchange Active Sync (EAS)
         // Reference: https://github.com/fugawi/EASSniper
-        $string6 = /\/eas\-valid\-users\.txt/ nocase ascii wide
+        $string6 = /\/eas\-valid\-users\.txt/
         // Description: EASSniper is a penetration testing tool for account enumeration and brute force attacks against Exchange Active Sync (EAS)
         // Reference: https://github.com/fugawi/EASSniper
-        $string7 = /\/owa\-sprayed\-creds\.txt/ nocase ascii wide
+        $string7 = /\/owa\-sprayed\-creds\.txt/
         // Description: EASSniper is a penetration testing tool for account enumeration and brute force attacks against Exchange Active Sync (EAS)
         // Reference: https://github.com/fugawi/EASSniper
         $string8 = /\\EASSniper\.ps1/ nocase ascii wide

@@ -1,7 +1,7 @@
 rule SoftEtherVPN
 {
     meta:
-        description = "Detection patterns for the tool 'SoftEtherVPN' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'SoftEtherVPN' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "SoftEtherVPN"
@@ -16,7 +16,7 @@ rule SoftEtherVPN
         $string2 = /\sSoftEtherVPN\-.{0,100}\.tar\.xz/ nocase ascii wide
         // Description: Cross-platform multi-protocol VPN software abused by attackers
         // Reference: https://github.com/SoftEtherVPN/SoftEtherVPN
-        $string3 = "/libexec/softether/vpnserver/vpnserver" nocase ascii wide
+        $string3 = "/libexec/softether/vpnserver/vpnserver"
         // Description: Cross-platform multi-protocol VPN software abused by attackers
         // Reference: https://github.com/SoftEtherVPN/SoftEtherVPN
         $string4 = /\/SoftEtherVPN\-.{0,100}\.tar\.xz/ nocase ascii wide
@@ -34,13 +34,13 @@ rule SoftEtherVPN
         $string8 = /\/softether\-vpnserver\-.{0,100}\.deb/ nocase ascii wide
         // Description: Cross-platform multi-protocol VPN software abused by attackers
         // Reference: https://github.com/SoftEtherVPN/SoftEtherVPN
-        $string9 = /\/softether\-vpnserver\.service/ nocase ascii wide
+        $string9 = /\/softether\-vpnserver\.service/
         // Description: Cross-platform multi-protocol VPN software abused by attackers
         // Reference: https://github.com/SoftEtherVPN/SoftEtherVPN
         $string10 = /\/softether\-vpnserver_.{0,100}\.exe/ nocase ascii wide
         // Description: Cross-platform multi-protocol VPN software abused by attackers
         // Reference: https://github.com/SoftEtherVPN/SoftEtherVPN
-        $string11 = "/usr/ports/security/softether5" nocase ascii wide
+        $string11 = "/usr/ports/security/softether5"
         // Description: Cross-platform multi-protocol VPN software abused by attackers
         // Reference: https://github.com/SoftEtherVPN/SoftEtherVPN
         $string12 = /\\AppData\\Local\\Temp\\VPN_.{0,100}\\VPN_Lock\.dat/ nocase ascii wide

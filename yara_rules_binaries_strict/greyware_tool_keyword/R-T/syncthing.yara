@@ -1,7 +1,7 @@
 rule syncthing
 {
     meta:
-        description = "Detection patterns for the tool 'syncthing' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'syncthing' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "syncthing"
@@ -10,7 +10,7 @@ rule syncthing
     strings:
         // Description: Open Source Continuous File Synchronization - abused by attackers for data exfiltration
         // Reference: https://github.com/syncthing/syncthing
-        $string1 = "/bin/syncthing" nocase ascii wide
+        $string1 = "/bin/syncthing"
         // Description: Open Source Continuous File Synchronization - abused by attackers for data exfiltration
         // Reference: https://github.com/syncthing/syncthing
         $string2 = /\/syncthing\.exe/ nocase ascii wide
@@ -19,7 +19,7 @@ rule syncthing
         $string3 = "/syncthing/releases/latest" nocase ascii wide
         // Description: Open Source Continuous File Synchronization - abused by attackers for data exfiltration
         // Reference: https://github.com/syncthing/syncthing
-        $string4 = "/syncthing-linux-" nocase ascii wide
+        $string4 = "/syncthing-linux-"
         // Description: Open Source Continuous File Synchronization - abused by attackers for data exfiltration
         // Reference: https://github.com/syncthing/syncthing
         $string5 = /\\syncthing\.exe/ nocase ascii wide

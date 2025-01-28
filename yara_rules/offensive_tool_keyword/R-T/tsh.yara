@@ -1,7 +1,7 @@
 rule tsh
 {
     meta:
-        description = "Detection patterns for the tool 'tsh' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'tsh' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "tsh"
@@ -10,19 +10,19 @@ rule tsh
     strings:
         // Description: UNIX backdoor
         // Reference: https://github.com/creaktive/tsh
-        $string1 = "/bin/tshd" nocase ascii wide
+        $string1 = "/bin/tshd"
         // Description: UNIX backdoor
         // Reference: https://github.com/creaktive/tsh
-        $string2 = "/tmp/tshd" nocase ascii wide
+        $string2 = "/tmp/tshd"
         // Description: UNIX backdoor
         // Reference: https://github.com/creaktive/tsh
-        $string3 = "creaktive/tsh" nocase ascii wide
+        $string3 = "creaktive/tsh"
         // Description: UNIX backdoor
         // Reference: https://github.com/creaktive/tsh
-        $string4 = /devine\@cr0\.net/ nocase ascii wide
+        $string4 = /devine\@cr0\.net/
         // Description: UNIX backdoor
         // Reference: https://github.com/creaktive/tsh
-        $string5 = /tsh_runshell\(/ nocase ascii wide
+        $string5 = /tsh_runshell\(/
 
     condition:
         any of them

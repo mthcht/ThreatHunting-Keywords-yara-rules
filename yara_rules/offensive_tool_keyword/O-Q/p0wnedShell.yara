@@ -1,7 +1,7 @@
 rule p0wnedShell
 {
     meta:
-        description = "Detection patterns for the tool 'p0wnedShell' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'p0wnedShell' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "p0wnedShell"
@@ -13,7 +13,7 @@ rule p0wnedShell
         $string1 = /\sPS1ToBase64\.ps1/ nocase ascii wide
         // Description: p0wnedShell is an offensive PowerShell host application written in C# that does not rely on powershell.exe but runs powershell commands and functions within a powershell runspace environment (.NET). It has a lot of offensive PowerShell modules and binaries included to make the process of Post Exploitation easier. What we tried was to build an ?all in one? Post Exploitation tool which we could use to bypass all mitigations solutions (or at least some off). and that has all relevant tooling included. You can use it to perform modern attacks within Active Directory environments and create awareness within your Blue team so they can build the right defense strategies.
         // Reference: https://github.com/Cn33liz/p0wnedShell
-        $string2 = /\/Inveigh\-Log\.txt/ nocase ascii wide
+        $string2 = /\/Inveigh\-Log\.txt/
         // Description: p0wnedShell is an offensive PowerShell host application written in C# that does not rely on powershell.exe but runs powershell commands and functions within a powershell runspace environment (.NET). It has a lot of offensive PowerShell modules and binaries included to make the process of Post Exploitation easier. What we tried was to build an ?all in one? Post Exploitation tool which we could use to bypass all mitigations solutions (or at least some off). and that has all relevant tooling included. You can use it to perform modern attacks within Active Directory environments and create awareness within your Blue team so they can build the right defense strategies.
         // Reference: https://github.com/Cn33liz/p0wnedShell
         $string3 = /\/PS1ToBase64\.ps1/ nocase ascii wide
@@ -88,10 +88,10 @@ rule p0wnedShell
         $string26 = "e290d98bd79a5f643d384efdf56a7c6c383c12efd3c810bf4513dda266cd7935" nocase ascii wide
         // Description: p0wnedShell is an offensive PowerShell host application written in C# that does not rely on powershell.exe but runs powershell commands and functions within a powershell runspace environment (.NET). It has a lot of offensive PowerShell modules and binaries included to make the process of Post Exploitation easier. What we tried was to build an ?all in one? Post Exploitation tool which we could use to bypass all mitigations solutions (or at least some off). and that has all relevant tooling included. You can use it to perform modern attacks within Active Directory environments and create awareness within your Blue team so they can build the right defense strategies.
         // Reference: https://github.com/Cn33liz/p0wnedShell
-        $string27 = /Get\-Content\s\.\/EncodedPayload\.bat/ nocase ascii wide
+        $string27 = /Get\-Content\s\.\/EncodedPayload\.bat/
         // Description: p0wnedShell is an offensive PowerShell host application written in C# that does not rely on powershell.exe but runs powershell commands and functions within a powershell runspace environment (.NET). It has a lot of offensive PowerShell modules and binaries included to make the process of Post Exploitation easier. What we tried was to build an ?all in one? Post Exploitation tool which we could use to bypass all mitigations solutions (or at least some off). and that has all relevant tooling included. You can use it to perform modern attacks within Active Directory environments and create awareness within your Blue team so they can build the right defense strategies.
         // Reference: https://github.com/Cn33liz/p0wnedShell
-        $string28 = /Get\-Content\s\.\/Roast\.hash/ nocase ascii wide
+        $string28 = /Get\-Content\s\.\/Roast\.hash/
         // Description: p0wnedShell is an offensive PowerShell host application written in C# that does not rely on powershell.exe but runs powershell commands and functions within a powershell runspace environment (.NET). It has a lot of offensive PowerShell modules and binaries included to make the process of Post Exploitation easier. What we tried was to build an ?all in one? Post Exploitation tool which we could use to bypass all mitigations solutions (or at least some off). and that has all relevant tooling included. You can use it to perform modern attacks within Active Directory environments and create awareness within your Blue team so they can build the right defense strategies.
         // Reference: https://github.com/Cn33liz/p0wnedShell
         $string29 = /Get\-GPPPassword\s\|\smore/ nocase ascii wide

@@ -1,7 +1,7 @@
 rule mkdir
 {
     meta:
-        description = "Detection patterns for the tool 'mkdir' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'mkdir' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "mkdir"
@@ -10,7 +10,7 @@ rule mkdir
     strings:
         // Description: delete bash history
         // Reference: N/A
-        $string1 = /mkdir\s\~\/\.bash_history/ nocase ascii wide
+        $string1 = /mkdir\s\~\/\.bash_history/
 
     condition:
         any of them

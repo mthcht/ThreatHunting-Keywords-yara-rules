@@ -1,7 +1,7 @@
 rule PWA_Phishing
 {
     meta:
-        description = "Detection patterns for the tool 'PWA-Phishing' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'PWA-Phishing' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "PWA-Phishing"

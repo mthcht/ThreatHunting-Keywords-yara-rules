@@ -1,7 +1,7 @@
 rule FudgeC2
 {
     meta:
-        description = "Detection patterns for the tool 'FudgeC2' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'FudgeC2' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "FudgeC2"
@@ -34,7 +34,7 @@ rule FudgeC2
         $string8 = /\/campaign\/.{0,1000}\/implant\/get_all/ nocase ascii wide
         // Description: FudgeC2 - a command and control framework designed for team collaboration and post-exploitation activities.
         // Reference: https://github.com/Ziconius/FudgeC2
-        $string9 = /\/fudge_c2\.sql/ nocase ascii wide
+        $string9 = /\/fudge_c2\.sql/
         // Description: FudgeC2 - a command and control framework designed for team collaboration and post-exploitation activities.
         // Reference: https://github.com/Ziconius/FudgeC2
         $string10 = "/FudgeC2" nocase ascii wide

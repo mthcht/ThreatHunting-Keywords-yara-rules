@@ -1,7 +1,7 @@
 rule dnscan
 {
     meta:
-        description = "Detection patterns for the tool 'dnscan' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'dnscan' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "dnscan"
@@ -16,10 +16,10 @@ rule dnscan
         $string2 = /\/dnscan\.git/ nocase ascii wide
         // Description: dnscan is a python wordlist-based DNS subdomain scanner.
         // Reference: https://github.com/rbsec/dnscan
-        $string3 = /\/dnscan\.py/ nocase ascii wide
+        $string3 = /\/dnscan\.py/
         // Description: dnscan is a python wordlist-based DNS subdomain scanner.
         // Reference: https://github.com/rbsec/dnscan
-        $string4 = /\/subdomains\.txt/ nocase ascii wide
+        $string4 = /\/subdomains\.txt/
         // Description: dnscan is a python wordlist-based DNS subdomain scanner.
         // Reference: https://github.com/rbsec/dnscan
         $string5 = /\\dnscan\.py/ nocase ascii wide

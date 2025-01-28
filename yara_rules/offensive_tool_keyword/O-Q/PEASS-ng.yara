@@ -1,7 +1,7 @@
 rule PEASS_ng
 {
     meta:
-        description = "Detection patterns for the tool 'PEASS-ng' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'PEASS-ng' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "PEASS-ng"
@@ -13,7 +13,7 @@ rule PEASS_ng
         $string1 = /\swinPEAS\.ps1/ nocase ascii wide
         // Description: PEASS-ng - Privilege Escalation Awesome Scripts suite
         // Reference: https://github.com/peass-ng/PEASS-ng
-        $string2 = /\.\/peass\.rb/ nocase ascii wide
+        $string2 = /\.\/peass\.rb/
         // Description: PEASS-ng - Privilege Escalation Awesome Scripts suite
         // Reference: https://github.com/peass-ng/PEASS-ng
         $string3 = /\.exe\s\-linpeas\=/ nocase ascii wide

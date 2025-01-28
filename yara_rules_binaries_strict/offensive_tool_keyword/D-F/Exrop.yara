@@ -1,7 +1,7 @@
 rule Exrop
 {
     meta:
-        description = "Detection patterns for the tool 'Exrop' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Exrop' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Exrop"
@@ -10,7 +10,7 @@ rule Exrop
     strings:
         // Description: Exrop is automatic ROP chains generator tool which can build gadget chain automatically from given binary and constraints
         // Reference: https://github.com/d4em0n/exrop
-        $string1 = /\sExrop\(.{0,100}\/bin\// nocase ascii wide
+        $string1 = /\sExrop\(.{0,100}\/bin\//
         // Description: Exrop is automatic ROP chains generator tool which can build gadget chain automatically from given binary and constraints
         // Reference: https://github.com/d4em0n/exrop
         $string2 = " import Exrop" nocase ascii wide

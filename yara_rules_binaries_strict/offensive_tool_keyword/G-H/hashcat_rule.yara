@@ -1,7 +1,7 @@
 rule hashcat_rule
 {
     meta:
-        description = "Detection patterns for the tool 'hashcat-rule' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'hashcat-rule' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "hashcat-rule"
@@ -10,28 +10,28 @@ rule hashcat_rule
     strings:
         // Description: Rule for hashcat or john. Aiming to crack how people generate their password
         // Reference: https://github.com/clem9669/hashcat-rule
-        $string1 = /\/hashcat\-rule\.git/ nocase ascii wide
+        $string1 = /\/hashcat\-rule\.git/
         // Description: Rule for hashcat or john. Aiming to crack how people generate their password
         // Reference: https://github.com/clem9669/hashcat-rule
-        $string2 = /\/password_ruled\.txt/ nocase ascii wide
+        $string2 = /\/password_ruled\.txt/
         // Description: Rule for hashcat or john. Aiming to crack how people generate their password
         // Reference: https://github.com/clem9669/hashcat-rule
-        $string3 = "clem9669/hashcat-rule" nocase ascii wide
+        $string3 = "clem9669/hashcat-rule"
         // Description: Rule for hashcat or john. Aiming to crack how people generate their password
         // Reference: https://github.com/clem9669/hashcat-rule
-        $string4 = /clem9669_case\.rule/ nocase ascii wide
+        $string4 = /clem9669_case\.rule/
         // Description: Rule for hashcat or john. Aiming to crack how people generate their password
         // Reference: https://github.com/clem9669/hashcat-rule
-        $string5 = /clem9669_large\.rule/ nocase ascii wide
+        $string5 = /clem9669_large\.rule/
         // Description: Rule for hashcat or john. Aiming to crack how people generate their password
         // Reference: https://github.com/clem9669/hashcat-rule
-        $string6 = /clem9669_medium\.rule/ nocase ascii wide
+        $string6 = /clem9669_medium\.rule/
         // Description: Rule for hashcat or john. Aiming to crack how people generate their password
         // Reference: https://github.com/clem9669/hashcat-rule
-        $string7 = /clem9669_small\.rule/ nocase ascii wide
+        $string7 = /clem9669_small\.rule/
         // Description: Rule for hashcat or john. Aiming to crack how people generate their password
         // Reference: https://github.com/clem9669/hashcat-rule
-        $string8 = "hashcat-rule-master" nocase ascii wide
+        $string8 = "hashcat-rule-master"
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

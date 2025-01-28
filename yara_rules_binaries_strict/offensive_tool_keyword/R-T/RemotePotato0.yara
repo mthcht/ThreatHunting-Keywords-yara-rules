@@ -1,7 +1,7 @@
 rule RemotePotato0
 {
     meta:
-        description = "Detection patterns for the tool 'RemotePotato0' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'RemotePotato0' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "RemotePotato0"
@@ -100,7 +100,7 @@ rule RemotePotato0
         $string30 = /RogueOxidResolver\scan\sbe\srun\slocally\son\s127\.0\.0\.1/ nocase ascii wide
         // Description: Windows Privilege Escalation from User to Domain Admin.
         // Reference: https://github.com/antonioCoco/RemotePotato0
-        $string31 = /sudo\ssocat\s\-v\sTCP\-LISTEN\:135.{0,100}rogueOxidResolverPort/ nocase ascii wide
+        $string31 = /sudo\ssocat\s\-v\sTCP\-LISTEN\:135.{0,100}rogueOxidResolverPort/
         // Description: Windows Privilege Escalation from User to Domain Admin.
         // Reference: https://github.com/antonioCoco/RemotePotato0
         $string32 = /you\scannot\srun\sthe\sRogueOxidResolver\son\s127\.0\.0\.1/ nocase ascii wide

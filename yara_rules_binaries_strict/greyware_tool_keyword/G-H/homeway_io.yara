@@ -1,7 +1,7 @@
 rule homeway_io
 {
     meta:
-        description = "Detection patterns for the tool 'homeway.io' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'homeway.io' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "homeway.io"
@@ -13,7 +13,7 @@ rule homeway_io
         $string1 = /homeassistant\.local\:8123/ nocase ascii wide
         // Description: Expose local servers to the internet
         // Reference: https://homeway.io/
-        $string2 = /https\:\/\/homeway\.io\/install\.sh/ nocase ascii wide
+        $string2 = /https\:\/\/homeway\.io\/install\.sh/
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

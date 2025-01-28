@@ -1,7 +1,7 @@
 rule Windows_MSKSSRV_LPE_CVE_2023_36802
 {
     meta:
-        description = "Detection patterns for the tool 'Windows_MSKSSRV_LPE_CVE-2023-36802' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Windows_MSKSSRV_LPE_CVE-2023-36802' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Windows_MSKSSRV_LPE_CVE-2023-36802"

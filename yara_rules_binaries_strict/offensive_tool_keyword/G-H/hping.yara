@@ -1,7 +1,7 @@
 rule hping
 {
     meta:
-        description = "Detection patterns for the tool 'hping' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'hping' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "hping"
@@ -13,7 +13,7 @@ rule hping
         $string1 = " hping3 " nocase ascii wide
         // Description: hping3 is a network tool able to send custom TCP/IP
         // Reference: https://github.com/antirez/hping
-        $string2 = /\.\/hping\s/ nocase ascii wide
+        $string2 = /\.\/hping\s/
         // Description: hping3 is a network tool able to send custom TCP/IP
         // Reference: https://github.com/antirez/hping
         $string3 = "antirez/hping" nocase ascii wide

@@ -1,7 +1,7 @@
 rule ToRat
 {
     meta:
-        description = "Detection patterns for the tool 'ToRat' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'ToRat' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "ToRat"
@@ -10,7 +10,7 @@ rule ToRat
     strings:
         // Description: ToRat is a Remote Administation tool written in Go using Tor as a transport mechanism and RPC for communication
         // Reference: https://github.com/lu4p/ToRat
-        $string1 = "/dist:/dist_ext torat" nocase ascii wide
+        $string1 = "/dist:/dist_ext torat"
         // Description: ToRat is a Remote Administation tool written in Go using Tor as a transport mechanism and RPC for communication
         // Reference: https://github.com/lu4p/ToRat
         $string2 = /\/persist_cortana\.py/ nocase ascii wide
@@ -19,7 +19,7 @@ rule ToRat
         $string3 = /\/persist_people\.py/ nocase ascii wide
         // Description: ToRat is a Remote Administation tool written in Go using Tor as a transport mechanism and RPC for communication
         // Reference: https://github.com/lu4p/ToRat
-        $string4 = /\/persit_linux\.go/ nocase ascii wide
+        $string4 = /\/persit_linux\.go/
         // Description: ToRat is a Remote Administation tool written in Go using Tor as a transport mechanism and RPC for communication
         // Reference: https://github.com/lu4p/ToRat
         $string5 = /\/persit_windows\.go/ nocase ascii wide

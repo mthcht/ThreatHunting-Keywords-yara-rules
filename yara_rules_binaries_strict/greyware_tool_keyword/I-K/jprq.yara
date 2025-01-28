@@ -1,7 +1,7 @@
 rule jprq
 {
     meta:
-        description = "Detection patterns for the tool 'jprq' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'jprq' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "jprq"
@@ -16,28 +16,28 @@ rule jprq
         $string2 = /\sjprq\-windows\-amd64\.exe/ nocase ascii wide
         // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
         // Reference: https://github.com/azimjohn/jprq
-        $string3 = /\/etc\/letsencrypt\/live\/jprq\.site\// nocase ascii wide
+        $string3 = /\/etc\/letsencrypt\/live\/jprq\.site\//
         // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
         // Reference: https://github.com/azimjohn/jprq
         $string4 = /\/jprq\.git/ nocase ascii wide
         // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
         // Reference: https://github.com/azimjohn/jprq
-        $string5 = /\/jprq\.log/ nocase ascii wide
+        $string5 = /\/jprq\.log/
         // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
         // Reference: https://github.com/azimjohn/jprq
-        $string6 = /\/jprq\.service/ nocase ascii wide
+        $string6 = /\/jprq\.service/
         // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
         // Reference: https://github.com/azimjohn/jprq
-        $string7 = /\/jprq\/server\/.{0,100}\.go/ nocase ascii wide
+        $string7 = /\/jprq\/server\/.{0,100}\.go/
         // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
         // Reference: https://github.com/azimjohn/jprq
-        $string8 = "/jprq-darwin-arm64" nocase ascii wide
+        $string8 = "/jprq-darwin-arm64"
         // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
         // Reference: https://github.com/azimjohn/jprq
-        $string9 = "/jprq-linux-386" nocase ascii wide
+        $string9 = "/jprq-linux-386"
         // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
         // Reference: https://github.com/azimjohn/jprq
-        $string10 = "/jprq-linux-arm64" nocase ascii wide
+        $string10 = "/jprq-linux-arm64"
         // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
         // Reference: https://github.com/azimjohn/jprq
         $string11 = /\/jprq\-windows\-386\.exe/ nocase ascii wide
@@ -46,13 +46,13 @@ rule jprq
         $string12 = /\/jprq\-windows\-amd64\.exe/ nocase ascii wide
         // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
         // Reference: https://github.com/azimjohn/jprq
-        $string13 = "/root/jprq-server" nocase ascii wide
+        $string13 = "/root/jprq-server"
         // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
         // Reference: https://github.com/azimjohn/jprq
-        $string14 = "/usr/local/bin/jprq" nocase ascii wide
+        $string14 = "/usr/local/bin/jprq"
         // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
         // Reference: https://github.com/azimjohn/jprq
-        $string15 = "/var/log/jprq/" nocase ascii wide
+        $string15 = "/var/log/jprq/"
         // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
         // Reference: https://github.com/azimjohn/jprq
         $string16 = /\\jprq\-windows\-386\.exe/ nocase ascii wide
@@ -154,7 +154,7 @@ rule jprq
         $string48 = /github\.com.{0,100}\/jprq\/releases\/download\// nocase ascii wide
         // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
         // Reference: https://github.com/azimjohn/jprq
-        $string49 = /https\:\/\/aur\.archlinux\.org\/jprq\.git/ nocase ascii wide
+        $string49 = /https\:\/\/aur\.archlinux\.org\/jprq\.git/
         // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
         // Reference: https://github.com/azimjohn/jprq
         $string50 = /https\:\/\/jprq\.io\/auth/ nocase ascii wide

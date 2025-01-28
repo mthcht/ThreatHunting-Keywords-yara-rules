@@ -1,7 +1,7 @@
 rule shadowsocks
 {
     meta:
-        description = "Detection patterns for the tool 'shadowsocks' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'shadowsocks' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "shadowsocks"
@@ -25,13 +25,13 @@ rule shadowsocks
         $string5 = " shadowsocks-tproxy-mark" nocase ascii wide
         // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
         // Reference: https://github.com/shadowsocks/shadowsocks-rust
-        $string6 = /\/etc\/capabilities\/shadowsocks\.json/ nocase ascii wide
+        $string6 = /\/etc\/capabilities\/shadowsocks\.json/
         // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
         // Reference: https://github.com/shadowsocks/shadowsocks-rust
-        $string7 = "/etc/shadowsocks-rust" nocase ascii wide
+        $string7 = "/etc/shadowsocks-rust"
         // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
         // Reference: https://github.com/shadowsocks/shadowsocks-rust
-        $string8 = /\/genacl_proxy_gfw_bypass_china_ip\.py/ nocase ascii wide
+        $string8 = /\/genacl_proxy_gfw_bypass_china_ip\.py/
         // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
         // Reference: https://github.com/shadowsocks/shadowsocks-windows
         $string9 = /\/privoxy\.exe/ nocase ascii wide
@@ -43,10 +43,10 @@ rule shadowsocks
         $string11 = /\/Shadowsocks\.zip/ nocase ascii wide
         // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
         // Reference: https://github.com/shadowsocks/shadowsocks-rust
-        $string12 = /\/shadowsocks_service\./ nocase ascii wide
+        $string12 = /\/shadowsocks_service\./
         // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
         // Reference: https://github.com/shadowsocks/shadowsocks-rust
-        $string13 = /\/shadowsocks\-manager\.sock/ nocase ascii wide
+        $string13 = /\/shadowsocks\-manager\.sock/
         // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
         // Reference: https://github.com/shadowsocks/shadowsocks-rust
         $string14 = /\/shadowsocks\-rust\.default/ nocase ascii wide
@@ -67,10 +67,10 @@ rule shadowsocks
         $string19 = /\/shadowsocks\-windows\.git/ nocase ascii wide
         // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
         // Reference: https://github.com/shadowsocks/shadowsocks-rust
-        $string20 = /\/usr\/local\/etc\/shadowsocks6\.json/ nocase ascii wide
+        $string20 = /\/usr\/local\/etc\/shadowsocks6\.json/
         // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
         // Reference: https://github.com/shadowsocks/shadowsocks-rust
-        $string21 = "/var/log/shadowsocks" nocase ascii wide
+        $string21 = "/var/log/shadowsocks"
         // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
         // Reference: https://github.com/shadowsocks/shadowsocks-rust
         $string22 = /\\genacl_proxy_gfw_bypass_china_ip\.py/ nocase ascii wide

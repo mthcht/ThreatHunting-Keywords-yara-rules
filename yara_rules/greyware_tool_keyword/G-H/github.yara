@@ -1,7 +1,7 @@
 rule github
 {
     meta:
-        description = "Detection patterns for the tool 'github' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'github' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "github"
@@ -34,7 +34,7 @@ rule github
         $string8 = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.asp/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string9 = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.bash/ nocase ascii wide
+        $string9 = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.bash/
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
         $string10 = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.bat/ nocase ascii wide
@@ -257,255 +257,321 @@ rule github
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
         $string83 = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.zip/ nocase ascii wide
+        // Description: Github raw access content - abused by malwares to retrieve payloads
+        // Reference: https://github.com/
+        $string84 = /\/github\.com\/.{0,1000}\/raw\/refs\/heads\/.{0,1000}\.7z/ nocase ascii wide
+        // Description: Github raw access content - abused by malwares to retrieve payloads
+        // Reference: https://github.com/
+        $string85 = /\/github\.com\/.{0,1000}\/raw\/refs\/heads\/.{0,1000}\.apk/ nocase ascii wide
+        // Description: Github raw access content - abused by malwares to retrieve payloads
+        // Reference: https://github.com/
+        $string86 = /\/github\.com\/.{0,1000}\/raw\/refs\/heads\/.{0,1000}\.bat/ nocase ascii wide
+        // Description: Github raw access content - abused by malwares to retrieve payloads
+        // Reference: https://github.com/
+        $string87 = /\/github\.com\/.{0,1000}\/raw\/refs\/heads\/.{0,1000}\.cmd/ nocase ascii wide
+        // Description: Github raw access content - abused by malwares to retrieve payloads
+        // Reference: https://github.com/
+        $string88 = /\/github\.com\/.{0,1000}\/raw\/refs\/heads\/.{0,1000}\.com/ nocase ascii wide
+        // Description: Github raw access content - abused by malwares to retrieve payloads
+        // Reference: https://github.com/
+        $string89 = /\/github\.com\/.{0,1000}\/raw\/refs\/heads\/.{0,1000}\.cpl/ nocase ascii wide
+        // Description: Github raw access content - abused by malwares to retrieve payloads
+        // Reference: https://github.com/
+        $string90 = /\/github\.com\/.{0,1000}\/raw\/refs\/heads\/.{0,1000}\.dll/ nocase ascii wide
+        // Description: Github raw access content - abused by malwares to retrieve payloads
+        // Reference: https://github.com/
+        $string91 = /\/github\.com\/.{0,1000}\/raw\/refs\/heads\/.{0,1000}\.exe/ nocase ascii wide
+        // Description: Github raw access content - abused by malwares to retrieve payloads
+        // Reference: https://github.com/
+        $string92 = /\/github\.com\/.{0,1000}\/raw\/refs\/heads\/.{0,1000}\.hta/ nocase ascii wide
+        // Description: Github raw access content - abused by malwares to retrieve payloads
+        // Reference: https://github.com/
+        $string93 = /\/github\.com\/.{0,1000}\/raw\/refs\/heads\/.{0,1000}\.iso/ nocase ascii wide
+        // Description: Github raw access content - abused by malwares to retrieve payloads
+        // Reference: https://github.com/
+        $string94 = /\/github\.com\/.{0,1000}\/raw\/refs\/heads\/.{0,1000}\.jar/ nocase ascii wide
+        // Description: Github raw access content - abused by malwares to retrieve payloads
+        // Reference: https://github.com/
+        $string95 = /\/github\.com\/.{0,1000}\/raw\/refs\/heads\/.{0,1000}\.lnk/ nocase ascii wide
+        // Description: Github raw access content - abused by malwares to retrieve payloads
+        // Reference: https://github.com/
+        $string96 = /\/github\.com\/.{0,1000}\/raw\/refs\/heads\/.{0,1000}\.msi/ nocase ascii wide
+        // Description: Github raw access content - abused by malwares to retrieve payloads
+        // Reference: https://github.com/
+        $string97 = /\/github\.com\/.{0,1000}\/raw\/refs\/heads\/.{0,1000}\.pif/ nocase ascii wide
+        // Description: Github raw access content - abused by malwares to retrieve payloads
+        // Reference: https://github.com/
+        $string98 = /\/github\.com\/.{0,1000}\/raw\/refs\/heads\/.{0,1000}\.ps1/ nocase ascii wide
+        // Description: Github raw access content - abused by malwares to retrieve payloads
+        // Reference: https://github.com/
+        $string99 = /\/github\.com\/.{0,1000}\/raw\/refs\/heads\/.{0,1000}\.py/ nocase ascii wide
+        // Description: Github raw access content - abused by malwares to retrieve payloads
+        // Reference: https://github.com/
+        $string100 = /\/github\.com\/.{0,1000}\/raw\/refs\/heads\/.{0,1000}\.reg/ nocase ascii wide
+        // Description: Github raw access content - abused by malwares to retrieve payloads
+        // Reference: https://github.com/
+        $string101 = /\/github\.com\/.{0,1000}\/raw\/refs\/heads\/.{0,1000}\.scr/ nocase ascii wide
+        // Description: Github raw access content - abused by malwares to retrieve payloads
+        // Reference: https://github.com/
+        $string102 = /\/github\.com\/.{0,1000}\/raw\/refs\/heads\/.{0,1000}\.sh/ nocase ascii wide
+        // Description: Github raw access content - abused by malwares to retrieve payloads
+        // Reference: https://github.com/
+        $string103 = /\/github\.com\/.{0,1000}\/raw\/refs\/heads\/.{0,1000}\.vbs/ nocase ascii wide
+        // Description: Github raw access content - abused by malwares to retrieve payloads
+        // Reference: https://github.com/
+        $string104 = /\/github\.com\/.{0,1000}\/raw\/refs\/heads\/.{0,1000}\.vbs/ nocase ascii wide
+        // Description: Github raw access content - abused by malwares to retrieve payloads
+        // Reference: https://github.com/
+        $string105 = /\/github\.com\/.{0,1000}\/raw\/refs\/heads\/.{0,1000}\.zip/ nocase ascii wide
         // Description: Github executables download initiated - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string84 = /codeload\.github\.com\// nocase ascii wide
+        $string106 = /codeload\.github\.com\// nocase ascii wide
         // Description: Github executables download initiated - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string85 = /objects\.githubusercontent\.com\/github\-production\-release\-asset\-/ nocase ascii wide
+        $string107 = /objects\.githubusercontent\.com\/github\-production\-release\-asset\-/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string86 = /raw\.githubusercontent\.com.{0,1000}\.7z/ nocase ascii wide
+        $string108 = /raw\.githubusercontent\.com.{0,1000}\.7z/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string87 = /raw\.githubusercontent\.com.{0,1000}\.apk/ nocase ascii wide
+        $string109 = /raw\.githubusercontent\.com.{0,1000}\.apk/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string88 = /raw\.githubusercontent\.com.{0,1000}\.app/ nocase ascii wide
+        $string110 = /raw\.githubusercontent\.com.{0,1000}\.app/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string89 = /raw\.githubusercontent\.com.{0,1000}\.as/ nocase ascii wide
+        $string111 = /raw\.githubusercontent\.com.{0,1000}\.as/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string90 = /raw\.githubusercontent\.com.{0,1000}\.asc/ nocase ascii wide
+        $string112 = /raw\.githubusercontent\.com.{0,1000}\.asc/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string91 = /raw\.githubusercontent\.com.{0,1000}\.asp/ nocase ascii wide
+        $string113 = /raw\.githubusercontent\.com.{0,1000}\.asp/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string92 = /raw\.githubusercontent\.com.{0,1000}\.bash/ nocase ascii wide
+        $string114 = /raw\.githubusercontent\.com.{0,1000}\.bash/
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string93 = /raw\.githubusercontent\.com.{0,1000}\.bat/ nocase ascii wide
+        $string115 = /raw\.githubusercontent\.com.{0,1000}\.bat/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string94 = /raw\.githubusercontent\.com.{0,1000}\.beacon/ nocase ascii wide
+        $string116 = /raw\.githubusercontent\.com.{0,1000}\.beacon/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string95 = /raw\.githubusercontent\.com.{0,1000}\.bin/ nocase ascii wide
+        $string117 = /raw\.githubusercontent\.com.{0,1000}\.bin/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string96 = /raw\.githubusercontent\.com.{0,1000}\.bpl/ nocase ascii wide
+        $string118 = /raw\.githubusercontent\.com.{0,1000}\.bpl/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string97 = /raw\.githubusercontent\.com.{0,1000}\.c/ nocase ascii wide
+        $string119 = /raw\.githubusercontent\.com.{0,1000}\.c/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string98 = /raw\.githubusercontent\.com.{0,1000}\.cer/ nocase ascii wide
+        $string120 = /raw\.githubusercontent\.com.{0,1000}\.cer/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string99 = /raw\.githubusercontent\.com.{0,1000}\.cmd/ nocase ascii wide
+        $string121 = /raw\.githubusercontent\.com.{0,1000}\.cmd/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string100 = /raw\.githubusercontent\.com.{0,1000}\.com/ nocase ascii wide
+        $string122 = /raw\.githubusercontent\.com.{0,1000}\.com/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string101 = /raw\.githubusercontent\.com.{0,1000}\.cpp/ nocase ascii wide
+        $string123 = /raw\.githubusercontent\.com.{0,1000}\.cpp/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string102 = /raw\.githubusercontent\.com.{0,1000}\.crt/ nocase ascii wide
+        $string124 = /raw\.githubusercontent\.com.{0,1000}\.crt/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string103 = /raw\.githubusercontent\.com.{0,1000}\.cs/ nocase ascii wide
+        $string125 = /raw\.githubusercontent\.com.{0,1000}\.cs/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string104 = /raw\.githubusercontent\.com.{0,1000}\.csh/ nocase ascii wide
+        $string126 = /raw\.githubusercontent\.com.{0,1000}\.csh/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string105 = /raw\.githubusercontent\.com.{0,1000}\.dat/ nocase ascii wide
+        $string127 = /raw\.githubusercontent\.com.{0,1000}\.dat/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string106 = /raw\.githubusercontent\.com.{0,1000}\.dll/ nocase ascii wide
+        $string128 = /raw\.githubusercontent\.com.{0,1000}\.dll/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string107 = /raw\.githubusercontent\.com.{0,1000}\.docm/ nocase ascii wide
+        $string129 = /raw\.githubusercontent\.com.{0,1000}\.docm/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string108 = /raw\.githubusercontent\.com.{0,1000}\.dos/ nocase ascii wide
+        $string130 = /raw\.githubusercontent\.com.{0,1000}\.dos/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string109 = /raw\.githubusercontent\.com.{0,1000}\.exe/ nocase ascii wide
+        $string131 = /raw\.githubusercontent\.com.{0,1000}\.exe/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string110 = /raw\.githubusercontent\.com.{0,1000}\.go/ nocase ascii wide
+        $string132 = /raw\.githubusercontent\.com.{0,1000}\.go/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string111 = /raw\.githubusercontent\.com.{0,1000}\.gz/ nocase ascii wide
+        $string133 = /raw\.githubusercontent\.com.{0,1000}\.gz/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string112 = /raw\.githubusercontent\.com.{0,1000}\.hta/ nocase ascii wide
+        $string134 = /raw\.githubusercontent\.com.{0,1000}\.hta/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string113 = /raw\.githubusercontent\.com.{0,1000}\.iso/ nocase ascii wide
+        $string135 = /raw\.githubusercontent\.com.{0,1000}\.iso/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string114 = /raw\.githubusercontent\.com.{0,1000}\.jar/ nocase ascii wide
+        $string136 = /raw\.githubusercontent\.com.{0,1000}\.jar/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string115 = /raw\.githubusercontent\.com.{0,1000}\.js/ nocase ascii wide
+        $string137 = /raw\.githubusercontent\.com.{0,1000}\.js/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string116 = /raw\.githubusercontent\.com.{0,1000}\.lnk/ nocase ascii wide
+        $string138 = /raw\.githubusercontent\.com.{0,1000}\.lnk/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string117 = /raw\.githubusercontent\.com.{0,1000}\.log/ nocase ascii wide
+        $string139 = /raw\.githubusercontent\.com.{0,1000}\.log/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string118 = /raw\.githubusercontent\.com.{0,1000}\.mac/ nocase ascii wide
+        $string140 = /raw\.githubusercontent\.com.{0,1000}\.mac/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string119 = /raw\.githubusercontent\.com.{0,1000}\.mam/ nocase ascii wide
+        $string141 = /raw\.githubusercontent\.com.{0,1000}\.mam/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string120 = /raw\.githubusercontent\.com.{0,1000}\.msi/ nocase ascii wide
+        $string142 = /raw\.githubusercontent\.com.{0,1000}\.msi/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string121 = /raw\.githubusercontent\.com.{0,1000}\.msp/ nocase ascii wide
+        $string143 = /raw\.githubusercontent\.com.{0,1000}\.msp/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string122 = /raw\.githubusercontent\.com.{0,1000}\.nexe/ nocase ascii wide
+        $string144 = /raw\.githubusercontent\.com.{0,1000}\.nexe/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string123 = /raw\.githubusercontent\.com.{0,1000}\.nim/ nocase ascii wide
+        $string145 = /raw\.githubusercontent\.com.{0,1000}\.nim/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string124 = /raw\.githubusercontent\.com.{0,1000}\.otm/ nocase ascii wide
+        $string146 = /raw\.githubusercontent\.com.{0,1000}\.otm/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string125 = /raw\.githubusercontent\.com.{0,1000}\.out/ nocase ascii wide
+        $string147 = /raw\.githubusercontent\.com.{0,1000}\.out/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string126 = /raw\.githubusercontent\.com.{0,1000}\.ova/ nocase ascii wide
+        $string148 = /raw\.githubusercontent\.com.{0,1000}\.ova/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string127 = /raw\.githubusercontent\.com.{0,1000}\.pem/ nocase ascii wide
+        $string149 = /raw\.githubusercontent\.com.{0,1000}\.pem/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string128 = /raw\.githubusercontent\.com.{0,1000}\.pfx/ nocase ascii wide
+        $string150 = /raw\.githubusercontent\.com.{0,1000}\.pfx/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string129 = /raw\.githubusercontent\.com.{0,1000}\.pl/ nocase ascii wide
+        $string151 = /raw\.githubusercontent\.com.{0,1000}\.pl/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string130 = /raw\.githubusercontent\.com.{0,1000}\.plx/ nocase ascii wide
+        $string152 = /raw\.githubusercontent\.com.{0,1000}\.plx/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string131 = /raw\.githubusercontent\.com.{0,1000}\.pm/ nocase ascii wide
+        $string153 = /raw\.githubusercontent\.com.{0,1000}\.pm/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string132 = /raw\.githubusercontent\.com.{0,1000}\.ppk/ nocase ascii wide
+        $string154 = /raw\.githubusercontent\.com.{0,1000}\.ppk/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string133 = /raw\.githubusercontent\.com.{0,1000}\.ps1/ nocase ascii wide
+        $string155 = /raw\.githubusercontent\.com.{0,1000}\.ps1/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string134 = /raw\.githubusercontent\.com.{0,1000}\.psm1/ nocase ascii wide
+        $string156 = /raw\.githubusercontent\.com.{0,1000}\.psm1/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string135 = /raw\.githubusercontent\.com.{0,1000}\.pub/ nocase ascii wide
+        $string157 = /raw\.githubusercontent\.com.{0,1000}\.pub/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string136 = /raw\.githubusercontent\.com.{0,1000}\.py/ nocase ascii wide
+        $string158 = /raw\.githubusercontent\.com.{0,1000}\.py/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string137 = /raw\.githubusercontent\.com.{0,1000}\.pyc/ nocase ascii wide
+        $string159 = /raw\.githubusercontent\.com.{0,1000}\.pyc/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string138 = /raw\.githubusercontent\.com.{0,1000}\.pyo/ nocase ascii wide
+        $string160 = /raw\.githubusercontent\.com.{0,1000}\.pyo/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string139 = /raw\.githubusercontent\.com.{0,1000}\.rar/ nocase ascii wide
+        $string161 = /raw\.githubusercontent\.com.{0,1000}\.rar/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string140 = /raw\.githubusercontent\.com.{0,1000}\.raw/ nocase ascii wide
+        $string162 = /raw\.githubusercontent\.com.{0,1000}\.raw/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string141 = /raw\.githubusercontent\.com.{0,1000}\.reg/ nocase ascii wide
+        $string163 = /raw\.githubusercontent\.com.{0,1000}\.reg/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string142 = /raw\.githubusercontent\.com.{0,1000}\.rgs/ nocase ascii wide
+        $string164 = /raw\.githubusercontent\.com.{0,1000}\.rgs/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string143 = /raw\.githubusercontent\.com.{0,1000}\.RGS/ nocase ascii wide
+        $string165 = /raw\.githubusercontent\.com.{0,1000}\.RGS/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string144 = /raw\.githubusercontent\.com.{0,1000}\.run/ nocase ascii wide
+        $string166 = /raw\.githubusercontent\.com.{0,1000}\.run/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string145 = /raw\.githubusercontent\.com.{0,1000}\.scpt/ nocase ascii wide
+        $string167 = /raw\.githubusercontent\.com.{0,1000}\.scpt/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string146 = /raw\.githubusercontent\.com.{0,1000}\.script/ nocase ascii wide
+        $string168 = /raw\.githubusercontent\.com.{0,1000}\.script/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string147 = /raw\.githubusercontent\.com.{0,1000}\.sct/ nocase ascii wide
+        $string169 = /raw\.githubusercontent\.com.{0,1000}\.sct/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string148 = /raw\.githubusercontent\.com.{0,1000}\.sh/ nocase ascii wide
+        $string170 = /raw\.githubusercontent\.com.{0,1000}\.sh/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string149 = /raw\.githubusercontent\.com.{0,1000}\.ssh/ nocase ascii wide
+        $string171 = /raw\.githubusercontent\.com.{0,1000}\.ssh/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string150 = /raw\.githubusercontent\.com.{0,1000}\.sys/ nocase ascii wide
+        $string172 = /raw\.githubusercontent\.com.{0,1000}\.sys/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string151 = /raw\.githubusercontent\.com.{0,1000}\.teamserver/ nocase ascii wide
+        $string173 = /raw\.githubusercontent\.com.{0,1000}\.teamserver/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string152 = /raw\.githubusercontent\.com.{0,1000}\.temp/ nocase ascii wide
+        $string174 = /raw\.githubusercontent\.com.{0,1000}\.temp/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string153 = /raw\.githubusercontent\.com.{0,1000}\.tgz/ nocase ascii wide
+        $string175 = /raw\.githubusercontent\.com.{0,1000}\.tgz/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string154 = /raw\.githubusercontent\.com.{0,1000}\.tmp/ nocase ascii wide
+        $string176 = /raw\.githubusercontent\.com.{0,1000}\.tmp/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string155 = /raw\.githubusercontent\.com.{0,1000}\.vb/ nocase ascii wide
+        $string177 = /raw\.githubusercontent\.com.{0,1000}\.vb/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string156 = /raw\.githubusercontent\.com.{0,1000}\.vbs/ nocase ascii wide
+        $string178 = /raw\.githubusercontent\.com.{0,1000}\.vbs/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string157 = /raw\.githubusercontent\.com.{0,1000}\.vbscript/ nocase ascii wide
+        $string179 = /raw\.githubusercontent\.com.{0,1000}\.vbscript/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string158 = /raw\.githubusercontent\.com.{0,1000}\.ws/ nocase ascii wide
+        $string180 = /raw\.githubusercontent\.com.{0,1000}\.ws/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string159 = /raw\.githubusercontent\.com.{0,1000}\.wsf/ nocase ascii wide
+        $string181 = /raw\.githubusercontent\.com.{0,1000}\.wsf/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string160 = /raw\.githubusercontent\.com.{0,1000}\.wsh/ nocase ascii wide
+        $string182 = /raw\.githubusercontent\.com.{0,1000}\.wsh/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string161 = /raw\.githubusercontent\.com.{0,1000}\.X86/ nocase ascii wide
+        $string183 = /raw\.githubusercontent\.com.{0,1000}\.X86/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string162 = /raw\.githubusercontent\.com.{0,1000}\.X86_64/ nocase ascii wide
+        $string184 = /raw\.githubusercontent\.com.{0,1000}\.X86_64/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string163 = /raw\.githubusercontent\.com.{0,1000}\.xlam/ nocase ascii wide
+        $string185 = /raw\.githubusercontent\.com.{0,1000}\.xlam/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string164 = /raw\.githubusercontent\.com.{0,1000}\.xlm/ nocase ascii wide
+        $string186 = /raw\.githubusercontent\.com.{0,1000}\.xlm/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string165 = /raw\.githubusercontent\.com.{0,1000}\.xlsm/ nocase ascii wide
+        $string187 = /raw\.githubusercontent\.com.{0,1000}\.xlsm/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string166 = /raw\.githubusercontent\.com.{0,1000}\.zip/ nocase ascii wide
+        $string188 = /raw\.githubusercontent\.com.{0,1000}\.zip/ nocase ascii wide
 
     condition:
         any of them

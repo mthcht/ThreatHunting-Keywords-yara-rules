@@ -1,7 +1,7 @@
 rule nmap
 {
     meta:
-        description = "Detection patterns for the tool 'nmap' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'nmap' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "nmap"
@@ -694,7 +694,7 @@ rule nmap
         $string228 = /\shttp\-open\-redirect\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string229 = /\shttp\-passwd\.nse/ nocase ascii wide
+        $string229 = /\shttp\-passwd\.nse/
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
         $string230 = /\shttp\-phpmyadmin\-dir\-traversal\.nse/ nocase ascii wide
@@ -931,7 +931,7 @@ rule nmap
         $string307 = /\simap\-ntlm\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string308 = /\simpress\-remote\-discover\.nse/ nocase ascii wide
+        $string308 = /\simpress\-remote\-discover\.nse/
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
         $string309 = /\sinformix\-brute\.nse/ nocase ascii wide
@@ -2557,7 +2557,7 @@ rule nmap
         $string849 = /\/http\-open\-redirect\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string850 = /\/http\-passwd\.nse/ nocase ascii wide
+        $string850 = /\/http\-passwd\.nse/
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
         $string851 = /\/http\-phpmyadmin\-dir\-traversal\.nse/ nocase ascii wide

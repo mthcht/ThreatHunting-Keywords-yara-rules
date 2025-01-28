@@ -1,7 +1,7 @@
 rule cat
 {
     meta:
-        description = "Detection patterns for the tool 'cat' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'cat' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "cat"
@@ -16,10 +16,10 @@ rule cat
         $string2 = /cat\s.{0,100}\.atftp_history/ nocase ascii wide
         // Description: show bash history
         // Reference: N/A
-        $string3 = /cat\s.{0,100}\.bash_history/ nocase ascii wide
+        $string3 = /cat\s.{0,100}\.bash_history/
         // Description: Enumerating user files history for interesting information
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string4 = /cat\s.{0,100}\.bash_history/ nocase ascii wide
+        $string4 = /cat\s.{0,100}\.bash_history/
         // Description: show mysql history
         // Reference: N/A
         $string5 = /cat\s.{0,100}\.mysql_history/ nocase ascii wide
@@ -46,28 +46,28 @@ rule cat
         $string12 = /cat\s.{0,100}\.zsh_history/ nocase ascii wide
         // Description: linux commands abused by attackers
         // Reference: N/A
-        $string13 = /cat\s.{0,100}bash\-history/ nocase ascii wide
+        $string13 = /cat\s.{0,100}bash\-history/
         // Description: deleting bash history
         // Reference: N/A
         $string14 = /cat\s\/dev\/null\s\>\s\$HISTFILE/ nocase ascii wide
         // Description: deleting log files
         // Reference: N/A
-        $string15 = /cat\s\/dev\/null\s\>\s\/var\/log\/.{0,100}\.log/ nocase ascii wide
+        $string15 = /cat\s\/dev\/null\s\>\s\/var\/log\/.{0,100}\.log/
         // Description: linux commands abused by attackers
         // Reference: N/A
-        $string16 = /cat\s\/dev\/null\s\>\s\/var\/log\/auth\.log/ nocase ascii wide
+        $string16 = /cat\s\/dev\/null\s\>\s\/var\/log\/auth\.log/
         // Description: linux commands abused by attackers
         // Reference: N/A
-        $string17 = /cat\s\/dev\/null\s\>\s\~\/\.bash_history/ nocase ascii wide
+        $string17 = /cat\s\/dev\/null\s\>\s\~\/\.bash_history/
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
-        $string18 = "cat /etc/passwd" nocase ascii wide
+        $string18 = "cat /etc/passwd"
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
-        $string19 = "cat /etc/shadow" nocase ascii wide
+        $string19 = "cat /etc/shadow"
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
-        $string20 = "cat /etc/sudoers" nocase ascii wide
+        $string20 = "cat /etc/sudoers"
         // Description: cat suspicious commands
         // Reference: N/A
         $string21 = /cat\s\/root\/\.aws\/credentials/ nocase ascii wide

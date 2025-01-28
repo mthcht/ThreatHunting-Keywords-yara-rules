@@ -1,7 +1,7 @@
 rule hoaxshell
 {
     meta:
-        description = "Detection patterns for the tool 'hoaxshell' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'hoaxshell' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "hoaxshell"
@@ -16,7 +16,7 @@ rule hoaxshell
         $string2 = /\#\sAuthor\:\sPanagiotis\sChartas\s\(t3l3machus\)/ nocase ascii wide
         // Description: An unconventional Windows reverse shell. currently undetected by Microsoft Defender and various other AV solutions. solely based on http(s) traffic
         // Reference: https://github.com/t3l3machus/hoaxshell
-        $string3 = /\.\/hoaxshell/ nocase ascii wide
+        $string3 = /\.\/hoaxshell/
         // Description: An unconventional Windows reverse shell. currently undetected by Microsoft Defender and various other AV solutions. solely based on http(s) traffic
         // Reference: https://github.com/t3l3machus/hoaxshell
         $string4 = /\.py.{0,1000}\s\-\-localtunnel\s/ nocase ascii wide

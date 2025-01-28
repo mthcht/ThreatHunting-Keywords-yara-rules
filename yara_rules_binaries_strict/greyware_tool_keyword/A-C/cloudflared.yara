@@ -1,7 +1,7 @@
 rule cloudflared
 {
     meta:
-        description = "Detection patterns for the tool 'cloudflared' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'cloudflared' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "cloudflared"
@@ -19,16 +19,16 @@ rule cloudflared
         $string3 = /\/cloudflared\.git/ nocase ascii wide
         // Description: cloudfared Contains the command-line client for Cloudflare Tunnel - a tunneling daemon that proxies traffic from the Cloudflare network to your origins
         // Reference: https://github.com/cloudflare/cloudflared
-        $string4 = "/cloudflared/tunnel/" nocase ascii wide
+        $string4 = "/cloudflared/tunnel/"
         // Description: cloudfared Contains the command-line client for Cloudflare Tunnel - a tunneling daemon that proxies traffic from the Cloudflare network to your origins
         // Reference: https://github.com/cloudflare/cloudflared
-        $string5 = /\/cloudflared\-linux\-.{0,100}\.deb/ nocase ascii wide
+        $string5 = /\/cloudflared\-linux\-.{0,100}\.deb/
         // Description: cloudfared Contains the command-line client for Cloudflare Tunnel - a tunneling daemon that proxies traffic from the Cloudflare network to your origins
         // Reference: https://github.com/cloudflare/cloudflared
-        $string6 = /\/cloudflared\-linux\-.{0,100}\.rpm/ nocase ascii wide
+        $string6 = /\/cloudflared\-linux\-.{0,100}\.rpm/
         // Description: cloudfared Contains the command-line client for Cloudflare Tunnel - a tunneling daemon that proxies traffic from the Cloudflare network to your origins
         // Reference: https://github.com/cloudflare/cloudflared
-        $string7 = "/usr/local/bin/cloudflared tunnel" nocase ascii wide
+        $string7 = "/usr/local/bin/cloudflared tunnel"
         // Description: cloudfared Contains the command-line client for Cloudflare Tunnel - a tunneling daemon that proxies traffic from the Cloudflare network to your origins
         // Reference: https://github.com/cloudflare/cloudflared
         $string8 = /\\cloudflared\.exe/ nocase ascii wide
@@ -97,7 +97,7 @@ rule cloudflared
         $string29 = "ca6ac5c1c1f30675eecf91fe295d703007a754c1b320609ede7aa4783d899e9e" nocase ascii wide
         // Description: cloudfared Contains the command-line client for Cloudflare Tunnel - a tunneling daemon that proxies traffic from the Cloudflare network to your origins
         // Reference: https://github.com/cloudflare/cloudflared
-        $string30 = /\-\-chown\=nonroot\s\/go\/src\/github\.com\/cloudflare\/cloudflared\/cloudflared\s\/usr\/local\/bin\// nocase ascii wide
+        $string30 = /\-\-chown\=nonroot\s\/go\/src\/github\.com\/cloudflare\/cloudflared\/cloudflared\s\/usr\/local\/bin\//
         // Description: cloudfared Contains the command-line client for Cloudflare Tunnel - a tunneling daemon that proxies traffic from the Cloudflare network to your origins
         // Reference: https://github.com/cloudflare/cloudflared
         $string31 = "cloudflared tunnel --config " nocase ascii wide
@@ -151,10 +151,10 @@ rule cloudflared
         $string47 = "e8118e74c74a62a1d8dc291cb626f46d0056b1284726c2a5d671e20a5e92270c" nocase ascii wide
         // Description: cloudfared Contains the command-line client for Cloudflare Tunnel - a tunneling daemon that proxies traffic from the Cloudflare network to your origins
         // Reference: https://github.com/cloudflare/cloudflared
-        $string48 = /echo\s\'alias\scat\=\/bin\/bash\s\-c\s\'bash\s\-i\s\>\&\s\/dev\/tcp\/.{0,100}\/.{0,100}\s0\>\&1\'\'\s\>\>\s.{0,100}\/\.bashrc.{0,100}\s/ nocase ascii wide
+        $string48 = /echo\s\'alias\scat\=\/bin\/bash\s\-c\s\'bash\s\-i\s\>\&\s\/dev\/tcp\/.{0,100}\/.{0,100}\s0\>\&1\'\'\s\>\>\s.{0,100}\/\.bashrc.{0,100}\s/
         // Description: cloudfared Contains the command-line client for Cloudflare Tunnel - a tunneling daemon that proxies traffic from the Cloudflare network to your origins
         // Reference: https://github.com/cloudflare/cloudflared
-        $string49 = /echo\s\'alias\sfind\=\/bin\/bash\s\-c\s\'bash\s\-i\s\>\&\s\/dev\/tcp\/.{0,100}\/.{0,100}\>\>\s\\"\$user\/\.bashrc\\"/ nocase ascii wide
+        $string49 = /echo\s\'alias\sfind\=\/bin\/bash\s\-c\s\'bash\s\-i\s\>\&\s\/dev\/tcp\/.{0,100}\/.{0,100}\>\>\s\\"\$user\/\.bashrc\\"/
         // Description: cloudfared Contains the command-line client for Cloudflare Tunnel - a tunneling daemon that proxies traffic from the Cloudflare network to your origins
         // Reference: https://github.com/cloudflare/cloudflared
         $string50 = "ed4f5607dbc3fec5d43fbc22fb12a79d8bca07aa60c8733db7f495b7210d631f" nocase ascii wide
@@ -172,7 +172,7 @@ rule cloudflared
         $string54 = /sc\.exe\screate\sCloudflared\sbinPath\=\\/ nocase ascii wide
         // Description: cloudfared Contains the command-line client for Cloudflare Tunnel - a tunneling daemon that proxies traffic from the Cloudflare network to your origins
         // Reference: https://github.com/cloudflare/cloudflared
-        $string55 = /sudo\ssystemctl\sedit\s\-\-full\scloudflared\.service/ nocase ascii wide
+        $string55 = /sudo\ssystemctl\sedit\s\-\-full\scloudflared\.service/
         // Description: cloudfared Contains the command-line client for Cloudflare Tunnel - a tunneling daemon that proxies traffic from the Cloudflare network to your origins
         // Reference: https://github.com/cloudflare/cloudflared
         $string56 = /test\-cloudflare\-tunnel\-cert\-json\.pem/ nocase ascii wide

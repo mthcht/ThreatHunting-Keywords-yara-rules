@@ -1,7 +1,7 @@
 rule Heroinn
 {
     meta:
-        description = "Detection patterns for the tool 'Heroinn' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Heroinn' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Heroinn"
@@ -16,7 +16,7 @@ rule Heroinn
         $string2 = "/Heroinn/" nocase ascii wide
         // Description: A cross platform C2/post-exploitation framework implementation by Rust.
         // Reference: https://github.com/b23r0/Heroinn
-        $string3 = "/heroinn_client/" nocase ascii wide
+        $string3 = "/heroinn_client/"
         // Description: A cross platform C2/post-exploitation framework implementation by Rust.
         // Reference: https://github.com/b23r0/Heroinn
         $string4 = /\/shell\/shell_port\./ nocase ascii wide

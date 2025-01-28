@@ -1,7 +1,7 @@
 rule havoc
 {
     meta:
-        description = "Detection patterns for the tool 'havoc' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'havoc' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "havoc"
@@ -16,13 +16,13 @@ rule havoc
         $string2 = " havoc-client" nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string3 = /\.\/donut\s.{0,100}\.exe/ nocase ascii wide
+        $string3 = /\.\/donut\s.{0,100}\.exe/
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string4 = /\.\/Havoc/ nocase ascii wide
+        $string4 = /\.\/Havoc/
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string5 = /\.\/havoc\s/ nocase ascii wide
+        $string5 = /\.\/havoc\s/
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
         $string6 = "/Cracked5pider/" nocase ascii wide
@@ -91,7 +91,7 @@ rule havoc
         $string27 = /\/scshell\.py/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string28 = /\/Talon\.py/ nocase ascii wide
+        $string28 = /\/Talon\.py/
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
         $string29 = /\/Talon\/.{0,100}Agent\/Source/ nocase ascii wide

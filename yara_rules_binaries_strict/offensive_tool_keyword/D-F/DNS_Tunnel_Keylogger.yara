@@ -1,7 +1,7 @@
 rule DNS_Tunnel_Keylogger
 {
     meta:
-        description = "Detection patterns for the tool 'DNS-Tunnel-Keylogger' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'DNS-Tunnel-Keylogger' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "DNS-Tunnel-Keylogger"
@@ -10,7 +10,7 @@ rule DNS_Tunnel_Keylogger
     strings:
         // Description: Keylogging server and client that uses DNS tunneling/exfiltration to transmit keystrokes
         // Reference: https://github.com/Geeoon/DNS-Tunnel-Keylogger
-        $string1 = /\.\/logger\.sh\s.{0,100}\s\&\>\s\/dev\/null\s\&\&\sexit/ nocase ascii wide
+        $string1 = /\.\/logger\.sh\s.{0,100}\s\&\>\s\/dev\/null\s\&\&\sexit/
         // Description: Keylogging server and client that uses DNS tunneling/exfiltration to transmit keystrokes
         // Reference: https://github.com/Geeoon/DNS-Tunnel-Keylogger
         $string2 = "1fc325f3-c548-43db-a13f-8c460dda8381" nocase ascii wide

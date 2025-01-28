@@ -1,7 +1,7 @@
 rule PhpSploit
 {
     meta:
-        description = "Detection patterns for the tool 'PhpSploit' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'PhpSploit' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "PhpSploit"
@@ -16,7 +16,7 @@ rule PhpSploit
         $string2 = /\/phpsploit\.git/ nocase ascii wide
         // Description: Full-featured C2 framework which silently persists on webserver via evil PHP oneliner
         // Reference: https://github.com/nil0x42/phpsploit
-        $string3 = "/phpsploit-config" nocase ascii wide
+        $string3 = "/phpsploit-config"
         // Description: Full-featured C2 framework which silently persists on webserver via evil PHP oneliner
         // Reference: https://github.com/nil0x42/phpsploit
         $string4 = /\\phpsploit\-main/ nocase ascii wide

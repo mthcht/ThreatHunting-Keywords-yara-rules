@@ -1,7 +1,7 @@
 rule MaliciousMacroMSBuild
 {
     meta:
-        description = "Detection patterns for the tool 'MaliciousMacroMSBuild' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'MaliciousMacroMSBuild' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "MaliciousMacroMSBuild"
@@ -19,7 +19,7 @@ rule MaliciousMacroMSBuild
         $string3 = /\s\-p\sshellcode\s\-i\s.{0,1000}\.bin\s\-o\s.{0,1000}\.vba/ nocase ascii wide
         // Description: Generates Malicious Macro and Execute Powershell or Shellcode via MSBuild Application Whitelisting Bypass.
         // Reference: https://github.com/infosecn1nja/MaliciousMacroMSBuild
-        $string4 = /\/m3\-gen\.py\s/ nocase ascii wide
+        $string4 = /\/m3\-gen\.py\s/
         // Description: Generates Malicious Macro and Execute Powershell or Shellcode via MSBuild Application Whitelisting Bypass.
         // Reference: https://github.com/infosecn1nja/MaliciousMacroMSBuild
         $string5 = "/MaliciousMacroMSBuild" nocase ascii wide

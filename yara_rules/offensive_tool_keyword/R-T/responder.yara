@@ -1,7 +1,7 @@
 rule responder
 {
     meta:
-        description = "Detection patterns for the tool 'responder' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'responder' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "responder"
@@ -13,7 +13,7 @@ rule responder
         $string1 = /\sPoisoners\-Session\.log/ nocase ascii wide
         // Description: LLMNR. NBT-NS and MDNS poisoner
         // Reference: https://github.com/SpiderLabs/Responder
-        $string2 = /\/Analyzer\-Session\.log/ nocase ascii wide
+        $string2 = /\/Analyzer\-Session\.log/
         // Description: LLMNR. NBT-NS and MDNS poisoner
         // Reference: https://github.com/SpiderLabs/Responder
         $string3 = /\/FindSQLSrv\.py/ nocase ascii wide
@@ -25,7 +25,7 @@ rule responder
         $string5 = /\/poisoners\/.{0,1000}\.py/ nocase ascii wide
         // Description: LLMNR. NBT-NS and MDNS poisoner
         // Reference: https://github.com/lgandx/Responder-Windows/
-        $string6 = /\/Poisoners\-Session\.log/ nocase ascii wide
+        $string6 = /\/Poisoners\-Session\.log/
         // Description: LLMNR. NBT-NS and MDNS poisoner
         // Reference: https://github.com/SpiderLabs/Responder
         $string7 = /\/Responder\.git/ nocase ascii wide
@@ -37,13 +37,13 @@ rule responder
         $string9 = /\/Responder\-master\.zip/ nocase ascii wide
         // Description: LLMNR. NBT-NS and MDNS poisoner
         // Reference: https://github.com/lgandx/Responder-Windows/
-        $string10 = /\/Responder\-Session\.log/ nocase ascii wide
+        $string10 = /\/Responder\-Session\.log/
         // Description: LLMNR. NBT-NS and MDNS poisoner
         // Reference: https://github.com/lgandx/Responder-Windows/
         $string11 = /\/Responder\-Windows\.git/ nocase ascii wide
         // Description: LLMNR. NBT-NS and MDNS poisoner
         // Reference: https://github.com/SpiderLabs/Responder
-        $string12 = /\/tools\/DHCP\.py/ nocase ascii wide
+        $string12 = /\/tools\/DHCP\.py/
         // Description: LLMNR. NBT-NS and MDNS poisoner
         // Reference: https://github.com/lgandx/Responder-Windows/
         $string13 = /\\\\Windows\\\\Temp\\\\Results\.txt/ nocase ascii wide

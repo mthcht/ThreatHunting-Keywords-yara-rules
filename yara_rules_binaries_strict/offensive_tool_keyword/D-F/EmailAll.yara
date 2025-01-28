@@ -1,7 +1,7 @@
 rule EmailAll
 {
     meta:
-        description = "Detection patterns for the tool 'EmailAll' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'EmailAll' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "EmailAll"
@@ -10,7 +10,7 @@ rule EmailAll
     strings:
         // Description: EmailAll is a powerful Email Collect tool
         // Reference: https://github.com/Taonn/EmailAll
-        $string1 = /\s\-\-domains\s\.\/domains\.txt\srun/ nocase ascii wide
+        $string1 = /\s\-\-domains\s\.\/domains\.txt\srun/
         // Description: EmailAll is a powerful Email Collect tool
         // Reference: https://github.com/Taonn/EmailAll
         $string2 = /\semailall\.py/ nocase ascii wide

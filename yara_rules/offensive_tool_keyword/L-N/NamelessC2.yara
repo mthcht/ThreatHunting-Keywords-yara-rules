@@ -1,7 +1,7 @@
 rule NamelessC2
 {
     meta:
-        description = "Detection patterns for the tool 'NamelessC2' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'NamelessC2' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "NamelessC2"
@@ -22,7 +22,7 @@ rule NamelessC2
         $string4 = /\/NamelessC2\.git/ nocase ascii wide
         // Description: A C2 with all its components written in Rust
         // Reference: https://github.com/trickster0/NamelessC2
-        $string5 = /\/NamelessLog\.txt/ nocase ascii wide
+        $string5 = /\/NamelessLog\.txt/
         // Description: A C2 with all its components written in Rust
         // Reference: https://github.com/trickster0/NamelessC2
         $string6 = /\[\+\]\sNameless\sTerminal/ nocase ascii wide

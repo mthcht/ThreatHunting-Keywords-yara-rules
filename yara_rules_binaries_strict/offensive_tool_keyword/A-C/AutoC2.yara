@@ -1,7 +1,7 @@
 rule AutoC2
 {
     meta:
-        description = "Detection patterns for the tool 'AutoC2' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'AutoC2' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "AutoC2"
@@ -28,28 +28,28 @@ rule AutoC2
         $string6 = /\sPriv_Esc\.sh/ nocase ascii wide
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string7 = /\.\/Exfil\.sh/ nocase ascii wide
+        $string7 = /\.\/Exfil\.sh/
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string8 = /\.\/Phishing\.sh/ nocase ascii wide
+        $string8 = /\.\/Phishing\.sh/
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
         $string9 = /\/Cred_Dump\.sh/ nocase ascii wide
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string10 = /\/Defense_Evasion\.sh/ nocase ascii wide
+        $string10 = /\/Defense_Evasion\.sh/
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string11 = /\/Hak5\.sh/ nocase ascii wide
+        $string11 = /\/Hak5\.sh/
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string12 = "/opt/Password_Cracking/" nocase ascii wide
+        $string12 = "/opt/Password_Cracking/"
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string13 = /\/Persistence\.sh/ nocase ascii wide
+        $string13 = /\/Persistence\.sh/
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string14 = /\/Phishing\.sh/ nocase ascii wide
+        $string14 = /\/Phishing\.sh/
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
         $string15 = /\/Priv_Esc\.sh/ nocase ascii wide

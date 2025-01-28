@@ -1,7 +1,7 @@
 rule level_io
 {
     meta:
-        description = "Detection patterns for the tool 'level.io' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'level.io' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "level.io"
@@ -10,13 +10,13 @@ rule level_io
     strings:
         // Description: Level is reinventing remote monitoring and management
         // Reference: https://level.io/
-        $string1 = /\s\.\/level\-darwin\-bundle\-amd64\.pkg/ nocase ascii wide
+        $string1 = /\s\.\/level\-darwin\-bundle\-amd64\.pkg/
         // Description: Level is reinventing remote monitoring and management
         // Reference: https://level.io/
-        $string2 = /\s\.\/level\-linux\-amd64\s/ nocase ascii wide
+        $string2 = /\s\.\/level\-linux\-amd64\s/
         // Description: Level is reinventing remote monitoring and management
         // Reference: https://level.io/
-        $string3 = /\s\.\/level\-linux\-arm64\s/ nocase ascii wide
+        $string3 = /\s\.\/level\-linux\-arm64\s/
         // Description: Level is reinventing remote monitoring and management
         // Reference: https://level.io/
         $string4 = /\s\/F\s\/TN\s\\"Level\\Level\sWatchdog\\"/ nocase ascii wide
@@ -34,7 +34,7 @@ rule level_io
         $string8 = /\$tempFile\s\=\sJoin\-Path\s\(\[System\.IO\.Path\]\:\:GetTempPath\(\)\)\s\\"install_windows\.exe\\"\;/ nocase ascii wide
         // Description: Level is reinventing remote monitoring and management
         // Reference: https://level.io/
-        $string9 = /\/etc\/level\/config\.yaml/ nocase ascii wide
+        $string9 = /\/etc\/level\/config\.yaml/
         // Description: Level is reinventing remote monitoring and management
         // Reference: https://level.io/
         $string10 = /\/level\-windows\-amd64\.exe/ nocase ascii wide
@@ -43,13 +43,13 @@ rule level_io
         $string11 = /\/level\-windows\-arm64\.exe/ nocase ascii wide
         // Description: Level is reinventing remote monitoring and management
         // Reference: https://level.io/
-        $string12 = "/usr/local/bin/level" nocase ascii wide
+        $string12 = "/usr/local/bin/level"
         // Description: Level is reinventing remote monitoring and management
         // Reference: https://level.io/
-        $string13 = /\/var\/lib\/level\/level\.db/ nocase ascii wide
+        $string13 = /\/var\/lib\/level\/level\.db/
         // Description: Level is reinventing remote monitoring and management
         // Reference: https://level.io/
-        $string14 = /\/var\/lib\/level\/level\.log/ nocase ascii wide
+        $string14 = /\/var\/lib\/level\/level\.log/
         // Description: Level is reinventing remote monitoring and management
         // Reference: https://level.io/
         $string15 = /\\level\.exe.{0,100}\-\-check\-service/ nocase ascii wide
@@ -109,7 +109,7 @@ rule level_io
         $string33 = /https\:\/\/docs\.level\.io\/1\.0\/admin\-guides\/level\-watchdog\-task/ nocase ascii wide
         // Description: Level is reinventing remote monitoring and management
         // Reference: https://level.io/
-        $string34 = /https\:\/\/downloads\.level\.io\/install_linux\.sh/ nocase ascii wide
+        $string34 = /https\:\/\/downloads\.level\.io\/install_linux\.sh/
         // Description: Level is reinventing remote monitoring and management
         // Reference: https://level.io/
         $string35 = /https\:\/\/downloads\.level\.io\/install_mac_os\.sh/ nocase ascii wide
@@ -118,10 +118,10 @@ rule level_io
         $string36 = /https\:\/\/downloads\.level\.io\/install_windows\.exe/ nocase ascii wide
         // Description: Level is reinventing remote monitoring and management
         // Reference: https://level.io/
-        $string37 = /https\:\/\/downloads\.level\.io\/stable\/level\-linux\-amd64/ nocase ascii wide
+        $string37 = /https\:\/\/downloads\.level\.io\/stable\/level\-linux\-amd64/
         // Description: Level is reinventing remote monitoring and management
         // Reference: https://level.io/
-        $string38 = /LEVEL_API_KEY\=.{0,100}\sbash\s\-c\s\\"\$\(curl\s\-L\s/ nocase ascii wide
+        $string38 = /LEVEL_API_KEY\=.{0,100}\sbash\s\-c\s\\"\$\(curl\s\-L\s/
         // Description: Level is reinventing remote monitoring and management
         // Reference: https://level.io/
         $string39 = /logs\.logdna\.com/ nocase ascii wide

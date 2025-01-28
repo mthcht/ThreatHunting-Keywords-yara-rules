@@ -1,7 +1,7 @@
 rule katoolin3
 {
     meta:
-        description = "Detection patterns for the tool 'katoolin3' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'katoolin3' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "katoolin3"
@@ -10,19 +10,19 @@ rule katoolin3
     strings:
         // Description: Katoolin3 brings all programs available in Kali Linux to Debian and Ubuntu.
         // Reference: https://github.com/s-h-3-l-l/katoolin3
-        $string1 = "/katoolin3" nocase ascii wide
+        $string1 = "/katoolin3"
         // Description: Katoolin3 brings all programs available in Kali Linux to Debian and Ubuntu.
         // Reference: https://github.com/s-h-3-l-l/katoolin3
-        $string2 = "/s-h-3-l-l/" nocase ascii wide
+        $string2 = "/s-h-3-l-l/"
         // Description: Katoolin3 brings all programs available in Kali Linux to Debian and Ubuntu.
         // Reference: https://github.com/s-h-3-l-l/katoolin3
-        $string3 = "cd katoolin3" nocase ascii wide
+        $string3 = "cd katoolin3"
         // Description: Katoolin3 brings all programs available in Kali Linux to Debian and Ubuntu.
         // Reference: https://github.com/s-h-3-l-l/katoolin3
-        $string4 = /katoolin.{0,100}toollist\.py/ nocase ascii wide
+        $string4 = /katoolin.{0,100}toollist\.py/
         // Description: Katoolin3 brings all programs available in Kali Linux to Debian and Ubuntu.
         // Reference: https://github.com/s-h-3-l-l/katoolin3
-        $string5 = /katoolin3\.py/ nocase ascii wide
+        $string5 = /katoolin3\.py/
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

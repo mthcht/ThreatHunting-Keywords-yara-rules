@@ -1,7 +1,7 @@
 rule BloodHound
 {
     meta:
-        description = "Detection patterns for the tool 'BloodHound' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'BloodHound' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "BloodHound"
@@ -673,10 +673,10 @@ rule BloodHound
         $string221 = "BloodHoundAD/BloodHound" nocase ascii wide
         // Description: Use Invoke-BloodHound from SharpHound.ps1 or use SharpHound.exe. Both can be run reflectively. Examples below use the PowerShell variant but arguments are identical.
         // Reference: https://github.com/BloodHoundAD/BloodHound/tree/master/Collectors
-        $string222 = /BloodHound\-darwin\-x64\.zip/ nocase ascii wide
+        $string222 = /BloodHound\-darwin\-x64\.zip/
         // Description: Use Invoke-BloodHound from SharpHound.ps1 or use SharpHound.exe. Both can be run reflectively. Examples below use the PowerShell variant but arguments are identical.
         // Reference: https://github.com/BloodHoundAD/BloodHound/tree/master/Collectors
-        $string223 = /BloodHound\-linux\-arm64\.zip/ nocase ascii wide
+        $string223 = /BloodHound\-linux\-arm64\.zip/
         // Description: A Python based ingestor for BloodHound
         // Reference: https://github.com/fox-it/BloodHound.py
         $string224 = "BloodHound-master" nocase ascii wide
@@ -943,7 +943,7 @@ rule BloodHound
         $string311 = /SharpHound\.exe/ nocase ascii wide
         // Description: BloodHound is a single page Javascript web application. built on top of Linkurious. compiled with Electron. with a Neo4j database fed by a C# data collector. BloodHound uses graph theory to reveal the hidden and often unintended relationships within an Active Directory environment. Attackers can use BloodHound to easily identify highly complex attack paths that would otherwise be impossible to quickly identify. Defenders can use BloodHound to identify and eliminate those same attack paths. Both blue and red teams can use BloodHound to easily gain a deeper understanding of privilege relationships in an Active Directory environment
         // Reference: https://github.com/fox-it/BloodHound.py
-        $string312 = "sudo bloodhound" nocase ascii wide
+        $string312 = "sudo bloodhound"
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

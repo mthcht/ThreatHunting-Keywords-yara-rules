@@ -1,7 +1,7 @@
 rule tricky_lnk
 {
     meta:
-        description = "Detection patterns for the tool 'tricky.lnk' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'tricky.lnk' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "tricky.lnk"

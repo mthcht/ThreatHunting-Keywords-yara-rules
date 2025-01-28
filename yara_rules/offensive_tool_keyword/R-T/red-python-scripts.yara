@@ -1,7 +1,7 @@
 rule red_python_scripts
 {
     meta:
-        description = "Detection patterns for the tool 'red-python-scripts' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'red-python-scripts' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "red-python-scripts"

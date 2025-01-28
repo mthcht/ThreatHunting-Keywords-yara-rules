@@ -1,7 +1,7 @@
 rule psobf
 {
     meta:
-        description = "Detection patterns for the tool 'psobf' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'psobf' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "psobf"
@@ -10,7 +10,7 @@ rule psobf
     strings:
         // Description: PowerShell Obfuscator
         // Reference: https://github.com/TaurusOmar/psobf
-        $string1 = /\.\/obfuscator\s\-i\s.{0,1000}\.ps1/ nocase ascii wide
+        $string1 = /\.\/obfuscator\s\-i\s.{0,1000}\.ps1/
         // Description: PowerShell Obfuscator
         // Reference: https://github.com/TaurusOmar/psobf
         $string2 = /\/psobf\.git/ nocase ascii wide

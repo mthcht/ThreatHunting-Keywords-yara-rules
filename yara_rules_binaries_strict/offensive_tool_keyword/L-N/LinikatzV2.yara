@@ -1,7 +1,7 @@
 rule LinikatzV2
 {
     meta:
-        description = "Detection patterns for the tool 'LinikatzV2' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'LinikatzV2' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "LinikatzV2"
@@ -10,22 +10,22 @@ rule LinikatzV2
     strings:
         // Description: linikatz is a tool to attack AD on UNIX
         // Reference: https://github.com/Orange-Cyberdefense/LinikatzV2
-        $string1 = "/LinikatzV2/" nocase ascii wide
+        $string1 = "/LinikatzV2/"
         // Description: linikatz is a tool to attack AD on UNIX
         // Reference: https://github.com/Orange-Cyberdefense/LinikatzV2
-        $string2 = /\\LinikatzV2\\/ nocase ascii wide
+        $string2 = /\\LinikatzV2\\/
         // Description: linikatz is a tool to attack AD on UNIX
         // Reference: https://github.com/Orange-Cyberdefense/LinikatzV2
-        $string3 = "kerberos_steal" nocase ascii wide
+        $string3 = "kerberos_steal"
         // Description: linikatz is a tool to attack AD on UNIX
         // Reference: https://github.com/Orange-Cyberdefense/LinikatzV2
-        $string4 = /linikatzV2\.sh/ nocase ascii wide
+        $string4 = /linikatzV2\.sh/
         // Description: linikatz is a tool to attack AD on UNIX
         // Reference: https://github.com/Orange-Cyberdefense/LinikatzV2
-        $string5 = "Orange-Cyberdefense/LinikatzV2" nocase ascii wide
+        $string5 = "Orange-Cyberdefense/LinikatzV2"
         // Description: linikatz is a tool to attack AD on UNIX
         // Reference: https://github.com/Orange-Cyberdefense/LinikatzV2
-        $string6 = /SSSDKCMExtractor\.py/ nocase ascii wide
+        $string6 = /SSSDKCMExtractor\.py/
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

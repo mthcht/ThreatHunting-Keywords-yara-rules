@@ -1,7 +1,7 @@
 rule bofhound
 {
     meta:
-        description = "Detection patterns for the tool 'bofhound' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'bofhound' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "bofhound"
@@ -16,10 +16,10 @@ rule bofhound
         $string2 = " --brute-ratel" nocase ascii wide
         // Description: Generate BloodHound compatible JSON from logs written by ldapsearch BOF - pyldapsearch and Brute Ratel's LDAP Sentinel
         // Reference: https://github.com/fortalice/bofhound
-        $string3 = /\/beacon_202_no_acl\.log/ nocase ascii wide
+        $string3 = /\/beacon_202_no_acl\.log/
         // Description: Generate BloodHound compatible JSON from logs written by ldapsearch BOF - pyldapsearch and Brute Ratel's LDAP Sentinel
         // Reference: https://github.com/fortalice/bofhound
-        $string4 = /\/beacon_257\-objects\.log/ nocase ascii wide
+        $string4 = /\/beacon_257\-objects\.log/
         // Description: Generate BloodHound compatible JSON from logs written by ldapsearch BOF - pyldapsearch and Brute Ratel's LDAP Sentinel
         // Reference: https://github.com/fortalice/bofhound
         $string5 = /\/bloodhound_domain\.py/ nocase ascii wide
@@ -46,7 +46,7 @@ rule bofhound
         $string12 = /\/ldap_search_bof\.py/ nocase ascii wide
         // Description: Generate BloodHound compatible JSON from logs written by ldapsearch BOF - pyldapsearch and Brute Ratel's LDAP Sentinel
         // Reference: https://github.com/fortalice/bofhound
-        $string13 = "/opt/cobaltstrike/logs" nocase ascii wide
+        $string13 = "/opt/cobaltstrike/logs"
         // Description: Generate BloodHound compatible JSON from logs written by ldapsearch BOF - pyldapsearch and Brute Ratel's LDAP Sentinel
         // Reference: https://github.com/fortalice/bofhound
         $string14 = /\\ldap_search_bof\.py/ nocase ascii wide

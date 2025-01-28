@@ -1,7 +1,7 @@
 rule t14m4t
 {
     meta:
-        description = "Detection patterns for the tool 't14m4t' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 't14m4t' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "t14m4t"
@@ -10,7 +10,7 @@ rule t14m4t
     strings:
         // Description: Automated brute-forcing attack tool.
         // Reference: https://github.com/MS-WEB-BN/t14m4t
-        $string1 = /\.\/t14m4t\s/ nocase ascii wide
+        $string1 = /\.\/t14m4t\s/
         // Description: Automated brute-forcing attack tool.
         // Reference: https://github.com/MS-WEB-BN/t14m4t
         $string2 = /Wordlist\/ftp_p\.txt/ nocase ascii wide

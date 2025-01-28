@@ -1,7 +1,7 @@
 rule nikto
 {
     meta:
-        description = "Detection patterns for the tool 'nikto' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'nikto' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "nikto"
@@ -10,40 +10,40 @@ rule nikto
     strings:
         // Description: Nikto web server scanner
         // Reference: https://github.com/sullo/nikto
-        $string1 = " install nikto" nocase ascii wide
+        $string1 = " install nikto"
         // Description: Nikto web server scanner
         // Reference: https://github.com/sullo/nikto
-        $string2 = /\snikto\.pl\s/ nocase ascii wide
+        $string2 = /\snikto\.pl\s/
         // Description: Nikto web server scanner
         // Reference: https://github.com/sullo/nikto
-        $string3 = /\/nikto\.git/ nocase ascii wide
+        $string3 = /\/nikto\.git/
         // Description: Nikto web scanner tool
         // Reference: https://github.com/sullo/nikto
-        $string4 = /\/nikto\.pl/ nocase ascii wide
+        $string4 = /\/nikto\.pl/
         // Description: Nikto web server scanner
         // Reference: https://github.com/sullo/nikto
-        $string5 = /\/nikto\.pl/ nocase ascii wide
+        $string5 = /\/nikto\.pl/
         // Description: Nikto web scanner tool
         // Reference: https://github.com/sullo/nikto
-        $string6 = "/sullo/nikto" nocase ascii wide
+        $string6 = "/sullo/nikto"
         // Description: Nikto web server scanner
         // Reference: https://github.com/sullo/nikto
-        $string7 = "nikto -C all " nocase ascii wide
+        $string7 = "nikto -C all "
         // Description: Nikto web server scanner
         // Reference: https://github.com/sullo/nikto
-        $string8 = "nikto/program" nocase ascii wide
+        $string8 = "nikto/program"
         // Description: Nikto web scanner tool
         // Reference: https://github.com/sullo/nikto
-        $string9 = /perl\snikto\.pl\s\-h/ nocase ascii wide
+        $string9 = /perl\snikto\.pl\s\-h/
         // Description: Nikto web server scanner
         // Reference: https://github.com/sullo/nikto
-        $string10 = /program\/replay\.pl/ nocase ascii wide
+        $string10 = /program\/replay\.pl/
         // Description: Nikto web server scanner
         // Reference: https://github.com/sullo/nikto
-        $string11 = "sullo/nikto" nocase ascii wide
+        $string11 = "sullo/nikto"
         // Description: Nikto web server scanner
         // Reference: https://github.com/sullo/nikto
-        $string12 = "nikto -" nocase ascii wide
+        $string12 = "nikto -"
 
     condition:
         any of them

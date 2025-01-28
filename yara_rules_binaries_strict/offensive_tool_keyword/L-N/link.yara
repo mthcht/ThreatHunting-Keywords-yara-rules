@@ -1,7 +1,7 @@
 rule link
 {
     meta:
-        description = "Detection patterns for the tool 'link' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'link' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "link"
@@ -13,7 +13,7 @@ rule link
         $string1 = /\skali\-install\.sh/ nocase ascii wide
         // Description: link is a command and control framework written in rust
         // Reference: https://github.com/postrequest/link
-        $string2 = /\.\/kali\-install\.sh/ nocase ascii wide
+        $string2 = /\.\/kali\-install\.sh/
         // Description: link is a command and control framework written in rust
         // Reference: https://github.com/postrequest/link
         $string3 = /\.link\/links\/windows\/target\/x86_64\-pc\-windows\-gnu\/release\/link\.exe/ nocase ascii wide

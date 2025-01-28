@@ -1,7 +1,7 @@
 rule tunnelto_dev
 {
     meta:
-        description = "Detection patterns for the tool 'tunnelto.dev' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'tunnelto.dev' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "tunnelto.dev"
@@ -16,7 +16,7 @@ rule tunnelto_dev
         $string2 = "\"User-Agent\", \"tunnelto-client\"" nocase ascii wide
         // Description: Expose your local web server to the internet with a public URL
         // Reference: https://github.com/agrinman/tunnelto
-        $string3 = /\.\.\/tunnelto_lib/ nocase ascii wide
+        $string3 = /\.\.\/tunnelto_lib/
         // Description: Expose your local web server to the internet with a public URL
         // Reference: https://github.com/agrinman/tunnelto
         $string4 = /\.tunnelto\.dev/ nocase ascii wide
@@ -34,7 +34,7 @@ rule tunnelto_dev
         $string8 = "/tunnelto_server/" nocase ascii wide
         // Description: Expose your local web server to the internet with a public URL
         // Reference: https://github.com/agrinman/tunnelto
-        $string9 = "/tunnelto_server:" nocase ascii wide
+        $string9 = "/tunnelto_server:"
         // Description: Expose your local web server to the internet with a public URL
         // Reference: https://github.com/agrinman/tunnelto
         $string10 = /\@tunnelto\.dev/ nocase ascii wide
@@ -79,13 +79,13 @@ rule tunnelto_dev
         $string23 = "tunnelto inspector" nocase ascii wide
         // Description: Expose your local web server to the internet with a public URL
         // Reference: https://github.com/agrinman/tunnelto
-        $string24 = "tunnelto --port " nocase ascii wide
+        $string24 = "tunnelto --port "
         // Description: Expose your local web server to the internet with a public URL
         // Reference: https://github.com/agrinman/tunnelto
         $string25 = "tunnelto_server/src/" nocase ascii wide
         // Description: Expose your local web server to the internet with a public URL
         // Reference: https://github.com/agrinman/tunnelto
-        $string26 = /tunnelto\-linux\.tar\.gz/ nocase ascii wide
+        $string26 = /tunnelto\-linux\.tar\.gz/
         // Description: Expose your local web server to the internet with a public URL
         // Reference: https://github.com/agrinman/tunnelto
         $string27 = /tunnelto\-windows\.exe/ nocase ascii wide

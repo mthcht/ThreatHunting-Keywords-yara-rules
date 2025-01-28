@@ -1,7 +1,7 @@
 rule xmrig
 {
     meta:
-        description = "Detection patterns for the tool 'xmrig' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'xmrig' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "xmrig"
@@ -229,10 +229,10 @@ rule xmrig
         $string73 = /xmrig\-.{0,1000}\-gcc\-win64\.zip/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string74 = /xmrig\-.{0,1000}\-linux\-static\-x64\.tar\.gz/ nocase ascii wide
+        $string74 = /xmrig\-.{0,1000}\-linux\-static\-x64\.tar\.gz/
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string75 = /xmrig\-.{0,1000}\-linux\-x64\.tar\.gz/ nocase ascii wide
+        $string75 = /xmrig\-.{0,1000}\-linux\-x64\.tar\.gz/
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
         $string76 = /xmrig\-.{0,1000}\-macos\-arm64\.tar\.gz/ nocase ascii wide

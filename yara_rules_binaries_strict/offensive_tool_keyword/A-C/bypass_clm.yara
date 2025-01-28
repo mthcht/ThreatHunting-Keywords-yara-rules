@@ -1,7 +1,7 @@
 rule bypass_clm
 {
     meta:
-        description = "Detection patterns for the tool 'bypass-clm' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'bypass-clm' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "bypass-clm"

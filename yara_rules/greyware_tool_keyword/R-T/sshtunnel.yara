@@ -1,7 +1,7 @@
 rule sshtunnel
 {
     meta:
-        description = "Detection patterns for the tool 'sshtunnel' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'sshtunnel' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "sshtunnel"
@@ -22,7 +22,7 @@ rule sshtunnel
         $string4 = /\sSSHTunnelForwarder\(/ nocase ascii wide
         // Description: SSH tunnels to remote server
         // Reference: https://github.com/pahaz/sshtunnel
-        $string5 = "/sshtunnel -" nocase ascii wide
+        $string5 = "/sshtunnel -"
         // Description: SSH tunnels to remote server
         // Reference: https://github.com/pahaz/sshtunnel
         $string6 = /\/sshtunnel\.git/ nocase ascii wide

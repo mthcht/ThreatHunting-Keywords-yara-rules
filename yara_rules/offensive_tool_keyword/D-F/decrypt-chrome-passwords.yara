@@ -1,7 +1,7 @@
 rule decrypt_chrome_passwords
 {
     meta:
-        description = "Detection patterns for the tool 'decrypt-chrome-passwords' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'decrypt-chrome-passwords' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "decrypt-chrome-passwords"

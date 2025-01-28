@@ -1,7 +1,7 @@
 rule BucketLoot
 {
     meta:
-        description = "Detection patterns for the tool 'BucketLoot' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'BucketLoot' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "BucketLoot"
@@ -25,7 +25,7 @@ rule BucketLoot
         $string5 = /bucketloot\.exe\shttps\:\/\// nocase ascii wide
         // Description: BucketLoot is an automated S3-compatible bucket inspector that can help users extract assets- flag secret exposures and even search for custom keywords as well as Regular Expressions from publicly-exposed storage buckets by scanning files that store data in plain-text
         // Reference: https://github.com/redhuntlabs/BucketLoot
-        $string6 = "bucketloot-darwin64" nocase ascii wide
+        $string6 = "bucketloot-darwin64"
         // Description: BucketLoot is an automated S3-compatible bucket inspector that can help users extract assets- flag secret exposures and even search for custom keywords as well as Regular Expressions from publicly-exposed storage buckets by scanning files that store data in plain-text
         // Reference: https://github.com/redhuntlabs/BucketLoot
         $string7 = "bucketloot-freebsd64" nocase ascii wide

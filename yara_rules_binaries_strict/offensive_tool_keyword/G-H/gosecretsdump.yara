@@ -1,7 +1,7 @@
 rule gosecretsdump
 {
     meta:
-        description = "Detection patterns for the tool 'gosecretsdump' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'gosecretsdump' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "gosecretsdump"
@@ -10,7 +10,7 @@ rule gosecretsdump
     strings:
         // Description: Dump ntds.dit really fast
         // Reference: https://github.com/C-Sto/gosecretsdump
-        $string1 = " gosecretsdump_linux" nocase ascii wide
+        $string1 = " gosecretsdump_linux"
         // Description: Dump ntds.dit really fast
         // Reference: https://github.com/C-Sto/gosecretsdump
         $string2 = " gosecretsdump_mac" nocase ascii wide
@@ -34,7 +34,7 @@ rule gosecretsdump
         $string8 = "/gosecretsdump/" nocase ascii wide
         // Description: Dump ntds.dit really fast
         // Reference: https://github.com/C-Sto/gosecretsdump
-        $string9 = "/gosecretsdump_linux" nocase ascii wide
+        $string9 = "/gosecretsdump_linux"
         // Description: Dump ntds.dit really fast
         // Reference: https://github.com/C-Sto/gosecretsdump
         $string10 = "/gosecretsdump_mac" nocase ascii wide

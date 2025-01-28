@@ -1,7 +1,7 @@
 rule CursedChrome
 {
     meta:
-        description = "Detection patterns for the tool 'CursedChrome' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'CursedChrome' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "CursedChrome"
@@ -25,13 +25,13 @@ rule CursedChrome
         $string5 = "A new browser has connected to us via WebSocket!" nocase ascii wide
         // Description: Chrome-extension implant that turns victim Chrome browsers into fully-functional HTTP proxies allowing you to browse sites as your victims
         // Reference: https://github.com/mandatoryprogrammer/CursedChrome
-        $string6 = /bash\sextension_injection\.sh/ nocase ascii wide
+        $string6 = /bash\sextension_injection\.sh/
         // Description: Chrome-extension implant that turns victim Chrome browsers into fully-functional HTTP proxies allowing you to browse sites as your victims
         // Reference: https://github.com/mandatoryprogrammer/CursedChrome
         $string7 = "const subscription_id = `TOPROXY_" nocase ascii wide
         // Description: Chrome-extension implant that turns victim Chrome browsers into fully-functional HTTP proxies allowing you to browse sites as your victims
         // Reference: https://github.com/mandatoryprogrammer/CursedChrome
-        $string8 = /COPY\sanyproxy\/\s\.\/anyproxy\// nocase ascii wide
+        $string8 = /COPY\sanyproxy\/\s\.\/anyproxy\//
         // Description: Chrome-extension implant that turns victim Chrome browsers into fully-functional HTTP proxies allowing you to browse sites as your victims
         // Reference: https://github.com/mandatoryprogrammer/CursedChrome
         $string9 = "CursedChrome API server is now listening on port" nocase ascii wide

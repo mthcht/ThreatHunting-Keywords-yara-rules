@@ -1,7 +1,7 @@
 rule SMShell
 {
     meta:
-        description = "Detection patterns for the tool 'SMShell' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'SMShell' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "SMShell"
@@ -13,7 +13,7 @@ rule SMShell
         $string1 = /\/SMShell\.git/ nocase ascii wide
         // Description: PoC for a SMS-based shell. Send commands and receive responses over SMS from mobile broadband capable computers
         // Reference: https://github.com/persistent-security/SMShell
-        $string2 = "/SMShell/" nocase ascii wide
+        $string2 = "/SMShell/"
         // Description: PoC for a SMS-based shell. Send commands and receive responses over SMS from mobile broadband capable computers
         // Reference: https://github.com/persistent-security/SMShell
         $string3 = /\-\-mifi\-username\s.{0,100}\s\-\-mifi\-password\s.{0,100}\s\-\-number\s\+/ nocase ascii wide

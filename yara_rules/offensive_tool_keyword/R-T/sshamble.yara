@@ -1,7 +1,7 @@
 rule sshamble
 {
     meta:
-        description = "Detection patterns for the tool 'sshamble' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'sshamble' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "sshamble"
@@ -13,7 +13,7 @@ rule sshamble
         $string1 = /\/sshamble\.git/ nocase ascii wide
         // Description: SSHamble is a research tool for analyzing SSH implementations focusing on attacks against authentication - timing analysis and post-session enumeration.
         // Reference: https://github.com/runZeroInc/sshamble
-        $string2 = "/usr/local/bin/sshamble" nocase ascii wide
+        $string2 = "/usr/local/bin/sshamble"
         // Description: SSHamble is a research tool for analyzing SSH implementations focusing on attacks against authentication - timing analysis and post-session enumeration.
         // Reference: https://github.com/runZeroInc/sshamble
         $string3 = "375f1c3e957ea3eea4956ae449e652962a57473ff55f193b8eabec033eeea187" nocase ascii wide

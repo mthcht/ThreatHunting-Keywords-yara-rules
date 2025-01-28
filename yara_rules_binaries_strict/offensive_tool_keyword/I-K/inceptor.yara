@@ -1,7 +1,7 @@
 rule inceptor
 {
     meta:
-        description = "Detection patterns for the tool 'inceptor' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'inceptor' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "inceptor"
@@ -52,7 +52,7 @@ rule inceptor
         $string14 = " --transformer sRDI" nocase ascii wide
         // Description: Template-Driven AV/EDR Evasion Framework
         // Reference: https://github.com/klezVirus/inceptor
-        $string15 = /\.\/inceptor\.py/ nocase ascii wide
+        $string15 = /\.\/inceptor\.py/
         // Description: Template-Driven AV/EDR Evasion Framework
         // Reference: https://github.com/klezVirus/inceptor
         $string16 = "/csharp/process_injection/" nocase ascii wide

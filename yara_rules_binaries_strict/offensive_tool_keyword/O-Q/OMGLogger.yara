@@ -1,7 +1,7 @@
 rule OMGLogger
 {
     meta:
-        description = "Detection patterns for the tool 'OMGLogger' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'OMGLogger' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "OMGLogger"
@@ -10,7 +10,7 @@ rule OMGLogger
     strings:
         // Description: Key logger which sends each and every key stroke of target remotely/locally.
         // Reference: https://github.com/hak5/omg-payloads/tree/master/payloads/library/credentials/OMGLogger
-        $string1 = "/tmmmp " nocase ascii wide
+        $string1 = "/tmmmp "
         // Description: Key logger which sends each and every key stroke of target remotely/locally.
         // Reference: https://github.com/hak5/omg-payloads/tree/master/payloads/library/credentials/OMGLogger
         $string2 = /fsockopen\(.{0,100}0\.0\.0\.0.{0,100}4444.{0,100}exec\(/ nocase ascii wide

@@ -1,7 +1,7 @@
 rule onedrive_user_enum
 {
     meta:
-        description = "Detection patterns for the tool 'onedrive_user_enum' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'onedrive_user_enum' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "onedrive_user_enum"
@@ -19,13 +19,10 @@ rule onedrive_user_enum
         $string3 = /\-my\.sharepoint\.com\/personal\/TESTUSER_/ nocase ascii wide
         // Description: enumerate valid onedrive users
         // Reference: https://github.com/nyxgeek/onedrive_user_enum
-        $string4 = "OneDrive Enumerator" nocase ascii wide
+        $string4 = /onedrive_enum\.py/ nocase ascii wide
         // Description: enumerate valid onedrive users
         // Reference: https://github.com/nyxgeek/onedrive_user_enum
-        $string5 = /onedrive_enum\.py/ nocase ascii wide
-        // Description: enumerate valid onedrive users
-        // Reference: https://github.com/nyxgeek/onedrive_user_enum
-        $string6 = /onedrive_user_enum\.git/ nocase ascii wide
+        $string5 = /onedrive_user_enum\.git/ nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

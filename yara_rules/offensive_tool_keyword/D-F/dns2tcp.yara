@@ -1,7 +1,7 @@
 rule dns2tcp
 {
     meta:
-        description = "Detection patterns for the tool 'dns2tcp' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'dns2tcp' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "dns2tcp"
@@ -13,25 +13,25 @@ rule dns2tcp
         $string1 = /\.dns2tcpdrc/ nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string2 = /\/\.dns2tcprc/ nocase ascii wide
+        $string2 = /\/\.dns2tcprc/
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string3 = "/debian/dns2tcp" nocase ascii wide
+        $string3 = "/debian/dns2tcp"
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
         $string4 = /\/dns2tcp\.git/ nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string5 = "/dns2tcp/client/" nocase ascii wide
+        $string5 = "/dns2tcp/client/"
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string6 = "/dns2tcp/common/" nocase ascii wide
+        $string6 = "/dns2tcp/common/"
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string7 = "/dns2tcp/server" nocase ascii wide
+        $string7 = "/dns2tcp/server"
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string8 = "/root/dns2tcp" nocase ascii wide
+        $string8 = "/root/dns2tcp"
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
         $string9 = /\\\\\.\\pipe\\win\-sux\-no\-async\-anon\-pipe\-.{0,1000}\-/ nocase ascii wide

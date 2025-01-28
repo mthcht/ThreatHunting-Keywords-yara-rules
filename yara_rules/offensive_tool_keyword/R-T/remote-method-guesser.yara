@@ -1,7 +1,7 @@
 rule remote_method_guesser
 {
     meta:
-        description = "Detection patterns for the tool 'remote-method-guesser' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'remote-method-guesser' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "remote-method-guesser"
@@ -16,7 +16,7 @@ rule remote_method_guesser
         $string2 = /\/remote\-method\-guesser\.git/ nocase ascii wide
         // Description: remote-method-guesser?(rmg) is a?Java RMI?vulnerability scanner and can be used to identify and verify common security vulnerabilities on?Java RMI?endpoints.
         // Reference: https://github.com/qtc-de/remote-method-guesser
-        $string3 = /\/tmp\/wordlist\.txt/ nocase ascii wide
+        $string3 = /\/tmp\/wordlist\.txt/
         // Description: remote-method-guesser?(rmg) is a?Java RMI?vulnerability scanner and can be used to identify and verify common security vulnerabilities on?Java RMI?endpoints.
         // Reference: https://github.com/qtc-de/remote-method-guesser
         $string4 = /0\.0\.0\.0\:4444/ nocase ascii wide

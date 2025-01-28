@@ -1,7 +1,7 @@
 rule ROADtools
 {
     meta:
-        description = "Detection patterns for the tool 'ROADtools' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'ROADtools' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "ROADtools"
@@ -25,7 +25,7 @@ rule ROADtools
         $string5 = /dirkjan\@outsidersecurity\.nl/ nocase ascii wide
         // Description: A collection of Azure AD tools for offensive and defensive security purposes
         // Reference: https://github.com/dirkjanm/ROADtools
-        $string6 = /install\s.{0,1000}\sroadrecon/ nocase ascii wide
+        $string6 = /install\s.{0,1000}\sroadrecon/
         // Description: A collection of Azure AD tools for offensive and defensive security purposes
         // Reference: https://github.com/dirkjanm/ROADtools
         $string7 = "pip install roadlib" nocase ascii wide

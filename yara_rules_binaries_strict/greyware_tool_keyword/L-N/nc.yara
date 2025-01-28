@@ -1,7 +1,7 @@
 rule nc
 {
     meta:
-        description = "Detection patterns for the tool 'nc' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'nc' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "nc"
@@ -10,19 +10,19 @@ rule nc
     strings:
         // Description: Linux Persistence Shell cron
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string1 = /\s\/bin\/nc\s.{0,100}\s\-e\s\/bin\/bash.{0,100}\s\>\scron\s\&\&\scrontab\scron/ nocase ascii wide
+        $string1 = /\s\/bin\/nc\s.{0,100}\s\-e\s\/bin\/bash.{0,100}\s\>\scron\s\&\&\scrontab\scron/
         // Description: linux commands abused by attackers
         // Reference: N/A
-        $string2 = /\s\/bin\/nc\s.{0,100}\s\-e\s\/bin\/bash.{0,100}\>\s.{0,100}\scrontab\scron/ nocase ascii wide
+        $string2 = /\s\/bin\/nc\s.{0,100}\s\-e\s\/bin\/bash.{0,100}\>\s.{0,100}\scrontab\scron/
         // Description: backdoor with netcat - used by the Ransomware group Dispossessor
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string3 = "/nc64 -i " nocase ascii wide
+        $string3 = "/nc64 -i "
         // Description: backdoor with netcat - used by the Ransomware group Dispossessor
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string4 = "/nc64 -lvp " nocase ascii wide
+        $string4 = "/nc64 -lvp "
         // Description: backdoor with netcat - used by the Ransomware group Dispossessor
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string5 = "/nc64 -zv " nocase ascii wide
+        $string5 = "/nc64 -zv "
         // Description: backdoor with netcat - used by the Ransomware group Dispossessor
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
         $string6 = /\\nc\.exe\s\-Ldp\s.{0,100}\s\-e\scmd\.exe/ nocase ascii wide
@@ -61,7 +61,7 @@ rule nc
         $string17 = /nc\s\-l\s\-p\s.{0,100}\s\-e\s.{0,100}\.bat/ nocase ascii wide
         // Description: Netcat Backdoor on Linux - create a relay that sends packets from the local port to a netcat client connecte to the target ip on the targeted port
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/NetcatCheatSheet.pdf
-        $string18 = /nc\s\-l\s\-p\s.{0,100}\s\-e\s\/bin\/bash/ nocase ascii wide
+        $string18 = /nc\s\-l\s\-p\s.{0,100}\s\-e\s\/bin\/bash/
         // Description: Netcat Backdoor on Windows - create a relay that sends packets from the local port to a netcat client connecte to the target ip on the targeted port
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/NetcatCheatSheet.pdf
         $string19 = /nc\s\-l\s\-p\s.{0,100}\s\-e\scmd\.exe/ nocase ascii wide

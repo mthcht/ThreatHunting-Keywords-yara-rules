@@ -1,7 +1,7 @@
 rule Omnispray
 {
     meta:
-        description = "Detection patterns for the tool 'Omnispray' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Omnispray' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Omnispray"
@@ -58,7 +58,7 @@ rule Omnispray
         $string16 = /\s\-\-type\sspray\s\-uf\s.{0,1000}\s\-pf\s/ nocase ascii wide
         // Description: Modular Enumeration and Password Spraying Framework
         // Reference: https://github.com/0xZDH/Omnispray
-        $string17 = /\&passwd\=Winter2020\&ok\=Log\+In/ nocase ascii wide
+        $string17 = /\&passwd\=Winter2020\&ok\=Log\+In/
         // Description: Modular Enumeration and Password Spraying Framework
         // Reference: https://github.com/0xZDH/Omnispray
         $string18 = /\/adfs\-spray\.py/ nocase ascii wide

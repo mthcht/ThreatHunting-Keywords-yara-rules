@@ -1,7 +1,7 @@
 rule ratchatpt
 {
     meta:
-        description = "Detection patterns for the tool 'ratchatpt' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'ratchatpt' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "ratchatpt"
@@ -19,7 +19,7 @@ rule ratchatpt
         $string3 = /\/ratchatPT\.syso/ nocase ascii wide
         // Description: C2 using openAI API
         // Reference: https://github.com/spartan-conseil/ratchatpt
-        $string4 = "/root/output/ratchatPT" nocase ascii wide
+        $string4 = "/root/output/ratchatPT"
         // Description: C2 using openAI API
         // Reference: https://github.com/spartan-conseil/ratchatpt
         $string5 = /\\ratchatPT\.go/ nocase ascii wide
@@ -34,7 +34,7 @@ rule ratchatpt
         $string8 = "output/RatChatPT_unix" nocase ascii wide
         // Description: C2 using openAI API
         // Reference: https://github.com/spartan-conseil/ratchatpt
-        $string9 = /ratchatPT.{0,1000}\/bin\/bash/ nocase ascii wide
+        $string9 = /ratchatPT.{0,1000}\/bin\/bash/
         // Description: C2 using openAI API
         // Reference: https://github.com/spartan-conseil/ratchatpt
         $string10 = /RatChatPT\.exe/ nocase ascii wide

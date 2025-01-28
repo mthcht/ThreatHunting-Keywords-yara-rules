@@ -1,7 +1,7 @@
 rule yakit
 {
     meta:
-        description = "Detection patterns for the tool 'yakit' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'yakit' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "yakit"
@@ -25,10 +25,10 @@ rule yakit
         $string5 = /\/set\-proxy\.ps1/ nocase ascii wide
         // Description: security platform with fuzzers - webshell and MITM (chinese burp)
         // Reference: https://github.com/Gerenios/AADInternals
-        $string6 = /\/yak_darwin_amd64\.zip/ nocase ascii wide
+        $string6 = /\/yak_darwin_amd64\.zip/
         // Description: security platform with fuzzers - webshell and MITM (chinese burp)
         // Reference: https://github.com/Gerenios/AADInternals
-        $string7 = /\/yak_linux_amd64\.zip/ nocase ascii wide
+        $string7 = /\/yak_linux_amd64\.zip/
         // Description: security platform with fuzzers - webshell and MITM (chinese burp)
         // Reference: https://github.com/Gerenios/AADInternals
         $string8 = /\/yak_windows_amd64\.zip/ nocase ascii wide

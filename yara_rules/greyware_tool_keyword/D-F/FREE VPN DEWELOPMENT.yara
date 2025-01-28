@@ -1,7 +1,7 @@
 rule FREE_VPN_DEWELOPMENT
 {
     meta:
-        description = "Detection patterns for the tool 'FREE VPN DEWELOPMENT' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'FREE VPN DEWELOPMENT' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "FREE VPN DEWELOPMENT"

@@ -1,7 +1,7 @@
 rule SMBeagle
 {
     meta:
-        description = "Detection patterns for the tool 'SMBeagle' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'SMBeagle' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "SMBeagle"
@@ -34,10 +34,10 @@ rule SMBeagle
         $string8 = /SMBeagle\.sln/ nocase ascii wide
         // Description: SMBeagle is an (SMB) fileshare auditing tool that hunts out all files it can see in the network and reports if the file can be read and/or written. All these findings are streamed out to either a CSV file or an elasticsearch host.
         // Reference: https://github.com/punk-security/SMBeagle
-        $string9 = /smbeagle_.{0,1000}_linux_amd64\.zip/ nocase ascii wide
+        $string9 = /smbeagle_.{0,1000}_linux_amd64\.zip/
         // Description: SMBeagle is an (SMB) fileshare auditing tool that hunts out all files it can see in the network and reports if the file can be read and/or written. All these findings are streamed out to either a CSV file or an elasticsearch host.
         // Reference: https://github.com/punk-security/SMBeagle
-        $string10 = /smbeagle_.{0,1000}_linux_arm64\.zip/ nocase ascii wide
+        $string10 = /smbeagle_.{0,1000}_linux_arm64\.zip/
         // Description: SMBeagle is an (SMB) fileshare auditing tool that hunts out all files it can see in the network and reports if the file can be read and/or written. All these findings are streamed out to either a CSV file or an elasticsearch host.
         // Reference: https://github.com/punk-security/SMBeagle
         $string11 = /smbeagle_.{0,1000}_win_x64\.zip/ nocase ascii wide

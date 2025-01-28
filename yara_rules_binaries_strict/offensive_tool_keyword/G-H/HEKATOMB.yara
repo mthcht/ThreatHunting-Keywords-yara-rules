@@ -1,7 +1,7 @@
 rule HEKATOMB
 {
     meta:
-        description = "Detection patterns for the tool 'HEKATOMB' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'HEKATOMB' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "HEKATOMB"
@@ -16,7 +16,7 @@ rule HEKATOMB
         $string2 = /\.py\s.{0,100}\s\-debug\s\-dnstcp/ nocase ascii wide
         // Description: Hekatomb is a python script that connects to LDAP directory to retrieve all computers and users informations. Then it will download all DPAPI blob of all users from all computers and uses Domain backup keys to decrypt them
         // Reference: https://github.com/ProcessusT/HEKATOMB
-        $string3 = /\/exported_credentials\.csv/ nocase ascii wide
+        $string3 = /\/exported_credentials\.csv/
         // Description: Hekatomb is a python script that connects to LDAP directory to retrieve all computers and users informations. Then it will download all DPAPI blob of all users from all computers and uses Domain backup keys to decrypt them
         // Reference: https://github.com/ProcessusT/HEKATOMB
         $string4 = /\[\+\]\sConnnecting\sto\sall\scomputers\sand\stry\sto\sget\sdpapi\sblobs\sand\smaster\skey\sfiles/ nocase ascii wide

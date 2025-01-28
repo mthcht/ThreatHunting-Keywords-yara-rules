@@ -1,7 +1,7 @@
 rule invoke_piper
 {
     meta:
-        description = "Detection patterns for the tool 'invoke-piper' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'invoke-piper' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "invoke-piper"

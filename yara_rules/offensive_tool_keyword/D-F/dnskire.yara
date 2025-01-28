@@ -1,7 +1,7 @@
 rule dnskire
 {
     meta:
-        description = "Detection patterns for the tool 'dnskire' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'dnskire' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "dnskire"
@@ -19,16 +19,16 @@ rule dnskire
         $string3 = " -R dnskire:bind " nocase ascii wide
         // Description: A tool for file infiltration over DNS
         // Reference: https://github.com/0xtosh/dnskire
-        $string4 = /\/certs\/dnsKIRE\.local\.crt/ nocase ascii wide
+        $string4 = /\/certs\/dnsKIRE\.local\.crt/
         // Description: A tool for file infiltration over DNS
         // Reference: https://github.com/0xtosh/dnskire
-        $string5 = /\/certs\/dnsKIRE\.local\.key/ nocase ascii wide
+        $string5 = /\/certs\/dnsKIRE\.local\.key/
         // Description: A tool for file infiltration over DNS
         // Reference: https://github.com/0xtosh/dnskire
-        $string6 = /\/CN\=dnsKIRE\.local/ nocase ascii wide
+        $string6 = /\/CN\=dnsKIRE\.local/
         // Description: A tool for file infiltration over DNS
         // Reference: https://github.com/0xtosh/dnskire
-        $string7 = /\/db\/dnskire\.db/ nocase ascii wide
+        $string7 = /\/db\/dnskire\.db/
         // Description: A tool for file infiltration over DNS
         // Reference: https://github.com/0xtosh/dnskire
         $string8 = /\/dnskire\.git/ nocase ascii wide
@@ -37,10 +37,10 @@ rule dnskire
         $string9 = /\/dnskire\.js/ nocase ascii wide
         // Description: A tool for file infiltration over DNS
         // Reference: https://github.com/0xtosh/dnskire
-        $string10 = /\/dnskire\.log/ nocase ascii wide
+        $string10 = /\/dnskire\.log/
         // Description: A tool for file infiltration over DNS
         // Reference: https://github.com/0xtosh/dnskire
-        $string11 = /\/dnskire\/\.ssh\// nocase ascii wide
+        $string11 = /\/dnskire\/\.ssh\//
         // Description: A tool for file infiltration over DNS
         // Reference: https://github.com/0xtosh/dnskire
         $string12 = /\/mkzoneslices\.sh/ nocase ascii wide
@@ -67,10 +67,10 @@ rule dnskire
         $string19 = "DNS retrieval done - converting to file" nocase ascii wide
         // Description: A tool for file infiltration over DNS
         // Reference: https://github.com/0xtosh/dnskire
-        $string20 = /dnskire\sALL\=\(ALL\:ALL\)\sNOPASSWD\:\sALL/ nocase ascii wide
+        $string20 = /dnskire\sALL\=\(ALL\:ALL\)\sNOPASSWD\:\sALL/
         // Description: A tool for file infiltration over DNS
         // Reference: https://github.com/0xtosh/dnskire
-        $string21 = /dnskire\smay.{0,1000}\(ALL\s\:\sALL\)\sNOPASSWD\:\sALL/ nocase ascii wide
+        $string21 = /dnskire\smay.{0,1000}\(ALL\s\:\sALL\)\sNOPASSWD\:\sALL/
         // Description: A tool for file infiltration over DNS
         // Reference: https://github.com/0xtosh/dnskire
         $string22 = /dnsKIRE\sstarted\!\\n/ nocase ascii wide
@@ -100,7 +100,7 @@ rule dnskire
         $string30 = /scripts\/zoneadm\.sh/ nocase ascii wide
         // Description: A tool for file infiltration over DNS
         // Reference: https://github.com/0xtosh/dnskire
-        $string31 = "sudo -l -U dnskire" nocase ascii wide
+        $string31 = "sudo -l -U dnskire"
         // Description: A tool for file infiltration over DNS
         // Reference: https://github.com/0xtosh/dnskire
         $string32 = /totally\-not\-meterpreter\.7z/ nocase ascii wide

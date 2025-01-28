@@ -1,7 +1,7 @@
 rule sshimpanzee
 {
     meta:
-        description = "Detection patterns for the tool 'sshimpanzee' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'sshimpanzee' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "sshimpanzee"
@@ -10,10 +10,10 @@ rule sshimpanzee
     strings:
         // Description: SSHD Based implant supporting tunneling mecanisms to reach the C2 (DNS - ICMP - HTTP Encapsulation - HTTP/Socks Proxies - UDP
         // Reference: https://github.com/lexfo/sshimpanzee
-        $string1 = /\.\/sshimpanzee/ nocase ascii wide
+        $string1 = /\.\/sshimpanzee/
         // Description: SSHD Based implant supporting tunneling mecanisms to reach the C2 (DNS - ICMP - HTTP Encapsulation - HTTP/Socks Proxies - UDP
         // Reference: https://github.com/lexfo/sshimpanzee
-        $string2 = /\/bin\/proxy_cli\.py/ nocase ascii wide
+        $string2 = /\/bin\/proxy_cli\.py/
         // Description: SSHD Based implant supporting tunneling mecanisms to reach the C2 (DNS - ICMP - HTTP Encapsulation - HTTP/Socks Proxies - UDP
         // Reference: https://github.com/lexfo/sshimpanzee
         $string3 = /\/sshimpanzee\.git/ nocase ascii wide

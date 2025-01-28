@@ -1,7 +1,7 @@
 rule RustRedOps
 {
     meta:
-        description = "Detection patterns for the tool 'RustRedOps' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'RustRedOps' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "RustRedOps"
@@ -61,7 +61,7 @@ rule RustRedOps
         $string17 = /\slfs_injection\.exe/ nocase ascii wide
         // Description: RustRedOps is a repository dedicated to gathering and sharing advanced techniques and offensive malware for Red Team
         // Reference: https://github.com/joaoviictorti/RustRedOps
-        $string18 = /\slocal_execution_linux\.exe/ nocase ascii wide
+        $string18 = /\slocal_execution_linux\.exe/
         // Description: RustRedOps is a repository dedicated to gathering and sharing advanced techniques and offensive malware for Red Team
         // Reference: https://github.com/joaoviictorti/RustRedOps
         $string19 = /\slocal_map\.exe/ nocase ascii wide

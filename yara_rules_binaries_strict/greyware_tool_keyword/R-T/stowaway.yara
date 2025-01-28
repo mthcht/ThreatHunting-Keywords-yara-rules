@@ -1,7 +1,7 @@
 rule stowaway
 {
     meta:
-        description = "Detection patterns for the tool 'stowaway' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'stowaway' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "stowaway"
@@ -10,16 +10,16 @@ rule stowaway
     strings:
         // Description: Stowaway -- Multi-hop Proxy Tool for pentesters
         // Reference: https://github.com/ph4ntonn/Stowaway
-        $string1 = "/linux_x64_admin" nocase ascii wide
+        $string1 = "/linux_x64_admin"
         // Description: Stowaway -- Multi-hop Proxy Tool for pentesters
         // Reference: https://github.com/ph4ntonn/Stowaway
-        $string2 = "/linux_x64_agent" nocase ascii wide
+        $string2 = "/linux_x64_agent"
         // Description: Stowaway -- Multi-hop Proxy Tool for pentesters
         // Reference: https://github.com/ph4ntonn/Stowaway
-        $string3 = "/linux_x86_admin" nocase ascii wide
+        $string3 = "/linux_x86_admin"
         // Description: Stowaway -- Multi-hop Proxy Tool for pentesters
         // Reference: https://github.com/ph4ntonn/Stowaway
-        $string4 = "/linux_x86_agent" nocase ascii wide
+        $string4 = "/linux_x86_agent"
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

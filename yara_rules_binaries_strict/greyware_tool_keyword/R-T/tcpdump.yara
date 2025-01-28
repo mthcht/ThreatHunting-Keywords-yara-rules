@@ -1,7 +1,7 @@
 rule tcpdump
 {
     meta:
-        description = "Detection patterns for the tool 'tcpdump' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'tcpdump' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "tcpdump"
@@ -10,7 +10,7 @@ rule tcpdump
     strings:
         // Description: A powerful command-line packet analyzer.and libpcap. a portable C/C++ library for network traffic capture
         // Reference: http://www.tcpdump.org/
-        $string1 = "tcpdump " nocase ascii wide
+        $string1 = "tcpdump "
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

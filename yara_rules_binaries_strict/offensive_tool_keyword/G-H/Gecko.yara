@@ -1,7 +1,7 @@
 rule Gecko
 {
     meta:
-        description = "Detection patterns for the tool 'Gecko' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Gecko' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Gecko"
@@ -40,7 +40,7 @@ rule Gecko
         $string10 = "a0bf933c2db4c92515bd4bcbfd5e7e07baca998423bdc11056f5271e3b93aef5" nocase ascii wide
         // Description: Gecko Backdoor is a  web php backdoor
         // Reference: https://github.com/MadExploits/Gecko
-        $string11 = /chmod\s\+x\spwnkit/ nocase ascii wide
+        $string11 = /chmod\s\+x\spwnkit/
         // Description: Gecko Backdoor is a  web php backdoor
         // Reference: https://github.com/MadExploits/Gecko
         $string12 = /https\:\/\/github\.com\/MadExploits\/Privelege\-escalation\/raw\/main\/pwnkit/ nocase ascii wide
@@ -49,13 +49,13 @@ rule Gecko
         $string13 = /https\:\/\/phppasswordhash\.com\// nocase ascii wide
         // Description: Gecko Backdoor is a  web php backdoor
         // Reference: https://github.com/MadExploits/Gecko
-        $string14 = /import\ssocket\,subprocess\,os\;s\=socket\.socket\(socket\.AF_INET\,socket\.SOCK_STREAM\)\;s\.connect\(.{0,100}subprocess\.call\(\[\\"\\"\/bin\/sh/ nocase ascii wide
+        $string14 = /import\ssocket\,subprocess\,os\;s\=socket\.socket\(socket\.AF_INET\,socket\.SOCK_STREAM\)\;s\.connect\(.{0,100}subprocess\.call\(\[\\"\\"\/bin\/sh/
         // Description: Gecko Backdoor is a  web php backdoor
         // Reference: https://github.com/MadExploits/Gecko
         $string15 = "MadExploits/Gecko" nocase ascii wide
         // Description: Gecko Backdoor is a  web php backdoor
         // Reference: https://github.com/MadExploits/Gecko
-        $string16 = /mkfifo\s\/tmp\/f\;cat\s\/tmp\/f\|\/bin\/sh\s\-i\s2\>\&1\|nc\s/ nocase ascii wide
+        $string16 = /mkfifo\s\/tmp\/f\;cat\s\/tmp\/f\|\/bin\/sh\s\-i\s2\>\&1\|nc\s/
         // Description: Gecko Backdoor is a  web php backdoor
         // Reference: https://github.com/MadExploits/Gecko
         $string17 = /pwnkit\s\\"id\\"\s\>\s\.mad\-root/ nocase ascii wide

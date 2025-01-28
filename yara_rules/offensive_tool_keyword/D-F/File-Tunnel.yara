@@ -1,7 +1,7 @@
 rule File_Tunnel
 {
     meta:
-        description = "Detection patterns for the tool 'File-Tunnel' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'File-Tunnel' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "File-Tunnel"
@@ -19,7 +19,7 @@ rule File_Tunnel
         $string3 = /\/File\-Tunnel\.git/ nocase ascii wide
         // Description: Tunnel TCP connections through a file
         // Reference: https://github.com/fiddyschmitt/File-Tunnel
-        $string4 = "/ft-linux-x64 " nocase ascii wide
+        $string4 = "/ft-linux-x64 "
         // Description: Tunnel TCP connections through a file
         // Reference: https://github.com/fiddyschmitt/File-Tunnel
         $string5 = /\\File\-Tunnel\-main/ nocase ascii wide

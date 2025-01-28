@@ -1,7 +1,7 @@
 rule tir_blanc_holiseum
 {
     meta:
-        description = "Detection patterns for the tool 'tir_blanc_holiseum' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'tir_blanc_holiseum' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "tir_blanc_holiseum"

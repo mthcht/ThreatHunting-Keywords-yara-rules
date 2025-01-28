@@ -1,7 +1,7 @@
 rule gmer
 {
     meta:
-        description = "Detection patterns for the tool 'gmer' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'gmer' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "gmer"
@@ -13,7 +13,7 @@ rule gmer
         $string1 = /\/gmer\.exe/ nocase ascii wide
         // Description: rootkit detector abused by attackers to disable security software
         // Reference: gmer.net
-        $string2 = /\/gmer64\.sys/ nocase ascii wide
+        $string2 = /\/gmer64\.sys/
         // Description: rootkit detector abused by attackers to disable security software
         // Reference: gmer.net
         $string3 = /\\gmer\.exe/ nocase ascii wide

@@ -1,7 +1,7 @@
 rule rsocks
 {
     meta:
-        description = "Detection patterns for the tool 'rsocks' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'rsocks' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "rsocks"
@@ -19,28 +19,28 @@ rule rsocks
         $string3 = /\.rsocks\.plist/ nocase ascii wide
         // Description: A SOCKS 4/5 reverse proxy server
         // Reference: https://github.com/tonyseek/rsocks
-        $string4 = "/bin/rsocks" nocase ascii wide
+        $string4 = "/bin/rsocks"
         // Description: A SOCKS 4/5 reverse proxy server
         // Reference: https://github.com/tonyseek/rsocks
-        $string5 = /\/com\.tonyseek\.rsocks\.plist/ nocase ascii wide
+        $string5 = /\/com\.tonyseek\.rsocks\.plist/
         // Description: A SOCKS 4/5 reverse proxy server
         // Reference: https://github.com/tonyseek/rsocks
-        $string6 = "/opt/rsocks/" nocase ascii wide
+        $string6 = "/opt/rsocks/"
         // Description: reverse socks5 client & server
         // Reference: https://github.com/brimstone/rsocks
         $string7 = /\/rsocks\.git/ nocase ascii wide
         // Description: A SOCKS 4/5 reverse proxy server
         // Reference: https://github.com/tonyseek/rsocks
-        $string8 = /\/rsocks\.git/ nocase ascii wide
+        $string8 = /\/rsocks\.git/
         // Description: A SOCKS 4/5 reverse proxy server
         // Reference: https://github.com/tonyseek/rsocks
-        $string9 = /\/rsocks\.toml/ nocase ascii wide
+        $string9 = /\/rsocks\.toml/
         // Description: reverse socks5 client & server
         // Reference: https://github.com/brimstone/rsocks
         $string10 = "/rsocks/releases/download/" nocase ascii wide
         // Description: reverse socks5 client & server
         // Reference: https://github.com/brimstone/rsocks
-        $string11 = "/rsocks_linux_amd64" nocase ascii wide
+        $string11 = "/rsocks_linux_amd64"
         // Description: reverse socks5 client & server
         // Reference: https://github.com/brimstone/rsocks
         $string12 = /\/rsocks_windows_386\.exe/ nocase ascii wide

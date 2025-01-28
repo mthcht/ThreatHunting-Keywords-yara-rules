@@ -1,7 +1,7 @@
 rule reverse_ssh
 {
     meta:
-        description = "Detection patterns for the tool 'reverse-ssh' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'reverse-ssh' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "reverse-ssh"
@@ -13,7 +13,7 @@ rule reverse_ssh
         $string1 = /\sid_reverse\-ssh\.pub/ nocase ascii wide
         // Description: Statically-linked ssh server with reverse shell functionality for CTFs and such
         // Reference: https://github.com/Fahrj/reverse-ssh
-        $string2 = /\.\/reverse\-ssh/ nocase ascii wide
+        $string2 = /\.\/reverse\-ssh/
         // Description: Statically-linked ssh server with reverse shell functionality for CTFs and such
         // Reference: https://github.com/Fahrj/reverse-ssh
         $string3 = /\/id_reverse\-ssh\.pub/ nocase ascii wide
@@ -22,7 +22,7 @@ rule reverse_ssh
         $string4 = /\/reverse\-ssh\.git/ nocase ascii wide
         // Description: Statically-linked ssh server with reverse shell functionality for CTFs and such
         // Reference: https://github.com/Fahrj/reverse-ssh
-        $string5 = "/reverse-ssh/" nocase ascii wide
+        $string5 = "/reverse-ssh/"
         // Description: Statically-linked ssh server with reverse shell functionality for CTFs and such
         // Reference: https://github.com/Fahrj/reverse-ssh
         $string6 = "/reverse-ssh-armv7-x86" nocase ascii wide

@@ -1,7 +1,7 @@
 rule dnschef_ng
 {
     meta:
-        description = "Detection patterns for the tool 'dnschef-ng' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'dnschef-ng' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "dnschef-ng"
@@ -34,10 +34,10 @@ rule dnschef_ng
         $string8 = /\/dnschef\.exe/ nocase ascii wide
         // Description: DNSChef is a highly configurable DNS proxy for Penetration Testers and Malware Analysts. A DNS proxy (aka "Fake DNS") is a tool used for application network traffic analysis among other uses. For example - a DNS proxy can be used to fake requests for "badguy.com" to point to a local machine for termination or interception instead of a real host somewhere on the Internet.
         // Reference: https://github.com/byt3bl33d3r/dnschef-ng
-        $string9 = /\/dnschef\.ini/ nocase ascii wide
+        $string9 = /\/dnschef\.ini/
         // Description: DNSChef is a highly configurable DNS proxy for Penetration Testers and Malware Analysts. A DNS proxy (aka "Fake DNS") is a tool used for application network traffic analysis among other uses. For example - a DNS proxy can be used to fake requests for "badguy.com" to point to a local machine for termination or interception instead of a real host somewhere on the Internet.
         // Reference: https://github.com/byt3bl33d3r/dnschef-ng
-        $string10 = /\/dnschef\.log/ nocase ascii wide
+        $string10 = /\/dnschef\.log/
         // Description: DNSChef is a highly configurable DNS proxy for Penetration Testers and Malware Analysts. A DNS proxy (aka "Fake DNS") is a tool used for application network traffic analysis among other uses. For example - a DNS proxy can be used to fake requests for "badguy.com" to point to a local machine for termination or interception instead of a real host somewhere on the Internet.
         // Reference: https://github.com/byt3bl33d3r/dnschef-ng
         $string11 = /\/dnschef\.py/ nocase ascii wide

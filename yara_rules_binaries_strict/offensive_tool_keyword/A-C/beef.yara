@@ -1,7 +1,7 @@
 rule beef
 {
     meta:
-        description = "Detection patterns for the tool 'beef' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'beef' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "beef"
@@ -10,7 +10,7 @@ rule beef
     strings:
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string1 = /\.\/update\-beef/ nocase ascii wide
+        $string1 = /\.\/update\-beef/
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
         $string2 = /\/beef\.git/ nocase ascii wide
@@ -61,7 +61,7 @@ rule beef
         $string17 = "/simple_hijacker/" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string18 = "/thirdparty/msf/" nocase ascii wide
+        $string18 = "/thirdparty/msf/"
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
         $string19 = /_dns_hijack\/.{0,100}\.js/ nocase ascii wide
@@ -277,7 +277,7 @@ rule beef
         $string89 = "zenoss_3x_command_execution" nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string90 = /\.\/beef/ nocase ascii wide
+        $string90 = /\.\/beef/
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -1,7 +1,7 @@
 rule power_pwn
 {
     meta:
-        description = "Detection patterns for the tool 'power-pwn' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'power-pwn' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "power-pwn"

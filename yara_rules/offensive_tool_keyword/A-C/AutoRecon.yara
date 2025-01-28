@@ -1,7 +1,7 @@
 rule AutoRecon
 {
     meta:
-        description = "Detection patterns for the tool 'AutoRecon' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'AutoRecon' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "AutoRecon"
@@ -43,7 +43,7 @@ rule AutoRecon
         $string11 = /\/dns\-zone\-transfer\.py/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string12 = /\/enum4linux\.py/ nocase ascii wide
+        $string12 = /\/enum4linux\.py/
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
         $string13 = /\/oracle\-patator\.py/ nocase ascii wide

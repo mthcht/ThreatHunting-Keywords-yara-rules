@@ -1,7 +1,7 @@
 rule sish
 {
     meta:
-        description = "Detection patterns for the tool 'sish' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'sish' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "sish"
@@ -25,22 +25,22 @@ rule sish
         $string5 = /\/sish\.git/ nocase ascii wide
         // Description: An open source serveo/ngrok alternative. HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH
         // Reference: https://github.com/antoniomika/sish
-        $string6 = "/sish/keys" nocase ascii wide
+        $string6 = "/sish/keys"
         // Description: An open source serveo/ngrok alternative. HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH
         // Reference: https://github.com/antoniomika/sish
-        $string7 = "/sish/pubkeys" nocase ascii wide
+        $string7 = "/sish/pubkeys"
         // Description: An open source serveo/ngrok alternative. HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH
         // Reference: https://github.com/antoniomika/sish
         $string8 = "/sish/releases/download/" nocase ascii wide
         // Description: An open source serveo/ngrok alternative. HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH
         // Reference: https://github.com/antoniomika/sish
-        $string9 = "/sish/ssl" nocase ascii wide
+        $string9 = "/sish/ssl"
         // Description: An open source serveo/ngrok alternative. HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH
         // Reference: https://github.com/antoniomika/sish
         $string10 = "/sish:latest" nocase ascii wide
         // Description: An open source serveo/ngrok alternative. HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH
         // Reference: https://github.com/antoniomika/sish
-        $string11 = /\/tmp\/sish\.log/ nocase ascii wide
+        $string11 = /\/tmp\/sish\.log/
         // Description: An open source serveo/ngrok alternative. HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH
         // Reference: https://github.com/antoniomika/sish
         $string12 = "086e623f343e09d81210818bf6d295f7eb12143e787d168973e16e29ea3a5942" nocase ascii wide

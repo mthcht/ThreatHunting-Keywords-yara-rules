@@ -1,7 +1,7 @@
 rule icalcs
 {
     meta:
-        description = "Detection patterns for the tool 'icalcs' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'icalcs' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "icalcs"
@@ -74,9 +74,12 @@ rule icalcs
         // Description: automated sticky keys backdoor + credentials harvesting
         // Reference: https://github.com/l3m0n/WinPirate
         $string22 = /icacls\sc\:\\windows\\system32\\sethc\.exe\s/ nocase ascii wide
+        // Description: Grants full control to "Everyone" on all files and directories recursively, suppressing output and errors.
+        // Reference: N/A
+        $string23 = /icacls.{0,100}\s\/grant\sEveryone\:F\s\/T\s\/C\s\/Q/ nocase ascii wide
         // Description: Spartacus DLL/COM Hijacking Toolkit
         // Reference: https://www.pavel.gr/blog/neutralising-amsi-system-wide-as-an-admin
-        $string23 = /icacls\.exe\sC\:\\Windows\\System32\\amsi\.dll\s\/grant\sadministrators\:F/ nocase ascii wide
+        $string24 = /icacls\.exe\sC\:\\Windows\\System32\\amsi\.dll\s\/grant\sadministrators\:F/ nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -1,7 +1,7 @@
 rule ScriptBlock_Smuggling
 {
     meta:
-        description = "Detection patterns for the tool 'ScriptBlock-Smuggling' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'ScriptBlock-Smuggling' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "ScriptBlock-Smuggling"

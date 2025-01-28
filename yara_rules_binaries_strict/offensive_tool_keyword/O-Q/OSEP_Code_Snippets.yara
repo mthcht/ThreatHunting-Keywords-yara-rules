@@ -1,7 +1,7 @@
 rule OSEP_Code_Snippets
 {
     meta:
-        description = "Detection patterns for the tool 'OSEP-Code-Snippets' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'OSEP-Code-Snippets' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "OSEP-Code-Snippets"
@@ -31,10 +31,10 @@ rule OSEP_Code_Snippets
         $string7 = /\/ShInject\.exe/ nocase ascii wide
         // Description: notable code snippets for Offensive Security's PEN-300 (OSEP) course
         // Reference: https://github.com/chvancooten/OSEP-Code-Snippets
-        $string8 = /\/tmp\/payload\.bin/ nocase ascii wide
+        $string8 = /\/tmp\/payload\.bin/
         // Description: notable code snippets for Offensive Security's PEN-300 (OSEP) course
         // Reference: https://github.com/chvancooten/OSEP-Code-Snippets
-        $string9 = /\/tmp\/payload\.txt/ nocase ascii wide
+        $string9 = /\/tmp\/payload\.txt/
         // Description: notable code snippets for Offensive Security's PEN-300 (OSEP) course
         // Reference: https://github.com/chvancooten/OSEP-Code-Snippets
         $string10 = /\\lsass\.dmp/ nocase ascii wide

@@ -1,7 +1,7 @@
 rule bpf_keylogger
 {
     meta:
-        description = "Detection patterns for the tool 'bpf-keylogger' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'bpf-keylogger' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "bpf-keylogger"

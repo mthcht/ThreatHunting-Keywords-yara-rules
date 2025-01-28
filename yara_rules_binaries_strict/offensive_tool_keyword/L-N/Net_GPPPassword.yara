@@ -1,7 +1,7 @@
 rule Net_GPPPassword
 {
     meta:
-        description = "Detection patterns for the tool 'Net-GPPPassword' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Net-GPPPassword' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Net-GPPPassword"

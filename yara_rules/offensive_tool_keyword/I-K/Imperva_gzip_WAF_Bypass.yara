@@ -1,7 +1,7 @@
 rule Imperva_gzip_WAF_Bypass
 {
     meta:
-        description = "Detection patterns for the tool 'Imperva_gzip_WAF_Bypass' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Imperva_gzip_WAF_Bypass' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Imperva_gzip_WAF_Bypass"

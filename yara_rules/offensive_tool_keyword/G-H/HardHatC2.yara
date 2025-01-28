@@ -1,7 +1,7 @@
 rule HardHatC2
 {
     meta:
-        description = "Detection patterns for the tool 'HardHatC2' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'HardHatC2' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "HardHatC2"
@@ -10,7 +10,7 @@ rule HardHatC2
     strings:
         // Description: A C# Command & Control framework
         // Reference: https://github.com/DragoQCC/HardHatC2
-        $string1 = "/Donut_Linux" nocase ascii wide
+        $string1 = "/Donut_Linux"
         // Description: A C# Command & Control framework
         // Reference: https://github.com/DragoQCC/HardHatC2
         $string2 = "/Donut_Windows" nocase ascii wide

@@ -1,7 +1,7 @@
 rule RemoteUtilities
 {
     meta:
-        description = "Detection patterns for the tool 'RemoteUtilities' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'RemoteUtilities' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "RemoteUtilities"
@@ -40,16 +40,16 @@ rule RemoteUtilities
         $string10 = /\/rutview\.exe/ nocase ascii wide
         // Description: RemoteUtilities Remote Access softwares
         // Reference: https://www.remoteutilities.com/
-        $string11 = "/usr/bin/r-agent" nocase ascii wide
+        $string11 = "/usr/bin/r-agent"
         // Description: RemoteUtilities Remote Access softwares
         // Reference: https://www.remoteutilities.com/
-        $string12 = "/usr/bin/r-viewer" nocase ascii wide
+        $string12 = "/usr/bin/r-viewer"
         // Description: RemoteUtilities Remote Access softwares
         // Reference: https://www.remoteutilities.com/
-        $string13 = /\/usr\/share\/applications\/r\-agent\.desktop/ nocase ascii wide
+        $string13 = /\/usr\/share\/applications\/r\-agent\.desktop/
         // Description: RemoteUtilities Remote Access softwares
         // Reference: https://www.remoteutilities.com/
-        $string14 = /\/usr\/share\/applications\/r\-viewer\.desktop/ nocase ascii wide
+        $string14 = /\/usr\/share\/applications\/r\-viewer\.desktop/
         // Description: RemoteUtilities Remote Access softwares
         // Reference: https://www.remoteutilities.com/
         $string15 = /\/VPDAgent\.exe/ nocase ascii wide

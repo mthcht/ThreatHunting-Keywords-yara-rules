@@ -1,7 +1,7 @@
 rule PassTheChallenge
 {
     meta:
-        description = "Detection patterns for the tool 'PassTheChallenge' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'PassTheChallenge' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "PassTheChallenge"
@@ -13,10 +13,10 @@ rule PassTheChallenge
         $string1 = /\/PassTheChallenge\.git/ nocase ascii wide
         // Description: Recovering NTLM hashes from Credential Guard
         // Reference: https://github.com/ly4k/PassTheChallenge
-        $string2 = /\/PassTheChallenge\/Constants\.h/ nocase ascii wide
+        $string2 = /\/PassTheChallenge\/Constants\.h/
         // Description: Recovering NTLM hashes from Credential Guard
         // Reference: https://github.com/ly4k/PassTheChallenge
-        $string3 = /\/PassTheChallenge\/Protocol_h\.h/ nocase ascii wide
+        $string3 = /\/PassTheChallenge\/Protocol_h\.h/
         // Description: Recovering NTLM hashes from Credential Guard
         // Reference: https://github.com/ly4k/PassTheChallenge
         $string4 = "/PassTheChallenge/releases/download/" nocase ascii wide

@@ -1,7 +1,7 @@
 rule btunnel
 {
     meta:
-        description = "Detection patterns for the tool 'btunnel' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'btunnel' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "btunnel"
@@ -10,13 +10,13 @@ rule btunnel
     strings:
         // Description: Btunnel is a publicly accessible reverse proxy
         // Reference: https://www.btunnel.in
-        $string1 = /\/\.btunnel\./ nocase ascii wide
+        $string1 = /\/\.btunnel\./
         // Description: Btunnel is a publicly accessible reverse proxy
         // Reference: https://www.btunnel.in
         $string2 = /\/btunnel\.exe/ nocase ascii wide
         // Description: Btunnel is a publicly accessible reverse proxy
         // Reference: https://www.btunnel.in
-        $string3 = /\/btunnel\.log/ nocase ascii wide
+        $string3 = /\/btunnel\.log/
         // Description: Btunnel is a publicly accessible reverse proxy
         // Reference: https://www.btunnel.in
         $string4 = /\\\.btunnel\./ nocase ascii wide

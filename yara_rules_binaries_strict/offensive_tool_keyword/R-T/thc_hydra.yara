@@ -1,7 +1,7 @@
 rule thc_hydra
 {
     meta:
-        description = "Detection patterns for the tool 'thc-hydra' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'thc-hydra' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "thc-hydra"
@@ -10,91 +10,91 @@ rule thc_hydra
     strings:
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string1 = /\sdefault_logins\.txt/ nocase ascii wide
+        $string1 = /\sdefault_logins\.txt/
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string2 = " thc-hidra" nocase ascii wide
+        $string2 = " thc-hidra"
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string3 = /\.\/hydra\s/ nocase ascii wide
+        $string3 = /\.\/hydra\s/
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string4 = /\.\/xhydra/ nocase ascii wide
+        $string4 = /\.\/xhydra/
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string5 = "/hydra -" nocase ascii wide
+        $string5 = "/hydra -"
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string6 = "/thc-hydra/" nocase ascii wide
+        $string6 = "/thc-hydra/"
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string7 = /common_passwords\.txt/ nocase ascii wide
+        $string7 = /common_passwords\.txt/
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string8 = "dpl4hydra " nocase ascii wide
+        $string8 = "dpl4hydra "
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string9 = /dpl4hydra\.sh/ nocase ascii wide
+        $string9 = /dpl4hydra\.sh/
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string10 = /dpl4hydra_.{0,100}\.csv/ nocase ascii wide
+        $string10 = /dpl4hydra_.{0,100}\.csv/
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string11 = /dpl4hydra_.{0,100}\.tmp/ nocase ascii wide
+        $string11 = /dpl4hydra_.{0,100}\.tmp/
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string12 = "dpl4hydra_linksys" nocase ascii wide
+        $string12 = "dpl4hydra_linksys"
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string13 = /hydra\s.{0,100}\sftp\:\/\// nocase ascii wide
+        $string13 = /hydra\s.{0,100}\sftp\:\/\//
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string14 = /hydra\s.{0,100}\shttp\-post\-form\s/ nocase ascii wide
+        $string14 = /hydra\s.{0,100}\shttp\-post\-form\s/
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string15 = /hydra\s.{0,100}\smysql\:\/\// nocase ascii wide
+        $string15 = /hydra\s.{0,100}\smysql\:\/\//
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string16 = /hydra\s.{0,100}\sssh\:\/\// nocase ascii wide
+        $string16 = /hydra\s.{0,100}\sssh\:\/\//
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string17 = /hydra\s.{0,100}\stelnet\:\/\// nocase ascii wide
+        $string17 = /hydra\s.{0,100}\stelnet\:\/\//
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string18 = "hydra smtp-enum" nocase ascii wide
+        $string18 = "hydra smtp-enum"
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string19 = "hydra:x:10001:" nocase ascii wide
+        $string19 = "hydra:x:10001:"
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string20 = "HYDRA_PROXY_HTTP" nocase ascii wide
+        $string20 = "HYDRA_PROXY_HTTP"
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string21 = "hydra-cobaltstrike" nocase ascii wide
+        $string21 = "hydra-cobaltstrike"
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string22 = "install hydra-gtk" nocase ascii wide
+        $string22 = "install hydra-gtk"
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string23 = "pw-inspector -" nocase ascii wide
+        $string23 = "pw-inspector -"
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string24 = /pw\-inspector\./ nocase ascii wide
+        $string24 = /pw\-inspector\./
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string25 = "thc-hydra" nocase ascii wide
+        $string25 = "thc-hydra"
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string26 = /thc\-hydra\.git/ nocase ascii wide
+        $string26 = /thc\-hydra\.git/
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string27 = /thc\-hydra\.git/ nocase ascii wide
+        $string27 = /thc\-hydra\.git/
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string28 = "vanhauser-thc/thc-hydra" nocase ascii wide
+        $string28 = "vanhauser-thc/thc-hydra"
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string29 = "hydra -" nocase ascii wide
+        $string29 = "hydra -"
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

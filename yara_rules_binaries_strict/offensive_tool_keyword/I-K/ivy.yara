@@ -1,7 +1,7 @@
 rule ivy
 {
     meta:
-        description = "Detection patterns for the tool 'ivy' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'ivy' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "ivy"
@@ -46,7 +46,7 @@ rule ivy
         $string12 = /\s\-stageless\s\-Ix64\s.{0,100}\.bin\s\-Ix86\s.{0,100}\.bin\s\-P\sLocal\s\-unhook\s\-O\s.{0,100}\.js/ nocase ascii wide
         // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
         // Reference: https://github.com/optiv/Ivy
-        $string13 = /\.\/Ivy\s\-/ nocase ascii wide
+        $string13 = /\.\/Ivy\s\-/
         // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
         // Reference: https://github.com/optiv/Ivy
         $string14 = "/Ivy/Cryptor" nocase ascii wide
@@ -67,10 +67,10 @@ rule ivy
         $string19 = /go\sbuild\sIvy\.go/ nocase ascii wide
         // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
         // Reference: https://github.com/optiv/Ivy
-        $string20 = /Ivy_1.{0,100}_darwin_amd64/ nocase ascii wide
+        $string20 = /Ivy_1.{0,100}_darwin_amd64/
         // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
         // Reference: https://github.com/optiv/Ivy
-        $string21 = /Ivy_1.{0,100}_linux_amd64/ nocase ascii wide
+        $string21 = /Ivy_1.{0,100}_linux_amd64/
         // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
         // Reference: https://github.com/optiv/Ivy
         $string22 = /Ivy_1.{0,100}_windows_amd64\.exe/ nocase ascii wide

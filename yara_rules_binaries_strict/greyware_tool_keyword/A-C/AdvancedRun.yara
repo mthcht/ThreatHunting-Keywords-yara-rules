@@ -1,7 +1,7 @@
 rule AdvancedRun
 {
     meta:
-        description = "Detection patterns for the tool 'AdvancedRun' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'AdvancedRun' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "AdvancedRun"
@@ -10,7 +10,7 @@ rule AdvancedRun
     strings:
         // Description: nirsoft tool  - Run a program with different settings that you choose
         // Reference: https://medium.com/s2wblog/analysis-of-destructive-malware-whispergate-targeting-ukraine-9d5d158f19f3
-        $string1 = /AdvancedRun\.exe\s\/EXEFilename\s.{0,100}\\sc\.exe.{0,100}stop\sWinDefend/ nocase ascii wide
+        $string1 = /AdvancedRun\.exe\s/ nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

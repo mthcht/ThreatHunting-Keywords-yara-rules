@@ -1,7 +1,7 @@
 rule Rev_Shell
 {
     meta:
-        description = "Detection patterns for the tool 'Rev-Shell' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Rev-Shell' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Rev-Shell"
@@ -28,28 +28,28 @@ rule Rev_Shell
         $string6 = /\\revshell\.py/ nocase ascii wide
         // Description: Basic script to generate reverse shell payloads
         // Reference: https://github.com/washingtonP1974/Rev-Shell
-        $string7 = /\|\/bin\/sh\s\-i\s2\>\&1\|nc\s.{0,100}\s\>\/tmp\/f/ nocase ascii wide
+        $string7 = /\|\/bin\/sh\s\-i\s2\>\&1\|nc\s.{0,100}\s\>\/tmp\/f/
         // Description: Basic script to generate reverse shell payloads
         // Reference: https://github.com/washingtonP1974/Rev-Shell
         $string8 = "a280f960cb4fc01ec2dbb4fe56f17122523878a9ece3713868244fbd95e7d7e6" nocase ascii wide
         // Description: Basic script to generate reverse shell payloads
         // Reference: https://github.com/washingtonP1974/Rev-Shell
-        $string9 = /bash\s\-i\s\&\>\/dev\/tcp\/.{0,100}\s\<\&1/ nocase ascii wide
+        $string9 = /bash\s\-i\s\&\>\/dev\/tcp\/.{0,100}\s\<\&1/
         // Description: Basic script to generate reverse shell payloads
         // Reference: https://github.com/washingtonP1974/Rev-Shell
         $string10 = /generate_payload\(language\,\sip\,\sport\)/ nocase ascii wide
         // Description: Basic script to generate reverse shell payloads
         // Reference: https://github.com/washingtonP1974/Rev-Shell
-        $string11 = /nc\s\-e\s\/bin\/sh\s.{0,100}\s/ nocase ascii wide
+        $string11 = /nc\s\-e\s\/bin\/sh\s.{0,100}\s/
         // Description: Basic script to generate reverse shell payloads
         // Reference: https://github.com/washingtonP1974/Rev-Shell
         $string12 = /powershell\s\-c\s.{0,100}New\-Object\sSystem\.Net\.Sockets\.TCPClient\(\\".{0,100}\$sendback\s\=\s\(iex\s.{0,100}\$data.{0,100}\s2\>\&1\s\|\sOut\-String/ nocase ascii wide
         // Description: Basic script to generate reverse shell payloads
         // Reference: https://github.com/washingtonP1974/Rev-Shell
-        $string13 = /s\=socket\.socket\(socket\.AF_INET\,socket\.SOCK_STREAM\)\;s\.connect\(.{0,100}os\.dup2\(s\.fileno.{0,100}pty\.spawn\(\\"\/bin\/bash/ nocase ascii wide
+        $string13 = /s\=socket\.socket\(socket\.AF_INET\,socket\.SOCK_STREAM\)\;s\.connect\(.{0,100}os\.dup2\(s\.fileno.{0,100}pty\.spawn\(\\"\/bin\/bash/
         // Description: Basic script to generate reverse shell payloads
         // Reference: https://github.com/washingtonP1974/Rev-Shell
-        $string14 = /TF\=.{0,100}mkfifo\s.{0,100}\s\&\&\stelnet\s.{0,100}\s0\<.{0,100}\|\s\/bin\/sh\s1\>/ nocase ascii wide
+        $string14 = /TF\=.{0,100}mkfifo\s.{0,100}\s\&\&\stelnet\s.{0,100}\s0\<.{0,100}\|\s\/bin\/sh\s1\>/
         // Description: Basic script to generate reverse shell payloads
         // Reference: https://github.com/washingtonP1974/Rev-Shell
         $string15 = "washingtonP1974/Rev-Shell" nocase ascii wide

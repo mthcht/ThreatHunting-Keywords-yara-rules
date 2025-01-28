@@ -1,7 +1,7 @@
 rule thoth
 {
     meta:
-        description = "Detection patterns for the tool 'thoth' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'thoth' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "thoth"
@@ -49,28 +49,28 @@ rule thoth
         $string13 = /\/thoth\.git/ nocase ascii wide
         // Description: Automate recon for red team assessments.
         // Reference: https://github.com/r1cksec/thoth
-        $string14 = /\/tmp\/amass\.zip/ nocase ascii wide
+        $string14 = /\/tmp\/amass\.zip/
         // Description: Automate recon for red team assessments.
         // Reference: https://github.com/r1cksec/thoth
-        $string15 = "/tmp/bin/csprecon" nocase ascii wide
+        $string15 = "/tmp/bin/csprecon"
         // Description: Automate recon for red team assessments.
         // Reference: https://github.com/r1cksec/thoth
-        $string16 = "/tmp/bin/subfinder" nocase ascii wide
+        $string16 = "/tmp/bin/subfinder"
         // Description: Automate recon for red team assessments.
         // Reference: https://github.com/r1cksec/thoth
-        $string17 = "/tmp/FavFreak/" nocase ascii wide
+        $string17 = "/tmp/FavFreak/"
         // Description: Automate recon for red team assessments.
         // Reference: https://github.com/r1cksec/thoth
-        $string18 = /\/tmp\/geckodriver\.tar\.gz/ nocase ascii wide
+        $string18 = /\/tmp\/geckodriver\.tar\.gz/
         // Description: Automate recon for red team assessments.
         // Reference: https://github.com/r1cksec/thoth
-        $string19 = "/tmp/gitleaks" nocase ascii wide
+        $string19 = "/tmp/gitleaks"
         // Description: Automate recon for red team assessments.
         // Reference: https://github.com/r1cksec/thoth
-        $string20 = /\/tmp\/scanrepo\.tar\.gz/ nocase ascii wide
+        $string20 = /\/tmp\/scanrepo\.tar\.gz/
         // Description: Automate recon for red team assessments.
         // Reference: https://github.com/r1cksec/thoth
-        $string21 = /\/tmp\/truffleHog\.tar\.gz/ nocase ascii wide
+        $string21 = /\/tmp\/truffleHog\.tar\.gz/
         // Description: Automate recon for red team assessments.
         // Reference: https://github.com/r1cksec/thoth
         $string22 = /\|\sfavfreak/ nocase ascii wide
@@ -112,7 +112,7 @@ rule thoth
         $string34 = "google-get-rootdomains " nocase ascii wide
         // Description: Automate recon for red team assessments.
         // Reference: https://github.com/r1cksec/thoth
-        $string35 = /grep\-through\-commits\.sh\s/ nocase ascii wide
+        $string35 = /grep\-through\-commits\.sh\s/
         // Description: Automate recon for red team assessments.
         // Reference: https://github.com/r1cksec/thoth
         $string36 = "hackertarget-get-rootdomains " nocase ascii wide

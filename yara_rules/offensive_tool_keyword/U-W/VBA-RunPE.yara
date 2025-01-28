@@ -1,7 +1,7 @@
 rule VBA_RunPE
 {
     meta:
-        description = "Detection patterns for the tool 'VBA-RunPE' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'VBA-RunPE' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "VBA-RunPE"

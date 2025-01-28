@@ -1,7 +1,7 @@
 rule chromepass
 {
     meta:
-        description = "Detection patterns for the tool 'chromepass' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'chromepass' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "chromepass"

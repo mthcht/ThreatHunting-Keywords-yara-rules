@@ -1,7 +1,7 @@
 rule precompiled_binaries
 {
     meta:
-        description = "Detection patterns for the tool 'precompiled-binaries' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'precompiled-binaries' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "precompiled-binaries"
@@ -121,19 +121,19 @@ rule precompiled_binaries
         $string37 = /\/Inveigh\.ps1/ nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string38 = /\/Inveigh\-Cleartext\.txt/ nocase ascii wide
+        $string38 = /\/Inveigh\-Cleartext\.txt/
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string39 = /\/Inveigh\-FormInput\.txt/ nocase ascii wide
+        $string39 = /\/Inveigh\-FormInput\.txt/
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string40 = /\/Inveigh\-Log\.txt/ nocase ascii wide
+        $string40 = /\/Inveigh\-Log\.txt/
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string41 = /\/Inveigh\-NTLMv1\.txt/ nocase ascii wide
+        $string41 = /\/Inveigh\-NTLMv1\.txt/
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string42 = /\/Inveigh\-NTLMv2\.txt/ nocase ascii wide
+        $string42 = /\/Inveigh\-NTLMv2\.txt/
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
         $string43 = /\/KeeTheft\.exe/ nocase ascii wide

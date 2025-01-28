@@ -1,7 +1,7 @@
 rule nessus
 {
     meta:
-        description = "Detection patterns for the tool 'nessus' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'nessus' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "nessus"
@@ -37,10 +37,10 @@ rule nessus
         $string9 = /Nessus\-.{0,1000}\.txz/ nocase ascii wide
         // Description: Vulnerability scanner
         // Reference: https://fr.tenable.com/products/nessus
-        $string10 = "nessuscli fetch" nocase ascii wide
+        $string10 = "nessuscli fetch"
         // Description: Vulnerability scanner
         // Reference: https://fr.tenable.com/products/nessus
-        $string11 = "nessuscli fix" nocase ascii wide
+        $string11 = "nessuscli fix"
         // Description: Vulnerability scanner
         // Reference: https://fr.tenable.com/products/nessus
         $string12 = /nessus\-updates.{0,1000}\.tar\.gz/ nocase ascii wide
@@ -49,7 +49,7 @@ rule nessus
         $string13 = /plugins\.nessus\.org\./ nocase ascii wide
         // Description: Vulnerability scanner
         // Reference: https://fr.tenable.com/products/nessus
-        $string14 = "systemctl start nessusd" nocase ascii wide
+        $string14 = "systemctl start nessusd"
         // Description: Vulnerability scanner
         // Reference: https://fr.tenable.com/products/nessus
         $string15 = /tenable\.com\/downloads\/nessus/ nocase ascii wide

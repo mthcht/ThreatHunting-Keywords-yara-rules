@@ -1,7 +1,7 @@
 rule ffuf
 {
     meta:
-        description = "Detection patterns for the tool 'ffuf' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'ffuf' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "ffuf"
@@ -10,67 +10,67 @@ rule ffuf
     strings:
         // Description: Fast web fuzzer written in Go
         // Reference: https://github.com/ffuf/ffuf
-        $string1 = /\s\-o\sffuf\.csv/ nocase ascii wide
+        $string1 = /\s\-o\sffuf\.csv/
         // Description: Fast web fuzzer written in Go
         // Reference: https://github.com/ffuf/ffuf
-        $string2 = /\/ffuf\.git/ nocase ascii wide
+        $string2 = /\/ffuf\.git/
         // Description: Fast web fuzzer written in Go
         // Reference: https://github.com/ffuf/ffuf
-        $string3 = "/ffuf/ffufrc" nocase ascii wide
+        $string3 = "/ffuf/ffufrc"
         // Description: Fast web fuzzer written in Go
         // Reference: https://github.com/ffuf/ffuf
-        $string4 = "cd ffuf" nocase ascii wide
+        $string4 = "cd ffuf"
         // Description: Fast web fuzzer written in Go
         // Reference: https://github.com/ffuf/ffuf
-        $string5 = /ffuf\s.{0,100}\-input\-cmd/ nocase ascii wide
+        $string5 = /ffuf\s.{0,100}\-input\-cmd/
         // Description: Fast web fuzzer written in Go
         // Reference: https://github.com/ffuf/ffuf
-        $string6 = /ffuf\s.{0,100}\-u\shttp/ nocase ascii wide
+        $string6 = /ffuf\s.{0,100}\-u\shttp/
         // Description: Fast web fuzzer written in Go
         // Reference: https://github.com/ffuf/ffuf
-        $string7 = "ffuf -c " nocase ascii wide
+        $string7 = "ffuf -c "
         // Description: Fast web fuzzer written in Go
         // Reference: https://github.com/ffuf/ffuf
-        $string8 = "ffuf -w " nocase ascii wide
+        $string8 = "ffuf -w "
         // Description: Fast web fuzzer written in Go
         // Reference: https://github.com/ffuf/ffuf
-        $string9 = /ffuf\.exe/ nocase ascii wide
+        $string9 = /ffuf\.exe/
         // Description: Fast web fuzzer written in Go
         // Reference: https://github.com/ffuf/ffuf
-        $string10 = "ffuf/ffuf" nocase ascii wide
+        $string10 = "ffuf/ffuf"
         // Description: Fast web fuzzer written in Go
         // Reference: https://github.com/ffuf/ffuf
-        $string11 = /ffuf_.{0,100}_freebsd_.{0,100}\.tar\.gz/ nocase ascii wide
+        $string11 = /ffuf_.{0,100}_freebsd_.{0,100}\.tar\.gz/
         // Description: Fast web fuzzer written in Go
         // Reference: https://github.com/ffuf/ffuf
-        $string12 = /ffuf_.{0,100}_linux_.{0,100}\.tar\.gz/ nocase ascii wide
+        $string12 = /ffuf_.{0,100}_linux_.{0,100}\.tar\.gz/
         // Description: Fast web fuzzer written in Go
         // Reference: https://github.com/ffuf/ffuf
-        $string13 = /ffuf_.{0,100}_macOS_.{0,100}\.tar\.gz/ nocase ascii wide
+        $string13 = /ffuf_.{0,100}_macOS_.{0,100}\.tar\.gz/
         // Description: Fast web fuzzer written in Go
         // Reference: https://github.com/ffuf/ffuf
-        $string14 = /ffuf_.{0,100}_openbsd_.{0,100}\.tar\.gz/ nocase ascii wide
+        $string14 = /ffuf_.{0,100}_openbsd_.{0,100}\.tar\.gz/
         // Description: Fast web fuzzer written in Go
         // Reference: https://github.com/ffuf/ffuf
-        $string15 = /ffuf_.{0,100}_windows_.{0,100}\.zip/ nocase ascii wide
+        $string15 = /ffuf_.{0,100}_windows_.{0,100}\.zip/
         // Description: Fast web fuzzer written in Go
         // Reference: https://github.com/ffuf/ffuf
-        $string16 = /ffuf\-master\.zip/ nocase ascii wide
+        $string16 = /ffuf\-master\.zip/
         // Description: Fast web fuzzer written in Go
         // Reference: https://github.com/ffuf/ffuf
-        $string17 = /fuff\s.{0,100}\-input\-shell/ nocase ascii wide
+        $string17 = /fuff\s.{0,100}\-input\-shell/
         // Description: Fast web fuzzer written in Go
         // Reference: https://github.com/ffuf/ffuf
-        $string18 = /fuff\s.{0,100}\-scraperfile/ nocase ascii wide
+        $string18 = /fuff\s.{0,100}\-scraperfile/
         // Description: Fast web fuzzer written in Go
         // Reference: https://github.com/ffuf/ffuf
-        $string19 = /fuff\s.{0,100}\-scrapers/ nocase ascii wide
+        $string19 = /fuff\s.{0,100}\-scrapers/
         // Description: Fast web fuzzer written in Go
         // Reference: https://github.com/ffuf/ffuf
-        $string20 = /https\:\/\/ffuf\.io\.fi/ nocase ascii wide
+        $string20 = /https\:\/\/ffuf\.io\.fi/
         // Description: Fast web fuzzer written in Go
         // Reference: https://github.com/ffuf/ffuf
-        $string21 = /https\:\/\/ffuf\.io\/FUZZ/ nocase ascii wide
+        $string21 = /https\:\/\/ffuf\.io\/FUZZ/
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -1,7 +1,7 @@
 rule kerbrute
 {
     meta:
-        description = "Detection patterns for the tool 'kerbrute' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'kerbrute' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "kerbrute"
@@ -28,7 +28,7 @@ rule kerbrute
         $string6 = /\suserenum\s\-d\s.{0,1000}\s.{0,1000}\.txt/ nocase ascii wide
         // Description: A tool to perform Kerberos pre-auth bruteforcing
         // Reference: https://github.com/ropnop/kerbrute
-        $string7 = /\.\/kerbrute\s/ nocase ascii wide
+        $string7 = /\.\/kerbrute\s/
         // Description: A tool to perform Kerberos pre-auth bruteforcing
         // Reference: https://github.com/ropnop/kerbrute
         $string8 = /\/kerbrute\.git/ nocase ascii wide
@@ -112,13 +112,13 @@ rule kerbrute
         $string34 = /kerbrute_.{0,1000}\.exe/ nocase ascii wide
         // Description: A tool to perform Kerberos pre-auth bruteforcing
         // Reference: https://github.com/ropnop/kerbrute
-        $string35 = "kerbrute_darwin_386" nocase ascii wide
+        $string35 = "kerbrute_darwin_386"
         // Description: A tool to perform Kerberos pre-auth bruteforcing
         // Reference: https://github.com/ropnop/kerbrute
-        $string36 = "kerbrute_darwin_amd64" nocase ascii wide
+        $string36 = "kerbrute_darwin_amd64"
         // Description: A tool to perform Kerberos pre-auth bruteforcing
         // Reference: https://github.com/ropnop/kerbrute
-        $string37 = "kerbrute_linux" nocase ascii wide
+        $string37 = "kerbrute_linux"
         // Description: A tool to perform Kerberos pre-auth bruteforcing
         // Reference: https://github.com/ropnop/kerbrute
         $string38 = "kerbrute_windows" nocase ascii wide

@@ -1,7 +1,7 @@
 rule pyLAPS
 {
     meta:
-        description = "Detection patterns for the tool 'pyLAPS' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'pyLAPS' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "pyLAPS"
@@ -10,19 +10,19 @@ rule pyLAPS
     strings:
         // Description: A simple way to read and write LAPS passwords from linux.
         // Reference: https://github.com/p0dalirius/pyLAPS
-        $string1 = /\spyLAPS\.py/ nocase ascii wide
+        $string1 = /\spyLAPS\.py/
         // Description: A simple way to read and write LAPS passwords from linux.
         // Reference: https://github.com/p0dalirius/pyLAPS
-        $string2 = /\/pyLAPS\.git/ nocase ascii wide
+        $string2 = /\/pyLAPS\.git/
         // Description: A simple way to read and write LAPS passwords from linux.
         // Reference: https://github.com/p0dalirius/pyLAPS
-        $string3 = /\/pyLAPS\.py/ nocase ascii wide
+        $string3 = /\/pyLAPS\.py/
         // Description: A simple way to read and write LAPS passwords from linux.
         // Reference: https://github.com/p0dalirius/pyLAPS
-        $string4 = "p0dalirius/pyLAPS" nocase ascii wide
+        $string4 = "p0dalirius/pyLAPS"
         // Description: A simple way to read and write LAPS passwords from linux.
         // Reference: https://github.com/p0dalirius/pyLAPS
-        $string5 = "pyLAPS-main" nocase ascii wide
+        $string5 = "pyLAPS-main"
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

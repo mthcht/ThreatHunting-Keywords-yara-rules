@@ -1,7 +1,7 @@
 rule Ammyy_Admin
 {
     meta:
-        description = "Detection patterns for the tool 'Ammyy Admin' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Ammyy Admin' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Ammyy Admin"

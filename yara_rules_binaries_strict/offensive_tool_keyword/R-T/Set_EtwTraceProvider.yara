@@ -1,7 +1,7 @@
 rule Set_EtwTraceProvider
 {
     meta:
-        description = "Detection patterns for the tool 'Set-EtwTraceProvider' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Set-EtwTraceProvider' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Set-EtwTraceProvider"

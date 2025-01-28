@@ -1,7 +1,7 @@
 rule _1ty_me
 {
     meta:
-        description = "Detection patterns for the tool '1ty.me' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool '1ty.me' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "1ty.me"

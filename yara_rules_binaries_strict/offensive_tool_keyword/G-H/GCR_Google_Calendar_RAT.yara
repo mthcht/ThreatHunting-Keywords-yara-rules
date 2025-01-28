@@ -1,7 +1,7 @@
 rule GCR_Google_Calendar_RAT
 {
     meta:
-        description = "Detection patterns for the tool 'GCR-Google-Calendar-RAT' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'GCR-Google-Calendar-RAT' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "GCR-Google-Calendar-RAT"
@@ -10,7 +10,7 @@ rule GCR_Google_Calendar_RAT
     strings:
         // Description: Google Calendar RAT is a PoC of Command&Control over Google Calendar Events
         // Reference: https://github.com/MrSaighnal/GCR-Google-Calendar-RAT
-        $string1 = /\.\/gcr\.py/ nocase ascii wide
+        $string1 = /\.\/gcr\.py/
         // Description: Google Calendar RAT is a PoC of Command&Control over Google Calendar Events
         // Reference: https://github.com/MrSaighnal/GCR-Google-Calendar-RAT
         $string2 = "GCR - Google Calendar RAT" nocase ascii wide

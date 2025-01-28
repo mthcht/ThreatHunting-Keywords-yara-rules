@@ -1,7 +1,7 @@
 rule p0f
 {
     meta:
-        description = "Detection patterns for the tool 'p0f' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'p0f' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "p0f"
@@ -10,7 +10,7 @@ rule p0f
     strings:
         // Description: P0f is a tool that utilizes an array of sophisticated purely passive traffic fingerprinting mechanisms to identify the players behind any incidental TCP/IP communications
         // Reference: https://www.kali.org/tools/p0f/
-        $string1 = /\/tmp\/p0f\.log/ nocase ascii wide
+        $string1 = /\/tmp\/p0f\.log/
         // Description: P0f is a tool that utilizes an array of sophisticated purely passive traffic fingerprinting mechanisms to identify the players behind any incidental TCP/IP communications
         // Reference: https://www.kali.org/tools/p0f/
         $string2 = "install p0f" nocase ascii wide

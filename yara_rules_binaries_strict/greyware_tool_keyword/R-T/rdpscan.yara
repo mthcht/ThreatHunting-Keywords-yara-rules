@@ -1,7 +1,7 @@
 rule rdpscan
 {
     meta:
-        description = "Detection patterns for the tool 'rdpscan' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'rdpscan' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "rdpscan"
@@ -10,7 +10,7 @@ rule rdpscan
     strings:
         // Description: A quick scanner for the CVE-2019-0708 "BlueKeep" vulnerability
         // Reference: https://github.com/robertdavidgraham/rdpscan
-        $string1 = "/rdpscan --" nocase ascii wide
+        $string1 = "/rdpscan --"
         // Description: A quick scanner for the CVE-2019-0708 "BlueKeep" vulnerability
         // Reference: https://github.com/robertdavidgraham/rdpscan
         $string2 = /\/rdpscan\.git/ nocase ascii wide

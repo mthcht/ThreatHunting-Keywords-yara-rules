@@ -1,7 +1,7 @@
 rule ligolo_ng
 {
     meta:
-        description = "Detection patterns for the tool 'ligolo-ng' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'ligolo-ng' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "ligolo-ng"
@@ -13,7 +13,7 @@ rule ligolo_ng
         $string1 = /\.exe\s\-selfcert\s\-laddr\s0\.0\.0\.0\:/ nocase ascii wide
         // Description: An advanced tunneling tool that uses TUN interfaces
         // Reference: https://github.com/nicocha30/ligolo-ng
-        $string2 = /\/agent\s\-connect\shttp.{0,1000}\s\-\-proxy/ nocase ascii wide
+        $string2 = /\/agent\s\-connect\shttp.{0,1000}\s\-\-proxy/
         // Description: An advanced tunneling tool that uses TUN interfaces
         // Reference: https://github.com/nicocha30/ligolo-ng
         $string3 = /\/ligolo\-ng\.git/ nocase ascii wide
@@ -1081,13 +1081,13 @@ rule ligolo_ng
         $string357 = "ffe25c6a7a14c2f734af099af620d92bb87e0e6f6eb2f2d035c053232f7173a5" nocase ascii wide
         // Description: An advanced tunneling tool that uses TUN interfaces
         // Reference: https://github.com/nicocha30/ligolo-ng
-        $string358 = "ip link set ligolo up" nocase ascii wide
+        $string358 = "ip link set ligolo up"
         // Description: An advanced tunneling tool that uses TUN interfaces
         // Reference: https://github.com/nicocha30/ligolo-ng
-        $string359 = /ip\sroute\sadd\s.{0,1000}\sdev\sligolo/ nocase ascii wide
+        $string359 = /ip\sroute\sadd\s.{0,1000}\sdev\sligolo/
         // Description: An advanced tunneling tool that uses TUN interfaces
         // Reference: https://github.com/nicocha30/ligolo-ng
-        $string360 = /ip\stuntap\sadd\suser\s.{0,1000}\smode\stun\sligolo/ nocase ascii wide
+        $string360 = /ip\stuntap\sadd\suser\s.{0,1000}\smode\stun\sligolo/
         // Description: An advanced tunneling tool that uses TUN interfaces
         // Reference: https://github.com/nicocha30/ligolo-ng
         $string361 = "ligolo-ng_agent" nocase ascii wide
@@ -1105,13 +1105,10 @@ rule ligolo_ng
         $string365 = "nicocha30/ligolo-ng" nocase ascii wide
         // Description: An advanced tunneling tool that uses TUN interfaces
         // Reference: https://github.com/nicocha30/ligolo-ng
-        $string366 = "nicocha30/ligolo-ng" nocase ascii wide
+        $string366 = "Password: socksPass" nocase ascii wide
         // Description: An advanced tunneling tool that uses TUN interfaces
         // Reference: https://github.com/nicocha30/ligolo-ng
-        $string367 = "Password: socksPass" nocase ascii wide
-        // Description: An advanced tunneling tool that uses TUN interfaces
-        // Reference: https://github.com/nicocha30/ligolo-ng
-        $string368 = /windows\sgo\sbuild\s\-o\sproxy\.exe\scmd\/proxy\/main\.go/ nocase ascii wide
+        $string367 = /windows\sgo\sbuild\s\-o\sproxy\.exe\scmd\/proxy\/main\.go/ nocase ascii wide
 
     condition:
         any of them

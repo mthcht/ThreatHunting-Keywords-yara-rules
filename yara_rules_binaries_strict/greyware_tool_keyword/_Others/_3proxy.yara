@@ -1,7 +1,7 @@
 rule _3proxy
 {
     meta:
-        description = "Detection patterns for the tool '3proxy' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool '3proxy' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "3proxy"
@@ -25,10 +25,10 @@ rule _3proxy
         $string5 = /\/3proxy\.git/ nocase ascii wide
         // Description: 3proxy - tiny free proxy server
         // Reference: https://github.com/3proxy/3proxy
-        $string6 = /\/3proxy\.log/ nocase ascii wide
+        $string6 = /\/3proxy\.log/
         // Description: 3proxy - tiny free proxy server
         // Reference: https://github.com/3proxy/3proxy
-        $string7 = "/etc/3proxy/conf" nocase ascii wide
+        $string7 = "/etc/3proxy/conf"
         // Description: 3proxy - tiny free proxy server
         // Reference: https://github.com/3proxy/3proxy
         $string8 = /\\3proxy\-.{0,100}\.deb/ nocase ascii wide

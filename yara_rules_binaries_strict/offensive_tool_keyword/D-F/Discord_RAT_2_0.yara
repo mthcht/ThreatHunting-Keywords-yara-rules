@@ -1,7 +1,7 @@
 rule Discord_RAT_2_0
 {
     meta:
-        description = "Detection patterns for the tool 'Discord-RAT-2.0' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Discord-RAT-2.0' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Discord-RAT-2.0"

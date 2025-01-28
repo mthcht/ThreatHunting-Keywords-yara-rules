@@ -1,7 +1,7 @@
 rule ruby
 {
     meta:
-        description = "Detection patterns for the tool 'ruby' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'ruby' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "ruby"
@@ -10,7 +10,7 @@ rule ruby
     strings:
         // Description: ruby reverse shell
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string1 = /ruby\s\-rsocket\s.{0,100}TCPSocket\.open\(.{0,100}exec\ssprintf.{0,100}\/bin\/sh\s\-i\s/ nocase ascii wide
+        $string1 = /ruby\s\-rsocket\s.{0,100}TCPSocket\.open\(.{0,100}exec\ssprintf.{0,100}\/bin\/sh\s\-i\s/
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

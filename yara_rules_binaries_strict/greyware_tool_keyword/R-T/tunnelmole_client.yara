@@ -1,7 +1,7 @@
 rule tunnelmole_client
 {
     meta:
-        description = "Detection patterns for the tool 'tunnelmole-client' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'tunnelmole-client' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "tunnelmole-client"
@@ -19,7 +19,7 @@ rule tunnelmole_client
         $string3 = /\.bin\/tunnelmole/ nocase ascii wide
         // Description: tmole - Share your local server with a Public URL
         // Reference: https://github.com/robbie-cahill/tunnelmole-client/
-        $string4 = /\/bin\/tunnelmole\.js/ nocase ascii wide
+        $string4 = /\/bin\/tunnelmole\.js/
         // Description: tmole - Share your local server with a Public URL
         // Reference: https://github.com/robbie-cahill/tunnelmole-client/
         $string5 = /\/tunnelmole\.js/ nocase ascii wide

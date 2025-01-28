@@ -1,7 +1,7 @@
 rule Portr
 {
     meta:
-        description = "Detection patterns for the tool 'Portr' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Portr' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Portr"
@@ -22,7 +22,7 @@ rule Portr
         $string4 = "/amalshaji/portr-admin/" nocase ascii wide
         // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
         // Reference: https://github.com/amalshaji/portr
-        $string5 = "/bin/portr" nocase ascii wide
+        $string5 = "/bin/portr"
         // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
         // Reference: https://github.com/amalshaji/portr
         $string6 = /\/portr\.exe/ nocase ascii wide
@@ -34,16 +34,16 @@ rule Portr
         $string8 = "/portr/releases" nocase ascii wide
         // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
         // Reference: https://github.com/amalshaji/portr
-        $string9 = /\/portr_.{0,100}_Darwin_arm64\.zip/ nocase ascii wide
+        $string9 = /\/portr_.{0,100}_Darwin_arm64\.zip/
         // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
         // Reference: https://github.com/amalshaji/portr
-        $string10 = /\/portr_.{0,100}_Darwin_x86_64\.zip/ nocase ascii wide
+        $string10 = /\/portr_.{0,100}_Darwin_x86_64\.zip/
         // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
         // Reference: https://github.com/amalshaji/portr
-        $string11 = /\/portr_.{0,100}_Linux_arm64\.zip/ nocase ascii wide
+        $string11 = /\/portr_.{0,100}_Linux_arm64\.zip/
         // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
         // Reference: https://github.com/amalshaji/portr
-        $string12 = /\/portr_.{0,100}_Linux_x86_64\.zip/ nocase ascii wide
+        $string12 = /\/portr_.{0,100}_Linux_x86_64\.zip/
         // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
         // Reference: https://github.com/amalshaji/portr
         $string13 = /\/portr_.{0,100}_Windows_arm64\.zip/ nocase ascii wide

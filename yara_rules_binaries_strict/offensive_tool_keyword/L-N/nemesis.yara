@@ -1,7 +1,7 @@
 rule nemesis
 {
     meta:
-        description = "Detection patterns for the tool 'nemesis' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'nemesis' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "nemesis"
@@ -73,7 +73,7 @@ rule nemesis
         $string21 = /\soffice2john\.py/ nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
-        $string22 = /\spasswd\.py/ nocase ascii wide
+        $string22 = /\spasswd\.py/
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
         $string23 = /\spassword_cracker\.py/ nocase ascii wide
@@ -112,7 +112,7 @@ rule nemesis
         $string34 = " --user 'nemesis:" nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
-        $string35 = /\.\/agscript\s.{0,100}\snemesis\-bot\s/ nocase ascii wide
+        $string35 = /\.\/agscript\s.{0,100}\snemesis\-bot\s/
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
         $string36 = /\/11_Credentials\.py/ nocase ascii wide
@@ -184,10 +184,10 @@ rule nemesis
         $string58 = /\/office2john\.py/ nocase ascii wide
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
-        $string59 = "/opt/cobaltstrike-nemesis" nocase ascii wide
+        $string59 = "/opt/cobaltstrike-nemesis"
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
-        $string60 = /\/passwd\.py/ nocase ascii wide
+        $string60 = /\/passwd\.py/
         // Description: An offensive data enrichment pipeline
         // Reference: https://github.com/SpecterOps/Nemesis
         $string61 = /\/password_cracker\.py/ nocase ascii wide

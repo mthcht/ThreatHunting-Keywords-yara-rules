@@ -1,7 +1,7 @@
 rule resocks
 {
     meta:
-        description = "Detection patterns for the tool 'resocks' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'resocks' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "resocks"
@@ -13,7 +13,7 @@ rule resocks
         $string1 = /\$RESOCKS_KEY/ nocase ascii wide
         // Description: resocks is a reverse/back-connect SOCKS5 proxy tunnel that can be used to route traffic through a system that can't be directly accessed
         // Reference: https://github.com/RedTeamPentesting/resocks
-        $string2 = /\/resocks\s.{0,1000}\s\-\-key\s/ nocase ascii wide
+        $string2 = /\/resocks\s.{0,1000}\s\-\-key\s/
         // Description: resocks is a reverse/back-connect SOCKS5 proxy tunnel that can be used to route traffic through a system that can't be directly accessed
         // Reference: https://github.com/RedTeamPentesting/resocks
         $string3 = /\/resocks\.git/ nocase ascii wide
@@ -22,16 +22,16 @@ rule resocks
         $string4 = "/resocks/releases/latest" nocase ascii wide
         // Description: resocks is a reverse/back-connect SOCKS5 proxy tunnel that can be used to route traffic through a system that can't be directly accessed
         // Reference: https://github.com/RedTeamPentesting/resocks
-        $string5 = /\/resocks_.{0,1000}_Linux_x86_64\.tar\.gz/ nocase ascii wide
+        $string5 = /\/resocks_.{0,1000}_Linux_x86_64\.tar\.gz/
         // Description: resocks is a reverse/back-connect SOCKS5 proxy tunnel that can be used to route traffic through a system that can't be directly accessed
         // Reference: https://github.com/RedTeamPentesting/resocks
         $string6 = /\/resocks_.{0,1000}_macOS_arm64\.tar\.gz/ nocase ascii wide
         // Description: resocks is a reverse/back-connect SOCKS5 proxy tunnel that can be used to route traffic through a system that can't be directly accessed
         // Reference: https://github.com/RedTeamPentesting/resocks
-        $string7 = /\/resocks_Darwin_x86_64\.tar\.gz/ nocase ascii wide
+        $string7 = /\/resocks_Darwin_x86_64\.tar\.gz/
         // Description: resocks is a reverse/back-connect SOCKS5 proxy tunnel that can be used to route traffic through a system that can't be directly accessed
         // Reference: https://github.com/RedTeamPentesting/resocks
-        $string8 = /\/resocks_Linux_.{0,1000}\.tar\.gz/ nocase ascii wide
+        $string8 = /\/resocks_Linux_.{0,1000}\.tar\.gz/
         // Description: resocks is a reverse/back-connect SOCKS5 proxy tunnel that can be used to route traffic through a system that can't be directly accessed
         // Reference: https://github.com/RedTeamPentesting/resocks
         $string9 = "0bd2acc669f0084786cd7df668e279e21e71556e9e927235a54f8bc6c1a27fa7" nocase ascii wide

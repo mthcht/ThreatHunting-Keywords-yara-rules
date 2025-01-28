@@ -1,7 +1,7 @@
 rule sgn
 {
     meta:
-        description = "Detection patterns for the tool 'sgn' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'sgn' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "sgn"
@@ -16,13 +16,13 @@ rule sgn
         $string2 = /\ssgn\.exe\s\-i\s/ nocase ascii wide
         // Description: polymorphic encoder used in  to obfuscate payloads
         // Reference: https://github.com/EgeBalci/sgn
-        $string3 = " sgn_linux-arm64" nocase ascii wide
+        $string3 = " sgn_linux-arm64"
         // Description: polymorphic encoder used in  to obfuscate payloads
         // Reference: https://github.com/EgeBalci/sgn
-        $string4 = /\/sgn_linux\-amd64\.zip/ nocase ascii wide
+        $string4 = /\/sgn_linux\-amd64\.zip/
         // Description: polymorphic encoder used in  to obfuscate payloads
         // Reference: https://github.com/EgeBalci/sgn
-        $string5 = /\/sgn_linux\-arm64\.zip/ nocase ascii wide
+        $string5 = /\/sgn_linux\-arm64\.zip/
         // Description: polymorphic encoder used in  to obfuscate payloads
         // Reference: https://github.com/EgeBalci/sgn
         $string6 = /\/sgn_windows\-amd64\.exe/ nocase ascii wide
@@ -34,10 +34,10 @@ rule sgn
         $string8 = /\/sgn32\.exe/ nocase ascii wide
         // Description: polymorphic encoder used in  to obfuscate payloads
         // Reference: https://github.com/EgeBalci/sgn
-        $string9 = /\/shellcode\.sgn/ nocase ascii wide
+        $string9 = /\/shellcode\.sgn/
         // Description: polymorphic encoder used in  to obfuscate payloads
         // Reference: https://github.com/EgeBalci/sgn
-        $string10 = "/tmp/ sgn -i /tmp/" nocase ascii wide
+        $string10 = "/tmp/ sgn -i /tmp/"
         // Description: polymorphic encoder used in  to obfuscate payloads
         // Reference: https://github.com/EgeBalci/sgn
         $string11 = /\[\!\]\sThis\smay\stake\smore\stime\sto\sbruteforce\s/ nocase ascii wide

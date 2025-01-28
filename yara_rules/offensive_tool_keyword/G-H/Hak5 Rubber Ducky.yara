@@ -1,7 +1,7 @@
 rule Hak5_Rubber_Ducky
 {
     meta:
-        description = "Detection patterns for the tool 'Hak5 Rubber Ducky' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Hak5 Rubber Ducky' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Hak5 Rubber Ducky"

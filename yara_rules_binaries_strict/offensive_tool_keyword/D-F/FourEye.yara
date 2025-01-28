@@ -1,7 +1,7 @@
 rule FourEye
 {
     meta:
-        description = "Detection patterns for the tool 'FourEye' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'FourEye' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "FourEye"
@@ -31,13 +31,13 @@ rule FourEye
         $string7 = "/module/darkexe/" nocase ascii wide
         // Description: AV Evasion Tool
         // Reference: https://github.com/lengjibo/FourEye
-        $string8 = /\/root\/shellcode\.c/ nocase ascii wide
+        $string8 = /\/root\/shellcode\.c/
         // Description: AV Evasion Tool
         // Reference: https://github.com/lengjibo/FourEye
-        $string9 = /\/root\/shellcode\.cpp/ nocase ascii wide
+        $string9 = /\/root\/shellcode\.cpp/
         // Description: AV Evasion Tool
         // Reference: https://github.com/lengjibo/FourEye
-        $string10 = /\/root\/shellcode\.exe/ nocase ascii wide
+        $string10 = /\/root\/shellcode\.exe/
         // Description: AV Evasion Tool
         // Reference: https://github.com/lengjibo/FourEye
         $string11 = /\/UUID_bypass\.py/ nocase ascii wide

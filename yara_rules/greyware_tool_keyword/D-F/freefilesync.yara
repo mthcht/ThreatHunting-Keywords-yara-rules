@@ -1,7 +1,7 @@
 rule freefilesync
 {
     meta:
-        description = "Detection patterns for the tool 'freefilesync' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'freefilesync' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "freefilesync"
@@ -31,7 +31,7 @@ rule freefilesync
         $string7 = /\/RealTimeSync\.exe/ nocase ascii wide
         // Description: freefilesync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://freefilesync.org/download.php
-        $string8 = "/tmp/FreeFileSync" nocase ascii wide
+        $string8 = "/tmp/FreeFileSync"
         // Description: freefilesync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://freefilesync.org/download.php
         $string9 = /\\AppData\\Roaming\\FreeFileSync\\Logs\\/ nocase ascii wide

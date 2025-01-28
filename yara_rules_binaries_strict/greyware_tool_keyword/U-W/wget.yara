@@ -1,7 +1,7 @@
 rule wget
 {
     meta:
-        description = "Detection patterns for the tool 'wget' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'wget' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "wget"
@@ -10,10 +10,10 @@ rule wget
     strings:
         // Description: potential malicious command with wget (|sh)
         // Reference: https://x.com/CraigHRowland/status/1782938242108837896
-        $string1 = /wget\s\-O\s\-\s\-q\shttp\:\/\/.{0,100}\.jpg\|sh/ nocase ascii wide
+        $string1 = /wget\s\-O\s\-\s\-q\shttp\:\/\/.{0,100}\.jpg\|sh/
         // Description: potential malicious command with wget (|sh)
         // Reference: https://x.com/CraigHRowland/status/1782938242108837896
-        $string2 = /wget\s\-O\s\-\s\-q\shttps\:\/\/.{0,100}\.jpg\|sh/ nocase ascii wide
+        $string2 = /wget\s\-O\s\-\s\-q\shttps\:\/\/.{0,100}\.jpg\|sh/
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

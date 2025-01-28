@@ -1,7 +1,7 @@
 rule php
 {
     meta:
-        description = "Detection patterns for the tool 'php' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'php' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "php"
@@ -10,7 +10,7 @@ rule php
     strings:
         // Description: php reverse shell
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string1 = /php\s\-r\s.{0,100}\$sock\=fsockopen\(.{0,100}exec\(.{0,100}\/bin\/sh\s\-i\s\<\&3\s\>\&3\s2\>\&3/ nocase ascii wide
+        $string1 = /php\s\-r\s.{0,100}\$sock\=fsockopen\(.{0,100}exec\(.{0,100}\/bin\/sh\s\-i\s\<\&3\s\>\&3\s2\>\&3/
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

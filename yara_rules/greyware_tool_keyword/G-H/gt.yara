@@ -1,7 +1,7 @@
 rule gt
 {
     meta:
-        description = "Detection patterns for the tool 'gt' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'gt' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "gt"
@@ -13,22 +13,22 @@ rule gt
         $string1 = /\sgt\-win\-x86_64\.exe/ nocase ascii wide
         // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
         // Reference: https://github.com/ao-space/gt
-        $string2 = /\/gt\sserver\s\-c\s\.\/config\.yml/ nocase ascii wide
+        $string2 = /\/gt\sserver\s\-c\s\.\/config\.yml/
         // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
         // Reference: https://github.com/ao-space/gt
         $string3 = /\/gt\-win\-x86_64\.exe/ nocase ascii wide
         // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
         // Reference: https://github.com/ao-space/gt
-        $string4 = /\/opt\/config\/aonetwork\-client\.yml/ nocase ascii wide
+        $string4 = /\/opt\/config\/aonetwork\-client\.yml/
         // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
         // Reference: https://github.com/ao-space/gt
-        $string5 = /\/opt\/entrypoint\.sh/ nocase ascii wide
+        $string5 = /\/opt\/entrypoint\.sh/
         // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
         // Reference: https://github.com/ao-space/gt
         $string6 = /\/release\/gt\-win\-x86_64\.exe/ nocase ascii wide
         // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
         // Reference: https://github.com/ao-space/gt
-        $string7 = "/usr/bin/gt client-c " nocase ascii wide
+        $string7 = "/usr/bin/gt client-c "
         // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
         // Reference: https://github.com/ao-space/gt
         $string8 = /\/x86_64\-pc\-windows\-msvc\/release\/gt\.exe/ nocase ascii wide
@@ -82,10 +82,10 @@ rule gt
         $string24 = /github.{0,1000}ao\-space\/gt/ nocase ascii wide
         // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
         // Reference: https://github.com/ao-space/gt
-        $string25 = /linux\-amd64\-client\s\-local\shttp\:\/\/127\.0\.0\.1/ nocase ascii wide
+        $string25 = /linux\-amd64\-client\s\-local\shttp\:\/\/127\.0\.0\.1/
         // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
         // Reference: https://github.com/ao-space/gt
-        $string26 = "linux-amd64-server -addr " nocase ascii wide
+        $string26 = "linux-amd64-server -addr "
 
     condition:
         any of them

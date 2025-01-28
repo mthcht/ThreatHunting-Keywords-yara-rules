@@ -1,7 +1,7 @@
 rule XiebroC2
 {
     meta:
-        description = "Detection patterns for the tool 'XiebroC2' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'XiebroC2' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "XiebroC2"
@@ -10,7 +10,7 @@ rule XiebroC2
     strings:
         // Description: Command and control server - multi-person collaborative penetration testing graphical framework
         // Reference: https://github.com/INotGreen/XiebroC2
-        $string1 = "/TeamServer_linux " nocase ascii wide
+        $string1 = "/TeamServer_linux "
         // Description: Command and control server - multi-person collaborative penetration testing graphical framework
         // Reference: https://github.com/INotGreen/XiebroC2
         $string2 = /\/TeamServer_win\.exe/ nocase ascii wide
@@ -106,7 +106,7 @@ rule XiebroC2
         $string32 = "c79e051bb46302d29235045e7ce05e9806e52f7fdc0249a9593cd8fa01e11c35" nocase ascii wide
         // Description: Command and control server - multi-person collaborative penetration testing graphical framework
         // Reference: https://github.com/INotGreen/XiebroC2
-        $string33 = /chmod\s\+x\sXiebroC2MAc/ nocase ascii wide
+        $string33 = /chmod\s\+x\sXiebroC2MAc/
         // Description: Command and control server - multi-person collaborative penetration testing graphical framework
         // Reference: https://github.com/INotGreen/Xiebro-Plugins
         $string34 = "Convert-NetToLua -infile " nocase ascii wide

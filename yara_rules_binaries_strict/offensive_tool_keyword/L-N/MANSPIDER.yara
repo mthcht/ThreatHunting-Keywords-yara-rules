@@ -1,7 +1,7 @@
 rule MANSPIDER
 {
     meta:
-        description = "Detection patterns for the tool 'MANSPIDER' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'MANSPIDER' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "MANSPIDER"
@@ -28,19 +28,19 @@ rule MANSPIDER
         $string6 = " -f passw user admin account network login logon cred " nocase ascii wide
         // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
         // Reference: https://github.com/blacklanternsecurity/MANSPIDER
-        $string7 = /\/\.manspider\/logs/ nocase ascii wide
+        $string7 = /\/\.manspider\/logs/
         // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
         // Reference: https://github.com/blacklanternsecurity/MANSPIDER
-        $string8 = /\/\.manspider\/loot/ nocase ascii wide
+        $string8 = /\/\.manspider\/loot/
         // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
         // Reference: https://github.com/blacklanternsecurity/MANSPIDER
         $string9 = /\/MANSPIDER\.git/ nocase ascii wide
         // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
         // Reference: https://github.com/blacklanternsecurity/MANSPIDER
-        $string10 = /\/manspider_.{0,100}\.log/ nocase ascii wide
+        $string10 = /\/manspider_.{0,100}\.log/
         // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
         // Reference: https://github.com/blacklanternsecurity/MANSPIDER
-        $string11 = /\/tmp\/\.manspider/ nocase ascii wide
+        $string11 = /\/tmp\/\.manspider/
         // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
         // Reference: https://github.com/blacklanternsecurity/MANSPIDER
         $string12 = /\\manspider_.{0,100}\.log/ nocase ascii wide

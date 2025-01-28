@@ -1,7 +1,7 @@
 rule Ikeext_Privesc
 {
     meta:
-        description = "Detection patterns for the tool 'Ikeext-Privesc' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Ikeext-Privesc' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Ikeext-Privesc"

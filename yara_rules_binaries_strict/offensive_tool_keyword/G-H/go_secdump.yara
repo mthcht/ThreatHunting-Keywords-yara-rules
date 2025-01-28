@@ -1,7 +1,7 @@
 rule go_secdump
 {
     meta:
-        description = "Detection patterns for the tool 'go-secdump' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'go-secdump' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "go-secdump"
@@ -10,7 +10,7 @@ rule go_secdump
     strings:
         // Description: Tool to remotely dump secrets from the Windows registry
         // Reference: https://github.com/jfjallid/go-secdump
-        $string1 = /\.\/go\-secdump/ nocase ascii wide
+        $string1 = /\.\/go\-secdump/
         // Description: Tool to remotely dump secrets from the Windows registry
         // Reference: https://github.com/jfjallid/go-secdump
         $string2 = /\/go\-secdump\.git/ nocase ascii wide

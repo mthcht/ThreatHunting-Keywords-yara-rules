@@ -1,7 +1,7 @@
 rule telnet
 {
     meta:
-        description = "Detection patterns for the tool 'telnet' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'telnet' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "telnet"
@@ -13,7 +13,7 @@ rule telnet
         $string1 = /\&\&\stelnet\s.{0,100}\s2\>\&1\s\<\/dev\/console/ nocase ascii wide
         // Description: telnet reverse shell 
         // Reference: https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
-        $string2 = /telnet\s.{0,100}\s\|\s\/bin\/bash\s\|\stelnet\s/ nocase ascii wide
+        $string2 = /telnet\s.{0,100}\s\|\s\/bin\/bash\s\|\stelnet\s/
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

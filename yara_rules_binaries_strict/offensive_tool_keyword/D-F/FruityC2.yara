@@ -1,7 +1,7 @@
 rule FruityC2
 {
     meta:
-        description = "Detection patterns for the tool 'FruityC2' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'FruityC2' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "FruityC2"
@@ -16,16 +16,16 @@ rule FruityC2
         $string2 = " -ServiceName VulnSVC " nocase ascii wide
         // Description: ruityC2 is a post-exploitation framework based on the deployment of agents on compromised machines
         // Reference: https://github.com/xtr4nge/FruityC2
-        $string3 = /\/fruityc2\.crt/ nocase ascii wide
+        $string3 = /\/fruityc2\.crt/
         // Description: ruityC2 is a post-exploitation framework based on the deployment of agents on compromised machines
         // Reference: https://github.com/xtr4nge/FruityC2
         $string4 = /\/FruityC2\.git/ nocase ascii wide
         // Description: ruityC2 is a post-exploitation framework based on the deployment of agents on compromised machines
         // Reference: https://github.com/xtr4nge/FruityC2
-        $string5 = /\/fruityc2\.key/ nocase ascii wide
+        $string5 = /\/fruityc2\.key/
         // Description: ruityC2 is a post-exploitation framework based on the deployment of agents on compromised machines
         // Reference: https://github.com/xtr4nge/FruityC2
-        $string6 = /\/fruityc2\.pem/ nocase ascii wide
+        $string6 = /\/fruityc2\.pem/
         // Description: ruityC2 is a post-exploitation framework based on the deployment of agents on compromised machines
         // Reference: https://github.com/xtr4nge/FruityC2
         $string7 = /\/FruityC2\/archive\/master\.zip/ nocase ascii wide

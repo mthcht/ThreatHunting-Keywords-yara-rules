@@ -1,7 +1,7 @@
 rule dnscrypt
 {
     meta:
-        description = "Detection patterns for the tool 'dnscrypt' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'dnscrypt' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "dnscrypt"
@@ -19,13 +19,13 @@ rule dnscrypt
         $string3 = " restart dnscrypt-proxy" nocase ascii wide
         // Description: A flexible DNS proxy with support for modern encrypted DNS protocols such as DNSCrypt v2 - DNS-over-HTTPS - Anonymized DNSCrypt and ODoH (Oblivious DoH).
         // Reference: https://github.com/DNSCrypt/dnscrypt-proxy
-        $string4 = "/dnscrypt-proxy" nocase ascii wide
+        $string4 = "/dnscrypt-proxy"
         // Description: A flexible DNS proxy with support for modern encrypted DNS protocols such as DNSCrypt v2 - DNS-over-HTTPS - Anonymized DNSCrypt and ODoH (Oblivious DoH).
         // Reference: https://github.com/DNSCrypt/dnscrypt-proxy
         $string5 = /\/dnscrypt\-proxy\.git/ nocase ascii wide
         // Description: A flexible DNS proxy with support for modern encrypted DNS protocols such as DNSCrypt v2 - DNS-over-HTTPS - Anonymized DNSCrypt and ODoH (Oblivious DoH).
         // Reference: https://github.com/DNSCrypt/dnscrypt-proxy
-        $string6 = "/opt/dnscrypt-proxy" nocase ascii wide
+        $string6 = "/opt/dnscrypt-proxy"
         // Description: A flexible DNS proxy with support for modern encrypted DNS protocols such as DNSCrypt v2 - DNS-over-HTTPS - Anonymized DNSCrypt and ODoH (Oblivious DoH).
         // Reference: https://github.com/DNSCrypt/dnscrypt-proxy
         $string7 = /\\dnscrypt\-proxy/ nocase ascii wide
@@ -85,31 +85,31 @@ rule dnscrypt
         $string25 = /dnscrypt\-proxy\-freebsd_i386\-.{0,100}\.tar\.gz/ nocase ascii wide
         // Description: A flexible DNS proxy with support for modern encrypted DNS protocols such as DNSCrypt v2 - DNS-over-HTTPS - Anonymized DNSCrypt and ODoH (Oblivious DoH).
         // Reference: https://github.com/DNSCrypt/dnscrypt-proxy
-        $string26 = /dnscrypt\-proxy\-linux_arm\-.{0,100}\.tar\.gz/ nocase ascii wide
+        $string26 = /dnscrypt\-proxy\-linux_arm\-.{0,100}\.tar\.gz/
         // Description: A flexible DNS proxy with support for modern encrypted DNS protocols such as DNSCrypt v2 - DNS-over-HTTPS - Anonymized DNSCrypt and ODoH (Oblivious DoH).
         // Reference: https://github.com/DNSCrypt/dnscrypt-proxy
-        $string27 = /dnscrypt\-proxy\-linux_arm64\-.{0,100}\.tar\.gz/ nocase ascii wide
+        $string27 = /dnscrypt\-proxy\-linux_arm64\-.{0,100}\.tar\.gz/
         // Description: A flexible DNS proxy with support for modern encrypted DNS protocols such as DNSCrypt v2 - DNS-over-HTTPS - Anonymized DNSCrypt and ODoH (Oblivious DoH).
         // Reference: https://github.com/DNSCrypt/dnscrypt-proxy
-        $string28 = /dnscrypt\-proxy\-linux_i386\-.{0,100}\.tar\.gz/ nocase ascii wide
+        $string28 = /dnscrypt\-proxy\-linux_i386\-.{0,100}\.tar\.gz/
         // Description: A flexible DNS proxy with support for modern encrypted DNS protocols such as DNSCrypt v2 - DNS-over-HTTPS - Anonymized DNSCrypt and ODoH (Oblivious DoH).
         // Reference: https://github.com/DNSCrypt/dnscrypt-proxy
-        $string29 = /dnscrypt\-proxy\-linux_mips\-.{0,100}\.tar\.gz/ nocase ascii wide
+        $string29 = /dnscrypt\-proxy\-linux_mips\-.{0,100}\.tar\.gz/
         // Description: A flexible DNS proxy with support for modern encrypted DNS protocols such as DNSCrypt v2 - DNS-over-HTTPS - Anonymized DNSCrypt and ODoH (Oblivious DoH).
         // Reference: https://github.com/DNSCrypt/dnscrypt-proxy
-        $string30 = /dnscrypt\-proxy\-linux_mips64\-.{0,100}\.tar\.gz/ nocase ascii wide
+        $string30 = /dnscrypt\-proxy\-linux_mips64\-.{0,100}\.tar\.gz/
         // Description: A flexible DNS proxy with support for modern encrypted DNS protocols such as DNSCrypt v2 - DNS-over-HTTPS - Anonymized DNSCrypt and ODoH (Oblivious DoH).
         // Reference: https://github.com/DNSCrypt/dnscrypt-proxy
-        $string31 = /dnscrypt\-proxy\-linux_mips64le\-.{0,100}\.tar\.gz/ nocase ascii wide
+        $string31 = /dnscrypt\-proxy\-linux_mips64le\-.{0,100}\.tar\.gz/
         // Description: A flexible DNS proxy with support for modern encrypted DNS protocols such as DNSCrypt v2 - DNS-over-HTTPS - Anonymized DNSCrypt and ODoH (Oblivious DoH).
         // Reference: https://github.com/DNSCrypt/dnscrypt-proxy
-        $string32 = /dnscrypt\-proxy\-linux_mipsle\-.{0,100}\.tar\.gz/ nocase ascii wide
+        $string32 = /dnscrypt\-proxy\-linux_mipsle\-.{0,100}\.tar\.gz/
         // Description: A flexible DNS proxy with support for modern encrypted DNS protocols such as DNSCrypt v2 - DNS-over-HTTPS - Anonymized DNSCrypt and ODoH (Oblivious DoH).
         // Reference: https://github.com/DNSCrypt/dnscrypt-proxy
-        $string33 = /dnscrypt\-proxy\-linux_riscv64\-.{0,100}\.tar\.gz/ nocase ascii wide
+        $string33 = /dnscrypt\-proxy\-linux_riscv64\-.{0,100}\.tar\.gz/
         // Description: A flexible DNS proxy with support for modern encrypted DNS protocols such as DNSCrypt v2 - DNS-over-HTTPS - Anonymized DNSCrypt and ODoH (Oblivious DoH).
         // Reference: https://github.com/DNSCrypt/dnscrypt-proxy
-        $string34 = /dnscrypt\-proxy\-linux_x86_64\-.{0,100}\.tar\.gz/ nocase ascii wide
+        $string34 = /dnscrypt\-proxy\-linux_x86_64\-.{0,100}\.tar\.gz/
         // Description: A flexible DNS proxy with support for modern encrypted DNS protocols such as DNSCrypt v2 - DNS-over-HTTPS - Anonymized DNSCrypt and ODoH (Oblivious DoH).
         // Reference: https://github.com/DNSCrypt/dnscrypt-proxy
         $string35 = /dnscrypt\-proxy\-macos_arm64\-.{0,100}\.zip/ nocase ascii wide

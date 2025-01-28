@@ -1,7 +1,7 @@
 rule Dr0p1t_Framework
 {
     meta:
-        description = "Detection patterns for the tool 'Dr0p1t-Framework' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Dr0p1t-Framework' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Dr0p1t-Framework"

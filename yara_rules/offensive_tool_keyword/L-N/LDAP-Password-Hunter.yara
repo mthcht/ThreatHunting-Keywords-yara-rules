@@ -1,7 +1,7 @@
 rule LDAP_Password_Hunter
 {
     meta:
-        description = "Detection patterns for the tool 'LDAP-Password-Hunter' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'LDAP-Password-Hunter' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "LDAP-Password-Hunter"
@@ -67,10 +67,10 @@ rule LDAP_Password_Hunter
         $string19 = /password\|pwd\|creds\|cred\|secret\|userpw/ nocase ascii wide
         // Description: LDAP Password Hunter is a tool which wraps features of getTGT.py (Impacket) and ldapsearch in order to look up for password stored in LDAP database
         // Reference: https://github.com/oldboy21/LDAP-Password-Hunter
-        $string20 = /Please\sbe\ssure\simpacket\sand\sldapsearch\sare\sinstalled\sand\syour\s\/etc\/krb5\.conf\sfile\sis\sclean/ nocase ascii wide
+        $string20 = /Please\sbe\ssure\simpacket\sand\sldapsearch\sare\sinstalled\sand\syour\s\/etc\/krb5\.conf\sfile\sis\sclean/
         // Description: Password Hunter in Active Directory
         // Reference: https://github.com/oldboy21/LDAP-Password-Hunter
-        $string21 = /Please\sbe\ssure\simpacket\sand\sldapsearch\sare\sinstalled\sand\syour\s\/etc\/krb5\.conf/ nocase ascii wide
+        $string21 = /Please\sbe\ssure\simpacket\sand\sldapsearch\sare\sinstalled\sand\syour\s\/etc\/krb5\.conf/
         // Description: LDAP Password Hunter is a tool which wraps features of getTGT.py (Impacket) and ldapsearch in order to look up for password stored in LDAP database
         // Reference: https://github.com/oldboy21/LDAP-Password-Hunter
         $string22 = "Please be sure impacket is installed in your system" nocase ascii wide

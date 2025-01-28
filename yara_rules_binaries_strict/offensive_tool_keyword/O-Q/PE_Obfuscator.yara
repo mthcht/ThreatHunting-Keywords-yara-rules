@@ -1,7 +1,7 @@
 rule PE_Obfuscator
 {
     meta:
-        description = "Detection patterns for the tool 'PE-Obfuscator' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'PE-Obfuscator' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "PE-Obfuscator"

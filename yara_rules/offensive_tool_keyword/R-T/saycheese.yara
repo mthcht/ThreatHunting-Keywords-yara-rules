@@ -1,7 +1,7 @@
 rule saycheese
 {
     meta:
-        description = "Detection patterns for the tool 'saycheese' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'saycheese' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "saycheese"
@@ -13,7 +13,7 @@ rule saycheese
         $string1 = /\ssaycheese\.sh/ nocase ascii wide
         // Description: Grab target's webcam shots by link
         // Reference: https://github.com/hangetzzu/saycheese
-        $string2 = "/ngrok http 3333 > /dev/null 2>&1" nocase ascii wide
+        $string2 = "/ngrok http 3333 > /dev/null 2>&1"
         // Description: Grab target's webcam shots by link
         // Reference: https://github.com/hangetzzu/saycheese
         $string3 = /\/saycheese\.html/ nocase ascii wide
@@ -34,7 +34,7 @@ rule saycheese
         $string8 = /ssh\s\-o\sStrictHostKeyChecking\=no\s\-o\sServerAliveInterval\=60\s\-R\s.{0,1000}serveo\.net/ nocase ascii wide
         // Description: Grab target's webcam shots by link
         // Reference: https://github.com/hangetzzu/saycheese
-        $string9 = "thelinuxchoice/saycheese" nocase ascii wide
+        $string9 = "thelinuxchoice/saycheese"
         // Description: Grab target's webcam shots by link
         // Reference: https://github.com/hangetzzu/saycheese
         $string10 = /url\:\s\'forwarding_link\/post\.php\'\,/ nocase ascii wide

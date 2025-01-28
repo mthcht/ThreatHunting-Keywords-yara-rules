@@ -1,7 +1,7 @@
 rule skymen_info
 {
     meta:
-        description = "Detection patterns for the tool 'skymen.info' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'skymen.info' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "skymen.info"

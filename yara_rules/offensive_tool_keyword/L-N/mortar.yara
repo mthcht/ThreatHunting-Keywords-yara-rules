@@ -1,7 +1,7 @@
 rule mortar
 {
     meta:
-        description = "Detection patterns for the tool 'mortar' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'mortar' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "mortar"
@@ -10,7 +10,7 @@ rule mortar
     strings:
         // Description: evasion technique to defeat and divert detection and prevention of security products (AV/EDR/XDR)
         // Reference: https://github.com/0xsp-SRD/mortar
-        $string1 = /\.\/encryptor\s\-f\s.{0,1000}\.exe/ nocase ascii wide
+        $string1 = /\.\/encryptor\s\-f\s.{0,1000}\.exe/
         // Description: red teaming evasion technique to defeat and divert detection and prevention of security products.Mortar Loader performs encryption and decryption of selected binary inside the memory streams and execute it directly with out writing any malicious indicator into the hard-drive. Mortar is able to bypass modern anti-virus products and advanced XDR solutions
         // Reference: https://github.com/0xsp-SRD/mortar
         $string2 = /\/mimikatz\.enc/ nocase ascii wide

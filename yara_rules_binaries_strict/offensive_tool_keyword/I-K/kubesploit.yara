@@ -1,7 +1,7 @@
 rule kubesploit
 {
     meta:
-        description = "Detection patterns for the tool 'kubesploit' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'kubesploit' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "kubesploit"
@@ -61,19 +61,19 @@ rule kubesploit
         $string17 = "Kubesploit Agent" nocase ascii wide
         // Description: Kubesploit is a cross-platform post-exploitation HTTP/2 Command & Control server and agent written in Golang
         // Reference: https://github.com/cyberark/kubesploit
-        $string18 = "kubesploitAgent-Darwin" nocase ascii wide
+        $string18 = "kubesploitAgent-Darwin"
         // Description: Kubesploit is a cross-platform post-exploitation HTTP/2 Command & Control server and agent written in Golang
         // Reference: https://github.com/cyberark/kubesploit
-        $string19 = "kubesploitAgent-Linux" nocase ascii wide
+        $string19 = "kubesploitAgent-Linux"
         // Description: Kubesploit is a cross-platform post-exploitation HTTP/2 Command & Control server and agent written in Golang
         // Reference: https://github.com/cyberark/kubesploit
         $string20 = "kubesploit-main" nocase ascii wide
         // Description: Kubesploit is a cross-platform post-exploitation HTTP/2 Command & Control server and agent written in Golang
         // Reference: https://github.com/cyberark/kubesploit
-        $string21 = "kubesploitServer-Darwin" nocase ascii wide
+        $string21 = "kubesploitServer-Darwin"
         // Description: Kubesploit is a cross-platform post-exploitation HTTP/2 Command & Control server and agent written in Golang
         // Reference: https://github.com/cyberark/kubesploit
-        $string22 = "kubesploitServer-Linux" nocase ascii wide
+        $string22 = "kubesploitServer-Linux"
         // Description: Kubesploit is a cross-platform post-exploitation HTTP/2 Command & Control server and agent written in Golang
         // Reference: https://github.com/cyberark/kubesploit
         $string23 = /M\.i\.m\.i\.k\.a\.t\.z/ nocase ascii wide

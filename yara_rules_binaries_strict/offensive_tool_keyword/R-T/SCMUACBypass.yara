@@ -1,7 +1,7 @@
 rule SCMUACBypass
 {
     meta:
-        description = "Detection patterns for the tool 'SCMUACBypass' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'SCMUACBypass' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "SCMUACBypass"
@@ -17,12 +17,12 @@ rule SCMUACBypass
         // Description: SCM UAC Bypass
         // Reference: https://github.com/rasta-mouse/SCMUACBypass
         $string3 = /\/scmuacbypass\.cpp/ nocase ascii wide
-        // Description: SCM UAC Bypass
-        // Reference: https://github.com/rasta-mouse/SCMUACBypass
-        $string4 = /\/scmuacbypass\.exe/ nocase ascii wide
         // Description: executables for penetration testing Windows Active Directory environments
         // Reference: https://github.com/jakobfriedl/precompiled-binaries
-        $string5 = /\/SCMUACBypass\.exe/ nocase ascii wide
+        $string4 = /\/SCMUACBypass\.exe/ nocase ascii wide
+        // Description: SCM UAC Bypass
+        // Reference: https://github.com/rasta-mouse/SCMUACBypass
+        $string5 = /\/scmuacbypass\.exe/ nocase ascii wide
         // Description: SCM UAC Bypass
         // Reference: https://github.com/rasta-mouse/SCMUACBypass
         $string6 = /\/SCMUACBypass\.git/ nocase ascii wide

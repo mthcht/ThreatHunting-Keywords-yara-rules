@@ -1,7 +1,7 @@
 rule dcomhijack
 {
     meta:
-        description = "Detection patterns for the tool 'dcomhijack' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'dcomhijack' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "dcomhijack"
@@ -11,10 +11,10 @@ rule dcomhijack
         // Description: Lateral Movement Using DCOM with impacket and DLL Hijacking
         // Reference: https://github.com/WKL-Sec/dcomhijack
         $string1 = /\/dcomhijack\.cna/ nocase ascii wide
-        // Description: Lateral Movement Using DCOM with impacket and DLL Hijacking
+        // Description: Lateral Movement Using DCOM and DLL Hijacking
         // Reference: https://github.com/WKL-Sec/dcomhijack
         $string2 = /\/dcomhijack\.git/ nocase ascii wide
-        // Description: Lateral Movement Using DCOM and DLL Hijacking
+        // Description: Lateral Movement Using DCOM with impacket and DLL Hijacking
         // Reference: https://github.com/WKL-Sec/dcomhijack
         $string3 = /\/dcomhijack\.git/ nocase ascii wide
         // Description: Lateral Movement Using DCOM with impacket and DLL Hijacking

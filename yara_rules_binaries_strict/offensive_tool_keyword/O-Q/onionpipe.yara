@@ -1,7 +1,7 @@
 rule onionpipe
 {
     meta:
-        description = "Detection patterns for the tool 'onionpipe' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'onionpipe' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "onionpipe"
@@ -28,19 +28,19 @@ rule onionpipe
         $string6 = "/onionpipe/releases/latest" nocase ascii wide
         // Description: onionpipe forwards ports on the local host to remote Onion addresses as Tor hidden services and vice-versa.
         // Reference: https://github.com/cmars/onionpipe
-        $string7 = "/onionpipe:main" nocase ascii wide
+        $string7 = "/onionpipe:main"
         // Description: onionpipe forwards ports on the local host to remote Onion addresses as Tor hidden services and vice-versa.
         // Reference: https://github.com/cmars/onionpipe
-        $string8 = "/usr/share/keyrings/tor-archive-keyring" nocase ascii wide
+        $string8 = "/usr/share/keyrings/tor-archive-keyring"
         // Description: onionpipe forwards ports on the local host to remote Onion addresses as Tor hidden services and vice-versa.
         // Reference: https://github.com/cmars/onionpipe
-        $string9 = /build_onionpipe\.bash/ nocase ascii wide
+        $string9 = /build_onionpipe\.bash/
         // Description: onionpipe forwards ports on the local host to remote Onion addresses as Tor hidden services and vice-versa.
         // Reference: https://github.com/cmars/onionpipe
-        $string10 = /build_tor_darwin\.bash/ nocase ascii wide
+        $string10 = /build_tor_darwin\.bash/
         // Description: onionpipe forwards ports on the local host to remote Onion addresses as Tor hidden services and vice-versa.
         // Reference: https://github.com/cmars/onionpipe
-        $string11 = /build_tor_debian\.bash/ nocase ascii wide
+        $string11 = /build_tor_debian\.bash/
         // Description: onionpipe forwards ports on the local host to remote Onion addresses as Tor hidden services and vice-versa.
         // Reference: https://github.com/cmars/onionpipe
         $string12 = "cmars/onionpipe" nocase ascii wide
@@ -79,10 +79,10 @@ rule onionpipe
         $string23 = "onionpipe/tor" nocase ascii wide
         // Description: onionpipe forwards ports on the local host to remote Onion addresses as Tor hidden services and vice-versa.
         // Reference: https://github.com/cmars/onionpipe
-        $string24 = "onionpipe-darwin-amd64-static" nocase ascii wide
+        $string24 = "onionpipe-darwin-amd64-static"
         // Description: onionpipe forwards ports on the local host to remote Onion addresses as Tor hidden services and vice-versa.
         // Reference: https://github.com/cmars/onionpipe
-        $string25 = "onionpipe-linux-amd64-static" nocase ascii wide
+        $string25 = "onionpipe-linux-amd64-static"
         // Description: onionpipe forwards ports on the local host to remote Onion addresses as Tor hidden services and vice-versa.
         // Reference: https://github.com/cmars/onionpipe
         $string26 = /sd6aq2r6jvuoeisrudq7jbqufjh6nck5buuzjmgalicgwrobgfj4lkqd\.onion/ nocase ascii wide

@@ -1,7 +1,7 @@
 rule powerview
 {
     meta:
-        description = "Detection patterns for the tool 'powerview' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'powerview' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "powerview"
@@ -16,34 +16,19 @@ rule powerview
         $string2 = /HackTool\.PowerShell\.PowerSploit/ nocase ascii wide
         // Description: PowerView is a PowerShell tool to gain network situational awareness on Windows domains
         // Reference: https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1
-        $string3 = /HackTool\.PowerShell\.PowerSploit/ nocase ascii wide
+        $string3 = /HackTool\.PowerView/ nocase ascii wide
         // Description: PowerView is a PowerShell tool to gain network situational awareness on Windows domains
         // Reference: https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1
-        $string4 = /HackTool\.PowerView/ nocase ascii wide
+        $string4 = /HackTool\.PS1\.PowerSploit/ nocase ascii wide
         // Description: PowerView is a PowerShell tool to gain network situational awareness on Windows domains
         // Reference: https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1
-        $string5 = /HackTool\.PS1\.PowerSploit/ nocase ascii wide
+        $string5 = "HackTool:PowerShell/PowerView" nocase ascii wide
         // Description: PowerView is a PowerShell tool to gain network situational awareness on Windows domains
         // Reference: https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1
-        $string6 = /HackTool\.PS1\.PowerSploit/ nocase ascii wide
+        $string6 = "HTool-EmpireAgent" nocase ascii wide
         // Description: PowerView is a PowerShell tool to gain network situational awareness on Windows domains
         // Reference: https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1
-        $string7 = "HackTool:PowerShell/PowerView" nocase ascii wide
-        // Description: PowerView is a PowerShell tool to gain network situational awareness on Windows domains
-        // Reference: https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1
-        $string8 = "HackTool:PowerShell/PowerView" nocase ascii wide
-        // Description: PowerView is a PowerShell tool to gain network situational awareness on Windows domains
-        // Reference: https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1
-        $string9 = "HTool-EmpireAgent" nocase ascii wide
-        // Description: PowerView is a PowerShell tool to gain network situational awareness on Windows domains
-        // Reference: https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1
-        $string10 = "HTool-EmpireAgent" nocase ascii wide
-        // Description: PowerView is a PowerShell tool to gain network situational awareness on Windows domains
-        // Reference: https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1
-        $string11 = /Trojan\.HackTool\.PowerSploit/ nocase ascii wide
-        // Description: PowerView is a PowerShell tool to gain network situational awareness on Windows domains
-        // Reference: https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1
-        $string12 = /Trojan\.HackTool\.PowerSploit/ nocase ascii wide
+        $string7 = /Trojan\.HackTool\.PowerSploit/ nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

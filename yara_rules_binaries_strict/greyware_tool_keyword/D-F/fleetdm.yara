@@ -1,7 +1,7 @@
 rule fleetdm
 {
     meta:
-        description = "Detection patterns for the tool 'fleetdm' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'fleetdm' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "fleetdm"
@@ -16,7 +16,7 @@ rule fleetdm
         $string2 = /\.dev1\.fleetdeck\.io/ nocase ascii wide
         // Description: Manage everything in one place
         // Reference: https://github.com/fleetdm/fleet
-        $string3 = /\/\.fleetctl\/fleetctl/ nocase ascii wide
+        $string3 = /\/\.fleetctl\/fleetctl/
         // Description: Manage everything in one place
         // Reference: https://github.com/fleetdm/fleet
         $string4 = /\/api\/latest\/fleet\/mdm\/bootstrap\?token\=/ nocase ascii wide
@@ -25,10 +25,10 @@ rule fleetdm
         $string5 = "/api/v1/fleet/mdm/sso/callback" nocase ascii wide
         // Description: Manage everything in one place
         // Reference: https://github.com/fleetdm/fleet
-        $string6 = /\/etc\/fleet\/fleet\.env/ nocase ascii wide
+        $string6 = /\/etc\/fleet\/fleet\.env/
         // Description: Manage everything in one place
         // Reference: https://github.com/fleetdm/fleet
-        $string7 = /\/fleet_v.{0,100}_linux\.tar\.gz/ nocase ascii wide
+        $string7 = /\/fleet_v.{0,100}_linux\.tar\.gz/
         // Description: Manage everything in one place
         // Reference: https://github.com/fleetdm/fleet
         $string8 = /\/fleetd\.crx/ nocase ascii wide
@@ -43,7 +43,7 @@ rule fleetdm
         $string11 = /\/install\-fleetctl\.sh/ nocase ascii wide
         // Description: Manage everything in one place
         // Reference: https://github.com/fleetdm/fleet
-        $string12 = /\/tmp\/fleet_remove_log\.txt/ nocase ascii wide
+        $string12 = /\/tmp\/fleet_remove_log\.txt/
         // Description: Manage everything in one place
         // Reference: https://github.com/fleetdm/fleet
         $string13 = ":9001/proxy/mdmserver1/account" nocase ascii wide

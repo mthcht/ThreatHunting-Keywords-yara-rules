@@ -1,7 +1,7 @@
 rule webshell
 {
     meta:
-        description = "Detection patterns for the tool 'webshell' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'webshell' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "webshell"
@@ -55,49 +55,49 @@ rule webshell
         $string15 = /\.\.\\\.\.\\\.\.\\\.\.\\\.\.\\\.\.\\\.\.\\windows\\system32\\cmd\.exe\s\/c\s/ nocase ascii wide
         // Description: A collection of webshell
         // Reference: https://github.com/Peaky-XD/webshell
-        $string16 = /\.php\?cmd\=cat\+\/etc\/passwd/ nocase ascii wide
+        $string16 = /\.php\?cmd\=cat\+\/etc\/passwd/
         // Description: collection of webshell - observed used by famous webshells
         // Reference: https://github.com/tennc/webshell
-        $string17 = /\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/etc\/apache\/conf\/httpd\.conf/ nocase ascii wide
+        $string17 = /\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/etc\/apache\/conf\/httpd\.conf/
         // Description: collection of webshell - observed used by famous webshells
         // Reference: https://github.com/tennc/webshell
-        $string18 = /\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/etc\/apache2\/conf\/httpd\.conf/ nocase ascii wide
+        $string18 = /\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/etc\/apache2\/conf\/httpd\.conf/
         // Description: collection of webshell - observed used by famous webshells
         // Reference: https://github.com/tennc/webshell
-        $string19 = /\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/etc\/http\/conf\/httpd\.conf/ nocase ascii wide
+        $string19 = /\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/etc\/http\/conf\/httpd\.conf/
         // Description: collection of webshell - observed used by famous webshells
         // Reference: https://github.com/tennc/webshell
-        $string20 = /\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/etc\/http\/httpd\.conf/ nocase ascii wide
+        $string20 = /\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/etc\/http\/httpd\.conf/
         // Description: collection of webshell - observed used by famous webshells
         // Reference: https://github.com/tennc/webshell
-        $string21 = /\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/etc\/httpd\.conf/ nocase ascii wide
+        $string21 = /\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/etc\/httpd\.conf/
         // Description: collection of webshell - observed used by famous webshells
         // Reference: https://github.com/tennc/webshell
-        $string22 = /\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/etc\/httpd\/conf\/httpd\.conf/ nocase ascii wide
+        $string22 = /\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/etc\/httpd\/conf\/httpd\.conf/
         // Description: collection of webshell - observed used by famous webshells
         // Reference: https://github.com/tennc/webshell
-        $string23 = /\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/etc\/httpd\/httpd\.conf/ nocase ascii wide
+        $string23 = /\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/etc\/httpd\/httpd\.conf/
         // Description: collection of webshell - observed used by famous webshells
         // Reference: https://github.com/tennc/webshell
-        $string24 = /\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/usr\/apache\/conf\/httpd\.conf/ nocase ascii wide
+        $string24 = /\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/usr\/apache\/conf\/httpd\.conf/
         // Description: collection of webshell - observed used by famous webshells
         // Reference: https://github.com/tennc/webshell
-        $string25 = /\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/usr\/apache2\/conf\/httpd\.conf/ nocase ascii wide
+        $string25 = /\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/usr\/apache2\/conf\/httpd\.conf/
         // Description: collection of webshell - observed used by famous webshells
         // Reference: https://github.com/tennc/webshell
-        $string26 = /\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/usr\/local\/etc\/apache2\/conf\/httpd\.conf/ nocase ascii wide
+        $string26 = /\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/usr\/local\/etc\/apache2\/conf\/httpd\.conf/
         // Description: collection of webshell - observed used by famous webshells
         // Reference: https://github.com/tennc/webshell
-        $string27 = /\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/usr\/local\/etc\/httpd\/conf\/httpd\.conf/ nocase ascii wide
+        $string27 = /\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/usr\/local\/etc\/httpd\/conf\/httpd\.conf/
         // Description: collection of webshell - observed used by famous webshells
         // Reference: https://github.com/tennc/webshell
-        $string28 = /\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/Volumes\/webBackup\/opt\/apache2\/conf\/httpd\.conf/ nocase ascii wide
+        $string28 = /\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/Volumes\/webBackup\/opt\/apache2\/conf\/httpd\.conf/
         // Description: collection of webshell - observed used by famous webshells
         // Reference: https://github.com/tennc/webshell
-        $string29 = /\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/Volumes\/webBackup\/private\/etc\/httpd\/httpd\.conf\.default/ nocase ascii wide
+        $string29 = /\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/Volumes\/webBackup\/private\/etc\/httpd\/httpd\.conf\.default/
         // Description: collection of webshell - observed used by famous webshells
         // Reference: https://github.com/tennc/webshell
-        $string30 = /\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/Volumes\/webBackup\/private\/etc\/httpd\/httpd\.conf/ nocase ascii wide
+        $string30 = /\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/Volumes\/webBackup\/private\/etc\/httpd\/httpd\.conf/
         // Description: collection of webshell - observed used by famous webshells
         // Reference: https://github.com/tennc/webshell
         $string31 = /\/1n73ction\.php/ nocase ascii wide
@@ -337,7 +337,7 @@ rule webshell
         $string109 = /\/SweetPotato\.dll/ nocase ascii wide
         // Description: collection of webshell - observed used by famous webshells
         // Reference: https://github.com/tennc/webshell
-        $string110 = "/tmp/angel_bc " nocase ascii wide
+        $string110 = "/tmp/angel_bc "
         // Description: collection of webshell - observed used by famous webshells
         // Reference: https://github.com/tennc/webshell
         $string111 = /\/Webshell_Generate\-1\.1\.jar/ nocase ascii wide
@@ -358,7 +358,7 @@ rule webshell
         $string116 = /\/WinX\sShell\.php/ nocase ascii wide
         // Description: collection of webshell - observed used by famous webshells
         // Reference: https://github.com/tennc/webshell
-        $string117 = /\/Worse\sLinux\sShell\.php/ nocase ascii wide
+        $string117 = /\/Worse\sLinux\sShell\.php/
         // Description: collection of webshell - observed used by famous webshells
         // Reference: https://github.com/tennc/webshell
         $string118 = ":ddos-udp - started udp flood" nocase ascii wide
@@ -2752,43 +2752,43 @@ rule webshell
         $string914 = "ff54f9ababc26c1c7acdbf9e133e48bc60860371ae8f36997d6a345a1db539e1" nocase ascii wide
         // Description: collection of webshell - observed used by famous webshells
         // Reference: https://github.com/tennc/webshell
-        $string915 = /find\s\.\s\-type\sf\s\-name\s\.bash_history/ nocase ascii wide
+        $string915 = /find\s\.\s\-type\sf\s\-name\s\.bash_history/
         // Description: collection of webshell - observed used by famous webshells
         // Reference: https://github.com/tennc/webshell
-        $string916 = /find\s\.\s\-type\sf\s\-name\s\.fetchmailrc/ nocase ascii wide
+        $string916 = /find\s\.\s\-type\sf\s\-name\s\.fetchmailrc/
         // Description: collection of webshell - observed used by famous webshells
         // Reference: https://github.com/tennc/webshell
-        $string917 = /find\s\.\s\-type\sf\s\-name\s\.htpasswd/ nocase ascii wide
+        $string917 = /find\s\.\s\-type\sf\s\-name\s\.htpasswd/
         // Description: collection of webshell - observed used by famous webshells
         // Reference: https://github.com/tennc/webshell
-        $string918 = /find\s\.\s\-type\sf\s\-name\sservice\.pwd/ nocase ascii wide
+        $string918 = /find\s\.\s\-type\sf\s\-name\sservice\.pwd/
         // Description: collection of webshell - observed used by famous webshells
         // Reference: https://github.com/tennc/webshell
-        $string919 = /find\s\.\s\-type\sf\s\-perm\s\-02000\s\-ls/ nocase ascii wide
+        $string919 = /find\s\.\s\-type\sf\s\-perm\s\-02000\s\-ls/
         // Description: collection of webshell - observed used by famous webshells
         // Reference: https://github.com/tennc/webshell
-        $string920 = /find\s\.\s\-type\sf\s\-perm\s\-04000\s\-ls/ nocase ascii wide
+        $string920 = /find\s\.\s\-type\sf\s\-perm\s\-04000\s\-ls/
         // Description: collection of webshell - observed used by famous webshells
         // Reference: https://github.com/tennc/webshell
-        $string921 = /find\s\/\s\-type\sf\s\-name\s\.bash_history/ nocase ascii wide
+        $string921 = /find\s\/\s\-type\sf\s\-name\s\.bash_history/
         // Description: collection of webshell - observed used by famous webshells
         // Reference: https://github.com/tennc/webshell
-        $string922 = /find\s\/\s\-type\sf\s\-name\s\.fetchmailrc/ nocase ascii wide
+        $string922 = /find\s\/\s\-type\sf\s\-name\s\.fetchmailrc/
         // Description: collection of webshell - observed used by famous webshells
         // Reference: https://github.com/tennc/webshell
-        $string923 = /find\s\/\s\-type\sf\s\-name\s\.htpasswd/ nocase ascii wide
+        $string923 = /find\s\/\s\-type\sf\s\-name\s\.htpasswd/
         // Description: collection of webshell - observed used by famous webshells
         // Reference: https://github.com/tennc/webshell
-        $string924 = /find\s\/\s\-type\sf\s\-name\sconfig\.inc\.php/ nocase ascii wide
+        $string924 = /find\s\/\s\-type\sf\s\-name\sconfig\.inc\.php/
         // Description: collection of webshell - observed used by famous webshells
         // Reference: https://github.com/tennc/webshell
-        $string925 = /find\s\/\s\-type\sf\s\-name\sservice\.pwd/ nocase ascii wide
+        $string925 = /find\s\/\s\-type\sf\s\-name\sservice\.pwd/
         // Description: collection of webshell - observed used by famous webshells
         // Reference: https://github.com/tennc/webshell
-        $string926 = "find / -type f -perm -02000 -ls" nocase ascii wide
+        $string926 = "find / -type f -perm -02000 -ls"
         // Description: collection of webshell - observed used by famous webshells
         // Reference: https://github.com/tennc/webshell
-        $string927 = "find / -type f -perm -04000 -ls" nocase ascii wide
+        $string927 = "find / -type f -perm -04000 -ls"
         // Description: collection of webshell - observed used by famous webshells
         // Reference: https://github.com/tennc/webshell
         $string928 = /FromBase64String\(\\"UmVxdWVzdC5JdGVtWyJ6Il0\=\\"/ nocase ascii wide

@@ -1,7 +1,7 @@
 rule ipscan
 {
     meta:
-        description = "Detection patterns for the tool 'ipscan' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'ipscan' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "ipscan"
@@ -22,13 +22,13 @@ rule ipscan
         $string4 = /\/ipscan\.git/ nocase ascii wide
         // Description: Angry IP Scanner - fast and friendly network scanner - abused by a lot ransomware actors
         // Reference: https://github.com/angryip/ipscan
-        $string5 = /\/ipscan_.{0,100}_amd64\.deb/ nocase ascii wide
+        $string5 = /\/ipscan_.{0,100}_amd64\.deb/
         // Description: Angry IP Scanner - fast and friendly network scanner - abused by a lot ransomware actors
         // Reference: https://github.com/angryip/ipscan
         $string6 = /\/ipscan2\-binary\/.{0,100}\.exe/ nocase ascii wide
         // Description: Angry IP Scanner - fast and friendly network scanner - abused by a lot ransomware actors
         // Reference: https://github.com/angryip/ipscan
-        $string7 = /\/ipscan\-any\-.{0,100}\.jar/ nocase ascii wide
+        $string7 = /\/ipscan\-any\-.{0,100}\.jar/
         // Description: Angry IP Scanner - fast and friendly network scanner - abused by a lot ransomware actors
         // Reference: https://github.com/angryip/ipscan
         $string8 = /\\Angry\sIP\sScanner\.app/ nocase ascii wide

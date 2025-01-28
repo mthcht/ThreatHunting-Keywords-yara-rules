@@ -1,7 +1,7 @@
 rule tacticalrmm
 {
     meta:
-        description = "Detection patterns for the tool 'tacticalrmm' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'tacticalrmm' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "tacticalrmm"
@@ -28,13 +28,13 @@ rule tacticalrmm
         $string6 = /\/rmm\-installer\.ps1/ nocase ascii wide
         // Description: A remote monitoring & management tool
         // Reference: https://github.com/amidaware/tacticalrmm
-        $string7 = /\/tacticalagent\.log/ nocase ascii wide
+        $string7 = /\/tacticalagent\.log/
         // Description: A remote monitoring & management tool
         // Reference: https://github.com/amidaware/tacticalrmm
         $string8 = /\/tacticalagent\-v.{0,1000}\-.{0,1000}\.exe/ nocase ascii wide
         // Description: A remote monitoring & management tool
         // Reference: https://github.com/amidaware/tacticalrmm
-        $string9 = /\/tacticalagent\-v.{0,1000}\-linux\-arm\.exe/ nocase ascii wide
+        $string9 = /\/tacticalagent\-v.{0,1000}\-linux\-arm\.exe/
         // Description: A remote monitoring & management tool
         // Reference: https://github.com/amidaware/tacticalrmm
         $string10 = /\/tacticalagent\-v.{0,1000}\-windows\-amd64\.exe/ nocase ascii wide
@@ -103,7 +103,7 @@ rule tacticalrmm
         $string31 = "su - tactical" nocase ascii wide
         // Description: A remote monitoring & management tool
         // Reference: https://github.com/amidaware/tacticalrmm
-        $string32 = "sudo -s /bin/bash tactical" nocase ascii wide
+        $string32 = "sudo -s /bin/bash tactical"
         // Description: A remote monitoring & management tool
         // Reference: https://github.com/amidaware/tacticalrmm
         $string33 = /systemctl\s.{0,1000}\srmm\.service/ nocase ascii wide

@@ -1,7 +1,7 @@
 rule _0d1n
 {
     meta:
-        description = "Detection patterns for the tool '0d1n' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool '0d1n' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "0d1n"
@@ -16,7 +16,7 @@ rule _0d1n
         $string2 = "/0d1n_view" nocase ascii wide
         // Description: Tool for automating customized attacks against web applications. Fully made in C language with pthreads it has fast performance.
         // Reference: https://github.com/CoolerVoid/0d1n
-        $string3 = "/bin/0d1n" nocase ascii wide
+        $string3 = "/bin/0d1n"
         // Description: Tool for automating customized attacks against web applications. Fully made in C language with pthreads it has fast performance.
         // Reference: https://github.com/CoolerVoid/0d1n
         $string4 = /\/crlfinjection\.txt/ nocase ascii wide

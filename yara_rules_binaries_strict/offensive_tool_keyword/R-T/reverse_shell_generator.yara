@@ -1,7 +1,7 @@
 rule reverse_shell_generator
 {
     meta:
-        description = "Detection patterns for the tool 'reverse-shell-generator' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'reverse-shell-generator' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "reverse-shell-generator"
@@ -28,10 +28,10 @@ rule reverse_shell_generator
         $string6 = /\.revshells\.com/ nocase ascii wide
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
-        $string7 = /\/ncat\s.{0,100}\s\-e\ssh/ nocase ascii wide
+        $string7 = /\/ncat\s.{0,100}\s\-e\ssh/
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
-        $string8 = "/Reverse Shell Tab -->" nocase ascii wide
+        $string8 = "/Reverse Shell Tab -->"
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
         $string9 = /\/reverse\.exe/ nocase ascii wide
@@ -73,10 +73,10 @@ rule reverse_shell_generator
         $string21 = /busybox\snc\s.{0,100}\s\-e\ssh/ nocase ascii wide
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
-        $string22 = "class ReverseBash" nocase ascii wide
+        $string22 = "class ReverseBash"
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
-        $string23 = "cmd/unix/reverse_bash" nocase ascii wide
+        $string23 = "cmd/unix/reverse_bash"
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
         $string24 = "cmd/unix/reverse_python" nocase ascii wide
@@ -91,13 +91,13 @@ rule reverse_shell_generator
         $string27 = /echo\s\'import\sos\'.{0,100}echo.{0,100}os\.system\(\\"nc\s\-e\ssh.{0,100}\'.{0,100}\s\>\s\/tmp\// nocase ascii wide
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
-        $string28 = /echo\s\'package\smain\;.{0,100}net\.Dial\(\\"tcp\\".{0,100}exec\.Command\(\\"\/bin\/bash\\"\).{0,100}cmd\.Stdin\=.{0,100}cmd\.Stdout\=.{0,100}cmd\.Stderr\=.{0,100}cmd\.Run\(\).{0,100}\'\s\>\s\/tmp\/.{0,100}\.go.{0,100}go\srun\s\/tmp\// nocase ascii wide
+        $string28 = /echo\s\'package\smain\;.{0,100}net\.Dial\(\\"tcp\\".{0,100}exec\.Command\(\\"\/bin\/bash\\"\).{0,100}cmd\.Stdin\=.{0,100}cmd\.Stdout\=.{0,100}cmd\.Stderr\=.{0,100}cmd\.Run\(\).{0,100}\'\s\>\s\/tmp\/.{0,100}\.go.{0,100}go\srun\s\/tmp\//
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
-        $string29 = /echo\s\'package\smain\;.{0,100}net\.Dial\(\\"tcp\\".{0,100}exec\.Command\(\\"\/bin\/sh\\"\).{0,100}cmd\.Stdin\=.{0,100}cmd\.Stdout\=.{0,100}cmd\.Stderr\=.{0,100}cmd\.Run\(\).{0,100}\'\s\>\s\/tmp\/.{0,100}\.go.{0,100}go\srun\s\/tmp\// nocase ascii wide
+        $string29 = /echo\s\'package\smain\;.{0,100}net\.Dial\(\\"tcp\\".{0,100}exec\.Command\(\\"\/bin\/sh\\"\).{0,100}cmd\.Stdin\=.{0,100}cmd\.Stdout\=.{0,100}cmd\.Stderr\=.{0,100}cmd\.Run\(\).{0,100}\'\s\>\s\/tmp\/.{0,100}\.go.{0,100}go\srun\s\/tmp\//
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
-        $string30 = /echo\s\'package\smain\;.{0,100}net\.Dial\(\\"tcp\\".{0,100}exec\.Command\(\\"bash\\"\).{0,100}cmd\.Stdin\=.{0,100}cmd\.Stdout\=.{0,100}cmd\.Stderr\=.{0,100}cmd\.Run\(\).{0,100}\'\s\>\s\/tmp\/.{0,100}\.go.{0,100}go\srun\s\/tmp\// nocase ascii wide
+        $string30 = /echo\s\'package\smain\;.{0,100}net\.Dial\(\\"tcp\\".{0,100}exec\.Command\(\\"bash\\"\).{0,100}cmd\.Stdin\=.{0,100}cmd\.Stdout\=.{0,100}cmd\.Stderr\=.{0,100}cmd\.Run\(\).{0,100}\'\s\>\s\/tmp\/.{0,100}\.go.{0,100}go\srun\s\/tmp\//
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
         $string31 = /echo\s\'package\smain\;.{0,100}net\.Dial\(\\"tcp\\".{0,100}exec\.Command\(\\"cmd\\"\).{0,100}cmd\.Stdin\=.{0,100}cmd\.Stdout\=.{0,100}cmd\.Stderr\=.{0,100}cmd\.Run\(\).{0,100}\'\s\>\s\/tmp\/.{0,100}\.go.{0,100}go\srun\s\/tmp\// nocase ascii wide
@@ -139,19 +139,19 @@ rule reverse_shell_generator
         $string43 = "java/shell_reverse_tcp" nocase ascii wide
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
-        $string44 = "linux/x64/meterpreter/reverse_tcp" nocase ascii wide
+        $string44 = "linux/x64/meterpreter/reverse_tcp"
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
-        $string45 = "linux/x64/shell_reverse_tcp" nocase ascii wide
+        $string45 = "linux/x64/shell_reverse_tcp"
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
-        $string46 = /lua\s\-e.{0,100}require\(\'socket\'\)\;.{0,100}t\:connect.{0,100}os\.execute\(\'\\"\/bin\/bash\\"\s\<\&3\s\>\&3\s2\>\&3\'\)\;/ nocase ascii wide
+        $string46 = /lua\s\-e.{0,100}require\(\'socket\'\)\;.{0,100}t\:connect.{0,100}os\.execute\(\'\\"\/bin\/bash\\"\s\<\&3\s\>\&3\s2\>\&3\'\)\;/
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
-        $string47 = /lua\s\-e.{0,100}require\(\'socket\'\)\;.{0,100}t\:connect.{0,100}os\.execute\(\'\\"\/bin\/sh\\"\s\<\&3\s\>\&3\s2\>\&3\'\)\;/ nocase ascii wide
+        $string47 = /lua\s\-e.{0,100}require\(\'socket\'\)\;.{0,100}t\:connect.{0,100}os\.execute\(\'\\"\/bin\/sh\\"\s\<\&3\s\>\&3\s2\>\&3\'\)\;/
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
-        $string48 = /lua\s\-e.{0,100}require\(\'socket\'\)\;.{0,100}t\:connect.{0,100}os\.execute\(\'\\"bash\\"\s\<\&3\s\>\&3\s2\>\&3\'\)\;/ nocase ascii wide
+        $string48 = /lua\s\-e.{0,100}require\(\'socket\'\)\;.{0,100}t\:connect.{0,100}os\.execute\(\'\\"bash\\"\s\<\&3\s\>\&3\s2\>\&3\'\)\;/
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
         $string49 = /lua\s\-e.{0,100}require\(\'socket\'\)\;.{0,100}t\:connect.{0,100}os\.execute\(\'\\"cmd\\"\s\<\&3\s\>\&3\s2\>\&3\'\)\;/ nocase ascii wide
@@ -238,13 +238,13 @@ rule reverse_shell_generator
         $string76 = /python\s\-c.{0,100}\'import\ssocket\,subprocess\,os\'.{0,100}socket\.socket\(socket\.AF_INET.{0,100}connect\(\(\\".{0,100}\)\).{0,100}dup2.{0,100}pty\.spawn\(\\"sh\\"\)\'/ nocase ascii wide
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
-        $string77 = /python\s\-c.{0,100}socket\.socket\(\).{0,100}connect.{0,100}dup2.{0,100}pty\.spawn\(\\"\/bin\/bash\\"\)/ nocase ascii wide
+        $string77 = /python\s\-c.{0,100}socket\.socket\(\).{0,100}connect.{0,100}dup2.{0,100}pty\.spawn\(\\"\/bin\/bash\\"\)/
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
-        $string78 = /python\s\-c.{0,100}socket\.socket\(\).{0,100}connect.{0,100}dup2.{0,100}pty\.spawn\(\\"\/bin\/sh\\"\)/ nocase ascii wide
+        $string78 = /python\s\-c.{0,100}socket\.socket\(\).{0,100}connect.{0,100}dup2.{0,100}pty\.spawn\(\\"\/bin\/sh\\"\)/
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
-        $string79 = /python\s\-c.{0,100}socket\.socket\(\).{0,100}connect.{0,100}dup2.{0,100}pty\.spawn\(\\"bash\\"\)/ nocase ascii wide
+        $string79 = /python\s\-c.{0,100}socket\.socket\(\).{0,100}connect.{0,100}dup2.{0,100}pty\.spawn\(\\"bash\\"\)/
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
         $string80 = /python\s\-c.{0,100}socket\.socket\(\).{0,100}connect.{0,100}dup2.{0,100}pty\.spawn\(\\"cmd\\"\)/ nocase ascii wide
@@ -277,13 +277,13 @@ rule reverse_shell_generator
         $string89 = "rcat connect -s sh " nocase ascii wide
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
-        $string90 = /require\(\'child_process\'\)\.exec\(\'nc\s\-e\s\\"\/bin\/bash\\"\s/ nocase ascii wide
+        $string90 = /require\(\'child_process\'\)\.exec\(\'nc\s\-e\s\\"\/bin\/bash\\"\s/
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
-        $string91 = /require\(\'child_process\'\)\.exec\(\'nc\s\-e\s\\"\/bin\/sh\\"\s/ nocase ascii wide
+        $string91 = /require\(\'child_process\'\)\.exec\(\'nc\s\-e\s\\"\/bin\/sh\\"\s/
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
-        $string92 = /require\(\'child_process\'\)\.exec\(\'nc\s\-e\s\\"bash\\"\s/ nocase ascii wide
+        $string92 = /require\(\'child_process\'\)\.exec\(\'nc\s\-e\s\\"bash\\"\s/
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
         $string93 = /require\(\'child_process\'\)\.exec\(\'nc\s\-e\s\\"cmd\\"\s/ nocase ascii wide
@@ -316,13 +316,13 @@ rule reverse_shell_generator
         $string102 = /ruby\s\-rsocket\s\-e.{0,100}TCPSocket\.new.{0,100}loop.{0,100}gets.{0,100}chomp.{0,100}IO\.popen.{0,100}read/ nocase ascii wide
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
-        $string103 = /ruby\s\-rsocket\s\-e\'spawn\(\\"\/bin\/bash\\"\,\[\:in\,\:out\,\:err\]\=\>TCPSocket\.new\(/ nocase ascii wide
+        $string103 = /ruby\s\-rsocket\s\-e\'spawn\(\\"\/bin\/bash\\"\,\[\:in\,\:out\,\:err\]\=\>TCPSocket\.new\(/
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
-        $string104 = /ruby\s\-rsocket\s\-e\'spawn\(\\"\/bin\/sh\\"\,\[\:in\,\:out\,\:err\]\=\>TCPSocket\.new\(/ nocase ascii wide
+        $string104 = /ruby\s\-rsocket\s\-e\'spawn\(\\"\/bin\/sh\\"\,\[\:in\,\:out\,\:err\]\=\>TCPSocket\.new\(/
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
-        $string105 = /ruby\s\-rsocket\s\-e\'spawn\(\\"bash\\"\,\[\:in\,\:out\,\:err\]\=\>TCPSocket\.new\(/ nocase ascii wide
+        $string105 = /ruby\s\-rsocket\s\-e\'spawn\(\\"bash\\"\,\[\:in\,\:out\,\:err\]\=\>TCPSocket\.new\(/
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
         $string106 = /ruby\s\-rsocket\s\-e\'spawn\(\\"cmd\\"\,\[\:in\,\:out\,\:err\]\=\>TCPSocket\.new\(/ nocase ascii wide
@@ -340,28 +340,28 @@ rule reverse_shell_generator
         $string110 = /ruby\s\-rsocket\s\-e\'spawn\(\\"zsh\\"\,\[\:in\,\:out\,\:err\]\=\>TCPSocket\.new\(/ nocase ascii wide
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
-        $string111 = /Runtime\.getRuntime\(\)\.exec\(\\"bash\s\-c\s\/dev\/tcp\/.{0,100}\/.{0,100}\s\/bin\/bash\\"/ nocase ascii wide
+        $string111 = /Runtime\.getRuntime\(\)\.exec\(\\"bash\s\-c\s\/dev\/tcp\/.{0,100}\/.{0,100}\s\/bin\/bash\\"/
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
-        $string112 = /Runtime\.getRuntime\(\)\.exec\(\\"bash\s\-c\s\/dev\/tcp\/.{0,100}\/.{0,100}\s\/bin\/sh\\"/ nocase ascii wide
+        $string112 = /Runtime\.getRuntime\(\)\.exec\(\\"bash\s\-c\s\/dev\/tcp\/.{0,100}\/.{0,100}\s\/bin\/sh\\"/
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
-        $string113 = /Runtime\.getRuntime\(\)\.exec\(\\"bash\s\-c\s\/dev\/tcp\/.{0,100}\/.{0,100}\sbash\\"/ nocase ascii wide
+        $string113 = /Runtime\.getRuntime\(\)\.exec\(\\"bash\s\-c\s\/dev\/tcp\/.{0,100}\/.{0,100}\sbash\\"/
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
-        $string114 = /Runtime\.getRuntime\(\)\.exec\(\\"bash\s\-c\s\/dev\/tcp\/.{0,100}\/.{0,100}\scmd\\"/ nocase ascii wide
+        $string114 = /Runtime\.getRuntime\(\)\.exec\(\\"bash\s\-c\s\/dev\/tcp\/.{0,100}\/.{0,100}\scmd\\"/
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
-        $string115 = /Runtime\.getRuntime\(\)\.exec\(\\"bash\s\-c\s\/dev\/tcp\/.{0,100}\/.{0,100}\spowershell\\"/ nocase ascii wide
+        $string115 = /Runtime\.getRuntime\(\)\.exec\(\\"bash\s\-c\s\/dev\/tcp\/.{0,100}\/.{0,100}\spowershell\\"/
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
-        $string116 = /Runtime\.getRuntime\(\)\.exec\(\\"bash\s\-c\s\/dev\/tcp\/.{0,100}\/.{0,100}\spwsh\\"/ nocase ascii wide
+        $string116 = /Runtime\.getRuntime\(\)\.exec\(\\"bash\s\-c\s\/dev\/tcp\/.{0,100}\/.{0,100}\spwsh\\"/
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
-        $string117 = /Runtime\.getRuntime\(\)\.exec\(\\"bash\s\-c\s\/dev\/tcp\/.{0,100}\/.{0,100}\szsh\\"/ nocase ascii wide
+        $string117 = /Runtime\.getRuntime\(\)\.exec\(\\"bash\s\-c\s\/dev\/tcp\/.{0,100}\/.{0,100}\szsh\\"/
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
-        $string118 = /Runtime\.getRuntime\(\)\.exec\(\\"bash\s\-c.{0,100}\s\/dev\/tcp\/.{0,100}\// nocase ascii wide
+        $string118 = /Runtime\.getRuntime\(\)\.exec\(\\"bash\s\-c.{0,100}\s\/dev\/tcp\/.{0,100}\//
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
         $string119 = /sh\s\-i\s\>\&\s\/dev\/tcp\/.{0,100}\/.{0,100}\s0\>\&1/ nocase ascii wide
@@ -373,13 +373,13 @@ rule reverse_shell_generator
         $string121 = /sh\s\-i\s5\<\>\s\/dev\/tcp\/.{0,100}\/.{0,100}\s0\<\&5\s1\>\&5\s2\>\&5/ nocase ascii wide
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
-        $string122 = /socat\sTCP\:.{0,100}\:.{0,100}\sEXEC\:\\"\/bin\/bash\\"/ nocase ascii wide
+        $string122 = /socat\sTCP\:.{0,100}\:.{0,100}\sEXEC\:\\"\/bin\/bash\\"/
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
-        $string123 = /socat\sTCP\:.{0,100}\:.{0,100}\sEXEC\:\\"\/bin\/sh\\"/ nocase ascii wide
+        $string123 = /socat\sTCP\:.{0,100}\:.{0,100}\sEXEC\:\\"\/bin\/sh\\"/
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
-        $string124 = /socat\sTCP\:.{0,100}\:.{0,100}\sEXEC\:\\"bash\\"/ nocase ascii wide
+        $string124 = /socat\sTCP\:.{0,100}\:.{0,100}\sEXEC\:\\"bash\\"/
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
         $string125 = /socat\sTCP\:.{0,100}\:.{0,100}\sEXEC\:\\"cmd\\"/ nocase ascii wide
@@ -400,13 +400,13 @@ rule reverse_shell_generator
         $string130 = /socat\sTCP\:.{0,100}\:.{0,100}\sEXEC\:\'sh/ nocase ascii wide
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
-        $string131 = /sqlite3.{0,100}\/dev\/null.{0,100}\'\.shell.{0,100}mkfifo.{0,100}\|\\"\/bin\/bash\\"\s\|\snc.{0,100}\'/ nocase ascii wide
+        $string131 = /sqlite3.{0,100}\/dev\/null.{0,100}\'\.shell.{0,100}mkfifo.{0,100}\|\\"\/bin\/bash\\"\s\|\snc.{0,100}\'/
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
-        $string132 = /sqlite3.{0,100}\/dev\/null.{0,100}\'\.shell.{0,100}mkfifo.{0,100}\|\\"\/bin\/sh\\"\s\|\snc.{0,100}\'/ nocase ascii wide
+        $string132 = /sqlite3.{0,100}\/dev\/null.{0,100}\'\.shell.{0,100}mkfifo.{0,100}\|\\"\/bin\/sh\\"\s\|\snc.{0,100}\'/
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
-        $string133 = /sqlite3.{0,100}\/dev\/null.{0,100}\'\.shell.{0,100}mkfifo.{0,100}\|\\"bash\\"\s\|\snc.{0,100}\'/ nocase ascii wide
+        $string133 = /sqlite3.{0,100}\/dev\/null.{0,100}\'\.shell.{0,100}mkfifo.{0,100}\|\\"bash\\"\s\|\snc.{0,100}\'/
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
         $string134 = /sqlite3.{0,100}\/dev\/null.{0,100}\'\.shell.{0,100}mkfifo.{0,100}\|\\"cmd\\"\s\|\snc.{0,100}\'/ nocase ascii wide

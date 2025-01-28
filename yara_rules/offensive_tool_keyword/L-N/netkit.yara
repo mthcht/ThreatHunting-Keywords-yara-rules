@@ -1,7 +1,7 @@
 rule netkit
 {
     meta:
-        description = "Detection patterns for the tool 'netkit' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'netkit' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "netkit"
@@ -46,10 +46,10 @@ rule netkit
         $string12 = "Notselwyn/netkit" nocase ascii wide
         // Description: Netkit is a purposefully small rootkit which can be used by clients over network to maintain a sneaky foothold into a device.
         // Reference: https://github.com/Notselwyn/netkit
-        $string13 = /run_kmod\.sh\snetkit\.ko\snetkit/ nocase ascii wide
+        $string13 = /run_kmod\.sh\snetkit\.ko\snetkit/
         // Description: Netkit is a purposefully small rootkit which can be used by clients over network to maintain a sneaky foothold into a device.
         // Reference: https://github.com/Notselwyn/netkit
-        $string14 = /run_python\.sh\sclient\/shell\.py/ nocase ascii wide
+        $string14 = /run_python\.sh\sclient\/shell\.py/
 
     condition:
         any of them

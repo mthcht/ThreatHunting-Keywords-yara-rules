@@ -1,7 +1,7 @@
 rule litefuzz
 {
     meta:
-        description = "Detection patterns for the tool 'litefuzz' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'litefuzz' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "litefuzz"
@@ -10,7 +10,7 @@ rule litefuzz
     strings:
         // Description: A multi-platform fuzzer for poking at userland binaries and servers
         // Reference: https://github.com/sec-tools/litefuzz
-        $string1 = /\.\/litefuzz\.py/ nocase ascii wide
+        $string1 = /\.\/litefuzz\.py/
         // Description: A multi-platform fuzzer for poking at userland binaries and servers
         // Reference: https://github.com/sec-tools/litefuzz
         $string2 = "/sec-tools/litefuzz" nocase ascii wide

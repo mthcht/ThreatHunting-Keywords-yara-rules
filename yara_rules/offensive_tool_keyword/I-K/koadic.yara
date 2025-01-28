@@ -1,7 +1,7 @@
 rule koadic
 {
     meta:
-        description = "Detection patterns for the tool 'koadic' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'koadic' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "koadic"
@@ -25,7 +25,7 @@ rule koadic
         $string5 = " pypykatz" nocase ascii wide
         // Description: Koadic. or COM Command & Control. is a Windows post-exploitation rootkit similar to other penetration testing tools such as Meterpreter and Powershell Empire. The major difference is that Koadic does most of its operations using Windows Script Host (a.k.a. JScript/VBScript). with compatibility in the core to support a default installation of Windows 2000 with no service packs (and potentially even versions of NT4) all the way through Windows 10.
         // Reference: https://github.com/offsecginger/koadic
-        $string6 = /\.\/koadic/ nocase ascii wide
+        $string6 = /\.\/koadic/
         // Description: Koadic. or COM Command & Control. is a Windows post-exploitation rootkit similar to other penetration testing tools such as Meterpreter and Powershell Empire. The major difference is that Koadic does most of its operations using Windows Script Host (a.k.a. JScript/VBScript). with compatibility in the core to support a default installation of Windows 2000 with no service packs (and potentially even versions of NT4) all the way through Windows 10.
         // Reference: https://github.com/offsecginger/koadic
         $string7 = /\/bitsadmin\/bitsadmin\.cmd/ nocase ascii wide

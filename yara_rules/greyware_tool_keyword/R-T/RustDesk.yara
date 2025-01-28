@@ -1,7 +1,7 @@
 rule RustDesk
 {
     meta:
-        description = "Detection patterns for the tool 'RustDesk' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'RustDesk' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "RustDesk"
@@ -16,7 +16,7 @@ rule RustDesk
         $string2 = " start rustdesk://" nocase ascii wide
         // Description: Rustdesk open suorce remote control software abused by scammers
         // Reference: https://github.com/rustdesk/rustdesk
-        $string3 = "/home/user/rustdesk" nocase ascii wide
+        $string3 = "/home/user/rustdesk"
         // Description: Rustdesk open suorce remote control software abused by scammers
         // Reference: https://github.com/rustdesk/rustdesk
         $string4 = /\/RustDesk\.exe/ nocase ascii wide

@@ -1,7 +1,7 @@
 rule the_backdoor_factory
 {
     meta:
-        description = "Detection patterns for the tool 'the-backdoor-factory' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'the-backdoor-factory' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "the-backdoor-factory"
@@ -67,7 +67,7 @@ rule the_backdoor_factory
         $string19 = "d4aae162571f8338f2560eb32b774647fd0f1952d901dd38f8685e42ceeea813" nocase ascii wide
         // Description: Patch PE  ELF  Mach-O binaries with shellcode new version in development*
         // Reference: https://github.com/secretsquirrel/the-backdoor-factory
-        $string20 = /LinuxARMLELF32\.py/ nocase ascii wide
+        $string20 = /LinuxARMLELF32\.py/
         // Description: Patch PE  ELF  Mach-O binaries with shellcode new version in development*
         // Reference: https://github.com/secretsquirrel/the-backdoor-factory
         $string21 = /loadliba_reverse_tcp\.asm/ nocase ascii wide

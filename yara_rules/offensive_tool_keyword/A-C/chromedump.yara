@@ -1,7 +1,7 @@
 rule chromedump
 {
     meta:
-        description = "Detection patterns for the tool 'chromedump' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'chromedump' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "chromedump"
@@ -13,7 +13,7 @@ rule chromedump
         $string1 = "/ChromeDump/" nocase ascii wide
         // Description: ChromeDump is a small tool to dump all JavaScript and other ressources going through the browser
         // Reference: https://github.com/g4l4drim/ChromeDump
-        $string2 = /\/dumpweb\.log/ nocase ascii wide
+        $string2 = /\/dumpweb\.log/
         // Description: ChromeDump is a small tool to dump all JavaScript and other ressources going through the browser
         // Reference: https://github.com/g4l4drim/ChromeDump
         $string3 = /ChromeDump\.git/ nocase ascii wide

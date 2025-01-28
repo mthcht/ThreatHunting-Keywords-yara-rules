@@ -1,7 +1,7 @@
 rule Lastenzug
 {
     meta:
-        description = "Detection patterns for the tool 'Lastenzug' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Lastenzug' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Lastenzug"
@@ -31,7 +31,7 @@ rule Lastenzug
         $string7 = /bin\/LastenPIC\.bin/ nocase ascii wide
         // Description: Socka4a proxy based on websockets
         // Reference: https://github.com/codewhitesec/Lastenzug
-        $string8 = "build -o LastenServer" nocase ascii wide
+        $string8 = "build -o LastenServer"
         // Description: Socka4a proxy based on websockets
         // Reference: https://github.com/codewhitesec/Lastenzug
         $string9 = "codewhitesec/Lastenzug" nocase ascii wide
@@ -43,7 +43,7 @@ rule Lastenzug
         $string11 = "LastenPIC/SpiderPIC" nocase ascii wide
         // Description: Socka4a proxy based on websockets
         // Reference: https://github.com/codewhitesec/Lastenzug
-        $string12 = "LastenServer server " nocase ascii wide
+        $string12 = "LastenServer server "
         // Description: Socka4a proxy based on websockets
         // Reference: https://github.com/codewhitesec/Lastenzug
         $string13 = "Lastenzug - PIC Socks4a proxy by @invist" nocase ascii wide

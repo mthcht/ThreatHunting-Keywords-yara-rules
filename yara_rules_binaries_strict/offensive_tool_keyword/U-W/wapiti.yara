@@ -1,7 +1,7 @@
 rule wapiti
 {
     meta:
-        description = "Detection patterns for the tool 'wapiti' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'wapiti' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "wapiti"
@@ -22,7 +22,7 @@ rule wapiti
         $string4 = " --skip-crawl" nocase ascii wide
         // Description: Web vulnerability scanner written in Python3
         // Reference: https://github.com/wapiti-scanner/wapiti
-        $string5 = "/bin/wapiti" nocase ascii wide
+        $string5 = "/bin/wapiti"
         // Description: Web vulnerability scanner written in Python3
         // Reference: https://github.com/wapiti-scanner/wapiti
         $string6 = /\/data\/attacks\/.{0,100}\.txt/ nocase ascii wide

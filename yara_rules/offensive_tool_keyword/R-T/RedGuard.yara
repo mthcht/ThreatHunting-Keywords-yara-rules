@@ -1,7 +1,7 @@
 rule RedGuard
 {
     meta:
-        description = "Detection patterns for the tool 'RedGuard' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'RedGuard' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "RedGuard"
@@ -10,7 +10,7 @@ rule RedGuard
     strings:
         // Description: RedGuard is a C2 front flow control tool.Can avoid Blue Teams.AVs.EDRs check.
         // Reference: https://github.com/wikiZ/RedGuard
-        $string1 = /\.\/RedGuard/ nocase ascii wide
+        $string1 = /\.\/RedGuard/
         // Description: RedGuard is a C2 front flow control tool.Can avoid Blue Teams.AVs.EDRs check.
         // Reference: https://github.com/wikiZ/RedGuard
         $string2 = /\/RedGuard\.git/ nocase ascii wide

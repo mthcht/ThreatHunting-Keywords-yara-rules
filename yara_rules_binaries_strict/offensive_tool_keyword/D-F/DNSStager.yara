@@ -1,7 +1,7 @@
 rule DNSStager
 {
     meta:
-        description = "Detection patterns for the tool 'DNSStager' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'DNSStager' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "DNSStager"
@@ -58,7 +58,7 @@ rule DNSStager
         $string16 = "run DNSStager as root" nocase ascii wide
         // Description: DNSStager is an open-source project based on Python used to hide and transfer your payload using DNS.
         // Reference: https://github.com/mhaskar/DNSStager
-        $string17 = /sudo\s\.\/dnsstager/ nocase ascii wide
+        $string17 = /sudo\s\.\/dnsstager/
         // Description: DNSStager is an open-source project based on Python used to hide and transfer your payload using DNS.
         // Reference: https://github.com/mhaskar/DNSStager
         $string18 = "We recommend to XOR your shellcode before you transfer it" nocase ascii wide

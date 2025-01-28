@@ -1,7 +1,7 @@
 rule GreatSCT
 {
     meta:
-        description = "Detection patterns for the tool 'GreatSCT' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'GreatSCT' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "GreatSCT"
@@ -28,7 +28,7 @@ rule GreatSCT
         $string6 = "/GreatSCT/" nocase ascii wide
         // Description: GreatSCT is a tool designed to generate metasploit payloads that bypass common anti-virus solutions and application whitelisting solutions. GreatSCT is current under support by @ConsciousHacker
         // Reference: https://github.com/GreatSCT/GreatSCT
-        $string7 = "/GreatSCT/GreatSCT" nocase ascii wide
+        $string7 = "/GreatSCT/GreatSCT"
         // Description: The project is called Great SCT (Great Scott). Great SCT is an open source project to generate application white list bypasses. This tool is intended for BOTH red and blue team.
         // Reference: https://github.com/GreatSCT/GreatSCT
         $string8 = "/greatsct-output" nocase ascii wide

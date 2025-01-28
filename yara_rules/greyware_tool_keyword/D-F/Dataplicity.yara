@@ -1,7 +1,7 @@
 rule Dataplicity
 {
     meta:
-        description = "Detection patterns for the tool 'Dataplicity' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Dataplicity' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Dataplicity"
@@ -10,16 +10,16 @@ rule Dataplicity
     strings:
         // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
         // Reference: https://github.com/wildfoundry/dataplicity-agent
-        $string1 = "/bin/dataplicity" nocase ascii wide
+        $string1 = "/bin/dataplicity"
         // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
         // Reference: https://github.com/wildfoundry/dataplicity-agent
-        $string2 = /\/dataplicity\.app/ nocase ascii wide
+        $string2 = /\/dataplicity\.app/
         // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
         // Reference: https://github.com/wildfoundry/dataplicity-agent
-        $string3 = /\/dataplicity\.conf/ nocase ascii wide
+        $string3 = /\/dataplicity\.conf/
         // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
         // Reference: https://github.com/wildfoundry/dataplicity-agent
-        $string4 = /\/dataplicity\.log/ nocase ascii wide
+        $string4 = /\/dataplicity\.log/
         // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
         // Reference: https://github.com/wildfoundry/dataplicity-agent
         $string5 = /\/dataplicity\-agent\.git/ nocase ascii wide
@@ -28,10 +28,10 @@ rule Dataplicity
         $string6 = "/dataplicity-agent/releases/download" nocase ascii wide
         // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
         // Reference: https://github.com/wildfoundry/dataplicity-agent
-        $string7 = "/etc/dataplicity" nocase ascii wide
+        $string7 = "/etc/dataplicity"
         // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
         // Reference: https://github.com/wildfoundry/dataplicity-agent
-        $string8 = "/opt/dataplicity/" nocase ascii wide
+        $string8 = "/opt/dataplicity/"
         // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
         // Reference: https://github.com/wildfoundry/dataplicity-agent
         $string9 = /\\dataplicity\.conf/ nocase ascii wide

@@ -1,7 +1,7 @@
 rule go_http_tunnel
 {
     meta:
-        description = "Detection patterns for the tool 'go-http-tunnel' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'go-http-tunnel' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "go-http-tunnel"
@@ -13,7 +13,7 @@ rule go_http_tunnel
         $string1 = /\stunneld\.service/ nocase ascii wide
         // Description: Fast and secure tunnels over HTTP/2
         // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string2 = /\/\.tunneld\/.{0,100}\.key/ nocase ascii wide
+        $string2 = /\/\.tunneld\/.{0,100}\.key/
         // Description: Fast and secure tunnels over HTTP/2
         // Reference: https://github.com/mmatczuk/go-http-tunnel
         $string3 = /\/go\-http\-tunnel\.git\.git/ nocase ascii wide

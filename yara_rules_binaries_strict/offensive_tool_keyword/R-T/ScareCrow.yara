@@ -1,7 +1,7 @@
 rule ScareCrow
 {
     meta:
-        description = "Detection patterns for the tool 'ScareCrow' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'ScareCrow' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "ScareCrow"
@@ -13,10 +13,10 @@ rule ScareCrow
         $string1 = /\s\-I\s.{0,100}\.bin\s.{0,100}\s\-Loader\sdll/ nocase ascii wide
         // Description: ScareCrow - Payload creation framework designed around EDR bypass.
         // Reference: https://github.com/optiv/ScareCrow
-        $string2 = /\.\/ScareCrow\s\-/ nocase ascii wide
+        $string2 = /\.\/ScareCrow\s\-/
         // Description: ScareCrow - Payload creation framework designed around EDR bypass.
         // Reference: https://github.com/optiv/ScareCrow
-        $string3 = /\.\/ScareCrow/ nocase ascii wide
+        $string3 = /\.\/ScareCrow/
         // Description: ScareCrow - Payload creation framework designed around EDR bypass.
         // Reference: https://github.com/optiv/ScareCrow
         $string4 = "optiv/ScareCrow" nocase ascii wide
@@ -31,10 +31,10 @@ rule ScareCrow
         $string7 = /ScareCrow\.go/ nocase ascii wide
         // Description: ScareCrow - Payload creation framework designed around EDR bypass.
         // Reference: https://github.com/optiv/ScareCrow
-        $string8 = /ScareCrow_.{0,100}_darwin_amd64/ nocase ascii wide
+        $string8 = /ScareCrow_.{0,100}_darwin_amd64/
         // Description: ScareCrow - Payload creation framework designed around EDR bypass.
         // Reference: https://github.com/optiv/ScareCrow
-        $string9 = /ScareCrow_.{0,100}_linux_amd64/ nocase ascii wide
+        $string9 = /ScareCrow_.{0,100}_linux_amd64/
         // Description: ScareCrow - Payload creation framework designed around EDR bypass.
         // Reference: https://github.com/optiv/ScareCrow
         $string10 = /ScareCrow_.{0,100}amd64/ nocase ascii wide

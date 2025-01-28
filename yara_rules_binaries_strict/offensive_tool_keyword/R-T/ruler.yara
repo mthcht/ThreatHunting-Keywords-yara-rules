@@ -1,7 +1,7 @@
 rule ruler
 {
     meta:
-        description = "Detection patterns for the tool 'ruler' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'ruler' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "ruler"
@@ -85,10 +85,10 @@ rule ruler
         $string25 = "ruler --insecure " nocase ascii wide
         // Description: A tool to abuse Exchange services
         // Reference: https://github.com/sensepost/ruler
-        $string26 = "ruler-linux64" nocase ascii wide
+        $string26 = "ruler-linux64"
         // Description: A tool to abuse Exchange services
         // Reference: https://github.com/sensepost/ruler
-        $string27 = "ruler-linux86" nocase ascii wide
+        $string27 = "ruler-linux86"
         // Description: A tool to abuse Exchange services
         // Reference: https://github.com/sensepost/ruler
         $string28 = "ruler-osx64" nocase ascii wide

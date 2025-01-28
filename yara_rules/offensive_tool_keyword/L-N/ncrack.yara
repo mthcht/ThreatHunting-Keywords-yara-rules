@@ -1,7 +1,7 @@
 rule ncrack
 {
     meta:
-        description = "Detection patterns for the tool 'ncrack' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'ncrack' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "ncrack"
@@ -10,7 +10,7 @@ rule ncrack
     strings:
         // Description: High-speed network authentication cracking tool.
         // Reference: https://github.com/nmap/ncrack
-        $string1 = "/ncrack-" nocase ascii wide
+        $string1 = "/ncrack-"
         // Description: High-speed network authentication cracking tool.
         // Reference: https://github.com/nmap/ncrack
         $string2 = /\/ncrack\.git/ nocase ascii wide

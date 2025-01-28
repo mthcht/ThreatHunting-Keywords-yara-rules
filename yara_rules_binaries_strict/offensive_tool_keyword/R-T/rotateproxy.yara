@@ -1,7 +1,7 @@
 rule rotateproxy
 {
     meta:
-        description = "Detection patterns for the tool 'rotateproxy' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'rotateproxy' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "rotateproxy"
@@ -16,10 +16,10 @@ rule rotateproxy
         $string2 = /\srotateproxy\.service/ nocase ascii wide
         // Description: A tool that uses fofa to search for socks5 open proxies and perform proxy pool rotation
         // Reference: https://github.com/akkuman/rotateproxy
-        $string3 = /\.\/rotateproxy/ nocase ascii wide
+        $string3 = /\.\/rotateproxy/
         // Description: A tool that uses fofa to search for socks5 open proxies and perform proxy pool rotation
         // Reference: https://github.com/akkuman/rotateproxy
-        $string4 = "/bin/rotateproxy" nocase ascii wide
+        $string4 = "/bin/rotateproxy"
         // Description: A tool that uses fofa to search for socks5 open proxies and perform proxy pool rotation
         // Reference: https://github.com/akkuman/rotateproxy
         $string5 = /\/rotateproxy\.exe/ nocase ascii wide
@@ -37,10 +37,10 @@ rule rotateproxy
         $string9 = /\/rotateproxy_.{0,100}\.zip/ nocase ascii wide
         // Description: A tool that uses fofa to search for socks5 open proxies and perform proxy pool rotation
         // Reference: https://github.com/akkuman/rotateproxy
-        $string10 = "/rotateproxy-darwin-" nocase ascii wide
+        $string10 = "/rotateproxy-darwin-"
         // Description: A tool that uses fofa to search for socks5 open proxies and perform proxy pool rotation
         // Reference: https://github.com/akkuman/rotateproxy
-        $string11 = "/rotateproxy-linux" nocase ascii wide
+        $string11 = "/rotateproxy-linux"
         // Description: A tool that uses fofa to search for socks5 open proxies and perform proxy pool rotation
         // Reference: https://github.com/akkuman/rotateproxy
         $string12 = "/rotateproxy-windows" nocase ascii wide

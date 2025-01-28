@@ -1,7 +1,7 @@
 rule EQGR
 {
     meta:
-        description = "Detection patterns for the tool 'EQGR' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'EQGR' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "EQGR"
@@ -19,10 +19,10 @@ rule EQGR
         $string3 = /abopscript\.txt/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file elgingamble
         // Reference: https://fdik.org/EQGRP/Linux/doc/old/etc/user.tool.elgingamble.COMMON
-        $string4 = "chown root %s  chmod 4755 %s  %s" nocase ascii wide
+        $string4 = "chown root %s  chmod 4755 %s  %s"
         // Description: Equation Group scripts and tools
         // Reference: https://fdik.org/EQGRP/Linux/doc/old/etc/abopscript.txt
-        $string5 = /cp\s\/etc\/shadow\s\/tmp\/\./ nocase ascii wide
+        $string5 = /cp\s\/etc\/shadow\s\/tmp\/\./
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

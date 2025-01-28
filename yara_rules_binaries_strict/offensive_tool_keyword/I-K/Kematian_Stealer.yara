@@ -1,7 +1,7 @@
 rule Kematian_Stealer
 {
     meta:
-        description = "Detection patterns for the tool 'Kematian Stealer' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Kematian Stealer' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Kematian Stealer"
@@ -121,7 +121,7 @@ rule Kematian_Stealer
         $string37 = "DecryptWinSCPPassword" nocase ascii wide
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github.com/Pirate-Devs/Kematian
-        $string38 = /echo\s\%cmdcmdline\%\s\|\sfind\s\/i\s\\"\%\~f0\\"\>nul\s\|\|\sexit\s\/b\s1/ nocase ascii wide
+        $string38 = /echo\s\%cmdcmdline\%\s\|\sfind\s\/i\s\\"\%\~f0\\"\>nul\s\|\|\sexit\s\/b\s1/
         // Description: Fake WinRar site distributes malware (+stealer +miner +hvnc +ransomware) from GitHub
         // Reference: https://github[.]com/sap3r-encrypthub/encrypthub
         $string39 = "encrypthub_asseq2QSsxzc" nocase ascii wide

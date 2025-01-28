@@ -1,7 +1,7 @@
 rule VDR
 {
     meta:
-        description = "Detection patterns for the tool 'VDR' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'VDR' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "VDR"
@@ -13,7 +13,7 @@ rule VDR
         $string1 = /\srwf\.py\s/ nocase ascii wide
         // Description: Vulnerable driver research tool - result and exploit PoCs
         // Reference: https://github.com/TakahiroHaruyama/VDR
-        $string2 = /\.\/rwf\.py/ nocase ascii wide
+        $string2 = /\.\/rwf\.py/
         // Description: Vulnerable driver research tool - result and exploit PoCs
         // Reference: https://github.com/TakahiroHaruyama/VDR
         $string3 = /\/VDR\.git/ nocase ascii wide

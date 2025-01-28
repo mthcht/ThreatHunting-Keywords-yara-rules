@@ -1,7 +1,7 @@
 rule cliws
 {
     meta:
-        description = "Detection patterns for the tool 'cliws' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'cliws' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "cliws"
@@ -10,16 +10,16 @@ rule cliws
     strings:
         // Description: Cross platform interactive bind/reverse PTY shell
         // Reference: https://github.com/b23r0/cliws
-        $string1 = " install cliws" nocase ascii wide
+        $string1 = " install cliws"
         // Description: Cross platform interactive bind/reverse PTY shell
         // Reference: https://github.com/b23r0/cliws
-        $string2 = "/cliws -l " nocase ascii wide
+        $string2 = "/cliws -l "
         // Description: Cross platform interactive bind/reverse PTY shell
         // Reference: https://github.com/b23r0/cliws
-        $string3 = "/cliws -l 1000" nocase ascii wide
+        $string3 = "/cliws -l 1000"
         // Description: Cross platform interactive bind/reverse PTY shell
         // Reference: https://github.com/b23r0/cliws
-        $string4 = "/cliws -p " nocase ascii wide
+        $string4 = "/cliws -p "
         // Description: Cross platform interactive bind/reverse PTY shell
         // Reference: https://github.com/b23r0/cliws
         $string5 = /\/cliws\.exe/ nocase ascii wide
@@ -88,7 +88,7 @@ rule cliws
         $string26 = "b23r0/cliws" nocase ascii wide
         // Description: Cross platform interactive bind/reverse PTY shell
         // Reference: https://github.com/b23r0/cliws
-        $string27 = /b23r0\@foxmail\.com/ nocase ascii wide
+        $string27 = /b23r0\@foxmail\.com/
         // Description: Cross platform interactive bind/reverse PTY shell
         // Reference: https://github.com/b23r0/cliws
         $string28 = "bb239dee17aad653557b3c981e16e0622772f560e1a25fedc97639f7431ad77b" nocase ascii wide
@@ -103,7 +103,7 @@ rule cliws
         $string31 = "Cliws - Lightweight interactive bind/reverse PTY shell" nocase ascii wide
         // Description: Cross platform interactive bind/reverse PTY shell
         // Reference: https://github.com/b23r0/cliws
-        $string32 = "cliws -r ws://" nocase ascii wide
+        $string32 = "cliws -r ws://"
         // Description: Cross platform interactive bind/reverse PTY shell
         // Reference: https://github.com/b23r0/cliws
         $string33 = "e5ce8b2978d87ed5506c7b7dcad0d363c70f64ce5fad4b7e4beb465d60aada58" nocase ascii wide

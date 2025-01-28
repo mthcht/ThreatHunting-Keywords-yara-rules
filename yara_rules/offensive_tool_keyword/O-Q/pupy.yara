@@ -1,7 +1,7 @@
 rule pupy
 {
     meta:
-        description = "Detection patterns for the tool 'pupy' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'pupy' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "pupy"
@@ -40,7 +40,7 @@ rule pupy
         $string10 = " keylogger " nocase ascii wide
         // Description: PupyRAT is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string11 = /\slinux_stealth\.py/ nocase ascii wide
+        $string11 = /\slinux_stealth\.py/
         // Description: PupyRAT is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
         $string12 = " memorpy " nocase ascii wide
@@ -133,10 +133,10 @@ rule pupy
         $string41 = /\/beroot\.py/ nocase ascii wide
         // Description: PupyRAT is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string42 = "/bin/pupysh" nocase ascii wide
+        $string42 = "/bin/pupysh"
         // Description: PupyRAT is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string43 = /\/clear_logs\.py/ nocase ascii wide
+        $string43 = /\/clear_logs\.py/
         // Description: PupyRAT is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
         $string44 = /\/creddump\.py/ nocase ascii wide
@@ -160,7 +160,7 @@ rule pupy
         $string50 = "/LaZagne/Windows/" nocase ascii wide
         // Description: PupyRAT is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string51 = /\/linux_stealth\.py/ nocase ascii wide
+        $string51 = /\/linux_stealth\.py/
         // Description: PupyRAT is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
         $string52 = /\/memory_exec\.py/ nocase ascii wide
@@ -205,7 +205,7 @@ rule pupy
         $string65 = "/pupy/commands/" nocase ascii wide
         // Description: PupyRAT is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string66 = "/pupy/external/creddump7" nocase ascii wide
+        $string66 = "/pupy/external/creddump7"
         // Description: PupyRAT is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
         $string67 = "/pupy/memimporter/" nocase ascii wide
@@ -247,7 +247,7 @@ rule pupy
         $string79 = /\/pupysh\.py/ nocase ascii wide
         // Description: PupyRAT is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string80 = /\/pupysh\.sh/ nocase ascii wide
+        $string80 = /\/pupysh\.sh/
         // Description: PupyRAT is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
         $string81 = /\/PupyTriggers\.py/ nocase ascii wide
@@ -601,7 +601,7 @@ rule pupy
         $string197 = "pupy/external/LaZagne" nocase ascii wide
         // Description: PupyRAT is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string198 = "pupy/external/linux-exploit-suggester" nocase ascii wide
+        $string198 = "pupy/external/linux-exploit-suggester"
         // Description: PupyRAT is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
         $string199 = "pupy/external/mimipy" nocase ascii wide

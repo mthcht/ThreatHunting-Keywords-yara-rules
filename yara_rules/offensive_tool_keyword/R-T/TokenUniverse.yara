@@ -1,7 +1,7 @@
 rule TokenUniverse
 {
     meta:
-        description = "Detection patterns for the tool 'TokenUniverse' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'TokenUniverse' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "TokenUniverse"

@@ -1,7 +1,7 @@
 rule SharpC2
 {
     meta:
-        description = "Detection patterns for the tool 'SharpC2' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'SharpC2' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "SharpC2"
@@ -67,7 +67,7 @@ rule SharpC2
         $string19 = /\/stager\.ps1/ nocase ascii wide
         // Description: Command and Control Framework written in C#
         // Reference: https://github.com/rasta-mouse/SharpC2
-        $string20 = /\/teamserver\-linux\.tar\.gz/ nocase ascii wide
+        $string20 = /\/teamserver\-linux\.tar\.gz/
         // Description: Command and Control Framework written in C#
         // Reference: https://github.com/rasta-mouse/SharpC2
         $string21 = /\/teamserver\-win\.zip/ nocase ascii wide

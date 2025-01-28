@@ -1,7 +1,7 @@
 rule zerosum0x0
 {
     meta:
-        description = "Detection patterns for the tool 'zerosum0x0' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'zerosum0x0' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "zerosum0x0"

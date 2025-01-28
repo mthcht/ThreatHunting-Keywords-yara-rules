@@ -1,7 +1,7 @@
 rule omg_payloads
 {
     meta:
-        description = "Detection patterns for the tool 'omg-payloads' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'omg-payloads' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "omg-payloads"

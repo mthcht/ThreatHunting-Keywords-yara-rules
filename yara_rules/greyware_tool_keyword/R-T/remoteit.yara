@@ -1,7 +1,7 @@
 rule remoteit
 {
     meta:
-        description = "Detection patterns for the tool 'remoteit' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'remoteit' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "remoteit"
@@ -22,7 +22,7 @@ rule remoteit
         $string4 = /\/Applications\/remoteit\.app\// nocase ascii wide
         // Description: Expose localhost to internet
         // Reference: https://github.com/remoteit/desktop
-        $string5 = /\/bin\/x64\/connectd\.exe/ nocase ascii wide
+        $string5 = /\/bin\/x64\/connectd\.exe/
         // Description: Expose localhost to internet
         // Reference: https://github.com/remoteit/desktop
         $string6 = /\/connectd\.aarch64\-win\.exe/ nocase ascii wide
@@ -31,10 +31,10 @@ rule remoteit
         $string7 = /\/connectd\.x86_64\-win\.exe/ nocase ascii wide
         // Description: Expose localhost to internet
         // Reference: https://github.com/remoteit/desktop
-        $string8 = "/etc/remoteit/" nocase ascii wide
+        $string8 = "/etc/remoteit/"
         // Description: Expose localhost to internet
         // Reference: https://github.com/remoteit/desktop
-        $string9 = "/opt/remoteit/remoteit" nocase ascii wide
+        $string9 = "/opt/remoteit/remoteit"
         // Description: Expose localhost to internet
         // Reference: https://github.com/remoteit/desktop
         $string10 = /\/Remote\.It\-Installer\-/ nocase ascii wide
@@ -55,19 +55,19 @@ rule remoteit
         $string15 = /\/remoteit\-desktop\.exe/ nocase ascii wide
         // Description: Expose localhost to internet
         // Reference: https://github.com/remoteit/installer
-        $string16 = /\/systemd\/system\/connectd\.service/ nocase ascii wide
+        $string16 = /\/systemd\/system\/connectd\.service/
         // Description: Expose localhost to internet
         // Reference: https://github.com/remoteit/installer
-        $string17 = "/usr/bin/connectd" nocase ascii wide
+        $string17 = "/usr/bin/connectd"
         // Description: Expose localhost to internet
         // Reference: https://github.com/remoteit/installer
-        $string18 = "/usr/bin/logger logger \"connectd installer postinst" nocase ascii wide
+        $string18 = "/usr/bin/logger logger \"connectd installer postinst"
         // Description: Expose localhost to internet
         // Reference: https://github.com/remoteit/installer
-        $string19 = "/usr/share/connectd/scripts/" nocase ascii wide
+        $string19 = "/usr/share/connectd/scripts/"
         // Description: Expose localhost to internet
         // Reference: https://github.com/remoteit/desktop
-        $string20 = "/var/log/remoteit" nocase ascii wide
+        $string20 = "/var/log/remoteit"
         // Description: Expose localhost to internet
         // Reference: https://github.com/remoteit/desktop
         $string21 = /\\AppData\\Local\\remoteit/ nocase ascii wide
@@ -784,7 +784,7 @@ rule remoteit
         $string258 = "ce9bd575dccf2e5b373d8f7b1aca7cfdbf6d9a4e9179a24ac6d92914b3f782d4" nocase ascii wide
         // Description: Expose localhost to internet
         // Reference: https://github.com/remoteit/installer
-        $string259 = "connectd/usr/bin/connectd_d2d" nocase ascii wide
+        $string259 = "connectd/usr/bin/connectd_d2d"
         // Description: Expose localhost to internet
         // Reference: https://github.com/remoteit/installer
         $string260 = "d0a44c5acf4946e913a8534d362d681bd50205d00549d3db028d8ce2802e9b86" nocase ascii wide
@@ -958,7 +958,7 @@ rule remoteit
         $string316 = "fefb2b5bc41354345598c2f69090bf16f7f1add348fa6a4bad60dd8fb0e73d40" nocase ascii wide
         // Description: Expose localhost to internet
         // Reference: https://github.com/remoteit/installer
-        $string317 = /https\:\/\/link\.remote\.it\/support\/rpi\-linux\-quick\-install/ nocase ascii wide
+        $string317 = /https\:\/\/link\.remote\.it\/support\/rpi\-linux\-quick\-install/
         // Description: Expose localhost to internet
         // Reference: https://github.com/remoteit/desktop
         $string318 = /Please\swait\swhile\swe\sstop\sthe\sRemote\.It\ssystem\sservice/ nocase ascii wide

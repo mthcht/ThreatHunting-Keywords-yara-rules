@@ -1,7 +1,7 @@
 rule MEGAcmd
 {
     meta:
-        description = "Detection patterns for the tool 'MEGAcmd' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'MEGAcmd' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "MEGAcmd"
@@ -22,7 +22,7 @@ rule MEGAcmd
         $string4 = /\%LOCALAPPDATA\%\\MEGAcmd/ nocase ascii wide
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string5 = /\/apache\-megacmd\.conf/ nocase ascii wide
+        $string5 = /\/apache\-megacmd\.conf/
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
         $string6 = /\/Applications\/MEGAcmd\.app/ nocase ascii wide
@@ -64,193 +64,193 @@ rule MEGAcmd
         $string18 = /\/upd\/mcmd\/MEGAcmd\.app/ nocase ascii wide
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string19 = "/usr/bin/mega-attr" nocase ascii wide
+        $string19 = "/usr/bin/mega-attr"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string20 = "/usr/bin/mega-backup" nocase ascii wide
+        $string20 = "/usr/bin/mega-backup"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string21 = "/usr/bin/mega-cancel" nocase ascii wide
+        $string21 = "/usr/bin/mega-cancel"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string22 = "/usr/bin/mega-cat" nocase ascii wide
+        $string22 = "/usr/bin/mega-cat"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string23 = "/usr/bin/mega-cd" nocase ascii wide
+        $string23 = "/usr/bin/mega-cd"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string24 = "/usr/bin/mega-cmd" nocase ascii wide
+        $string24 = "/usr/bin/mega-cmd"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string25 = "/usr/bin/mega-cmd" nocase ascii wide
+        $string25 = "/usr/bin/mega-cmd"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string26 = "/usr/bin/mega-cmd-server" nocase ascii wide
+        $string26 = "/usr/bin/mega-cmd-server"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string27 = "/usr/bin/mega-confirm" nocase ascii wide
+        $string27 = "/usr/bin/mega-confirm"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string28 = "/usr/bin/mega-confirmcancel" nocase ascii wide
+        $string28 = "/usr/bin/mega-confirmcancel"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string29 = "/usr/bin/mega-cp" nocase ascii wide
+        $string29 = "/usr/bin/mega-cp"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string30 = "/usr/bin/mega-debug" nocase ascii wide
+        $string30 = "/usr/bin/mega-debug"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string31 = "/usr/bin/mega-deleteversions" nocase ascii wide
+        $string31 = "/usr/bin/mega-deleteversions"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string32 = "/usr/bin/mega-df" nocase ascii wide
+        $string32 = "/usr/bin/mega-df"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string33 = "/usr/bin/mega-du" nocase ascii wide
+        $string33 = "/usr/bin/mega-du"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string34 = "/usr/bin/mega-errorcode" nocase ascii wide
+        $string34 = "/usr/bin/mega-errorcode"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string35 = "/usr/bin/mega-exclude" nocase ascii wide
+        $string35 = "/usr/bin/mega-exclude"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string36 = "/usr/bin/mega-exec" nocase ascii wide
+        $string36 = "/usr/bin/mega-exec"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string37 = "/usr/bin/mega-export" nocase ascii wide
+        $string37 = "/usr/bin/mega-export"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string38 = "/usr/bin/mega-find" nocase ascii wide
+        $string38 = "/usr/bin/mega-find"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string39 = "/usr/bin/mega-ftp" nocase ascii wide
+        $string39 = "/usr/bin/mega-ftp"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string40 = "/usr/bin/mega-get" nocase ascii wide
+        $string40 = "/usr/bin/mega-get"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string41 = "/usr/bin/mega-graphics" nocase ascii wide
+        $string41 = "/usr/bin/mega-graphics"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string42 = "/usr/bin/mega-help" nocase ascii wide
+        $string42 = "/usr/bin/mega-help"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string43 = "/usr/bin/mega-https" nocase ascii wide
+        $string43 = "/usr/bin/mega-https"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string44 = "/usr/bin/mega-import" nocase ascii wide
+        $string44 = "/usr/bin/mega-import"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string45 = "/usr/bin/mega-invite" nocase ascii wide
+        $string45 = "/usr/bin/mega-invite"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string46 = "/usr/bin/mega-ipc" nocase ascii wide
+        $string46 = "/usr/bin/mega-ipc"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string47 = "/usr/bin/mega-killsession" nocase ascii wide
+        $string47 = "/usr/bin/mega-killsession"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string48 = "/usr/bin/mega-lcd" nocase ascii wide
+        $string48 = "/usr/bin/mega-lcd"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string49 = "/usr/bin/mega-log" nocase ascii wide
+        $string49 = "/usr/bin/mega-log"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string50 = "/usr/bin/mega-login" nocase ascii wide
+        $string50 = "/usr/bin/mega-login"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string51 = "/usr/bin/mega-logout" nocase ascii wide
+        $string51 = "/usr/bin/mega-logout"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string52 = "/usr/bin/mega-lpwd" nocase ascii wide
+        $string52 = "/usr/bin/mega-lpwd"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string53 = "/usr/bin/mega-ls" nocase ascii wide
+        $string53 = "/usr/bin/mega-ls"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string54 = "/usr/bin/mega-mediainfo" nocase ascii wide
+        $string54 = "/usr/bin/mega-mediainfo"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string55 = "/usr/bin/mega-mkdir" nocase ascii wide
+        $string55 = "/usr/bin/mega-mkdir"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string56 = "/usr/bin/mega-mount" nocase ascii wide
+        $string56 = "/usr/bin/mega-mount"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string57 = "/usr/bin/mega-mv" nocase ascii wide
+        $string57 = "/usr/bin/mega-mv"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string58 = "/usr/bin/mega-passwd" nocase ascii wide
+        $string58 = "/usr/bin/mega-passwd"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string59 = "/usr/bin/mega-permissions" nocase ascii wide
+        $string59 = "/usr/bin/mega-permissions"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string60 = "/usr/bin/mega-preview" nocase ascii wide
+        $string60 = "/usr/bin/mega-preview"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string61 = "/usr/bin/mega-proxy" nocase ascii wide
+        $string61 = "/usr/bin/mega-proxy"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string62 = "/usr/bin/mega-put" nocase ascii wide
+        $string62 = "/usr/bin/mega-put"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string63 = "/usr/bin/mega-pwd" nocase ascii wide
+        $string63 = "/usr/bin/mega-pwd"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string64 = "/usr/bin/mega-quit" nocase ascii wide
+        $string64 = "/usr/bin/mega-quit"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string65 = "/usr/bin/mega-reload" nocase ascii wide
+        $string65 = "/usr/bin/mega-reload"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string66 = "/usr/bin/mega-rm" nocase ascii wide
+        $string66 = "/usr/bin/mega-rm"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string67 = "/usr/bin/mega-session" nocase ascii wide
+        $string67 = "/usr/bin/mega-session"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string68 = "/usr/bin/mega-share" nocase ascii wide
+        $string68 = "/usr/bin/mega-share"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string69 = "/usr/bin/mega-showpcr" nocase ascii wide
+        $string69 = "/usr/bin/mega-showpcr"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string70 = "/usr/bin/mega-signup" nocase ascii wide
+        $string70 = "/usr/bin/mega-signup"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string71 = "/usr/bin/mega-speedlimit" nocase ascii wide
+        $string71 = "/usr/bin/mega-speedlimit"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string72 = "/usr/bin/mega-sync" nocase ascii wide
+        $string72 = "/usr/bin/mega-sync"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string73 = "/usr/bin/mega-thumbnail" nocase ascii wide
+        $string73 = "/usr/bin/mega-thumbnail"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string74 = "/usr/bin/mega-transfers" nocase ascii wide
+        $string74 = "/usr/bin/mega-transfers"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string75 = "/usr/bin/mega-tree" nocase ascii wide
+        $string75 = "/usr/bin/mega-tree"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string76 = "/usr/bin/mega-userattr" nocase ascii wide
+        $string76 = "/usr/bin/mega-userattr"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string77 = "/usr/bin/mega-users" nocase ascii wide
+        $string77 = "/usr/bin/mega-users"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string78 = "/usr/bin/mega-version" nocase ascii wide
+        $string78 = "/usr/bin/mega-version"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string79 = "/usr/bin/mega-webdav" nocase ascii wide
+        $string79 = "/usr/bin/mega-webdav"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string80 = "/usr/bin/mega-whoami" nocase ascii wide
+        $string80 = "/usr/bin/mega-whoami"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string81 = "/usr/share/doc/megacmd/" nocase ascii wide
+        $string81 = "/usr/share/doc/megacmd/"
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
         $string82 = /\\\\\.\\\\pipe\\\\megacmdpipe_/ nocase ascii wide
@@ -904,7 +904,7 @@ rule MEGAcmd
         $string298 = /https\:\/\/mega\.nz\/folder\/gflVFLhC\#6neMkeJrt4dWboRTc1NLUg/ nocase ascii wide
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string299 = /https\:\/\/mega\.nz\/linux\/repo\/.{0,100}\.deb/ nocase ascii wide
+        $string299 = /https\:\/\/mega\.nz\/linux\/repo\/.{0,100}\.deb/
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
         $string300 = "killall mega-cmd" nocase ascii wide

@@ -1,7 +1,7 @@
 rule RITM
 {
     meta:
-        description = "Detection patterns for the tool 'RITM' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'RITM' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "RITM"
@@ -25,7 +25,7 @@ rule RITM
         $string5 = /\/RITM\.git/ nocase ascii wide
         // Description: python Man in the middle 
         // Reference: https://github.com/Tw1sm/RITM
-        $string6 = /\/roaster\.py/ nocase ascii wide
+        $string6 = /\/roaster\.py/
         // Description: python Man in the middle 
         // Reference: https://github.com/Tw1sm/RITM
         $string7 = /\/sniffer\.py/ nocase ascii wide

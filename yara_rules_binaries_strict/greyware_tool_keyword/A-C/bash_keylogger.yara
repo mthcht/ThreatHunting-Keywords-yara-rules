@@ -1,7 +1,7 @@
 rule bash_keylogger
 {
     meta:
-        description = "Detection patterns for the tool 'bash keylogger' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'bash keylogger' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "bash keylogger"
@@ -10,7 +10,7 @@ rule bash_keylogger
     strings:
         // Description: linux commands abused by attackers
         // Reference: N/A
-        $string1 = /history\s\-a.{0,100}\stail\s\-n1\s\~\/\.bash_history\s\>\s\/dev\/tcp\/.{0,100}\// nocase ascii wide
+        $string1 = /history\s\-a.{0,100}\stail\s\-n1\s\~\/\.bash_history\s\>\s\/dev\/tcp\/.{0,100}\//
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -1,7 +1,7 @@
 rule SMBCrunch
 {
     meta:
-        description = "Detection patterns for the tool 'SMBCrunch' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'SMBCrunch' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "SMBCrunch"
@@ -37,7 +37,7 @@ rule SMBCrunch
         $string9 = /\/SMBList\.pl/ nocase ascii wide
         // Description: SMBCrunch allows a red teamer to quickly identify Windows File Shares in a network - performs a recursive directory listing of the provided shares  and can even grab a file from the remote share if it looks like a juicy target.
         // Reference: https://github.com/Raikia/SMBCrunch
-        $string10 = /\/tmp\/smb_auth_temp_.{0,100}\.txt/ nocase ascii wide
+        $string10 = /\/tmp\/smb_auth_temp_.{0,100}\.txt/
         // Description: SMBCrunch allows a red teamer to quickly identify Windows File Shares in a network - performs a recursive directory listing of the provided shares  and can even grab a file from the remote share if it looks like a juicy target.
         // Reference: https://github.com/Raikia/SMBCrunch
         $string11 = /\\SMBGrab\.pl/ nocase ascii wide

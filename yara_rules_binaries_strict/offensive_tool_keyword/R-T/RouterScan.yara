@@ -1,7 +1,7 @@
 rule RouterScan
 {
     meta:
-        description = "Detection patterns for the tool 'RouterScan' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'RouterScan' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "RouterScan"
@@ -10,7 +10,7 @@ rule RouterScan
     strings:
         // Description: a penetration testing tool to maliciously scan for and brute force routers - cameras and network-attached storage devices with web interfaces
         // Reference: https://github.com/mustafashykh/router-scan
-        $string1 = "/pixiewps --" nocase ascii wide
+        $string1 = "/pixiewps --"
         // Description: a penetration testing tool to maliciously scan for and brute force routers - cameras and network-attached storage devices with web interfaces
         // Reference: https://github.com/mustafashykh/router-scan
         $string2 = /\/pixiewps\/archive\/master\.zip/ nocase ascii wide
@@ -25,10 +25,10 @@ rule RouterScan
         $string5 = /\/router\-scan\.git/ nocase ascii wide
         // Description: a penetration testing tool to maliciously scan for and brute force routers - cameras and network-attached storage devices with web interfaces
         // Reference: https://github.com/mustafashykh/router-scan
-        $string6 = /\/RouterScan\.log/ nocase ascii wide
+        $string6 = /\/RouterScan\.log/
         // Description: a penetration testing tool to maliciously scan for and brute force routers - cameras and network-attached storage devices with web interfaces
         // Reference: https://github.com/mustafashykh/router-scan
-        $string7 = /\/wlanpass\.txt/ nocase ascii wide
+        $string7 = /\/wlanpass\.txt/
         // Description: a penetration testing tool to maliciously scan for and brute force routers - cameras and network-attached storage devices with web interfaces
         // Reference: https://github.com/mustafashykh/router-scan
         $string8 = /\\Routerscan\.7z/ nocase ascii wide

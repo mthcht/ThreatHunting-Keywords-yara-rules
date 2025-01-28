@@ -1,7 +1,7 @@
 rule reverse_tunnel
 {
     meta:
-        description = "Detection patterns for the tool 'reverse-tunnel' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'reverse-tunnel' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "reverse-tunnel"
@@ -31,10 +31,10 @@ rule reverse_tunnel
         $string7 = "/rtun-freebsd-amd64" nocase ascii wide
         // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
         // Reference: https://github.com/snsinfu/reverse-tunnel
-        $string8 = "/rtun-linux-amd64" nocase ascii wide
+        $string8 = "/rtun-linux-amd64"
         // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
         // Reference: https://github.com/snsinfu/reverse-tunnel
-        $string9 = "/rtun-linux-arm64" nocase ascii wide
+        $string9 = "/rtun-linux-arm64"
         // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
         // Reference: https://github.com/snsinfu/reverse-tunnel
         $string10 = "/rtun-mac-amd64" nocase ascii wide
@@ -43,10 +43,10 @@ rule reverse_tunnel
         $string11 = "/rtun-server-freebsd-amd64" nocase ascii wide
         // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
         // Reference: https://github.com/snsinfu/reverse-tunnel
-        $string12 = "/rtun-server-linux-amd64" nocase ascii wide
+        $string12 = "/rtun-server-linux-amd64"
         // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
         // Reference: https://github.com/snsinfu/reverse-tunnel
-        $string13 = "/rtun-server-linux-arm64" nocase ascii wide
+        $string13 = "/rtun-server-linux-arm64"
         // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
         // Reference: https://github.com/snsinfu/reverse-tunnel
         $string14 = "/rtun-server-mac-amd64" nocase ascii wide

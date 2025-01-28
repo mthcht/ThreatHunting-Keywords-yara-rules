@@ -1,7 +1,7 @@
 rule Dameware
 {
     meta:
-        description = "Detection patterns for the tool 'Dameware' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Dameware' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Dameware"
@@ -13,10 +13,10 @@ rule Dameware
         $string1 = /\s\/monitor\s\/from_service\s\/cpu_memory_refresh\s.{0,1000}\s\/disk_space_refresh\s.{0,1000}\s\/proc_list_refresh\s.{0,1000}\s\/semkey\s/ nocase ascii wide
         // Description: Solarwind Dameware Remote Control utilities
         // Reference: https://www.solarwinds.com/fr/remote-support-software
-        $string2 = " /r /proxy  /proxyport  /proxyusername  /proxypasswd " nocase ascii wide
+        $string2 = " /r /proxy  /proxyport  /proxyusername  /proxypasswd "
         // Description: Solarwind Dameware Remote Control utilities
         // Reference: https://www.solarwinds.com/fr/remote-support-software
-        $string3 = " /register  /proxy  /proxyport  /proxyusername  /proxypasswd" nocase ascii wide
+        $string3 = " /register  /proxy  /proxyport  /proxyusername  /proxypasswd"
         // Description: Solarwind Dameware Remote Control utilities
         // Reference: https://www.solarwinds.com/fr/remote-support-software
         $string4 = " -a tcrmtshellagentmodule_" nocase ascii wide

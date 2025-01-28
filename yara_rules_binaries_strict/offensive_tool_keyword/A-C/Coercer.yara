@@ -1,7 +1,7 @@
 rule Coercer
 {
     meta:
-        description = "Detection patterns for the tool 'Coercer' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Coercer' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Coercer"
@@ -88,22 +88,19 @@ rule Coercer
         $string26 = "find_and_load_coerce_methods" nocase ascii wide
         // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
         // Reference: https://github.com/p0dalirius/Coercer
-        $string27 = /generate_exploit_path_from_template\(/ nocase ascii wide
+        $string27 = "generate_exploit_path_from_template" nocase ascii wide
         // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
         // Reference: https://github.com/p0dalirius/Coercer
-        $string28 = "generate_exploit_path_from_template" nocase ascii wide
+        $string28 = "install coercer" nocase ascii wide
         // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
         // Reference: https://github.com/p0dalirius/Coercer
-        $string29 = "install coercer" nocase ascii wide
+        $string29 = "p0dalirius/Coercer" nocase ascii wide
         // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
         // Reference: https://github.com/p0dalirius/Coercer
-        $string30 = "p0dalirius/Coercer" nocase ascii wide
+        $string30 = "pip install coercer" nocase ascii wide
         // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
         // Reference: https://github.com/p0dalirius/Coercer
-        $string31 = "pip install coercer" nocase ascii wide
-        // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
-        // Reference: https://github.com/p0dalirius/Coercer
-        $string32 = /podalirius\@protonmail\.com/ nocase ascii wide
+        $string31 = /podalirius\@protonmail\.com/ nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

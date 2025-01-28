@@ -1,7 +1,7 @@
 rule metasploit
 {
     meta:
-        description = "Detection patterns for the tool 'metasploit' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'metasploit' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "metasploit"
@@ -10,7 +10,7 @@ rule metasploit
     strings:
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
-        $string1 = /\s\-c\s\'import\spty\;pty\.spawn\(\\"\/bin\/sh/ nocase ascii wide
+        $string1 = /\s\-c\s\'import\spty\;pty\.spawn\(\\"\/bin\/sh/
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
         $string2 = " install metasploit-framework" nocase ascii wide
@@ -40,7 +40,7 @@ rule metasploit
         $string10 = " rapid7/msf-ubuntu" nocase ascii wide
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
-        $string11 = /\.\/msfinstall/ nocase ascii wide
+        $string11 = /\.\/msfinstall/
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
         $string12 = /\/.{0,1000}_priv_esc\./ nocase ascii wide
@@ -130,10 +130,10 @@ rule metasploit
         $string40 = /\/egghunter\.rb/ nocase ascii wide
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
-        $string41 = "/elf/dll" nocase ascii wide
+        $string41 = "/elf/dll"
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
-        $string42 = "/elf/exe" nocase ascii wide
+        $string42 = "/elf/exe"
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-omnibus
         $string43 = "/embedded/framework/msfdb-kali" nocase ascii wide
@@ -166,7 +166,7 @@ rule metasploit
         $string52 = /\/enum_snmp\.md/ nocase ascii wide
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
-        $string53 = "/evasion/windows/" nocase ascii wide
+        $string53 = "/evasion/windows/"
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
         $string54 = /\/exploit\.dll/ nocase ascii wide
@@ -175,7 +175,7 @@ rule metasploit
         $string55 = /\/exploit\.pbj/ nocase ascii wide
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
-        $string56 = "/exploit/linux/" nocase ascii wide
+        $string56 = "/exploit/linux/"
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
         $string57 = "/exploit/remote/" nocase ascii wide
@@ -184,7 +184,7 @@ rule metasploit
         $string58 = "/exploit/windows/" nocase ascii wide
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
-        $string59 = /\/extensions\/kiwi\/kiwi\.rb/ nocase ascii wide
+        $string59 = /\/extensions\/kiwi\/kiwi\.rb/
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
         $string60 = /\/flatten\-macho\.m/ nocase ascii wide
@@ -217,7 +217,7 @@ rule metasploit
         $string69 = "/gather/forensics" nocase ascii wide
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
-        $string70 = "/hashcat" nocase ascii wide
+        $string70 = "/hashcat"
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
         $string71 = /\/ielocalserver\.dll/ nocase ascii wide
@@ -244,10 +244,10 @@ rule metasploit
         $string78 = /\/ipmi_passwords\.txt/ nocase ascii wide
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
-        $string79 = "/juicypotato" nocase ascii wide
+        $string79 = "/juicypotato"
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
-        $string80 = /\/killav\./ nocase ascii wide
+        $string80 = /\/killav\./
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
         $string81 = /\/killav\.rb/ nocase ascii wide
@@ -268,7 +268,7 @@ rule metasploit
         $string86 = "/liboffsetfinder64" nocase ascii wide
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
-        $string87 = "/login_scanner" nocase ascii wide
+        $string87 = "/login_scanner"
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://www.metasploit.com/
         $string88 = "/Metasploit" nocase ascii wide
@@ -277,7 +277,7 @@ rule metasploit
         $string89 = "/metasploit/" nocase ascii wide
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-omnibus
-        $string90 = /\/metasploit_payloads\./ nocase ascii wide
+        $string90 = /\/metasploit_payloads\./
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-omnibus
         $string91 = "/metasploit-omnibus" nocase ascii wide
@@ -322,7 +322,7 @@ rule metasploit
         $string104 = /\/msfupdate\.ps1/ nocase ascii wide
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
-        $string105 = /\/msf\-ws\.log/ nocase ascii wide
+        $string105 = /\/msf\-ws\.log/
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
         $string106 = /\/mushishi\.h/ nocase ascii wide
@@ -334,13 +334,13 @@ rule metasploit
         $string108 = /\/netsparker\.rb/ nocase ascii wide
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
-        $string109 = "/ntapphelpcachecontrol" nocase ascii wide
+        $string109 = "/ntapphelpcachecontrol"
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
         $string110 = /\/open_vas\.rb/ nocase ascii wide
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-omnibus
-        $string111 = "/opt/metasploit-framework" nocase ascii wide
+        $string111 = "/opt/metasploit-framework"
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
         $string112 = /\/patchfinder64\./ nocase ascii wide
@@ -349,7 +349,7 @@ rule metasploit
         $string113 = "/payloads/util" nocase ascii wide
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
-        $string114 = "/pe/dll" nocase ascii wide
+        $string114 = "/pe/dll"
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
         $string115 = "/peinjector" nocase ascii wide
@@ -373,7 +373,7 @@ rule metasploit
         $string121 = "/proxymaybeshell" nocase ascii wide
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
-        $string122 = /\/psexec\.json/ nocase ascii wide
+        $string122 = /\/psexec\.json/
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
         $string123 = "/psnuffle" nocase ascii wide
@@ -403,7 +403,7 @@ rule metasploit
         $string131 = "/RogueWinRMexe" nocase ascii wide
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
-        $string132 = "/rottenpotato" nocase ascii wide
+        $string132 = "/rottenpotato"
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
         $string133 = /\/rpcbomb\.rb/ nocase ascii wide
@@ -472,10 +472,10 @@ rule metasploit
         $string154 = /\/telnet_cdata_ftth_backdoor_userpass\.txt/ nocase ascii wide
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
-        $string155 = "/TriggerLinux/" nocase ascii wide
+        $string155 = "/TriggerLinux/"
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-omnibus
-        $string156 = "/usr/share/metasploit" nocase ascii wide
+        $string156 = "/usr/share/metasploit"
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
         $string157 = /\/vmware_enum_.{0,1000}\.rb/ nocase ascii wide
@@ -658,7 +658,7 @@ rule metasploit
         $string216 = /auto_pass_the_hash\.rc/ nocase ascii wide
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
-        $string217 = /auto_target_linux\.rb/ nocase ascii wide
+        $string217 = /auto_target_linux\.rb/
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
         $string218 = /auto_target_windows\.rb/ nocase ascii wide
@@ -709,7 +709,7 @@ rule metasploit
         $string233 = /burnett_top_1024\.txt/ nocase ascii wide
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
-        $string234 = "byakugan/bin/" nocase ascii wide
+        $string234 = "byakugan/bin/"
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
         $string235 = "bypass_cmdinject" nocase ascii wide
@@ -775,7 +775,7 @@ rule metasploit
         $string255 = "cfprefsd_race_condition" nocase ascii wide
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
-        $string256 = "chmod 755 msfinstall" nocase ascii wide
+        $string256 = "chmod 755 msfinstall"
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
         $string257 = /chocobo_root\.c/ nocase ascii wide
@@ -1129,10 +1129,10 @@ rule metasploit
         $string373 = /libnspr_nspr_log_file_priv_esc\./ nocase ascii wide
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
-        $string374 = /libxpc_mitm_ssudo\./ nocase ascii wide
+        $string374 = /libxpc_mitm_ssudo\./
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
-        $string375 = "Linux_LPE_eBPF_CVE" nocase ascii wide
+        $string375 = "Linux_LPE_eBPF_CVE"
         // Description: metasploit command lines patterns
         // Reference: N/A
         $string376 = "list_tokens -u" nocase ascii wide
@@ -1543,7 +1543,7 @@ rule metasploit
         $string511 = /root_userpass\.txt/ nocase ascii wide
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
-        $string512 = "root-shellcode-linux" nocase ascii wide
+        $string512 = "root-shellcode-linux"
         // Description: Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // Reference: https://github.com/rapid7/metasploit-framework
         $string513 = /rottenpotato\.x64\.dll/ nocase ascii wide

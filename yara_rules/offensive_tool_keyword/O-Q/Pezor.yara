@@ -1,7 +1,7 @@
 rule Pezor
 {
     meta:
-        description = "Detection patterns for the tool 'Pezor' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Pezor' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Pezor"
@@ -52,7 +52,7 @@ rule Pezor
         $string14 = /\s\-format\=service\-exe\s.{0,1000}\.exe/ nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string15 = " kalilinux/kali-rolling" nocase ascii wide
+        $string15 = " kalilinux/kali-rolling"
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
         $string16 = /\s\-p\s.{0,1000}\\mimi\.out/ nocase ascii wide
@@ -61,10 +61,10 @@ rule Pezor
         $string17 = /\sPEzor\.py\s/ nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string18 = /\sPEzor\.sh\s/ nocase ascii wide
+        $string18 = /\sPEzor\.sh\s/
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string19 = /\sPEzor\.sh\s/ nocase ascii wide
+        $string19 = /\sPEzor\.sh\s/
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
         $string20 = " -sgn -syscalls " nocase ascii wide
@@ -85,22 +85,22 @@ rule Pezor
         $string25 = " -unhook -syscalls -obfuscate " nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string26 = /\.\/PEzor\.sh/ nocase ascii wide
+        $string26 = /\.\/PEzor\.sh/
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string27 = /\.sh\s\-format\=bof\s.{0,1000}\.exe/ nocase ascii wide
+        $string27 = /\.sh\s\-format\=bof\s.{0,1000}\.exe/
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string28 = /\.sh\s\-format\=service\-dll\s/ nocase ascii wide
+        $string28 = /\.sh\s\-format\=service\-dll\s/
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string29 = /\.sh\s\-format\=service\-exe\s/ nocase ascii wide
+        $string29 = /\.sh\s\-format\=service\-exe\s/
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string30 = /\.sh\s\-xorkey\=/ nocase ascii wide
+        $string30 = /\.sh\s\-xorkey\=/
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string31 = /\/bof\.cpp\s/ nocase ascii wide
+        $string31 = /\/bof\.cpp\s/
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
         $string32 = /\/inject\.cpp/ nocase ascii wide
@@ -121,10 +121,10 @@ rule Pezor
         $string37 = /\/PEzor\.git/ nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string38 = /\/PEzor\.py/ nocase ascii wide
+        $string38 = /\/PEzor\.py/
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string39 = /\/PEzor\.sh\s/ nocase ascii wide
+        $string39 = /\/PEzor\.sh\s/
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
         $string40 = /\/PEzor\/inject\.cpp/ nocase ascii wide
@@ -145,7 +145,7 @@ rule Pezor
         $string45 = /\/shellcode\.hpp/ nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string46 = /\/system\:SystemBkup\.hiv\s\/sam\:SamBkup\.hiv/ nocase ascii wide
+        $string46 = /\/system\:SystemBkup\.hiv\s\/sam\:SamBkup\.hiv/
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
         $string47 = /\[PEzor\]\scleanup\scomplete/ nocase ascii wide
@@ -226,16 +226,16 @@ rule Pezor
         $string72 = /Pezor.{0,1000}inject\.hpp/ nocase ascii wide
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string73 = /PEzor\.sh\s\-/ nocase ascii wide
+        $string73 = /PEzor\.sh\s\-/
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string74 = /PEzor\.sh\s.{0,1000}\.bin/ nocase ascii wide
+        $string74 = /PEzor\.sh\s.{0,1000}\.bin/
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string75 = /PEzor\.sh\s\-32/ nocase ascii wide
+        $string75 = /PEzor\.sh\s\-32/
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
-        $string76 = /PEzor\.sh\s\-64/ nocase ascii wide
+        $string76 = /PEzor\.sh\s\-64/
         // Description: Open-Source Shellcode & PE Packer
         // Reference: https://github.com/phra/PEzor
         $string77 = /PEzor\/.{0,1000}\/bof\.cpp/ nocase ascii wide

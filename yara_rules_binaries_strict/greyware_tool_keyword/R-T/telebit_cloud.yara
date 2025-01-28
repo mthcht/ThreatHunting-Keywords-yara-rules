@@ -1,7 +1,7 @@
 rule telebit_cloud
 {
     meta:
-        description = "Detection patterns for the tool 'telebit.cloud' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'telebit.cloud' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "telebit.cloud"
@@ -13,25 +13,25 @@ rule telebit_cloud
         $string1 = /\.config\/telebit\/telebitd\.yml/ nocase ascii wide
         // Description: Access your devices - Share your stuff (shell from telebit.cloud)
         // Reference: https://telebit.cloud/
-        $string2 = /\/cloud\.telebit\.remote\.plist/ nocase ascii wide
+        $string2 = /\/cloud\.telebit\.remote\.plist/
         // Description: Access your devices - Share your stuff (shell from telebit.cloud)
         // Reference: https://telebit.cloud/
-        $string3 = "/opt/telebit" nocase ascii wide
+        $string3 = "/opt/telebit"
         // Description: Access your devices - Share your stuff (shell from telebit.cloud)
         // Reference: https://telebit.cloud/
-        $string4 = "/telebit http " nocase ascii wide
+        $string4 = "/telebit http "
         // Description: Access your devices - Share your stuff (shell from telebit.cloud)
         // Reference: https://telebit.cloud/
-        $string5 = /\/telebit\.js\.git/ nocase ascii wide
+        $string5 = /\/telebit\.js\.git/
         // Description: Access your devices - Share your stuff (shell from telebit.cloud)
         // Reference: https://telebit.cloud/
-        $string6 = /\/telebit\.service/ nocase ascii wide
+        $string6 = /\/telebit\.service/
         // Description: Access your devices - Share your stuff (shell from telebit.cloud)
         // Reference: https://telebit.cloud/
-        $string7 = "/telebit/var/log/" nocase ascii wide
+        $string7 = "/telebit/var/log/"
         // Description: Access your devices - Share your stuff (shell from telebit.cloud)
         // Reference: https://telebit.cloud/
-        $string8 = /\/telebit\-remote\.js/ nocase ascii wide
+        $string8 = /\/telebit\-remote\.js/
         // Description: Access your devices - Share your stuff (shell from telebit.cloud)
         // Reference: https://telebit.cloud/
         $string9 = /bin\/telebit\.js/ nocase ascii wide

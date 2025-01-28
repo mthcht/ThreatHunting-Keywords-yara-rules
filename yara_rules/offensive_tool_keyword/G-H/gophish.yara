@@ -1,7 +1,7 @@
 rule gophish
 {
     meta:
-        description = "Detection patterns for the tool 'gophish' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'gophish' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "gophish"
@@ -28,7 +28,7 @@ rule gophish
         $string6 = /evilfeed\.go/ nocase ascii wide
         // Description: Combination of evilginx2 and GoPhish
         // Reference: https://github.com/fin3ss3g0d/evilgophish
-        $string7 = "evilginx-linux" nocase ascii wide
+        $string7 = "evilginx-linux"
         // Description: Combination of evilginx2 and GoPhish
         // Reference: https://github.com/fin3ss3g0d/evilgophish
         $string8 = "evilgophish" nocase ascii wide

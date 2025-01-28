@@ -1,7 +1,7 @@
 rule Shellcode_Downloader_CreateThread_Execution
 {
     meta:
-        description = "Detection patterns for the tool 'Shellcode-Downloader-CreateThread-Execution' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Shellcode-Downloader-CreateThread-Execution' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Shellcode-Downloader-CreateThread-Execution"

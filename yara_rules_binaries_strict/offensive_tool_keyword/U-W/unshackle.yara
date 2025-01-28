@@ -1,7 +1,7 @@
 rule unshackle
 {
     meta:
-        description = "Detection patterns for the tool 'unshackle' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'unshackle' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "unshackle"
@@ -10,25 +10,25 @@ rule unshackle
     strings:
         // Description: Unshackle is an open-source tool to bypass Windows and Linux user passwords from a bootable USB based on Linux
         // Reference: https://github.com/Fadi002/unshackle
-        $string1 = "/bin/unshackle" nocase ascii wide
+        $string1 = "/bin/unshackle"
         // Description: Unshackle is an open-source tool to bypass Windows and Linux user passwords from a bootable USB based on Linux
         // Reference: https://github.com/Fadi002/unshackle
-        $string2 = /\/unshackle\.git/ nocase ascii wide
+        $string2 = /\/unshackle\.git/
         // Description: Unshackle is an open-source tool to bypass Windows and Linux user passwords from a bootable USB based on Linux
         // Reference: https://github.com/Fadi002/unshackle
-        $string3 = /\/unshackle\.modules/ nocase ascii wide
+        $string3 = /\/unshackle\.modules/
         // Description: Unshackle is an open-source tool to bypass Windows and Linux user passwords from a bootable USB based on Linux
         // Reference: https://github.com/Fadi002/unshackle
-        $string4 = "Fadi002/unshackle" nocase ascii wide
+        $string4 = "Fadi002/unshackle"
         // Description: Unshackle is an open-source tool to bypass Windows and Linux user passwords from a bootable USB based on Linux
         // Reference: https://github.com/Fadi002/unshackle
-        $string5 = "unshackle --" nocase ascii wide
+        $string5 = "unshackle --"
         // Description: Unshackle is an open-source tool to bypass Windows and Linux user passwords from a bootable USB based on Linux
         // Reference: https://github.com/Fadi002/unshackle
-        $string6 = "unshackle-main" nocase ascii wide
+        $string6 = "unshackle-main"
         // Description: Unshackle is an open-source tool to bypass Windows and Linux user passwords from a bootable USB based on Linux
         // Reference: https://github.com/Fadi002/unshackle
-        $string7 = /unshackle\-v1\.0\.iso/ nocase ascii wide
+        $string7 = /unshackle\-v1\.0\.iso/
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

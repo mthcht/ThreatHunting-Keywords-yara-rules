@@ -1,7 +1,7 @@
 rule _4shared_com
 {
     meta:
-        description = "Detection patterns for the tool '4shared.com' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool '4shared.com' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "4shared.com"

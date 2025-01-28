@@ -1,7 +1,7 @@
 rule rustcat
 {
     meta:
-        description = "Detection patterns for the tool 'rustcat' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'rustcat' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "rustcat"
@@ -10,7 +10,7 @@ rule rustcat
     strings:
         // Description: Rustcat(rcat) - The modern Port listener and Reverse shell
         // Reference: https://github.com/robiot/rustcat
-        $string1 = /\/bin\/bash\s\-c\s\'bash\s\-i\s\>\&\s\/dev\/tcp\/.{0,100}\/.{0,100}\s0\>\&1\'/ nocase ascii wide
+        $string1 = /\/bin\/bash\s\-c\s\'bash\s\-i\s\>\&\s\/dev\/tcp\/.{0,100}\/.{0,100}\s0\>\&1\'/
         // Description: Rustcat(rcat) - The modern Port listener and Reverse shell
         // Reference: https://github.com/robiot/rustcat
         $string2 = /\/rcat\-v.{0,100}\-win\-x86_64\.exe/ nocase ascii wide
@@ -37,10 +37,10 @@ rule rustcat
         $string9 = "rcan listen -ib " nocase ascii wide
         // Description: Rustcat(rcat) - The modern Port listener and Reverse shell
         // Reference: https://github.com/robiot/rustcat
-        $string10 = "rcat c -s bash " nocase ascii wide
+        $string10 = "rcat c -s bash "
         // Description: Rustcat(rcat) - The modern Port listener and Reverse shell
         // Reference: https://github.com/robiot/rustcat
-        $string11 = "rcat connect -s bash" nocase ascii wide
+        $string11 = "rcat connect -s bash"
         // Description: Rustcat(rcat) - The modern Port listener and Reverse shell
         // Reference: https://github.com/robiot/rustcat
         $string12 = "rcat listen 55660" nocase ascii wide
@@ -52,13 +52,13 @@ rule rustcat
         $string14 = "rcat listen -l " nocase ascii wide
         // Description: Rustcat(rcat) - The modern Port listener and Reverse shell
         // Reference: https://github.com/robiot/rustcat
-        $string15 = /rcat\-v3\..{0,100}darwin\-aarch64/ nocase ascii wide
+        $string15 = /rcat\-v3\..{0,100}darwin\-aarch64/
         // Description: Rustcat(rcat) - The modern Port listener and Reverse shell
         // Reference: https://github.com/robiot/rustcat
-        $string16 = /rcat\-v3\..{0,100}\-darwin\-x86_64/ nocase ascii wide
+        $string16 = /rcat\-v3\..{0,100}\-darwin\-x86_64/
         // Description: Rustcat(rcat) - The modern Port listener and Reverse shell
         // Reference: https://github.com/robiot/rustcat
-        $string17 = /rcat\-v3\..{0,100}\-linux\-x86_64/ nocase ascii wide
+        $string17 = /rcat\-v3\..{0,100}\-linux\-x86_64/
         // Description: Rustcat(rcat) - The modern Port listener and Reverse shell
         // Reference: https://github.com/robiot/rustcat
         $string18 = /rustcat\-3\.0\.0\.zip/ nocase ascii wide

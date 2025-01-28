@@ -1,7 +1,7 @@
 rule monkey
 {
     meta:
-        description = "Detection patterns for the tool 'monkey' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'monkey' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "monkey"
@@ -10,7 +10,7 @@ rule monkey
     strings:
         // Description: Infection Monkey - An automated pentest tool
         // Reference: https://github.com/guardicore/monkey
-        $string1 = /\.\/monkey\.sh/ nocase ascii wide
+        $string1 = /\.\/monkey\.sh/
         // Description: Infection Monkey - An automated pentest tool
         // Reference: https://github.com/guardicore/monkey
         $string2 = "/infection_monkey/" nocase ascii wide
@@ -91,7 +91,7 @@ rule monkey
         $string27 = /infection_monkey\.py/ nocase ascii wide
         // Description: Infection Monkey - An automated pentest tool
         // Reference: https://github.com/guardicore/monkey
-        $string28 = /linux_trap_command\.py/ nocase ascii wide
+        $string28 = /linux_trap_command\.py/
         // Description: Infection Monkey - An automated pentest tool
         // Reference: https://github.com/guardicore/monkey
         $string29 = /mimikatz_cred_collector\.py/ nocase ascii wide
@@ -115,10 +115,10 @@ rule monkey
         $string35 = /monkey64\.exe\s/ nocase ascii wide
         // Description: Infection Monkey - An automated pentest tool
         // Reference: https://github.com/guardicore/monkey
-        $string36 = "monkey-linux-32" nocase ascii wide
+        $string36 = "monkey-linux-32"
         // Description: Infection Monkey - An automated pentest tool
         // Reference: https://github.com/guardicore/monkey
-        $string37 = "monkey-linux-64" nocase ascii wide
+        $string37 = "monkey-linux-64"
         // Description: Infection Monkey - An automated pentest tool
         // Reference: https://github.com/guardicore/monkey
         $string38 = /monkey\-windows\-32\.exe/ nocase ascii wide

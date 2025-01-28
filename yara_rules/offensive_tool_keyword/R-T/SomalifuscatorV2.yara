@@ -1,7 +1,7 @@
 rule SomalifuscatorV2
 {
     meta:
-        description = "Detection patterns for the tool 'SomalifuscatorV2' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'SomalifuscatorV2' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "SomalifuscatorV2"
@@ -49,7 +49,7 @@ rule SomalifuscatorV2
         $string13 = "d71e7b439225124e610f0a5faa4a8170961d5ed80088144a1326db7e661cf646" nocase ascii wide
         // Description: windows batch obfuscator
         // Reference: https://github.com/KDot227/SomalifuscatorV2
-        $string14 = /echo\s\%cmdcmdline\%\s\|\sfind\s\/i\s\\"\%\~f0\\"\>nul\s\|\|\sexit\s\/b\s1/ nocase ascii wide
+        $string14 = /echo\s\%cmdcmdline\%\s\|\sfind\s\/i\s\\"\%\~f0\\"\>nul\s\|\|\sexit\s\/b\s1/
         // Description: windows batch obfuscator
         // Reference: https://github.com/KDot227/SomalifuscatorV2
         $string15 = /https\:\/\/raw\.githubusercontent\.com\/KDot227\// nocase ascii wide

@@ -1,7 +1,7 @@
 rule PyExfil
 {
     meta:
-        description = "Detection patterns for the tool 'PyExfil' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'PyExfil' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "PyExfil"
@@ -19,7 +19,7 @@ rule PyExfil
         $string3 = /\/http_exfiltration\.py/ nocase ascii wide
         // Description: A Python Package for Data Exfiltration
         // Reference: https://github.com/ytisf/PyExfil
-        $string4 = /\/icmp_exfiltration\.py/ nocase ascii wide
+        $string4 = /\/icmp_exfiltration\.py/
         // Description: A Python Package for Data Exfiltration
         // Reference: https://github.com/ytisf/PyExfil
         $string5 = /\/pop_exfil_client\.py/ nocase ascii wide
@@ -79,7 +79,7 @@ rule PyExfil
         $string23 = "cd PyExfil" nocase ascii wide
         // Description: A Python Package for Data Exfiltration
         // Reference: https://github.com/ytisf/PyExfil
-        $string24 = /encode\sbaseImage\.jpg\s\/etc\/passwd\snewImage\.jpg/ nocase ascii wide
+        $string24 = /encode\sbaseImage\.jpg\s\/etc\/passwd\snewImage\.jpg/
         // Description: A Python Package for Data Exfiltration
         // Reference: https://github.com/ytisf/PyExfil
         $string25 = "FILE_TO_EXFIL = \"" nocase ascii wide

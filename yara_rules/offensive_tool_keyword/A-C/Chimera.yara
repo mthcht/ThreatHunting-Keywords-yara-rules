@@ -1,7 +1,7 @@
 rule chimera
 {
     meta:
-        description = "Detection patterns for the tool 'chimera' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'chimera' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "chimera"
@@ -28,19 +28,19 @@ rule chimera
         $string6 = /\/chimera\.sh/ nocase ascii wide
         // Description: Chimera is a PowerShell obfuscation script designed to bypass AMSI and commercial antivirus solutions.
         // Reference: https://github.com/tokyoneon/Chimera/
-        $string7 = "/opt/chimera" nocase ascii wide
+        $string7 = "/opt/chimera"
         // Description: Chimera is a PowerShell obfuscation script designed to bypass AMSI and commercial antivirus solutions.
         // Reference: https://github.com/tokyoneon/Chimera/
-        $string8 = /\/tmp\/chimera\.ps1/ nocase ascii wide
+        $string8 = /\/tmp\/chimera\.ps1/
         // Description: Chimera is a PowerShell obfuscation script designed to bypass AMSI and commercial antivirus solutions.
         // Reference: https://github.com/tokyoneon/Chimera/
-        $string9 = /\/tmp\/payload\.ps1/ nocase ascii wide
+        $string9 = /\/tmp\/payload\.ps1/
         // Description: Chimera is a PowerShell obfuscation script designed to bypass AMSI and commercial antivirus solutions.
         // Reference: https://github.com/tokyoneon/Chimera/
-        $string10 = /\/tmp\/vt\-post\-.{0,1000}\.txt/ nocase ascii wide
+        $string10 = /\/tmp\/vt\-post\-.{0,1000}\.txt/
         // Description: Chimera is a PowerShell obfuscation script designed to bypass AMSI and commercial antivirus solutions.
         // Reference: https://github.com/tokyoneon/Chimera/
-        $string11 = /\/tmp\/vt\-results\-.{0,1000}\.txt/ nocase ascii wide
+        $string11 = /\/tmp\/vt\-results\-.{0,1000}\.txt/
         // Description: Chimera is a PowerShell obfuscation script designed to bypass AMSI and commercial antivirus solutions.
         // Reference: https://github.com/tokyoneon/Chimera/
         $string12 = /Add\-RegBackdoor\.ps1/ nocase ascii wide

@@ -1,7 +1,7 @@
 rule taskkill
 {
     meta:
-        description = "Detection patterns for the tool 'taskkill' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'taskkill' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "taskkill"
@@ -230,6 +230,12 @@ rule taskkill
         // Description: evade EDR/AV by repairing with msiexec and killing the process
         // Reference: https://badoption.eu/blog/2024/03/23/cortex.html
         $string74 = /taskkill\.exe\s\/F\s\/IM\smsiexec\.exe/ nocase ascii wide
+        // Description: outputs a verbose list of all running processes associated with the SYSTEM account
+        // Reference: N/A
+        $string75 = "tasklist /v /fi \"username eq system\"" nocase ascii wide
+        // Description: outputs a verbose list of all running processes associated with the SYSTEM account
+        // Reference: N/A
+        $string76 = /tasklist\.exe\\"\s\/v\s\/fi\s\\"username\seq\ssystem\\"/ nocase ascii wide
 
     condition:
         any of them

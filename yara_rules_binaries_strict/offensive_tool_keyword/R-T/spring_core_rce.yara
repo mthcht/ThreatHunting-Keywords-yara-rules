@@ -1,7 +1,7 @@
 rule spring_core_rce
 {
     meta:
-        description = "Detection patterns for the tool 'spring-core-rce' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'spring-core-rce' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "spring-core-rce"
@@ -13,7 +13,7 @@ rule spring_core_rce
         $string1 = "/spring-core-rce" nocase ascii wide
         // Description: CVE-2022-22965 : about spring core rce
         // Reference: https://github.com/Mr-xn/spring-core-rce
-        $string2 = /cat\s\.\/apache\-tomcat\-8\.5\.77\/webapps\/ROOT\/tomcatwar\.jsp/ nocase ascii wide
+        $string2 = /cat\s\.\/apache\-tomcat\-8\.5\.77\/webapps\/ROOT\/tomcatwar\.jsp/
         // Description: github user infosec hosting exploitation tools
         // Reference: https://github.com/Mr-xn/spring-core-rce
         $string3 = /github.{0,100}\/Mr\-xn\// nocase ascii wide

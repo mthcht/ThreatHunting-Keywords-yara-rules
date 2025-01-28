@@ -1,7 +1,7 @@
 rule softperfect_networkscanner
 {
     meta:
-        description = "Detection patterns for the tool 'softperfect networkscanner' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'softperfect networkscanner' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "softperfect networkscanner"
@@ -31,7 +31,7 @@ rule softperfect_networkscanner
         $string7 = /\/netscan\.exe/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string8 = /\/netscan_linux\.tar\.gz/ nocase ascii wide
+        $string8 = /\/netscan_linux\.tar\.gz/
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
         $string9 = /\/netscan_macos\.dmg/ nocase ascii wide

@@ -1,7 +1,7 @@
 rule BabyShark
 {
     meta:
-        description = "Detection patterns for the tool 'BabyShark' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'BabyShark' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "BabyShark"
@@ -13,7 +13,7 @@ rule BabyShark
         $string1 = /\/BabyShark\.git/ nocase ascii wide
         // Description: This is a basic C2 generic server written in Python and Flask.
         // Reference: https://github.com/UnkL4b/BabyShark
-        $string2 = "/home/daddyShark/BabySh4rk/" nocase ascii wide
+        $string2 = "/home/daddyShark/BabySh4rk/"
         // Description: This is a basic C2 generic server written in Python and Flask.
         // Reference: https://github.com/UnkL4b/BabyShark
         $string3 = /\/momyshark\.html/ nocase ascii wide

@@ -1,7 +1,7 @@
 rule Hak5_Wifi_Pineapple
 {
     meta:
-        description = "Detection patterns for the tool 'Hak5 Wifi Pineapple' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Hak5 Wifi Pineapple' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Hak5 Wifi Pineapple"

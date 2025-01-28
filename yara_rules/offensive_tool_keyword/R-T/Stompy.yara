@@ -1,7 +1,7 @@
 rule Stompy
 {
     meta:
-        description = "Detection patterns for the tool 'Stompy' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Stompy' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Stompy"
@@ -16,7 +16,7 @@ rule Stompy
         $string2 = /\sStomPY\.py\s/ nocase ascii wide
         // Description: Timestomp Tool to flatten MAC times with a specific timestamp
         // Reference: https://github.com/ZephrFish/Stompy
-        $string3 = /\.\/GoStompy\s/ nocase ascii wide
+        $string3 = /\.\/GoStompy\s/
         // Description: Timestomp Tool to flatten MAC times with a specific timestamp
         // Reference: https://github.com/ZephrFish/Stompy
         $string4 = /\.exe.{0,1000}\s\-path\s.{0,1000}\s\-newTimestamp\s.{0,1000}\s\-username\s.{0,1000}\s\-password\s/ nocase ascii wide

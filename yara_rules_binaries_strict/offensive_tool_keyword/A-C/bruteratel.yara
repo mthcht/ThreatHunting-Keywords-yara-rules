@@ -1,7 +1,7 @@
 rule bruteratel
 {
     meta:
-        description = "Detection patterns for the tool 'bruteratel' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'bruteratel' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "bruteratel"
@@ -58,7 +58,7 @@ rule bruteratel
         $string16 = /\/brutereflect\.dll/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string17 = "/commander-runme" nocase ascii wide
+        $string17 = "/commander-runme"
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
         $string18 = "/Process-Instrumentation-Syscall-Hook" nocase ascii wide

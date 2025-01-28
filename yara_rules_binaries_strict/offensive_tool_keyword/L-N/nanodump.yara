@@ -1,7 +1,7 @@
 rule nanodump
 {
     meta:
-        description = "Detection patterns for the tool 'nanodump' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'nanodump' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "nanodump"
@@ -244,7 +244,7 @@ rule nanodump
         $string78 = /randomize_sw2_seed\.py/ nocase ascii wide
         // Description: The swiss army knife of LSASS dumping. A flexible tool that creates a minidump of the LSASS process.
         // Reference: https://github.com/fortra/nanodump
-        $string79 = /restore_signature\.sh\s.{0,100}\.dmp/ nocase ascii wide
+        $string79 = /restore_signature\.sh\s.{0,100}\.dmp/
         // Description: The swiss army knife of LSASS dumping. A flexible tool that creates a minidump of the LSASS process.
         // Reference: https://github.com/fortra/nanodump
         $string80 = "run_ppl_dump_exploit" nocase ascii wide

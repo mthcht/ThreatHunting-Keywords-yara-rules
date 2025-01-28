@@ -1,7 +1,7 @@
 rule GraphStrike
 {
     meta:
-        description = "Detection patterns for the tool 'GraphStrike' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'GraphStrike' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "GraphStrike"
@@ -31,7 +31,7 @@ rule GraphStrike
         $string7 = "/GraphStrike-main/" nocase ascii wide
         // Description: Cobalt Strike HTTPS beaconing over Microsoft Graph API
         // Reference: https://github.com/RedSiege/GraphStrike
-        $string8 = "/opt/cobaltstrike/" nocase ascii wide
+        $string8 = "/opt/cobaltstrike/"
         // Description: Cobalt Strike HTTPS beaconing over Microsoft Graph API
         // Reference: https://github.com/RedSiege/GraphStrike
         $string9 = /\[\+\]\sRandomizing\ssyscall\snames/ nocase ascii wide

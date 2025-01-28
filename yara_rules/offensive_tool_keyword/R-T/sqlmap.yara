@@ -1,7 +1,7 @@
 rule sqlmap
 {
     meta:
-        description = "Detection patterns for the tool 'sqlmap' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'sqlmap' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "sqlmap"
@@ -10,130 +10,130 @@ rule sqlmap
     strings:
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string1 = " --batch --dbs" nocase ascii wide
+        $string1 = " --batch --dbs"
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string2 = " --batch --password" nocase ascii wide
+        $string2 = " --batch --password"
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string3 = " --check-tor " nocase ascii wide
+        $string3 = " --check-tor "
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string4 = " --crawl=" nocase ascii wide
+        $string4 = " --crawl="
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string5 = " --dbms=mysql -u " nocase ascii wide
+        $string5 = " --dbms=mysql -u "
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string6 = " --msf-path" nocase ascii wide
+        $string6 = " --msf-path"
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string7 = " --os-bof" nocase ascii wide
+        $string7 = " --os-bof"
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string8 = " --os-cmd whoami" nocase ascii wide
+        $string8 = " --os-cmd whoami"
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string9 = " --os-pwn" nocase ascii wide
+        $string9 = " --os-pwn"
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string10 = " --os-smbrelay" nocase ascii wide
+        $string10 = " --os-smbrelay"
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string11 = " --priv-esc" nocase ascii wide
+        $string11 = " --priv-esc"
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string12 = " --random-agent " nocase ascii wide
+        $string12 = " --random-agent "
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string13 = " --sql-shell" nocase ascii wide
+        $string13 = " --sql-shell"
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string14 = " --tor " nocase ascii wide
+        $string14 = " --tor "
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string15 = " --tor-port" nocase ascii wide
+        $string15 = " --tor-port"
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string16 = " --tor-type" nocase ascii wide
+        $string16 = " --tor-type"
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string17 = /\s\-u\s.{0,1000}http.{0,1000}\s\-\-dbs/ nocase ascii wide
+        $string17 = /\s\-u\s.{0,1000}http.{0,1000}\s\-\-dbs/
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string18 = /\s\-u\s.{0,1000}http.{0,1000}\s\-\-os\-shell/ nocase ascii wide
+        $string18 = /\s\-u\s.{0,1000}http.{0,1000}\s\-\-os\-shell/
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string19 = /\s\-\-union\-char\s.{0,1000}GsFRts2/ nocase ascii wide
+        $string19 = /\s\-\-union\-char\s.{0,1000}GsFRts2/
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string20 = "/Sqlmap" nocase ascii wide
+        $string20 = "/Sqlmap"
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string21 = /\/vulnserver\.py/ nocase ascii wide
+        $string21 = /\/vulnserver\.py/
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string22 = /backdoor\.asp/ nocase ascii wide
+        $string22 = /backdoor\.asp/
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string23 = /backdoor\.aspx/ nocase ascii wide
+        $string23 = /backdoor\.aspx/
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string24 = /backdoor\.jsp/ nocase ascii wide
+        $string24 = /backdoor\.jsp/
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string25 = /backdoor\.php/ nocase ascii wide
+        $string25 = /backdoor\.php/
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string26 = "--batch --dump -T " nocase ascii wide
+        $string26 = "--batch --dump -T "
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string27 = "data/shell/backdoors" nocase ascii wide
+        $string27 = "data/shell/backdoors"
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string28 = "data/shell/stagers" nocase ascii wide
+        $string28 = "data/shell/stagers"
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string29 = "--file-read=/etc/passwd" nocase ascii wide
+        $string29 = "--file-read=/etc/passwd"
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
         $string30 = /icmpsh\.exe/ nocase ascii wide
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string31 = /icmpsh_m\.py/ nocase ascii wide
+        $string31 = /icmpsh_m\.py/
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string32 = /icmpsh\-m\.c/ nocase ascii wide
+        $string32 = /icmpsh\-m\.c/
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string33 = /icmpsh\-m\.pl/ nocase ascii wide
+        $string33 = /icmpsh\-m\.pl/
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string34 = /shellcodeexec\.x32/ nocase ascii wide
+        $string34 = /shellcodeexec\.x32/
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string35 = /shellcodeexec\.x64/ nocase ascii wide
+        $string35 = /shellcodeexec\.x64/
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string36 = "sqlmap -" nocase ascii wide
+        $string36 = "sqlmap -"
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string37 = /sqlmap\.conf/ nocase ascii wide
+        $string37 = /sqlmap\.conf/
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string38 = /sqlmap\.py/ nocase ascii wide
+        $string38 = /sqlmap\.py/
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string39 = "sqlmapapi -" nocase ascii wide
+        $string39 = "sqlmapapi -"
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string40 = /sqlmapapi\.py/ nocase ascii wide
+        $string40 = /sqlmapapi\.py/
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string41 = "sqlmapproject/sqlmap" nocase ascii wide
+        $string41 = "sqlmapproject/sqlmap"
         // Description: Automatic SQL injection and database takeover tool.
         // Reference: https://github.com/sqlmapproject/sqlmap
-        $string42 = /xforwardedfor\.py/ nocase ascii wide
+        $string42 = /xforwardedfor\.py/
 
     condition:
         any of them

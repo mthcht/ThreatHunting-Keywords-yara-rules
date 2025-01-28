@@ -1,7 +1,7 @@
 rule OWASP_rules
 {
     meta:
-        description = "Detection patterns for the tool 'OWASP rules' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'OWASP rules' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "OWASP rules"
@@ -13,7 +13,7 @@ rule OWASP_rules
         $string1 = "\"small web shell by zaco" nocase ascii wide
         // Description: OWASP repo of rules - extracted strings for detection
         // Reference: https://github.com/coreruleset/coreruleset/
-        $string2 = /\/tmp\/evil\.sh/ nocase ascii wide
+        $string2 = /\/tmp\/evil\.sh/
         // Description: OWASP repo of rules - extracted strings for detection
         // Reference: https://github.com/coreruleset/coreruleset/
         $string3 = /\-\:\[GreenwooD\]\:\-\sWinX\sShell/ nocase ascii wide
@@ -52,7 +52,7 @@ rule OWASP_rules
         $string14 = "BloodSecurity Hackers Shell" nocase ascii wide
         // Description: OWASP repo of rules - extracted strings for detection
         // Reference: https://github.com/coreruleset/coreruleset/
-        $string15 = /chmod\s\+x\sevil\.php/ nocase ascii wide
+        $string15 = /chmod\s\+x\sevil\.php/
         // Description: OWASP repo of rules - extracted strings for detection
         // Reference: https://github.com/coreruleset/coreruleset/
         $string16 = /Con7ext\sShell\sV\.2/ nocase ascii wide
@@ -97,7 +97,7 @@ rule OWASP_rules
         $string29 = "Small Shell - Edited By KingDefacer" nocase ascii wide
         // Description: OWASP repo of rules - extracted strings for detection
         // Reference: https://github.com/coreruleset/coreruleset/
-        $string30 = /Yourman\.sh\sMini\sShell/ nocase ascii wide
+        $string30 = /Yourman\.sh\sMini\sShell/
         // Description: OWASP repo of rules - extracted strings for detection
         // Reference: https://github.com/coreruleset/coreruleset/
         $string31 = /ZEROSHELL\s\|\sZEROSTORE/ nocase ascii wide

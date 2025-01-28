@@ -1,7 +1,7 @@
 rule movefile64_exe
 {
     meta:
-        description = "Detection patterns for the tool 'movefile64.exe' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'movefile64.exe' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "movefile64.exe"

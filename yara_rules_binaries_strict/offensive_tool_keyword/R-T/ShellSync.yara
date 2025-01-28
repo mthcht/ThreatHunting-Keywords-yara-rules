@@ -1,7 +1,7 @@
 rule ShellSync
 {
     meta:
-        description = "Detection patterns for the tool 'ShellSync' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'ShellSync' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "ShellSync"
@@ -19,10 +19,10 @@ rule ShellSync
         $string3 = /\spngZIP\.ps1/ nocase ascii wide
         // Description: exposing a server with suspicious scripts and executable from I-Am-Jakoby
         // Reference: https://github.com/I-Am-Jakoby/ShellSync
-        $string4 = /\/checkRoot\.ps1/ nocase ascii wide
+        $string4 = /\/checkRoot\.ps1/
         // Description: exposing a server with suspicious scripts and executable from I-Am-Jakoby
         // Reference: https://github.com/I-Am-Jakoby/ShellSync
-        $string5 = /\/pngZIP\.ps1/ nocase ascii wide
+        $string5 = /\/pngZIP\.ps1/
         // Description: exposing a server with suspicious scripts and executable from I-Am-Jakoby
         // Reference: https://github.com/I-Am-Jakoby/ShellSync
         $string6 = /\/ShellSync\.git/ nocase ascii wide

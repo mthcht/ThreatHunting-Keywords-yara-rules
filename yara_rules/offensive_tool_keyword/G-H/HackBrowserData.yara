@@ -1,7 +1,7 @@
 rule HackBrowserData
 {
     meta:
-        description = "Detection patterns for the tool 'HackBrowserData' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'HackBrowserData' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "HackBrowserData"
@@ -16,16 +16,16 @@ rule HackBrowserData
         $string2 = /\.exe\s\-b\sall\s\-f\sjson\s\-\-dir\sresults\s\-cc/ nocase ascii wide
         // Description: Decrypt passwords/cookies/history/bookmarks from the browser
         // Reference: https://github.com/moonD4rk/HackBrowserData
-        $string3 = /\/chrome_creditcard\.csv/ nocase ascii wide
+        $string3 = /\/chrome_creditcard\.csv/
         // Description: Decrypt passwords/cookies/history/bookmarks from the browser
         // Reference: https://github.com/moonD4rk/HackBrowserData
-        $string4 = /\/chrome_creditcard\.json/ nocase ascii wide
+        $string4 = /\/chrome_creditcard\.json/
         // Description: Decrypt passwords/cookies/history/bookmarks from the browser
         // Reference: https://github.com/moonD4rk/HackBrowserData
-        $string5 = /\/chrome_password\.csv/ nocase ascii wide
+        $string5 = /\/chrome_password\.csv/
         // Description: Decrypt passwords/cookies/history/bookmarks from the browser
         // Reference: https://github.com/moonD4rk/HackBrowserData
-        $string6 = /\/chrome_password\.json/ nocase ascii wide
+        $string6 = /\/chrome_password\.json/
         // Description: Decrypt passwords/cookies/history/bookmarks from the browser
         // Reference: https://github.com/moonD4rk/HackBrowserData
         $string7 = "/HackBrowserData" nocase ascii wide
@@ -34,16 +34,16 @@ rule HackBrowserData
         $string8 = /\/HackBrowserData\.git/ nocase ascii wide
         // Description: Decrypt passwords/cookies/history/bookmarks from the browser
         // Reference: https://github.com/moonD4rk/HackBrowserData
-        $string9 = /\/hack\-browser\-data\-linux\-386\.zip/ nocase ascii wide
+        $string9 = /\/hack\-browser\-data\-linux\-386\.zip/
         // Description: Decrypt passwords/cookies/history/bookmarks from the browser
         // Reference: https://github.com/moonD4rk/HackBrowserData
-        $string10 = /\/hack\-browser\-data\-linux\-amd64\.zip/ nocase ascii wide
+        $string10 = /\/hack\-browser\-data\-linux\-amd64\.zip/
         // Description: Decrypt passwords/cookies/history/bookmarks from the browser
         // Reference: https://github.com/moonD4rk/HackBrowserData
-        $string11 = /\/hack\-browser\-data\-linux\-arm\.zip/ nocase ascii wide
+        $string11 = /\/hack\-browser\-data\-linux\-arm\.zip/
         // Description: Decrypt passwords/cookies/history/bookmarks from the browser
         // Reference: https://github.com/moonD4rk/HackBrowserData
-        $string12 = /\/hack\-browser\-data\-linux\-arm64\.zip/ nocase ascii wide
+        $string12 = /\/hack\-browser\-data\-linux\-arm64\.zip/
         // Description: Decrypt passwords/cookies/history/bookmarks from the browser
         // Reference: https://github.com/moonD4rk/HackBrowserData
         $string13 = /\/hack\-browser\-data\-osx\-64bit\.zip/ nocase ascii wide

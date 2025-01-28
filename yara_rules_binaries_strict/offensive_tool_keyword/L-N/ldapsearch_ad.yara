@@ -1,7 +1,7 @@
 rule ldapsearch_ad
 {
     meta:
-        description = "Detection patterns for the tool 'ldapsearch-ad' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'ldapsearch-ad' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "ldapsearch-ad"
@@ -10,22 +10,22 @@ rule ldapsearch_ad
     strings:
         // Description: Python3 script to quickly get various information from a domain controller through his LDAP service.
         // Reference: https://github.com/yaap7/ldapsearch-ad
-        $string1 = /\s\-\-server\s.{0,100}\s\-\-type\spass\-pols/ nocase ascii wide
+        $string1 = /\s\-\-server\s.{0,100}\s\-\-type\spass\-pols/
         // Description: Python3 script to quickly get various information from a domain controller through his LDAP service.
         // Reference: https://github.com/yaap7/ldapsearch-ad
-        $string2 = " --type asreproast" nocase ascii wide
+        $string2 = " --type asreproast"
         // Description: Python3 script to quickly get various information from a domain controller through his LDAP service.
         // Reference: https://github.com/yaap7/ldapsearch-ad
-        $string3 = " --type search-spn" nocase ascii wide
+        $string3 = " --type search-spn"
         // Description: Python3 script to quickly get various information from a domain controller through his LDAP service.
         // Reference: https://github.com/yaap7/ldapsearch-ad
-        $string4 = /\/ldapsearch\-ad\.git/ nocase ascii wide
+        $string4 = /\/ldapsearch\-ad\.git/
         // Description: Python3 script to quickly get various information from a domain controller through his LDAP service.
         // Reference: https://github.com/yaap7/ldapsearch-ad
-        $string5 = /ldapsearchad\.py/ nocase ascii wide
+        $string5 = /ldapsearchad\.py/
         // Description: Python3 script to quickly get various information from a domain controller through his LDAP service.
         // Reference: https://github.com/yaap7/ldapsearch-ad
-        $string6 = /ldapsearch\-ad\.py/ nocase ascii wide
+        $string6 = /ldapsearch\-ad\.py/
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

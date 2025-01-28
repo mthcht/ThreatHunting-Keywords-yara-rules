@@ -1,7 +1,7 @@
 rule quiet_riot
 {
     meta:
-        description = "Detection patterns for the tool 'quiet-riot' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'quiet-riot' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "quiet-riot"
@@ -67,19 +67,19 @@ rule quiet_riot
         $string19 = /\/snsenum\.py/ nocase ascii wide
         // Description: Unauthenticated enumeration of AWS - Azure and GCP Principals
         // Reference: https://github.com/righteousgambit/quiet-riot
-        $string20 = /\/wordlists\/combined_male_names\.txt/ nocase ascii wide
+        $string20 = /\/wordlists\/combined_male_names\.txt/
         // Description: Unauthenticated enumeration of AWS - Azure and GCP Principals
         // Reference: https://github.com/righteousgambit/quiet-riot
-        $string21 = /\/wordlists\/familynames\-usa\-top1000\.txt/ nocase ascii wide
+        $string21 = /\/wordlists\/familynames\-usa\-top1000\.txt/
         // Description: Unauthenticated enumeration of AWS - Azure and GCP Principals
         // Reference: https://github.com/righteousgambit/quiet-riot
-        $string22 = /\/wordlists\/femalenames\-usa\-top1000\.txt/ nocase ascii wide
+        $string22 = /\/wordlists\/femalenames\-usa\-top1000\.txt/
         // Description: Unauthenticated enumeration of AWS - Azure and GCP Principals
         // Reference: https://github.com/righteousgambit/quiet-riot
-        $string23 = /\/wordlists\/malenames\-usa\-top1000\.txt/ nocase ascii wide
+        $string23 = /\/wordlists\/malenames\-usa\-top1000\.txt/
         // Description: Unauthenticated enumeration of AWS - Azure and GCP Principals
         // Reference: https://github.com/righteousgambit/quiet-riot
-        $string24 = /\/wordlists\/names_quit_riot\.txt/ nocase ascii wide
+        $string24 = /\/wordlists\/names_quit_riot\.txt/
         // Description: Unauthenticated enumeration of AWS - Azure and GCP Principals
         // Reference: https://github.com/righteousgambit/quiet-riot
         $string25 = /\\ecrprivenum\.py/ nocase ascii wide

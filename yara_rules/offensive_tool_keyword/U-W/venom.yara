@@ -1,7 +1,7 @@
 rule Venom
 {
     meta:
-        description = "Detection patterns for the tool 'Venom' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Venom' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Venom"
@@ -70,10 +70,10 @@ rule Venom
         $string20 = /agent\.exe\s\-lhost\s.{0,1000}\s\-reuse\-port\s/ nocase ascii wide
         // Description: Venom - A Multi-hop Proxy for Penetration Testers
         // Reference: https://github.com/Dliv3/Venom
-        $string21 = "agent_linux_x64 -lport " nocase ascii wide
+        $string21 = "agent_linux_x64 -lport "
         // Description: Venom - A Multi-hop Proxy for Penetration Testers
         // Reference: https://github.com/Dliv3/Venom
-        $string22 = /agent_linux_x64\s\-rhost\s.{0,1000}\s\-rport\s/ nocase ascii wide
+        $string22 = /agent_linux_x64\s\-rhost\s.{0,1000}\s\-rport\s/
         // Description: Venom - A Multi-hop Proxy for Penetration Testers
         // Reference: https://github.com/Dliv3/Venom
         $string23 = "Venom Admin Node Start" nocase ascii wide

@@ -1,7 +1,7 @@
 rule iodine
 {
     meta:
-        description = "Detection patterns for the tool 'iodine' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'iodine' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "iodine"
@@ -10,10 +10,10 @@ rule iodine
     strings:
         // Description: iodine. iodined - tunnel IPv4 over DNS
         // Reference: https://github.com/yarrick/iodine
-        $string1 = " install iodine" nocase ascii wide
+        $string1 = " install iodine"
         // Description: iodine. iodined - tunnel IPv4 over DNS
         // Reference: https://github.com/yarrick/iodine
-        $string2 = /\.\/iodined/ nocase ascii wide
+        $string2 = /\.\/iodined/
         // Description: iodine. iodined - tunnel IPv4 over DNS
         // Reference: https://github.com/yarrick/iodine
         $string3 = /\/iodine\-.{0,1000}\-windows\.zip/ nocase ascii wide
@@ -28,10 +28,10 @@ rule iodine
         $string6 = "/iodine-master/" nocase ascii wide
         // Description: iodine. iodined - tunnel IPv4 over DNS
         // Reference: https://github.com/yarrick/iodine
-        $string7 = "/ionide " nocase ascii wide
+        $string7 = "/ionide "
         // Description: iodine. iodined - tunnel IPv4 over DNS
         // Reference: https://github.com/yarrick/iodine
-        $string8 = "/sysconfig/iodine-server" nocase ascii wide
+        $string8 = "/sysconfig/iodine-server"
         // Description: iodine. iodined - tunnel IPv4 over DNS
         // Reference: https://github.com/yarrick/iodine
         $string9 = "/unstable/net/iodine" nocase ascii wide
@@ -88,7 +88,7 @@ rule iodine
         $string26 = "Aw8KAw4LDgvZDgLUz2rLC2rPBMC" nocase ascii wide
         // Description: iodine. iodined - tunnel IPv4 over DNS
         // Reference: https://github.com/yarrick/iodine
-        $string27 = "b18aca1b9e2a9e72cb77960c355d288b" nocase ascii wide
+        $string27 = "b18aca1b9e2a9e72cb77960c355d288b"
         // Description: iodine. iodined - tunnel IPv4 over DNS
         // Reference: https://github.com/yarrick/iodine
         $string28 = "bin/iodine" nocase ascii wide
@@ -112,67 +112,64 @@ rule iodine
         $string34 = /https\:\/\/code\.kryo\.se\/iodine\/iodine\-/ nocase ascii wide
         // Description: tunnel IPv4 over DNS tool
         // Reference: https://github.com/yarrick/iodine
-        $string35 = "iodine -" nocase ascii wide
+        $string35 = "iodine -"
         // Description: iodine. iodined - tunnel IPv4 over DNS
         // Reference: https://github.com/yarrick/iodine
-        $string36 = "iodine -f " nocase ascii wide
+        $string36 = "iodine -f "
         // Description: iodine. iodined - tunnel IPv4 over DNS
         // Reference: https://github.com/yarrick/iodine
-        $string37 = "iodine IP over DNS tunneling client" nocase ascii wide
+        $string37 = "iodine IP over DNS tunneling server"
         // Description: iodine. iodined - tunnel IPv4 over DNS
         // Reference: https://github.com/yarrick/iodine
-        $string38 = "iodine IP over DNS tunneling server" nocase ascii wide
-        // Description: iodine. iodined - tunnel IPv4 over DNS
-        // Reference: https://github.com/yarrick/iodine
-        $string39 = "iodine -v" nocase ascii wide
+        $string38 = "iodine -v"
         // Description: tunnel IPv4 over DNS tool
         // Reference: https://github.com/yarrick/iodine
-        $string40 = "iodined -" nocase ascii wide
+        $string39 = "iodined -"
         // Description: iodine. iodined - tunnel IPv4 over DNS
         // Reference: https://github.com/yarrick/iodine
-        $string41 = "iodined -c" nocase ascii wide
+        $string40 = "iodined -c"
         // Description: iodine. iodined - tunnel IPv4 over DNS
         // Reference: https://github.com/yarrick/iodine
-        $string42 = "iodined -f " nocase ascii wide
+        $string41 = "iodined -f "
         // Description: iodine. iodined - tunnel IPv4 over DNS
         // Reference: https://github.com/yarrick/iodine
-        $string43 = "iodined -v" nocase ascii wide
+        $string42 = "iodined -v"
         // Description: iodine. iodined - tunnel IPv4 over DNS
         // Reference: https://github.com/yarrick/iodine
-        $string44 = "iodine-latest/" nocase ascii wide
+        $string43 = "iodine-latest/"
         // Description: iodine. iodined - tunnel IPv4 over DNS
         // Reference: https://github.com/yarrick/iodine
-        $string45 = /iodine\-latest\-android\.zip/ nocase ascii wide
+        $string44 = /iodine\-latest\-android\.zip/ nocase ascii wide
         // Description: iodine. iodined - tunnel IPv4 over DNS
         // Reference: https://github.com/yarrick/iodine
-        $string46 = "iodine-latest-win32" nocase ascii wide
+        $string45 = "iodine-latest-win32" nocase ascii wide
         // Description: iodine. iodined - tunnel IPv4 over DNS
         // Reference: https://github.com/yarrick/iodine
-        $string47 = "iodine-latest-windows" nocase ascii wide
+        $string46 = "iodine-latest-windows" nocase ascii wide
         // Description: iodine. iodined - tunnel IPv4 over DNS
         // Reference: https://github.com/yarrick/iodine
-        $string48 = /iodine\-server\.service/ nocase ascii wide
+        $string47 = /iodine\-server\.service/ nocase ascii wide
         // Description: iodine. iodined - tunnel IPv4 over DNS
         // Reference: https://github.com/yarrick/iodine
-        $string49 = "iodinetestingtesting" nocase ascii wide
+        $string48 = "iodinetestingtesting" nocase ascii wide
         // Description: iodine. iodined - tunnel IPv4 over DNS
         // Reference: https://github.com/yarrick/iodine
-        $string50 = "ionided " nocase ascii wide
+        $string49 = "ionided " nocase ascii wide
         // Description: iodine. iodined - tunnel IPv4 over DNS
         // Reference: https://github.com/yarrick/iodine
-        $string51 = "nfxwi0lomv0gk21unfxgo3dfon0gs1th" nocase ascii wide
+        $string50 = "nfxwi0lomv0gk21unfxgo3dfon0gs1th" nocase ascii wide
         // Description: iodine. iodined - tunnel IPv4 over DNS
         // Reference: https://github.com/yarrick/iodine
-        $string52 = /silly\.host\.of\.iodine\.code\.kryo\.se/ nocase ascii wide
+        $string51 = /silly\.host\.of\.iodine\.code\.kryo\.se/ nocase ascii wide
         // Description: iodine. iodined - tunnel IPv4 over DNS
         // Reference: https://github.com/yarrick/iodine
-        $string53 = "sudo iodine " nocase ascii wide
+        $string52 = "sudo iodine "
         // Description: iodine. iodined - tunnel IPv4 over DNS
         // Reference: https://github.com/yarrick/iodine
-        $string54 = /test\-iodine\.log/ nocase ascii wide
+        $string53 = /test\-iodine\.log/ nocase ascii wide
         // Description: iodine. iodined - tunnel IPv4 over DNS
         // Reference: https://github.com/yarrick/iodine
-        $string55 = "yarrick/iodine" nocase ascii wide
+        $string54 = "yarrick/iodine" nocase ascii wide
 
     condition:
         any of them

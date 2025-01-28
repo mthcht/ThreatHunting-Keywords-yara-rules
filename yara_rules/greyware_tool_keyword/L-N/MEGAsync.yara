@@ -1,7 +1,7 @@
 rule MEGAsync
 {
     meta:
-        description = "Detection patterns for the tool 'MEGAsync' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'MEGAsync' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "MEGAsync"
@@ -121,7 +121,7 @@ rule MEGAsync
         $string37 = "'Company'>Mega Limited</Data>" nocase ascii wide
         // Description: synchronize or backup your computers to MEGA
         // Reference: https://mega.io/en/desktop
-        $string38 = /https\:\/\/mega\.nz\/linux\/repo\// nocase ascii wide
+        $string38 = /https\:\/\/mega\.nz\/linux\/repo\//
         // Description: synchronize or backup your computers to MEGA
         // Reference: https://mega.io/en/desktop
         $string39 = "MEGAsync Update Task" nocase ascii wide

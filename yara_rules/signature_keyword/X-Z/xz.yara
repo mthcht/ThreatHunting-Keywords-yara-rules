@@ -1,7 +1,7 @@
 rule xz
 {
     meta:
-        description = "Detection patterns for the tool 'xz' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'xz' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "xz"
@@ -13,7 +13,7 @@ rule xz
         $string1 = /HEUR\:Trojan\.Script\.XZ/ nocase ascii wide
         // Description: backdoor in upstream xz/liblzma leading to ssh server compromise
         // Reference: https://securelist.com/xz-backdoor-story-part-1/112354/
-        $string2 = /MEM\:Trojan\.Linux\.XZ/ nocase ascii wide
+        $string2 = /MEM\:Trojan\.Linux\.XZ/
         // Description: backdoor in upstream xz/liblzma leading to ssh server compromise
         // Reference: https://securelist.com/xz-backdoor-story-part-1/112354/
         $string3 = /Trojan\.Shell\.XZ/ nocase ascii wide

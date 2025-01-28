@@ -1,7 +1,7 @@
 rule ldapsearch
 {
     meta:
-        description = "Detection patterns for the tool 'ldapsearch' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'ldapsearch' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "ldapsearch"
@@ -10,13 +10,13 @@ rule ldapsearch
     strings:
         // Description: ldapsearch to enumerate ldap
         // Reference: https://man7.org/linux/man-pages/man1/ldapsearch.1.html
-        $string1 = /ldapsearch\s.{0,100}\sldap\:\/\// nocase ascii wide
+        $string1 = /ldapsearch\s.{0,100}\sldap\:\/\//
         // Description: ldapsearch to enumerate ldap
         // Reference: https://man7.org/linux/man-pages/man1/ldapsearch.1.html
-        $string2 = /ldapsearch\s\-x\s\-h\s.{0,100}\s\-s\sbase/ nocase ascii wide
+        $string2 = /ldapsearch\s\-x\s\-h\s.{0,100}\s\-s\sbase/
         // Description: ldapsearch to enumerate ldap
         // Reference: https://man7.org/linux/man-pages/man1/ldapsearch.1.html
-        $string3 = /ldapsearch\s\-h\s.{0,100}\s\-x/ nocase ascii wide
+        $string3 = /ldapsearch\s\-h\s.{0,100}\s\-x/
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

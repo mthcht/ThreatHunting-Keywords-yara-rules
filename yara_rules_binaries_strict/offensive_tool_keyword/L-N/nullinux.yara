@@ -1,7 +1,7 @@
 rule nullinux
 {
     meta:
-        description = "Detection patterns for the tool 'nullinux' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'nullinux' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "nullinux"
@@ -10,40 +10,40 @@ rule nullinux
     strings:
         // Description: Internal penetration testing tool for Linux that can be used to enumerate OS information/domain information/ shares/ directories and users through SMB.
         // Reference: https://github.com/m8sec/nullinux
-        $string1 = /\snullinux\.py/ nocase ascii wide
+        $string1 = /\snullinux\.py/
         // Description: Internal penetration testing tool for Linux that can be used to enumerate OS information/domain information/ shares/ directories and users through SMB.
         // Reference: https://github.com/m8sec/nullinux
-        $string2 = /\/nullinux\.git/ nocase ascii wide
+        $string2 = /\/nullinux\.git/
         // Description: Internal penetration testing tool for Linux that can be used to enumerate OS information/domain information/ shares/ directories and users through SMB.
         // Reference: https://github.com/m8sec/nullinux
-        $string3 = /\/nullinux\.py/ nocase ascii wide
+        $string3 = /\/nullinux\.py/
         // Description: Internal penetration testing tool for Linux that can be used to enumerate OS information/domain information/ shares/ directories and users through SMB.
         // Reference: https://github.com/m8sec/nullinux
-        $string4 = /\/nullinux_users\.txt/ nocase ascii wide
+        $string4 = /\/nullinux_users\.txt/
         // Description: Internal penetration testing tool for Linux that can be used to enumerate OS information/domain information/ shares/ directories and users through SMB.
         // Reference: https://github.com/m8sec/nullinux
-        $string5 = "/usr/local/bin/nullinux" nocase ascii wide
+        $string5 = "/usr/local/bin/nullinux"
         // Description: Internal penetration testing tool for Linux that can be used to enumerate OS information/domain information/ shares/ directories and users through SMB.
         // Reference: https://github.com/m8sec/nullinux
-        $string6 = /\]\sStarting\snullinux\ssetup\sscript/ nocase ascii wide
+        $string6 = /\]\sStarting\snullinux\ssetup\sscript/
         // Description: Internal penetration testing tool for Linux that can be used to enumerate OS information/domain information/ shares/ directories and users through SMB.
         // Reference: https://github.com/m8sec/nullinux
-        $string7 = "e4df5a904c8eb505cb63d9905c398f632cf97ba193a6e25569d561d44f69e623" nocase ascii wide
+        $string7 = "e4df5a904c8eb505cb63d9905c398f632cf97ba193a6e25569d561d44f69e623"
         // Description: Internal penetration testing tool for Linux that can be used to enumerate OS information/domain information/ shares/ directories and users through SMB.
         // Reference: https://github.com/m8sec/nullinux
-        $string8 = /enum_enumdomusers\(/ nocase ascii wide
+        $string8 = /enum_enumdomusers\(/
         // Description: Internal penetration testing tool for Linux that can be used to enumerate OS information/domain information/ shares/ directories and users through SMB.
         // Reference: https://github.com/m8sec/nullinux
-        $string9 = "m8sec/nullinux" nocase ascii wide
+        $string9 = "m8sec/nullinux"
         // Description: Internal penetration testing tool for Linux that can be used to enumerate OS information/domain information/ shares/ directories and users through SMB.
         // Reference: https://github.com/m8sec/nullinux
-        $string10 = "nullinux -rid -range " nocase ascii wide
+        $string10 = "nullinux -rid -range "
         // Description: Internal penetration testing tool for Linux that can be used to enumerate OS information/domain information/ shares/ directories and users through SMB.
         // Reference: https://github.com/m8sec/nullinux
-        $string11 = "nullinux -shares -U " nocase ascii wide
+        $string11 = "nullinux -shares -U "
         // Description: Internal penetration testing tool for Linux that can be used to enumerate OS information/domain information/ shares/ directories and users through SMB.
         // Reference: https://github.com/m8sec/nullinux
-        $string12 = "nullinux -users " nocase ascii wide
+        $string12 = "nullinux -users "
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

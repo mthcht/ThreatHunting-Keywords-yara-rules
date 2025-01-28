@@ -1,7 +1,7 @@
 rule redpill
 {
     meta:
-        description = "Detection patterns for the tool 'redpill' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'redpill' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "redpill"
@@ -169,7 +169,7 @@ rule redpill
         $string53 = /\/redpill\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string54 = /\/redpill\/bin\/.{0,1000}\.ps1/ nocase ascii wide
+        $string54 = /\/redpill\/bin\/.{0,1000}\.ps1/
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
         $string55 = /\/revshell\.ps1/ nocase ascii wide
@@ -184,7 +184,7 @@ rule redpill
         $string58 = /\/ScanInterception\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string59 = /\/stext\scredentials\.log/ nocase ascii wide
+        $string59 = /\/stext\scredentials\.log/
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
         $string60 = /\/WinBruteLogon\.zip/ nocase ascii wide

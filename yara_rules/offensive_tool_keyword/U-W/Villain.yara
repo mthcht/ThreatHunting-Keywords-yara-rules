@@ -1,7 +1,7 @@
 rule Villain
 {
     meta:
-        description = "Detection patterns for the tool 'Villain' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'Villain' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "Villain"
@@ -34,7 +34,7 @@ rule Villain
         $string8 = /awk_reverse_tcp\.py/ nocase ascii wide
         // Description: Villain is a C2 framework that can handle multiple TCP socket & HoaxShell-based reverse shells. enhance their functionality with additional features (commands. utilities etc) and share them among connected sibling servers (Villain instances running on different machines).
         // Reference: https://github.com/t3l3machus/Villain
-        $string9 = /bash_read_line_reverse_tcp\.py/ nocase ascii wide
+        $string9 = /bash_read_line_reverse_tcp\.py/
         // Description: Villain is a C2 framework that can handle multiple TCP socket & HoaxShell-based reverse shells. enhance their functionality with additional features (commands. utilities etc) and share them among connected sibling servers (Villain instances running on different machines).
         // Reference: https://github.com/t3l3machus/Villain
         $string10 = "cmdinspector OFF" nocase ascii wide

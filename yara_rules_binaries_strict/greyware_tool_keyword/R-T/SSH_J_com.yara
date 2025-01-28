@@ -1,7 +1,7 @@
 rule SSH_J_com
 {
     meta:
-        description = "Detection patterns for the tool 'SSH-J.com' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'SSH-J.com' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "SSH-J.com"

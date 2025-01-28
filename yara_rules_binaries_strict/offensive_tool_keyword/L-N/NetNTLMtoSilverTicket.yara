@@ -1,7 +1,7 @@
 rule NetNTLMtoSilverTicket
 {
     meta:
-        description = "Detection patterns for the tool 'NetNTLMtoSilverTicket' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'NetNTLMtoSilverTicket' taken from the ThreatHunting-Keywords github project"
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
         tool = "NetNTLMtoSilverTicket"
@@ -19,7 +19,7 @@ rule NetNTLMtoSilverTicket
         $string3 = /\srpcdump\.py/ nocase ascii wide
         // Description: Obtaining NetNTLMv1 Challenge/Response authentication - cracking those to NTLM Hashes and using that NTLM Hash to sign a Kerberos Silver ticket.
         // Reference: https://github.com/NotMedic/NetNTLMtoSilverTicket
-        $string4 = /\.\/hashcat\s\-/ nocase ascii wide
+        $string4 = /\.\/hashcat\s\-/
         // Description: Obtaining NetNTLMv1 Challenge/Response authentication - cracking those to NTLM Hashes and using that NTLM Hash to sign a Kerberos Silver ticket.
         // Reference: https://github.com/NotMedic/NetNTLMtoSilverTicket
         $string5 = /\/dementor\.py/ nocase ascii wide
@@ -31,7 +31,7 @@ rule NetNTLMtoSilverTicket
         $string7 = /\/rpcdump\.py/ nocase ascii wide
         // Description: Obtaining NetNTLMv1 Challenge/Response authentication - cracking those to NTLM Hashes and using that NTLM Hash to sign a Kerberos Silver ticket.
         // Reference: https://github.com/NotMedic/NetNTLMtoSilverTicket
-        $string8 = /\/ticketer\.py\s\-/ nocase ascii wide
+        $string8 = /\/ticketer\.py\s\-/
         // Description: Obtaining NetNTLMv1 Challenge/Response authentication - cracking those to NTLM Hashes and using that NTLM Hash to sign a Kerberos Silver ticket.
         // Reference: https://github.com/NotMedic/NetNTLMtoSilverTicket
         $string9 = /\\dementor\.py/ nocase ascii wide

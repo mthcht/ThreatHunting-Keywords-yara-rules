@@ -5,7 +5,7 @@ import os
 import struct
 
 def guid_to_binary(guid):
-    """Convert GUID string to binary representation (little-endian format)."""
+    """Convert GUID string to binary representation (little-endian format) - doc: https://learn.microsoft.com/en-us/windows/win32/api/guiddef/ns-guiddef-guid"""
     parts = guid.split('-')
     if len(parts) != 5:
         raise ValueError(f"Invalid GUID format: {guid}")

@@ -13,6 +13,7 @@ All the detection patterns from the [threathunting-keywords](https://github.com/
 ![image](https://github.com/mthcht/ThreatHunting-Keywords-yara-rules/assets/75267080/fda53ec2-28cb-4f16-bbb9-36f5afba922c)
 
 
+
 - 🛠️ **offensive tool keyword**: These keywords relate to offensive tools or exhibit high confidence of malicious intent. It's important that these keywords remaons relevant and reliable in detecting potential threats (low false positive rate).
 - 🛠️ **greyware tool keyword**: Keywords in this category correspond to 'legitimate' tools that are abused by malicious actors. As these tools also have legitimate uses, the potential for false positives is inherently higher. It's important to interpret these results with the understanding that not all detections may signify malicious activity
 - 🛠️ **signature keyword**: These keywords may not directly associate with tools but may include security product signature names, specific strings, or words significant in threat detection.
@@ -20,6 +21,7 @@ All the detection patterns from the [threathunting-keywords](https://github.com/
 - `all.yara`:  Contains all the rules
 - `offensive_tools.yara`:  all the offensive tools rules 
 - `greyware_tools.yara`:  all the greyware tools (more false positives expected - triage necessary)
+- I also added a folder named `specific` containing manually crafted YARA rules curated for sharing.
 
 a sperated rule file exist for each tool, organized in alphabetical order to bypass the GitHub limitation of 1000 files per directory.
 

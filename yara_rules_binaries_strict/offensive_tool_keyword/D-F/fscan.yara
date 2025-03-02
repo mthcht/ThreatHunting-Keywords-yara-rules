@@ -235,13 +235,16 @@ rule fscan
         $string75 = /fscan\.exe\s\-/ nocase ascii wide
         // Description: Vulnerability scanner
         // Reference: https://github.com/shadow1ng/fscan
-        $string76 = "Running final exploit packet" nocase ascii wide
+        $string76 = /Plugins\.Brutelist/
         // Description: Vulnerability scanner
         // Reference: https://github.com/shadow1ng/fscan
-        $string77 = "shadow1ng/fscan" nocase ascii wide
+        $string77 = "Running final exploit packet" nocase ascii wide
         // Description: Vulnerability scanner
         // Reference: https://github.com/shadow1ng/fscan
-        $string78 = /User\-Agent\:\s.{0,100}echo\;\secho\;\s\/bin\/bash\s\-c\s/
+        $string78 = "shadow1ng/fscan" nocase ascii wide
+        // Description: Vulnerability scanner
+        // Reference: https://github.com/shadow1ng/fscan
+        $string79 = /User\-Agent\:\s.{0,100}echo\;\secho\;\s\/bin\/bash\s\-c\s/
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

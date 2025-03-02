@@ -26,6 +26,9 @@ rule sudo
         // Description: abusinf LD_PREDLOAD option to escalade privilege
         // Reference: N/A
         $string6 = /sudo\sLD_PRELOAD\=\/tmp\/preload\.so\sfind/
+        // Description: Indicator Removal on Host - clearing logs
+        // Reference: https://github.com/mthcht/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.md
+        $string7 = "sudo log erase --all"
 
     condition:
         any of them

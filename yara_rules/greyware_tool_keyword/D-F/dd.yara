@@ -14,6 +14,9 @@ rule dd
         // Description: Detects overwriting (effectively wiping/deleting) the file
         // Reference: https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1485/T1485.yaml
         $string2 = "dd if=/dev/zero" nocase ascii wide
+        // Description: Indicator Removal on Host - clearing logs
+        // Reference: https://github.com/mthcht/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.md
+        $string3 = /sudo\sdd\sif\=\/dev\/zero\sbs\=1000\scount\=5\sof\=.{0,1000}log/
 
     condition:
         any of them

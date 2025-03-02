@@ -161,9 +161,6 @@ rule nimbo_c2
         // Description: Nimbo-C2 is yet another (simple and lightweight) C2 framework
         // Reference: https://github.com/itaymigdal/Nimbo-C2
         $string51 = "WwBTAHkAcwB0AGUAbQAuAFMAZQBjAHUAcgBpAHQAeQAuAFAAcgBpAG4AYwBpAHAAYQBsAC4AVwBpAG4AZABvAHcAcwBJAGQAZQBuAHQAaQB0AHkAXQA6ADoARwBlAHQAQwB1AHIAcgBlAG4AdAAoACkALgBuAGEAbQBlAAoA" nocase ascii wide
-        // Description: Nimbo-C2 is yet another (simple and lightweight) C2 framework
-        // Reference: https://github.com/itaymigdal/Nimbo-C2
-        $string52 = /na\.exe\s/ nocase ascii wide
 
     condition:
         any of them

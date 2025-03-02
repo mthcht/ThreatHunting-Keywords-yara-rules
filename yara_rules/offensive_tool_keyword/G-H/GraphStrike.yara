@@ -70,7 +70,10 @@ rule GraphStrike
         $string20 = /Lost\sconnection\sto\steam\sserver\!\sSleeping\s60\ssecond\sand\sretrying\?/ nocase ascii wide
         // Description: Cobalt Strike HTTPS beaconing over Microsoft Graph API
         // Reference: https://github.com/RedSiege/GraphStrike
-        $string21 = "RedSiege/GraphStrike" nocase ascii wide
+        $string21 = /Mozilla\/6\.0\s\(Windows\sNT\s10\.0\;\sWin64\;\sx64\)\sAppleWebKit\/537\.36\s\(KHTML\,\slike\sGecko\)\sChrome\/103\.0\.0\.0\sSafari\/537\.36/ nocase ascii wide
+        // Description: Cobalt Strike HTTPS beaconing over Microsoft Graph API
+        // Reference: https://github.com/RedSiege/GraphStrike
+        $string22 = "RedSiege/GraphStrike" nocase ascii wide
 
     condition:
         any of them

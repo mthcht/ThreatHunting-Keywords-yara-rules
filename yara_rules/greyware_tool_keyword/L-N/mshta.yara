@@ -50,6 +50,9 @@ rule mshta
         // Description: mshta abused by attackers
         // Reference: https://lolbas-project.github.io/lolbas/Binaries/Mshta/
         $string14 = /mshta\.exe.{0,1000}\svbscript\:Close\(Execute\(.{0,1000}script\:https\:\/\/.{0,1000}\.sct/ nocase ascii wide
+        // Description: Phishing with a fake reCAPTCHA
+        // Reference: https://github.com/JohnHammond/recaptcha-phish
+        $string15 = /mshta\.exe.{0,1000}I\sam\snot\sa\srobot\s\-\sreCAPTCHA\sVerification\sID\:\s/ nocase ascii wide
 
     condition:
         any of them

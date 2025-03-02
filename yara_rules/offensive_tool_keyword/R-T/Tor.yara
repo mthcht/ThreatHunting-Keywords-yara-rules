@@ -10,127 +10,127 @@ rule tor
     strings:
         // Description: used for anonymous communication and web browsing. It is designed to protect users' privacy and freedom by preventing surveillance or traffic analysis. Abused by attacker for defense evasion, contacting C2 and data exfiltration
         // Reference: https://deb.torproject.org/torproject.org/
-        $string1 = " tor:amd64 " nocase ascii wide
+        $string1 = "/bin/torify"
         // Description: used for anonymous communication and web browsing. It is designed to protect users' privacy and freedom by preventing surveillance or traffic analysis. Abused by attacker for defense evasion, contacting C2 and data exfiltration
         // Reference: https://deb.torproject.org/torproject.org/
-        $string2 = "/bin/torify"
+        $string2 = /\/dpkg\/info\/tor\.list/
         // Description: used for anonymous communication and web browsing. It is designed to protect users' privacy and freedom by preventing surveillance or traffic analysis. Abused by attacker for defense evasion, contacting C2 and data exfiltration
         // Reference: https://deb.torproject.org/torproject.org/
-        $string3 = /\/dpkg\/info\/tor\.list/
+        $string3 = /\/etc\/cron\.weekly\/tor/
         // Description: used for anonymous communication and web browsing. It is designed to protect users' privacy and freedom by preventing surveillance or traffic analysis. Abused by attacker for defense evasion, contacting C2 and data exfiltration
         // Reference: https://deb.torproject.org/torproject.org/
-        $string4 = /\/etc\/cron\.weekly\/tor/
+        $string4 = "/etc/default/tor"
         // Description: used for anonymous communication and web browsing. It is designed to protect users' privacy and freedom by preventing surveillance or traffic analysis. Abused by attacker for defense evasion, contacting C2 and data exfiltration
         // Reference: https://deb.torproject.org/torproject.org/
-        $string5 = "/etc/default/tor"
+        $string5 = /\/etc\/init\.d\/tor/
         // Description: used for anonymous communication and web browsing. It is designed to protect users' privacy and freedom by preventing surveillance or traffic analysis. Abused by attacker for defense evasion, contacting C2 and data exfiltration
         // Reference: https://deb.torproject.org/torproject.org/
-        $string6 = /\/etc\/init\.d\/tor/
+        $string6 = "/etc/sv/tor/log"
         // Description: used for anonymous communication and web browsing. It is designed to protect users' privacy and freedom by preventing surveillance or traffic analysis. Abused by attacker for defense evasion, contacting C2 and data exfiltration
         // Reference: https://deb.torproject.org/torproject.org/
-        $string7 = "/etc/sv/tor/log"
+        $string7 = /\/etc\/tor\/.{0,1000}\.conf/
         // Description: used for anonymous communication and web browsing. It is designed to protect users' privacy and freedom by preventing surveillance or traffic analysis. Abused by attacker for defense evasion, contacting C2 and data exfiltration
         // Reference: https://deb.torproject.org/torproject.org/
-        $string8 = /\/etc\/tor\/.{0,1000}\.conf/
+        $string8 = /\/invocation\:tor\.service/
         // Description: used for anonymous communication and web browsing. It is designed to protect users' privacy and freedom by preventing surveillance or traffic analysis. Abused by attacker for defense evasion, contacting C2 and data exfiltration
         // Reference: https://deb.torproject.org/torproject.org/
-        $string9 = /\/invocation\:tor\.service/
-        // Description: used for anonymous communication and web browsing. It is designed to protect users' privacy and freedom by preventing surveillance or traffic analysis. Abused by attacker for defense evasion, contacting C2 and data exfiltration
-        // Reference: https://deb.torproject.org/torproject.org/
-        $string10 = /\/multi\-user\.target\.wants\/tor\.service/
+        $string9 = /\/multi\-user\.target\.wants\/tor\.service/
         // Description: Tor is a python based module for using tor proxy/network services on windows - osx - linux with just one click.
         // Reference: https://github.com/r0oth3x49/Tor
-        $string11 = /\/proxy\/Tor\.py/
+        $string10 = /\/proxy\/Tor\.py/
         // Description: Tor is a python based module for using tor proxy/network services on windows - osx - linux with just one click.
         // Reference: https://github.com/r0oth3x49/Tor
-        $string12 = /\/proxy\/tor_paths\.py/
+        $string11 = /\/proxy\/tor_paths\.py/
         // Description: used for anonymous communication and web browsing. It is designed to protect users' privacy and freedom by preventing surveillance or traffic analysis. Abused by attacker for defense evasion, contacting C2 and data exfiltration
         // Reference: https://deb.torproject.org/torproject.org/
-        $string13 = "/run/tor/socks"
+        $string12 = "/run/tor/socks"
         // Description: used for anonymous communication and web browsing. It is designed to protect users' privacy and freedom by preventing surveillance or traffic analysis. Abused by attacker for defense evasion, contacting C2 and data exfiltration
         // Reference: https://deb.torproject.org/torproject.org/
-        $string14 = /\/run\/tor\/tor\.pid/
+        $string13 = /\/run\/tor\/tor\.pid/
         // Description: used for anonymous communication and web browsing. It is designed to protect users' privacy and freedom by preventing surveillance or traffic analysis. Abused by attacker for defense evasion, contacting C2 and data exfiltration
         // Reference: https://deb.torproject.org/torproject.org/
-        $string15 = "/tor -mindepth 1 -maxdepth 1 -type f "
+        $string14 = "/tor -mindepth 1 -maxdepth 1 -type f "
         // Description: used for anonymous communication and web browsing. It is designed to protect users' privacy and freedom by preventing surveillance or traffic analysis. Abused by attacker for defense evasion, contacting C2 and data exfiltration
         // Reference: https://deb.torproject.org/torproject.org/
-        $string16 = "/tor/torrc"
+        $string15 = "/tor/torrc"
         // Description: used for anonymous communication and web browsing. It is designed to protect users' privacy and freedom by preventing surveillance or traffic analysis. Abused by attacker for defense evasion, contacting C2 and data exfiltration
         // Reference: https://deb.torproject.org/torproject.org/
-        $string17 = "/tor-archive-keyring"
+        $string16 = "/tor-archive-keyring"
         // Description: Tor is a python based module for using tor proxy/network services on windows - osx - linux with just one click.
         // Reference: https://github.com/r0oth3x49/Tor
-        $string18 = /\/tor\-gencert\.exe/
+        $string17 = /\/tor\-gencert\.exe/
         // Description: used for anonymous communication and web browsing. It is designed to protect users' privacy and freedom by preventing surveillance or traffic analysis. Abused by attacker for defense evasion, contacting C2 and data exfiltration
         // Reference: https://deb.torproject.org/torproject.org/
-        $string19 = /\/tor\-geoipdb\.list/
+        $string18 = /\/tor\-geoipdb\.list/
         // Description: used for anonymous communication and web browsing. It is designed to protect users' privacy and freedom by preventing surveillance or traffic analysis. Abused by attacker for defense evasion, contacting C2 and data exfiltration
         // Reference: https://deb.torproject.org/torproject.org/
-        $string20 = /\/torsocks\.conf/
+        $string19 = /\/torsocks\.conf/
         // Description: used for anonymous communication and web browsing. It is designed to protect users' privacy and freedom by preventing surveillance or traffic analysis. Abused by attacker for defense evasion, contacting C2 and data exfiltration
         // Reference: https://deb.torproject.org/torproject.org/
-        $string21 = /\/torsocks\.list/
+        $string20 = /\/torsocks\.list/
         // Description: used for anonymous communication and web browsing. It is designed to protect users' privacy and freedom by preventing surveillance or traffic analysis. Abused by attacker for defense evasion, contacting C2 and data exfiltration
         // Reference: https://deb.torproject.org/torproject.org/
-        $string22 = "/usr/sbin/tor"
+        $string21 = "/usr/sbin/tor"
         // Description: used for anonymous communication and web browsing. It is designed to protect users' privacy and freedom by preventing surveillance or traffic analysis. Abused by attacker for defense evasion, contacting C2 and data exfiltration
         // Reference: https://deb.torproject.org/torproject.org/
-        $string23 = "/var/lib/tor/"
+        $string22 = "/var/lib/tor/"
         // Description: used for anonymous communication and web browsing. It is designed to protect users' privacy and freedom by preventing surveillance or traffic analysis. Abused by attacker for defense evasion, contacting C2 and data exfiltration
         // Reference: https://deb.torproject.org/torproject.org/
-        $string24 = "/var/log/tor/"
+        $string23 = "/var/log/tor/"
         // Description: Tor is a python based module for using tor proxy/network services on windows - osx - linux with just one click.
         // Reference: https://github.com/r0oth3x49/Tor
-        $string25 = /\/win\/Tor\/tor\.exe/
+        $string24 = /\/win\/Tor\/tor\.exe/ nocase ascii wide
         // Description: used for anonymous communication and web browsing. It is designed to protect users' privacy and freedom by preventing surveillance or traffic analysis. Abused by attacker for defense evasion, contacting C2 and data exfiltration
         // Reference: https://deb.torproject.org/torproject.org/
-        $string26 = /127\.0\.0\.1\:9050/ nocase ascii wide
+        $string25 = /127\.0\.0\.1\:9050/
         // Description: used for anonymous communication and web browsing. It is designed to protect users' privacy and freedom by preventing surveillance or traffic analysis. Abused by attacker for defense evasion, contacting C2 and data exfiltration
         // Reference: https://deb.torproject.org/torproject.org/
-        $string27 = "apt install tor " nocase ascii wide
+        $string26 = "apt install tor "
         // Description: used for anonymous communication and web browsing. It is designed to protect users' privacy and freedom by preventing surveillance or traffic analysis. Abused by attacker for defense evasion, contacting C2 and data exfiltration
         // Reference: https://deb.torproject.org/torproject.org/
-        $string28 = /deb\.torproject\.org\/torproject\.org\// nocase ascii wide
+        $string27 = /deb\.torproject\.org\/torproject\.org\//
         // Description: used for anonymous communication and web browsing. It is designed to protect users' privacy and freedom by preventing surveillance or traffic analysis. Abused by attacker for defense evasion, contacting C2 and data exfiltration
         // Reference: https://deb.torproject.org/torproject.org/
-        $string29 = /deb\.torproject\.org\-keyring/ nocase ascii wide
+        $string28 = /deb\.torproject\.org\-keyring/
         // Description: used for anonymous communication and web browsing. It is designed to protect users' privacy and freedom by preventing surveillance or traffic analysis. Abused by attacker for defense evasion, contacting C2 and data exfiltration
         // Reference: https://deb.torproject.org/torproject.org/
-        $string30 = "debian-tor:x" nocase ascii wide
+        $string29 = "debian-tor:x"
         // Description: Tor is a python based module for using tor proxy/network services on windows - osx - linux with just one click.
         // Reference: https://github.com/r0oth3x49/Tor
-        $string31 = /r0oth3x49\/Tor\.git/
+        $string30 = /r0oth3x49\/Tor\.git/
         // Description: used for anonymous communication and web browsing. It is designed to protect users' privacy and freedom by preventing surveillance or traffic analysis. Abused by attacker for defense evasion, contacting C2 and data exfiltration
         // Reference: https://deb.torproject.org/torproject.org/
-        $string32 = /tor\@default\.service/ nocase ascii wide
+        $string31 = /tor\@default\.service/
         // Description: Tor is a python based module for using tor proxy/network services on windows - osx - linux with just one click
         // Reference: https://github.com/r0oth3x49/Tor
-        $string33 = /tor_services\.py/
+        $string32 = /tor_services\.py/
         // Description: used for anonymous communication and web browsing. It is designed to protect users' privacy and freedom by preventing surveillance or traffic analysis. Abused by attacker for defense evasion, contacting C2 and data exfiltration
         // Reference: https://deb.torproject.org/torproject.org/
-        $string34 = "tor-geoipdb:all" nocase ascii wide
+        $string33 = "tor2socks"
         // Description: used for anonymous communication and web browsing. It is designed to protect users' privacy and freedom by preventing surveillance or traffic analysis. Abused by attacker for defense evasion, contacting C2 and data exfiltration
         // Reference: https://deb.torproject.org/torproject.org/
-        $string35 = "tor-geoipdb:amd64" nocase ascii wide
+        $string34 = "tor-geoipdb:all"
         // Description: used for anonymous communication and web browsing. It is designed to protect users' privacy and freedom by preventing surveillance or traffic analysis. Abused by attacker for defense evasion, contacting C2 and data exfiltration
         // Reference: https://deb.torproject.org/torproject.org/
-        $string36 = "torify curl " nocase ascii wide
+        $string35 = "tor-geoipdb:amd64"
         // Description: used for anonymous communication and web browsing. It is designed to protect users' privacy and freedom by preventing surveillance or traffic analysis. Abused by attacker for defense evasion, contacting C2 and data exfiltration
         // Reference: https://deb.torproject.org/torproject.org/
-        $string37 = "torify ghaur " nocase ascii wide
+        $string36 = "torify curl "
         // Description: used for anonymous communication and web browsing. It is designed to protect users' privacy and freedom by preventing surveillance or traffic analysis. Abused by attacker for defense evasion, contacting C2 and data exfiltration
         // Reference: https://deb.torproject.org/torproject.org/
-        $string38 = "torify nuclei " nocase ascii wide
+        $string37 = "torify ghaur "
         // Description: used for anonymous communication and web browsing. It is designed to protect users' privacy and freedom by preventing surveillance or traffic analysis. Abused by attacker for defense evasion, contacting C2 and data exfiltration
         // Reference: https://deb.torproject.org/torproject.org/
-        $string39 = "torify sqlmap " nocase ascii wide
+        $string38 = "torify nuclei "
+        // Description: used for anonymous communication and web browsing. It is designed to protect users' privacy and freedom by preventing surveillance or traffic analysis. Abused by attacker for defense evasion, contacting C2 and data exfiltration
+        // Reference: https://deb.torproject.org/torproject.org/
+        $string39 = "torify sqlmap "
         // Description: Tor is a python based module for using tor proxy/network services on windows - osx - linux with just one click.
         // Reference: https://github.com/r0oth3x49/Tor
         $string40 = "TorServiceSetup"
         // Description: used for anonymous communication and web browsing. It is designed to protect users' privacy and freedom by preventing surveillance or traffic analysis. Abused by attacker for defense evasion, contacting C2 and data exfiltration
         // Reference: https://deb.torproject.org/torproject.org/
-        $string41 = "torsocks:amd64" nocase ascii wide
+        $string41 = "torsocks:amd64"
 
     condition:
         any of them

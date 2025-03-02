@@ -10,16 +10,16 @@ rule SharpRDP
     strings:
         // Description: Remote Desktop Protocol .NET Console Application for Authenticated Command Execution
         // Reference: https://github.com/0xthirteen/SharpRDP
-        $string1 = "  Execute command elevated through Run Dialog" nocase ascii wide
+        $string1 = " Execute command elevated through Run Dialog" nocase ascii wide
         // Description: Remote Desktop Protocol .NET Console Application for Authenticated Command Execution
         // Reference: https://github.com/0xthirteen/SharpRDP
-        $string2 = "  Execute command elevated through task manager" nocase ascii wide
+        $string2 = " Execute command elevated through task manager" nocase ascii wide
         // Description: Remote Desktop Protocol .NET Console Application for Authenticated Command Execution
         // Reference: https://github.com/0xthirteen/SharpRDP
-        $string3 = /\.exe\scomputername\=.{0,1000}\scommand\=.{0,1000}\susername\=.{0,1000}\spassword\=.{0,1000}\s\snla\=true/ nocase ascii wide
+        $string3 = /\.exe\scomputername\=.{0,1000}\scommand\=.{0,1000}\susername\=.{0,1000}\spassword\=.{0,1000}\snla\=true/ nocase ascii wide
         // Description: Remote Desktop Protocol .NET Console Application for Authenticated Command Execution
         // Reference: https://github.com/0xthirteen/SharpRDP
-        $string4 = /\.exe\scomputername\=.{0,1000}\scommand\=.{0,1000}\susername\=.{0,1000}\spassword\=.{0,1000}\s\stakeover\=true/ nocase ascii wide
+        $string4 = /\.exe\scomputername\=.{0,1000}\scommand\=.{0,1000}\susername\=.{0,1000}\spassword\=.{0,1000}\stakeover\=true/ nocase ascii wide
         // Description: Remote Desktop Protocol .NET Console Application for Authenticated Command Execution
         // Reference: https://github.com/0xthirteen/SharpRDP
         $string5 = /\.exe\scomputername\=.{0,1000}\scommand\=.{0,1000}\susername\=.{0,1000}\spassword\=.{0,1000}\sconnectdrive\=true/ nocase ascii wide

@@ -29,9 +29,6 @@ rule polenum
         // Description: Uses Impacket Library to get the password policy from a windows machine
         // Reference: https://salsa.debian.org/pkg-security-team/polenum
         $string7 = "polenum -h" nocase ascii wide
-        // Description: Uses Impacket Library to get the password policy from a windows machine
-        // Reference: https://salsa.debian.org/pkg-security-team/polenum
-        $string8 = /polenum\s.{0,1000}\:/ nocase ascii wide
 
     condition:
         any of them

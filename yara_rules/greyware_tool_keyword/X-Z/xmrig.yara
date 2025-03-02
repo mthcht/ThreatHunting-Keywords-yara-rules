@@ -10,7 +10,7 @@ rule xmrig
     strings:
         // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
         // Reference: https://github.com/C3Pool/xmrig_setup/
-        $string1 = /\s\sxmrig\.exe/ nocase ascii wide
+        $string1 = /\sxmrig\.exe/ nocase ascii wide
         // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
         // Reference: https://github.com/C3Pool/xmrig_setup/
         $string2 = " c3pool_miner" nocase ascii wide
@@ -172,7 +172,7 @@ rule xmrig
         $string54 = "killall xmrig" nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string55 = "LS1kb25hdGUtbGV2ZWw9" nocase ascii wide
+        $string55 = "LS1kb25hdGUtbGV2ZWw9"
         // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
         // Reference: https://github.com/C3Pool/xmrig_setup/
         $string56 = "mining in background will be started using your startup directory script and only work when your are logged in this host" nocase ascii wide

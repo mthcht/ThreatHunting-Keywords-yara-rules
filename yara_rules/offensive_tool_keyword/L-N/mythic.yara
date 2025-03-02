@@ -662,9 +662,6 @@ rule mythic
         // Description: mythic C2 agent
         // Reference: https://github.com/MythicAgents/freyja/
         $string218 = "zsh_executor " nocase ascii wide
-        // Description: mythic C2 agent
-        // Reference: https://github.com/MythicAgents/freyja/
-        $string219 = "sh_executor " nocase ascii wide
 
     condition:
         any of them

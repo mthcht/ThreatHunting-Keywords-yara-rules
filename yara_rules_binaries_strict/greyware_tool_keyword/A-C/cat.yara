@@ -56,24 +56,30 @@ rule cat
         // Description: linux commands abused by attackers
         // Reference: N/A
         $string16 = /cat\s\/dev\/null\s\>\s\/var\/log\/auth\.log/
+        // Description: Indicator Removal on Host - clearing logs
+        // Reference: https://github.com/mthcht/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.md
+        $string17 = "cat /dev/null > /var/log/messages"
         // Description: linux commands abused by attackers
         // Reference: N/A
-        $string17 = /cat\s\/dev\/null\s\>\s\~\/\.bash_history/
+        $string18 = /cat\s\/dev\/null\s\>\s\~\/\.bash_history/
+        // Description: Indicator Removal on Host - clearing logs
+        // Reference: https://github.com/mthcht/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.md
+        $string19 = "cat /dev/zero > /var/lol/messages"
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
-        $string18 = "cat /etc/passwd"
+        $string20 = "cat /etc/passwd"
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
-        $string19 = "cat /etc/shadow"
+        $string21 = "cat /etc/shadow"
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
-        $string20 = "cat /etc/sudoers"
+        $string22 = "cat /etc/sudoers"
         // Description: cat suspicious commands
         // Reference: N/A
-        $string21 = /cat\s\/root\/\.aws\/credentials/ nocase ascii wide
+        $string23 = /cat\s\/root\/\.aws\/credentials/ nocase ascii wide
         // Description: cat suspicious commands
         // Reference: N/A
-        $string22 = /cat\s\/root\/\.ssh\/id_rsa/ nocase ascii wide
+        $string24 = /cat\s\/root\/\.ssh\/id_rsa/ nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

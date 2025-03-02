@@ -58,88 +58,88 @@ rule Ninja
         $string16 = "ahmedkhlief/Ninja" nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string17 = "ahmedkhlief/Ninja" nocase ascii wide
+        $string17 = /AMSI_Bypass\.ps1/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string18 = /AMSI_Bypass\.ps1/ nocase ascii wide
+        $string18 = /ASBBypass\.ps1/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string19 = /ASBBypass\.ps1/ nocase ascii wide
+        $string19 = "b64stager" nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string20 = "b64stager" nocase ascii wide
+        $string20 = "'C2Default'" nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string21 = "'C2Default'" nocase ascii wide
+        $string21 = /c2\-logs\.txt/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string22 = /c2\-logs\.txt/ nocase ascii wide
+        $string22 = /cmd_shellcodex64\./ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string23 = /cmd_shellcodex64\./ nocase ascii wide
+        $string23 = /cmd_shellcodex86\./ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string24 = /cmd_shellcodex86\./ nocase ascii wide
+        $string24 = /create\-aws\-instance\.py/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string25 = /create\-aws\-instance\.py/ nocase ascii wide
+        $string25 = "donut-shellcode" nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string26 = "donut-shellcode" nocase ascii wide
+        $string26 = /dropper_cs\.exe/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string27 = /dropper_cs\.exe/ nocase ascii wide
+        $string27 = /Find\-PSServiceAccounts\.ps1/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string28 = /Find\-PSServiceAccounts\.ps1/ nocase ascii wide
+        $string28 = /Follina\.Ninja/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string29 = /Follina\.Ninja/ nocase ascii wide
+        $string29 = /Follina\/follina\.html/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string30 = /Follina\/follina\.html/ nocase ascii wide
+        $string30 = "Follina/Follinadoc" nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string31 = "Follina/Follinadoc" nocase ascii wide
+        $string31 = /get_beacon\(/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string32 = /get_beacon\(/ nocase ascii wide
+        $string32 = "Invoke-Kerberoast" nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string33 = "Invoke-Kerberoast" nocase ascii wide
+        $string33 = /Invoke\-Kerberoast\.ps1/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string34 = /Invoke\-Kerberoast\.ps1/ nocase ascii wide
+        $string34 = "Invoke-Mimikatz-old" nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string35 = "Invoke-Mimikatz-old" nocase ascii wide
+        $string35 = "Invoke-WMIExec" nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string36 = "Invoke-WMIExec" nocase ascii wide
+        $string36 = /Kerberoast\.py/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string37 = /Kerberoast\.py/ nocase ascii wide
+        $string37 = "Ninja c2" nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string38 = "Ninja c2" nocase ascii wide
+        $string38 = "ninjac2" nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string39 = "ninjac2" nocase ascii wide
+        $string39 = /Obfuscate\.py/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string40 = /Obfuscate\.py/ nocase ascii wide
+        $string40 = "payloads/Follina" nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string41 = "payloads/Follina" nocase ascii wide
+        $string41 = "payloads/Powershell" nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string42 = "payloads/Powershell" nocase ascii wide
+        $string42 = "payloads/shellcodes" nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string43 = "payloads/shellcodes" nocase ascii wide
+        $string43 = /python3\sNinja\.py/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string44 = /python3\sNinja\.py/ nocase ascii wide
+        $string44 = /python3\sstart_campaign\.py/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
         $string45 = /safetydump\.ninja/ nocase ascii wide
@@ -155,9 +155,6 @@ rule Ninja
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
         $string49 = "webshell_execute" nocase ascii wide
-        // Description: Open source C2 server created for stealth red team operations
-        // Reference: https://github.com/ahmedkhlief/Ninja
-        $string50 = /python3\sstart_campaign\.py/ nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

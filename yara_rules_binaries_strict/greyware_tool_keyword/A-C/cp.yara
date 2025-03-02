@@ -8,12 +8,24 @@ rule cp
         rule_category = "greyware_tool_keyword"
 
     strings:
+        // Description: copies the Bash binary to the /tmp/ directory
+        // Reference: N/A
+        $string1 = "cp /bin/bash /tmp/"
+        // Description: copies the Bash binary to the /tmp/ directory
+        // Reference: N/A
+        $string2 = "cp /bin/sh /tmp/"
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
-        $string1 = "cp /etc/passwd"
+        $string3 = "cp /etc/passwd"
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
-        $string2 = "cp /etc/shadow"
+        $string4 = "cp /etc/shadow"
+        // Description: copies the Bash binary to the /tmp/ directory
+        // Reference: N/A
+        $string5 = "cp -i /bin/bash /tmp/"
+        // Description: copies the Bash binary to the /tmp/ directory
+        // Reference: N/A
+        $string6 = "cp -i /bin/sh /tmp/"
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

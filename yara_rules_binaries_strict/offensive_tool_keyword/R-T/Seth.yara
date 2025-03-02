@@ -13,7 +13,7 @@ rule Seth
         $string1 = /\.\/seth\.sh\s.{0,100}\s/
         // Description: Perform a MitM attack and extract clear text credentials from RDP connections
         // Reference: https://github.com/SySS-Research/Seth
-        $string2 = /\.py\s.{0,100}\s\s\-\-fake\-server/ nocase ascii wide
+        $string2 = /\.py\s.{0,100}\s\-\-fake\-server/ nocase ascii wide
         // Description: Perform a MitM attack and extract clear text credentials from RDP connections
         // Reference: https://github.com/SySS-Research/Seth
         $string3 = "arpspoof -i " nocase ascii wide

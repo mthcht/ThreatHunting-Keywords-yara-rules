@@ -8,24 +8,24 @@ rule Antivirus_Signature
         rule_category = "signature_keyword"
 
     strings:
-        // Description: AV signature for exploitation tools
-        // Reference: N/A
-        $string1 = /Backdoor\.ASP/ nocase ascii wide
-        // Description: Antiviurs signature_keyword
-        // Reference: N/A
-        $string2 = /Backdoor\.ASP\.FUZZSHELL\.A/ nocase ascii wide
-        // Description: Antiviurs signature_keyword
-        // Reference: N/A
-        $string3 = /Backdoor\.ASP\.WEBSHELL\./ nocase ascii wide
-        // Description: AV signature for exploitation tools
-        // Reference: N/A
-        $string4 = /Backdoor\.Cobalt/ nocase ascii wide
-        // Description: AV signature for exploitation tools
-        // Reference: N/A
-        $string5 = /Backdoor\.JSP/ nocase ascii wide
         // Description: AV signature of noodlerat malware
         // Reference: N/A
-        $string6 = /Backdoor\.Linux/ nocase ascii wide
+        $string1 = /Backdoor\.Linux/ nocase ascii wide
+        // Description: AV signature for exploitation tools
+        // Reference: N/A
+        $string2 = /Backdoor\.ASP/ nocase ascii wide
+        // Description: Antiviurs signature_keyword
+        // Reference: N/A
+        $string3 = /Backdoor\.ASP\.FUZZSHELL\.A/ nocase ascii wide
+        // Description: Antiviurs signature_keyword
+        // Reference: N/A
+        $string4 = /Backdoor\.ASP\.WEBSHELL\./ nocase ascii wide
+        // Description: AV signature for exploitation tools
+        // Reference: N/A
+        $string5 = /Backdoor\.Cobalt/ nocase ascii wide
+        // Description: AV signature for exploitation tools
+        // Reference: N/A
+        $string6 = /Backdoor\.JSP/ nocase ascii wide
         // Description: AV signature for exploitation tools
         // Reference: N/A
         $string7 = /Backdoor\.PHP/ nocase ascii wide
@@ -164,75 +164,75 @@ rule Antivirus_Signature
         // Description: Antiviurs signature_keyword
         // Reference: N/A
         $string52 = "HackTool:Win64/CobaltStrike" nocase ascii wide
-        // Description: Antivirus signature_keyword for hacktool
-        // Reference: N/A
-        $string53 = "HKTL" nocase ascii wide
-        // Description: Antiviurs signature_keyword
-        // Reference: N/A
-        $string54 = "HKTL_NETCAT" nocase ascii wide
-        // Description: Generic hacktool Engine signature
-        // Reference: N/A
-        $string55 = "HTool/WCE" nocase ascii wide
-        // Description: AV signature for exploitation tools
-        // Reference: N/A
-        $string56 = "impacket" nocase ascii wide
         // Description: AV signature of noodlerat malware
         // Reference: N/A
-        $string57 = /Linux\.Backdoor/ nocase ascii wide
+        $string53 = /Linux\.Backdoor/ nocase ascii wide
+        // Description: Antivirus signature_keyword for hacktool
+        // Reference: N/A
+        $string54 = "HKTL" nocase ascii wide
         // Description: Dump LSASS memory through a process snapshot (-r) avoiding interacting with it directly
         // Reference: lsass dump malware signature
-        $string58 = "Lsass-Mdump" nocase ascii wide
+        $string55 = "Lsass-Mdump" nocase ascii wide
+        // Description: Antiviurs signature_keyword
+        // Reference: N/A
+        $string56 = "HKTL_NETCAT" nocase ascii wide
+        // Description: Generic hacktool Engine signature
+        // Reference: N/A
+        $string57 = "HTool/WCE" nocase ascii wide
+        // Description: AV signature for exploitation tools
+        // Reference: N/A
+        $string58 = "impacket" nocase ascii wide
         // Description: AV signature for exploitation tools
         // Reference: N/A
         $string59 = /Malware\.Htool/ nocase ascii wide
         // Description: AV signature for exploitation tools
         // Reference: N/A
         $string60 = "MSFPsExeCommand" nocase ascii wide
+        // Description: Antiviurs signature_keyword for ransomware
+        // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver/indicators-blackcat-ransomware-deploys-new-signed-kernel-driver.txt
+        $string61 = /Ransom\.Win32\./ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string61 = "PowerShell/HackTool" nocase ascii wide
+        $string62 = "PowerShell/HackTool" nocase ascii wide
         // Description: highly revelant Antivirus signature. phishing tools
         // Reference: N/A
-        $string62 = "PShlSpy" nocase ascii wide
-        // Description: highly revelant Antivirus signature. Programs classified as PSWTool can be used to view or restore forgotten often hidden passwords. They can also be used with malicious intent. even though the programs themselves have no malicious payload.
-        // Reference: N/A
-        $string63 = "PSWtool" nocase ascii wide
-        // Description: Antivirus signature - a tool used within a command-line interface on 64bit Windows computers to extract the NTLM (LanMan) hashes from LSASS.exe in memory. This tool may be used in conjunction with malware or other penetration testing tools to obtain credentials for use in Windows authentication systems
-        // Reference: N/A
-        $string64 = "PWDump " nocase ascii wide
-        // Description: AV signature for exploitation tools
-        // Reference: N/A
-        $string65 = "PWS:Win32/Mpass" nocase ascii wide
-        // Description: Antiviurs signature_keyword for ransomware
-        // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver/indicators-blackcat-ransomware-deploys-new-signed-kernel-driver.txt
-        $string66 = /Ransom\.Win32\./ nocase ascii wide
-        // Description: Antiviurs signature_keyword
-        // Reference: N/A
-        $string67 = "Ransom:Linux/BlackBasta" nocase ascii wide
-        // Description: AV signature for exploitation tools
-        // Reference: N/A
-        $string68 = "Ransom:Win32" nocase ascii wide
-        // Description: Antiviurs signature_keyword
-        // Reference: N/A
-        $string69 = "Ransom:Win32" nocase ascii wide
-        // Description: Antiviurs signature_keyword
-        // Reference: N/A
-        $string70 = "Ransom:Win32/BlackBasta" nocase ascii wide
-        // Description: Antiviurs signature_keyword
-        // Reference: N/A
-        $string71 = "Ransom:Win64" nocase ascii wide
-        // Description: Antiviurs signature_keyword
-        // Reference: N/A
-        $string72 = "Ransom_Petya" nocase ascii wide
-        // Description: Antiviurs signature_keyword
-        // Reference: N/A
-        $string73 = "Ransom_WCRY" nocase ascii wide
+        $string63 = "PShlSpy" nocase ascii wide
         // Description: Antiviurs signature_keyword for remote administration tools 
         // Reference: N/A
-        $string74 = "RemAdm" nocase ascii wide
+        $string64 = "RemAdm" nocase ascii wide
+        // Description: highly revelant Antivirus signature. Programs classified as PSWTool can be used to view or restore forgotten often hidden passwords. They can also be used with malicious intent. even though the programs themselves have no malicious payload.
+        // Reference: N/A
+        $string65 = "PSWtool" nocase ascii wide
         // Description: Antiviurs signature_keyword for ransomware
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver/indicators-blackcat-ransomware-deploys-new-signed-kernel-driver.txt
-        $string75 = /Rootkit\.Win64\./ nocase ascii wide
+        $string66 = /Rootkit\.Win64\./ nocase ascii wide
+        // Description: Antivirus signature - a tool used within a command-line interface on 64bit Windows computers to extract the NTLM (LanMan) hashes from LSASS.exe in memory. This tool may be used in conjunction with malware or other penetration testing tools to obtain credentials for use in Windows authentication systems
+        // Reference: N/A
+        $string67 = "PWDump " nocase ascii wide
+        // Description: AV signature for exploitation tools
+        // Reference: N/A
+        $string68 = "PWS:Win32/Mpass" nocase ascii wide
+        // Description: Antiviurs signature_keyword
+        // Reference: N/A
+        $string69 = "Ransom:Linux/BlackBasta" nocase ascii wide
+        // Description: AV signature for exploitation tools
+        // Reference: N/A
+        $string70 = "Ransom:Win32" nocase ascii wide
+        // Description: Antiviurs signature_keyword
+        // Reference: N/A
+        $string71 = "Ransom:Win32" nocase ascii wide
+        // Description: Antiviurs signature_keyword
+        // Reference: N/A
+        $string72 = "Ransom:Win32/BlackBasta" nocase ascii wide
+        // Description: Antiviurs signature_keyword
+        // Reference: N/A
+        $string73 = "Ransom:Win64" nocase ascii wide
+        // Description: Antiviurs signature_keyword
+        // Reference: N/A
+        $string74 = "Ransom_Petya" nocase ascii wide
+        // Description: Antiviurs signature_keyword
+        // Reference: N/A
+        $string75 = "Ransom_WCRY" nocase ascii wide
         // Description: AV signature for exploitation tools
         // Reference: N/A
         $string76 = "SupportScam:Win32" nocase ascii wide

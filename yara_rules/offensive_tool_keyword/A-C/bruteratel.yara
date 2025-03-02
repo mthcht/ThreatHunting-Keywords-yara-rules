@@ -496,13 +496,7 @@ rule bruteratel
         $string162 = "memhunt " nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string163 = "psgrep " nocase ascii wide
-        // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
-        // Reference: https://bruteratel.com/
-        $string164 = /set_child\s.{0,1000}\.exe/ nocase ascii wide
-        // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
-        // Reference: https://bruteratel.com/
-        $string165 = /sharescan\s.{0,1000}\.txt/ nocase ascii wide
+        $string163 = /sharescan\s.{0,1000}\.txt/ nocase ascii wide
 
     condition:
         any of them

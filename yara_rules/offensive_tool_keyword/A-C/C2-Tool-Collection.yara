@@ -59,9 +59,6 @@ rule C2_Tool_Collection
         // Description: A collection of tools which integrate with Cobalt Strike (and possibly other C2 frameworks) through BOF and reflective DLL loading techniques
         // Reference: https://github.com/outflanknl/C2-Tool-Collection
         $string17 = "Lapsdump " nocase ascii wide
-        // Description: A collection of tools which integrate with Cobalt Strike (and possibly other C2 frameworks) through BOF and reflective DLL loading techniques
-        // Reference: https://github.com/outflanknl/C2-Tool-Collection
-        $string18 = /SprayAD\s.{0,1000}\s.{0,1000}\s/ nocase ascii wide
 
     condition:
         any of them

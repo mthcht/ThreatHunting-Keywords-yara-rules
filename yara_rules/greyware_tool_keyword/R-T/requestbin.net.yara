@@ -14,6 +14,9 @@ rule requestbin_net
         // Description: allows users to create a unique URL to collect and inspect HTTP requests. It is commonly used for debugging webhooks - it can also be abused by attackers for verifying the reachability and effectiveness of their payloads
         // Reference: http://requestbin.net
         $string2 = /http\:\/\/requestbin\.net\/r\// nocase ascii wide
+        // Description: allows users to create a unique URL to collect and inspect HTTP requests. It is commonly used for debugging webhooks - it can also be abused by attackers for verifying the reachability and effectiveness of their payloads
+        // Reference: http://requestbin.net
+        $string3 = /https\:\/\/requestbin\.net\/r\// nocase ascii wide
 
     condition:
         any of them

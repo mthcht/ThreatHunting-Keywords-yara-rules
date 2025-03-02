@@ -106,7 +106,7 @@ rule Rubeus
         $string32 = /\schangepw\s.{0,1000}\s\/ticket\:/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string33 = /\sdiamond\s.{0,1000}\s\s\/certificate\:/ nocase ascii wide
+        $string33 = /\sdiamond\s.{0,1000}\s\/certificate\:/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
         $string34 = " diamond /tgtdeleg " nocase ascii wide

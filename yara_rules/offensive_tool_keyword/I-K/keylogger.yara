@@ -20,9 +20,12 @@ rule keylogger
         // Description: Keyboard recording
         // Reference: https://github.com/uknowsec/keylogger
         $string4 = "8340cdf3b69ba92b47803f75eabb102d35454ef9676702ff1742c7136d9608de" nocase ascii wide
+        // Description: keylogger keyword. could be related to keylooger tools 
+        // Reference: N/A
+        $string5 = "Keylogger" nocase ascii wide
         // Description: Keyboard recording
         // Reference: https://github.com/uknowsec/keylogger
-        $string5 = "uknowsec/keylogger" nocase ascii wide
+        $string6 = "uknowsec/keylogger" nocase ascii wide
 
     condition:
         any of them

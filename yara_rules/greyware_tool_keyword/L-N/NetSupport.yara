@@ -8,7 +8,7 @@ rule NetSupport
         rule_category = "greyware_tool_keyword"
 
     strings:
-        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused by adversaries for remote system control and surveillance
         // Reference: https://www.netsupportmanager.com/
         $string1 = " /EV\"NetSupport School\"" nocase ascii wide
         // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance

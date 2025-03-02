@@ -20,6 +20,9 @@ rule python
         // Description: interactive shell
         // Reference: N/A
         $string4 = /\s\-c\s\'import\spty\;pty\.spawn\(\\\\"\/bin\/sh/
+        // Description: commonly used to upgrade a restricted shell
+        // Reference: N/A
+        $string5 = /python\s\-c\s\'import\spty\;pty\.spawn\(\\"\/bin\/bash\\"\)/
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

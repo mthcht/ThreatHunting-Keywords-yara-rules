@@ -20,9 +20,6 @@ rule sniffer
         // Description: A modern alternative network traffic sniffer.
         // Reference: https://github.com/chenjiandongx/sniffer
         $string4 = /sniffer\-master\.zip/ nocase ascii wide
-        // Description: A modern alternative network traffic sniffer.
-        // Reference: https://github.com/chenjiandongx/sniffer
-        $string5 = "sniffer -" nocase ascii wide
 
     condition:
         any of them

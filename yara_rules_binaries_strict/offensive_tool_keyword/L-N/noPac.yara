@@ -13,7 +13,7 @@ rule noPac
         $string1 = "/Ridter/noPac" nocase ascii wide
         // Description: command used in the method prerequisites of the POC exploitation for CVE-2021-42278 and CVE-2021-42287 to impersonate DA from standard domain user
         // Reference: https://github.com/Ridter/noPac
-        $string2 = /AdFind\.exe\s\-sc\sgetacls\s\-sddlfilter\s\s\s.{0,100}computer.{0,100}\s\s\-recmute/ nocase ascii wide
+        $string2 = /AdFind\.exe\s\-sc\sgetacls\s\-sddlfilter\s\s\s.{0,100}computer.{0,100}\s\-recmute/ nocase ascii wide
         // Description: POC exploitation for CVE-2021-42278 and CVE-2021-42287 to impersonate DA from standard domain user
         // Reference: https://github.com/Ridter/noPac
         $string3 = /noPac\..{0,100}\s\-create\-child/ nocase ascii wide

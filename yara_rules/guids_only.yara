@@ -26,6 +26,11 @@ rule GUID_Detection
         $guid_015A37FC_53D0_499B_BFFE_AB88C5086040_str = "015A37FC-53D0-499B-BFFE-AB88C5086040" ascii wide nocase
         $guid_015A37FC_53D0_499B_BFFE_AB88C5086040_bin = { FC 37 5A 01 D0 53 9B 49 BF FE AB 88 C5 08 60 40 }
 
+        // remote backdoor used by a group of the same name (Carbanak). It is intended for espionage - data exfiltration and providing remote access to infected machines
+        // https://github.com/0x25bit/Updated-Carbanak-Source-with-Plugins
+        $guid_01871B2B_B006_4069_997D_BAB3EB216160_str = "01871B2B-B006-4069-997D-BAB3EB216160" ascii wide nocase
+        $guid_01871B2B_B006_4069_997D_BAB3EB216160_bin = { 2B 1B 87 01 06 B0 69 40 99 7D BA B3 EB 21 61 60 }
+
         // Abusing Azure AD SSO with the Primary Refresh Token - ROADtoken is a tool that uses the BrowserCore.exe binary to obtain a cookie that can be used with SSO and Azure AD
         // https://github.com/dirkjanm/ROADtoken
         $guid_018BD6D4_9019_42FD_8D3A_831B23B47CB2_str = "018BD6D4-9019-42FD-8D3A-831B23B47CB2" ascii wide nocase
@@ -35,6 +40,11 @@ rule GUID_Detection
         // https://github.com/FuzzySecurity/StandIn
         $guid_01C142BA_7AF1_48D6_B185_81147A2F7DB7_str = "01C142BA-7AF1-48D6-B185-81147A2F7DB7" ascii wide nocase
         $guid_01C142BA_7AF1_48D6_B185_81147A2F7DB7_bin = { BA 42 C1 01 F1 7A D6 48 B1 85 81 14 7A 2F 7D B7 }
+
+        // Malware RAT with keylogger - dll injection - C2 - Remote control
+        // https://github.com/sin5678/gh0st
+        $guid_0228336A_2F4C_0D17_2E11_86654A1FAD8D_str = "0228336A-2F4C-0D17-2E11-86654A1FAD8D" ascii wide nocase
+        $guid_0228336A_2F4C_0D17_2E11_86654A1FAD8D_bin = { 6A 33 28 02 4C 2F 17 0D 2E 11 86 65 4A 1F AD 8D }
 
         // remotely killing EDR with WDAC
         // https://github.com/logangoins/Krueger
@@ -171,6 +181,11 @@ rule GUID_Detection
         $guid_080A880D_BA94_4CF8_9015_5B2063073E02_str = "080A880D-BA94-4CF8-9015-5B2063073E02" ascii wide nocase
         $guid_080A880D_BA94_4CF8_9015_5B2063073E02_bin = { 0D 88 0A 08 94 BA F8 4C 90 15 5B 20 63 07 3E 02 }
 
+        // remote backdoor used by a group of the same name (Carbanak). It is intended for espionage - data exfiltration and providing remote access to infected machines
+        // https://github.com/0x25bit/Updated-Carbanak-Source-with-Plugins
+        $guid_0845B3E9_B6AE_4227_B484_CECBC2EB1C87_str = "0845B3E9-B6AE-4227-B484-CECBC2EB1C87" ascii wide nocase
+        $guid_0845B3E9_B6AE_4227_B484_CECBC2EB1C87_bin = { E9 B3 45 08 AE B6 27 42 B4 84 CE CB C2 EB 1C 87 }
+
         // An open-source windows defender manager. Now you can disable windows defender permanently
         // https://github.com/pgkt04/defender-control
         $guid_089CA7D6_3277_4998_86AF_F6413290A442_str = "089CA7D6-3277-4998-86AF-F6413290A442" ascii wide nocase
@@ -230,6 +245,11 @@ rule GUID_Detection
         // https://github.com/gentilkiwi/mimikatz
         $guid_0BD5DE6B_8DA5_4CF1_AE53_A265010F52AA_str = "0BD5DE6B-8DA5-4CF1-AE53-A265010F52AA" ascii wide nocase
         $guid_0BD5DE6B_8DA5_4CF1_AE53_A265010F52AA_bin = { 6B DE D5 0B A5 8D F1 4C AE 53 A2 65 01 0F 52 AA }
+
+        // a Windows service in C# that is self installing as a single executable and sets proper attributes to prevent an administrator from stopping or pausing the service through the Windows Service Control Manager interface
+        // https://github.com/malcomvetter/UnstoppableService
+        $guid_0C117EE5_2A21_496D_AF31_8CC7F0CAAA86_str = "0C117EE5-2A21-496D-AF31-8CC7F0CAAA86" ascii wide nocase
+        $guid_0C117EE5_2A21_496D_AF31_8CC7F0CAAA86_bin = { E5 7E 11 0C 21 2A 6D 49 AF 31 8C C7 F0 CA AA 86 }
 
         // Extracts passwords from a KeePass 2.x database directly from memory
         // https://github.com/denandz/KeeFarce
@@ -376,6 +396,11 @@ rule GUID_Detection
         $guid_14CA405B_8BAC_48AB_9FBA_8FB5DF88FD0D_str = "14CA405B-8BAC-48AB-9FBA-8FB5DF88FD0D" ascii wide nocase
         $guid_14CA405B_8BAC_48AB_9FBA_8FB5DF88FD0D_bin = { 5B 40 CA 14 AC 8B AB 48 9F BA 8F B5 DF 88 FD 0D }
 
+        // exploit for CVE-2020-1472
+        // https://github.com/leitosama/SharpZeroLogon
+        $guid_15ce9a3c_4609_4184_87b2_e29fc5e2b770_str = "15ce9a3c-4609-4184-87b2-e29fc5e2b770" ascii wide nocase
+        $guid_15ce9a3c_4609_4184_87b2_e29fc5e2b770_bin = { 3C 9A CE 15 09 46 84 41 87 B2 E2 9F C5 E2 B7 70 }
+
         // Injects a DLL into a suspended process running as SYSTEM via the OfficeClickToRun service for privilege escalation - Shim Injector: Injects a DLL into a process by modifying shim data in memory without creating or registering new SDB files to evade detection.
         // https://github.com/deepinstinct/ShimMe
         $guid_1605d453_7d62_4198_a436_27e48ef828eb_str = "1605d453-7d62-4198-a436-27e48ef828eb" ascii wide nocase
@@ -436,6 +461,11 @@ rule GUID_Detection
         $guid_190DFAEB_0288_4043_BE0E_3273FA653B52_str = "190DFAEB-0288-4043-BE0E-3273FA653B52" ascii wide nocase
         $guid_190DFAEB_0288_4043_BE0E_3273FA653B52_bin = { EB FA 0D 19 88 02 43 40 BE 0E 32 73 FA 65 3B 52 }
 
+        // A C# Command & Control framework
+        // https://github.com/DragoQCC/HardHatC2
+        $guid_196B8469_F798_4ECC_9A77_C1CAB5BF6EAE_str = "196B8469-F798-4ECC-9A77-C1CAB5BF6EAE" ascii wide nocase
+        $guid_196B8469_F798_4ECC_9A77_C1CAB5BF6EAE_bin = { 69 84 6B 19 98 F7 CC 4E 9A 77 C1 CA B5 BF 6E AE }
+
         // DomainPasswordSpray is a tool written in PowerShell to perform a password spray attack against users of a domain.
         // https://github.com/dafthack/DomainPasswordSpray
         $guid_1a3c4069_8c11_4336_bef8_9a43c0ba60e2_str = "1a3c4069-8c11-4336-bef8-9a43c0ba60e2" ascii wide nocase
@@ -445,6 +475,11 @@ rule GUID_Detection
         // https://github.com/dmcxblue/SharpGhostTask
         $guid_1A8C9BD8_1800_46B0_8E22_7D3823C68366_str = "1A8C9BD8-1800-46B0-8E22-7D3823C68366" ascii wide nocase
         $guid_1A8C9BD8_1800_46B0_8E22_7D3823C68366_bin = { D8 9B 8C 1A 00 18 B0 46 8E 22 7D 38 23 C6 83 66 }
+
+        // simple POC to show how to tunnel traffic through Azure Application Proxy
+        // https://github.com/xpn/AppProxyC2
+        $guid_1A99EBED_6E53_469F_88B7_F4C3D2C96B07_str = "1A99EBED-6E53-469F-88B7-F4C3D2C96B07" ascii wide nocase
+        $guid_1A99EBED_6E53_469F_88B7_F4C3D2C96B07_bin = { ED EB 99 1A 53 6E 9F 46 88 B7 F4 C3 D2 C9 6B 07 }
 
         // Proof of concept code for thread pool based process injection in Windows.
         // https://github.com/Uri3n/Thread-Pool-Injection-PoC
@@ -460,6 +495,11 @@ rule GUID_Detection
         // https://github.com/decoder-it/LocalPotato
         $guid_1B3C96A3_F698_472B_B786_6FED7A205159_str = "1B3C96A3-F698-472B-B786-6FED7A205159" ascii wide nocase
         $guid_1B3C96A3_F698_472B_B786_6FED7A205159_bin = { A3 96 3C 1B 98 F6 2B 47 B7 86 6F ED 7A 20 51 59 }
+
+        // remote backdoor used by a group of the same name (Carbanak). It is intended for espionage - data exfiltration and providing remote access to infected machines
+        // https://github.com/0x25bit/Updated-Carbanak-Source-with-Plugins
+        $guid_1B454840_E496_4F27_AA18_439A4E97BCC6_str = "1B454840-E496-4F27-AA18-439A4E97BCC6" ascii wide nocase
+        $guid_1B454840_E496_4F27_AA18_439A4E97BCC6_bin = { 40 48 45 1B 96 E4 27 4F AA 18 43 9A 4E 97 BC C6 }
 
         // ConfuserEx is a widely used open source obfuscator often found in malware
         // https://github.com/yck1509/ConfuserEx
@@ -656,6 +696,16 @@ rule GUID_Detection
         $guid_28F9E001_67E0_4200_B120_3021596689E9_str = "28F9E001-67E0-4200-B120-3021596689E9" ascii wide nocase
         $guid_28F9E001_67E0_4200_B120_3021596689E9_bin = { 01 E0 F9 28 E0 67 00 42 B1 20 30 21 59 66 89 E9 }
 
+        // Tool for viewing NTDS.dit
+        // https://github.com/trustedsec/DitExplorer
+        $guid_29021B28_61F9_492D_BB51_7CA8889087E5_str = "29021B28-61F9-492D-BB51-7CA8889087E5" ascii wide nocase
+        $guid_29021B28_61F9_492D_BB51_7CA8889087E5_bin = { 28 1B 02 29 F9 61 2D 49 BB 51 7C A8 88 90 87 E5 }
+
+        // remote backdoor used by a group of the same name (Carbanak). It is intended for espionage - data exfiltration and providing remote access to infected machines
+        // https://github.com/0x25bit/Updated-Carbanak-Source-with-Plugins
+        $guid_29390239_C06E_4F26_B5A3_594A08D8D30C_str = "29390239-C06E-4F26-B5A3-594A08D8D30C" ascii wide nocase
+        $guid_29390239_C06E_4F26_B5A3_594A08D8D30C_bin = { 39 02 39 29 6E C0 26 4F B5 A3 59 4A 08 D8 D3 0C }
+
         // Github as C2
         // https://github.com/TheD1rkMtr/GithubC2
         $guid_29446C11_A1A5_47F6_B418_0D699C6C3339_str = "29446C11-A1A5-47F6-B418-0D699C6C3339" ascii wide nocase
@@ -771,6 +821,11 @@ rule GUID_Detection
         $guid_2f00a05b_263d_4fcc_846b_da82bd684603_str = "2f00a05b-263d-4fcc-846b-da82bd684603" ascii wide nocase
         $guid_2f00a05b_263d_4fcc_846b_da82bd684603_bin = { 5B A0 00 2F 3D 26 CC 4F 84 6B DA 82 BD 68 46 03 }
 
+        // remote backdoor used by a group of the same name (Carbanak). It is intended for espionage - data exfiltration and providing remote access to infected machines
+        // https://github.com/0x25bit/Updated-Carbanak-Source-with-Plugins
+        $guid_2F8E74D2_3474_408C_9469_A4E3C97B7BBF_str = "2F8E74D2-3474-408C-9469-A4E3C97B7BBF" ascii wide nocase
+        $guid_2F8E74D2_3474_408C_9469_A4E3C97B7BBF_bin = { D2 74 8E 2F 74 34 8C 40 94 69 A4 E3 C9 7B 7B BF }
+
         // PoCs for Kernelmode rootkit techniques research.
         // https://github.com/daem0nc0re/VectorKernel/
         $guid_2FB94059_2D49_4EEA_AAF8_7E89E249644B_str = "2FB94059-2D49-4EEA-AAF8-7E89E249644B" ascii wide nocase
@@ -805,6 +860,11 @@ rule GUID_Detection
         // https://github.com/moom825/xeno-rat
         $guid_310FC5BE_6F5E_479C_A246_6093A39296C0_str = "310FC5BE-6F5E-479C-A246-6093A39296C0" ascii wide nocase
         $guid_310FC5BE_6F5E_479C_A246_6093A39296C0_bin = { BE C5 0F 31 5E 6F 9C 47 A2 46 60 93 A3 92 96 C0 }
+
+        // remote backdoor used by a group of the same name (Carbanak). It is intended for espionage - data exfiltration and providing remote access to infected machines
+        // https://github.com/0x25bit/Updated-Carbanak-Source-with-Plugins
+        $guid_315C301F_E392_4F7D_9108_8E621C11D662_str = "315C301F-E392-4F7D-9108-8E621C11D662" ascii wide nocase
+        $guid_315C301F_E392_4F7D_9108_8E621C11D662_bin = { 1F 30 5C 31 92 E3 7D 4F 91 08 8E 62 1C 11 D6 62 }
 
         // ConfuserEx is a widely used open source obfuscator often found in malware
         // https://github.com/yck1509/ConfuserEx
@@ -845,6 +905,11 @@ rule GUID_Detection
         // https://github.com/tastypepperoni/RunAsWinTcb
         $guid_33BF8AA2_18DE_4ED9_9613_A4118CBFC32A_str = "33BF8AA2-18DE-4ED9-9613-A4118CBFC32A" ascii wide nocase
         $guid_33BF8AA2_18DE_4ED9_9613_A4118CBFC32A_bin = { A2 8A BF 33 DE 18 D9 4E 96 13 A4 11 8C BF C3 2A }
+
+        // RDPCredentialStealer it's a malware that steal credentials provided by users in RDP using API Hooking with Detours in C++
+        // https://github.com/S12cybersecurity/RDPCredentialStealer
+        $guid_33d0f399_f79a_44a2_a487_21fce657be35_str = "33d0f399-f79a-44a2-a487-21fce657be35" ascii wide nocase
+        $guid_33d0f399_f79a_44a2_a487_21fce657be35_bin = { 99 F3 D0 33 9A F7 A2 44 A4 87 21 FC E6 57 BE 35 }
 
         // ConfuserEx is a widely used open source obfuscator often found in malware
         // https://github.com/yck1509/ConfuserEx
@@ -950,6 +1015,11 @@ rule GUID_Detection
         // https://github.com/hfiref0x/UACME
         $guid_3BEF8A16_981F_4C65_8AE7_C612B46BE446_str = "3BEF8A16-981F-4C65-8AE7-C612B46BE446" ascii wide nocase
         $guid_3BEF8A16_981F_4C65_8AE7_C612B46BE446_bin = { 16 8A EF 3B 1F 98 65 4C 8A E7 C6 12 B4 6B E4 46 }
+
+        // remote backdoor used by a group of the same name (Carbanak). It is intended for espionage - data exfiltration and providing remote access to infected machines
+        // https://github.com/0x25bit/Updated-Carbanak-Source-with-Plugins
+        $guid_3C0E89F1_1D3D_4651_9A44_FCCABB340E02_str = "3C0E89F1-1D3D-4651-9A44-FCCABB340E02" ascii wide nocase
+        $guid_3C0E89F1_1D3D_4651_9A44_FCCABB340E02_bin = { F1 89 0E 3C 3D 1D 51 46 9A 44 FC CA BB 34 0E 02 }
 
         // A basic emulation of an "RPC Backdoor"
         // https://github.com/eladshamir/RPC-Backdoor
@@ -1151,6 +1221,11 @@ rule GUID_Detection
         $guid_476FC126_239F_4D58_8389_E1C0E93C2C5E_str = "476FC126-239F-4D58-8389-E1C0E93C2C5E" ascii wide nocase
         $guid_476FC126_239F_4D58_8389_E1C0E93C2C5E_bin = { 26 C1 6F 47 9F 23 58 4D 83 89 E1 C0 E9 3C 2C 5E }
 
+        // remote backdoor used by a group of the same name (Carbanak). It is intended for espionage - data exfiltration and providing remote access to infected machines
+        // https://github.com/0x25bit/Updated-Carbanak-Source-with-Plugins
+        $guid_487B9D03_F5C6_45D5_A159_3148F98B5179_str = "487B9D03-F5C6-45D5-A159-3148F98B5179" ascii wide nocase
+        $guid_487B9D03_F5C6_45D5_A159_3148F98B5179_bin = { 03 9D 7B 48 C6 F5 D5 45 A1 59 31 48 F9 8B 51 79 }
+
         // PoCs for sensitive token privileges such SeDebugPrivilege
         // https://github.com/daem0nc0re/PrivFu
         $guid_487E2246_72F1_4BD3_AA8A_A9B8C79C9F28_str = "487E2246-72F1-4BD3-AA8A-A9B8C79C9F28" ascii wide nocase
@@ -1296,6 +1371,11 @@ rule GUID_Detection
         $guid_4FEAB888_F514_4F2E_A4F7_5989A86A69DE_str = "4FEAB888-F514-4F2E-A4F7-5989A86A69DE" ascii wide nocase
         $guid_4FEAB888_F514_4F2E_A4F7_5989A86A69DE_bin = { 88 B8 EA 4F 14 F5 2E 4F A4 F7 59 89 A8 6A 69 DE }
 
+        // A C# Command & Control framework
+        // https://github.com/DragoQCC/HardHatC2
+        $guid_5010BEE8_0944_4655_987F_AB3BB376E774_str = "5010BEE8-0944-4655-987F-AB3BB376E774" ascii wide nocase
+        $guid_5010BEE8_0944_4655_987F_AB3BB376E774_bin = { E8 BE 10 50 44 09 55 46 98 7F AB 3B B3 76 E7 74 }
+
         // Run PowerShell with dlls only Does not require access to powershell.exe as it uses powershell automation dlls. PowerShdll can be run with: rundll32.exe. installutil.exe. regsvcs.exe. regasm.exe. regsvr32.exe or as a standalone executable.
         // https://github.com/p3nt4/PowerShdll
         $guid_5067F916_9971_47D6_BBCB_85FB3982584F_str = "5067F916-9971-47D6-BBCB-85FB3982584F" ascii wide nocase
@@ -1360,6 +1440,11 @@ rule GUID_Detection
         // https://github.com/CICADA8-Research/RemoteKrbRelay
         $guid_5494EDD3_132D_4238_AC25_FA384D78D4E3_str = "5494EDD3-132D-4238-AC25-FA384D78D4E3" ascii wide nocase
         $guid_5494EDD3_132D_4238_AC25_FA384D78D4E3_bin = { D3 ED 94 54 2D 13 38 42 AC 25 FA 38 4D 78 D4 E3 }
+
+        // walmart's C2 - complete adversarial operations toolkit (C2 - stagers - agents - automated ephemeral redirectors and task runners - a complete phishing engine)
+        // https://github.com/malcomvetter/Periscope
+        $guid_5531A5C5_8710_48AD_BEFE_88E26F6CF798_str = "5531A5C5-8710-48AD-BEFE-88E26F6CF798" ascii wide nocase
+        $guid_5531A5C5_8710_48AD_BEFE_88E26F6CF798_bin = { C5 A5 31 55 10 87 AD 48 BE FE 88 E2 6F 6C F7 98 }
 
         // NoPowerShell is a tool implemented in C# which supports executing PowerShell-like commands while remaining invisible to any PowerShell logging mechanisms. This .NET Framework 2 compatible binary can be loaded in Cobalt Strike to execute commands in-memory. No System.Management.Automation.dll is used. only native .NET libraries. An alternative usecase for NoPowerShell is to launch it as a DLL via rundll32.exe: rundll32 NoPowerShell.dll.main.
         // https://github.com/bitsadmin/nopowershell
@@ -1526,6 +1611,11 @@ rule GUID_Detection
         $guid_5D4E7C1F_4812_4038_9663_6CD277ED9AD4_str = "5D4E7C1F-4812-4038-9663-6CD277ED9AD4" ascii wide nocase
         $guid_5D4E7C1F_4812_4038_9663_6CD277ED9AD4_bin = { 1F 7C 4E 5D 12 48 38 40 96 63 6C D2 77 ED 9A D4 }
 
+        // C# executables to extract information from target environment using OneDrive API.
+        // https://github.com/adm1nPanda/SharpExfil
+        $guid_5de78ea9_73a8_4c53_9d5e_3a893e439a3a_str = "5de78ea9-73a8-4c53-9d5e-3a893e439a3a" ascii wide nocase
+        $guid_5de78ea9_73a8_4c53_9d5e_3a893e439a3a_bin = { A9 8E E7 5D A8 73 53 4C 9D 5E 3A 89 3E 43 9A 3A }
+
         // Extracts passwords from a KeePass 2.x database directly from memory
         // https://github.com/denandz/KeeFarce
         $guid_5DE7F97C_B97B_489F_A1E4_9F9656317F94_str = "5DE7F97C-B97B-489F-A1E4-9F9656317F94" ascii wide nocase
@@ -1606,10 +1696,20 @@ rule GUID_Detection
         $guid_61CE6716_E619_483C_B535_8694F7617548_str = "61CE6716-E619-483C-B535-8694F7617548" ascii wide nocase
         $guid_61CE6716_E619_483C_B535_8694F7617548_bin = { 16 67 CE 61 19 E6 3C 48 B5 35 86 94 F7 61 75 48 }
 
+        // Shadow Credentials via altSecurityIdentities - Enables attackers to add altSecurityIdentities entries to an account - linking it to an X.509 certificate for authentication. This allows them to impersonate the targeted account and authenticate using the associated certificate
+        // https://github.com/bugch3ck/SharpAltSecIds
+        $guid_623F0079_5871_4237_B872_70FDFC2D8C52_str = "623F0079-5871-4237-B872-70FDFC2D8C52" ascii wide nocase
+        $guid_623F0079_5871_4237_B872_70FDFC2D8C52_bin = { 79 00 3F 62 71 58 37 42 B8 72 70 FD FC 2D 8C 52 }
+
         // PoCs for Kernelmode rootkit techniques research.
         // https://github.com/daem0nc0re/VectorKernel/
         $guid_628E42D5_AE4F_4CDD_8D14_DAB1A3697B62_str = "628E42D5-AE4F-4CDD-8D14-DAB1A3697B62" ascii wide nocase
         $guid_628E42D5_AE4F_4CDD_8D14_DAB1A3697B62_bin = { D5 42 8E 62 4F AE DD 4C 8D 14 DA B1 A3 69 7B 62 }
+
+        // A C# Command & Control framework
+        // https://github.com/DragoQCC/HardHatC2
+        $guid_62B6EF3C_3180_4730_A2CE_82D27C43A5B2_str = "62B6EF3C-3180-4730-A2CE-82D27C43A5B2" ascii wide nocase
+        $guid_62B6EF3C_3180_4730_A2CE_82D27C43A5B2_bin = { 3C EF B6 62 80 31 30 47 A2 CE 82 D2 7C 43 A5 B2 }
 
         // Adaptive DLL hijacking / dynamic export forwarding
         // https://github.com/monoxgas/Koppeling
@@ -1665,6 +1765,11 @@ rule GUID_Detection
         // https://github.com/moom825/xeno-rat
         $guid_644AFE4A_2267_4DF9_A79D_B514FB31830E_str = "644AFE4A-2267-4DF9-A79D-B514FB31830E" ascii wide nocase
         $guid_644AFE4A_2267_4DF9_A79D_B514FB31830E_bin = { 4A FE 4A 64 67 22 F9 4D A7 9D B5 14 FB 31 83 0E }
+
+        // Malware RAT with keylogger - dll injection - C2 - Remote control
+        // https://github.com/sin5678/gh0st
+        $guid_64D26B66_8A59_0724_007F_9001C4F472A2_str = "64D26B66-8A59-0724-007F-9001C4F472A2" ascii wide nocase
+        $guid_64D26B66_8A59_0724_007F_9001C4F472A2_bin = { 66 6B D2 64 59 8A 24 07 00 7F 90 01 C4 F4 72 A2 }
 
         // Dumping LSASS by Unhooking MiniDumpWriteDump by getting a fresh DbgHelp.dll copy from the disk
         // https://github.com/peiga/DumpThatLSASS
@@ -1751,6 +1856,11 @@ rule GUID_Detection
         $guid_6DD22880_DAC5_4B4D_9C91_8C35CC7B8180_str = "6DD22880-DAC5-4B4D-9C91-8C35CC7B8180" ascii wide nocase
         $guid_6DD22880_DAC5_4B4D_9C91_8C35CC7B8180_bin = { 80 28 D2 6D C5 DA 4D 4B 9C 91 8C 35 CC 7B 81 80 }
 
+        // walmart's C2 - complete adversarial operations toolkit (C2 - stagers - agents - automated ephemeral redirectors and task runners - a complete phishing engine)
+        // https://github.com/malcomvetter/Periscope
+        $guid_6DE0DE7E_A81D_4194_B36A_3E67283FCABE_str = "6DE0DE7E-A81D-4194-B36A-3E67283FCABE" ascii wide nocase
+        $guid_6DE0DE7E_A81D_4194_B36A_3E67283FCABE_bin = { 7E DE E0 6D 1D A8 94 41 B3 6A 3E 67 28 3F CA BE }
+
         // SeTcbPrivilege exploitation
         // https://github.com/daem0nc0re/PrivFu/
         $guid_6E0D8D5C_7B88_4C77_A347_34F8B0FD2D75_str = "6E0D8D5C-7B88-4C77-A347-34F8B0FD2D75" ascii wide nocase
@@ -1780,6 +1890,11 @@ rule GUID_Detection
         // https://github.com/leechristensen/UnmanagedPowerShell
         $guid_6EB55FE6_C11C_453B_8B32_22B689B6B3E2_str = "6EB55FE6-C11C-453B-8B32-22B689B6B3E2" ascii wide nocase
         $guid_6EB55FE6_C11C_453B_8B32_22B689B6B3E2_bin = { E6 5F B5 6E 1C C1 3B 45 8B 32 22 B6 89 B6 B3 E2 }
+
+        // remote backdoor used by a group of the same name (Carbanak). It is intended for espionage - data exfiltration and providing remote access to infected machines
+        // https://github.com/0x25bit/Updated-Carbanak-Source-with-Plugins
+        $guid_6EFFA73B_AB71_4594_AEFF_1C127387A9CE_str = "6EFFA73B-AB71-4594-AEFF-1C127387A9CE" ascii wide nocase
+        $guid_6EFFA73B_AB71_4594_AEFF_1C127387A9CE_bin = { 3B A7 FF 6E 71 AB 94 45 AE FF 1C 12 73 87 A9 CE }
 
         // Kernel mode WinDbg extension and PoCs for token privilege investigation.
         // https://github.com/daem0nc0re/PrivFu
@@ -1846,6 +1961,11 @@ rule GUID_Detection
         $guid_727a1d04_70f4_4148_9120_d06510a62a9a_str = "727a1d04-70f4-4148-9120-d06510a62a9a" ascii wide nocase
         $guid_727a1d04_70f4_4148_9120_d06510a62a9a_bin = { 04 1D 7A 72 F4 70 48 41 91 20 D0 65 10 A6 2A 9A }
 
+        // walmart's C2 - complete adversarial operations toolkit (C2 - stagers - agents - automated ephemeral redirectors and task runners - a complete phishing engine)
+        // https://github.com/malcomvetter/Periscope
+        $guid_72DCE01A_B6EC_4AC3_A98B_D5C44D532626_str = "72DCE01A-B6EC-4AC3-A98B-D5C44D532626" ascii wide nocase
+        $guid_72DCE01A_B6EC_4AC3_A98B_D5C44D532626_bin = { 1A E0 DC 72 EC B6 C3 4A A9 8B D5 C4 4D 53 26 26 }
+
         // BOF for Kerberos abuse (an implementation of some important features of the Rubeus)
         // https://github.com/RalfHacker/Kerbeus-BOF
         $guid_732211ae_4891_40d3_b2b6_85ebd6f5ffff_str = "732211ae-4891-40d3-b2b6-85ebd6f5ffff" ascii wide nocase
@@ -1870,6 +1990,11 @@ rule GUID_Detection
         // https://github.com/passthehashbrowns/SharpRDPThief
         $guid_73B2C22B_C020_45B7_BF61_B48F49A2693F_str = "73B2C22B-C020-45B7-BF61-B48F49A2693F" ascii wide nocase
         $guid_73B2C22B_C020_45B7_BF61_B48F49A2693F_bin = { 2B C2 B2 73 20 C0 B7 45 BF 61 B4 8F 49 A2 69 3F }
+
+        // VncSharp is a GPL implementation of the VNC Remote Framebuffer (RFB) Protocol for the .NET Framework
+        // https://github.com/humphd/VncSharp
+        $guid_73e83646_1d53_4dec_950a_a48559e438e8_str = "73e83646-1d53-4dec-950a-a48559e438e8" ascii wide nocase
+        $guid_73e83646_1d53_4dec_950a_a48559e438e8_bin = { 46 36 E8 73 53 1D EC 4D 95 0A A4 85 59 E4 38 E8 }
 
         // remote administration tool for Windows (RAT)
         // https://github.com/NYAN-x-CAT/Lime-RAT
@@ -2101,6 +2226,11 @@ rule GUID_Detection
         $guid_8026261f_ac68_4ccf_97b2_3b55b7d6684d_str = "8026261f-ac68-4ccf-97b2-3b55b7d6684d" ascii wide nocase
         $guid_8026261f_ac68_4ccf_97b2_3b55b7d6684d_bin = { 1F 26 26 80 68 AC CF 4C 97 B2 3B 55 B7 D6 68 4D }
 
+        // Malware RAT with keylogger - dll injection - C2 - Remote control
+        // https://github.com/sin5678/gh0st
+        $guid_80ABA1A7_0E3E_3DB2_8EB9_D4EE1C266504_str = "80ABA1A7-0E3E-3DB2-8EB9-D4EE1C266504" ascii wide nocase
+        $guid_80ABA1A7_0E3E_3DB2_8EB9_D4EE1C266504_bin = { A7 A1 AB 80 3E 0E B2 3D 8E B9 D4 EE 1C 26 65 04 }
+
         // Allows for the extraction of KeePass 2.X key material from memory as well as the backdooring and enumeration of the KeePass trigger system.
         // https://github.com/GhostPack/KeeThief
         $guid_80BA63A4_7D41_40E9_A722_6DD58B28BF7E_str = "80BA63A4-7D41-40E9-A722-6DD58B28BF7E" ascii wide nocase
@@ -2121,6 +2251,11 @@ rule GUID_Detection
         $guid_814708C9_2320_42D2_A45F_31E42DA06A94_str = "814708C9-2320-42D2-A45F-31E42DA06A94" ascii wide nocase
         $guid_814708C9_2320_42D2_A45F_31E42DA06A94_bin = { C9 08 47 81 20 23 D2 42 A4 5F 31 E4 2D A0 6A 94 }
 
+        // remote backdoor used by a group of the same name (Carbanak). It is intended for espionage - data exfiltration and providing remote access to infected machines
+        // https://github.com/0x25bit/Updated-Carbanak-Source-with-Plugins
+        $guid_8169F27E_0314_44BB_8B89_DB3339FF51A3_str = "8169F27E-0314-44BB-8B89-DB3339FF51A3" ascii wide nocase
+        $guid_8169F27E_0314_44BB_8B89_DB3339FF51A3_bin = { 7E F2 69 81 14 03 BB 44 8B 89 DB 33 39 FF 51 A3 }
+
         // Cross-platform multi-protocol VPN software abused by attackers
         // https://github.com/SoftEtherVPN/SoftEtherVPN
         $guid_81CA3EC4_026E_4D37_9889_828186BBB8C0_str = "81CA3EC4-026E-4D37-9889-828186BBB8C0" ascii wide nocase
@@ -2140,6 +2275,11 @@ rule GUID_Detection
         // https://github.com/mlcsec/SharpGraphView
         $guid_825E2088_EC7C_4AB0_852A_4F1FEF178E37_str = "825E2088-EC7C-4AB0-852A-4F1FEF178E37" ascii wide nocase
         $guid_825E2088_EC7C_4AB0_852A_4F1FEF178E37_bin = { 88 20 5E 82 7C EC B0 4A 85 2A 4F 1F EF 17 8E 37 }
+
+        // remote backdoor used by a group of the same name (Carbanak). It is intended for espionage - data exfiltration and providing remote access to infected machines
+        // https://github.com/0x25bit/Updated-Carbanak-Source-with-Plugins
+        $guid_827D241C_6A9B_48B0_BA8C_F21EF2849405_str = "827D241C-6A9B-48B0-BA8C-F21EF2849405" ascii wide nocase
+        $guid_827D241C_6A9B_48B0_BA8C_F21EF2849405_bin = { 1C 24 7D 82 9B 6A B0 48 BA 8C F2 1E F2 84 94 05 }
 
         // Patching signtool.exe to accept expired certificates for code-signing
         // https://github.com/hackerhouse-opensource/SignToolEx
@@ -2175,6 +2315,16 @@ rule GUID_Detection
         // https://github.com/dionach/ShareAudit
         $guid_8425D05F_F3F4_4132_9BE1_BED752685333_str = "8425D05F-F3F4-4132-9BE1-BED752685333" ascii wide nocase
         $guid_8425D05F_F3F4_4132_9BE1_BED752685333_bin = { 5F D0 25 84 F4 F3 32 41 9B E1 BE D7 52 68 53 33 }
+
+        // simple POC to show how to tunnel traffic through Azure Application Proxy
+        // https://github.com/xpn/AppProxyC2
+        $guid_8443F171_603C_499C_B6A6_F4F6910FD1D9_str = "8443F171-603C-499C-B6A6-F4F6910FD1D9" ascii wide nocase
+        $guid_8443F171_603C_499C_B6A6_F4F6910FD1D9_bin = { 71 F1 43 84 3C 60 9C 49 B6 A6 F4 F6 91 0F D1 D9 }
+
+        // generate obfuscated command-lines for common system-native executables
+        // https://github.com/wietze/Invoke-ArgFuscator
+        $guid_844d9edc_57ad_4fcc_9fd5_77a69d4bf569_str = "844d9edc-57ad-4fcc-9fd5-77a69d4bf569" ascii wide nocase
+        $guid_844d9edc_57ad_4fcc_9fd5_77a69d4bf569_bin = { DC 9E 4D 84 AD 57 CC 4F 9F D5 77 A6 9D 4B F5 69 }
 
         // simple shellcode Loader - Encoders (base64 - custom - UUID - IPv4 - MAC) - Encryptors (AES) - Fileless Loader (Winhttp socket)
         // https://github.com/TheD1rkMtr/Shellcode-Hide
@@ -2226,6 +2376,11 @@ rule GUID_Detection
         $guid_86FF6D04_208C_442F_B27C_E4255DD39402_str = "86FF6D04-208C-442F-B27C-E4255DD39402" ascii wide nocase
         $guid_86FF6D04_208C_442F_B27C_E4255DD39402_bin = { 04 6D FF 86 8C 20 2F 44 B2 7C E4 25 5D D3 94 02 }
 
+        // Anti Forensics Tool For Red Teamers - Used For Erasing Some Footprints In The Post Exploitation Phase
+        // https://github.com/PaulNorman01/Forensia
+        $guid_87135ab4_4cf7_454c_8830_38eb3ede1241_str = "87135ab4-4cf7-454c-8830-38eb3ede1241" ascii wide nocase
+        $guid_87135ab4_4cf7_454c_8830_38eb3ede1241_bin = { B4 5A 13 87 F7 4C 4C 45 88 30 38 EB 3E DE 12 41 }
+
         // steals important data from all chromium and gecko browsers installed in the system and gather the data in a stealer db to be exfiltrated out. A powerful Browser Stealer
         // https://github.com/shaddy43/BrowserSnatch
         $guid_87440f0b_dacf_4695_a483_031fdc0b0194_str = "87440f0b-dacf-4695-a483-031fdc0b0194" ascii wide nocase
@@ -2255,6 +2410,11 @@ rule GUID_Detection
         // https://github.com/hackerhouse-opensource/iscsicpl_bypassUAC
         $guid_8845A8AF_34DC_4EBC_8223_B35F8CC8A900_str = "8845A8AF-34DC-4EBC-8223-B35F8CC8A900" ascii wide nocase
         $guid_8845A8AF_34DC_4EBC_8223_B35F8CC8A900_bin = { AF A8 45 88 DC 34 BC 4E 82 23 B3 5F 8C C8 A9 00 }
+
+        // remote backdoor used by a group of the same name (Carbanak). It is intended for espionage - data exfiltration and providing remote access to infected machines
+        // https://github.com/0x25bit/Updated-Carbanak-Source-with-Plugins
+        $guid_886C26DC_0073_4BB7_823B_2B9DAD53DB8B_str = "886C26DC-0073-4BB7-823B-2B9DAD53DB8B" ascii wide nocase
+        $guid_886C26DC_0073_4BB7_823B_2B9DAD53DB8B_bin = { DC 26 6C 88 73 00 B7 4B 82 3B 2B 9D AD 53 DB 8B }
 
         // .NET HttpClient proxy handler implementation for SOCKS proxies
         // https://github.com/bbepis/Nsocks
@@ -2381,6 +2541,16 @@ rule GUID_Detection
         $guid_8F71C671_F53C_4F4F_98B9_8B8D3263C0DB_str = "8F71C671-F53C-4F4F-98B9-8B8D3263C0DB" ascii wide nocase
         $guid_8F71C671_F53C_4F4F_98B9_8B8D3263C0DB_bin = { 71 C6 71 8F 3C F5 4F 4F 98 B9 8B 8D 32 63 C0 DB }
 
+        // Disconnected RSAT is a launcher for the official Group Policy Manager - Certificate Authority and Certificate Templates snap-in to bypass the domain joined requirement that is needed when using the official MMC snap-in. The tool works by injecting a C# library into MMC that will hook the various API calls to trick MMC into believing that the logged on user is a domain user. attackers can abuse Disconnected RSAT to interact with Active Directory (AD) environments from non-domain-joined machines
+        // https://github.com/CCob/DRSAT
+        $guid_8FC203AA_8A90_4A15_B823_E2C3BC4DF0D6_str = "8FC203AA-8A90-4A15-B823-E2C3BC4DF0D6" ascii wide nocase
+        $guid_8FC203AA_8A90_4A15_B823_E2C3BC4DF0D6_bin = { AA 03 C2 8F 90 8A 15 4A B8 23 E2 C3 BC 4D F0 D6 }
+
+        // remote backdoor used by a group of the same name (Carbanak). It is intended for espionage - data exfiltration and providing remote access to infected machines
+        // https://github.com/0x25bit/Updated-Carbanak-Source-with-Plugins
+        $guid_901E099B_A01A_4F21_9A6F_8D3B60F04168_str = "901E099B-A01A-4F21-9A6F-8D3B60F04168" ascii wide nocase
+        $guid_901E099B_A01A_4F21_9A6F_8D3B60F04168_bin = { 9B 09 1E 90 1A A0 21 4F 9A 6F 8D 3B 60 F0 41 68 }
+
         // MultiDump is a post-exploitation tool for dumping and extracting LSASS memory discreetly
         // https://github.com/Xre0uS/MultiDump
         $guid_90229D7D_5CC2_4C1E_80D3_4B7C7289B480_str = "90229D7D-5CC2-4C1E-80D3-4B7C7289B480" ascii wide nocase
@@ -2406,6 +2576,11 @@ rule GUID_Detection
         $guid_90F6244A_5EEE_4A7A_8C75_FA6A52DF34D3_str = "90F6244A-5EEE-4A7A-8C75-FA6A52DF34D3" ascii wide nocase
         $guid_90F6244A_5EEE_4A7A_8C75_FA6A52DF34D3_bin = { 4A 24 F6 90 EE 5E 7A 4A 8C 75 FA 6A 52 DF 34 D3 }
 
+        // SharpWeb - to export browser data including passwords - history - cookies - bookmarks and download records
+        // https://github.com/StarfireLab/SharpWeb
+        $guid_91292bac_72b4_4aab_9e5f_2bc1843c8ea3_str = "91292bac-72b4-4aab-9e5f-2bc1843c8ea3" ascii wide nocase
+        $guid_91292bac_72b4_4aab_9e5f_2bc1843c8ea3_bin = { AC 2B 29 91 B4 72 AB 4A 9E 5F 2B C1 84 3C 8E A3 }
+
         // ConfuserEx is a widely used open source obfuscator often found in malware
         // https://github.com/yck1509/ConfuserEx
         $guid_91B12706_DC6A_45DE_97F1_FAF0901FF6AF_str = "91B12706-DC6A-45DE-97F1-FAF0901FF6AF" ascii wide nocase
@@ -2420,6 +2595,11 @@ rule GUID_Detection
         // https://github.com/b4rtik/ATPMiniDump
         $guid_920B8C5B_0DC5_4BD7_B6BB_D14B39BFC9FE_str = "920B8C5B-0DC5-4BD7-B6BB-D14B39BFC9FE" ascii wide nocase
         $guid_920B8C5B_0DC5_4BD7_B6BB_D14B39BFC9FE_bin = { 5B 8C 0B 92 C5 0D D7 4B B6 BB D1 4B 39 BF C9 FE }
+
+        // A C# Command & Control framework
+        // https://github.com/DragoQCC/HardHatC2
+        $guid_920D97B7_8091_4224_8CF7_D9D72A64A7FE_str = "920D97B7-8091-4224-8CF7-D9D72A64A7FE" ascii wide nocase
+        $guid_920D97B7_8091_4224_8CF7_D9D72A64A7FE_bin = { B7 97 0D 92 91 80 24 42 8C F7 D9 D7 2A 64 A7 FE }
 
         // mimikatz UUID
         // https://github.com/gentilkiwi/mimikatz
@@ -2506,6 +2686,11 @@ rule GUID_Detection
         $guid_9674DF71_0814_4398_8A77_5A32A8CBE61E_str = "9674DF71-0814-4398-8A77-5A32A8CBE61E" ascii wide nocase
         $guid_9674DF71_0814_4398_8A77_5A32A8CBE61E_bin = { 71 DF 74 96 14 08 98 43 8A 77 5A 32 A8 CB E6 1E }
 
+        // monitor the content of the clipboard continuously
+        // http://github.com/slyd0g/SharpClipboard
+        $guid_97484211_4726_4129_86AA_AE01D17690BE_str = "97484211-4726-4129-86AA-AE01D17690BE" ascii wide nocase
+        $guid_97484211_4726_4129_86AA_AE01D17690BE_bin = { 11 42 48 97 26 47 29 41 86 AA AE 01 D1 76 90 BE }
+
         // This is a C# implementation of a directory brute forcing tool designed to allow for in-memory execution
         // https://github.com/passthehashbrowns/SharpBuster
         $guid_9786E418_6C4A_471D_97C0_8B5F2ED524C8_str = "9786E418-6C4A-471D-97C0-8B5F2ED524C8" ascii wide nocase
@@ -2521,10 +2706,25 @@ rule GUID_Detection
         $guid_980EF05F_87D1_4A0A_932A_582FB1BC3AC3_str = "980EF05F-87D1-4A0A-932A-582FB1BC3AC3" ascii wide nocase
         $guid_980EF05F_87D1_4A0A_932A_582FB1BC3AC3_bin = { 5F F0 0E 98 D1 87 0A 4A 93 2A 58 2F B1 BC 3A C3 }
 
+        // remote backdoor used by a group of the same name (Carbanak). It is intended for espionage - data exfiltration and providing remote access to infected machines
+        // https://github.com/0x25bit/Updated-Carbanak-Source-with-Plugins
+        $guid_989A9793_63FC_4639_8A8D_E4BB9F60F137_str = "989A9793-63FC-4639-8A8D-E4BB9F60F137" ascii wide nocase
+        $guid_989A9793_63FC_4639_8A8D_E4BB9F60F137_bin = { 93 97 9A 98 FC 63 39 46 8A 8D E4 BB 9F 60 F1 37 }
+
         // shadowsocks is a fast tunnel proxy that helps you bypass firewalls
         // https://github.com/shadowsocks/shadowsocks-windows
         $guid_99142A50_E046_4F18_9C52_9855ABADA9B3_str = "99142A50-E046-4F18-9C52-9855ABADA9B3" ascii wide nocase
         $guid_99142A50_E046_4F18_9C52_9855ABADA9B3_bin = { 50 2A 14 99 46 E0 18 4F 9C 52 98 55 AB AD A9 B3 }
+
+        // SharpWeb - to export browser data including passwords - history - cookies - bookmarks and download records
+        // https://github.com/StarfireLab/SharpWeb
+        $guid_99292BAC_72B4_4AAB_9E5F_2BC1843C8EA3_str = "99292BAC-72B4-4AAB-9E5F-2BC1843C8EA3" ascii wide nocase
+        $guid_99292BAC_72B4_4AAB_9E5F_2BC1843C8EA3_bin = { AC 2B 29 99 B4 72 AB 4A 9E 5F 2B C1 84 3C 8E A3 }
+
+        // C2- Adaptix is an extensible post-exploitation and adversarial emulation framework made for penetration testers
+        // https://github.com/Adaptix-Framework/AdaptixC2
+        $guid_99a5f42e_60a8_4f1e_9dff_35443b972707_str = "99a5f42e-60a8-4f1e-9dff-35443b972707" ascii wide nocase
+        $guid_99a5f42e_60a8_4f1e_9dff_35443b972707_bin = { 2E F4 A5 99 A8 60 1E 4F 9D FF 35 44 3B 97 27 07 }
 
         // Windows Antivirus Comparison and Patch Number Comparison
         // https://github.com/uknowsec/SharpAVKB
@@ -2706,6 +2906,11 @@ rule GUID_Detection
         $guid_A38C04C7_B172_4897_8471_E3478903035E_str = "A38C04C7-B172-4897-8471-E3478903035E" ascii wide nocase
         $guid_A38C04C7_B172_4897_8471_E3478903035E_bin = { C7 04 8C A3 72 B1 97 48 84 71 E3 47 89 03 03 5E }
 
+        // a NetBIOS scanner. Ghost actors use this tool for hostname and IP address enumeration
+        // https://github.com/BronzeTicket/SharpNBTScan
+        $guid_a398655a_d83f_46bf_8173_3ad16260d970_str = "a398655a-d83f-46bf-8173-3ad16260d970" ascii wide nocase
+        $guid_a398655a_d83f_46bf_8173_3ad16260d970_bin = { 5A 65 98 A3 3F D8 BF 46 81 73 3A D1 62 60 D9 70 }
+
         // Metasploit is a widely-used. open-source framework designed for penetration testing. vulnerability assessment. and exploit development. It provides security professionals and researchers with a comprehensive platform to discover. exploit. and validate vulnerabilities in computer systems and networks. Metasploit includes a large database of pre-built exploits. payloads. and auxiliary modules that can be used to test various attack vectors. identify security weaknesses. and simulate real-world cyberattacks. By utilizing Metasploit. security teams can better understand potential threats and improve their overall security posture.
         // https://github.com/rapid7/metasploit-omnibus
         $guid_A3C83F57_6D8F_453A_9559_0D650A95EB21_str = "A3C83F57-6D8F-453A-9559-0D650A95EB21" ascii wide nocase
@@ -2755,6 +2960,11 @@ rule GUID_Detection
         // https://github.com/Pickfordmatt/SharpLocker
         $guid_A6F8500F_68BC_4EFC_962A_6C6E68D893AF_str = "A6F8500F-68BC-4EFC-962A-6C6E68D893AF" ascii wide nocase
         $guid_A6F8500F_68BC_4EFC_962A_6C6E68D893AF_bin = { 0F 50 F8 A6 BC 68 FC 4E 96 2A 6C 6E 68 D8 93 AF }
+
+        // Tool for viewing NTDS.dit
+        // https://github.com/trustedsec/DitExplorer
+        $guid_A71FCCEB_C1C5_4ADB_A949_462B653C2937_str = "A71FCCEB-C1C5-4ADB-A949-462B653C2937" ascii wide nocase
+        $guid_A71FCCEB_C1C5_4ADB_A949_462B653C2937_bin = { EB CC 1F A7 C5 C1 DB 4A A9 49 46 2B 65 3C 29 37 }
 
         // Exploit for the RpcEptMapper registry key permissions vulnerability (Windows 7 / 2088R2 / 8 / 2012)
         // https://github.com/itm4n/Perfusion
@@ -2816,15 +3026,30 @@ rule GUID_Detection
         $guid_AB6CDF36_F336_4F14_8D69_3C190B7DEC65_str = "AB6CDF36-F336-4F14-8D69-3C190B7DEC65" ascii wide nocase
         $guid_AB6CDF36_F336_4F14_8D69_3C190B7DEC65_bin = { 36 DF 6C AB 36 F3 14 4F 8D 69 3C 19 0B 7D EC 65 }
 
+        // remote backdoor used by a group of the same name (Carbanak). It is intended for espionage - data exfiltration and providing remote access to infected machines
+        // https://github.com/0x25bit/Updated-Carbanak-Source-with-Plugins
+        $guid_AB850676_3744_4BFD_82FA_E21D19622BF9_str = "AB850676-3744-4BFD-82FA-E21D19622BF9" ascii wide nocase
+        $guid_AB850676_3744_4BFD_82FA_E21D19622BF9_bin = { 76 06 85 AB 44 37 FD 4B 82 FA E2 1D 19 62 2B F9 }
+
         // stealing Windows tokens
         // https://github.com/decoder-it/TokenStealer
         $guid_ABC32DBD_B697_482D_A763_7BA82FE9CEA2_str = "ABC32DBD-B697-482D-A763-7BA82FE9CEA2" ascii wide nocase
         $guid_ABC32DBD_B697_482D_A763_7BA82FE9CEA2_bin = { BD 2D C3 AB 97 B6 2D 48 A7 63 7B A8 2F E9 CE A2 }
 
+        // walmart's C2 - complete adversarial operations toolkit (C2 - stagers - agents - automated ephemeral redirectors and task runners - a complete phishing engine)
+        // https://github.com/malcomvetter/Periscope
+        $guid_ABF5940C_60AC_4892_B3F0_0F9262C550B3_str = "ABF5940C-60AC-4892-B3F0-0F9262C550B3" ascii wide nocase
+        $guid_ABF5940C_60AC_4892_B3F0_0F9262C550B3_bin = { 0C 94 F5 AB AC 60 92 48 B3 F0 0F 92 62 C5 50 B3 }
+
         // C++ stealer (passwords - cookies - forms - cards - wallets) 
         // https://github.com/SecUser1/Necro-Stealer
         $guid_ac3107cf_291c_449b_9121_55cd37f6383e_str = "ac3107cf-291c-449b-9121-55cd37f6383e" ascii wide nocase
         $guid_ac3107cf_291c_449b_9121_55cd37f6383e_bin = { CF 07 31 AC 1C 29 9B 44 91 21 55 CD 37 F6 38 3E }
+
+        // remote backdoor used by a group of the same name (Carbanak). It is intended for espionage - data exfiltration and providing remote access to infected machines
+        // https://github.com/0x25bit/Updated-Carbanak-Source-with-Plugins
+        $guid_ACEE9097_0CA8_4520_A6CA_3BF97B7A86DE_str = "ACEE9097-0CA8-4520-A6CA-3BF97B7A86DE" ascii wide nocase
+        $guid_ACEE9097_0CA8_4520_A6CA_3BF97B7A86DE_bin = { 97 90 EE AC A8 0C 20 45 A6 CA 3B F9 7B 7A 86 DE }
 
         // Get file less command execution for Lateral Movement.
         // https://github.com/juliourena/SharpNoPSExec
@@ -2835,6 +3060,11 @@ rule GUID_Detection
         // https://github.com/daem0nc0re/VectorKernel/
         $guid_AD0067D9_4AF6_47C2_B0C3_D768A9624002_str = "AD0067D9-4AF6-47C2-B0C3-D768A9624002" ascii wide nocase
         $guid_AD0067D9_4AF6_47C2_B0C3_D768A9624002_bin = { D9 67 00 AD F6 4A C2 47 B0 C3 D7 68 A9 62 40 02 }
+
+        // Tool for viewing NTDS.dit
+        // https://github.com/trustedsec/DitExplorer
+        $guid_AD240C26_717F_4937_A4CD_5827BDC315E6_str = "AD240C26-717F-4937-A4CD-5827BDC315E6" ascii wide nocase
+        $guid_AD240C26_717F_4937_A4CD_5827BDC315E6_bin = { 26 0C 24 AD 7F 71 37 49 A4 CD 58 27 BD C3 15 E6 }
 
         // proof-of-concept of Process Forking.
         // https://github.com/D4stiny/ForkPlayground
@@ -2855,6 +3085,16 @@ rule GUID_Detection
         // https://github.com/shadowsocks/shadowsocks-windows
         $guid_AE81B416_FBC4_4F88_9EFC_D07D8789355F_str = "AE81B416-FBC4-4F88-9EFC-D07D8789355F" ascii wide nocase
         $guid_AE81B416_FBC4_4F88_9EFC_D07D8789355F_bin = { 16 B4 81 AE C4 FB 88 4F 9E FC D0 7D 87 89 35 5F }
+
+        // SharpWeb - to export browser data including passwords - history - cookies - bookmarks and download records
+        // https://github.com/StarfireLab/SharpWeb
+        $guid_AE844C23_294E_4690_8CF3_2E5F9769D8E0_str = "AE844C23-294E-4690-8CF3-2E5F9769D8E0" ascii wide nocase
+        $guid_AE844C23_294E_4690_8CF3_2E5F9769D8E0_bin = { 23 4C 84 AE 4E 29 90 46 8C F3 2E 5F 97 69 D8 E0 }
+
+        // Tool for viewing NTDS.dit
+        // https://github.com/trustedsec/DitExplorer
+        $guid_AEC0EBBA_3BE4_4B5C_8F5C_0BB8DDDA7148_str = "AEC0EBBA-3BE4-4B5C-8F5C-0BB8DDDA7148" ascii wide nocase
+        $guid_AEC0EBBA_3BE4_4B5C_8F5C_0BB8DDDA7148_bin = { BA EB C0 AE E4 3B 5C 4B 8F 5C 0B B8 DD DA 71 48 }
 
         // Seatbelt is a comprehensive security scanning tool that can be used to perform a variety of checks. including but not limited to. user privileges. logged in users. network information. system information. and many others
         // https://github.com/GhostPack/Seatbelt
@@ -2880,6 +3120,11 @@ rule GUID_Detection
         // https://github.com/trustedsec/specula
         $guid_AF2D318C_2C5A_4C9D_BE4C_AA5B3E8037DB_str = "AF2D318C-2C5A-4C9D-BE4C-AA5B3E8037DB" ascii wide nocase
         $guid_AF2D318C_2C5A_4C9D_BE4C_AA5B3E8037DB_bin = { 8C 31 2D AF 5A 2C 9D 4C BE 4C AA 5B 3E 80 37 DB }
+
+        // walmart's C2 - complete adversarial operations toolkit (C2 - stagers - agents - automated ephemeral redirectors and task runners - a complete phishing engine)
+        // https://github.com/malcomvetter/Periscope
+        $guid_AF7F4404_C746_43EC_86EA_8405473C95C9_str = "AF7F4404-C746-43EC-86EA-8405473C95C9" ascii wide nocase
+        $guid_AF7F4404_C746_43EC_86EA_8405473C95C9_bin = { 04 44 7F AF 46 C7 EC 43 86 EA 84 05 47 3C 95 C9 }
 
         // A tool for generating .NET serialized gadgets that can trigger .NET assembly load/execution when deserialized using BinaryFormatter from JS/VBS/VBA based scripts.
         // https://github.com/med0x2e/GadgetToJScript
@@ -2916,6 +3161,11 @@ rule GUID_Detection
         $guid_B138FFBA_1076_4B58_8A98_67B34E8A7C5C_str = "B138FFBA-1076-4B58-8A98-67B34E8A7C5C" ascii wide nocase
         $guid_B138FFBA_1076_4B58_8A98_67B34E8A7C5C_bin = { BA FF 38 B1 76 10 58 4B 8A 98 67 B3 4E 8A 7C 5C }
 
+        // A C# Command & Control framework
+        // https://github.com/DragoQCC/HardHatC2
+        $guid_B1865FC0_5605_4587_9FCB_8B9DF6B5C6B1_str = "B1865FC0-5605-4587-9FCB-8B9DF6B5C6B1" ascii wide nocase
+        $guid_B1865FC0_5605_4587_9FCB_8B9DF6B5C6B1_bin = { C0 5F 86 B1 05 56 87 45 9F CB 8B 9D F6 B5 C6 B1 }
+
         // binary padding to add junk data and change the on-disk representation of a file
         // https://github.com/mertdas/SharpIncrease
         $guid_B19E7FDE_C2CB_4C0A_9C5E_DFC73ADDB5C0_str = "B19E7FDE-C2CB-4C0A-9C5E-DFC73ADDB5C0" ascii wide nocase
@@ -2935,6 +3185,11 @@ rule GUID_Detection
         // https://github.com/fiddyschmitt/File-Tunnel
         $guid_B2B4238B_1055_4679_B7D5_7CCE2397098E_str = "B2B4238B-1055-4679-B7D5-7CCE2397098E" ascii wide nocase
         $guid_B2B4238B_1055_4679_B7D5_7CCE2397098E_bin = { 8B 23 B4 B2 55 10 79 46 B7 D5 7C CE 23 97 09 8E }
+
+        // remote backdoor used by a group of the same name (Carbanak). It is intended for espionage - data exfiltration and providing remote access to infected machines
+        // https://github.com/0x25bit/Updated-Carbanak-Source-with-Plugins
+        $guid_B2D22DC6_1CA5_4CE3_9756_3673336705FB_str = "B2D22DC6-1CA5-4CE3-9756-3673336705FB" ascii wide nocase
+        $guid_B2D22DC6_1CA5_4CE3_9756_3673336705FB_bin = { C6 2D D2 B2 A5 1C E3 4C 97 56 36 73 33 67 05 FB }
 
         // inspect token information
         // https://github.com/daem0nc0re/PrivFu
@@ -3051,6 +3306,11 @@ rule GUID_Detection
         $guid_B9635D08_2BB2_404B_92B7_6A4981CB34F3_str = "B9635D08-2BB2-404B-92B7-6A4981CB34F3" ascii wide nocase
         $guid_B9635D08_2BB2_404B_92B7_6A4981CB34F3_bin = { 08 5D 63 B9 B2 2B 4B 40 92 B7 6A 49 81 CB 34 F3 }
 
+        // A Combination LSASS Dumper and LSASS Parser
+        // https://github.com/icyguider/DumpNParse
+        $guid_BA1F3992_9654_4424_A0CC_26158FDFBF74_str = "BA1F3992-9654-4424-A0CC-26158FDFBF74" ascii wide nocase
+        $guid_BA1F3992_9654_4424_A0CC_26158FDFBF74_bin = { 92 39 1F BA 54 96 24 44 A0 CC 26 15 8F DF BF 74 }
+
         // Cross-platform multi-protocol VPN software abused by attackers
         // https://github.com/SoftEtherVPN/SoftEtherVPN
         $guid_BA902FC8_E936_44AA_9C88_57D358BBB700_str = "BA902FC8-E936-44AA-9C88-57D358BBB700" ascii wide nocase
@@ -3110,6 +3370,11 @@ rule GUID_Detection
         // https://github.com/GhostPack/ForgeCert
         $guid_bd346689_8ee6_40b3_858b_4ed94f08d40a_str = "bd346689-8ee6-40b3-858b-4ed94f08d40a" ascii wide nocase
         $guid_bd346689_8ee6_40b3_858b_4ed94f08d40a_bin = { 89 66 34 BD E6 8E B3 40 85 8B 4E D9 4F 08 D4 0A }
+
+        // A sharpen version of CrackMapExec
+        // https://github.com/cube0x0/SharpMapExec
+        $guid_BD5220F7_E1FB_41D2_91EC_E4C50C6E9B9F_str = "BD5220F7-E1FB-41D2-91EC-E4C50C6E9B9F" ascii wide nocase
+        $guid_BD5220F7_E1FB_41D2_91EC_E4C50C6E9B9F_bin = { F7 20 52 BD FB E1 D2 41 91 EC E4 C5 0C 6E 9B 9F }
 
         // Threadless injection that loads a module into the target process and stomps it and reverting back memory protections and original memory state
         // https://github.com/TheD1rkMtr/D1rkInject
@@ -3175,6 +3440,11 @@ rule GUID_Detection
         // https://github.com/undergroundwires/privacy.sexy
         $guid_c06bb3f0_cbdc_4384_84cf_21b7fe6dfe01_str = "c06bb3f0-cbdc-4384-84cf-21b7fe6dfe01" ascii wide nocase
         $guid_c06bb3f0_cbdc_4384_84cf_21b7fe6dfe01_bin = { F0 B3 6B C0 DC CB 84 43 84 CF 21 B7 FE 6D FE 01 }
+
+        // Using the Counter Strike 1.6 RCON protocol as a C2 Channel
+        // https://github.com/eversinc33/1.6-C2
+        $guid_c07d3356_7f9b_45e0_a4f7_7b1487d966b8_str = "c07d3356-7f9b-45e0-a4f7-7b1487d966b8" ascii wide nocase
+        $guid_c07d3356_7f9b_45e0_a4f7_7b1487d966b8_bin = { 56 33 7D C0 9B 7F E0 45 A4 F7 7B 14 87 D9 66 B8 }
 
         // SingleDose is a framework to build shellcode load/process injection techniques
         // https://github.com/Wra7h/SingleDose
@@ -3356,6 +3626,11 @@ rule GUID_Detection
         $guid_CB790E12_603E_4C7C_9DC1_14A50819AF8C_str = "CB790E12-603E-4C7C-9DC1-14A50819AF8C" ascii wide nocase
         $guid_CB790E12_603E_4C7C_9DC1_14A50819AF8C_bin = { 12 0E 79 CB 3E 60 7C 4C 9D C1 14 A5 08 19 AF 8C }
 
+        // walmart's C2 - complete adversarial operations toolkit (C2 - stagers - agents - automated ephemeral redirectors and task runners - a complete phishing engine)
+        // https://github.com/malcomvetter/Periscope
+        $guid_CBAB0FE9_F4C0_49F2_90B1_7F34593F705A_str = "CBAB0FE9-F4C0-49F2-90B1-7F34593F705A" ascii wide nocase
+        $guid_CBAB0FE9_F4C0_49F2_90B1_7F34593F705A_bin = { E9 0F AB CB C0 F4 F2 49 90 B1 7F 34 59 3F 70 5A }
+
         // Discord Remote Administration Tool fully written in c#, stub size of ~75kb with over 40 post exploitations modules
         // https://github.com/moom825/Discord-RAT-2.0
         $guid_CC12258F_AF24_4773_A8E3_45D365BCBDE9_str = "CC12258F-AF24-4773-A8E3-45D365BCBDE9" ascii wide nocase
@@ -3400,6 +3675,11 @@ rule GUID_Detection
         // https://github.com/CICADA8-Research/Spyndicapped
         $guid_cd9c66c8_8fcb_4d43_975b_a9c8d02ad090_str = "cd9c66c8-8fcb-4d43-975b-a9c8d02ad090" ascii wide nocase
         $guid_cd9c66c8_8fcb_4d43_975b_a9c8d02ad090_bin = { C8 66 9C CD CB 8F 43 4D 97 5B A9 C8 D0 2A D0 90 }
+
+        // Tool for viewing NTDS.dit
+        // https://github.com/trustedsec/DitExplorer
+        $guid_CDC4F57A_A3F7_459B_87BF_6219DADF6284_str = "CDC4F57A-A3F7-459B-87BF-6219DADF6284" ascii wide nocase
+        $guid_CDC4F57A_A3F7_459B_87BF_6219DADF6284_bin = { 7A F5 C4 CD F7 A3 9B 45 87 BF 62 19 DA DF 62 84 }
 
         // A Silent (Hidden) Free Crypto Miner Builder
         // https://github.com/UnamSanctam/SilentCryptoMiner
@@ -3476,6 +3756,11 @@ rule GUID_Detection
         $guid_D0CBA7AF_93F5_378A_BB11_2A5D9AA9C4D7_str = "D0CBA7AF-93F5-378A-BB11-2A5D9AA9C4D7" ascii wide nocase
         $guid_D0CBA7AF_93F5_378A_BB11_2A5D9AA9C4D7_bin = { AF A7 CB D0 F5 93 8A 37 BB 11 2A 5D 9A A9 C4 D7 }
 
+        // walmart's C2 - complete adversarial operations toolkit (C2 - stagers - agents - automated ephemeral redirectors and task runners - a complete phishing engine)
+        // https://github.com/malcomvetter/Periscope
+        $guid_D0DF8E42_3CED_4A5F_BB28_0C348B56BC79_str = "D0DF8E42-3CED-4A5F-BB28-0C348B56BC79" ascii wide nocase
+        $guid_D0DF8E42_3CED_4A5F_BB28_0C348B56BC79_bin = { 42 8E DF D0 ED 3C 5F 4A BB 28 0C 34 8B 56 BC 79 }
+
         // C# Implementation of Get-VaultCredential - Displays Windows vault credential objects including cleartext web credentials - based on  https://github.com/PowerShellMafia/PowerSploit/blob/master/Exfiltration/Get-VaultCredential.ps1
         // https://github.com/rvrsh3ll/SharpEdge
         $guid_D116BEC7_8DEF_4FCE_BF84_C8504EF4E481_str = "D116BEC7-8DEF-4FCE-BF84-C8504EF4E481" ascii wide nocase
@@ -3500,6 +3785,11 @@ rule GUID_Detection
         // https://github.com/yck1509/ConfuserEx
         $guid_D1CCDA5D_E460_4ACC_B51A_730DE8F0ECF3_str = "D1CCDA5D-E460-4ACC-B51A-730DE8F0ECF3" ascii wide nocase
         $guid_D1CCDA5D_E460_4ACC_B51A_730DE8F0ECF3_bin = { 5D DA CC D1 60 E4 CC 4A B5 1A 73 0D E8 F0 EC F3 }
+
+        // Tool for viewing NTDS.dit
+        // https://github.com/trustedsec/DitExplorer
+        $guid_D1D4BB1C_798D_47B0_8525_061D40CB9E44_str = "D1D4BB1C-798D-47B0-8525-061D40CB9E44" ascii wide nocase
+        $guid_D1D4BB1C_798D_47B0_8525_061D40CB9E44_bin = { 1C BB D4 D1 8D 79 B0 47 85 25 06 1D 40 CB 9E 44 }
 
         // indirect syscalls - the Win API functions are not hooked by AV/EDR - bypass EDR detections
         // https://github.com/CaptainNox/Hypnos
@@ -3671,6 +3961,11 @@ rule GUID_Detection
         $guid_DB234158_233E_4EC4_A2CE_EF02699563A2_str = "DB234158-233E-4EC4-A2CE-EF02699563A2" ascii wide nocase
         $guid_DB234158_233E_4EC4_A2CE_EF02699563A2_bin = { 58 41 23 DB 3E 23 C4 4E A2 CE EF 02 69 95 63 A2 }
 
+        // Disconnected RSAT is a launcher for the official Group Policy Manager - Certificate Authority and Certificate Templates snap-in to bypass the domain joined requirement that is needed when using the official MMC snap-in. The tool works by injecting a C# library into MMC that will hook the various API calls to trick MMC into believing that the logged on user is a domain user. attackers can abuse Disconnected RSAT to interact with Active Directory (AD) environments from non-domain-joined machines
+        // https://github.com/CCob/DRSAT
+        $guid_DB62BB65_0E29_4E95_BD4E_0AA543EF74B5_str = "DB62BB65-0E29-4E95-BD4E-0AA543EF74B5" ascii wide nocase
+        $guid_DB62BB65_0E29_4E95_BD4E_0AA543EF74B5_bin = { 65 BB 62 DB 29 0E 95 4E BD 4E 0A A5 43 EF 74 B5 }
+
         // Adaptive DLL hijacking / dynamic export forwarding
         // https://github.com/monoxgas/Koppeling
         $guid_DB8A345D_E19C_4C2A_9FDF_16BF4DD03717_str = "DB8A345D-E19C-4C2A-9FDF-16BF4DD03717" ascii wide nocase
@@ -3731,6 +4026,11 @@ rule GUID_Detection
         $guid_E049487C_C5BD_471E_99AE_C756E70B6520_str = "E049487C-C5BD-471E-99AE-C756E70B6520" ascii wide nocase
         $guid_E049487C_C5BD_471E_99AE_C756E70B6520_bin = { 7C 48 49 E0 BD C5 1E 47 99 AE C7 56 E7 0B 65 20 }
 
+        // remote backdoor used by a group of the same name (Carbanak). It is intended for espionage - data exfiltration and providing remote access to infected machines
+        // https://github.com/0x25bit/Updated-Carbanak-Source-with-Plugins
+        $guid_E0695F0F_0FAF_44BC_AE55_A1FCBFE70271_str = "E0695F0F-0FAF-44BC-AE55-A1FCBFE70271" ascii wide nocase
+        $guid_E0695F0F_0FAF_44BC_AE55_A1FCBFE70271_bin = { 0F 5F 69 E0 AF 0F BC 44 AE 55 A1 FC BF E7 02 71 }
+
         // notable code snippets for Offensive Security's PEN-300 (OSEP) course
         // https://github.com/chvancooten/OSEP-Code-Snippets
         $guid_E08BAA9C_9D20_4C9A_8933_EC567F39F54C_str = "E08BAA9C-9D20-4C9A-8933-EC567F39F54C" ascii wide nocase
@@ -3775,6 +4075,11 @@ rule GUID_Detection
         // https://github.com/NYAN-x-CAT/Lime-RAT
         $guid_E211C5CD_85F0_48D2_A18F_2E59AD47DDC3_str = "E211C5CD-85F0-48D2-A18F-2E59AD47DDC3" ascii wide nocase
         $guid_E211C5CD_85F0_48D2_A18F_2E59AD47DDC3_bin = { CD C5 11 E2 F0 85 D2 48 A1 8F 2E 59 AD 47 DD C3 }
+
+        // Tool for viewing NTDS.dit
+        // https://github.com/trustedsec/DitExplorer
+        $guid_E2596512_8A36_4D48_8AA1_9791E48A16CC_str = "E2596512-8A36-4D48-8AA1-9791E48A16CC" ascii wide nocase
+        $guid_E2596512_8A36_4D48_8AA1_9791E48A16CC_bin = { 12 65 59 E2 36 8A 48 4D 8A A1 97 91 E4 8A 16 CC }
 
         // Lifetime AMSI bypass
         // https://github.com/ZeroMemoryEx/Amsi-Killer
@@ -3826,7 +4131,7 @@ rule GUID_Detection
         $guid_e53f158d_8aa2_8c53_da89_ab75d32c8c01_str = "e53f158d-8aa2-8c53-da89-ab75d32c8c01" ascii wide nocase
         $guid_e53f158d_8aa2_8c53_da89_ab75d32c8c01_bin = { 8D 15 3F E5 A2 8A 53 8C DA 89 AB 75 D3 2C 8C 01 }
 
-        // Another tool to perform minidump of LSASS process using few technics to avoid detection.
+        // perform minidump of LSASS process using few technics to avoid detection.
         // https://github.com/YOLOP0wn/POSTDump
         $guid_E54195F0_060C_4B24_98F2_AD9FB5351045_str = "E54195F0-060C-4B24-98F2-AD9FB5351045" ascii wide nocase
         $guid_E54195F0_060C_4B24_98F2_AD9FB5351045_bin = { F0 95 41 E5 0C 06 24 4B 98 F2 AD 9F B5 35 10 45 }
@@ -3881,6 +4186,11 @@ rule GUID_Detection
         $guid_E832E9B8_2158_4FC0_89A1_56C6ECC10F6B_str = "E832E9B8-2158-4FC0-89A1-56C6ECC10F6B" ascii wide nocase
         $guid_E832E9B8_2158_4FC0_89A1_56C6ECC10F6B_bin = { B8 E9 32 E8 58 21 C0 4F 89 A1 56 C6 EC C1 0F 6B }
 
+        // Tool for viewing NTDS.dit
+        // https://github.com/trustedsec/DitExplorer
+        $guid_E8CA6917_CB06_4128_96CD_59676731B24A_str = "E8CA6917-CB06-4128-96CD-59676731B24A" ascii wide nocase
+        $guid_E8CA6917_CB06_4128_96CD_59676731B24A_bin = { 17 69 CA E8 06 CB 28 41 96 CD 59 67 67 31 B2 4A }
+
         // Decrypt GlobalProtect configuration and cookie files.
         // https://github.com/rotarydrone/GlobalUnProtect
         $guid_E9172085_1595_4E98_ABF8_E890D2489BB5_str = "E9172085-1595-4E98-ABF8-E890D2489BB5" ascii wide nocase
@@ -3911,6 +4221,11 @@ rule GUID_Detection
         $guid_EA92F1E6_3F34_48F8_8B0A_F2BBC19220EF_str = "EA92F1E6-3F34-48F8-8B0A-F2BBC19220EF" ascii wide nocase
         $guid_EA92F1E6_3F34_48F8_8B0A_F2BBC19220EF_bin = { E6 F1 92 EA 34 3F F8 48 8B 0A F2 BB C1 92 20 EF }
 
+        // RDPCredentialStealer it's a malware that steal credentials provided by users in RDP using API Hooking with Detours in C++
+        // https://github.com/S12cybersecurity/RDPCredentialStealer
+        $guid_ec2aaff0_b349_4855_9093_96acf6ee3299_str = "ec2aaff0-b349-4855-9093-96acf6ee3299" ascii wide nocase
+        $guid_ec2aaff0_b349_4855_9093_96acf6ee3299_bin = { F0 AF 2A EC 49 B3 55 48 90 93 96 AC F6 EE 32 99 }
+
         // Exploit for CVE-2022-21999 - Windows Print Spooler Elevation of Privilege Vulnerability (LPE)
         // https://github.com/ly4k/SpoolFool
         $guid_EC49A1B1_4DAA_47B1_90D1_787D44C641C0_str = "EC49A1B1-4DAA-47B1-90D1-787D44C641C0" ascii wide nocase
@@ -3930,6 +4245,11 @@ rule GUID_Detection
         // https://github.com/Dec0ne/KrbRelayUp
         $guid_ED83E265_D48E_4B0D_8C22_D9D0A67C78F2_str = "ED83E265-D48E-4B0D-8C22-D9D0A67C78F2" ascii wide nocase
         $guid_ED83E265_D48E_4B0D_8C22_D9D0A67C78F2_bin = { 65 E2 83 ED 8E D4 0D 4B 8C 22 D9 D0 A6 7C 78 F2 }
+
+        // .NET Post-Exploitation Utility for Abusing Explicit Certificate Mappings in ADCS
+        // https://github.com/logangoins/Stifle
+        $guid_EDBAAABC_1214_41C0_8EEE_B61056DE37ED_str = "EDBAAABC-1214-41C0-8EEE-B61056DE37ED" ascii wide nocase
+        $guid_EDBAAABC_1214_41C0_8EEE_B61056DE37ED_bin = { BC AA BA ED 14 12 C0 41 8E EE B6 10 56 DE 37 ED }
 
         // leverages the Process Forking technique using the RtlCreateProcessReflection API to clone the lsass.exe process. Once the clone is created - it utilizes MINIDUMP_CALLBACK_INFORMATION callbacks to generate a memory dump of the cloned process
         // https://github.com/Offensive-Panda/LsassReflectDumping
@@ -4036,6 +4356,11 @@ rule GUID_Detection
         $guid_f2691b74_129f_4ac2_a88a_db4b0f36b609_str = "f2691b74-129f-4ac2-a88a-db4b0f36b609" ascii wide nocase
         $guid_f2691b74_129f_4ac2_a88a_db4b0f36b609_bin = { 74 1B 69 F2 9F 12 C2 4A A8 8A DB 4B 0F 36 B6 09 }
 
+        // remote backdoor used by a group of the same name (Carbanak). It is intended for espionage - data exfiltration and providing remote access to infected machines
+        // https://github.com/0x25bit/Updated-Carbanak-Source-with-Plugins
+        $guid_F2D38A31_CF17_4962_A601_6779F18FDBF2_str = "F2D38A31-CF17-4962-A601-6779F18FDBF2" ascii wide nocase
+        $guid_F2D38A31_CF17_4962_A601_6779F18FDBF2_bin = { 31 8A D3 F2 17 CF 62 49 A6 01 67 79 F1 8F DB F2 }
+
         // Framework designed for red teams to create and manage custom C2 (Command and Control) channels. Unlike traditional C2 frameworks that rely on typical communication methods like HTTP/S DNS or TCP -  C3 allows for the creation of non-traditional and esoteric C2 channels using platforms like Slack Dropbox GitHub OneDrive and more.
         // https://github.com/WithSecureLabs/C3
         $guid_F2EC73D1_D533_4EE4_955A_A62E306472CC_str = "F2EC73D1-D533-4EE4-955A-A62E306472CC" ascii wide nocase
@@ -4056,6 +4381,11 @@ rule GUID_Detection
         $guid_F3037587_1A3B_41F1_AA71_B026EFDB2A45_str = "F3037587-1A3B-41F1-AA71-B026EFDB2A45" ascii wide nocase
         $guid_F3037587_1A3B_41F1_AA71_B026EFDB2A45_bin = { 87 75 03 F3 3B 1A F1 41 AA 71 B0 26 EF DB 2A 45 }
 
+        // remote backdoor used by a group of the same name (Carbanak). It is intended for espionage - data exfiltration and providing remote access to infected machines
+        // https://github.com/0x25bit/Updated-Carbanak-Source-with-Plugins
+        $guid_F34C5DF4_22A6_49CF_901E_D6DD338061F1_str = "F34C5DF4-22A6-49CF-901E-D6DD338061F1" ascii wide nocase
+        $guid_F34C5DF4_22A6_49CF_901E_D6DD338061F1_bin = { F4 5D 4C F3 A6 22 CF 49 90 1E D6 DD 33 80 61 F1 }
+
         // Github as C2
         // https://github.com/TheD1rkMtr/GithubC2
         $guid_F3C62326_E221_4481_AC57_EF7F76AAF27B_str = "F3C62326-E221-4481-AC57-EF7F76AAF27B" ascii wide nocase
@@ -4075,6 +4405,11 @@ rule GUID_Detection
         // https://github.com/pseymour/MakeMeAdmin
         $guid_F5A53B43_5D6D_48EC_BC44_C0C1A0CEFA8D_str = "F5A53B43-5D6D-48EC-BC44-C0C1A0CEFA8D" ascii wide nocase
         $guid_F5A53B43_5D6D_48EC_BC44_C0C1A0CEFA8D_bin = { 43 3B A5 F5 6D 5D EC 48 BC 44 C0 C1 A0 CE FA 8D }
+
+        // walmart's C2 - complete adversarial operations toolkit (C2 - stagers - agents - automated ephemeral redirectors and task runners - a complete phishing engine)
+        // https://github.com/malcomvetter/Periscope
+        $guid_F5B94815_D623_4947_9A2B_88ABAF7FA6D9_str = "F5B94815-D623-4947-9A2B-88ABAF7FA6D9" ascii wide nocase
+        $guid_F5B94815_D623_4947_9A2B_88ABAF7FA6D9_bin = { 15 48 B9 F5 23 D6 47 49 9A 2B 88 AB AF 7F A6 D9 }
 
         // A tool for auditing network shares in an Active Directory environment
         // https://github.com/dionach/ShareAudit
@@ -4181,6 +4516,11 @@ rule GUID_Detection
         $guid_FC5A1C5A_65B4_452A_AA4E_E6DCF1FA04FB_str = "FC5A1C5A-65B4-452A-AA4E-E6DCF1FA04FB" ascii wide nocase
         $guid_FC5A1C5A_65B4_452A_AA4E_E6DCF1FA04FB_bin = { 5A 1C 5A FC B4 65 2A 45 AA 4E E6 DC F1 FA 04 FB }
 
+        // remote backdoor used by a group of the same name (Carbanak). It is intended for espionage - data exfiltration and providing remote access to infected machines
+        // https://github.com/0x25bit/Updated-Carbanak-Source-with-Plugins
+        $guid_FC8F9DFC_3A81_4427_BFE5_DA11572EA8B5_str = "FC8F9DFC-3A81-4427-BFE5-DA11572EA8B5" ascii wide nocase
+        $guid_FC8F9DFC_3A81_4427_BFE5_DA11572EA8B5_bin = { FC 9D 8F FC 81 3A 27 44 BF E5 DA 11 57 2E A8 B5 }
+
         // Spoof file icons and extensions in Windows
         // https://github.com/henriksb/ExtensionSpoofer
         $guid_FCD5E13D_1663_4226_8280_1C6A97933AB7_str = "FCD5E13D-1663-4226-8280-1C6A97933AB7" ascii wide nocase
@@ -4230,6 +4570,11 @@ rule GUID_Detection
         // https://github.com/rasta-mouse/RuralBishop
         $guid_FE4414D9_1D7E_4EEB_B781_D278FE7A5619_str = "FE4414D9-1D7E-4EEB-B781-D278FE7A5619" ascii wide nocase
         $guid_FE4414D9_1D7E_4EEB_B781_D278FE7A5619_bin = { D9 14 44 FE 7E 1D EB 4E B7 81 D2 78 FE 7A 56 19 }
+
+        // remote backdoor used by a group of the same name (Carbanak). It is intended for espionage - data exfiltration and providing remote access to infected machines
+        // https://github.com/0x25bit/Updated-Carbanak-Source-with-Plugins
+        $guid_FE66CDDF_8E33_4153_81AF_24BE392698D8_str = "FE66CDDF-8E33-4153-81AF-24BE392698D8" ascii wide nocase
+        $guid_FE66CDDF_8E33_4153_81AF_24BE392698D8_bin = { DF CD 66 FE 33 8E 53 41 81 AF 24 BE 39 26 98 D8 }
 
         // A tool that detects the privilege escalation vulnerabilities caused by misconfigurations and missing updates in the Windows operating systems.
         // https://github.com/hlldz/dazzleUP

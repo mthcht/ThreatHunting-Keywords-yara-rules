@@ -119,6 +119,9 @@ rule torproject
         // Description: Browse Privately. Explore Freely. Defend yourself against tracking and surveillance. Circumvent censorship.
         // Reference: torproject.org
         $string37 = /torproject\.org\/dist\/torbrowser\/.{0,1000}\./ nocase ascii wide
+        // Description: Browse Privately. Explore Freely. Defend yourself against tracking and surveillance. Circumvent censorship.
+        // Reference: torproject.org
+        $string38 = /torproject\.org\/download\/download\// nocase ascii wide
 
     condition:
         any of them

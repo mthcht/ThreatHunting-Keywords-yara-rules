@@ -496,13 +496,7 @@ rule bruteratel
         $string162 = "memhunt " nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string163 = "psgrep " nocase ascii wide
-        // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
-        // Reference: https://bruteratel.com/
-        $string164 = /set_child\s.{0,100}\.exe/ nocase ascii wide
-        // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
-        // Reference: https://bruteratel.com/
-        $string165 = /sharescan\s.{0,100}\.txt/ nocase ascii wide
+        $string163 = /sharescan\s.{0,100}\.txt/ nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

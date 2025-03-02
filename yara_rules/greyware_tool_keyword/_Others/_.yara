@@ -110,81 +110,156 @@ rule _
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
         $string34 = /\\9\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string35 = /\\AppData\\Local\\Temp\\a\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string36 = /\\AppData\\Local\\Temp\\b\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string37 = /\\AppData\\Local\\Temp\\c\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string38 = /\\AppData\\Local\\Temp\\d\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string39 = /\\AppData\\Local\\Temp\\e\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string40 = /\\AppData\\Local\\Temp\\f\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string41 = /\\AppData\\Local\\Temp\\g\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string42 = /\\AppData\\Local\\Temp\\h\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string43 = /\\AppData\\Local\\Temp\\i\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string44 = /\\AppData\\Local\\Temp\\j\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string45 = /\\AppData\\Local\\Temp\\k\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string46 = /\\AppData\\Local\\Temp\\l\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string47 = /\\AppData\\Local\\Temp\\m\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string48 = /\\AppData\\Local\\Temp\\n\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string49 = /\\AppData\\Local\\Temp\\o\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string50 = /\\AppData\\Local\\Temp\\p\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string51 = /\\AppData\\Local\\Temp\\q\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string52 = /\\AppData\\Local\\Temp\\r\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string53 = /\\AppData\\Local\\Temp\\s\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string54 = /\\AppData\\Local\\Temp\\t\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string55 = /\\AppData\\Local\\Temp\\u\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string56 = /\\AppData\\Local\\Temp\\v\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string57 = /\\AppData\\Local\\Temp\\w\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string58 = /\\AppData\\Local\\Temp\\x\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string59 = /\\AppData\\Local\\Temp\\y\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string60 = /\\AppData\\Local\\Temp\\z\.exe/ nocase ascii wide
         // Description: script in startup location
         // Reference: N/A
-        $string35 = /\\AppData\\Roaming\\Microsoft\\Windows\\Start\sMenu\\Programs\\Startup\\.{0,1000}\.bat/ nocase ascii wide
+        $string61 = /\\AppData\\Roaming\\Microsoft\\Windows\\Start\sMenu\\Programs\\Startup\\.{0,1000}\.bat/ nocase ascii wide
         // Description: script in startup location
         // Reference: N/A
-        $string36 = /\\AppData\\Roaming\\Microsoft\\Windows\\Start\sMenu\\Programs\\Startup\\.{0,1000}\.cmd/ nocase ascii wide
+        $string62 = /\\AppData\\Roaming\\Microsoft\\Windows\\Start\sMenu\\Programs\\Startup\\.{0,1000}\.cmd/ nocase ascii wide
         // Description: script in startup location
         // Reference: N/A
-        $string37 = /\\AppData\\Roaming\\Microsoft\\Windows\\Start\sMenu\\Programs\\Startup\\.{0,1000}\.hta/ nocase ascii wide
+        $string63 = /\\AppData\\Roaming\\Microsoft\\Windows\\Start\sMenu\\Programs\\Startup\\.{0,1000}\.hta/ nocase ascii wide
         // Description: script in startup location
         // Reference: N/A
-        $string38 = /\\AppData\\Roaming\\Microsoft\\Windows\\Start\sMenu\\Programs\\Startup\\.{0,1000}\.ps1/ nocase ascii wide
+        $string64 = /\\AppData\\Roaming\\Microsoft\\Windows\\Start\sMenu\\Programs\\Startup\\.{0,1000}\.ps1/ nocase ascii wide
         // Description: script in startup location
         // Reference: N/A
-        $string39 = /\\AppData\\Roaming\\Microsoft\\Windows\\Start\sMenu\\Programs\\Startup\\.{0,1000}\.vbs/ nocase ascii wide
+        $string65 = /\\AppData\\Roaming\\Microsoft\\Windows\\Start\sMenu\\Programs\\Startup\\.{0,1000}\.vbs/ nocase ascii wide
         // Description: generic suspicious keyword keygen.exe observed in multiple cracked software often packed with malwares
         // Reference: N/A
-        $string40 = /\\keygen\.exe/ nocase ascii wide
+        $string66 = /\\keygen\.exe/ nocase ascii wide
         // Description: suspicious file name - has been used by threat actors
         // Reference: N/A
-        $string41 = /\\PAYMENT\.hta/ nocase ascii wide
+        $string67 = /\\PAYMENT\.hta/ nocase ascii wide
         // Description: suspicious file name - has been used by threat actors
         // Reference: N/A
-        $string42 = /\\PAYMENT\.hta/ nocase ascii wide
+        $string68 = /\\PAYMENT\.hta/ nocase ascii wide
         // Description: suspicious file name - has been used by threat actors
         // Reference: N/A
-        $string43 = /\\PAYMENTS\.exe/ nocase ascii wide
+        $string69 = /\\PAYMENTS\.exe/ nocase ascii wide
         // Description: reversed string cmd.exe /c obfuscation
         // Reference: N/A
-        $string44 = /c\/\sexe\.dmc/ nocase ascii wide
+        $string70 = /c\/\sexe\.dmc/ nocase ascii wide
         // Description: file path containing mixed Unicode-escaped and ASCII characters to evade detection
         // Reference: https://cloud.google.com/blog/topics/threat-intelligence/melting-unc2198-icedid-to-ransomware-operations
-        $string45 = /c\:\\.{0,1000}\\\\u0.{0,1000}\\\\u0.{0,1000}\\\\u0.{0,1000}\\\\u0/ nocase ascii wide
+        $string71 = /c\:\\.{0,1000}\\\\u0.{0,1000}\\\\u0.{0,1000}\\\\u0.{0,1000}\\\\u0/ nocase ascii wide
         // Description: reversed string for obfuscation
         // Reference: N/A
-        $string46 = "delbasiD epyTputratS- " nocase ascii wide
+        $string72 = "delbasiD epyTputratS- " nocase ascii wide
         // Description: reversed string for obfuscation
         // Reference: N/A
-        $string47 = "ecnereferPpM-teS" nocase ascii wide
+        $string73 = "ecnereferPpM-teS" nocase ascii wide
         // Description: reversed string for obfuscation
         // Reference: N/A
-        $string48 = "eliforPllaweriFteN-teS" nocase ascii wide
+        $string74 = "eliforPllaweriFteN-teS" nocase ascii wide
         // Description: reversed string rundll32.exe obfuscation
         // Reference: N/A
-        $string49 = /exe\.23lldnur/ nocase ascii wide
+        $string75 = /exe\.23lldnur/ nocase ascii wide
         // Description: reversed string for obfuscation
         // Reference: N/A
-        $string50 = /exe\.erolpxei/ nocase ascii wide
+        $string76 = /exe\.erolpxei/ nocase ascii wide
         // Description: reversed string for obfuscation
         // Reference: N/A
-        $string51 = /exe\.rerolpxe/ nocase ascii wide
+        $string77 = /exe\.rerolpxe/ nocase ascii wide
         // Description: reversed string for obfuscation
         // Reference: N/A
-        $string52 = /exe\.ssasl/ nocase ascii wide
+        $string78 = /exe\.ssasl/ nocase ascii wide
         // Description: reversed string for obfuscation
         // Reference: N/A
-        $string53 = /exe\.tsohcvs/ nocase ascii wide
+        $string79 = /exe\.tsohcvs/ nocase ascii wide
         // Description: reversed string for obfuscation
         // Reference: N/A
-        $string54 = "gnirotinoMemitlaeRelbasiD" nocase ascii wide
-        // Description: allows users to create a unique URL to collect and inspect HTTP requests. It is commonly used for debugging webhooks - it can also be abused by attackers for verifying the reachability and effectiveness of their payloads
-        // Reference: http://requestbin.net
-        $string55 = /https\:\/\/requestbin\.net\/r\// nocase ascii wide
+        $string80 = "gnirotinoMemitlaeRelbasiD" nocase ascii wide
         // Description: reversed string for obfuscation
         // Reference: N/A
-        $string56 = "llawerifvda hsten" nocase ascii wide
+        $string81 = "llawerifvda hsten" nocase ascii wide
         // Description: reversed string for obfuscation
         // Reference: N/A
-        $string57 = /niB\.elcyceR\$/ nocase ascii wide
+        $string82 = /niB\.elcyceR\$/ nocase ascii wide
         // Description: reversed string for obfuscation
         // Reference: N/A
-        $string58 = "teSlortnoCtnerruC" nocase ascii wide
+        $string83 = "teSlortnoCtnerruC" nocase ascii wide
         // Description: Suspicious tlds with suspicious file types
         // Reference: N/A
-        $string59 = /https\:\/\/.{0,1000}\.xyz\/.{0,1000}\.ps1/ nocase ascii wide
+        $string84 = /https\:\/\/.{0,1000}\.xyz\/.{0,1000}\.ps1/ nocase ascii wide
 
     condition:
         any of them

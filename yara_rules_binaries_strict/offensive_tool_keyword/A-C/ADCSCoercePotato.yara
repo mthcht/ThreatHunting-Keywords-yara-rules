@@ -22,7 +22,7 @@ rule ADCSCoercePotato
         $string4 = /\[\!\]\sCouldn\'t\scommunicate\swith\sthe\sfake\sRPC\sServer/ nocase ascii wide
         // Description: coercing machine authentication but specific for ADCS server
         // Reference: https://github.com/decoder-it/ADCSCoercePotato
-        $string5 = /\[\+\]\sGot\sNTLM\stype\s3\sAUTH\smessage\sfrom\s.{0,100}\s\swith\shostname\s/ nocase ascii wide
+        $string5 = /\[\+\]\sGot\sNTLM\stype\s3\sAUTH\smessage\sfrom\s.{0,100}\swith\shostname\s/ nocase ascii wide
         // Description: coercing machine authentication but specific for ADCS server
         // Reference: https://github.com/decoder-it/ADCSCoercePotato
         $string6 = /\\ADCSCoercePotato\\/ nocase ascii wide

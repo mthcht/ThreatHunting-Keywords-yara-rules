@@ -26,24 +26,30 @@ rule attrib
         // Description: NTLM Leak via Desktop.ini
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
         $string6 = /attrib\s\+s\s\+h\sdesktop\.ini/ nocase ascii wide
+        // Description: instruments explorer to treat the folder as ActiveX cache
+        // Reference: https://x.com/ValthekOn/status/1890160938407596168
+        $string7 = /attrib\sdesktop\.ini\s\+s\s\+h\s\+r/ nocase ascii wide
         // Description: suspicious attrib command
         // Reference: https://github.com/petikvx/vx-ezine/blob/cfaf09bb089a08a9f33254929209fb32ebd52806/darkcodes/dc1/Sources/Sph1nX_Sources/DeskLock/DeskLock.txt#L13
-        $string7 = /attrib\s\-R\s\-S\s\-H\sC\:\\WINDOWS\\explorer\.exe/ nocase ascii wide
+        $string8 = /attrib\s\-R\s\-S\s\-H\sC\:\\WINDOWS\\explorer\.exe/ nocase ascii wide
         // Description: suspicious attrib command
         // Reference: https://github.com/petikvx/vx-ezine/blob/cfaf09bb089a08a9f33254929209fb32ebd52806/darkcodes/dc1/Sources/Sph1nX_Sources/DeskLock/DeskLock.txt#L13
-        $string8 = /attrib\s\-R\s\-S\s\-H\sC\:\\WINDOWS\\System32\\explorer\.exe/ nocase ascii wide
+        $string9 = /attrib\s\-R\s\-S\s\-H\sC\:\\WINDOWS\\System32\\explorer\.exe/ nocase ascii wide
         // Description: CleanRDP.bat script erasing RDP traces used by Dispossessor ransomware group
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string9 = "attrib -s -h %userprofile%" nocase ascii wide
+        $string10 = "attrib -s -h %userprofile%" nocase ascii wide
         // Description: CleanRDP.bat script erasing RDP traces used by Dispossessor ransomware group
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string10 = /attrib\s\-s\s\-h\s\%userprofile\%\\documents\\Default\.rdp/ nocase ascii wide
+        $string11 = /attrib\s\-s\s\-h\s\%userprofile\%\\documents\\Default\.rdp/ nocase ascii wide
         // Description: NTLM Leak via Desktop.ini
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
-        $string11 = /echo\s\[\.ShellClassInfo\]\s\>\sdesktop\.ini/ nocase ascii wide
+        $string12 = /echo\s\[\.ShellClassInfo\]\s\>\sdesktop\.ini/ nocase ascii wide
+        // Description: instruments explorer to treat the folder as ActiveX cache
+        // Reference: https://x.com/ValthekOn/status/1890160938407596168
+        $string13 = /echo\sCLSID\=\{88C6C381\-2E85\-11D0\-94DE\-444553540000\}\s\>\>\sdesktop\.ini/ nocase ascii wide
         // Description: NTLM Leak via Desktop.ini
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
-        $string12 = /echo\sIconResource\=\\\\.{0,100}\\.{0,100}\s\>\>\sdesktop\.ini/ nocase ascii wide
+        $string14 = /echo\sIconResource\=\\\\.{0,100}\\.{0,100}\s\>\>\sdesktop\.ini/ nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

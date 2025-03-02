@@ -11,18 +11,36 @@ rule shred
         // Description: deleting bash history
         // Reference: N/A
         $string1 = /shred\s\$HISTFILE/ nocase ascii wide
+        // Description: Indicator Removal on Host
+        // Reference: N/A
+        $string2 = /shred\s\-n\s.{0,100}\s\-u\s\-z\s.{0,100}_history/ nocase ascii wide
+        // Description: Indicator Removal on Host
+        // Reference: N/A
+        $string3 = /shred\s\-n\s.{0,100}\s\-z\s\-u\s.{0,100}_history/ nocase ascii wide
         // Description: Malware or other files dropped or created on a system by an adversary may leave traces behind as to what was done within a network and how. Adversaries may remove these files over the course of an intrusion to keep their footprint low or remove them at the end as part of the post-intrusion cleanup process.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_file_deletion_via_shred.toml
-        $string2 = "shred --remove" nocase ascii wide
+        $string4 = "shred --remove" nocase ascii wide
+        // Description: Indicator Removal on Host
+        // Reference: N/A
+        $string5 = /shred\s\-u\s\-n\s.{0,100}\s\-z\s.{0,100}_history/ nocase ascii wide
+        // Description: Indicator Removal on Host
+        // Reference: N/A
+        $string6 = /shred\s\-u\s\-z\s\-n\s.{0,100}_history/ nocase ascii wide
         // Description: Malware or other files dropped or created on a system by an adversary may leave traces behind as to what was done within a network and how. Adversaries may remove these files over the course of an intrusion to keep their footprint low or remove them at the end as part of the post-intrusion cleanup process.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_file_deletion_via_shred.toml
-        $string3 = "shred -u" nocase ascii wide
+        $string7 = "shred -u" nocase ascii wide
+        // Description: Indicator Removal on Host
+        // Reference: N/A
+        $string8 = /shred\s\-z\s\-n\s.{0,100}\s\-u\s.{0,100}_history/ nocase ascii wide
+        // Description: Indicator Removal on Host
+        // Reference: N/A
+        $string9 = /shred\s\-z\s\-u\s\-n\s.{0,100}_history/ nocase ascii wide
         // Description: Malware or other files dropped or created on a system by an adversary may leave traces behind as to what was done within a network and how. Adversaries may remove these files over the course of an intrusion to keep their footprint low or remove them at the end as part of the post-intrusion cleanup process.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_file_deletion_via_shred.toml
-        $string4 = "shred -z" nocase ascii wide
+        $string10 = "shred -z" nocase ascii wide
         // Description: Malware or other files dropped or created on a system by an adversary may leave traces behind as to what was done within a network and how. Adversaries may remove these files over the course of an intrusion to keep their footprint low or remove them at the end as part of the post-intrusion cleanup process.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_file_deletion_via_shred.toml
-        $string5 = "shred --zero" nocase ascii wide
+        $string11 = "shred --zero" nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

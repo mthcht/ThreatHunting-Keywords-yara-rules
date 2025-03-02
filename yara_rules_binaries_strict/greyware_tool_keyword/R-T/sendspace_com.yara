@@ -10,10 +10,13 @@ rule sendspace_com
     strings:
         // Description: Interesting observation on the file-sharing platform preferences derived from the negotiations chats with LockBit victims
         // Reference: https://twitter.com/mthcht/status/1660953897622544384
-        $string1 = /https\:\/\/www\.sendspace\.com\/file\// nocase ascii wide
+        $string1 = /https\:\/\/.{0,100}\.sendspace\.com\/upload/ nocase ascii wide
         // Description: Interesting observation on the file-sharing platform preferences derived from the negotiations chats with LockBit victims
         // Reference: https://twitter.com/mthcht/status/1660953897622544384
-        $string2 = /https\:\/\/.{0,100}\.sendspace\.com\/upload/ nocase ascii wide
+        $string2 = /https\:\/\/www\.sendspace\.com\/delete/ nocase ascii wide
+        // Description: Interesting observation on the file-sharing platform preferences derived from the negotiations chats with LockBit victims
+        // Reference: https://twitter.com/mthcht/status/1660953897622544384
+        $string3 = /https\:\/\/www\.sendspace\.com\/file\// nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

@@ -50,6 +50,9 @@ rule mshta
         // Description: mshta abused by attackers
         // Reference: https://lolbas-project.github.io/lolbas/Binaries/Mshta/
         $string14 = /mshta\.exe.{0,100}\svbscript\:Close\(Execute\(.{0,100}script\:https\:\/\/.{0,100}\.sct/ nocase ascii wide
+        // Description: Phishing with a fake reCAPTCHA
+        // Reference: https://github.com/JohnHammond/recaptcha-phish
+        $string15 = /mshta\.exe.{0,100}I\sam\snot\sa\srobot\s\-\sreCAPTCHA\sVerification\sID\:\s/ nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

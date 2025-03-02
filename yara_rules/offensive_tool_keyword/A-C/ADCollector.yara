@@ -10,7 +10,7 @@ rule ADCollector
     strings:
         // Description: ADCollector is a lightweight tool that enumerates the Active Directory environment
         // Reference: https://github.com/dev-2null/ADCollector
-        $string1 = "  --LocalGMEnum --Host " nocase ascii wide
+        $string1 = " --LocalGMEnum --Host " nocase ascii wide
         // Description: ADCollector is a lightweight tool that enumerates the Active Directory environment
         // Reference: https://github.com/dev-2null/ADCollector
         $string2 = /\sADCollector\.exe/ nocase ascii wide

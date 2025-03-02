@@ -22,7 +22,7 @@ rule impacket
         $string4 = /\sdacledit\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string5 = /\s\-dc\-ip\s.{0,100}\s\s\-so\s/ nocase ascii wide
+        $string5 = /\s\-dc\-ip\s.{0,100}\s\-so\s/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
         $string6 = /\s\-dc\-ip\s.{0,100}\s\-computer\-pass\s/ nocase ascii wide

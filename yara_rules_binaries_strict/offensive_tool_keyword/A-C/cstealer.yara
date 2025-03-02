@@ -262,7 +262,7 @@ rule cstealer
         $string84 = "nanjmdknhkinifnkgdcggcfnhdaammmj" nocase ascii wide
         // Description: NiceRAT stealer - clone of cstealer
         // Reference: https://github.com/0x00G/NiceRAT
-        $string85 = /NiceRAT\s\|\s.{0,100}\s\sStealer/ nocase ascii wide
+        $string85 = /NiceRAT\s\|\s.{0,100}\sStealer/ nocase ascii wide
         // Description: NiceRAT stealer - clone of cstealer
         // Reference: https://github.com/0x00G/NiceRAT
         $string86 = /NiceRAT\-main\.zip/ nocase ascii wide

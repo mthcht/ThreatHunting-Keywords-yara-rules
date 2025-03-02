@@ -521,9 +521,6 @@ rule poshc2
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and Lateral Movement.
         // Reference: https://github.com/nettitude/PoshC2
         $string171 = /XOR\-Payloads\.py/ nocase ascii wide
-        // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and Lateral Movement.
-        // Reference: https://github.com/nettitude/PoshC2
-        $string172 = "posh -u " nocase ascii wide
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

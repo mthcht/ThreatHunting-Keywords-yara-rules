@@ -49,79 +49,76 @@ rule Quasar
         $string13 = /\\Quasar\-master/ nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string14 = /\\Users\\mthcht\\AppData\\Roaming\\SubDir\\Client\.exe/ nocase ascii wide
+        $string14 = /\\Windows\\system32\\SubDir\\Client\.exe/ nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string15 = /\\Windows\\system32\\SubDir\\Client\.exe/ nocase ascii wide
+        $string15 = "14CA405B-8BAC-48AB-9FBA-8FB5DF88FD0D" nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string16 = "14CA405B-8BAC-48AB-9FBA-8FB5DF88FD0D" nocase ascii wide
+        $string16 = "32A2A734-7429-47E6-A362-E344A19C0D85" nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string17 = "32A2A734-7429-47E6-A362-E344A19C0D85" nocase ascii wide
+        $string17 = "9F5CF56A-DDB2-4F40-AB99-2A1DC47588E1" nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string18 = "9F5CF56A-DDB2-4F40-AB99-2A1DC47588E1" nocase ascii wide
+        $string18 = /Backdoor\.Quasar/ nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string19 = /Backdoor\.Quasar/ nocase ascii wide
+        $string19 = "C7C363BA-E5B6-4E18-9224-39BC8DA73172" nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string20 = "C7C363BA-E5B6-4E18-9224-39BC8DA73172" nocase ascii wide
+        $string20 = "CFCD0759E20F29C399C9D4210BE614E4E020BEE8" nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string21 = "CFCD0759E20F29C399C9D4210BE614E4E020BEE8" nocase ascii wide
+        $string21 = "localhost:4782" nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string22 = "localhost:4782" nocase ascii wide
+        $string22 = /namespace\sQuasar\.Client/ nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string23 = /namespace\sQuasar\.Client/ nocase ascii wide
+        $string23 = /namespace\sQuasar\.Server/ nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string24 = /namespace\sQuasar\.Server/ nocase ascii wide
+        $string24 = "ping -n 10 localhost > nul" nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string25 = "ping -n 10 localhost > nul" nocase ascii wide
+        $string25 = "Quasar Client Startup" nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string26 = "Quasar Client Startup" nocase ascii wide
+        $string26 = /Quasar\sv.{0,1000}\\Client\-built\.exe/ nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string27 = /Quasar\sv.{0,1000}\\Client\-built\.exe/ nocase ascii wide
+        $string27 = /Quasar\.Client\./ nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string28 = /Quasar\.Client\./ nocase ascii wide
+        $string28 = /Quasar\.Common\.Tests\\/ nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string29 = /Quasar\.Common\.Tests\\/ nocase ascii wide
+        $string29 = /Quasar\.exe/ nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string30 = /Quasar\.exe/ nocase ascii wide
+        $string30 = /Quasar\.Server/ nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string31 = /Quasar\.Server/ nocase ascii wide
+        $string31 = /Quasar\.Server\\Program\.cs/ nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string32 = /Quasar\.Server\\Program\.cs/ nocase ascii wide
+        $string32 = /Quasar\.sln/ nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string33 = /Quasar\.sln/ nocase ascii wide
+        $string33 = /Quasar\.v1\.4\.1\.zip/ nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string34 = /Quasar\.v1\.4\.1\.zip/ nocase ascii wide
+        $string34 = "quasar/Quasar" nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string35 = "quasar/Quasar" nocase ascii wide
+        $string35 = /Quasar\-master\.zip/ nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string36 = /Quasar\-master\.zip/ nocase ascii wide
+        $string36 = "QuasarRAT" nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string37 = "QuasarRAT" nocase ascii wide
-        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
-        // Reference: https://github.com/quasar/Quasar
-        $string38 = "ylAo2kAlUS2kYkala!" nocase ascii wide
+        $string37 = "ylAo2kAlUS2kYkala!" nocase ascii wide
 
     condition:
         any of them

@@ -34,28 +34,34 @@ rule recaptcha_phish
         $string8 = "I am not a robot - reCAPTCHA Verification ID: 3029" nocase ascii wide
         // Description: Phishing with a fake reCAPTCHA
         // Reference: https://github.com/JohnHammond/recaptcha-phish
-        $string9 = "I am not a robot - reCAPTCHA Verification ID: 7537" nocase ascii wide
+        $string9 = "I am not a robot - reCAPTCHA Verification ID: 4202" nocase ascii wide
         // Description: Phishing with a fake reCAPTCHA
         // Reference: https://github.com/JohnHammond/recaptcha-phish
-        $string10 = "I am not a robot - reCAPTCHA Verification ID: 7624" nocase ascii wide
+        $string10 = "I am not a robot - reCAPTCHA Verification ID: 7537" nocase ascii wide
         // Description: Phishing with a fake reCAPTCHA
         // Reference: https://github.com/JohnHammond/recaptcha-phish
-        $string11 = "I am not a robot - reCAPTCHA Verification ID: 93752" nocase ascii wide
+        $string11 = "I am not a robot - reCAPTCHA Verification ID: 7624" nocase ascii wide
         // Description: Phishing with a fake reCAPTCHA
         // Reference: https://github.com/JohnHammond/recaptcha-phish
-        $string12 = "JohnHammond/recaptcha-phish" nocase ascii wide
+        $string12 = "I am not a robot - reCAPTCHA Verification ID: 93752" nocase ascii wide
         // Description: Phishing with a fake reCAPTCHA
         // Reference: https://github.com/JohnHammond/recaptcha-phish
-        $string13 = /mshta\.exe.{0,1000}I\sam\snot\sa\srobot\s\-\sreCAPTCHA\sVerification\sID\:\s/ nocase ascii wide
+        $string13 = "JohnHammond/recaptcha-phish" nocase ascii wide
         // Description: Phishing with a fake reCAPTCHA
         // Reference: https://github.com/JohnHammond/recaptcha-phish
-        $string14 = /objShell\.Run\s\\"calc\.exe\\"/ nocase ascii wide
+        $string14 = /mshta.{0,1000}I\sam\snot\sa\srobot\s\-\s.{0,1000}Verification\sID\:\s/ nocase ascii wide
         // Description: Phishing with a fake reCAPTCHA
         // Reference: https://github.com/JohnHammond/recaptcha-phish
-        $string15 = "reCAPTCHA Verification ID: <span id=\"verification-id\">146820</span>" nocase ascii wide
+        $string15 = /mshta\.exe.{0,1000}I\sam\snot\sa\srobot\s\-\sreCAPTCHA\sVerification\sID\:\s/ nocase ascii wide
         // Description: Phishing with a fake reCAPTCHA
         // Reference: https://github.com/JohnHammond/recaptcha-phish
-        $string16 = /recaptcha\-phish\-main\.zip/ nocase ascii wide
+        $string16 = /objShell\.Run\s\\"calc\.exe\\"/ nocase ascii wide
+        // Description: Phishing with a fake reCAPTCHA
+        // Reference: https://github.com/JohnHammond/recaptcha-phish
+        $string17 = "reCAPTCHA Verification ID: <span id=\"verification-id\">146820</span>" nocase ascii wide
+        // Description: Phishing with a fake reCAPTCHA
+        // Reference: https://github.com/JohnHammond/recaptcha-phish
+        $string18 = /recaptcha\-phish\-main\.zip/ nocase ascii wide
 
     condition:
         any of them

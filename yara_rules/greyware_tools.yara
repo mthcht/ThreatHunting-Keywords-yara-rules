@@ -1497,6 +1497,28 @@ rule rule_adiskreader_greyware_tool_keyword
 }
 
 
+rule rule_adobe_com_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'adobe.com' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "adobe.com"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Attackers can use adobe.com to masquerade their domain for phishing purposes.
+        // Reference: N/A
+        $string1_adobe_com_greyware_tool_keyword = /https\:\/\/new\.express\.adobe\.com\/publishedV2\/urn\:aaid\:sc\:/ nocase ascii wide
+        // Description: Attackers can use adobe.com to masquerade their domain for phishing purposes.
+        // Reference: https://www.joesandbox.com/analysis/515360/0/html
+        $string2_adobe_com_greyware_tool_keyword = /https\:\/\/spark\.adobe\.com\/page\// nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule rule_adrecon_greyware_tool_keyword
 {
     meta:
@@ -2403,155 +2425,176 @@ rule rule_anydesk_greyware_tool_keyword
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
         $string3_anydesk_greyware_tool_keyword = /\sInvoke\-WebRequest\s\-Uri\shttp\:\/\/download\.anydesk\.com\/AnyDesk\.exe/ nocase ascii wide
         // Description: Anydesk RMM usage
-        // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
-        $string4_anydesk_greyware_tool_keyword = /\/\.anydesk\/\.anydesk\.trace/
+        // Reference: https://github.com/Ab4y98/VerySimpleAnyDeskBackdoor/blob/main/AnydeskBackdoor.ps1
+        $string4_anydesk_greyware_tool_keyword = /\$outputPath\s\=\s\\"C\:\\AnyDesk\.exe\\"/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
-        $string5_anydesk_greyware_tool_keyword = /\/\.anydesk\/service\.conf/
+        $string5_anydesk_greyware_tool_keyword = /\/\.anydesk\/\.anydesk\.trace/
         // Description: Anydesk RMM usage
         // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
-        $string6_anydesk_greyware_tool_keyword = /\/\.anydesk\/system\.conf/
+        $string6_anydesk_greyware_tool_keyword = /\/\.anydesk\/service\.conf/
         // Description: Anydesk RMM usage
         // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
-        $string7_anydesk_greyware_tool_keyword = /\/\.anydesk\/user\.conf/
+        $string7_anydesk_greyware_tool_keyword = /\/\.anydesk\/system\.conf/
+        // Description: Anydesk RMM usage
+        // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
+        $string8_anydesk_greyware_tool_keyword = /\/\.anydesk\/user\.conf/
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string8_anydesk_greyware_tool_keyword = /\/Anydesk\.exe/ nocase ascii wide
+        $string9_anydesk_greyware_tool_keyword = /\/Anydesk\.exe/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
-        $string9_anydesk_greyware_tool_keyword = /\/Applications\/Anydesk\.app\// nocase ascii wide
+        $string10_anydesk_greyware_tool_keyword = /\/Applications\/Anydesk\.app\// nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
-        $string10_anydesk_greyware_tool_keyword = /\/etc\/systemd\/system\/anydesk\.service/
+        $string11_anydesk_greyware_tool_keyword = /\/etc\/systemd\/system\/anydesk\.service/
         // Description: Anydesk RMM usage
         // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
-        $string11_anydesk_greyware_tool_keyword = /\/home\/.{0,1000}\/\.anydesk\//
+        $string12_anydesk_greyware_tool_keyword = /\/home\/.{0,1000}\/\.anydesk\//
         // Description: Anydesk RMM usage
         // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
-        $string12_anydesk_greyware_tool_keyword = /\/log\/anydesk\.trace/
+        $string13_anydesk_greyware_tool_keyword = /\/log\/anydesk\.trace/
         // Description: Anydesk RMM usage
         // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
-        $string13_anydesk_greyware_tool_keyword = "/usr/bin/anydesk"
+        $string14_anydesk_greyware_tool_keyword = "/usr/bin/anydesk"
         // Description: Anydesk RMM usage
         // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
-        $string14_anydesk_greyware_tool_keyword = "/usr/lib64/anydesk"
+        $string15_anydesk_greyware_tool_keyword = "/usr/lib64/anydesk"
         // Description: Anydesk RMM usage
         // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
-        $string15_anydesk_greyware_tool_keyword = "/usr/libexec/anydesk"
+        $string16_anydesk_greyware_tool_keyword = "/usr/libexec/anydesk"
         // Description: Anydesk RMM usage
         // Reference: https://www.inversecos.com/2021/02/forensic-analysis-of-anydesk-logs.html
-        $string16_anydesk_greyware_tool_keyword = /\\ad_svc\.trace/ nocase ascii wide
+        $string17_anydesk_greyware_tool_keyword = /\\ad_svc\.trace/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string17_anydesk_greyware_tool_keyword = /\\adprinterpipe/ nocase ascii wide
+        $string18_anydesk_greyware_tool_keyword = /\\adprinterpipe/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string18_anydesk_greyware_tool_keyword = /\\AnyDesk\s\(1\)\.exe/ nocase ascii wide
+        $string19_anydesk_greyware_tool_keyword = /\\AnyDesk\s\(1\)\.exe/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string19_anydesk_greyware_tool_keyword = /\\AnyDesk\.exe/ nocase ascii wide
+        $string20_anydesk_greyware_tool_keyword = /\\AnyDesk\.exe/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string20_anydesk_greyware_tool_keyword = /\\AnyDesk\.lnk/ nocase ascii wide
+        $string21_anydesk_greyware_tool_keyword = /\\AnyDesk\.lnk/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
-        $string21_anydesk_greyware_tool_keyword = /\\AnyDesk\\ad\.trace/ nocase ascii wide
+        $string22_anydesk_greyware_tool_keyword = /\\AnyDesk\\ad\.trace/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
-        $string22_anydesk_greyware_tool_keyword = /\\AnyDesk\\ad_svc\.trace/ nocase ascii wide
+        $string23_anydesk_greyware_tool_keyword = /\\AnyDesk\\ad_svc\.trace/ nocase ascii wide
+        // Description: Anydesk RMM usage
+        // Reference: https://github.com/Ab4y98/VerySimpleAnyDeskBackdoor/blob/main/AnydeskBackdoor.ps1
+        $string24_anydesk_greyware_tool_keyword = /\\AnyDesk\\AnyDesk_Output\.txt/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string23_anydesk_greyware_tool_keyword = /\\AnyDesk\\connection_trace\.txt/ nocase ascii wide
+        $string25_anydesk_greyware_tool_keyword = /\\AnyDesk\\connection_trace\.txt/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
-        $string24_anydesk_greyware_tool_keyword = /\\AnyDesk\\connection_trace\.txt/ nocase ascii wide
+        $string26_anydesk_greyware_tool_keyword = /\\AnyDesk\\connection_trace\.txt/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string25_anydesk_greyware_tool_keyword = /\\anydesk\\printer_driver/ nocase ascii wide
+        $string27_anydesk_greyware_tool_keyword = /\\anydesk\\printer_driver/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string26_anydesk_greyware_tool_keyword = /\\AnyDesk\\service\.conf/ nocase ascii wide
+        $string28_anydesk_greyware_tool_keyword = /\\AnyDesk\\service\.conf/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string27_anydesk_greyware_tool_keyword = /\\AnyDeskPrintDriver\.cat/ nocase ascii wide
+        $string29_anydesk_greyware_tool_keyword = /\\AnyDeskPrintDriver\.cat/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string28_anydesk_greyware_tool_keyword = /\\anydeskprintdriver\.inf/ nocase ascii wide
+        $string30_anydesk_greyware_tool_keyword = /\\anydeskprintdriver\.inf/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string29_anydesk_greyware_tool_keyword = /\\AppData\\Roaming\\AnyDesk\\system\.conf/ nocase ascii wide
+        $string31_anydesk_greyware_tool_keyword = /\\AppData\\Roaming\\AnyDesk\\system\.conf/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string30_anydesk_greyware_tool_keyword = /\\AppData\\Roaming\\AnyDesk\\user\.conf/ nocase ascii wide
+        $string32_anydesk_greyware_tool_keyword = /\\AppData\\Roaming\\AnyDesk\\user\.conf/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
-        $string31_anydesk_greyware_tool_keyword = /\\ControlSet001\\Services\\AnyDesk/ nocase ascii wide
+        $string33_anydesk_greyware_tool_keyword = /\\ControlSet001\\Services\\AnyDesk/ nocase ascii wide
         // Description: anydesk added in safeboot - abused by attackers to maintain persistence and bypass detection
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string32_anydesk_greyware_tool_keyword = /\\CurrentControlSet\\Control\\SafeBoot\\Network\\AnyDesk/ nocase ascii wide
+        $string34_anydesk_greyware_tool_keyword = /\\CurrentControlSet\\Control\\SafeBoot\\Network\\AnyDesk/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://upadhyayraj.medium.com/beyond-connection-logs-understanding-file-transfer-artifacts-in-anydesk-forensics-b5812c817aad
-        $string33_anydesk_greyware_tool_keyword = /\\file_transfer_trace\.txt/ nocase ascii wide
+        $string35_anydesk_greyware_tool_keyword = /\\file_transfer_trace\.txt/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string34_anydesk_greyware_tool_keyword = /\\Pictures\\AnyDesk/ nocase ascii wide
+        $string36_anydesk_greyware_tool_keyword = /\\Pictures\\AnyDesk/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string35_anydesk_greyware_tool_keyword = /\\Prefetch\\ANYDESK\.EXE/ nocase ascii wide
+        $string37_anydesk_greyware_tool_keyword = /\\Prefetch\\ANYDESK\.EXE/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string36_anydesk_greyware_tool_keyword = /\\ProgramFile.{0,1000}\\previous\-version/ nocase ascii wide
+        $string38_anydesk_greyware_tool_keyword = /\\ProgramFile.{0,1000}\\previous\-version/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
-        $string37_anydesk_greyware_tool_keyword = /\\SOFTWARE\\Clients\\Media\\AnyDesk/ nocase ascii wide
+        $string39_anydesk_greyware_tool_keyword = /\\SOFTWARE\\Clients\\Media\\AnyDesk/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string38_anydesk_greyware_tool_keyword = /\\Temp\\AnyDeskUninst/ nocase ascii wide
+        $string40_anydesk_greyware_tool_keyword = /\\Temp\\AnyDeskUninst/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string39_anydesk_greyware_tool_keyword = /\\Videos\\AnyDesk/ nocase ascii wide
+        $string41_anydesk_greyware_tool_keyword = /\\Videos\\AnyDesk/ nocase ascii wide
         // Description: Anydesk RMM usage - compromised certificate - https://anydesk.com/en/changelog/windows
         // Reference: https://anydesk.com/
-        $string40_anydesk_greyware_tool_keyword = "0DBF152DEAF0B981A8A938D53F769DB8" nocase ascii wide
+        $string42_anydesk_greyware_tool_keyword = "0DBF152DEAF0B981A8A938D53F769DB8" nocase ascii wide
         // Description: Anydesk RMM usage - compromised certificate - https://anydesk.com/en/changelog/windows
         // Reference: https://anydesk.com/
-        $string41_anydesk_greyware_tool_keyword = "9CD1DDB78ED05282353B20CDFE8FA0A4FB6C1ECE" nocase ascii wide
+        $string43_anydesk_greyware_tool_keyword = "9CD1DDB78ED05282353B20CDFE8FA0A4FB6C1ECE" nocase ascii wide
         // Description: Anydesk RMM usage - compromised certificate - https://anydesk.com/en/changelog/windows
         // Reference: https://anydesk.com/
-        $string42_anydesk_greyware_tool_keyword = "9D7620A4CEBA92370E8828B3CB1007AEFF63AB36A2CBE5F044FDDE14ABAB1EBF" nocase ascii wide
+        $string44_anydesk_greyware_tool_keyword = "9D7620A4CEBA92370E8828B3CB1007AEFF63AB36A2CBE5F044FDDE14ABAB1EBF" nocase ascii wide
+        // Description: Anydesk RMM usage
+        // Reference: https://github.com/Ab4y98/VerySimpleAnyDeskBackdoor/blob/main/AnydeskBackdoor.ps1
+        $string45_anydesk_greyware_tool_keyword = "Ab4y98/VerySimpleAnyDeskBackdoor" nocase ascii wide
+        // Description: Anydesk RMM usage
+        // Reference: https://github.com/Ab4y98/VerySimpleAnyDeskBackdoor/blob/main/AnydeskBackdoor.ps1
+        $string46_anydesk_greyware_tool_keyword = /AnyDesk\sID\sis\:\s\$ID\sAND\sPassword\sis\:\sAa123456\!/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string43_anydesk_greyware_tool_keyword = "AnyDesk Software GmbH" nocase ascii wide
+        $string47_anydesk_greyware_tool_keyword = "AnyDesk Software GmbH" nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string44_anydesk_greyware_tool_keyword = /Anydesk.{0,1000}\s\-\-start\-with\-win\s\-\-silent/ nocase ascii wide
+        $string48_anydesk_greyware_tool_keyword = /Anydesk.{0,1000}\s\-\-start\-with\-win\s\-\-silent/ nocase ascii wide
+        // Description: Anydesk RMM usage
+        // Reference: https://github.com/Ab4y98/VerySimpleAnyDeskBackdoor/blob/main/AnydeskBackdoor.ps1
+        $string49_anydesk_greyware_tool_keyword = /AnyDesk\.exe\s\-\-install\s\\"C\:\\Program\sFiles\s\(x86\)\\AnyDesk\\"\s\-\-start\-with\-win\s\-\-silent/ nocase ascii wide
         // Description: setting the AnyDesk service password manually
         // Reference: https://thedfirreport.com/2023/04/03/malicious-iso-file-leads-to-domain-wide-ransomware/
-        $string45_anydesk_greyware_tool_keyword = /anydesk\.exe\s\-\-set\-password/ nocase ascii wide
+        $string50_anydesk_greyware_tool_keyword = /anydesk\.exe\s\-\-set\-password/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://www.inversecos.com/2021/02/forensic-analysis-of-anydesk-logs.html
-        $string46_anydesk_greyware_tool_keyword = /Anydesk\\ad\.trace/ nocase ascii wide
+        $string51_anydesk_greyware_tool_keyword = /Anydesk\\ad\.trace/ nocase ascii wide
+        // Description: Anydesk RMM usage
+        // Reference: https://github.com/Ab4y98/VerySimpleAnyDeskBackdoor/blob/main/AnydeskBackdoor.ps1
+        $string52_anydesk_greyware_tool_keyword = /AnydeskBackdoor\.ps1/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string47_anydesk_greyware_tool_keyword = /boot\.net\.anydesk\.com/ nocase ascii wide
+        $string53_anydesk_greyware_tool_keyword = /boot\.net\.anydesk\.com/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string48_anydesk_greyware_tool_keyword = /C\:\\Program\sFiles\s\(x86\)\\AnyDesk/ nocase ascii wide
+        $string54_anydesk_greyware_tool_keyword = /C\:\\Program\sFiles\s\(x86\)\\AnyDesk/ nocase ascii wide
+        // Description: Anydesk RMM usage
+        // Reference: https://github.com/Ab4y98/VerySimpleAnyDeskBackdoor/blob/main/AnydeskBackdoor.ps1
+        $string55_anydesk_greyware_tool_keyword = /cmd\s\/c\s\'echo\sAa123456\!\s.{0,1000}\s\-\-set\-password/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string49_anydesk_greyware_tool_keyword = /Desktop\\AnyDesk\.lnk/ nocase ascii wide
+        $string56_anydesk_greyware_tool_keyword = /Desktop\\AnyDesk\.lnk/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string50_anydesk_greyware_tool_keyword = /download\.anydesk\.com/ nocase ascii wide
+        $string57_anydesk_greyware_tool_keyword = /download\.anydesk\.com/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string51_anydesk_greyware_tool_keyword = /HKCR\\\.anydesk\\/ nocase ascii wide
+        $string58_anydesk_greyware_tool_keyword = /HKCR\\\.anydesk\\/ nocase ascii wide
         // Description: command line used with anydesk in the notes of the Dispossessor ransomware group
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string52_anydesk_greyware_tool_keyword = /programdata\\.{0,1000}\s\-\-start\-with\-win\s\-\-remove\-first\s\-\-silent\s\-\-start\-service/ nocase ascii wide
+        $string59_anydesk_greyware_tool_keyword = /programdata\\.{0,1000}\s\-\-start\-with\-win\s\-\-remove\-first\s\-\-silent\s\-\-start\-service/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string53_anydesk_greyware_tool_keyword = /relay\-.{0,1000}\.net\.anydesk\.com/ nocase ascii wide
+        $string60_anydesk_greyware_tool_keyword = /relay\-.{0,1000}\.net\.anydesk\.com/ nocase ascii wide
 
     condition:
         any of them
@@ -3059,24 +3102,55 @@ rule rule_attrib_greyware_tool_keyword
         // Description: NTLM Leak via Desktop.ini
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
         $string6_attrib_greyware_tool_keyword = /attrib\s\+s\s\+h\sdesktop\.ini/ nocase ascii wide
+        // Description: instruments explorer to treat the folder as ActiveX cache
+        // Reference: https://x.com/ValthekOn/status/1890160938407596168
+        $string7_attrib_greyware_tool_keyword = /attrib\sdesktop\.ini\s\+s\s\+h\s\+r/ nocase ascii wide
         // Description: suspicious attrib command
         // Reference: https://github.com/petikvx/vx-ezine/blob/cfaf09bb089a08a9f33254929209fb32ebd52806/darkcodes/dc1/Sources/Sph1nX_Sources/DeskLock/DeskLock.txt#L13
-        $string7_attrib_greyware_tool_keyword = /attrib\s\-R\s\-S\s\-H\sC\:\\WINDOWS\\explorer\.exe/ nocase ascii wide
+        $string8_attrib_greyware_tool_keyword = /attrib\s\-R\s\-S\s\-H\sC\:\\WINDOWS\\explorer\.exe/ nocase ascii wide
         // Description: suspicious attrib command
         // Reference: https://github.com/petikvx/vx-ezine/blob/cfaf09bb089a08a9f33254929209fb32ebd52806/darkcodes/dc1/Sources/Sph1nX_Sources/DeskLock/DeskLock.txt#L13
-        $string8_attrib_greyware_tool_keyword = /attrib\s\-R\s\-S\s\-H\sC\:\\WINDOWS\\System32\\explorer\.exe/ nocase ascii wide
+        $string9_attrib_greyware_tool_keyword = /attrib\s\-R\s\-S\s\-H\sC\:\\WINDOWS\\System32\\explorer\.exe/ nocase ascii wide
         // Description: CleanRDP.bat script erasing RDP traces used by Dispossessor ransomware group
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string9_attrib_greyware_tool_keyword = "attrib -s -h %userprofile%" nocase ascii wide
+        $string10_attrib_greyware_tool_keyword = "attrib -s -h %userprofile%" nocase ascii wide
         // Description: CleanRDP.bat script erasing RDP traces used by Dispossessor ransomware group
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string10_attrib_greyware_tool_keyword = /attrib\s\-s\s\-h\s\%userprofile\%\\documents\\Default\.rdp/ nocase ascii wide
+        $string11_attrib_greyware_tool_keyword = /attrib\s\-s\s\-h\s\%userprofile\%\\documents\\Default\.rdp/ nocase ascii wide
         // Description: NTLM Leak via Desktop.ini
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
-        $string11_attrib_greyware_tool_keyword = /echo\s\[\.ShellClassInfo\]\s\>\sdesktop\.ini/ nocase ascii wide
+        $string12_attrib_greyware_tool_keyword = /echo\s\[\.ShellClassInfo\]\s\>\sdesktop\.ini/ nocase ascii wide
+        // Description: instruments explorer to treat the folder as ActiveX cache
+        // Reference: https://x.com/ValthekOn/status/1890160938407596168
+        $string13_attrib_greyware_tool_keyword = /echo\sCLSID\=\{88C6C381\-2E85\-11D0\-94DE\-444553540000\}\s\>\>\sdesktop\.ini/ nocase ascii wide
         // Description: NTLM Leak via Desktop.ini
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
-        $string12_attrib_greyware_tool_keyword = /echo\sIconResource\=\\\\.{0,1000}\\.{0,1000}\s\>\>\sdesktop\.ini/ nocase ascii wide
+        $string14_attrib_greyware_tool_keyword = /echo\sIconResource\=\\\\.{0,1000}\\.{0,1000}\s\>\>\sdesktop\.ini/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule rule_auditd_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'auditd' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "auditd"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: disabling auditd
+        // Reference: N/A
+        $string1_auditd_greyware_tool_keyword = "auditctl -e 0"
+        // Description: disabling auditd
+        // Reference: N/A
+        $string2_auditd_greyware_tool_keyword = "auditctl -e0"
+        // Description: disabling auditd
+        // Reference: N/A
+        $string3_auditd_greyware_tool_keyword = "systemctl disable auditd"
 
     condition:
         any of them
@@ -3764,6 +3838,25 @@ rule rule_aweray_greyware_tool_keyword
 }
 
 
+rule rule_awk_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'awk' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "awk"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: commonly used to upgrade a restricted shell
+        // Reference: N/A
+        $string1_awk_greyware_tool_keyword = /sudo\sawk\s\'BEGIN\s\{system\(\\"\/bin\/bash\\"\)\}\'/
+
+    condition:
+        any of them
+}
+
+
 rule rule_Azino_VPN_greyware_tool_keyword
 {
     meta:
@@ -3984,93 +4077,111 @@ rule rule_bash_greyware_tool_keyword
         rule_category = "greyware_tool_keyword"
 
     strings:
+        // Description: Indicator Removal on Host - clearing logs
+        // Reference: https://github.com/mthcht/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.md
+        $string1_bash_greyware_tool_keyword = " > /var/log/syslog"
+        // Description: Indicator Removal on Host - clearing logs
+        // Reference: https://github.com/mthcht/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.md
+        $string2_bash_greyware_tool_keyword = " >/var/log/syslog"
+        // Description: Indicator Removal on Host
+        // Reference: N/A
+        $string3_bash_greyware_tool_keyword = /\.bash_history\s\>\/dev\/null\s2\>\&1/ nocase ascii wide
+        // Description: Indicator Removal on Host - clearing logs with no ops
+        // Reference: https://github.com/mthcht/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.md
+        $string4_bash_greyware_tool_keyword = ": > /var/log/messages"
+        // Description: Indicator Removal on Host - clearing logs with no ops
+        // Reference: https://github.com/mthcht/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.md
+        $string5_bash_greyware_tool_keyword = ": > /var/spool/mail/"
         // Description: linux commands abused by attackers
         // Reference: N/A
-        $string1_bash_greyware_tool_keyword = /bash\s\-c\s.{0,1000}curl\s.{0,1000}\.sh\s\|\sbash/
+        $string6_bash_greyware_tool_keyword = /bash\s\-c\s.{0,1000}curl\s.{0,1000}\.sh\s\|\sbash/
         // Description: linux commands abused by attackers
         // Reference: N/A
-        $string2_bash_greyware_tool_keyword = /bash\s\-c\s.{0,1000}wget\s.{0,1000}\.sh\s\|\sbash/
+        $string7_bash_greyware_tool_keyword = /bash\s\-c\s.{0,1000}wget\s.{0,1000}\.sh\s\|\sbash/
+        // Description: reverse shell
+        // Reference: https://medium.com/@simone.kraus/black-basta-playbook-chat-leak-d5036936166d
+        $string8_bash_greyware_tool_keyword = "bash -c 'bash -i >& /dev/tcp/" nocase ascii wide
         // Description: bash reverse shell
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string3_bash_greyware_tool_keyword = /bash\s\-i\s\>\&\s\/dev\/tcp\/.{0,1000}\/.{0,1000}\s0\>\&1/
+        $string9_bash_greyware_tool_keyword = /bash\s\-i\s\>\&\s\/dev\/tcp\/.{0,1000}\/.{0,1000}\s0\>\&1/
         // Description: bash reverse shell 
         // Reference: https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
-        $string4_bash_greyware_tool_keyword = /bash\s\-i\s\>\&\s\/dev\/tcp\/.{0,1000}\/.{0,1000}\s0\>\&1/
+        $string10_bash_greyware_tool_keyword = /bash\s\-i\s\>\&\s\/dev\/tcp\/.{0,1000}\/.{0,1000}\s0\>\&1/
         // Description: Clear command history in linux which is used for defense evasion. 
         // Reference: https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1146/T1146.yaml
-        $string5_bash_greyware_tool_keyword = /cat\s\/dev\/null\s\>\s.{0,1000}bash_history/
+        $string11_bash_greyware_tool_keyword = /cat\s\/dev\/null\s\>\s.{0,1000}bash_history/
         // Description: Adversaries may attempt to clear or disable the Bash command-line history in an attempt to evade detection or forensic investigations.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_deletion_of_bash_command_line_history.toml
-        $string6_bash_greyware_tool_keyword = /echo\s.{0,1000}\s\.bash_history/
+        $string12_bash_greyware_tool_keyword = /echo\s.{0,1000}\s\.bash_history/
         // Description: Adversaries may attempt to clear or disable the Bash command-line history in an attempt to evade detection or forensic investigations.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_deletion_of_bash_command_line_history.toml
-        $string7_bash_greyware_tool_keyword = /echo\s.{0,1000}\s\/home\/.{0,1000}\/\.bash_history/
+        $string13_bash_greyware_tool_keyword = /echo\s.{0,1000}\s\/home\/.{0,1000}\/\.bash_history/
         // Description: Adversaries may attempt to clear or disable the Bash command-line history in an attempt to evade detection or forensic investigations.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_deletion_of_bash_command_line_history.toml
-        $string8_bash_greyware_tool_keyword = /echo\s.{0,1000}\s\/root\/\.bash_history/
+        $string14_bash_greyware_tool_keyword = /echo\s.{0,1000}\s\/root\/\.bash_history/
         // Description: add a passwordless user 
         // Reference: N/A
-        $string9_bash_greyware_tool_keyword = /echo\s.{0,1000}\:\:0\:0\:\:\/root\:\/bin\/bash.{0,1000}\s\>\>\/etc\/passwd/
+        $string15_bash_greyware_tool_keyword = /echo\s.{0,1000}\:\:0\:0\:\:\/root\:\/bin\/bash.{0,1000}\s\>\>\/etc\/passwd/
         // Description: Backdooring APT
         // Reference: N/A
-        $string10_bash_greyware_tool_keyword = /echo\s.{0,1000}APT\:\:Update\:\:Pre\-Invoke\s.{0,1000}nohup\sncat\s\-lvp\s.{0,1000}\s\-e\s\/bin\/bash\s.{0,1000}\s\>\s\/etc\/apt\/apt\.conf\.d\//
+        $string16_bash_greyware_tool_keyword = /echo\s.{0,1000}APT\:\:Update\:\:Pre\-Invoke\s.{0,1000}nohup\sncat\s\-lvp\s.{0,1000}\s\-e\s\/bin\/bash\s.{0,1000}\s\>\s\/etc\/apt\/apt\.conf\.d\//
         // Description: Backdooring Message of the Day
         // Reference: N/A
-        $string11_bash_greyware_tool_keyword = /echo\s.{0,1000}bash\s\-c\s.{0,1000}bash\s\-i\s\>\&\s\/dev\/tcp\/.{0,1000}\/.{0,1000}\s\>\>\s\/etc\/update\-motd\.d\/00\-header/
+        $string17_bash_greyware_tool_keyword = /echo\s.{0,1000}bash\s\-c\s.{0,1000}bash\s\-i\s\>\&\s\/dev\/tcp\/.{0,1000}\/.{0,1000}\s\>\>\s\/etc\/update\-motd\.d\/00\-header/
         // Description: bash reverse shell 
         // Reference: https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
-        $string12_bash_greyware_tool_keyword = /exec\s\/bin\/sh\s0\<\/dev\/tcp\/.{0,1000}\/.{0,1000}1\>\&0\s2\>\&0/
+        $string18_bash_greyware_tool_keyword = /exec\s\/bin\/sh\s0\<\/dev\/tcp\/.{0,1000}\/.{0,1000}1\>\&0\s2\>\&0/
         // Description: bash reverse shell 
         // Reference: https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
-        $string13_bash_greyware_tool_keyword = /exec\s5\<\>\/dev\/tcp\/.{0,1000}\/.{0,1000}.{0,1000}cat\s\<\&5\s\|\swhile\sread\sline.{0,1000}\sdo\s\$line\s2\>\&5\s\>\&5.{0,1000}\sdone/
+        $string19_bash_greyware_tool_keyword = /exec\s5\<\>\/dev\/tcp\/.{0,1000}\/.{0,1000}.{0,1000}cat\s\<\&5\s\|\swhile\sread\sline.{0,1000}\sdo\s\$line\s2\>\&5\s\>\&5.{0,1000}\sdone/
         // Description: Adversaries may attempt to clear or disable the Bash command-line history in an attempt to evade detection or forensic investigations.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_deletion_of_bash_command_line_history.toml
-        $string14_bash_greyware_tool_keyword = "export HISTFILE=/dev/null"
+        $string20_bash_greyware_tool_keyword = "export HISTFILE=/dev/null"
         // Description: Clear command history in linux which is used for defense evasion. 
         // Reference: https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1146/T1146.yaml
-        $string15_bash_greyware_tool_keyword = "export HISTFILESIZE=0"
+        $string21_bash_greyware_tool_keyword = "export HISTFILESIZE=0"
         // Description: Adversaries may attempt to clear or disable the Bash command-line history in an attempt to evade detection or forensic investigations.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_deletion_of_bash_command_line_history.toml
-        $string16_bash_greyware_tool_keyword = "export HISTFILESIZE=0"
+        $string22_bash_greyware_tool_keyword = "export HISTFILESIZE=0"
         // Description: use a space in front of your bash command and it won't be logged with the following option
         // Reference: N/A
-        $string17_bash_greyware_tool_keyword = "HISTCONTROL=ignoredups:ignorespace"
+        $string23_bash_greyware_tool_keyword = "HISTCONTROL=ignoredups:ignorespace"
         // Description: Adversaries may attempt to clear or disable the Bash command-line history in an attempt to evade detection or forensic investigations.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_deletion_of_bash_command_line_history.toml
-        $string18_bash_greyware_tool_keyword = "history -c"
+        $string24_bash_greyware_tool_keyword = "history -c"
         // Description: Clear command history in linux which is used for defense evasion. 
         // Reference: N/A
-        $string19_bash_greyware_tool_keyword = "HISTORY=/dev/null"
+        $string25_bash_greyware_tool_keyword = "HISTORY=/dev/null"
         // Description: Clear command history in linux which is used for defense evasion. 
         // Reference: https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1146/T1146.yaml
-        $string20_bash_greyware_tool_keyword = /ln\s\-sf\s\/dev\/null\s.{0,1000}bash_history/
+        $string26_bash_greyware_tool_keyword = /ln\s\-sf\s\/dev\/null\s.{0,1000}bash_history/
         // Description: Bash Keylogger
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string21_bash_greyware_tool_keyword = /PROMPT_COMMAND\=.{0,1000}history\s\-a.{0,1000}\stail\s.{0,1000}\.bash_history\s\>\s\/dev\/tcp\/127\.0\.0\.1\//
+        $string27_bash_greyware_tool_keyword = /PROMPT_COMMAND\=.{0,1000}history\s\-a.{0,1000}\stail\s.{0,1000}\.bash_history\s\>\s\/dev\/tcp\/127\.0\.0\.1\//
         // Description: Adversaries may attempt to clear or disable the Bash command-line history in an attempt to evade detection or forensic investigations.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_deletion_of_bash_command_line_history.toml
-        $string22_bash_greyware_tool_keyword = /rm\s\.bash_history/
+        $string28_bash_greyware_tool_keyword = /rm\s\.bash_history/
         // Description: Adversaries may attempt to clear or disable the Bash command-line history in an attempt to evade detection or forensic investigations.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_deletion_of_bash_command_line_history.toml
-        $string23_bash_greyware_tool_keyword = /rm\s\/home\/.{0,1000}\/\.bash_history/
+        $string29_bash_greyware_tool_keyword = /rm\s\/home\/.{0,1000}\/\.bash_history/
         // Description: Adversaries may attempt to clear or disable the Bash command-line history in an attempt to evade detection or forensic investigations.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_deletion_of_bash_command_line_history.toml
-        $string24_bash_greyware_tool_keyword = /rm\s\/root\/\.bash_history/
+        $string30_bash_greyware_tool_keyword = /rm\s\/root\/\.bash_history/
         // Description: Adversaries may attempt to clear or disable the Bash command-line history in an attempt to evade detection or forensic investigations.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_deletion_of_bash_command_line_history.toml
-        $string25_bash_greyware_tool_keyword = /set\shistory\s\+o/
+        $string31_bash_greyware_tool_keyword = /set\shistory\s\+o/
         // Description: Equation Group reverse shell method - simple bash reverse shell
         // Reference: https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
-        $string26_bash_greyware_tool_keyword = /sh\s\>\/dev\/tcp\/.{0,1000}\s\<\&1\s2\>\&1/
+        $string32_bash_greyware_tool_keyword = /sh\s\>\/dev\/tcp\/.{0,1000}\s\<\&1\s2\>\&1/
         // Description: bash reverse shell 
         // Reference: https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
-        $string27_bash_greyware_tool_keyword = /sh\s\-i\s\>\&\s\/dev\/udp\/.{0,1000}\/.{0,1000}\s0\>\&1/
+        $string33_bash_greyware_tool_keyword = /sh\s\-i\s\>\&\s\/dev\/udp\/.{0,1000}\/.{0,1000}\s0\>\&1/
         // Description: Clear command history in linux which is used for defense evasion. 
         // Reference: https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1146/T1146.yaml
-        $string28_bash_greyware_tool_keyword = /truncate\s\-s0\s.{0,1000}bash_history\'/
+        $string34_bash_greyware_tool_keyword = /truncate\s\-s0\s.{0,1000}bash_history\'/
         // Description: Adversaries may attempt to clear or disable the Bash command-line history in an attempt to evade detection or forensic investigations.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_deletion_of_bash_command_line_history.toml
-        $string29_bash_greyware_tool_keyword = "unset HISTFILE"
+        $string35_bash_greyware_tool_keyword = "unset HISTFILE"
 
     condition:
         any of them
@@ -4743,6 +4854,73 @@ rule rule_boringproxy_greyware_tool_keyword
 }
 
 
+rule rule_Box_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'Box' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "Box"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Attackers have used box to store malicious files and then share them with targets - box can also be used for data exfiltration by attackers
+        // Reference: https://app.box.com/
+        $string1_Box_greyware_tool_keyword = /\.realtime\.services\.box\.net/ nocase ascii wide
+        // Description: Attackers have used box to store malicious files and then share them with targets - box can also be used for data exfiltration by attackers
+        // Reference: https://app.box.com/
+        $string2_Box_greyware_tool_keyword = /\/BoxDrive\.msi/ nocase ascii wide
+        // Description: Attackers have used box to store malicious files and then share them with targets - box can also be used for data exfiltration by attackers
+        // Reference: https://app.box.com/
+        $string3_Box_greyware_tool_keyword = /\\\.boxcanvas\\BoxDesktop/ nocase ascii wide
+        // Description: Attackers have used box to store malicious files and then share them with targets - box can also be used for data exfiltration by attackers
+        // Reference: https://app.box.com/
+        $string4_Box_greyware_tool_keyword = /\\box\.desktop\.updateservice\.exe/ nocase ascii wide
+        // Description: Attackers have used box to store malicious files and then share them with targets - box can also be used for data exfiltration by attackers
+        // Reference: https://app.box.com/
+        $string5_Box_greyware_tool_keyword = /\\Box\.Updater\.Common\.dll/ nocase ascii wide
+        // Description: Attackers have used box to store malicious files and then share them with targets - box can also be used for data exfiltration by attackers
+        // Reference: https://app.box.com/
+        $string6_Box_greyware_tool_keyword = /\\box\\box\.exe/ nocase ascii wide
+        // Description: Attackers have used box to store malicious files and then share them with targets - box can also be used for data exfiltration by attackers
+        // Reference: https://app.box.com/
+        $string7_Box_greyware_tool_keyword = /\\Box\\ui\\BoxUI\.exe/ nocase ascii wide
+        // Description: Attackers have used box to store malicious files and then share them with targets - box can also be used for data exfiltration by attackers
+        // Reference: https://app.box.com/
+        $string8_Box_greyware_tool_keyword = /\\BoxDesktop\.boxnote\\shell\\/ nocase ascii wide
+        // Description: Attackers have used box to store malicious files and then share them with targets - box can also be used for data exfiltration by attackers
+        // Reference: https://app.box.com/
+        $string9_Box_greyware_tool_keyword = /\\BoxDrive\.msi/ nocase ascii wide
+        // Description: Attackers have used box to store malicious files and then share them with targets - box can also be used for data exfiltration by attackers
+        // Reference: https://app.box.com/
+        $string10_Box_greyware_tool_keyword = /\\Program\sFiles\\Box\\Box\\/ nocase ascii wide
+        // Description: Attackers have used box to store malicious files and then share them with targets - box can also be used for data exfiltration by attackers
+        // Reference: https://app.box.com/
+        $string11_Box_greyware_tool_keyword = /\\Root\\InventoryApplicationFile\\boxui\.exe/ nocase ascii wide
+        // Description: Attackers have used box to store malicious files and then share them with targets - box can also be used for data exfiltration by attackers
+        // Reference: https://app.box.com/
+        $string12_Box_greyware_tool_keyword = /\>Box\,\sInc\.\</ nocase ascii wide
+        // Description: Attackers have used box to store malicious files and then share them with targets - box can also be used for data exfiltration by attackers
+        // Reference: https://app.box.com/
+        $string13_Box_greyware_tool_keyword = /Box\.Desktop\.Installer\.CustomActions/ nocase ascii wide
+        // Description: Attackers have used box to store malicious files and then share them with targets - box can also be used for data exfiltration by attackers
+        // Reference: https://app.box.com/
+        $string14_Box_greyware_tool_keyword = /cdn.{0,1000}\.boxcdn\.net/ nocase ascii wide
+        // Description: Attackers have used box to store malicious files and then share them with targets - box can also be used for data exfiltration by attackers
+        // Reference: https://app.box.com/
+        $string15_Box_greyware_tool_keyword = /HKLM\\SOFTWARE\\Box\\Box/ nocase ascii wide
+        // Description: Attackers have used box to store malicious files and then share them with targets - box can also be used for data exfiltration by attackers
+        // Reference: https://app.box.com/
+        $string16_Box_greyware_tool_keyword = /sanalytics\.box\.com/ nocase ascii wide
+        // Description: Attackers have used box to store malicious files and then share them with targets - box can also be used for data exfiltration by attackers
+        // Reference: https://app.box.com/
+        $string17_Box_greyware_tool_keyword = /upload\.box\.com/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule rule_Browsec_VPN_greyware_tool_keyword
 {
     meta:
@@ -5066,24 +5244,30 @@ rule rule_cat_greyware_tool_keyword
         // Description: linux commands abused by attackers
         // Reference: N/A
         $string16_cat_greyware_tool_keyword = /cat\s\/dev\/null\s\>\s\/var\/log\/auth\.log/
+        // Description: Indicator Removal on Host - clearing logs
+        // Reference: https://github.com/mthcht/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.md
+        $string17_cat_greyware_tool_keyword = "cat /dev/null > /var/log/messages"
         // Description: linux commands abused by attackers
         // Reference: N/A
-        $string17_cat_greyware_tool_keyword = /cat\s\/dev\/null\s\>\s\~\/\.bash_history/
+        $string18_cat_greyware_tool_keyword = /cat\s\/dev\/null\s\>\s\~\/\.bash_history/
+        // Description: Indicator Removal on Host - clearing logs
+        // Reference: https://github.com/mthcht/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.md
+        $string19_cat_greyware_tool_keyword = "cat /dev/zero > /var/lol/messages"
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
-        $string18_cat_greyware_tool_keyword = "cat /etc/passwd"
+        $string20_cat_greyware_tool_keyword = "cat /etc/passwd"
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
-        $string19_cat_greyware_tool_keyword = "cat /etc/shadow"
+        $string21_cat_greyware_tool_keyword = "cat /etc/shadow"
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
-        $string20_cat_greyware_tool_keyword = "cat /etc/sudoers"
+        $string22_cat_greyware_tool_keyword = "cat /etc/sudoers"
         // Description: cat suspicious commands
         // Reference: N/A
-        $string21_cat_greyware_tool_keyword = /cat\s\/root\/\.aws\/credentials/ nocase ascii wide
+        $string23_cat_greyware_tool_keyword = /cat\s\/root\/\.aws\/credentials/ nocase ascii wide
         // Description: cat suspicious commands
         // Reference: N/A
-        $string22_cat_greyware_tool_keyword = /cat\s\/root\/\.ssh\/id_rsa/ nocase ascii wide
+        $string24_cat_greyware_tool_keyword = /cat\s\/root\/\.ssh\/id_rsa/ nocase ascii wide
 
     condition:
         any of them
@@ -5330,6 +5514,28 @@ rule rule_CIMplant_greyware_tool_keyword
         // Description: C# port of WMImplant which uses either CIM or WMI to query remote systems
         // Reference: https://github.com/RedSiege/CIMplant
         $string2_CIMplant_greyware_tool_keyword = /C\:\\Windows\\MEMORY\.DMP/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule rule_clbin_com_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'clbin.com' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "clbin.com"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: clbin.com be used for C&C purposes. The attacker will place commands on a textbin paste and have the malware fetch the commands.
+        // Reference: https://clbin.com/
+        $string1_clbin_com_greyware_tool_keyword = /\s\|\sclbin/ nocase ascii wide
+        // Description: clbin.com be used for C&C purposes. The attacker will place commands on a textbin paste and have the malware fetch the commands.
+        // Reference: https://clbin.com/
+        $string2_clbin_com_greyware_tool_keyword = /https\:\/\/clbin\.com\// nocase ascii wide
 
     condition:
         any of them
@@ -5817,12 +6023,24 @@ rule rule_cp_greyware_tool_keyword
         rule_category = "greyware_tool_keyword"
 
     strings:
+        // Description: copies the Bash binary to the /tmp/ directory
+        // Reference: N/A
+        $string1_cp_greyware_tool_keyword = "cp /bin/bash /tmp/"
+        // Description: copies the Bash binary to the /tmp/ directory
+        // Reference: N/A
+        $string2_cp_greyware_tool_keyword = "cp /bin/sh /tmp/"
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
-        $string1_cp_greyware_tool_keyword = "cp /etc/passwd"
+        $string3_cp_greyware_tool_keyword = "cp /etc/passwd"
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
-        $string2_cp_greyware_tool_keyword = "cp /etc/shadow"
+        $string4_cp_greyware_tool_keyword = "cp /etc/shadow"
+        // Description: copies the Bash binary to the /tmp/ directory
+        // Reference: N/A
+        $string5_cp_greyware_tool_keyword = "cp -i /bin/bash /tmp/"
+        // Description: copies the Bash binary to the /tmp/ directory
+        // Reference: N/A
+        $string6_cp_greyware_tool_keyword = "cp -i /bin/sh /tmp/"
 
     condition:
         any of them
@@ -7951,6 +8169,9 @@ rule rule_dd_greyware_tool_keyword
         // Description: Detects overwriting (effectively wiping/deleting) the file
         // Reference: https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1485/T1485.yaml
         $string2_dd_greyware_tool_keyword = "dd if=/dev/zero" nocase ascii wide
+        // Description: Indicator Removal on Host - clearing logs
+        // Reference: https://github.com/mthcht/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.md
+        $string3_dd_greyware_tool_keyword = /sudo\sdd\sif\=\/dev\/zero\sbs\=1000\scount\=5\sof\=.{0,1000}log/
 
     condition:
         any of them
@@ -8038,106 +8259,130 @@ rule rule_dev_tunnels_greyware_tool_keyword
         $string1_dev_tunnels_greyware_tool_keyword = /\shost\s\-p\s.{0,1000}\s\-\-allow\-anonymous\s\-\-protocol\shttps/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string2_dev_tunnels_greyware_tool_keyword = /\.asse\.devtunnels\.ms/ nocase ascii wide
+        $string2_dev_tunnels_greyware_tool_keyword = " host -p 443 -allow-anonymous" nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string3_dev_tunnels_greyware_tool_keyword = /\.exe\shost\s\-p\s.{0,1000}\s\-\sallow\-anonymous/ nocase ascii wide
+        $string3_dev_tunnels_greyware_tool_keyword = /\.asse\.devtunnels\.ms/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string4_dev_tunnels_greyware_tool_keyword = /\.exe\sport\screate\s\-p\s/ nocase ascii wide
+        $string4_dev_tunnels_greyware_tool_keyword = /\.exe\shost\s\-p\s.{0,1000}\s\-\sallow\-anonymous/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string5_dev_tunnels_greyware_tool_keyword = /\-443\.devtunnels\.ms/ nocase ascii wide
+        $string5_dev_tunnels_greyware_tool_keyword = /\.exe\sport\screate\s\-p\s/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string6_dev_tunnels_greyware_tool_keyword = /asse\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
+        $string6_dev_tunnels_greyware_tool_keyword = /\\devtunnel\.dll/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string7_dev_tunnels_greyware_tool_keyword = /auc1\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
+        $string7_dev_tunnels_greyware_tool_keyword = /\\tunnel\-service\.log/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string8_dev_tunnels_greyware_tool_keyword = /aue\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
+        $string8_dev_tunnels_greyware_tool_keyword = /\>devtunnel\.dll\</ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string9_dev_tunnels_greyware_tool_keyword = /brs\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
+        $string9_dev_tunnels_greyware_tool_keyword = /\-443\.devtunnels\.ms/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string10_dev_tunnels_greyware_tool_keyword = "devtunnel create " nocase ascii wide
+        $string10_dev_tunnels_greyware_tool_keyword = /asse\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string11_dev_tunnels_greyware_tool_keyword = "devtunnel host -p " nocase ascii wide
+        $string11_dev_tunnels_greyware_tool_keyword = /auc1\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string12_dev_tunnels_greyware_tool_keyword = /devtunnel.{0,1000}\suser\slogin\s\-/ nocase ascii wide
+        $string12_dev_tunnels_greyware_tool_keyword = /aue\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string13_dev_tunnels_greyware_tool_keyword = /devtunnel\.exe\s/ nocase ascii wide
+        $string13_dev_tunnels_greyware_tool_keyword = /brs\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string14_dev_tunnels_greyware_tool_keyword = /eun1\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
+        $string14_dev_tunnels_greyware_tool_keyword = "devtunnel create " nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string15_dev_tunnels_greyware_tool_keyword = /euw\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
+        $string15_dev_tunnels_greyware_tool_keyword = "devtunnel host -p " nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string16_dev_tunnels_greyware_tool_keyword = /global\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
+        $string16_dev_tunnels_greyware_tool_keyword = "devtunnel user login" nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string17_dev_tunnels_greyware_tool_keyword = /https\:\/\/.{0,1000}\..{0,1000}\.devtunnels\.ms/ nocase ascii wide
+        $string17_dev_tunnels_greyware_tool_keyword = /devtunnel.{0,1000}\suser\slogin\s\-/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string18_dev_tunnels_greyware_tool_keyword = /https\:\/\/.{0,1000}\.brs\.devtunnels\.ms\// nocase ascii wide
+        $string18_dev_tunnels_greyware_tool_keyword = /devtunnel\.exe\s/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string19_dev_tunnels_greyware_tool_keyword = /https\:\/\/.{0,1000}\.euw\.devtunnels\.ms/ nocase ascii wide
+        $string19_dev_tunnels_greyware_tool_keyword = /devtunnel\.exe.{0,1000}host\s\-p\s/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string20_dev_tunnels_greyware_tool_keyword = /https\:\/\/.{0,1000}\.use\.devtunnels\.ms/ nocase ascii wide
+        $string20_dev_tunnels_greyware_tool_keyword = /eun1\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string21_dev_tunnels_greyware_tool_keyword = /https\:\/\/aka\.ms\/DevTunnelCliInstall/ nocase ascii wide
+        $string21_dev_tunnels_greyware_tool_keyword = /euw\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string22_dev_tunnels_greyware_tool_keyword = /inc1\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
+        $string22_dev_tunnels_greyware_tool_keyword = /global\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string23_dev_tunnels_greyware_tool_keyword = /Microsoft\.DevTunnels\.Connections\.dll/ nocase ascii wide
+        $string23_dev_tunnels_greyware_tool_keyword = /https\:\/\/.{0,1000}\..{0,1000}\.devtunnels\.ms/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string24_dev_tunnels_greyware_tool_keyword = /Microsoft\.DevTunnels\.Contracts\.dll/ nocase ascii wide
+        $string24_dev_tunnels_greyware_tool_keyword = /https\:\/\/.{0,1000}\.brs\.devtunnels\.ms\// nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string25_dev_tunnels_greyware_tool_keyword = /Microsoft\.DevTunnels\.Management\.dll/ nocase ascii wide
+        $string25_dev_tunnels_greyware_tool_keyword = /https\:\/\/.{0,1000}\.euw\.devtunnels\.ms/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string26_dev_tunnels_greyware_tool_keyword = /Microsoft\.DevTunnels\.Ssh\.dll/ nocase ascii wide
+        $string26_dev_tunnels_greyware_tool_keyword = /https\:\/\/.{0,1000}\.use\.devtunnels\.ms/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string27_dev_tunnels_greyware_tool_keyword = /Microsoft\.DevTunnels\.Ssh\.Tcp\.dll/ nocase ascii wide
+        $string27_dev_tunnels_greyware_tool_keyword = /https\:\/\/aka\.ms\/DevTunnelCliInstall/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string28_dev_tunnels_greyware_tool_keyword = /ssh\s\@ssh\..{0,1000}\.devtunnels\.ms/ nocase ascii wide
+        $string28_dev_tunnels_greyware_tool_keyword = /https\:\/\/aka\.ms\/TunnelsCliDownload\// nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string29_dev_tunnels_greyware_tool_keyword = /tunnels\-prod\-rel\-tm\.trafficmanager\.net/ nocase ascii wide
+        $string29_dev_tunnels_greyware_tool_keyword = /inc1\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string30_dev_tunnels_greyware_tool_keyword = /uks1\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
+        $string30_dev_tunnels_greyware_tool_keyword = /Microsoft\.DevTunnels\.Connections\.dll/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string31_dev_tunnels_greyware_tool_keyword = /use\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
+        $string31_dev_tunnels_greyware_tool_keyword = /Microsoft\.DevTunnels\.Contracts\.dll/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string32_dev_tunnels_greyware_tool_keyword = /use2\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
+        $string32_dev_tunnels_greyware_tool_keyword = /Microsoft\.DevTunnels\.Management\.dll/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string33_dev_tunnels_greyware_tool_keyword = /usw2\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
+        $string33_dev_tunnels_greyware_tool_keyword = /Microsoft\.DevTunnels\.Ssh\.dll/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string34_dev_tunnels_greyware_tool_keyword = /usw3\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
+        $string34_dev_tunnels_greyware_tool_keyword = /Microsoft\.DevTunnels\.Ssh\.Tcp\.dll/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string35_dev_tunnels_greyware_tool_keyword = /wss\:\/\/.{0,1000}\.tunnels\.api\.visualstudio\.com\/api\/v1\/Connect\// nocase ascii wide
+        $string35_dev_tunnels_greyware_tool_keyword = /ssh\s\@ssh\..{0,1000}\.devtunnels\.ms/ nocase ascii wide
+        // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
+        // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
+        $string36_dev_tunnels_greyware_tool_keyword = /tunnels\-prod\-rel\-tm\.trafficmanager\.net/ nocase ascii wide
+        // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
+        // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
+        $string37_dev_tunnels_greyware_tool_keyword = /tunnels\-prod\-rel\-tm\.trafficmanager\.net/ nocase ascii wide
+        // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
+        // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
+        $string38_dev_tunnels_greyware_tool_keyword = /uks1\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
+        // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
+        // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
+        $string39_dev_tunnels_greyware_tool_keyword = /use\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
+        // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
+        // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
+        $string40_dev_tunnels_greyware_tool_keyword = /use2\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
+        // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
+        // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
+        $string41_dev_tunnels_greyware_tool_keyword = /usw2\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
+        // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
+        // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
+        $string42_dev_tunnels_greyware_tool_keyword = /usw3\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
+        // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
+        // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
+        $string43_dev_tunnels_greyware_tool_keyword = /wss\:\/\/.{0,1000}\.tunnels\.api\.visualstudio\.com\/api\/v1\/Connect\// nocase ascii wide
 
     condition:
         any of them
@@ -8902,12 +9147,18 @@ rule rule_easyupload_io_greyware_tool_keyword
         rule_category = "greyware_tool_keyword"
 
     strings:
+        // Description: file hosting platform abused by attackers to host malicious - url used when downloading a file on the site
+        // Reference: N/A
+        $string1_easyupload_io_greyware_tool_keyword = /https\:\/\/easyupload\.io\// nocase ascii wide
         // Description: hosting platform abused by attackers
         // Reference: N/A
-        $string1_easyupload_io_greyware_tool_keyword = /https\:\/\/easyupload\.io\/action\.php/ nocase ascii wide
+        $string2_easyupload_io_greyware_tool_keyword = /https\:\/\/easyupload\.io\/action\.php/ nocase ascii wide
         // Description: hosting platform abused by attackers
         // Reference: N/A
-        $string2_easyupload_io_greyware_tool_keyword = /https\:\/\/easyupload\.io\/cdn\-cgi\/rum/ nocase ascii wide
+        $string3_easyupload_io_greyware_tool_keyword = /https\:\/\/easyupload\.io\/cdn\-cgi\/rum/ nocase ascii wide
+        // Description: file hosting platform abused by attackers to host malicious - url used when uploading a file on the site
+        // Reference: N/A
+        $string4_easyupload_io_greyware_tool_keyword = /upload4\.easyupload\.io/ nocase ascii wide
 
     condition:
         any of them
@@ -9757,6 +10008,28 @@ rule rule_file_io_greyware_tool_keyword
 }
 
 
+rule rule_filebin_net_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'filebin.net' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "filebin.net"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: file hosting platform abused by attackers to host malicious file - raw access and api available
+        // Reference: https://filebin.net
+        $string1_filebin_net_greyware_tool_keyword = /https\:\/\/filebin\.net\// nocase ascii wide
+        // Description: file hosting platform abused by attackers to host malicious file - raw access and api available
+        // Reference: https://filebin.net
+        $string2_filebin_net_greyware_tool_keyword = /https\:\/\/s3\.filebin\.net\/filebin\// nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule rule_filetransfer_io_greyware_tool_keyword
 {
     meta:
@@ -9847,111 +10120,135 @@ rule rule_find_greyware_tool_keyword
         // Description: truncate every file under /var/log to size 0 - no log content = no forensic.
         // Reference: N/A
         $string1_find_greyware_tool_keyword = /\s\/var\/log\s\-type\sf\s\-exec\s.{0,1000}\/tr.{0,1000}\s\-s\s0\s\{\}\s\\/
+        // Description: Look for files with the SGID (Set Group ID) bit set
+        // Reference: N/A
+        $string2_find_greyware_tool_keyword = " -perm -4000 -o -perm -2000"
         // Description: It can be used to break out from restricted environments by spawning an interactive system shell.
         // Reference: N/A
-        $string2_find_greyware_tool_keyword = /find\s\.\s\-exec\s\/bin\/sh\s\\\;\s\-quit/
+        $string3_find_greyware_tool_keyword = /find\s\.\s\-exec\s\/bin\/sh\s\\\;\s\-quit/
         // Description: find commands used by the wso php webshell
         // Reference: https://github.com/mIcHyAmRaNe/wso-webshell
-        $string3_find_greyware_tool_keyword = /find\s\.\s\-perm\s\-2\s\-ls/
+        $string4_find_greyware_tool_keyword = /find\s\.\s\-perm\s\-2\s\-ls/
         // Description: find commands used by the wso php webshell
         // Reference: https://github.com/mIcHyAmRaNe/wso-webshell
-        $string4_find_greyware_tool_keyword = /find\s\.\s\-type\sf\s\-name\s\.bash_history/
+        $string5_find_greyware_tool_keyword = /find\s\.\s\-type\sf\s\-name\s\.bash_history/
         // Description: find commands used by the wso php webshell
         // Reference: https://github.com/mIcHyAmRaNe/wso-webshell
-        $string5_find_greyware_tool_keyword = /find\s\.\s\-type\sf\s\-name\s\.fetchmailrc/
+        $string6_find_greyware_tool_keyword = /find\s\.\s\-type\sf\s\-name\s\.fetchmailrc/
         // Description: find commands used by the wso php webshell
         // Reference: https://github.com/mIcHyAmRaNe/wso-webshell
-        $string6_find_greyware_tool_keyword = /find\s\.\s\-type\sf\s\-name\s\.htpasswd/
+        $string7_find_greyware_tool_keyword = /find\s\.\s\-type\sf\s\-name\s\.htpasswd/
         // Description: find commands used by the wso php webshell
         // Reference: https://github.com/mIcHyAmRaNe/wso-webshell
-        $string7_find_greyware_tool_keyword = /find\s\.\s\-type\sf\s\-name\sservice\.pwd/
+        $string8_find_greyware_tool_keyword = /find\s\.\s\-type\sf\s\-name\sservice\.pwd/
         // Description: find commands used by the wso php webshell
         // Reference: https://github.com/mIcHyAmRaNe/wso-webshell
-        $string8_find_greyware_tool_keyword = /find\s\.\s\-type\sf\s\-perm\s\-02000\s\-ls/
+        $string9_find_greyware_tool_keyword = /find\s\.\s\-type\sf\s\-perm\s\-02000\s\-ls/
         // Description: find commands used by the wso php webshell
         // Reference: https://github.com/mIcHyAmRaNe/wso-webshell
-        $string9_find_greyware_tool_keyword = /find\s\.\s\-type\sf\s\-perm\s\-04000\s\-ls/
+        $string10_find_greyware_tool_keyword = /find\s\.\s\-type\sf\s\-perm\s\-04000\s\-ls/
         // Description: Find sensitive files
         // Reference: N/A
-        $string10_find_greyware_tool_keyword = /find\s\/\s\-name\sauthorized_keys\s.{0,1000}\>\s\/dev\/null/
+        $string11_find_greyware_tool_keyword = /find\s\/\s\-name\sauthorized_keys\s.{0,1000}\>\s\/dev\/null/
+        // Description: Look for files with the SGID (Set Group ID) bit set
+        // Reference: N/A
+        $string12_find_greyware_tool_keyword = "find / -name ftp"
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
-        $string11_find_greyware_tool_keyword = "find / -name id_dsa 2>"
+        $string13_find_greyware_tool_keyword = "find / -name id_dsa 2>"
         // Description: Find sensitive files
         // Reference: N/A
-        $string12_find_greyware_tool_keyword = /find\s\/\s\-name\sid_rsa\s.{0,1000}\>\s\/dev\/null/
+        $string14_find_greyware_tool_keyword = /find\s\/\s\-name\sid_rsa\s.{0,1000}\>\s\/dev\/null/
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
-        $string13_find_greyware_tool_keyword = "find / -name id_rsa 2>"
+        $string15_find_greyware_tool_keyword = "find / -name id_rsa 2>"
+        // Description: Look for files with the SGID (Set Group ID) bit set
+        // Reference: N/A
+        $string16_find_greyware_tool_keyword = "find / -name netcat"
+        // Description: Look for files with the SGID (Set Group ID) bit set
+        // Reference: N/A
+        $string17_find_greyware_tool_keyword = /find\s\/\s\-name\stftp.{0,1000}\s/
         // Description: Find SGID enabled files
         // Reference: N/A
-        $string14_find_greyware_tool_keyword = "find / -perm /2000 -ls 2>/dev/null"
+        $string18_find_greyware_tool_keyword = "find / -perm /2000 -ls 2>/dev/null"
         // Description: Find SUID enabled files
         // Reference: N/A
-        $string15_find_greyware_tool_keyword = /find\s\/\s\-perm\s\+4000\s\-type\sf\s2\>\/dev\/null/
+        $string19_find_greyware_tool_keyword = /find\s\/\s\-perm\s\+4000\s\-type\sf\s2\>\/dev\/null/
         // Description: Find SGID enabled files
         // Reference: N/A
-        $string16_find_greyware_tool_keyword = /find\s\/\s\-perm\s\+8000\s\-ls\s2\>\/dev\/null/
+        $string20_find_greyware_tool_keyword = /find\s\/\s\-perm\s\+8000\s\-ls\s2\>\/dev\/null/
+        // Description: searches for directories that have the sticky bit set
+        // Reference: N/A
+        $string21_find_greyware_tool_keyword = "find / -perm -1000 -type d 2>/dev/null"
         // Description: find commands used by the wso php webshell
         // Reference: https://github.com/mIcHyAmRaNe/wso-webshell
-        $string17_find_greyware_tool_keyword = "find / -perm -2 -ls"
+        $string22_find_greyware_tool_keyword = "find / -perm -2 -ls"
         // Description: Detects suspicious shell commands indicating the information gathering phase as preparation for the Privilege Escalation.# sticky bits
         // Reference: https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/
-        $string18_find_greyware_tool_keyword = "find / -perm -2000"
+        $string23_find_greyware_tool_keyword = "find / -perm -2000"
         // Description: Detects suspicious shell commands indicating the information gathering phase as preparation for the Privilege Escalation.# sticky bits
         // Reference: https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/
-        $string19_find_greyware_tool_keyword = "find / -perm -4000"
+        $string24_find_greyware_tool_keyword = "find / -perm -4000"
         // Description: Find SUID enabled files
         // Reference: N/A
-        $string20_find_greyware_tool_keyword = "find / -perm -4000 -type f "
+        $string25_find_greyware_tool_keyword = "find / -perm -4000 -type f "
         // Description: Detects suspicious shell commands indicating the information gathering phase as preparation for the Privilege Escalation. # sticky bits
         // Reference: https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/
-        $string21_find_greyware_tool_keyword = "find / -perm -g=s"
+        $string26_find_greyware_tool_keyword = "find / -perm -g=s"
+        // Description: Look for files with the SGID (Set Group ID) bit set
+        // Reference: N/A
+        $string27_find_greyware_tool_keyword = "find / -perm -g=s -o -perm -u=s -type f 2>/dev/null"
+        // Description: Look for files with the SGID (Set Group ID) bit set
+        // Reference: N/A
+        $string28_find_greyware_tool_keyword = "find / -perm -g=s -type f 2>/dev/null"
         // Description: Detects suspicious shell commands indicating the information gathering phase as preparation for the Privilege Escalation. sticky bits
         // Reference: https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/
-        $string22_find_greyware_tool_keyword = "find / -perm -u=s"
+        $string29_find_greyware_tool_keyword = "find / -perm -u=s"
         // Description: Find SUID enabled files
         // Reference: N/A
-        $string23_find_greyware_tool_keyword = "find / -perm -u=s -type f 2>/dev/null"
+        $string30_find_greyware_tool_keyword = "find / -perm -u=s -type f 2>/dev/null"
+        // Description: Look for files with the SGID (Set Group ID) bit set
+        // Reference: N/A
+        $string31_find_greyware_tool_keyword = "find / -perm -u=s -type f 2>/dev/null"
         // Description: Find SUID enabled files
         // Reference: N/A
-        $string24_find_greyware_tool_keyword = /find\s\/\s\-perm\s\-u\=s\s\-type\sf\s\-group\s.{0,1000}\/dev\/null/
+        $string32_find_greyware_tool_keyword = /find\s\/\s\-perm\s\-u\=s\s\-type\sf\s\-group\s.{0,1000}\/dev\/null/
         // Description: find commands used by the wso php webshell
         // Reference: https://github.com/mIcHyAmRaNe/wso-webshell
-        $string25_find_greyware_tool_keyword = /find\s\/\s\-type\sf\s\-name\s\.bash_history/
+        $string33_find_greyware_tool_keyword = /find\s\/\s\-type\sf\s\-name\s\.bash_history/
         // Description: find commands used by the wso php webshell
         // Reference: https://github.com/mIcHyAmRaNe/wso-webshell
-        $string26_find_greyware_tool_keyword = /find\s\/\s\-type\sf\s\-name\s\.fetchmailrc/
+        $string34_find_greyware_tool_keyword = /find\s\/\s\-type\sf\s\-name\s\.fetchmailrc/
         // Description: find commands used by the wso php webshell
         // Reference: https://github.com/mIcHyAmRaNe/wso-webshell
-        $string27_find_greyware_tool_keyword = /find\s\/\s\-type\sf\s\-name\s\.htpasswd/
+        $string35_find_greyware_tool_keyword = /find\s\/\s\-type\sf\s\-name\s\.htpasswd/
         // Description: find commands used by the wso php webshell
         // Reference: https://github.com/mIcHyAmRaNe/wso-webshell
-        $string28_find_greyware_tool_keyword = /find\s\/\s\-type\sf\s\-name\sconfig\.inc\.php/
+        $string36_find_greyware_tool_keyword = /find\s\/\s\-type\sf\s\-name\sconfig\.inc\.php/
         // Description: find commands used by the wso php webshell
         // Reference: https://github.com/mIcHyAmRaNe/wso-webshell
-        $string29_find_greyware_tool_keyword = /find\s\/\s\-type\sf\s\-name\sservice\.pwd/
+        $string37_find_greyware_tool_keyword = /find\s\/\s\-type\sf\s\-name\sservice\.pwd/
         // Description: find commands used by the wso php webshell
         // Reference: https://github.com/mIcHyAmRaNe/wso-webshell
-        $string30_find_greyware_tool_keyword = "find / -type f -perm -02000 -ls"
+        $string38_find_greyware_tool_keyword = "find / -type f -perm -02000 -ls"
         // Description: find commands used by the wso php webshell
         // Reference: https://github.com/mIcHyAmRaNe/wso-webshell
-        $string31_find_greyware_tool_keyword = "find / -type f -perm -04000 -ls"
+        $string39_find_greyware_tool_keyword = "find / -type f -perm -04000 -ls"
         // Description: Find SUID enabled files
         // Reference: N/A
-        $string32_find_greyware_tool_keyword = "find / -uid 0 -perm -4000 -type f "
+        $string40_find_greyware_tool_keyword = "find / -uid 0 -perm -4000 -type f "
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
-        $string33_find_greyware_tool_keyword = "find / -user root -perm -6000 -type f 2>"
+        $string41_find_greyware_tool_keyword = "find / -user root -perm -6000 -type f 2>"
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
-        $string34_find_greyware_tool_keyword = /find\s\/.{0,1000}\s\-perm\s\-04000\s\-o\s\-perm\s\-02000/
+        $string42_find_greyware_tool_keyword = /find\s\/.{0,1000}\s\-perm\s\-04000\s\-o\s\-perm\s\-02000/
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
-        $string35_find_greyware_tool_keyword = /find\s\/.{0,1000}\s\-perm\s\-u\=s\s\-type\sf\s2\>/
+        $string43_find_greyware_tool_keyword = /find\s\/.{0,1000}\s\-perm\s\-u\=s\s\-type\sf\s2\>/
         // Description: truncate every file under /var/log to size 0 - no log content = no forensic.
         // Reference: N/A
-        $string36_find_greyware_tool_keyword = /find\s\/var\/log\s\-type\sf\s\-exec\struncate\s\-s\s0\s\{\}\s\\/
+        $string44_find_greyware_tool_keyword = /find\s\/var\/log\s\-type\sf\s\-exec\struncate\s\-s\s0\s\{\}\s\\/
 
     condition:
         any of them
@@ -13057,252 +13354,255 @@ rule rule_github_greyware_tool_keyword
         // Description: Github executables download initiated - abused by malwares to retrieve payloads
         // Reference: https://github.com/
         $string106_github_greyware_tool_keyword = /codeload\.github\.com\// nocase ascii wide
+        // Description: access to a GitHub Codespace environment - Github Codespaces have a public port forwarding option allowing you to make your server available for the public.
+        // Reference: https://detect.fyi/how-threat-actors-use-github-bd991c11ed37
+        $string107_github_greyware_tool_keyword = /https\:\/\/.{0,1000}\.app\.github\.dev\// nocase ascii wide
         // Description: Github executables download initiated - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string107_github_greyware_tool_keyword = /objects\.githubusercontent\.com\/github\-production\-release\-asset\-/ nocase ascii wide
+        $string108_github_greyware_tool_keyword = /objects\.githubusercontent\.com\/github\-production\-release\-asset\-/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string108_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.7z/ nocase ascii wide
+        $string109_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.7z/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string109_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.apk/ nocase ascii wide
+        $string110_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.apk/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string110_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.app/ nocase ascii wide
+        $string111_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.app/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string111_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.as/ nocase ascii wide
+        $string112_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.as/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string112_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.asc/ nocase ascii wide
+        $string113_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.asc/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string113_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.asp/ nocase ascii wide
+        $string114_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.asp/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string114_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.bash/
+        $string115_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.bash/
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string115_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.bat/ nocase ascii wide
+        $string116_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.bat/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string116_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.beacon/ nocase ascii wide
+        $string117_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.beacon/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string117_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.bin/ nocase ascii wide
+        $string118_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.bin/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string118_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.bpl/ nocase ascii wide
+        $string119_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.bpl/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string119_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.c/ nocase ascii wide
+        $string120_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.c/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string120_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.cer/ nocase ascii wide
+        $string121_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.cer/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string121_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.cmd/ nocase ascii wide
+        $string122_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.cmd/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string122_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.com/ nocase ascii wide
+        $string123_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.com/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string123_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.cpp/ nocase ascii wide
+        $string124_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.cpp/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string124_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.crt/ nocase ascii wide
+        $string125_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.crt/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string125_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.cs/ nocase ascii wide
+        $string126_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.cs/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string126_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.csh/ nocase ascii wide
+        $string127_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.csh/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string127_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.dat/ nocase ascii wide
+        $string128_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.dat/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string128_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.dll/ nocase ascii wide
+        $string129_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.dll/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string129_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.docm/ nocase ascii wide
+        $string130_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.docm/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string130_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.dos/ nocase ascii wide
+        $string131_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.dos/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string131_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.exe/ nocase ascii wide
+        $string132_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.exe/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string132_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.go/ nocase ascii wide
+        $string133_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.go/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string133_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.gz/ nocase ascii wide
+        $string134_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.gz/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string134_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.hta/ nocase ascii wide
+        $string135_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.hta/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string135_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.iso/ nocase ascii wide
+        $string136_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.iso/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string136_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.jar/ nocase ascii wide
+        $string137_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.jar/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string137_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.js/ nocase ascii wide
+        $string138_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.js/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string138_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.lnk/ nocase ascii wide
+        $string139_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.lnk/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string139_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.log/ nocase ascii wide
+        $string140_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.log/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string140_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.mac/ nocase ascii wide
+        $string141_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.mac/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string141_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.mam/ nocase ascii wide
+        $string142_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.mam/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string142_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.msi/ nocase ascii wide
+        $string143_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.msi/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string143_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.msp/ nocase ascii wide
+        $string144_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.msp/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string144_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.nexe/ nocase ascii wide
+        $string145_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.nexe/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string145_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.nim/ nocase ascii wide
+        $string146_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.nim/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string146_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.otm/ nocase ascii wide
+        $string147_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.otm/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string147_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.out/ nocase ascii wide
+        $string148_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.out/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string148_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.ova/ nocase ascii wide
+        $string149_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.ova/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string149_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.pem/ nocase ascii wide
+        $string150_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.pem/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string150_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.pfx/ nocase ascii wide
+        $string151_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.pfx/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string151_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.pl/ nocase ascii wide
+        $string152_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.pl/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string152_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.plx/ nocase ascii wide
+        $string153_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.plx/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string153_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.pm/ nocase ascii wide
+        $string154_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.pm/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string154_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.ppk/ nocase ascii wide
+        $string155_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.ppk/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string155_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.ps1/ nocase ascii wide
+        $string156_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.ps1/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string156_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.psm1/ nocase ascii wide
+        $string157_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.psm1/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string157_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.pub/ nocase ascii wide
+        $string158_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.pub/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string158_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.py/ nocase ascii wide
+        $string159_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.py/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string159_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.pyc/ nocase ascii wide
+        $string160_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.pyc/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string160_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.pyo/ nocase ascii wide
+        $string161_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.pyo/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string161_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.rar/ nocase ascii wide
+        $string162_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.rar/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string162_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.raw/ nocase ascii wide
+        $string163_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.raw/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string163_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.reg/ nocase ascii wide
+        $string164_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.reg/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string164_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.rgs/ nocase ascii wide
+        $string165_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.rgs/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string165_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.RGS/ nocase ascii wide
+        $string166_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.RGS/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string166_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.run/ nocase ascii wide
+        $string167_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.run/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string167_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.scpt/ nocase ascii wide
+        $string168_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.scpt/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string168_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.script/ nocase ascii wide
+        $string169_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.script/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string169_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.sct/ nocase ascii wide
+        $string170_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.sct/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string170_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.sh/ nocase ascii wide
+        $string171_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.sh/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string171_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.ssh/ nocase ascii wide
+        $string172_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.ssh/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string172_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.sys/ nocase ascii wide
+        $string173_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.sys/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string173_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.teamserver/ nocase ascii wide
+        $string174_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.teamserver/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string174_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.temp/ nocase ascii wide
+        $string175_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.temp/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string175_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.tgz/ nocase ascii wide
+        $string176_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.tgz/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string176_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.tmp/ nocase ascii wide
+        $string177_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.tmp/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string177_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.vb/ nocase ascii wide
+        $string178_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.vb/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string178_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.vbs/ nocase ascii wide
+        $string179_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.vbs/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string179_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.vbscript/ nocase ascii wide
+        $string180_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.vbscript/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string180_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.ws/ nocase ascii wide
+        $string181_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.ws/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string181_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.wsf/ nocase ascii wide
+        $string182_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.wsf/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string182_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.wsh/ nocase ascii wide
+        $string183_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.wsh/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string183_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.X86/ nocase ascii wide
+        $string184_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.X86/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string184_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.X86_64/ nocase ascii wide
+        $string185_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.X86_64/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string185_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.xlam/ nocase ascii wide
+        $string186_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.xlam/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string186_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.xlm/ nocase ascii wide
+        $string187_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.xlm/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string187_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.xlsm/ nocase ascii wide
+        $string188_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.xlsm/ nocase ascii wide
         // Description: Github raw access content - abused by malwares to retrieve payloads
         // Reference: https://github.com/
-        $string188_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.zip/ nocase ascii wide
+        $string189_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.zip/ nocase ascii wide
 
     condition:
         any of them
@@ -14797,697 +15097,6 @@ rule rule_grep_greyware_tool_keyword
 }
 
 
-rule rule_gsocket_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'gsocket' taken from the ThreatHunting-Keywords github project"
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "gsocket"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string1_gsocket_greyware_tool_keyword = " GS_STTY_INIT_HACK" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string2_gsocket_greyware_tool_keyword = /\sgsocket\-.{0,1000}\.tar\.gz/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string3_gsocket_greyware_tool_keyword = /\sgsocket_.{0,1000}_all\.deb/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string4_gsocket_greyware_tool_keyword = /\snc\s.{0,1000}\.gsocket/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string5_gsocket_greyware_tool_keyword = " nc gsocket 31337" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string6_gsocket_greyware_tool_keyword = " --remote gsocket" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string7_gsocket_greyware_tool_keyword = " --rm -it --name gsocket" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string8_gsocket_greyware_tool_keyword = /\sssh\s.{0,1000}\@gsocket/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string9_gsocket_greyware_tool_keyword = " start gs-sshd" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string10_gsocket_greyware_tool_keyword = " status gs-sshd" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string11_gsocket_greyware_tool_keyword = "/bin/gs-netcat"
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string12_gsocket_greyware_tool_keyword = /\/etc\/gsocket\.conf/
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string13_gsocket_greyware_tool_keyword = /\/gsocket\-.{0,1000}\.tar\.gz/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string14_gsocket_greyware_tool_keyword = /\/gsocket\.git/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string15_gsocket_greyware_tool_keyword = "/gsocket/releases/latest" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string16_gsocket_greyware_tool_keyword = /\/gsocket_.{0,1000}_all\.deb/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string17_gsocket_greyware_tool_keyword = /\/gsocket_.{0,1000}_x86_64\.deb/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string18_gsocket_greyware_tool_keyword = /\/gsocket_.{0,1000}aarch64\.deb/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string19_gsocket_greyware_tool_keyword = /\/gsocket_.{0,1000}arm\.deb/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string20_gsocket_greyware_tool_keyword = /\/gsocket_.{0,1000}armv6\.deb/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string21_gsocket_greyware_tool_keyword = /\/gsocket_.{0,1000}armv7l\.deb/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string22_gsocket_greyware_tool_keyword = /\/gsocket_.{0,1000}i686\.deb/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string23_gsocket_greyware_tool_keyword = /\/gsocket_.{0,1000}mips32\.deb/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string24_gsocket_greyware_tool_keyword = /\/gsocket_.{0,1000}mips64\.deb/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string25_gsocket_greyware_tool_keyword = /\/gsocket_.{0,1000}mipsel\.deb/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string26_gsocket_greyware_tool_keyword = /\/gsocket_dso\.so\./ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string27_gsocket_greyware_tool_keyword = /\/gsocket_latest_all\.deb/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string28_gsocket_greyware_tool_keyword = "/gsocket-build" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string29_gsocket_greyware_tool_keyword = "/gsocket-deb" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string30_gsocket_greyware_tool_keyword = "/gsocket-pkg/" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string31_gsocket_greyware_tool_keyword = "/gsocket-src" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string32_gsocket_greyware_tool_keyword = "/gsocket-tor" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string33_gsocket_greyware_tool_keyword = /\/gs\-portforward\.service/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string34_gsocket_greyware_tool_keyword = /\/gs\-root\-shell\.service/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string35_gsocket_greyware_tool_keyword = /\/lib\/gsocket_.{0,1000}\.so/
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string36_gsocket_greyware_tool_keyword = "/raw/main/gsocket/" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string37_gsocket_greyware_tool_keyword = /\/root\/\.gs_with_tor/
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string38_gsocket_greyware_tool_keyword = "/share/gsocket/"
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string39_gsocket_greyware_tool_keyword = "/tools/gs-pipe "
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string40_gsocket_greyware_tool_keyword = "/usr/bin/gs-mount"
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string41_gsocket_greyware_tool_keyword = "/usr/bin/gs-netcat"
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string42_gsocket_greyware_tool_keyword = "/usr/bin/gsocket"
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string43_gsocket_greyware_tool_keyword = "/usr/bin/gs-sftp"
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string44_gsocket_greyware_tool_keyword = /\\gsocket\-.{0,1000}\.tar\.gz/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string45_gsocket_greyware_tool_keyword = /\\gsocket_.{0,1000}_all\.deb/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string46_gsocket_greyware_tool_keyword = /\\gsocket_dso\.so\./ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string47_gsocket_greyware_tool_keyword = /\]\sGS\slogin\sdetected\.\sTotal\sUsers\:\s/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string48_gsocket_greyware_tool_keyword = /\]\sGS\slogout\sdetected\.\sRemaining\sUsers\:\s/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string49_gsocket_greyware_tool_keyword = "00b5a02c0350f67ee2562d63461f29a2907e3e991b51a0fa3e424b102b1cf552" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string50_gsocket_greyware_tool_keyword = "05fb17382f049ded33be4d8d624a2b3cc246ab0814e44f07352c12e1880079b6" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string51_gsocket_greyware_tool_keyword = "06541ed5fb95052dfeda2cc6165732d1c125f9b49ed400f578750b03a67c418f" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string52_gsocket_greyware_tool_keyword = "0a5e1abf70407a1de22cd14107dca8019bab45e8bfe4c45ca1e05e7e8bb92e89" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string53_gsocket_greyware_tool_keyword = "0ca53778e8cf399b1052ba2f500881d04066525b65e8b564360e7b581ac9cf68" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string54_gsocket_greyware_tool_keyword = "0cf7ec1618e87248f23674db07692a63fbd4e945102b143baa5b34d7eebb5977" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string55_gsocket_greyware_tool_keyword = "0da3621a6676dcb4ac7e260ea7280a14d05c9bcc02c0a296a6507172a3cc7bd8" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string56_gsocket_greyware_tool_keyword = "0dd41d5c99202fa4387bb5b9db7ce55236fc913b65e3a9fb58f697d3480f14ef" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string57_gsocket_greyware_tool_keyword = "0e95446bac57b2a3276703c700865bf025f1eac27bc5c9ebcf820c1e351b6732" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string58_gsocket_greyware_tool_keyword = "0f948584d230abb0e870a4e46541cdf4dd8b60f23fa7e031d27cd856bc49b4c4" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string59_gsocket_greyware_tool_keyword = "1106565073956253736/mEDRS5iY0S4sgUnRh8Q5pC4S54zYwczZhGOwXvR3vKr7YQmA0Ej1-Ig60Rh4P_TGFq-m" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string60_gsocket_greyware_tool_keyword = "1160bcaa562e5a40c74e633ec58a2518b110e74b1d3f48bfa06f74f72cf9ff98" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string61_gsocket_greyware_tool_keyword = "11f50c95d4dbcd97d5c76753aa7bc38bb615295f553a4c989015176ac0fa3be3" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string62_gsocket_greyware_tool_keyword = "155c711cf850d024e86f65be8ff0f9e7e0e947c5632350913dadf8cc678909fa" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string63_gsocket_greyware_tool_keyword = "17eb30ef4d91991b265d5d93ab7f4ad6b58d43061a46ba3292142b962be95f7d" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string64_gsocket_greyware_tool_keyword = "1a1be3746ab4055e51557ec20f236da58a4dcbe1a523c8f5a2cd5dc97e699533" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string65_gsocket_greyware_tool_keyword = "1ab1fb9214bf799302b9204b211eec714d0c1fd551ca45adeab8483a350719a3" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string66_gsocket_greyware_tool_keyword = "1ba34d4d223d6a532c194e578a3efc5e8aeae8bf657223614c502e28d84942cf" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string67_gsocket_greyware_tool_keyword = "1d4c6a6ae56e7a9983254e4a31a368ebea653d96277466ffb8127e8ce0b54369" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string68_gsocket_greyware_tool_keyword = "2028fe2f9036b7fd8f192b6c9844acaa40bec1f40cead52c0ebc5defd9255f64" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string69_gsocket_greyware_tool_keyword = "2042b3773e03285939fe7f0d0597a77c8d4958644b1d8a366cc71d384f1e5c30" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string70_gsocket_greyware_tool_keyword = "22f6a8fb8771a0ed253a3652c6852a831b4919b2a677ddb6a6d03cad6a0f76f6" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string71_gsocket_greyware_tool_keyword = "22fdc29d790bb072a0bd54651adab4892fb1df1c75fb44388c3d6a0b0506d908" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string72_gsocket_greyware_tool_keyword = "25cf89a0105c08084f05df75a9dcd1c239e3ec07cf5b36413c04d204393b3560" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string73_gsocket_greyware_tool_keyword = "269d5ebc2a387173830bd5aa8f622c4a9787ff60379bcc960febfe950927ae72" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string74_gsocket_greyware_tool_keyword = "2c25e65ae97f9652d4ab24abcc8c75a48e9b0446211feaeb0e8b138176086ef1" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string75_gsocket_greyware_tool_keyword = "2c68f74c83b924d84b0de8e4a75a44964ad5bf934d3b9ba0baec9732b70183de" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string76_gsocket_greyware_tool_keyword = "2e7d5dfd64c9741ef27284fa9e9e20f84da15669b6979daf730974f7da356849" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string77_gsocket_greyware_tool_keyword = "30d80944d6e4ecec3421db4532a9a146f882e381454e2e09ea35845a4da1f9c6" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string78_gsocket_greyware_tool_keyword = "37328d4092b0c2cf9e23443a1575078c0a072e0ca39382e27c8e9c177bad2048" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string79_gsocket_greyware_tool_keyword = "3891197c6740b1864b7a01b8d64b917fded55d40516b5e2774c92e92fc2ed5ef" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string80_gsocket_greyware_tool_keyword = "3906359d473ef56efef773c5bcbd0c8f8df1b3f18e90fc0d0c8f4c2112706ea9" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string81_gsocket_greyware_tool_keyword = "3b73d2414403cb76345c4885921348b96a63499c04027df1cba8b9825959bc1e" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string82_gsocket_greyware_tool_keyword = "4104657745ea61b6e8ea8e468968e96bb5b266abedd73d93324ce14113edcdd9" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string83_gsocket_greyware_tool_keyword = "41aad6daa162539ca954357d9477850ccc5c1f3d492fafe09091c7419d35a441" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string84_gsocket_greyware_tool_keyword = "44b40a461af2ad711898a48285e333fbffd459797e4b24b4fde92ddcbb2196ae" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string85_gsocket_greyware_tool_keyword = "453485f59e550e5ad903796a7fd65c0e50c0f3977d635f373eddbc3777d70949" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string86_gsocket_greyware_tool_keyword = "48f6c28eb0f6be7a624095e620820e21cabb7008c14beee1210d930aa3d9ffb6" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string87_gsocket_greyware_tool_keyword = "4ad964e61bd5f63da0f48dfdbf4252550a4a8f894bf3c0813b3eb0dab6ac73bf" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string88_gsocket_greyware_tool_keyword = "4ae67074c52164526a351037946fd4deacd275b5fbdea7e49845e9f201ac151d" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string89_gsocket_greyware_tool_keyword = "4b532e80f16904176fc50b312ca8114d8ece3ec594cb34a29d7e5e0d767dca59" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string90_gsocket_greyware_tool_keyword = "4bb77a1ecf1a057a39bd8b6f7b3f349717eac5d32eb87df25e29aceacfa1ec7f" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string91_gsocket_greyware_tool_keyword = "4d6434d5a809c797570c59fd91eecd4f86b85e46cc6a43cf186a10a08db5e844" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string92_gsocket_greyware_tool_keyword = "4E48vR7v8OUJO5OEYkOUUZmF55UOYVqo9l9w2eRS50k=" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string93_gsocket_greyware_tool_keyword = "4f64f71a7d6b8be79754e7bf2109675ffc8a3e37a4a55b08c95a1b1d25e458e5" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string94_gsocket_greyware_tool_keyword = "512c31ebafb9013dfaf82b0123e088f976d3c1b57658ea60a7c8825a1c4bf7c7" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string95_gsocket_greyware_tool_keyword = "561cc9eca17d61f99abf5fd5257bed4a8bf2d4c8c67ac731f5f067cf5f88e230" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string96_gsocket_greyware_tool_keyword = "561cc9eca17d61f99abf5fd5257bed4a8bf2d4c8c67ac731f5f067cf5f88e230" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string97_gsocket_greyware_tool_keyword = "5a86428ea0c5d6424b44518fe411e2a8c795d201f4a6df3b77b04f2af8f2a911" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string98_gsocket_greyware_tool_keyword = "5b4dd71b0d9ac18c80db2eb0149e56af6b01533ff1e7a28359ca2f61ee0f8c8c" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string99_gsocket_greyware_tool_keyword = "5bbc850a274b933a4e8b0ac7d5bc8b0527c3eddbaee7f8a9389c284f27a6fe14" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string100_gsocket_greyware_tool_keyword = "5d6beae72888b5b7c4d4d6bcef2c37256c736435fd1b08ff642ee4c60a310ea5" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string101_gsocket_greyware_tool_keyword = "5fdc26ee180c18e799e436da359f24c54ebeb91cbb5206b89f3c82b0d28b93b5" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string102_gsocket_greyware_tool_keyword = "628e139e7f12c2e5cac243778c3fe428c878aaf690e64cf650e0be14915eee1e" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string103_gsocket_greyware_tool_keyword = "64a7c5e1ef0e19140bf06ba70e0255f53c67c117ce1b072f46c30a1be44ff671" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string104_gsocket_greyware_tool_keyword = "64f0fda500b2a622279f62bcc86e5282b9e6c5ee8e5ef55380e3a08e55b5ecc8" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string105_gsocket_greyware_tool_keyword = "668718b8b09f631c3f1fa81519b99b83792a2e84d306296997a28db2e4f90d8c" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string106_gsocket_greyware_tool_keyword = "67552b46f859511333d63e26a980b251e458c474243aa2af4c2f697aaea3680f" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string107_gsocket_greyware_tool_keyword = "6a8351ce89e27856e20f04a2500f9a7851ea05113fb6babb4f359aa7a389ca73" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string108_gsocket_greyware_tool_keyword = "6d0156efe079ba8f6fbb009df73332e5dab53955613b1795f09b431cf668163a" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string109_gsocket_greyware_tool_keyword = "70fae385cd6c9bbcc73c17efabd236f0a0bfe00d11b0c9360651ec7e4baf42c2" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string110_gsocket_greyware_tool_keyword = "70fc96e2f1e0cd752068e94fb4f37b3f19d670243921f76b0f2114578151f1e3" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string111_gsocket_greyware_tool_keyword = "74f93a2398222f802089239c9610a21ea5ff34fb81cf6869f58bf5782ea5127f" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string112_gsocket_greyware_tool_keyword = "750b490f1788db4c843135e409ae3175cff1be5c61246341eabdfa135ac6c7e3" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string113_gsocket_greyware_tool_keyword = "75a064400fdf9acdbedb430ed009b961041fa379b4f219304477102f9f3d4281" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string114_gsocket_greyware_tool_keyword = "75f3f565f1024b367a72a934cff9735e3fd9311ce5ad77de20c103cc72442edc" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string115_gsocket_greyware_tool_keyword = "78792f8846332fa4d48b2710fd1d5d0bc6dd1fdbd62fdfed2c9aefa91b486547" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string116_gsocket_greyware_tool_keyword = "7896c394ae338f34d46c51c5403ee41200a3fb1816763a4763c1228a72febe07" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string117_gsocket_greyware_tool_keyword = "78ba173f30785ce45c8aa96e9cd13578d1db9bf48bece39a50617a8a49dd80f6" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string118_gsocket_greyware_tool_keyword = "7b1f95fad0a9d54d14ec51545fa5739a6b0764117843a3d468f387cfbe133e6f" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string119_gsocket_greyware_tool_keyword = "7e6e4d4f8d52c0b8ed9b71fa0d0fad11872d1ee4204fc3f4835eb70932047883" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string120_gsocket_greyware_tool_keyword = "813342bc9592e0e2b5672eb84376b59e098cc45929a42c55bdc96750f2abd5f2" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string121_gsocket_greyware_tool_keyword = "840be30a16f12a6c57f8f68233b6aedb9e10e7dda76b1024b74fd660f3a13cd4" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string122_gsocket_greyware_tool_keyword = "850d5195de840280e1638f121743617ad47852109636541bccd20d4cdd953d6b" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string123_gsocket_greyware_tool_keyword = "88552e15e5ce836e9f7f1b12b55ca6b3805641d577fb71663d2c8fc5fb96ce47" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string124_gsocket_greyware_tool_keyword = "8857efba9865de5690af4a3559f4839286cd2083f752ba93c30bd969c6636170" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string125_gsocket_greyware_tool_keyword = "89d3c1ac21486c9deb1a08ac10cc6b722a19801163dad4d8b57c1aa8a18f32b8" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string126_gsocket_greyware_tool_keyword = "8a131449c4f5bffc5ae0cda597df9d17a3dff1d02422c890622c0359ee0a03f1" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string127_gsocket_greyware_tool_keyword = "8c7511cc6dae84071080a37c2842782cc0635f8d32301afebdc818a392a58bc3" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string128_gsocket_greyware_tool_keyword = "90487bd2731d62d51c5bda9ea313fe915fb6ce31fc2c5f54622d780d924da26e" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string129_gsocket_greyware_tool_keyword = "96c7a830d1ec55b1db8892e1d452394cd2a5eb2549003d4428b5d52774637e94" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string130_gsocket_greyware_tool_keyword = "9abd6408e999901f0b7504eb679d0403f49589b7ecaaa5588923daa0bb22f186" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string131_gsocket_greyware_tool_keyword = "9acdf1fd60fb9b5185fab1f18b843757f05f34f73ce947b71498d494a9e30843" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string132_gsocket_greyware_tool_keyword = "9c6804a10a191fe49061ca8022394c3a44fba75e20aa0c1fbf79a07e01f28df5" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string133_gsocket_greyware_tool_keyword = "9d780803519141fc8c14c067688184d7df094190cf74825b6ea6651e7ccd911b" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string134_gsocket_greyware_tool_keyword = "9f6a38018fe8228de57605c35bb927d39418c7793bb935ff0ab5022424d9774a" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string135_gsocket_greyware_tool_keyword = "a1be92f17090edca27bbb0af8e9ac44b97d7a2dd15b66d09e1a6a6b237ace336" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string136_gsocket_greyware_tool_keyword = "a1ce03c2907bdfc7be8ab37b967961a4adb4c2764bbb0f42afea773d1f89f666" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string137_gsocket_greyware_tool_keyword = "a9b13111606ca8ed948030515217c0e1af7cf2af2af8eb034999ff9e3f071b24" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string138_gsocket_greyware_tool_keyword = "apt install gsocket" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string139_gsocket_greyware_tool_keyword = "apt-get install gsocket" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string140_gsocket_greyware_tool_keyword = "b035dfbf2f3125fbf0d00f86158efbc4a7c7715f03e4d7bcf634dfd16888e965" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string141_gsocket_greyware_tool_keyword = "b3ed38872b50a110a8704d1d2eb4e6e47ed6f2998d1bd08b712f840cc3a4643a" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string142_gsocket_greyware_tool_keyword = "b6e5d9d7d95caf2550fecebcfe6f7c54f1779c6a65547ef342f76446dcbd6c1d" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string143_gsocket_greyware_tool_keyword = "b7890a15dadef8cdedd6580aed94ca26df6ec0eddb009176dba1eef8941ff6e6" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string144_gsocket_greyware_tool_keyword = "b938ac4eb603113d3617ddcfeb8fbb32a6bbe54b1419482966b41ee8b1dc05b9" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string145_gsocket_greyware_tool_keyword = "bc7229c619a3af7fd330588286b4e48e7804b1c03427ef9e8bb3b7e2eb0318ce" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string146_gsocket_greyware_tool_keyword = "bd0f5440775fe02946ffc659425427ef167a1dd6d2993606d4376422f8d33bc4" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string147_gsocket_greyware_tool_keyword = "c08ba6e45d3859ecb3cd5df132fb04dcd86913afce15057de03bba9d256de4ef" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string148_gsocket_greyware_tool_keyword = "c2e755a58685ea4f356c897fdc0c9420579f6eae48ac6f27307e8a8b73500cb6" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string149_gsocket_greyware_tool_keyword = "c4da631e510a57e39a6e9021a1d3f1d563f59f351bdd84b46e48a0e27e6b9cbb" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string150_gsocket_greyware_tool_keyword = "c74f294042ccfc39dec052d9871e6bbd4e69b019a353f6e02947303adeac3794" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string151_gsocket_greyware_tool_keyword = "cc0ced090edf59964428ab7b16b9cf8ce57b8ee21e999ac05e7f4d5d52b5470c" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string152_gsocket_greyware_tool_keyword = "cd672b609691c61005f4c69233abbce538d334db30e809150f8087b7735bfd2e" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string153_gsocket_greyware_tool_keyword = "ce7979010bdb291a0a1884e00e238d9fc3bc27ec7a1d1093be273c22e865f676" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string154_gsocket_greyware_tool_keyword = "cfa25f5e4321a86b2c4f646a63345fb6ac46a7089886354ad82653a47e55be51" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string155_gsocket_greyware_tool_keyword = "cfcad25ab252fbff7fc8a7bbac67915dfce5f76b5738f894fa13afbd5d60a5de" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string156_gsocket_greyware_tool_keyword = /curl\s\-fsSL\shttps\:\/\/gsocket\.io\/x/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string157_gsocket_greyware_tool_keyword = /curl\s\-fsSL\shttps\:\/\/tiny\.cc\/gsinst/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string158_gsocket_greyware_tool_keyword = "d24fe924f62a3bb95319812d67dbdb7e375d60f7baa933eab82070b3c4a11a77" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string159_gsocket_greyware_tool_keyword = "d325c92a9bba538fdbb1c054584ffd0672debaef935dfb27e9d0a6b67649d369" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string160_gsocket_greyware_tool_keyword = "d69430717f07c774cdb8ea58b32b066e99dbf3cbc046e876b8ea73c20a3a6507" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string161_gsocket_greyware_tool_keyword = "d700c8a3a4ecbb1e547b3c14a5a2a3605cabbabc8350284e923982809945694d" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string162_gsocket_greyware_tool_keyword = "d748b4244f359f0d9c46860ea8918940c8cd05e4a65c3ae5b99208d719a3a9c1" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string163_gsocket_greyware_tool_keyword = "d84d9d935f9f3392934ff2613e47032d3120f7c0ac4278a1e88bec65c5316a53" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string164_gsocket_greyware_tool_keyword = "db17fa0b10c60bd01a60f64cf436586c9c6708ad64a1dce8350e13689336d67f" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string165_gsocket_greyware_tool_keyword = "dd226a8ba33f50cd9ca4fedcec4df5c29e6b9841cb8cf2ab2d940bdef8a0a403" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string166_gsocket_greyware_tool_keyword = "de74cc01088879ddf3f7c392345e9229490e06f0cc03c52102b0e94b79c01cfc" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string167_gsocket_greyware_tool_keyword = "dfd2e8d943aab32e5988a886e6ed0a3bb36b5f5c3959fa3fb1281b6f524b16bb" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string168_gsocket_greyware_tool_keyword = "e05dfa6b3fc5b59044f4b18ba455d751c5a18948d1d0a032d3a11fb753659faa" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string169_gsocket_greyware_tool_keyword = "e417c3eb936ec35eb80f7cab07aaba0c051f3385d8262eaa93e5e59f52cb60e7" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string170_gsocket_greyware_tool_keyword = "e660765bee5e704c8f15d6a20c14d720c0aea5382fd21123974df9435a3b7bad" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string171_gsocket_greyware_tool_keyword = "e66ba30f8c2e47462d60db7d5bdcb9465fa63c7115a2287d68f57d191ada1b6e" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string172_gsocket_greyware_tool_keyword = "e74e119f6c9d89e2419518395abc0bb44008928d3748b60ea7d02e70b757a75a" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string173_gsocket_greyware_tool_keyword = "e897d08460dbb646108b17a32455d9be51487bee26b48dfef992b7f246d54f1d" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string174_gsocket_greyware_tool_keyword = "e8bcea5769f7121a256a8d690d1eeae2a6040af90d7d97fccfc0379c241df060" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string175_gsocket_greyware_tool_keyword = "eb11e2e1f6611560c9822ca53a829028642a676c2d03bbf86c57e4b41fdcff9e" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string176_gsocket_greyware_tool_keyword = "ec7ac72aea879c8a68fe5cbd38f8be5f37c7b3ee99ca67481331b8eba84f7726" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string177_gsocket_greyware_tool_keyword = "ececdc677eaf4bf46268f4839d825090b16a40d37803c38600bf52bc79e1a363" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string178_gsocket_greyware_tool_keyword = "ef8eb970940d435e07001fccf2ac210f539a9bb09ea1ef146c5f6ff4cc15a402" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string179_gsocket_greyware_tool_keyword = "eff4aa3e27c98422705a19de82c1386d11b9559ded06eed46c26ab82860c0a81" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string180_gsocket_greyware_tool_keyword = "f18bc0dae72814ff2e076c2b61846a35d00575c4e1554f74a4a70a036a15f9c5" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string181_gsocket_greyware_tool_keyword = "f32a57e81fc9d08ca1412e932e8701a45ed35b0213c0da78bee8e65a1c6942e9" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string182_gsocket_greyware_tool_keyword = "f94c9642833e1efd81b07dcb06bf653f61937ae8b7baf69b3731ac1132a66d52" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string183_gsocket_greyware_tool_keyword = "fc0e69e5c2f4ed4cfb830ebb66ba54a86ce95a114603a5fffa42cea8caf3e864" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string184_gsocket_greyware_tool_keyword = "fcea3e6443289fde4faa10d9d892ce4f0c23f90913dbfde6c9f60c825f92150c" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string185_gsocket_greyware_tool_keyword = "fd57273dcd84084b20ad214de3b38c4e5a3f506da7810574d4a68dcdd63176cb" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string186_gsocket_greyware_tool_keyword = "fecf1da09ddb7a5f5ab7cc20c6d542be33193cbc30e5c8c3dd877cee6a682063" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string187_gsocket_greyware_tool_keyword = "GS_SO_TOR_DOMAIN" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string188_gsocket_greyware_tool_keyword = "gs-full-pipe -s " nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string189_gsocket_greyware_tool_keyword = "gs-netcat -" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string190_gsocket_greyware_tool_keyword = /gs\-netcat\s.{0,1000}\.tar\.gz/
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string191_gsocket_greyware_tool_keyword = "gs-netcat_freebsd-x86_64" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string192_gsocket_greyware_tool_keyword = "gs-netcat_linux-aarch64"
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string193_gsocket_greyware_tool_keyword = "gs-netcat_linux-arm"
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string194_gsocket_greyware_tool_keyword = "gs-netcat_linux-armhf"
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string195_gsocket_greyware_tool_keyword = "gs-netcat_linux-armv6"
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string196_gsocket_greyware_tool_keyword = "gs-netcat_linux-armv7l"
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string197_gsocket_greyware_tool_keyword = "gs-netcat_linux-i686"
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string198_gsocket_greyware_tool_keyword = "gs-netcat_linux-mips32"
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string199_gsocket_greyware_tool_keyword = "gs-netcat_linux-mips64"
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string200_gsocket_greyware_tool_keyword = "gs-netcat_linux-mipsel"
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string201_gsocket_greyware_tool_keyword = "gs-netcat_linux-x86_64"
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string202_gsocket_greyware_tool_keyword = "gs-netcat_macOS" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string203_gsocket_greyware_tool_keyword = "gs-netcat_openbsd-x86_64" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string204_gsocket_greyware_tool_keyword = "gsocket /usr/sbin/sshd" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string205_gsocket_greyware_tool_keyword = "gsocket -k " nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string206_gsocket_greyware_tool_keyword = "gsocket openvpn --" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string207_gsocket_greyware_tool_keyword = "gsocket ssh " nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string208_gsocket_greyware_tool_keyword = /gsocket\.io\/deploy/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string209_gsocket_greyware_tool_keyword = /gsocket\/gsocket\.h/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string210_gsocket_greyware_tool_keyword = /gsocket_macOS\.tar\.gz/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string211_gsocket_greyware_tool_keyword = "GSOCKET_SECRET" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string212_gsocket_greyware_tool_keyword = "GSOCKET_SOCKS_IP" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string213_gsocket_greyware_tool_keyword = "GSOCKET_SOCKS_PORT" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string214_gsocket_greyware_tool_keyword = "gsocket-relay/monitor/" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string215_gsocket_greyware_tool_keyword = "gs-sftp -l" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string216_gsocket_greyware_tool_keyword = "gs-sftp -s thctestserver" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string217_gsocket_greyware_tool_keyword = "hackerschoice/gsocket" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string218_gsocket_greyware_tool_keyword = /https\:\/\/gsocket\.io\/install\.sh/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string219_gsocket_greyware_tool_keyword = "Installing systemwide remote access permanentally" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string220_gsocket_greyware_tool_keyword = /Join\sus\son\sTelegram\s\-\shttps\:\/\/t\.me\/thcorg/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string221_gsocket_greyware_tool_keyword = "Running: netcat " nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string222_gsocket_greyware_tool_keyword = "socat - TCP_LISTEN:31337" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string223_gsocket_greyware_tool_keyword = "TCP:gsocket:31337" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string224_gsocket_greyware_tool_keyword = "Testing Global Socket Relay Network" nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string225_gsocket_greyware_tool_keyword = /wget\s\-qO\-\sgsocket\.io/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
 rule rule_gt_greyware_tool_keyword
 {
     meta:
@@ -16174,7 +15783,7 @@ rule rule_impacket_greyware_tool_keyword
         $string3_impacket_greyware_tool_keyword = /cmd\.exe\s\/Q\s\/c\shostname\s1\>\s.{0,1000}\s2\>\&1\s\&\&\scertutil\s\-encodehex\s/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string4_impacket_greyware_tool_keyword = /cmd\.exe\s\/Q\s\/c\sipconfig\s1\>\s.{0,1000}\s2\>\&1\s\&\&\scertutil\s\-encodehex\s.{0,1000}\s\s\s\s\s/ nocase ascii wide
+        $string4_impacket_greyware_tool_keyword = /cmd\.exe\s\/Q\s\/c\sipconfig\s1\>\s.{0,1000}\s2\>\&1\s\&\&\scertutil\s\-encodehex\s/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
         $string5_impacket_greyware_tool_keyword = /cmd\.exe\s\/Q\s\/c\sipconfig\s1\>\s\\Windows\\Temp\\.{0,1000}\s2\>\&1/ nocase ascii wide
@@ -21136,6 +20745,9 @@ rule rule_mshta_greyware_tool_keyword
         // Description: mshta abused by attackers
         // Reference: https://lolbas-project.github.io/lolbas/Binaries/Mshta/
         $string14_mshta_greyware_tool_keyword = /mshta\.exe.{0,1000}\svbscript\:Close\(Execute\(.{0,1000}script\:https\:\/\/.{0,1000}\.sct/ nocase ascii wide
+        // Description: Phishing with a fake reCAPTCHA
+        // Reference: https://github.com/JohnHammond/recaptcha-phish
+        $string15_mshta_greyware_tool_keyword = /mshta\.exe.{0,1000}I\sam\snot\sa\srobot\s\-\sreCAPTCHA\sVerification\sID\:\s/ nocase ascii wide
 
     condition:
         any of them
@@ -21294,6 +20906,25 @@ rule rule_Muscle_VPN_greyware_tool_keyword
         // Description: External VPN usage within coporate network
         // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
         $string1_Muscle_VPN_greyware_tool_keyword = "edknjdjielmpdlnllkdmaghlbpnmjmgb" nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule rule_mv_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'mv' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "mv"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Indicator Removal on Host - clearing logs
+        // Reference: https://github.com/mthcht/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.md
+        $string1_mv_greyware_tool_keyword = "mv /var/log/"
 
     condition:
         any of them
@@ -22127,10 +21758,10 @@ rule rule_net_greyware_tool_keyword
         $string103_net_greyware_tool_keyword = "net stop ekrn" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string104_net_greyware_tool_keyword = /net\sstop\sEPSecurityService.{0,1000}\s\s\s\s/ nocase ascii wide
+        $string104_net_greyware_tool_keyword = "net stop EPSecurityService" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string105_net_greyware_tool_keyword = /net\sstop\sEPUpdateService.{0,1000}\s\s\s\s\s\s\s/ nocase ascii wide
+        $string105_net_greyware_tool_keyword = "net stop EPUpdateService" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
         $string106_net_greyware_tool_keyword = "net stop EsgShKernel" nocase ascii wide
@@ -22181,10 +21812,10 @@ rule rule_net_greyware_tool_keyword
         $string121_net_greyware_tool_keyword = "net stop MBAMService" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string122_net_greyware_tool_keyword = /net\sstop\sMBEndpointAgent.{0,1000}\s\s\s\s/ nocase ascii wide
+        $string122_net_greyware_tool_keyword = "net stop MBEndpointAgent" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string123_net_greyware_tool_keyword = /net\sstop\sMcAfeeEngineService.{0,1000}\s\s\s\s/ nocase ascii wide
+        $string123_net_greyware_tool_keyword = "net stop McAfeeEngineService" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
         $string124_net_greyware_tool_keyword = "net stop McAfeeFramework" nocase ascii wide
@@ -22230,486 +21861,489 @@ rule rule_net_greyware_tool_keyword
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
         $string138_net_greyware_tool_keyword = "net stop MSExchangeSA" nocase ascii wide
+        // Description: stop running processes associated with Exchange
+        // Reference: https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/
+        $string139_net_greyware_tool_keyword = "net stop MSExchangeUM" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string139_net_greyware_tool_keyword = /net\sstop\smsftesql\$PROD/ nocase ascii wide
+        $string140_net_greyware_tool_keyword = /net\sstop\smsftesql\$PROD/ nocase ascii wide
         // Description: observed used by lslsass sample (dump active logon session password hashes from the lsass process (old tool for vista and older))
         // Reference: https://www.virustotal.com/gui/file/b24ab1f8cb68547932dd8a5c81e9b2133763a7ddf48aa431456530c1340b939e/details
-        $string140_net_greyware_tool_keyword = "net stop msiserver" nocase ascii wide
+        $string141_net_greyware_tool_keyword = "net stop msiserver" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string141_net_greyware_tool_keyword = /net\sstop\sMSOLAP\$SQL_2008/ nocase ascii wide
+        $string142_net_greyware_tool_keyword = /net\sstop\sMSOLAP\$SQL_2008/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string142_net_greyware_tool_keyword = /net\sstop\sMSOLAP\$SYSTEM_BGC/ nocase ascii wide
+        $string143_net_greyware_tool_keyword = /net\sstop\sMSOLAP\$SYSTEM_BGC/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string143_net_greyware_tool_keyword = /net\sstop\sMSOLAP\$TPS/ nocase ascii wide
+        $string144_net_greyware_tool_keyword = /net\sstop\sMSOLAP\$TPS/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string144_net_greyware_tool_keyword = /net\sstop\sMSOLAP\$TPSAMA/ nocase ascii wide
+        $string145_net_greyware_tool_keyword = /net\sstop\sMSOLAP\$TPSAMA/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string145_net_greyware_tool_keyword = /net\sstop\sMSSQL\$BKUPEXEC/ nocase ascii wide
+        $string146_net_greyware_tool_keyword = /net\sstop\sMSSQL\$BKUPEXEC/ nocase ascii wide
         // Description: VoidCrypt ransomware
         // Reference: https://github.com/rivitna/Malware
-        $string146_net_greyware_tool_keyword = /net\sstop\sMSSQL\$CONTOSO1/ nocase ascii wide
+        $string147_net_greyware_tool_keyword = /net\sstop\sMSSQL\$CONTOSO1/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string147_net_greyware_tool_keyword = /net\sstop\sMSSQL\$ECWDB2/ nocase ascii wide
+        $string148_net_greyware_tool_keyword = /net\sstop\sMSSQL\$ECWDB2/ nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string148_net_greyware_tool_keyword = /net\sstop\sMSSQL\$ISARS/ nocase ascii wide
+        $string149_net_greyware_tool_keyword = /net\sstop\sMSSQL\$ISARS/ nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string149_net_greyware_tool_keyword = /net\sstop\sMSSQL\$MSFW/ nocase ascii wide
+        $string150_net_greyware_tool_keyword = /net\sstop\sMSSQL\$MSFW/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string150_net_greyware_tool_keyword = /net\sstop\sMSSQL\$PRACTICEMGT/ nocase ascii wide
+        $string151_net_greyware_tool_keyword = /net\sstop\sMSSQL\$PRACTICEMGT/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string151_net_greyware_tool_keyword = /net\sstop\sMSSQL\$PRACTTICEBGC/ nocase ascii wide
+        $string152_net_greyware_tool_keyword = /net\sstop\sMSSQL\$PRACTTICEBGC/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string152_net_greyware_tool_keyword = /net\sstop\sMSSQL\$PROD/ nocase ascii wide
+        $string153_net_greyware_tool_keyword = /net\sstop\sMSSQL\$PROD/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string153_net_greyware_tool_keyword = /net\sstop\sMSSQL\$PROFXENGAGEMENT/ nocase ascii wide
+        $string154_net_greyware_tool_keyword = /net\sstop\sMSSQL\$PROFXENGAGEMENT/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string154_net_greyware_tool_keyword = /net\sstop\sMSSQL\$SBSMONITORING/ nocase ascii wide
+        $string155_net_greyware_tool_keyword = /net\sstop\sMSSQL\$SBSMONITORING/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string155_net_greyware_tool_keyword = /net\sstop\sMSSQL\$SHAREPOINT/ nocase ascii wide
+        $string156_net_greyware_tool_keyword = /net\sstop\sMSSQL\$SHAREPOINT/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string156_net_greyware_tool_keyword = /net\sstop\sMSSQL\$SOPHOS/ nocase ascii wide
+        $string157_net_greyware_tool_keyword = /net\sstop\sMSSQL\$SOPHOS/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string157_net_greyware_tool_keyword = /net\sstop\sMSSQL\$SQL_2008/ nocase ascii wide
+        $string158_net_greyware_tool_keyword = /net\sstop\sMSSQL\$SQL_2008/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string158_net_greyware_tool_keyword = /net\sstop\sMSSQL\$SQLEXPRESS/ nocase ascii wide
+        $string159_net_greyware_tool_keyword = /net\sstop\sMSSQL\$SQLEXPRESS/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string159_net_greyware_tool_keyword = /net\sstop\sMSSQL\$SYSTEM_BGC/ nocase ascii wide
+        $string160_net_greyware_tool_keyword = /net\sstop\sMSSQL\$SYSTEM_BGC/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string160_net_greyware_tool_keyword = /net\sstop\sMSSQL\$TPS/ nocase ascii wide
+        $string161_net_greyware_tool_keyword = /net\sstop\sMSSQL\$TPS/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string161_net_greyware_tool_keyword = /net\sstop\sMSSQL\$TPSAMA/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string162_net_greyware_tool_keyword = /net\sstop\sMSSQL\$VEEAMSQL/ nocase ascii wide
+        $string162_net_greyware_tool_keyword = /net\sstop\sMSSQL\$TPSAMA/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
         $string163_net_greyware_tool_keyword = /net\sstop\sMSSQL\$VEEAMSQL/ nocase ascii wide
-        // Description: stop critical services
-        // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string164_net_greyware_tool_keyword = "net stop MSSQLServerADHelper100" nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string164_net_greyware_tool_keyword = /net\sstop\sMSSQL\$VEEAMSQL/ nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
         $string165_net_greyware_tool_keyword = "net stop MSSQLServerADHelper100" nocase ascii wide
+        // Description: stop critical services
+        // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
+        $string166_net_greyware_tool_keyword = "net stop MSSQLServerADHelper100" nocase ascii wide
         // Description: observed used by lslsass sample (dump active logon session password hashes from the lsass process (old tool for vista and older))
         // Reference: https://www.virustotal.com/gui/file/b24ab1f8cb68547932dd8a5c81e9b2133763a7ddf48aa431456530c1340b939e/details
-        $string166_net_greyware_tool_keyword = "net stop OfficeClickToRun" nocase ascii wide
+        $string167_net_greyware_tool_keyword = "net stop OfficeClickToRun" nocase ascii wide
         // Description: observed used by lslsass sample (dump active logon session password hashes from the lsass process (old tool for vista and older))
         // Reference: https://www.virustotal.com/gui/file/b24ab1f8cb68547932dd8a5c81e9b2133763a7ddf48aa431456530c1340b939e/details
-        $string167_net_greyware_tool_keyword = "net stop PcaSvc" nocase ascii wide
+        $string168_net_greyware_tool_keyword = "net stop PcaSvc" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string168_net_greyware_tool_keyword = "net stop QBCFMonitorService" nocase ascii wide
+        $string169_net_greyware_tool_keyword = "net stop QBCFMonitorService" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string169_net_greyware_tool_keyword = "net stop QBPOSDBServiceV12" nocase ascii wide
+        $string170_net_greyware_tool_keyword = "net stop QBPOSDBServiceV12" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string170_net_greyware_tool_keyword = "net stop QBVSS" nocase ascii wide
+        $string171_net_greyware_tool_keyword = "net stop QBVSS" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string171_net_greyware_tool_keyword = "net stop QuickBooksDB1" nocase ascii wide
+        $string172_net_greyware_tool_keyword = "net stop QuickBooksDB1" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string172_net_greyware_tool_keyword = "net stop QuickBooksDB2" nocase ascii wide
+        $string173_net_greyware_tool_keyword = "net stop QuickBooksDB2" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string173_net_greyware_tool_keyword = "net stop QuickBooksDB3" nocase ascii wide
+        $string174_net_greyware_tool_keyword = "net stop QuickBooksDB3" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string174_net_greyware_tool_keyword = "net stop QuickBooksDB4" nocase ascii wide
+        $string175_net_greyware_tool_keyword = "net stop QuickBooksDB4" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string175_net_greyware_tool_keyword = "net stop QuickBooksDB5" nocase ascii wide
+        $string176_net_greyware_tool_keyword = "net stop QuickBooksDB5" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string176_net_greyware_tool_keyword = /net\sstop\sReportServer\$ISARS/ nocase ascii wide
+        $string177_net_greyware_tool_keyword = /net\sstop\sReportServer\$ISARS/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string177_net_greyware_tool_keyword = "net stop sacsvr" nocase ascii wide
+        $string178_net_greyware_tool_keyword = "net stop sacsvr" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string178_net_greyware_tool_keyword = "net stop SAVAdminService" nocase ascii wide
+        $string179_net_greyware_tool_keyword = "net stop SAVAdminService" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string179_net_greyware_tool_keyword = "net stop SAVService" nocase ascii wide
+        $string180_net_greyware_tool_keyword = "net stop SAVService" nocase ascii wide
         // Description: observed used by lslsass sample (dump active logon session password hashes from the lsass process (old tool for vista and older))
         // Reference: https://www.virustotal.com/gui/file/b24ab1f8cb68547932dd8a5c81e9b2133763a7ddf48aa431456530c1340b939e/details
-        $string180_net_greyware_tool_keyword = "net stop sedsvc" nocase ascii wide
+        $string181_net_greyware_tool_keyword = "net stop sedsvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string181_net_greyware_tool_keyword = "net stop shadowprotectsvc" nocase ascii wide
+        $string182_net_greyware_tool_keyword = "net stop shadowprotectsvc" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string182_net_greyware_tool_keyword = "net stop ShadowProtectSvc" nocase ascii wide
+        $string183_net_greyware_tool_keyword = "net stop ShadowProtectSvc" nocase ascii wide
         // Description: stopping shared access
         // Reference: N/A
-        $string183_net_greyware_tool_keyword = "net stop sharedaccess" nocase ascii wide
+        $string184_net_greyware_tool_keyword = "net stop sharedaccess" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string184_net_greyware_tool_keyword = "net stop ShMonitor" nocase ascii wide
+        $string185_net_greyware_tool_keyword = "net stop ShMonitor" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string185_net_greyware_tool_keyword = "net stop Smcinst" nocase ascii wide
+        $string186_net_greyware_tool_keyword = "net stop Smcinst" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string186_net_greyware_tool_keyword = "net stop SmcService" nocase ascii wide
+        $string187_net_greyware_tool_keyword = "net stop SmcService" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string187_net_greyware_tool_keyword = "net stop sms_site_sql_backup" nocase ascii wide
+        $string188_net_greyware_tool_keyword = "net stop sms_site_sql_backup" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string188_net_greyware_tool_keyword = /net\sstop\sSntpService.{0,1000}\s\s\s\s/ nocase ascii wide
+        $string189_net_greyware_tool_keyword = "net stop SntpService" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string189_net_greyware_tool_keyword = "net stop sophossps" nocase ascii wide
+        $string190_net_greyware_tool_keyword = "net stop sophossps" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string190_net_greyware_tool_keyword = "net stop SPAdminV4" nocase ascii wide
+        $string191_net_greyware_tool_keyword = "net stop SPAdminV4" nocase ascii wide
         // Description: observed used by lslsass sample (dump active logon session password hashes from the lsass process (old tool for vista and older))
         // Reference: https://www.virustotal.com/gui/file/b24ab1f8cb68547932dd8a5c81e9b2133763a7ddf48aa431456530c1340b939e/details
-        $string191_net_greyware_tool_keyword = "net stop sppsvc" nocase ascii wide
+        $string192_net_greyware_tool_keyword = "net stop sppsvc" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string192_net_greyware_tool_keyword = "net stop SPSearch4" nocase ascii wide
+        $string193_net_greyware_tool_keyword = "net stop SPSearch4" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string193_net_greyware_tool_keyword = "net stop SPTimerV4" nocase ascii wide
+        $string194_net_greyware_tool_keyword = "net stop SPTimerV4" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string194_net_greyware_tool_keyword = "net stop SPTraceV4" nocase ascii wide
+        $string195_net_greyware_tool_keyword = "net stop SPTraceV4" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string195_net_greyware_tool_keyword = "net stop SPUserCodeV4" nocase ascii wide
+        $string196_net_greyware_tool_keyword = "net stop SPUserCodeV4" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string196_net_greyware_tool_keyword = "net stop SPWriterV4" nocase ascii wide
+        $string197_net_greyware_tool_keyword = "net stop SPWriterV4" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string197_net_greyware_tool_keyword = "net stop spxservice" nocase ascii wide
+        $string198_net_greyware_tool_keyword = "net stop spxservice" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string198_net_greyware_tool_keyword = "net stop sqbcoreservice" nocase ascii wide
+        $string199_net_greyware_tool_keyword = "net stop sqbcoreservice" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string199_net_greyware_tool_keyword = /net\sstop\sSQLAgent\$ISARS/ nocase ascii wide
+        $string200_net_greyware_tool_keyword = /net\sstop\sSQLAgent\$ISARS/ nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string200_net_greyware_tool_keyword = /net\sstop\sSQLAgent\$MSFW/ nocase ascii wide
+        $string201_net_greyware_tool_keyword = /net\sstop\sSQLAgent\$MSFW/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string201_net_greyware_tool_keyword = /net\sstop\sSQLAgent\$SOPH/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string202_net_greyware_tool_keyword = /net\sstop\sSQLAgent\$VEEAMSQL/ nocase ascii wide
+        $string202_net_greyware_tool_keyword = /net\sstop\sSQLAgent\$SOPH/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
         $string203_net_greyware_tool_keyword = /net\sstop\sSQLAgent\$VEEAMSQL/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string204_net_greyware_tool_keyword = /net\sstop\sSQLAgent\$VEEAMSQL/ nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string204_net_greyware_tool_keyword = "net stop SQLBrowser" nocase ascii wide
+        $string205_net_greyware_tool_keyword = "net stop SQLBrowser" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string205_net_greyware_tool_keyword = "net stop SQLWriter" nocase ascii wide
+        $string206_net_greyware_tool_keyword = "net stop SQLWriter" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string206_net_greyware_tool_keyword = "net stop stc_endpt_svc" nocase ascii wide
+        $string207_net_greyware_tool_keyword = "net stop stc_endpt_svc" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string207_net_greyware_tool_keyword = "net stop stop SepMasterService" nocase ascii wide
+        $string208_net_greyware_tool_keyword = "net stop stop SepMasterService" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string208_net_greyware_tool_keyword = "net stop svcGenericHost" nocase ascii wide
+        $string209_net_greyware_tool_keyword = "net stop svcGenericHost" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string209_net_greyware_tool_keyword = "net stop swi_filter" nocase ascii wide
+        $string210_net_greyware_tool_keyword = "net stop swi_filter" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string210_net_greyware_tool_keyword = "net stop swi_service" nocase ascii wide
+        $string211_net_greyware_tool_keyword = "net stop swi_service" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string211_net_greyware_tool_keyword = "net stop swi_update" nocase ascii wide
+        $string212_net_greyware_tool_keyword = "net stop swi_update" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string212_net_greyware_tool_keyword = "net stop swi_update_64" nocase ascii wide
+        $string213_net_greyware_tool_keyword = "net stop swi_update_64" nocase ascii wide
         // Description: observed used by lslsass sample (dump active logon session password hashes from the lsass process (old tool for vista and older))
         // Reference: https://www.virustotal.com/gui/file/b24ab1f8cb68547932dd8a5c81e9b2133763a7ddf48aa431456530c1340b939e/details
-        $string213_net_greyware_tool_keyword = "net stop SysMain" nocase ascii wide
+        $string214_net_greyware_tool_keyword = "net stop SysMain" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string214_net_greyware_tool_keyword = "net stop TmCCSF" nocase ascii wide
+        $string215_net_greyware_tool_keyword = "net stop TmCCSF" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string215_net_greyware_tool_keyword = "net stop tmlisten" nocase ascii wide
+        $string216_net_greyware_tool_keyword = "net stop tmlisten" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string216_net_greyware_tool_keyword = "net stop TrueKey" nocase ascii wide
+        $string217_net_greyware_tool_keyword = "net stop TrueKey" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string217_net_greyware_tool_keyword = /net\sstop\sTrueKeyScheduler.{0,1000}\s\s\s\s/ nocase ascii wide
+        $string218_net_greyware_tool_keyword = "net stop TrueKeyScheduler" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string218_net_greyware_tool_keyword = "net stop TrueKeyServiceHel" nocase ascii wide
+        $string219_net_greyware_tool_keyword = "net stop TrueKeyServiceHel" nocase ascii wide
         // Description: observed used by lslsass sample (dump active logon session password hashes from the lsass process (old tool for vista and older))
         // Reference: https://www.virustotal.com/gui/file/b24ab1f8cb68547932dd8a5c81e9b2133763a7ddf48aa431456530c1340b939e/details
-        $string219_net_greyware_tool_keyword = "net stop TrustedInstaller" nocase ascii wide
+        $string220_net_greyware_tool_keyword = "net stop TrustedInstaller" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string220_net_greyware_tool_keyword = /net\sstop\svapiendpoint.{0,1000}\s\s\s\s\s\s\s/ nocase ascii wide
+        $string221_net_greyware_tool_keyword = "net stop vapiendpoint" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string221_net_greyware_tool_keyword = "net stop VeeamBackupSvc" nocase ascii wide
+        $string222_net_greyware_tool_keyword = "net stop VeeamBackupSvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string222_net_greyware_tool_keyword = "net stop VeeamBrokerSvc " nocase ascii wide
+        $string223_net_greyware_tool_keyword = "net stop VeeamBrokerSvc " nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string223_net_greyware_tool_keyword = "net stop VeeamCatalogSvc" nocase ascii wide
+        $string224_net_greyware_tool_keyword = "net stop VeeamCatalogSvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string224_net_greyware_tool_keyword = "net stop VeeamCloudSvc" nocase ascii wide
+        $string225_net_greyware_tool_keyword = "net stop VeeamCloudSvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string225_net_greyware_tool_keyword = "net stop VeeamDeploymentService" nocase ascii wide
+        $string226_net_greyware_tool_keyword = "net stop VeeamDeploymentService" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string226_net_greyware_tool_keyword = "net stop VeeamDeploySvc" nocase ascii wide
+        $string227_net_greyware_tool_keyword = "net stop VeeamDeploySvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string227_net_greyware_tool_keyword = /net\sstop\sVeeamDeploySvc.{0,1000}\s\s\s\s/ nocase ascii wide
+        $string228_net_greyware_tool_keyword = "net stop VeeamDeploySvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string228_net_greyware_tool_keyword = "net stop VeeamEnterpriseManagerSvc" nocase ascii wide
+        $string229_net_greyware_tool_keyword = "net stop VeeamEnterpriseManagerSvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string229_net_greyware_tool_keyword = "net stop VeeamHvIntegrationSvc" nocase ascii wide
+        $string230_net_greyware_tool_keyword = "net stop VeeamHvIntegrationSvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string230_net_greyware_tool_keyword = "net stop VeeamMountSvc" nocase ascii wide
+        $string231_net_greyware_tool_keyword = "net stop VeeamMountSvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string231_net_greyware_tool_keyword = "net stop VeeamNFSSvc" nocase ascii wide
+        $string232_net_greyware_tool_keyword = "net stop VeeamNFSSvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string232_net_greyware_tool_keyword = "net stop VeeamRESTSvc" nocase ascii wide
+        $string233_net_greyware_tool_keyword = "net stop VeeamRESTSvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string233_net_greyware_tool_keyword = "net stop VeeamTransportSvc" nocase ascii wide
+        $string234_net_greyware_tool_keyword = "net stop VeeamTransportSvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string234_net_greyware_tool_keyword = "net stop vsnapvss" nocase ascii wide
+        $string235_net_greyware_tool_keyword = "net stop vsnapvss" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string235_net_greyware_tool_keyword = "net stop vssvc" nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string236_net_greyware_tool_keyword = "net stop wbengine" nocase ascii wide
+        $string236_net_greyware_tool_keyword = "net stop vssvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
         $string237_net_greyware_tool_keyword = "net stop wbengine" nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string238_net_greyware_tool_keyword = "net stop wbengine" nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string238_net_greyware_tool_keyword = "net stop WinDefend" nocase ascii wide
-        // Description: stopping AV services
-        // Reference: N/A
         $string239_net_greyware_tool_keyword = "net stop WinDefend" nocase ascii wide
         // Description: stopping AV services
+        // Reference: N/A
+        $string240_net_greyware_tool_keyword = "net stop WinDefend" nocase ascii wide
+        // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string240_net_greyware_tool_keyword = "net stop WRSVC" nocase ascii wide
+        $string241_net_greyware_tool_keyword = "net stop WRSVC" nocase ascii wide
         // Description: connect to the "IPC$" share on a remote system often for lateral movement or remote administration purposes
         // Reference: N/A
-        $string241_net_greyware_tool_keyword = /net\suse\s\\\\.{0,1000}\\IPC\$\s\/user\:/ nocase ascii wide
+        $string242_net_greyware_tool_keyword = /net\suse\s\\\\.{0,1000}\\IPC\$\s\/user\:/ nocase ascii wide
         // Description: manipulation of an hidden local account with the net command
         // Reference: N/A
-        $string242_net_greyware_tool_keyword = /net\suser\s.{0,1000}\$.{0,1000}\s\// nocase ascii wide
+        $string243_net_greyware_tool_keyword = /net\suser\s.{0,1000}\$.{0,1000}\s\// nocase ascii wide
         // Description: Create list of domain users
         // Reference: N/A
-        $string243_net_greyware_tool_keyword = "net user /domain >" nocase ascii wide
+        $string244_net_greyware_tool_keyword = "net user /domain >" nocase ascii wide
         // Description: command used in the Dispossessor ransomware group notes
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string244_net_greyware_tool_keyword = "net user BitdefenderBounty " nocase ascii wide
+        $string245_net_greyware_tool_keyword = "net user BitdefenderBounty " nocase ascii wide
         // Description: activate the guest account in Windows
         // Reference: N/A
-        $string245_net_greyware_tool_keyword = "NET USER GUEST /ACTIVE:YES" nocase ascii wide
+        $string246_net_greyware_tool_keyword = "NET USER GUEST /ACTIVE:YES" nocase ascii wide
         // Description: adding the user localadm - observed used by the Dispossessor Ransomware group 
-        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string246_net_greyware_tool_keyword = "net user localadm " nocase ascii wide
-        // Description: command used in the Dispossessor ransomware group notes
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
         $string247_net_greyware_tool_keyword = "net user localadm " nocase ascii wide
         // Description: command used in the Dispossessor ransomware group notes
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string248_net_greyware_tool_keyword = /net\suser\sSupport\s.{0,1000}\s\/add\s/ nocase ascii wide
+        $string248_net_greyware_tool_keyword = "net user localadm " nocase ascii wide
+        // Description: command used in the Dispossessor ransomware group notes
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string249_net_greyware_tool_keyword = /net\suser\sSupport\s.{0,1000}\s\/add\s/ nocase ascii wide
         // Description: discovery commands used by Dispossessor ransomware group
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string249_net_greyware_tool_keyword = "net user support /active:yes" nocase ascii wide
+        $string250_net_greyware_tool_keyword = "net user support /active:yes" nocase ascii wide
         // Description: discovery commands used by Dispossessor ransomware group
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string250_net_greyware_tool_keyword = /net\suser\ssupport\sPa\$\$wo0rd\s\/add/ nocase ascii wide
+        $string251_net_greyware_tool_keyword = /net\suser\ssupport\sPa\$\$wo0rd\s\/add/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string251_net_greyware_tool_keyword = "net view /all /domain" nocase ascii wide
+        $string252_net_greyware_tool_keyword = "net view /all /domain" nocase ascii wide
         // Description: display all domain names on the network
         // Reference: https://github.com/alperenugurlu/AD_Enumeration_Hunt/blob/alperen_ugurlu_hack/AD_Enumeration_Hunt.ps1
-        $string252_net_greyware_tool_keyword = "net view /domain" nocase ascii wide
+        $string253_net_greyware_tool_keyword = "net view /domain" nocase ascii wide
         // Description: retrieves a list of shared resources on a remote machine
         // Reference: N/A
-        $string253_net_greyware_tool_keyword = /net\sview\s\\\\.{0,1000}\s\/all/ nocase ascii wide
+        $string254_net_greyware_tool_keyword = /net\sview\s\\\\.{0,1000}\s\/all/ nocase ascii wide
         // Description: adding a user to a privileged group. This action can be used by adversaries to maintain unauthorized access or escalate privileges within the targeted environment.
         // Reference: N/A
-        $string254_net_greyware_tool_keyword = /net.{0,1000}\sgroup\sAdministrator.{0,1000}\s\/add\s\/domain/ nocase ascii wide
+        $string255_net_greyware_tool_keyword = /net.{0,1000}\sgroup\sAdministrator.{0,1000}\s\/add\s\/domain/ nocase ascii wide
         // Description: Adds a user account to the local Remote
         // Reference: N/A
-        $string255_net_greyware_tool_keyword = /net\.exe\slocalgroup\s\\"Remote\sDesktop\sUsers\\"\s.{0,1000}\s\/add/ nocase ascii wide
+        $string256_net_greyware_tool_keyword = /net\.exe\slocalgroup\s\\"Remote\sDesktop\sUsers\\"\s.{0,1000}\s\/add/ nocase ascii wide
         // Description: discover local admins group
         // Reference: N/A
-        $string256_net_greyware_tool_keyword = /net\.exe\slocalgroup\s.{0,1000}Backup\sOperators/ nocase ascii wide
+        $string257_net_greyware_tool_keyword = /net\.exe\slocalgroup\s.{0,1000}Backup\sOperators/ nocase ascii wide
         // Description: discover local admins group
         // Reference: N/A
-        $string257_net_greyware_tool_keyword = /net\.exe\\"\slocalgroup\s.{0,1000}Backup\sOperators/ nocase ascii wide
+        $string258_net_greyware_tool_keyword = /net\.exe\\"\slocalgroup\s.{0,1000}Backup\sOperators/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string258_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Account\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string259_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Account\sOperators.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string259_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Backup\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string260_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Backup\sOperators.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string260_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Domain\sComputers.{0,1000}\s\/domain/ nocase ascii wide
+        $string261_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Domain\sComputers.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string261_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Domain\sControllers.{0,1000}\s\/domain/ nocase ascii wide
+        $string262_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Domain\sControllers.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string262_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Enterprise\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
+        $string263_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Enterprise\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string263_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Exchange\sTrusted\sSubsystem.{0,1000}\s\/domain/ nocase ascii wide
+        $string264_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Exchange\sTrusted\sSubsystem.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string264_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Microsoft\sExchange\sServers.{0,1000}\s\/domain/ nocase ascii wide
+        $string265_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Microsoft\sExchange\sServers.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string265_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Print\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string266_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Print\sOperators.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string266_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Schema\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
+        $string267_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Schema\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string267_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Server\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string268_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Server\sOperators.{0,1000}\s\/domain/ nocase ascii wide
         // Description: Query users from domain admins in current domain
         // Reference: N/A
-        $string268_net_greyware_tool_keyword = "net1  group \"domain admins\" /domain" nocase ascii wide
+        $string269_net_greyware_tool_keyword = "net1  group \"domain admins\" /domain" nocase ascii wide
         // Description: Query users from domain admins in current domain
         // Reference: N/A
-        $string269_net_greyware_tool_keyword = "net1  group \"Domain Computers\" /domain" nocase ascii wide
+        $string270_net_greyware_tool_keyword = "net1  group \"Domain Computers\" /domain" nocase ascii wide
         // Description: Query users from domain admins in current domain
         // Reference: N/A
-        $string270_net_greyware_tool_keyword = "net1  group \"domain computers\" /domain" nocase ascii wide
+        $string271_net_greyware_tool_keyword = "net1  group \"domain computers\" /domain" nocase ascii wide
         // Description: Query users from domain admins in current domain
         // Reference: N/A
-        $string271_net_greyware_tool_keyword = "net1  group \"enterprise admins\" /domain" nocase ascii wide
+        $string272_net_greyware_tool_keyword = "net1  group \"enterprise admins\" /domain" nocase ascii wide
         // Description: Query users from domain admins in current domain
         // Reference: N/A
-        $string272_net_greyware_tool_keyword = "net1 group \"Domain Admins\" /domain" nocase ascii wide
+        $string273_net_greyware_tool_keyword = "net1 group \"Domain Admins\" /domain" nocase ascii wide
         // Description: Enumerate SQL Admin group membership on the domain
         // Reference: N/A
-        $string273_net_greyware_tool_keyword = "net1 group \"SQL Admins\" /domain" nocase ascii wide
+        $string274_net_greyware_tool_keyword = "net1 group \"SQL Admins\" /domain" nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string274_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Account\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string275_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Account\sOperators.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string275_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Backup\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string276_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Backup\sOperators.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string276_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Domain\sComputers.{0,1000}\s\/domain/ nocase ascii wide
+        $string277_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Domain\sComputers.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string277_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Domain\sControllers.{0,1000}\s\/domain/ nocase ascii wide
+        $string278_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Domain\sControllers.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string278_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Enterprise\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
+        $string279_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Enterprise\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string279_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Exchange\sTrusted\sSubsystem.{0,1000}\s\/domain/ nocase ascii wide
+        $string280_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Exchange\sTrusted\sSubsystem.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string280_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Microsoft\sExchange\sServers.{0,1000}\s\/domain/ nocase ascii wide
+        $string281_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Microsoft\sExchange\sServers.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string281_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Print\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string282_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Print\sOperators.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string282_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Schema\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
+        $string283_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Schema\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string283_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Server\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string284_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Server\sOperators.{0,1000}\s\/domain/ nocase ascii wide
         // Description: Adds a user account to the local Remote
         // Reference: N/A
-        $string284_net_greyware_tool_keyword = /net1\slocalgroup\s\\"Remote\sDesktop\sUsers\\"\s.{0,1000}\s\/add/ nocase ascii wide
+        $string285_net_greyware_tool_keyword = /net1\slocalgroup\s\\"Remote\sDesktop\sUsers\\"\s.{0,1000}\s\/add/ nocase ascii wide
         // Description: discover local admins group
         // Reference: N/A
-        $string285_net_greyware_tool_keyword = /net1\slocalgroup\s.{0,1000}Backup\sOperators/ nocase ascii wide
+        $string286_net_greyware_tool_keyword = /net1\slocalgroup\s.{0,1000}Backup\sOperators/ nocase ascii wide
         // Description: showing users in a privileged group. 
         // Reference: N/A
-        $string286_net_greyware_tool_keyword = "net1 localgroup admin" nocase ascii wide
+        $string287_net_greyware_tool_keyword = "net1 localgroup admin" nocase ascii wide
         // Description: Wannacry Ransomware & NOODLERAT behavior
         // Reference: https://www.virustotal.com/gui/file/cde4ca499282045eecd4fc15ac80a232294556a59b3c8c8a7a593e8333cfd3c7/behavior
-        $string287_net_greyware_tool_keyword = "net1 stop badrv" nocase ascii wide
+        $string288_net_greyware_tool_keyword = "net1 stop badrv" nocase ascii wide
         // Description: observed used by lslsass sample (dump active logon session password hashes from the lsass process (old tool for vista and older))
         // Reference: https://www.virustotal.com/gui/file/b24ab1f8cb68547932dd8a5c81e9b2133763a7ddf48aa431456530c1340b939e/details
-        $string288_net_greyware_tool_keyword = "net1 stop gupdatem" nocase ascii wide
+        $string289_net_greyware_tool_keyword = "net1 stop gupdatem" nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string289_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Account\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string290_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Account\sOperators.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string290_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Backup\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string291_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Backup\sOperators.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string291_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Domain\sComputers.{0,1000}\s\/domain/ nocase ascii wide
+        $string292_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Domain\sComputers.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string292_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Domain\sControllers.{0,1000}\s\/domain/ nocase ascii wide
+        $string293_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Domain\sControllers.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string293_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Enterprise\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
+        $string294_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Enterprise\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string294_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Exchange\sTrusted\sSubsystem.{0,1000}\s\/domain/ nocase ascii wide
+        $string295_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Exchange\sTrusted\sSubsystem.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string295_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Microsoft\sExchange\sServers.{0,1000}\s\/domain/ nocase ascii wide
+        $string296_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Microsoft\sExchange\sServers.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string296_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Print\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string297_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Print\sOperators.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string297_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Schema\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
+        $string298_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Schema\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string298_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Server\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string299_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Server\sOperators.{0,1000}\s\/domain/ nocase ascii wide
 
     condition:
         any of them
@@ -22950,7 +22584,7 @@ rule rule_NetSupport_greyware_tool_keyword
         rule_category = "greyware_tool_keyword"
 
     strings:
-        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused by adversaries for remote system control and surveillance
         // Reference: https://www.netsupportmanager.com/
         $string1_NetSupport_greyware_tool_keyword = " /EV\"NetSupport School\"" nocase ascii wide
         // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
@@ -23646,6 +23280,43 @@ rule rule_nmap_greyware_tool_keyword
 }
 
 
+rule rule_nopaste_net_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'nopaste.net' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "nopaste.net"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: nopaste.net is a temporary file host - nopaste and clipboard across machines. You can upload files or text and share the link with others - abused by attackers for collection and data exfiltration
+        // Reference: https://www.shellhub.io/
+        $string1_nopaste_net_greyware_tool_keyword = /curl.{0,1000}nopaste\.net/
+        // Description: nopaste.net is a temporary file host - nopaste and clipboard across machines. You can upload files or text and share the link with others - abused by attackers for collection and data exfiltration
+        // Reference: https://www.shellhub.io/
+        $string2_nopaste_net_greyware_tool_keyword = /docker\srun\s.{0,1000}\/\.config\/pcopy/
+        // Description: nopaste.net is a temporary file host - nopaste and clipboard across machines. You can upload files or text and share the link with others - abused by attackers for collection and data exfiltration
+        // Reference: https://www.shellhub.io/
+        $string3_nopaste_net_greyware_tool_keyword = /https\:\/\/nopaste\.net\// nocase ascii wide
+        // Description: nopaste.net is a temporary file host - nopaste and clipboard across machines. You can upload files or text and share the link with others - abused by attackers for collection and data exfiltration
+        // Reference: https://www.shellhub.io/
+        $string4_nopaste_net_greyware_tool_keyword = /IEX.{0,1000}nopaste\.net/ nocase ascii wide
+        // Description: nopaste.net is a temporary file host - nopaste and clipboard across machines. You can upload files or text and share the link with others - abused by attackers for collection and data exfiltration
+        // Reference: https://www.shellhub.io/
+        $string5_nopaste_net_greyware_tool_keyword = /IWR.{0,1000}nopaste\.net/ nocase ascii wide
+        // Description: nopaste.net is a temporary file host - nopaste and clipboard across machines. You can upload files or text and share the link with others - abused by attackers for collection and data exfiltration
+        // Reference: https://www.shellhub.io/
+        $string6_nopaste_net_greyware_tool_keyword = /nc\s\-N\snopaste\.net\s/
+        // Description: nopaste.net is a temporary file host - nopaste and clipboard across machines. You can upload files or text and share the link with others - abused by attackers for collection and data exfiltration
+        // Reference: https://www.shellhub.io/
+        $string7_nopaste_net_greyware_tool_keyword = /nopaste\.net.{0,1000}IWR/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule rule_NordVPN_greyware_tool_keyword
 {
     meta:
@@ -23656,12 +23327,58 @@ rule rule_NordVPN_greyware_tool_keyword
         rule_category = "greyware_tool_keyword"
 
     strings:
-        // Description: External VPN browser extension usage within coporate network
-        // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
-        $string1_NordVPN_greyware_tool_keyword = "fjoaledfpmneenckfbpdfhkmimnjocfa" nocase ascii wide
         // Description: OVPN configuration for nordvpn accessed within corporate network
         // Reference: https://nordvpn.com
-        $string2_NordVPN_greyware_tool_keyword = /https\:\/\/nordvpn\.com.{0,1000}\/ovpn\/.{0,1000}\.ovpn/ nocase ascii wide
+        $string1_NordVPN_greyware_tool_keyword = /downloads\.nordcdn\.com\/apps\/vpn\-extension\// nocase ascii wide
+        // Description: External VPN browser extension usage within coporate network
+        // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
+        $string2_NordVPN_greyware_tool_keyword = "fjoaledfpmneenckfbpdfhkmimnjocfa" nocase ascii wide
+        // Description: OVPN configuration for nordvpn accessed within corporate network
+        // Reference: https://nordvpn.com
+        $string3_NordVPN_greyware_tool_keyword = /https\:\/\/nordvpn\.com.{0,1000}\/ovpn\/.{0,1000}\.ovpn/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule rule_nping_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'nping' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "nping"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: icmp exfiltration with nping (comes with nmap)
+        // Reference: http://nmap.org/nping/
+        $string1_nping_greyware_tool_keyword = /\s\-c1\s.{0,1000}\s\-\-data\-string\s.{0,1000}\s\-\-icmp\s/ nocase ascii wide
+        // Description: icmp exfiltration with nping (comes with nmap)
+        // Reference: http://nmap.org/nping/
+        $string2_nping_greyware_tool_keyword = /\s\-c1\s.{0,1000}\s\-\-icmp\s.{0,1000}\s\-\-data\-string\s/ nocase ascii wide
+        // Description: icmp exfiltration with nping (comes with nmap)
+        // Reference: http://nmap.org/nping/
+        $string3_nping_greyware_tool_keyword = /\s\-\-data\-string\s.{0,1000}\s\-c1\s.{0,1000}\s\-\-icmp\s/ nocase ascii wide
+        // Description: icmp exfiltration with nping (comes with nmap)
+        // Reference: http://nmap.org/nping/
+        $string4_nping_greyware_tool_keyword = /\s\-\-data\-string\s.{0,1000}\s\-\-icmp\s.{0,1000}\s\-c1\s/ nocase ascii wide
+        // Description: icmp exfiltration with nping (comes with nmap)
+        // Reference: http://nmap.org/nping/
+        $string5_nping_greyware_tool_keyword = /\s\-\-icmp\s.{0,1000}\s\-c1\s.{0,1000}\s\-\-data\-string\s/ nocase ascii wide
+        // Description: icmp exfiltration with nping (comes with nmap)
+        // Reference: http://nmap.org/nping/
+        $string6_nping_greyware_tool_keyword = /\s\-\-icmp\s.{0,1000}\s\-\-data\-string\s.{0,1000}\s\-c1\s/ nocase ascii wide
+        // Description: icmp exfiltration with nping (comes with nmap)
+        // Reference: http://nmap.org/nping/
+        $string7_nping_greyware_tool_keyword = /nping.{0,1000}\s\-\-data\s/ nocase ascii wide
+        // Description: icmp exfiltration with nping (comes with nmap)
+        // Reference: http://nmap.org/nping/
+        $string8_nping_greyware_tool_keyword = /nping.{0,1000}\s\-\-data\-string\s/ nocase ascii wide
+        // Description: icmp exfiltration with nping (comes with nmap)
+        // Reference: http://nmap.org/nping/
+        $string9_nping_greyware_tool_keyword = /nping.{0,1000}\s\-\-icmp\s/ nocase ascii wide
 
     condition:
         any of them
@@ -24267,6 +23984,28 @@ rule rule_paste_ee_greyware_tool_keyword
 }
 
 
+rule rule_pastebin_pl_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'pastebin.pl' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "pastebin.pl"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: sending data to a pastebin
+        // Reference: https://pastebin.pl/
+        $string1_pastebin_pl_greyware_tool_keyword = /pastebin\.pl\/cdn\-cgi\/challenge\-platform\// nocase ascii wide
+        // Description: accessing paste raw content
+        // Reference: https://pastebin.pl/
+        $string2_pastebin_pl_greyware_tool_keyword = /pastebin\.pl\/view\/raw\// nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule rule_pastebin_greyware_tool_keyword
 {
     meta:
@@ -24286,6 +24025,28 @@ rule rule_pastebin_greyware_tool_keyword
         // Description: pastebin POST url - abused by malwares to exfiltrate informations
         // Reference: pastebin.com
         $string3_pastebin_greyware_tool_keyword = /pastebin\.com.{0,1000}api\/api_post\.php/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule rule_pastie_org_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'pastie.org' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "pastie.org"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: accessing paste raw content
+        // Reference: http://pastie.org/
+        $string1_pastie_org_greyware_tool_keyword = /http\:\/\/pastie\.org\/p\/.{0,1000}\/raw/ nocase ascii wide
+        // Description: sending data to a pastebin
+        // Reference: http://pastie.org/
+        $string2_pastie_org_greyware_tool_keyword = /http\:\/\/pastie\.org\/pastes\/create/ nocase ascii wide
 
     condition:
         any of them
@@ -25631,738 +25392,789 @@ rule rule_powershell_greyware_tool_keyword
         rule_category = "greyware_tool_keyword"
 
     strings:
+        // Description: Suspicious PowerShell execution behavior often observed in FakeCaptcha phishing attempts
+        // Reference: https://x.com/malware_traffic/status/1884476331821326816/photo/2
+        $string1_powershell_greyware_tool_keyword = /\s\/c\sstart\s\/min\spowershell\s\-noprofile\s\-w\sH\s\-c\s.{0,1000}irw/ nocase ascii wide
         // Description: obfuscation techniques with powershell
         // Reference: N/A
-        $string1_powershell_greyware_tool_keyword = /\s\-ep\sBypass\s\-nop\sfunction\s.{0,1000}\[System\.Security\.Cryptography\.Aes\]\:\:Create\(\).{0,1000}\.CreateDecryptor\(\).{0,1000}\.TransformFinalBlock.{0,1000}\[System\.Text\.Encoding\]\:\:Utf8\.GetString/ nocase ascii wide
+        $string2_powershell_greyware_tool_keyword = /\s\-ep\sBypass\s\-nop\sfunction\s.{0,1000}\[System\.Security\.Cryptography\.Aes\]\:\:Create\(\).{0,1000}\.CreateDecryptor\(\).{0,1000}\.TransformFinalBlock.{0,1000}\[System\.Text\.Encoding\]\:\:Utf8\.GetString/ nocase ascii wide
         // Description: obfuscation techniques with powershell
         // Reference: N/A
-        $string2_powershell_greyware_tool_keyword = /\s\-ep\sUnrestricted\s\-nop\sfunction\s.{0,1000}\[System\.Security\.Cryptography\.Aes\]\:\:Create\(\).{0,1000}\.CreateDecryptor\(\).{0,1000}\.TransformFinalBlock.{0,1000}\[System\.Text\.Encoding\]\:\:Utf8\.GetString/ nocase ascii wide
+        $string3_powershell_greyware_tool_keyword = /\s\-ep\sUnrestricted\s\-nop\sfunction\s.{0,1000}\[System\.Security\.Cryptography\.Aes\]\:\:Create\(\).{0,1000}\.CreateDecryptor\(\).{0,1000}\.TransformFinalBlock.{0,1000}\[System\.Text\.Encoding\]\:\:Utf8\.GetString/ nocase ascii wide
         // Description: Defense evasion technique In order to avoid detection at any point of the kill chain. attackers use several ways to disable anti-virus. disable Microsoft firewall and clear logs.
         // Reference: N/A
-        $string3_powershell_greyware_tool_keyword = " -Name DisableAntiSpyware -Value 1 -PropertyType DWORD -Force" nocase ascii wide
+        $string4_powershell_greyware_tool_keyword = " -Name DisableAntiSpyware -Value 1 -PropertyType DWORD -Force" nocase ascii wide
         // Description: powershell command pattern used by sliver - an open source cross-platform adversary emulation/red team framework
         // Reference: https://github.com/BishopFox/sliver
-        $string4_powershell_greyware_tool_keyword = /\s\-NoExit\s\-Command\s\[Console\]\:\:OutputEncoding\=\[Text\.UTF8Encoding\]\:\:UTF8/ nocase ascii wide
+        $string5_powershell_greyware_tool_keyword = /\s\-NoExit\s\-Command\s\[Console\]\:\:OutputEncoding\=\[Text\.UTF8Encoding\]\:\:UTF8/ nocase ascii wide
+        // Description: reverse shell powershell
+        // Reference: https://github.com/mthbernardes/rsg
+        $string6_powershell_greyware_tool_keyword = /\s\-NoP\s\-NonI\s\-W\sHidden\s\-Exec\sBypass\s\-Command\sNew\-Object\sSystem\.Net\.Sockets\.TCPClient/ nocase ascii wide
         // Description: suspicious powershell arguments order used by many exploitation tools
         // Reference: N/A
-        $string5_powershell_greyware_tool_keyword = " -NOP -WIND HIDDeN -eXeC BYPASS -NONI " nocase ascii wide
+        $string7_powershell_greyware_tool_keyword = " -NOP -WIND HIDDeN -eXeC BYPASS -NONI " nocase ascii wide
         // Description: A PowerShell process downloaded and launched a remote file
         // Reference: N/A
-        $string6_powershell_greyware_tool_keyword = /\s\-W\sHidden\s\-command\s.{0,1000}https\:\/\/.{0,1000}Invoke\-WebRequest.{0,1000}\;\siex\s\$/ nocase ascii wide
+        $string8_powershell_greyware_tool_keyword = /\s\-W\sHidden\s\-command\s.{0,1000}https\:\/\/.{0,1000}Invoke\-WebRequest.{0,1000}\;\siex\s\$/ nocase ascii wide
         // Description: A PowerShell process downloaded and launched a remote file
         // Reference: N/A
-        $string7_powershell_greyware_tool_keyword = /\s\-W\sHidden\s\-command\s.{0,1000}Invoke\-WebRequest.{0,1000}https\:\/\/.{0,1000}\;\siex\s\$/ nocase ascii wide
+        $string9_powershell_greyware_tool_keyword = /\s\-W\sHidden\s\-command\s.{0,1000}Invoke\-WebRequest.{0,1000}https\:\/\/.{0,1000}\;\siex\s\$/ nocase ascii wide
         // Description: suspicious powershell command often used in recaptcha phishing campaign (run dialog)
         // Reference: N/A
-        $string8_powershell_greyware_tool_keyword = /\s\-w\shidden\s\-ep\sbypass\s\-nop\s\-Command\s\\"iex\s\(\(New\-Object\sSystem\.Net\.WebClient\)\.DownloadString\(/ nocase ascii wide
+        $string10_powershell_greyware_tool_keyword = /\s\-w\shidden\s\-ep\sbypass\s\-nop\s\-Command\s\\"iex\s\(\(New\-Object\sSystem\.Net\.WebClient\)\.DownloadString\(/ nocase ascii wide
+        // Description: suspicious behavior powershell script
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string11_powershell_greyware_tool_keyword = /\\"\[IO\.File\]\:\:WriteAllBytes\(\$.{0,1000}\,\[Convert\]\:\:FromBase64String\(\\"/ nocase ascii wide
+        // Description: Powershell enumerate domains and forests
+        // Reference: https://medium.com/@simone.kraus/black-basta-playbook-chat-leak-d5036936166d
+        $string12_powershell_greyware_tool_keyword = /\(\[System\.DirectoryServices\.ActiveDirectory\.Domain\]\:\:GetCurrentDomain\(\)\)\.GetAllTrustRelationships\(\)/ nocase ascii wide
+        // Description: lolbin execution with COM object
+        // Reference: https://github.com/xyddnljydd/ComClsIDInterefaceEnum
+        $string13_powershell_greyware_tool_keyword = /\:\:CreateInstance\(\[type\]\:\:GetTypeFromCLSID\(\\"13709620\-C279\-11CE\-A49E\-444553540000/ nocase ascii wide
+        // Description: lolbin execution with COM object
+        // Reference: https://github.com/xyddnljydd/ComClsIDInterefaceEnum
+        $string14_powershell_greyware_tool_keyword = /\:\:CreateInstance\(\[type\]\:\:GetTypeFromCLSID\(\\"33ABD590\-0400\-4FEF\-AF98\-5F5A8A99CFC3/ nocase ascii wide
+        // Description: lolbin execution with COM object
+        // Reference: https://github.com/xyddnljydd/ComClsIDInterefaceEnum
+        $string15_powershell_greyware_tool_keyword = /\:\:CreateInstance\(\[type\]\:\:GetTypeFromCLSID\(\\"F935DC22\-1CF0\-11D0\-ADB9\-00C04FD58A0B\\"/ nocase ascii wide
+        // Description: suspicious behavior powershell script
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string16_powershell_greyware_tool_keyword = /\[IO\.Path\]\:\:Combine\(\$env\:TEMP\,\\"x\.exe\\"\)/ nocase ascii wide
         // Description: alternativeto whoami
         // Reference: N/A
-        $string9_powershell_greyware_tool_keyword = /\[System\.Environment\]\:\:GetEnvironmentVariable\(\'username\'\)/ nocase ascii wide
+        $string17_powershell_greyware_tool_keyword = /\[System\.Environment\]\:\:GetEnvironmentVariable\(\'username\'\)/ nocase ascii wide
         // Description: command aiming to hide a file. It can be performed with  powershell on a WINDOWS machine with command option =hidden
         // Reference: N/A
-        $string10_powershell_greyware_tool_keyword = /\\powershell\.exe.{0,1000}\s\+\=\shidden/ nocase ascii wide
+        $string18_powershell_greyware_tool_keyword = /\\powershell\.exe.{0,1000}\s\+\=\shidden/ nocase ascii wide
         // Description: command aiming to hide a file. It can be performed with  powershell on a WINDOWS machine with command option =hidden
         // Reference: N/A
-        $string11_powershell_greyware_tool_keyword = /\\powershell\.exe.{0,1000}\s\+\=hidden/ nocase ascii wide
+        $string19_powershell_greyware_tool_keyword = /\\powershell\.exe.{0,1000}\s\+\=hidden/ nocase ascii wide
         // Description: command aiming to hide a file. It can be performed with  powershell on a WINDOWS machine with command option =hidden
         // Reference: N/A
-        $string12_powershell_greyware_tool_keyword = /\\powershell\.exe.{0,1000}\s\=\shidden/ nocase ascii wide
+        $string20_powershell_greyware_tool_keyword = /\\powershell\.exe.{0,1000}\s\=\shidden/ nocase ascii wide
         // Description: command aiming to hide a file.  It can be performed with  powershell on a WINDOWS machine with command option =hidden
         // Reference: N/A
-        $string13_powershell_greyware_tool_keyword = /\\powershell\.exe.{0,1000}\s\=hidden/ nocase ascii wide
+        $string21_powershell_greyware_tool_keyword = /\\powershell\.exe.{0,1000}\s\=hidden/ nocase ascii wide
+        // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string22_powershell_greyware_tool_keyword = /\\SOFTWARE\\Policies\\Microsoft\\VisualStudio\\Devtunnels.{0,1000}\s\-Name\s\\"DisableDevTunnelsInVisualStudio\\"\s\-Value\s0\s\-Type\sDword/ nocase ascii wide
         // Description: Once AccessVBOM is enabled - an attacker can use VBA to embed or execute malicious code
         // Reference: https://blog.sekoia.io/double-tap-campaign-russia-nexus-apt-possibly-related-to-apt28-conducts-cyber-espionage-on-central-asia-and-kazakhstan-diplomatic-relations/
-        $string14_powershell_greyware_tool_keyword = /\\Word\\Security\\"\s\-Name\s\\"AccessVBOM\\"\s\-Value\s1\s\-Type\sDword/ nocase ascii wide
+        $string23_powershell_greyware_tool_keyword = /\\Word\\Security\\"\s\-Name\s\\"AccessVBOM\\"\s\-Value\s1\s\-Type\sDword/ nocase ascii wide
         // Description: ESX treats all members of an Active Directory group named "ESX Admins" as administrators by default. Attackers have exploited this misconfiguration to escalate privileges and gain administrative access.
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string15_powershell_greyware_tool_keyword = "Add-ADGroupMember -Identity  \"ESX Admins\"" nocase ascii wide
+        $string24_powershell_greyware_tool_keyword = "Add-ADGroupMember -Identity  \"ESX Admins\"" nocase ascii wide
         // Description: adding a DNS over HTTPS server with powershell
         // Reference: https://learn.microsoft.com/en-us/powershell/module/dnsclient/add-dnsclientdohserveraddress?view=windowsserver2022-ps
-        $string16_powershell_greyware_tool_keyword = /Add\-DnsClientDohServerAddress\s.{0,1000}\-ServerAddress\s/ nocase ascii wide
+        $string25_powershell_greyware_tool_keyword = /Add\-DnsClientDohServerAddress\s.{0,1000}\-ServerAddress\s/ nocase ascii wide
         // Description: add exclusions for defender
         // Reference: https://www.virustotal.com/gui/file/00820a1f0972678cfe7885bc989ab3e5602b0febc96baf9bf3741d56aa374f03/behavior
-        $string17_powershell_greyware_tool_keyword = /Add\-MpPreference\s\-ExclusionPath\s\@\(\$env\:UserProfile\,\s\$env\:ProgramData\)\s\-ExclusionExtension\s\'\.exe\'\s\-Force/ nocase ascii wide
+        $string26_powershell_greyware_tool_keyword = /Add\-MpPreference\s\-ExclusionPath\s\@\(\$env\:UserProfile\,\s\$env\:ProgramData\)\s\-ExclusionExtension\s\'\.exe\'\s\-Force/ nocase ascii wide
         // Description: AV exclusions made by the Dispossessor ransomware group
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string18_powershell_greyware_tool_keyword = /Add\-MpPreference\s\-ExclusionPath\sC\:\\Video\,\sC\:\\install/ nocase ascii wide
+        $string27_powershell_greyware_tool_keyword = /Add\-MpPreference\s\-ExclusionPath\sC\:\\Video\,\sC\:\\install/ nocase ascii wide
         // Description: Exclude powershell from defender detections
         // Reference: N/A
-        $string19_powershell_greyware_tool_keyword = /Add\-MpPreference\s\-ExclusionProcess\s.{0,1000}\\Windows\\System32\\WindowsPowerShell\\v1\.0\\powershell\.exe/ nocase ascii wide
+        $string28_powershell_greyware_tool_keyword = /Add\-MpPreference\s\-ExclusionProcess\s.{0,1000}\\Windows\\System32\\WindowsPowerShell\\v1\.0\\powershell\.exe/ nocase ascii wide
         // Description: allows all users to access all computers with a specified configuration
         // Reference: N/A
-        $string20_powershell_greyware_tool_keyword = /Add\-PswaAuthorizationRule\s\-UsernName\s\\.{0,1000}\s\-ComputerName\s\\.{0,1000}\s\-ConfigurationName\s\\/ nocase ascii wide
+        $string29_powershell_greyware_tool_keyword = /Add\-PswaAuthorizationRule\s\-UsernName\s\\.{0,1000}\s\-ComputerName\s\\.{0,1000}\s\-ConfigurationName\s\\/ nocase ascii wide
         // Description: enable the PowerShell Web Access featur which could be used for remote access and potential
         // Reference: https://www.cisa.gov/sites/default/files/2024-08/aa24-241a-iran-based-cyber-actors-enabling-ransomware-attacks-on-us-organizations_0.pdf
-        $string21_powershell_greyware_tool_keyword = /Add\-PswaAuthorizationRule.{0,1000}\-ComputerName\s/ nocase ascii wide
+        $string30_powershell_greyware_tool_keyword = /Add\-PswaAuthorizationRule.{0,1000}\-ComputerName\s/ nocase ascii wide
         // Description: enable the PowerShell Web Access featur which could be used for remote access and potential
         // Reference: https://www.cisa.gov/sites/default/files/2024-08/aa24-241a-iran-based-cyber-actors-enabling-ransomware-attacks-on-us-organizations_0.pdf
-        $string22_powershell_greyware_tool_keyword = /Add\-PswaAuthorizationRule.{0,1000}\-UserName\s/ nocase ascii wide
+        $string31_powershell_greyware_tool_keyword = /Add\-PswaAuthorizationRule.{0,1000}\-UserName\s/ nocase ascii wide
         // Description: enable the PowerShell Web Access featur which could be used for remote access and potential
         // Reference: https://www.cisa.gov/sites/default/files/2024-08/aa24-241a-iran-based-cyber-actors-enabling-ransomware-attacks-on-us-organizations_0.pdf
-        $string23_powershell_greyware_tool_keyword = /Add\-PswaAuthorizationRule.{0,1000}\-UserName\s/ nocase ascii wide
+        $string32_powershell_greyware_tool_keyword = /Add\-PswaAuthorizationRule.{0,1000}\-UserName\s/ nocase ascii wide
         // Description: install openssh server (critical on DC - must not be installed)
         // Reference: N/A
-        $string24_powershell_greyware_tool_keyword = /Add\-WindowsCapability\s\-Online\s\-Name\sOpenSSH\.Server/ nocase ascii wide
+        $string33_powershell_greyware_tool_keyword = /Add\-WindowsCapability\s\-Online\s\-Name\sOpenSSH\.Server/ nocase ascii wide
         // Description: enabling hyperV - virtualization could be abused by attacker to maintain persistence in a virtual machine
         // Reference: https://embracethered.com/blog/posts/2020/shadowbunny-virtual-machine-red-teaming-technique/
-        $string25_powershell_greyware_tool_keyword = "Add-WindowsFeature Hyper-V -IncludeManagementTools" nocase ascii wide
+        $string34_powershell_greyware_tool_keyword = "Add-WindowsFeature Hyper-V -IncludeManagementTools" nocase ascii wide
         // Description: backs up all Group Policy Objects (GPOs) to a specified path
         // Reference: N/A
-        $string26_powershell_greyware_tool_keyword = "Backup-GPO -All -Path " nocase ascii wide
+        $string35_powershell_greyware_tool_keyword = "Backup-GPO -All -Path " nocase ascii wide
         // Description: clearing security logs with powershell
         // Reference: N/A
-        $string27_powershell_greyware_tool_keyword = "Clear-EventLog -LogName Security" nocase ascii wide
+        $string36_powershell_greyware_tool_keyword = "Clear-EventLog -LogName Security" nocase ascii wide
         // Description: Deletes contents of recycle bin
         // Reference: https://github.com/hak5/omg-payloads/tree/master/payloads/library/credentials/-OMG-Credz-Plz
-        $string28_powershell_greyware_tool_keyword = "Clear-RecycleBin -Force -ErrorAction SilentlyContinue" nocase ascii wide
+        $string37_powershell_greyware_tool_keyword = "Clear-RecycleBin -Force -ErrorAction SilentlyContinue" nocase ascii wide
         // Description: Jenkins Abuse Without admin access
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string29_powershell_greyware_tool_keyword = /cmd\.exe\s\/c\sPowerShell\.exe\s\-Exec\sByPass\s\-Nol\s\-Enc\s/ nocase ascii wide
+        $string38_powershell_greyware_tool_keyword = /cmd\.exe\s\/c\sPowerShell\.exe\s\-Exec\sByPass\s\-Nol\s\-Enc\s/ nocase ascii wide
+        // Description: establishes a TCP connection to a remote server - likely for C2 or payload delivery?.
+        // Reference: https://medium.com/@simone.kraus/black-basta-playbook-chat-leak-d5036936166d
+        $string39_powershell_greyware_tool_keyword = "Connect-SocksServer -Server " nocase ascii wide
         // Description: Copy file to startup via Powershell
         // Reference: N/A
-        $string30_powershell_greyware_tool_keyword = /copy\-item\s.{0,1000}\\roaming\\microsoft\\windows\\start\smenu\\programs\\startup/ nocase ascii wide
+        $string40_powershell_greyware_tool_keyword = /copy\-item\s.{0,1000}\\roaming\\microsoft\\windows\\start\smenu\\programs\\startup/ nocase ascii wide
         // Description: enable the PowerShell Web Access featur which could be used for remote access and potential
         // Reference: https://www.cisa.gov/sites/default/files/2024-08/aa24-241a-iran-based-cyber-actors-enabling-ransomware-attacks-on-us-organizations_0.pdf
-        $string31_powershell_greyware_tool_keyword = "dism  /online /enable-feature /featurename:IIS-WebServerRole /all" nocase ascii wide
+        $string41_powershell_greyware_tool_keyword = "dism  /online /enable-feature /featurename:IIS-WebServerRole /all" nocase ascii wide
         // Description: enable the PowerShell Web Access featur which could be used for remote access and potential
         // Reference: https://www.cisa.gov/sites/default/files/2024-08/aa24-241a-iran-based-cyber-actors-enabling-ransomware-attacks-on-us-organizations_0.pdf
-        $string32_powershell_greyware_tool_keyword = "dism  /online /enable-feature /featurename:WindowsPowerShellWebAccess /all" nocase ascii wide
+        $string42_powershell_greyware_tool_keyword = "dism  /online /enable-feature /featurename:WindowsPowerShellWebAccess /all" nocase ascii wide
         // Description: enable the PowerShell Web Access featur which could be used for remote access and potential
         // Reference: https://www.cisa.gov/sites/default/files/2024-08/aa24-241a-iran-based-cyber-actors-enabling-ransomware-attacks-on-us-organizations_0.pdf
-        $string33_powershell_greyware_tool_keyword = /dism\.exe.{0,1000}\/enable\-feature.{0,1000}WindowsPowerShellWebAccess\s/ nocase ascii wide
+        $string43_powershell_greyware_tool_keyword = /dism\.exe.{0,1000}\/enable\-feature.{0,1000}WindowsPowerShellWebAccess\s/ nocase ascii wide
         // Description: Uninstall Sophos - searching for the name
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string34_powershell_greyware_tool_keyword = "DisplayName -match \"Sophos Anti-Virus\"" nocase ascii wide
+        $string44_powershell_greyware_tool_keyword = "DisplayName -match \"Sophos Anti-Virus\"" nocase ascii wide
         // Description: Uninstall Sophos - searching for the name
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string35_powershell_greyware_tool_keyword = "DisplayName -match \"Sophos AutoUpdate\"" nocase ascii wide
+        $string45_powershell_greyware_tool_keyword = "DisplayName -match \"Sophos AutoUpdate\"" nocase ascii wide
         // Description: Uninstall Sophos - searching for the name
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string36_powershell_greyware_tool_keyword = "DisplayName -match \"Sophos Client Firewall\"" nocase ascii wide
+        $string46_powershell_greyware_tool_keyword = "DisplayName -match \"Sophos Client Firewall\"" nocase ascii wide
         // Description: Uninstall Sophos - searching for the name
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string37_powershell_greyware_tool_keyword = "DisplayName -match \"Sophos Endpoint Defense\"" nocase ascii wide
+        $string47_powershell_greyware_tool_keyword = "DisplayName -match \"Sophos Endpoint Defense\"" nocase ascii wide
         // Description: Uninstall Sophos - searching for the name
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string38_powershell_greyware_tool_keyword = "DisplayName -match \"Sophos Network Threat Protection\"" nocase ascii wide
+        $string48_powershell_greyware_tool_keyword = "DisplayName -match \"Sophos Network Threat Protection\"" nocase ascii wide
         // Description: Uninstall Sophos - searching for the name
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string39_powershell_greyware_tool_keyword = "DisplayName -match \"Sophos Remote Management System\"" nocase ascii wide
+        $string49_powershell_greyware_tool_keyword = "DisplayName -match \"Sophos Remote Management System\"" nocase ascii wide
         // Description: Uninstall Sophos - searching for the name
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string40_powershell_greyware_tool_keyword = "DisplayName -match \"Sophos System Protection\"" nocase ascii wide
+        $string50_powershell_greyware_tool_keyword = "DisplayName -match \"Sophos System Protection\"" nocase ascii wide
         // Description: enables WinRM
         // Reference: https://github.com/alperenugurlu/AD_Enumeration_Hunt/blob/alperen_ugurlu_hack/AD_Enumeration_Hunt.ps1
-        $string41_powershell_greyware_tool_keyword = "enable-psremoting -force" nocase ascii wide
+        $string51_powershell_greyware_tool_keyword = "enable-psremoting -force" nocase ascii wide
         // Description: enabling hyperV - virtualization could be abused by attacker to maintain persistence in a virtual machine
         // Reference: https://embracethered.com/blog/posts/2020/shadowbunny-virtual-machine-red-teaming-technique/
-        $string42_powershell_greyware_tool_keyword = "Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All" nocase ascii wide
+        $string52_powershell_greyware_tool_keyword = "Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All" nocase ascii wide
         // Description: Enabling PowerShell 2.0 Engine - downgrading to powershell version 2
         // Reference: N/A
-        $string43_powershell_greyware_tool_keyword = "Enable-WindowsOptionalFeature -Online -FeatureName MicrosoftWindowsPowerShellV2Root -All" nocase ascii wide
+        $string53_powershell_greyware_tool_keyword = "Enable-WindowsOptionalFeature -Online -FeatureName MicrosoftWindowsPowerShellV2Root -All" nocase ascii wide
         // Description: enabling hyperV - virtualization could be abused by attacker to maintain persistence in a virtual machine
         // Reference: https://embracethered.com/blog/posts/2020/shadowbunny-virtual-machine-red-teaming-technique/
-        $string44_powershell_greyware_tool_keyword = /Enable\-WindowsOptionalFeature\s\-Online\:\$true\s\-FeatureName\sMicrosoft\-Hyper\-V\s\-All\:\$true/ nocase ascii wide
+        $string54_powershell_greyware_tool_keyword = /Enable\-WindowsOptionalFeature\s\-Online\:\$true\s\-FeatureName\sMicrosoft\-Hyper\-V\s\-All\:\$true/ nocase ascii wide
         // Description: Find machine where the user has admin privs
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string45_powershell_greyware_tool_keyword = "Find-LocalAdminAccess -Verbose" nocase ascii wide
+        $string55_powershell_greyware_tool_keyword = "Find-LocalAdminAccess -Verbose" nocase ascii wide
         // Description: port scanner with powershell command test-NetConnection
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string46_powershell_greyware_tool_keyword = /foreach\s\(\$.{0,1000}\s\{Test\-NetConnection\s\-Port\s/ nocase ascii wide
+        $string56_powershell_greyware_tool_keyword = /foreach\s\(\$.{0,1000}\s\{Test\-NetConnection\s\-Port\s/ nocase ascii wide
         // Description: alternativeto whoami
         // Reference: N/A
-        $string47_powershell_greyware_tool_keyword = "gci env:USERNAME" nocase ascii wide
+        $string57_powershell_greyware_tool_keyword = "gci env:USERNAME" nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string48_powershell_greyware_tool_keyword = /gci\s\-h\sC\:\\pagefile\.sys/ nocase ascii wide
+        $string58_powershell_greyware_tool_keyword = /gci\s\-h\sC\:\\pagefile\.sys/ nocase ascii wide
         // Description: AD Module Enumerate computers with Unconstrained Delegation
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string49_powershell_greyware_tool_keyword = /Get\-ADComputer\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True\}/ nocase ascii wide
+        $string59_powershell_greyware_tool_keyword = /Get\-ADComputer\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True\}/ nocase ascii wide
         // Description: AD Module Search for a particular string in attributes (admin)
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string50_powershell_greyware_tool_keyword = /Get\-ADGroup\s\-Filter\s.{0,1000}Name\s\-like\s.{0,1000}admin/ nocase ascii wide
+        $string60_powershell_greyware_tool_keyword = /Get\-ADGroup\s\-Filter\s.{0,1000}Name\s\-like\s.{0,1000}admin/ nocase ascii wide
+        // Description: Powershell enumerate domains and forests
+        // Reference: N/A
+        $string61_powershell_greyware_tool_keyword = "Get-ADGroupMember Administrators -Recursive" nocase ascii wide
         // Description: List the members of the "Domain Admins" group within Active Directory
         // Reference: N/A
-        $string51_powershell_greyware_tool_keyword = "Get-ADGroupMember -Identity \"Domain Admins\"" nocase ascii wide
+        $string62_powershell_greyware_tool_keyword = "Get-ADGroupMember -Identity \"Domain Admins\"" nocase ascii wide
         // Description: AD Module Enumerate principals with Constrained Delegation enabled
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string52_powershell_greyware_tool_keyword = /Get\-ADObject\s\-Filter\s\{msDS\-AllowedToDelegateTo\s.{0,1000}\s\-Properties\smsDS\-AllowedToDelegateTo/ nocase ascii wide
+        $string63_powershell_greyware_tool_keyword = /Get\-ADObject\s\-Filter\s\{msDS\-AllowedToDelegateTo\s.{0,1000}\s\-Properties\smsDS\-AllowedToDelegateTo/ nocase ascii wide
         // Description: Enumerate shadow security principals mapped to a high priv group
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string53_powershell_greyware_tool_keyword = /Get\-ADObject\s\-SearchBase\s.{0,1000}CN\=Shadow\sPrincipal\sConfiguration.{0,1000}CN\=Services.{0,1000}\s\(Get\-ADRootDSE\)\.configurationNamingContext\)\s\|\sselect\s.{0,1000}msDS\-ShadowPrincipalSid/ nocase ascii wide
+        $string64_powershell_greyware_tool_keyword = /Get\-ADObject\s\-SearchBase\s.{0,1000}CN\=Shadow\sPrincipal\sConfiguration.{0,1000}CN\=Services.{0,1000}\s\(Get\-ADRootDSE\)\.configurationNamingContext\)\s\|\sselect\s.{0,1000}msDS\-ShadowPrincipalSid/ nocase ascii wide
         // Description: AD module Enumerate users
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string54_powershell_greyware_tool_keyword = /Get\-ADUser\s\-Filter\s\{DoesNotRequirePreAuth\s\-eq\s\$True\}\s\-Properties\sDoesNotRequirePreAuth/ nocase ascii wide
+        $string65_powershell_greyware_tool_keyword = /Get\-ADUser\s\-Filter\s\{DoesNotRequirePreAuth\s\-eq\s\$True\}\s\-Properties\sDoesNotRequirePreAuth/ nocase ascii wide
         // Description: AD Module Enumerate computers with Unconstrained Delegation
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string55_powershell_greyware_tool_keyword = /Get\-ADUser\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True\}/ nocase ascii wide
+        $string66_powershell_greyware_tool_keyword = /Get\-ADUser\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True\}/ nocase ascii wide
         // Description: AppLocker Get AppLocker policy
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string56_powershell_greyware_tool_keyword = "Get-AppLockerPolicy -Effective " nocase ascii wide
+        $string67_powershell_greyware_tool_keyword = "Get-AppLockerPolicy -Effective " nocase ascii wide
         // Description: Find Potential Credential in Files - This directory often contains encrypted credentials or other sensitive files related to user accounts
         // Reference: N/A
-        $string57_powershell_greyware_tool_keyword = /Get\-ChildItem\s\-Hidden\sC\:\\Users\\.{0,1000}\\AppData\\Local\\Microsoft\\Credentials\\/ nocase ascii wide
+        $string68_powershell_greyware_tool_keyword = /Get\-ChildItem\s\-Hidden\sC\:\\Users\\.{0,1000}\\AppData\\Local\\Microsoft\\Credentials\\/ nocase ascii wide
         // Description: Find Potential Credential in Files - This directory often contains encrypted credentials or other sensitive files related to user accounts
         // Reference: N/A
-        $string58_powershell_greyware_tool_keyword = /Get\-ChildItem\s\-Hidden\sC\:\\Users\\.{0,1000}\\AppData\\Roaming\\Microsoft\\Credentials\\/ nocase ascii wide
+        $string69_powershell_greyware_tool_keyword = /Get\-ChildItem\s\-Hidden\sC\:\\Users\\.{0,1000}\\AppData\\Roaming\\Microsoft\\Credentials\\/ nocase ascii wide
         // Description: set the DNS server configuration
         // Reference: N/A
-        $string59_powershell_greyware_tool_keyword = /Get\-DhcpServerv4Scope\s\|\sSet\-DhcpServerv4OptionValue\s\-DnsServer\s/ nocase ascii wide
+        $string70_powershell_greyware_tool_keyword = /Get\-DhcpServerv4Scope\s\|\sSet\-DhcpServerv4OptionValue\s\-DnsServer\s/ nocase ascii wide
         // Description: AD Module Enumerate principals with Constrained Delegation enabled
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string60_powershell_greyware_tool_keyword = "Get-DomainComputer -TrustedToAuth" nocase ascii wide
+        $string71_powershell_greyware_tool_keyword = "Get-DomainComputer -TrustedToAuth" nocase ascii wide
         // Description: Powerview Enumerate users
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string61_powershell_greyware_tool_keyword = "Get-DomainUser -KerberosPreuthNotRequired -Verbose" nocase ascii wide
+        $string72_powershell_greyware_tool_keyword = "Get-DomainUser -KerberosPreuthNotRequired -Verbose" nocase ascii wide
         // Description: AD Module GroupPolicy - List of GPO in the domain
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string62_powershell_greyware_tool_keyword = "Get-GPO -All" nocase ascii wide
+        $string73_powershell_greyware_tool_keyword = "Get-GPO -All" nocase ascii wide
         // Description: PowerView get Locally logged users on a machine
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string63_powershell_greyware_tool_keyword = "Get-LoggedonLocal -ComputerName " nocase ascii wide
+        $string74_powershell_greyware_tool_keyword = "Get-LoggedonLocal -ComputerName " nocase ascii wide
         // Description: Gets the status of antimalware software on the computer.
         // Reference: https://thedfirreport.com/2023/02/06/collect-exfiltrate-sleep-repeat/
-        $string64_powershell_greyware_tool_keyword = "Get-MpComputerStatus" nocase ascii wide
+        $string75_powershell_greyware_tool_keyword = "Get-MpComputerStatus" nocase ascii wide
         // Description: get defender AV exclusions
         // Reference: N/A
-        $string65_powershell_greyware_tool_keyword = /Get\-MpPreference\s\|\sSelect\-Object\s\-ExpandProperty\sExclusionPath/ nocase ascii wide
+        $string76_powershell_greyware_tool_keyword = /Get\-MpPreference\s\|\sSelect\-Object\s\-ExpandProperty\sExclusionPath/ nocase ascii wide
         // Description: Find groups in the current domain (PowerView)
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string66_powershell_greyware_tool_keyword = "Get-NetGroup -FullData" nocase ascii wide
+        $string77_powershell_greyware_tool_keyword = "Get-NetGroup -FullData" nocase ascii wide
         // Description: the command is used to discover the members of a specific domain group DNSAdmins which can provide an adversary with valuable information about the target environment. The knowledge of group members can be exploited by attackers to identify potential targets for privilege escalation or Lateral Movement within the network.
         // Reference: N/A
-        $string67_powershell_greyware_tool_keyword = /Get\-NetGroupMember\s\-GroupName\s.{0,1000}DNSAdmins/ nocase ascii wide
+        $string78_powershell_greyware_tool_keyword = /Get\-NetGroupMember\s\-GroupName\s.{0,1000}DNSAdmins/ nocase ascii wide
         // Description: PowerView Find users with SPN
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string68_powershell_greyware_tool_keyword = "Get-NetUser -SPN" nocase ascii wide
+        $string79_powershell_greyware_tool_keyword = "Get-NetUser -SPN" nocase ascii wide
         // Description: delete shadow copies
         // Reference: https://rexorvc0.com/2024/06/19/Akira-The-Old-New-Style-Crime/
-        $string69_powershell_greyware_tool_keyword = /Get\-WmiObject\sWin32_ShadowCopy\s\|\sRemove\-WmiObject/ nocase ascii wide
+        $string80_powershell_greyware_tool_keyword = /Get\-WmiObject\sWin32_ShadowCopy\s\|\sRemove\-WmiObject/ nocase ascii wide
         // Description: downgrading to powershell version 2
         // Reference: N/A
-        $string70_powershell_greyware_tool_keyword = /HostVersion\=2\.0.{0,1000}EngineVersion\=2\.0/ nocase ascii wide
+        $string81_powershell_greyware_tool_keyword = /HostVersion\=2\.0.{0,1000}EngineVersion\=2\.0/ nocase ascii wide
+        // Description: suspicious base64 execution often observed by stealers - could also be used legitimely by some script
+        // Reference: N/A
+        $string82_powershell_greyware_tool_keyword = /IEX\s\(\[System\.Text\.Encoding\]\:\:UTF8\.GetString\(\[System\.Convert\]\:\:FromBase64String\(/ nocase ascii wide
         // Description: download from github from memory
         // Reference: N/A
-        $string71_powershell_greyware_tool_keyword = /IEX\(New\-Object\sSystem\.Net\.WebClient\)\.DownloadString\(\\"https\:\/\/raw\.githubusercontent\.com\// nocase ascii wide
+        $string83_powershell_greyware_tool_keyword = /IEX\(New\-Object\sSystem\.Net\.WebClient\)\.DownloadString\(\\"https\:\/\/raw\.githubusercontent\.com\// nocase ascii wide
         // Description: enable the PowerShell Web Access featur which could be used for remote access and potential
         // Reference: https://www.cisa.gov/sites/default/files/2024-08/aa24-241a-iran-based-cyber-actors-enabling-ransomware-attacks-on-us-organizations_0.pdf
-        $string72_powershell_greyware_tool_keyword = "Install-PswaWebApplication -UseTestCertificate" nocase ascii wide
+        $string84_powershell_greyware_tool_keyword = "Install-PswaWebApplication -UseTestCertificate" nocase ascii wide
         // Description: enable the PowerShell Web Access featur which could be used for remote access and potential
         // Reference: https://www.cisa.gov/sites/default/files/2024-08/aa24-241a-iran-based-cyber-actors-enabling-ransomware-attacks-on-us-organizations_0.pdf
-        $string73_powershell_greyware_tool_keyword = "Install-PswaWebApplication" nocase ascii wide
+        $string85_powershell_greyware_tool_keyword = "Install-PswaWebApplication" nocase ascii wide
         // Description: enable the PowerShell Web Access featur which could be used for remote access and potential
         // Reference: https://www.cisa.gov/sites/default/files/2024-08/aa24-241a-iran-based-cyber-actors-enabling-ransomware-attacks-on-us-organizations_0.pdf
-        $string74_powershell_greyware_tool_keyword = "Install-WindowsFeature -Name Web-Server -IncludeManagementTools" nocase ascii wide
+        $string86_powershell_greyware_tool_keyword = "Install-WindowsFeature -Name Web-Server -IncludeManagementTools" nocase ascii wide
         // Description: enable the PowerShell Web Access featur which could be used for remote access and potential
         // Reference: https://www.cisa.gov/sites/default/files/2024-08/aa24-241a-iran-based-cyber-actors-enabling-ransomware-attacks-on-us-organizations_0.pdf
-        $string75_powershell_greyware_tool_keyword = "Install-WindowsFeature WindowsPowerShellWebAccess" nocase ascii wide
+        $string87_powershell_greyware_tool_keyword = "Install-WindowsFeature WindowsPowerShellWebAccess" nocase ascii wide
         // Description: Find local admins on the domain machines
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string76_powershell_greyware_tool_keyword = "Invoke-EnumerateLocalAdmin -Verbose" nocase ascii wide
+        $string88_powershell_greyware_tool_keyword = "Invoke-EnumerateLocalAdmin -Verbose" nocase ascii wide
+        // Description: suspicious base64 execution often observed by stealers - could also be used legitimely by some script
+        // Reference: N/A
+        $string89_powershell_greyware_tool_keyword = /invoke\-expression\(\[System\.Text\.Encoding\]\:\:UTF8\.GetString\(\[System\.Convert\]\:\:FromBase64String\(/ nocase ascii wide
         // Description: Check local admin access for the current user where the targets are found
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string77_powershell_greyware_tool_keyword = "Invoke-UserHunter -CheckAccess" nocase ascii wide
+        $string90_powershell_greyware_tool_keyword = "Invoke-UserHunter -CheckAccess" nocase ascii wide
         // Description: C2 server to connect to a victim machine via reverse shell
         // Reference: https://github.com/reveng007/C2_Server
-        $string78_powershell_greyware_tool_keyword = /Invoke\-WebRequest\sifconfig\.me\/ip.{0,1000}Content\.Trim\(\)/ nocase ascii wide
+        $string91_powershell_greyware_tool_keyword = /Invoke\-WebRequest\sifconfig\.me\/ip.{0,1000}Content\.Trim\(\)/ nocase ascii wide
         // Description: alternativeto whoami
         // Reference: N/A
-        $string79_powershell_greyware_tool_keyword = "ls env:USERNAME" nocase ascii wide
+        $string92_powershell_greyware_tool_keyword = "ls env:USERNAME" nocase ascii wide
         // Description: ESX treats all members of an Active Directory group named "ESX Admins" as administrators by default. Attackers have exploited this misconfiguration to escalate privileges and gain administrative access.
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string80_powershell_greyware_tool_keyword = "New-ADGroup -Name \"ESX Admins\"" nocase ascii wide
+        $string93_powershell_greyware_tool_keyword = "New-ADGroup -Name \"ESX Admins\"" nocase ascii wide
         // Description: hiding a user from the login screen by modifying a specific registry key
         // Reference: N/A
-        $string81_powershell_greyware_tool_keyword = /New\-ItemProperty\s\-Path\s\\"HKLM\:\\Software\\Microsoft\\Windows\sNT\\CurrentVersion\\Winlogon\\SpecialAccounts\\Userlist\\"\s\-Name\s.{0,1000}\s\-Value\s0\s\-PropertyType\sDword/ nocase ascii wide
+        $string94_powershell_greyware_tool_keyword = /New\-ItemProperty\s\-Path\s\\"HKLM\:\\Software\\Microsoft\\Windows\sNT\\CurrentVersion\\Winlogon\\SpecialAccounts\\Userlist\\"\s\-Name\s.{0,1000}\s\-Value\s0\s\-PropertyType\sDword/ nocase ascii wide
+        // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string95_powershell_greyware_tool_keyword = /New\-ItemProperty\s\-Path\s\\"HKLM\:\\SOFTWARE\\Policies\\Microsoft\\VisualStudio\\Devtunnels\\"\s\-Name\s\\"DisableDevTunnelsInVisualStudio\\"\s\-PropertyType\sDWORD\s\-Value\s0/ nocase ascii wide
         // Description: completely disable Windows Defender on your computer by adding a registry key
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string82_powershell_greyware_tool_keyword = /New\-ItemProperty\s\-Path\s\\"HKLM\:\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\\"\s\-Name\sDisableAntiSpyware\s\-Value\s1\s\-PropertyType\sDWORD\s\-Force\s/ nocase ascii wide
+        $string96_powershell_greyware_tool_keyword = /New\-ItemProperty\s\-Path\s\\"HKLM\:\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\\"\s\-Name\sDisableAntiSpyware\s\-Value\s1\s\-PropertyType\sDWORD\s\-Force\s/ nocase ascii wide
         // Description: allowing SSH incoming connections (critical on DC)
         // Reference: N/A
-        $string83_powershell_greyware_tool_keyword = /New\-NetFirewallRule\s.{0,1000}\s\-Enabled\sTrue\s\-Direction\sInbound\s\-Protocol\sTCP\s\-Action\sAllow\s\-LocalPort\s22/ nocase ascii wide
+        $string97_powershell_greyware_tool_keyword = /New\-NetFirewallRule\s.{0,1000}\s\-Enabled\sTrue\s\-Direction\sInbound\s\-Protocol\sTCP\s\-Action\sAllow\s\-LocalPort\s22/ nocase ascii wide
         // Description: Powershell reverse shell
         // Reference: https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
-        $string84_powershell_greyware_tool_keyword = /New\-Object\sSystem\.Net\.Sockets\.TCPClient\(.{0,1000}\$stream\s\=\s\$client\.GetStream\(\).{0,1000}\[byte\[\]\]\$bytes\s\=\s0\.\.65535/ nocase ascii wide
+        $string98_powershell_greyware_tool_keyword = /New\-Object\sSystem\.Net\.Sockets\.TCPClient\(.{0,1000}\$stream\s\=\s\$client\.GetStream\(\).{0,1000}\[byte\[\]\]\$bytes\s\=\s0\.\.65535/ nocase ascii wide
         // Description: Execution Policy Bypass evasion
         // Reference: N/A
-        $string85_powershell_greyware_tool_keyword = /powershell\s\?encodedcommand\s\$env\:PSExecutionPolicyPreference\=\\"bypass\\"/ nocase ascii wide
+        $string99_powershell_greyware_tool_keyword = /powershell\s\?encodedcommand\s\$env\:PSExecutionPolicyPreference\=\\"bypass\\"/ nocase ascii wide
         // Description: clearing powershell history
         // Reference: N/A
-        $string86_powershell_greyware_tool_keyword = "powershell -c \"Clear-History\"" nocase ascii wide
+        $string100_powershell_greyware_tool_keyword = "powershell -c \"Clear-History\"" nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string87_powershell_greyware_tool_keyword = /powershell\s\-c\s.{0,1000}\\windows\\system32\\inetsrv\\appcmd\.exe\slist\sapppool\s\/\@t\:/ nocase ascii wide
+        $string101_powershell_greyware_tool_keyword = /powershell\s\-c\s.{0,1000}\\windows\\system32\\inetsrv\\appcmd\.exe\slist\sapppool\s\/\@t\:/ nocase ascii wide
         // Description: clearing powershell history
         // Reference: N/A
-        $string88_powershell_greyware_tool_keyword = "powershell -c clear" nocase ascii wide
+        $string102_powershell_greyware_tool_keyword = "powershell -c clear" nocase ascii wide
         // Description: Defense evasion technique In order to avoid detection at any point of the kill chain. attackers use several ways to disable anti-virus. disable Microsoft firewall and clear logs.
         // Reference: N/A
-        $string89_powershell_greyware_tool_keyword = /powershell\sNew\-ItemProperty\s\-Path\s.{0,1000}HKLM\:\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender.{0,1000}\s\-Name\sDisableAntiSpyware\s\-Value\s1\s\-PropertyType\sDWORD\s\-Force/ nocase ascii wide
+        $string103_powershell_greyware_tool_keyword = /powershell\sNew\-ItemProperty\s\-Path\s.{0,1000}HKLM\:\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender.{0,1000}\s\-Name\sDisableAntiSpyware\s\-Value\s1\s\-PropertyType\sDWORD\s\-Force/ nocase ascii wide
         // Description: uninstalls Windows Defender
         // Reference: https://github.com/spicy-bear/Threat-Hunting/blob/2c89b519862672e29547b4db4796caa923044595/95.213.145.101/%D1%81%D0%B8%D1%80/bat/defendermalwar.bat#L7
-        $string90_powershell_greyware_tool_keyword = "powershell Uninstall-WindowsFeature -Name Windows-Defender" nocase ascii wide
+        $string104_powershell_greyware_tool_keyword = "powershell Uninstall-WindowsFeature -Name Windows-Defender" nocase ascii wide
         // Description: PowerShell Downgrade Attacks - forces PowerShell to run in version 2.0
         // Reference: N/A
-        $string91_powershell_greyware_tool_keyword = "PowerShell -Version 2 -Command " nocase ascii wide
+        $string105_powershell_greyware_tool_keyword = "PowerShell -Version 2 -Command " nocase ascii wide
         // Description: downgrading to powershell version 2
         // Reference: N/A
-        $string92_powershell_greyware_tool_keyword = "powershell -Version 2" nocase ascii wide
+        $string106_powershell_greyware_tool_keyword = "powershell -Version 2" nocase ascii wide
         // Description: Windows Defender tampering technique 
         // Reference: https://thedfirreport.com/2023/04/03/malicious-iso-file-leads-to-domain-wide-ransomware/
-        $string93_powershell_greyware_tool_keyword = /powershell.{0,1000}Uninstall\-WindowsFeature\s\-Name\sWindows\-Defender\-GUI/ nocase ascii wide
+        $string107_powershell_greyware_tool_keyword = /powershell.{0,1000}Uninstall\-WindowsFeature\s\-Name\sWindows\-Defender\-GUI/ nocase ascii wide
         // Description: Adversaries may attempt to execute powershell script from known accessible location
         // Reference: N/A
-        $string94_powershell_greyware_tool_keyword = /Powershell\.exe\s\s\-windowstyle\shidden\s\-nop\s\-ExecutionPolicy\sBypass\s\s\-Commmand\s.{0,1000}C\:\\Users\\.{0,1000}\\AppData\\Roaming\\/ nocase ascii wide
+        $string108_powershell_greyware_tool_keyword = /Powershell\.exe\s\s\-windowstyle\shidden\s\-nop\s\-ExecutionPolicy\sBypass\s\s\-Commmand\s.{0,1000}C\:\\Users\\.{0,1000}\\AppData\\Roaming\\/ nocase ascii wide
         // Description: downloading from IP without domain name
         // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
-        $string95_powershell_greyware_tool_keyword = /powershell\.exe\scurl\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
+        $string109_powershell_greyware_tool_keyword = /powershell\.exe\scurl\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
         // Description: command pattern used by crackmapexec by default A swiss army knife for pentesting networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string96_powershell_greyware_tool_keyword = /powershell\.exe\s\-exec\sbypass\s\-noni\s\-nop\s\-w\s1\s\-C/ nocase ascii wide
+        $string110_powershell_greyware_tool_keyword = /powershell\.exe\s\-exec\sbypass\s\-noni\s\-nop\s\-w\s1\s\-C/ nocase ascii wide
         // Description: CrackMapExec behavior
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string97_powershell_greyware_tool_keyword = /powershell\.exe\s\-exec\sbypass\s\-noni\s\-nop\s\-w\s1\s\-C.{0,1000}invoke_obfuscation/ nocase ascii wide
+        $string111_powershell_greyware_tool_keyword = /powershell\.exe\s\-exec\sbypass\s\-noni\s\-nop\s\-w\s1\s\-C.{0,1000}invoke_obfuscation/ nocase ascii wide
         // Description: downloading from IP without domain name
         // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
-        $string98_powershell_greyware_tool_keyword = /powershell\.exe\sInvoke\-WebRequest\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
+        $string112_powershell_greyware_tool_keyword = /powershell\.exe\sInvoke\-WebRequest\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
         // Description: downloading from IP without domain name
         // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
-        $string99_powershell_greyware_tool_keyword = /powershell\.exe\siwr\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
+        $string113_powershell_greyware_tool_keyword = /powershell\.exe\siwr\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
         // Description: command pattern used by crackmapexec by default A swiss army knife for pentesting networks
         // Reference: https://github.com/byt3bl33d3r/CrackMapExec
-        $string100_powershell_greyware_tool_keyword = /powershell\.exe\s\-noni\s\-nop\s\-w\s1\s\-enc\s/ nocase ascii wide
+        $string114_powershell_greyware_tool_keyword = /powershell\.exe\s\-noni\s\-nop\s\-w\s1\s\-enc\s/ nocase ascii wide
         // Description: CrackMapExec behavior
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string101_powershell_greyware_tool_keyword = /powershell\.exe\s\-NoP\s\-NoL\s\-sta\s\-NonI\s\-W\sHidden\s\-Exec\sBypass\s\-Enc\s/ nocase ascii wide
+        $string115_powershell_greyware_tool_keyword = /powershell\.exe\s\-NoP\s\-NoL\s\-sta\s\-NonI\s\-W\sHidden\s\-Exec\sBypass\s\-Enc\s/ nocase ascii wide
         // Description: downloading from IP without domain name
         // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
-        $string102_powershell_greyware_tool_keyword = /powershell\.exe\s\-nop\s\-w\shidden\s\-c\s\\"IEX\s\(\(new\-object\snet\.webclient\)\.downloadstring\(\'http\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
+        $string116_powershell_greyware_tool_keyword = /powershell\.exe\s\-nop\s\-w\shidden\s\-c\s\\"IEX\s\(\(new\-object\snet\.webclient\)\.downloadstring\(\'http\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
         // Description: PowerShell Downgrade Attacks - forces PowerShell to run in version 2.0
         // Reference: N/A
-        $string103_powershell_greyware_tool_keyword = /PowerShell\.exe\s\-Version\s2\s\-Command\s/ nocase ascii wide
+        $string117_powershell_greyware_tool_keyword = /PowerShell\.exe\s\-Version\s2\s\-Command\s/ nocase ascii wide
         // Description: downgrading to powershell version 2
         // Reference: N/A
-        $string104_powershell_greyware_tool_keyword = /powershell\.exe\s\-Version\s2/ nocase ascii wide
+        $string118_powershell_greyware_tool_keyword = /powershell\.exe\s\-Version\s2/ nocase ascii wide
         // Description: downloading from IP without domain name
         // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
-        $string105_powershell_greyware_tool_keyword = /powershell\.exe\swget\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
+        $string119_powershell_greyware_tool_keyword = /powershell\.exe\swget\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
         // Description: downgrading to powershell version 2
         // Reference: N/A
-        $string106_powershell_greyware_tool_keyword = /powershell\.exe\\"\s\-Version\s2/ nocase ascii wide
+        $string120_powershell_greyware_tool_keyword = /powershell\.exe\\"\s\-Version\s2/ nocase ascii wide
         // Description: attempts to evade defenses or remove traces of activity by deleting MRUList registry keys
         // Reference: N/A
-        $string107_powershell_greyware_tool_keyword = /reg\sdelete\s.{0,1000}\s\/v\sMRUList\s\/f/ nocase ascii wide
+        $string121_powershell_greyware_tool_keyword = /reg\sdelete\s.{0,1000}\s\/v\sMRUList\s\/f/ nocase ascii wide
         // Description: Remove  Sophos folders
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string108_powershell_greyware_tool_keyword = /Remove\-Item\s\-LiteralPath\s\\"C\:\\Program\sFiles\s\(x86\)\\Sophos\\"\s\-Force\s\-Recurse/ nocase ascii wide
+        $string122_powershell_greyware_tool_keyword = /Remove\-Item\s\-LiteralPath\s\\"C\:\\Program\sFiles\s\(x86\)\\Sophos\\"\s\-Force\s\-Recurse/ nocase ascii wide
         // Description: Remove  Sophos folders
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string109_powershell_greyware_tool_keyword = /Remove\-Item\s\-LiteralPath\s\\"C\:\\Program\sFiles\\Sophos\\"\s\-Force\s\-Recurse/ nocase ascii wide
+        $string123_powershell_greyware_tool_keyword = /Remove\-Item\s\-LiteralPath\s\\"C\:\\Program\sFiles\\Sophos\\"\s\-Force\s\-Recurse/ nocase ascii wide
         // Description: Remove  Sophos folders
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string110_powershell_greyware_tool_keyword = /Remove\-Item\s\-LiteralPath\s\\"C\:\\Program\sFiles\\Sophos.{0,1000}\\"\s\-Force\s\-Recurse/ nocase ascii wide
+        $string124_powershell_greyware_tool_keyword = /Remove\-Item\s\-LiteralPath\s\\"C\:\\Program\sFiles\\Sophos.{0,1000}\\"\s\-Force\s\-Recurse/ nocase ascii wide
         // Description: Remove  Sophos folders
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string111_powershell_greyware_tool_keyword = /Remove\-Item\s\-LiteralPath\s\\"C\:\\ProgramData\\Sophos\\"\s\-Force\s\-Recurse/ nocase ascii wide
+        $string125_powershell_greyware_tool_keyword = /Remove\-Item\s\-LiteralPath\s\\"C\:\\ProgramData\\Sophos\\"\s\-Force\s\-Recurse/ nocase ascii wide
+        // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string126_powershell_greyware_tool_keyword = /Remove\-ItemProperty\s\-Path\s\\"HKLM\:\\SOFTWARE\\Policies\\Microsoft\\VisualStudio\\Devtunnels\\"\s\-Name\s\\"DisableDevTunnelsInVisualStudio\\"/ nocase ascii wide
         // Description: attempts to evade defenses or remove traces of activity by deleting MRUList registry keys
         // Reference: N/A
-        $string112_powershell_greyware_tool_keyword = /Remove\-ItemProperty\s\-Path.{0,1000}\s\-Name\sMRUList\s/ nocase ascii wide
+        $string127_powershell_greyware_tool_keyword = /Remove\-ItemProperty\s\-Path.{0,1000}\s\-Name\sMRUList\s/ nocase ascii wide
+        // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string128_powershell_greyware_tool_keyword = /Remove\-ItemProperty.{0,1000}HKLM\:\\SOFTWARE\\Policies\\Microsoft\\VisualStudio\\Devtunnels.{0,1000}DisableDevTunnelsInVisualStudio/ nocase ascii wide
         // Description: list AV products with powershell
         // Reference: N/A
-        $string113_powershell_greyware_tool_keyword = /root\/SecurityCenter2.{0,1000}\s\-ClassName\sAntiVirusProduct/ nocase ascii wide
+        $string129_powershell_greyware_tool_keyword = /root\/SecurityCenter2.{0,1000}\s\-ClassName\sAntiVirusProduct/ nocase ascii wide
         // Description: AMSI bypass obfuscation pattern
         // Reference: N/A
-        $string114_powershell_greyware_tool_keyword = /S\`eT\-It\`em\s\(\s\'V\'\+\'aR\'\s\+\s\s\'IA\'\s\+\s\(\'blE\:1\'\+\'q2\'\)/ nocase ascii wide
+        $string130_powershell_greyware_tool_keyword = /S\`eT\-It\`em\s\(\s\'V\'\+\'aR\'\s\+\s\s\'IA\'\s\+\s\(\'blE\:1\'\+\'q2\'\)/ nocase ascii wide
         // Description: AD module Logon Script from remote IP
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string115_powershell_greyware_tool_keyword = /Set\-ADObject\s\-SamAccountName\s.{0,1000}\s\-PropertyName\sscriptpath\s\-PropertyValue\s.{0,1000}\\.{0,1000}\.exe/ nocase ascii wide
+        $string131_powershell_greyware_tool_keyword = /Set\-ADObject\s\-SamAccountName\s.{0,1000}\s\-PropertyName\sscriptpath\s\-PropertyValue\s.{0,1000}\\.{0,1000}\.exe/ nocase ascii wide
         // Description: Clearing the clipboard is a deliberate attempt to cover tracks and make the attack less detectable
         // Reference: https://github.com/PaloAltoNetworks/Unit42-timely-threat-intel/blob/main/2024-05-14-IOCs-for-DarkGate-activity.txt
-        $string116_powershell_greyware_tool_keyword = "Set-Clipboard -Value ' '" nocase ascii wide
+        $string132_powershell_greyware_tool_keyword = "Set-Clipboard -Value ' '" nocase ascii wide
         // Description: Clearing the clipboard is a deliberate attempt to cover tracks and make the attack less detectable
         // Reference: https://github.com/PaloAltoNetworks/Unit42-timely-threat-intel/blob/main/2024-05-14-IOCs-for-DarkGate-activity.txt
-        $string117_powershell_greyware_tool_keyword = "Set-Clipboard -Value ''" nocase ascii wide
+        $string133_powershell_greyware_tool_keyword = "Set-Clipboard -Value ''" nocase ascii wide
+        // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string134_powershell_greyware_tool_keyword = /Set\-ItemProperty.{0,1000}HKLM\:\\SOFTWARE\\Policies\\Microsoft\\VisualStudio\\Devtunnels.{0,1000}DisableDevTunnelsInVisualStudio.{0,1000}0/ nocase ascii wide
         // Description: Disable IPS
         // Reference: N/A
-        $string118_powershell_greyware_tool_keyword = /Set\-MPPreference\s\-DisableIntrusionPreventionSystem\s\$true/ nocase ascii wide
+        $string135_powershell_greyware_tool_keyword = /Set\-MPPreference\s\-DisableIntrusionPreventionSystem\s\$true/ nocase ascii wide
         // Description: Disable scanning all downloaded files and attachments
         // Reference: N/A
-        $string119_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableIOAVProtection\s\$true/ nocase ascii wide
+        $string136_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableIOAVProtection\s\$true/ nocase ascii wide
         // Description: Defense evasion technique In order to avoid detection at any point of the kill chain. attackers use several ways to disable anti-virus. disable Microsoft firewall and clear logs.
         // Reference: N/A
-        $string120_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableRealtimeMonitoring\s\$true/ nocase ascii wide
+        $string137_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableRealtimeMonitoring\s\$true/ nocase ascii wide
         // Description: Disable AMSI (set to 0 to enable)
         // Reference: N/A
-        $string121_powershell_greyware_tool_keyword = "Set-MpPreference -DisableScriptScanning 1 " nocase ascii wide
+        $string138_powershell_greyware_tool_keyword = "Set-MpPreference -DisableScriptScanning 1 " nocase ascii wide
         // Description: exclude exe file extensions from AV detections
         // Reference: https://github.com/Akabanwa-toma/hacke/blob/aaebb5cb188eb3a17bebfedfbde6b354e5522b92/installer.bat#L29C21-L29C63
-        $string122_powershell_greyware_tool_keyword = "Set-MpPreference -ExclusionExtension exe" nocase ascii wide
+        $string139_powershell_greyware_tool_keyword = "Set-MpPreference -ExclusionExtension exe" nocase ascii wide
         // Description: openssh server is used (critical on DC - must not be installed)
         // Reference: N/A
-        $string123_powershell_greyware_tool_keyword = "Set-Service -Name sshd -StartupType 'Automatic'" nocase ascii wide
+        $string140_powershell_greyware_tool_keyword = "Set-Service -Name sshd -StartupType 'Automatic'" nocase ascii wide
         // Description: openssh server is used (critical on DC - must not be installed)
         // Reference: N/A
-        $string124_powershell_greyware_tool_keyword = "Start-Service sshd" nocase ascii wide
+        $string141_powershell_greyware_tool_keyword = "Start-Service sshd" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string125_powershell_greyware_tool_keyword = "Stop-Process -Name \"Sophos " nocase ascii wide
+        $string142_powershell_greyware_tool_keyword = "Stop-Process -Name \"Sophos " nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string126_powershell_greyware_tool_keyword = "Stop-Process -Name \"SQL Backups\"" nocase ascii wide
+        $string143_powershell_greyware_tool_keyword = "Stop-Process -Name \"SQL Backups\"" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string127_powershell_greyware_tool_keyword = "Stop-Process -Name \"SQLsafe Backup Service\"" nocase ascii wide
+        $string144_powershell_greyware_tool_keyword = "Stop-Process -Name \"SQLsafe Backup Service\"" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string128_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\s\\"storagecraft\simagemanager.{0,1000}\\"/ nocase ascii wide
+        $string145_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\s\\"storagecraft\simagemanager.{0,1000}\\"/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string129_powershell_greyware_tool_keyword = "Stop-Process -Name \"Symantec System Recovery\"" nocase ascii wide
+        $string146_powershell_greyware_tool_keyword = "Stop-Process -Name \"Symantec System Recovery\"" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string130_powershell_greyware_tool_keyword = "Stop-Process -Name \"Veeam Backup Catalog Data Service\"" nocase ascii wide
+        $string147_powershell_greyware_tool_keyword = "Stop-Process -Name \"Veeam Backup Catalog Data Service\"" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string131_powershell_greyware_tool_keyword = "Stop-Process -Name \"Zoolz 2 Service\"" nocase ascii wide
+        $string148_powershell_greyware_tool_keyword = "Stop-Process -Name \"Zoolz 2 Service\"" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string132_powershell_greyware_tool_keyword = "Stop-Process -Name acronisagent" nocase ascii wide
+        $string149_powershell_greyware_tool_keyword = "Stop-Process -Name acronisagent" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string133_powershell_greyware_tool_keyword = "Stop-Process -Name AcronisAgent" nocase ascii wide
+        $string150_powershell_greyware_tool_keyword = "Stop-Process -Name AcronisAgent" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string134_powershell_greyware_tool_keyword = "Stop-Process -Name acrsch2svc" nocase ascii wide
+        $string151_powershell_greyware_tool_keyword = "Stop-Process -Name acrsch2svc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string135_powershell_greyware_tool_keyword = "Stop-Process -Name AcrSch2Svc" nocase ascii wide
+        $string152_powershell_greyware_tool_keyword = "Stop-Process -Name AcrSch2Svc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string136_powershell_greyware_tool_keyword = "Stop-Process -Name agntsvc" nocase ascii wide
+        $string153_powershell_greyware_tool_keyword = "Stop-Process -Name agntsvc" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string137_powershell_greyware_tool_keyword = "Stop-Process -Name Antivirus" nocase ascii wide
+        $string154_powershell_greyware_tool_keyword = "Stop-Process -Name Antivirus" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string138_powershell_greyware_tool_keyword = "Stop-Process -Name ARSM /y" nocase ascii wide
+        $string155_powershell_greyware_tool_keyword = "Stop-Process -Name ARSM /y" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string139_powershell_greyware_tool_keyword = "Stop-Process -Name arsm" nocase ascii wide
+        $string156_powershell_greyware_tool_keyword = "Stop-Process -Name arsm" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string140_powershell_greyware_tool_keyword = "Stop-Process -Name AVP" nocase ascii wide
+        $string157_powershell_greyware_tool_keyword = "Stop-Process -Name AVP" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string141_powershell_greyware_tool_keyword = "Stop-Process -Name backp" nocase ascii wide
+        $string158_powershell_greyware_tool_keyword = "Stop-Process -Name backp" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string142_powershell_greyware_tool_keyword = "Stop-Process -Name backup" nocase ascii wide
+        $string159_powershell_greyware_tool_keyword = "Stop-Process -Name backup" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string143_powershell_greyware_tool_keyword = "Stop-Process -Name BackupExec" nocase ascii wide
+        $string160_powershell_greyware_tool_keyword = "Stop-Process -Name BackupExec" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string144_powershell_greyware_tool_keyword = "Stop-Process -Name BackupExecAgent" nocase ascii wide
+        $string161_powershell_greyware_tool_keyword = "Stop-Process -Name BackupExecAgent" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string145_powershell_greyware_tool_keyword = "Stop-Process -Name bedbg /y" nocase ascii wide
+        $string162_powershell_greyware_tool_keyword = "Stop-Process -Name bedbg /y" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string146_powershell_greyware_tool_keyword = "Stop-Process -Name cbservi" nocase ascii wide
+        $string163_powershell_greyware_tool_keyword = "Stop-Process -Name cbservi" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string147_powershell_greyware_tool_keyword = "Stop-Process -Name cbvscserv" nocase ascii wide
+        $string164_powershell_greyware_tool_keyword = "Stop-Process -Name cbvscserv" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string148_powershell_greyware_tool_keyword = "Stop-Process -Name DCAgent" nocase ascii wide
+        $string165_powershell_greyware_tool_keyword = "Stop-Process -Name DCAgent" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string149_powershell_greyware_tool_keyword = "Stop-Process -Name EhttpSrv" nocase ascii wide
+        $string166_powershell_greyware_tool_keyword = "Stop-Process -Name EhttpSrv" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string150_powershell_greyware_tool_keyword = "Stop-Process -Name ekrn" nocase ascii wide
+        $string167_powershell_greyware_tool_keyword = "Stop-Process -Name ekrn" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string151_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sEPSecurityService.{0,1000}\s\s\s\s/ nocase ascii wide
+        $string168_powershell_greyware_tool_keyword = "Stop-Process -Name EPSecurityService" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string152_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sEPUpdateService.{0,1000}\s\s\s\s\s\s\s/ nocase ascii wide
+        $string169_powershell_greyware_tool_keyword = "Stop-Process -Name EPUpdateService" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string153_powershell_greyware_tool_keyword = "Stop-Process -Name EsgShKernel" nocase ascii wide
+        $string170_powershell_greyware_tool_keyword = "Stop-Process -Name EsgShKernel" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string154_powershell_greyware_tool_keyword = "Stop-Process -Name ESHASRV" nocase ascii wide
+        $string171_powershell_greyware_tool_keyword = "Stop-Process -Name ESHASRV" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string155_powershell_greyware_tool_keyword = "Stop-Process -Name FA_Scheduler" nocase ascii wide
+        $string172_powershell_greyware_tool_keyword = "Stop-Process -Name FA_Scheduler" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string156_powershell_greyware_tool_keyword = "Stop-Process -Name IMAP4Svc" nocase ascii wide
+        $string173_powershell_greyware_tool_keyword = "Stop-Process -Name IMAP4Svc" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string157_powershell_greyware_tool_keyword = "Stop-Process -Name KAVFS" nocase ascii wide
+        $string174_powershell_greyware_tool_keyword = "Stop-Process -Name KAVFS" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string158_powershell_greyware_tool_keyword = "Stop-Process -Name KAVFSGT" nocase ascii wide
+        $string175_powershell_greyware_tool_keyword = "Stop-Process -Name KAVFSGT" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string159_powershell_greyware_tool_keyword = "Stop-Process -Name kavfsslp" nocase ascii wide
+        $string176_powershell_greyware_tool_keyword = "Stop-Process -Name kavfsslp" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string160_powershell_greyware_tool_keyword = "Stop-Process -Name klnagent" nocase ascii wide
+        $string177_powershell_greyware_tool_keyword = "Stop-Process -Name klnagent" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string161_powershell_greyware_tool_keyword = "Stop-Process -Name macmnsvc" nocase ascii wide
+        $string178_powershell_greyware_tool_keyword = "Stop-Process -Name macmnsvc" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string162_powershell_greyware_tool_keyword = "Stop-Process -Name masvc" nocase ascii wide
+        $string179_powershell_greyware_tool_keyword = "Stop-Process -Name masvc" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string163_powershell_greyware_tool_keyword = "Stop-Process -Name MBAMService" nocase ascii wide
+        $string180_powershell_greyware_tool_keyword = "Stop-Process -Name MBAMService" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string164_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMBEndpointAgent.{0,1000}\s\s\s\s/ nocase ascii wide
+        $string181_powershell_greyware_tool_keyword = "Stop-Process -Name MBEndpointAgent" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string165_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMcAfeeEngineService.{0,1000}\s\s\s\s/ nocase ascii wide
+        $string182_powershell_greyware_tool_keyword = "Stop-Process -Name McAfeeEngineService" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string166_powershell_greyware_tool_keyword = "Stop-Process -Name McAfeeFramework" nocase ascii wide
+        $string183_powershell_greyware_tool_keyword = "Stop-Process -Name McAfeeFramework" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string167_powershell_greyware_tool_keyword = "Stop-Process -Name McAfeeFrameworkMcAfeeFramework" nocase ascii wide
+        $string184_powershell_greyware_tool_keyword = "Stop-Process -Name McAfeeFrameworkMcAfeeFramework" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string168_powershell_greyware_tool_keyword = "Stop-Process -Name McShield" nocase ascii wide
+        $string185_powershell_greyware_tool_keyword = "Stop-Process -Name McShield" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string169_powershell_greyware_tool_keyword = "Stop-Process -Name mfefire" nocase ascii wide
+        $string186_powershell_greyware_tool_keyword = "Stop-Process -Name mfefire" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string170_powershell_greyware_tool_keyword = "Stop-Process -Name mfemms" nocase ascii wide
+        $string187_powershell_greyware_tool_keyword = "Stop-Process -Name mfemms" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string171_powershell_greyware_tool_keyword = "Stop-Process -Name mfevtp" nocase ascii wide
+        $string188_powershell_greyware_tool_keyword = "Stop-Process -Name mfevtp" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string172_powershell_greyware_tool_keyword = "Stop-Process -Name mozyprobackup" nocase ascii wide
+        $string189_powershell_greyware_tool_keyword = "Stop-Process -Name mozyprobackup" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string173_powershell_greyware_tool_keyword = "Stop-Process -Name MsDtsServer" nocase ascii wide
+        $string190_powershell_greyware_tool_keyword = "Stop-Process -Name MsDtsServer" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string174_powershell_greyware_tool_keyword = "Stop-Process -Name MsDtsServer100" nocase ascii wide
+        $string191_powershell_greyware_tool_keyword = "Stop-Process -Name MsDtsServer100" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string175_powershell_greyware_tool_keyword = "Stop-Process -Name MsDtsServer110" nocase ascii wide
+        $string192_powershell_greyware_tool_keyword = "Stop-Process -Name MsDtsServer110" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string176_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\smsftesql\$PROD/ nocase ascii wide
+        $string193_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\smsftesql\$PROD/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string177_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSOLAP\$SQL_2008/ nocase ascii wide
+        $string194_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSOLAP\$SQL_2008/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string178_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSOLAP\$SYSTEM_BGC/ nocase ascii wide
+        $string195_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSOLAP\$SYSTEM_BGC/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string179_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSOLAP\$TPS/ nocase ascii wide
+        $string196_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSOLAP\$TPS/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string180_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSOLAP\$TPSAMA/ nocase ascii wide
+        $string197_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSOLAP\$TPSAMA/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string181_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$BKUPEXEC/ nocase ascii wide
+        $string198_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$BKUPEXEC/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string182_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$ECWDB2/ nocase ascii wide
+        $string199_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$ECWDB2/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string183_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$PRACTICEMGT/ nocase ascii wide
+        $string200_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$PRACTICEMGT/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string184_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$PRACTTICEBGC/ nocase ascii wide
+        $string201_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$PRACTTICEBGC/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string185_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$PROD/ nocase ascii wide
+        $string202_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$PROD/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string186_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$PROFXENGAGEMENT/ nocase ascii wide
+        $string203_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$PROFXENGAGEMENT/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string187_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SBSMONITORING/ nocase ascii wide
+        $string204_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SBSMONITORING/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string188_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SHAREPOINT/ nocase ascii wide
+        $string205_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SHAREPOINT/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string189_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SOPHOS/ nocase ascii wide
+        $string206_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SOPHOS/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string190_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SQL_2008/ nocase ascii wide
+        $string207_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SQL_2008/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string191_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SQLEXPRESS/ nocase ascii wide
+        $string208_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SQLEXPRESS/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string192_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SYSTEM_BGC/ nocase ascii wide
+        $string209_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SYSTEM_BGC/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string193_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$TPS/ nocase ascii wide
+        $string210_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$TPS/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string194_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$TPSAMA/ nocase ascii wide
+        $string211_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$TPSAMA/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string195_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$VEEAMSQL/ nocase ascii wide
+        $string212_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$VEEAMSQL/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string196_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$VEEAMSQL/ nocase ascii wide
+        $string213_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$VEEAMSQL/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string197_powershell_greyware_tool_keyword = "Stop-Process -Name sacsvr" nocase ascii wide
+        $string214_powershell_greyware_tool_keyword = "Stop-Process -Name sacsvr" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string198_powershell_greyware_tool_keyword = "Stop-Process -Name SAVAdminService" nocase ascii wide
+        $string215_powershell_greyware_tool_keyword = "Stop-Process -Name SAVAdminService" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string199_powershell_greyware_tool_keyword = "Stop-Process -Name SAVService" nocase ascii wide
+        $string216_powershell_greyware_tool_keyword = "Stop-Process -Name SAVService" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string200_powershell_greyware_tool_keyword = "Stop-Process -Name shadowprotectsvc" nocase ascii wide
+        $string217_powershell_greyware_tool_keyword = "Stop-Process -Name shadowprotectsvc" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string201_powershell_greyware_tool_keyword = "Stop-Process -Name ShMonitor" nocase ascii wide
+        $string218_powershell_greyware_tool_keyword = "Stop-Process -Name ShMonitor" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string202_powershell_greyware_tool_keyword = "Stop-Process -Name Smcinst" nocase ascii wide
+        $string219_powershell_greyware_tool_keyword = "Stop-Process -Name Smcinst" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string203_powershell_greyware_tool_keyword = "Stop-Process -Name SmcService" nocase ascii wide
+        $string220_powershell_greyware_tool_keyword = "Stop-Process -Name SmcService" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string204_powershell_greyware_tool_keyword = "Stop-Process -Name sms_site_sql_backup" nocase ascii wide
+        $string221_powershell_greyware_tool_keyword = "Stop-Process -Name sms_site_sql_backup" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string205_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSntpService.{0,1000}\s\s\s\s/ nocase ascii wide
+        $string222_powershell_greyware_tool_keyword = "Stop-Process -Name SntpService" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string206_powershell_greyware_tool_keyword = "Stop-Process -Name sophossps" nocase ascii wide
+        $string223_powershell_greyware_tool_keyword = "Stop-Process -Name sophossps" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string207_powershell_greyware_tool_keyword = "Stop-Process -Name spxservice" nocase ascii wide
+        $string224_powershell_greyware_tool_keyword = "Stop-Process -Name spxservice" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string208_powershell_greyware_tool_keyword = "Stop-Process -Name sqbcoreservice" nocase ascii wide
+        $string225_powershell_greyware_tool_keyword = "Stop-Process -Name sqbcoreservice" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string209_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSQLAgent\$SOPH/ nocase ascii wide
+        $string226_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSQLAgent\$SOPH/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string210_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSQLAgent\$VEEAMSQL/ nocase ascii wide
+        $string227_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSQLAgent\$VEEAMSQL/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string211_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSQLAgent\$VEEAMSQL/ nocase ascii wide
+        $string228_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSQLAgent\$VEEAMSQL/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string212_powershell_greyware_tool_keyword = "Stop-Process -Name stc_endpt_svc" nocase ascii wide
+        $string229_powershell_greyware_tool_keyword = "Stop-Process -Name stc_endpt_svc" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string213_powershell_greyware_tool_keyword = "Stop-Process -Name stop SepMasterService" nocase ascii wide
+        $string230_powershell_greyware_tool_keyword = "Stop-Process -Name stop SepMasterService" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string214_powershell_greyware_tool_keyword = "Stop-Process -Name svcGenericHost" nocase ascii wide
+        $string231_powershell_greyware_tool_keyword = "Stop-Process -Name svcGenericHost" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string215_powershell_greyware_tool_keyword = "Stop-Process -Name swi_filter" nocase ascii wide
+        $string232_powershell_greyware_tool_keyword = "Stop-Process -Name swi_filter" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string216_powershell_greyware_tool_keyword = "Stop-Process -Name swi_service" nocase ascii wide
+        $string233_powershell_greyware_tool_keyword = "Stop-Process -Name swi_service" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string217_powershell_greyware_tool_keyword = "Stop-Process -Name swi_update" nocase ascii wide
+        $string234_powershell_greyware_tool_keyword = "Stop-Process -Name swi_update" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string218_powershell_greyware_tool_keyword = "Stop-Process -Name swi_update_64" nocase ascii wide
+        $string235_powershell_greyware_tool_keyword = "Stop-Process -Name swi_update_64" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string219_powershell_greyware_tool_keyword = "Stop-Process -Name TmCCSF" nocase ascii wide
+        $string236_powershell_greyware_tool_keyword = "Stop-Process -Name TmCCSF" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string220_powershell_greyware_tool_keyword = "Stop-Process -Name tmlisten" nocase ascii wide
+        $string237_powershell_greyware_tool_keyword = "Stop-Process -Name tmlisten" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string221_powershell_greyware_tool_keyword = "Stop-Process -Name TrueKey" nocase ascii wide
+        $string238_powershell_greyware_tool_keyword = "Stop-Process -Name TrueKey" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string222_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sTrueKeyScheduler.{0,1000}\s\s\s\s/ nocase ascii wide
+        $string239_powershell_greyware_tool_keyword = "Stop-Process -Name TrueKeyScheduler" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string223_powershell_greyware_tool_keyword = "Stop-Process -Name TrueKeyServiceHel" nocase ascii wide
+        $string240_powershell_greyware_tool_keyword = "Stop-Process -Name TrueKeyServiceHel" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string224_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\svapiendpoint.{0,1000}\s\s\s\s\s\s\s/ nocase ascii wide
+        $string241_powershell_greyware_tool_keyword = "Stop-Process -Name vapiendpoint" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string225_powershell_greyware_tool_keyword = "Stop-Process -Name VeeamBackupSvc" nocase ascii wide
+        $string242_powershell_greyware_tool_keyword = "Stop-Process -Name VeeamBackupSvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string226_powershell_greyware_tool_keyword = "Stop-Process -Name VeeamBrokerSvc " nocase ascii wide
+        $string243_powershell_greyware_tool_keyword = "Stop-Process -Name VeeamBrokerSvc " nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string227_powershell_greyware_tool_keyword = "Stop-Process -Name VeeamCatalogSvc" nocase ascii wide
+        $string244_powershell_greyware_tool_keyword = "Stop-Process -Name VeeamCatalogSvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string228_powershell_greyware_tool_keyword = "Stop-Process -Name VeeamCloudSvc" nocase ascii wide
+        $string245_powershell_greyware_tool_keyword = "Stop-Process -Name VeeamCloudSvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string229_powershell_greyware_tool_keyword = "Stop-Process -Name VeeamDeploymentService" nocase ascii wide
+        $string246_powershell_greyware_tool_keyword = "Stop-Process -Name VeeamDeploymentService" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string230_powershell_greyware_tool_keyword = "Stop-Process -Name VeeamDeploySvc" nocase ascii wide
+        $string247_powershell_greyware_tool_keyword = "Stop-Process -Name VeeamDeploySvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string231_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamDeploySvc.{0,1000}\s\s\s\s/ nocase ascii wide
+        $string248_powershell_greyware_tool_keyword = "Stop-Process -Name VeeamDeploySvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string232_powershell_greyware_tool_keyword = "Stop-Process -Name VeeamEnterpriseManagerSvc" nocase ascii wide
+        $string249_powershell_greyware_tool_keyword = "Stop-Process -Name VeeamEnterpriseManagerSvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string233_powershell_greyware_tool_keyword = "Stop-Process -Name VeeamHvIntegrationSvc" nocase ascii wide
+        $string250_powershell_greyware_tool_keyword = "Stop-Process -Name VeeamHvIntegrationSvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string234_powershell_greyware_tool_keyword = "Stop-Process -Name VeeamMountSvc" nocase ascii wide
+        $string251_powershell_greyware_tool_keyword = "Stop-Process -Name VeeamMountSvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string235_powershell_greyware_tool_keyword = "Stop-Process -Name VeeamNFSSvc" nocase ascii wide
+        $string252_powershell_greyware_tool_keyword = "Stop-Process -Name VeeamNFSSvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string236_powershell_greyware_tool_keyword = "Stop-Process -Name VeeamRESTSvc" nocase ascii wide
+        $string253_powershell_greyware_tool_keyword = "Stop-Process -Name VeeamRESTSvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string237_powershell_greyware_tool_keyword = "Stop-Process -Name VeeamTransportSvc" nocase ascii wide
+        $string254_powershell_greyware_tool_keyword = "Stop-Process -Name VeeamTransportSvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string238_powershell_greyware_tool_keyword = "Stop-Process -Name vsnapvss" nocase ascii wide
+        $string255_powershell_greyware_tool_keyword = "Stop-Process -Name vsnapvss" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string239_powershell_greyware_tool_keyword = "Stop-Process -Name vssvc" nocase ascii wide
+        $string256_powershell_greyware_tool_keyword = "Stop-Process -Name vssvc" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string240_powershell_greyware_tool_keyword = "Stop-Process -Name wbengine" nocase ascii wide
+        $string257_powershell_greyware_tool_keyword = "Stop-Process -Name wbengine" nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string241_powershell_greyware_tool_keyword = "Stop-Process -Name wbengine" nocase ascii wide
+        $string258_powershell_greyware_tool_keyword = "Stop-Process -Name wbengine" nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string242_powershell_greyware_tool_keyword = "Stop-Process -Name WRSVC" nocase ascii wide
+        $string259_powershell_greyware_tool_keyword = "Stop-Process -Name WRSVC" nocase ascii wide
         // Description: suspicious pattern used by poshC2 and many other offensive tools (false positives possible)
         // Reference: N/A
-        $string243_powershell_greyware_tool_keyword = /System\.IO\.MemoryStream\(\,\[System\.Convert\]\:\:FromBase64String\(/ nocase ascii wide
+        $string260_powershell_greyware_tool_keyword = /System\.IO\.MemoryStream\(\,\[System\.Convert\]\:\:FromBase64String\(/ nocase ascii wide
         // Description: powershell command to uninstall defender AV
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string244_powershell_greyware_tool_keyword = "Uninstall-WindowsFeature -Name Windows-Defender" nocase ascii wide
+        $string261_powershell_greyware_tool_keyword = "Uninstall-WindowsFeature -Name Windows-Defender" nocase ascii wide
 
     condition:
         any of them
@@ -26559,6 +26371,25 @@ rule rule_Private_Internet_Access_greyware_tool_keyword
         // Description: External VPN usage within coporate network
         // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
         $string1_Private_Internet_Access_greyware_tool_keyword = "jplnlifepflhkbkgonidnobkakhmpnmh" nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule rule_privatebin_net_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'privatebin.net' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "privatebin.net"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Interesting observation on the file-sharing platform preferences derived from the negotiations chats with Black Basta victims
+        // Reference: N/A
+        $string1_privatebin_net_greyware_tool_keyword = /https\:\/\/privatebin\.net\// nocase ascii wide
 
     condition:
         any of them
@@ -27678,6 +27509,9 @@ rule rule_python_greyware_tool_keyword
         // Description: interactive shell
         // Reference: N/A
         $string4_python_greyware_tool_keyword = /\s\-c\s\'import\spty\;pty\.spawn\(\\\\"\/bin\/sh/
+        // Description: commonly used to upgrade a restricted shell
+        // Reference: N/A
+        $string5_python_greyware_tool_keyword = /python\s\-c\s\'import\spty\;pty\.spawn\(\\"\/bin\/bash\\"\)/
 
     condition:
         any of them
@@ -27829,79 +27663,76 @@ rule rule_Quasar_greyware_tool_keyword
         $string13_Quasar_greyware_tool_keyword = /\\Quasar\-master/ nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string14_Quasar_greyware_tool_keyword = /\\Users\\mthcht\\AppData\\Roaming\\SubDir\\Client\.exe/ nocase ascii wide
+        $string14_Quasar_greyware_tool_keyword = /\\Windows\\system32\\SubDir\\Client\.exe/ nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string15_Quasar_greyware_tool_keyword = /\\Windows\\system32\\SubDir\\Client\.exe/ nocase ascii wide
+        $string15_Quasar_greyware_tool_keyword = "14CA405B-8BAC-48AB-9FBA-8FB5DF88FD0D" nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string16_Quasar_greyware_tool_keyword = "14CA405B-8BAC-48AB-9FBA-8FB5DF88FD0D" nocase ascii wide
+        $string16_Quasar_greyware_tool_keyword = "32A2A734-7429-47E6-A362-E344A19C0D85" nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string17_Quasar_greyware_tool_keyword = "32A2A734-7429-47E6-A362-E344A19C0D85" nocase ascii wide
+        $string17_Quasar_greyware_tool_keyword = "9F5CF56A-DDB2-4F40-AB99-2A1DC47588E1" nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string18_Quasar_greyware_tool_keyword = "9F5CF56A-DDB2-4F40-AB99-2A1DC47588E1" nocase ascii wide
+        $string18_Quasar_greyware_tool_keyword = /Backdoor\.Quasar/ nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string19_Quasar_greyware_tool_keyword = /Backdoor\.Quasar/ nocase ascii wide
+        $string19_Quasar_greyware_tool_keyword = "C7C363BA-E5B6-4E18-9224-39BC8DA73172" nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string20_Quasar_greyware_tool_keyword = "C7C363BA-E5B6-4E18-9224-39BC8DA73172" nocase ascii wide
+        $string20_Quasar_greyware_tool_keyword = "CFCD0759E20F29C399C9D4210BE614E4E020BEE8" nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string21_Quasar_greyware_tool_keyword = "CFCD0759E20F29C399C9D4210BE614E4E020BEE8" nocase ascii wide
+        $string21_Quasar_greyware_tool_keyword = "localhost:4782" nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string22_Quasar_greyware_tool_keyword = "localhost:4782" nocase ascii wide
+        $string22_Quasar_greyware_tool_keyword = /namespace\sQuasar\.Client/ nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string23_Quasar_greyware_tool_keyword = /namespace\sQuasar\.Client/ nocase ascii wide
+        $string23_Quasar_greyware_tool_keyword = /namespace\sQuasar\.Server/ nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string24_Quasar_greyware_tool_keyword = /namespace\sQuasar\.Server/ nocase ascii wide
+        $string24_Quasar_greyware_tool_keyword = "ping -n 10 localhost > nul" nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string25_Quasar_greyware_tool_keyword = "ping -n 10 localhost > nul" nocase ascii wide
+        $string25_Quasar_greyware_tool_keyword = "Quasar Client Startup" nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string26_Quasar_greyware_tool_keyword = "Quasar Client Startup" nocase ascii wide
+        $string26_Quasar_greyware_tool_keyword = /Quasar\sv.{0,1000}\\Client\-built\.exe/ nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string27_Quasar_greyware_tool_keyword = /Quasar\sv.{0,1000}\\Client\-built\.exe/ nocase ascii wide
+        $string27_Quasar_greyware_tool_keyword = /Quasar\.Client\./ nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string28_Quasar_greyware_tool_keyword = /Quasar\.Client\./ nocase ascii wide
+        $string28_Quasar_greyware_tool_keyword = /Quasar\.Common\.Tests\\/ nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string29_Quasar_greyware_tool_keyword = /Quasar\.Common\.Tests\\/ nocase ascii wide
+        $string29_Quasar_greyware_tool_keyword = /Quasar\.exe/ nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string30_Quasar_greyware_tool_keyword = /Quasar\.exe/ nocase ascii wide
+        $string30_Quasar_greyware_tool_keyword = /Quasar\.Server/ nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string31_Quasar_greyware_tool_keyword = /Quasar\.Server/ nocase ascii wide
+        $string31_Quasar_greyware_tool_keyword = /Quasar\.Server\\Program\.cs/ nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string32_Quasar_greyware_tool_keyword = /Quasar\.Server\\Program\.cs/ nocase ascii wide
+        $string32_Quasar_greyware_tool_keyword = /Quasar\.sln/ nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string33_Quasar_greyware_tool_keyword = /Quasar\.sln/ nocase ascii wide
+        $string33_Quasar_greyware_tool_keyword = /Quasar\.v1\.4\.1\.zip/ nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string34_Quasar_greyware_tool_keyword = /Quasar\.v1\.4\.1\.zip/ nocase ascii wide
+        $string34_Quasar_greyware_tool_keyword = "quasar/Quasar" nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string35_Quasar_greyware_tool_keyword = "quasar/Quasar" nocase ascii wide
+        $string35_Quasar_greyware_tool_keyword = /Quasar\-master\.zip/ nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string36_Quasar_greyware_tool_keyword = /Quasar\-master\.zip/ nocase ascii wide
+        $string36_Quasar_greyware_tool_keyword = "QuasarRAT" nocase ascii wide
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
-        $string37_Quasar_greyware_tool_keyword = "QuasarRAT" nocase ascii wide
-        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
-        // Reference: https://github.com/quasar/Quasar
-        $string38_Quasar_greyware_tool_keyword = "ylAo2kAlUS2kYkala!" nocase ascii wide
+        $string37_Quasar_greyware_tool_keyword = "ylAo2kAlUS2kYkala!" nocase ascii wide
 
     condition:
         any of them
@@ -28191,6 +28022,28 @@ rule rule_ransomware_notes_greyware_tool_keyword
         // Description: detection patterns retrieved in ransomware notes archives
         // Reference: https://github.com/threatlabz/ransomware_notes
         $string2_ransomware_notes_greyware_tool_keyword = /https\:\/\/tox\.chat\/download\.html/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule rule_rapid7_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'rapid7' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "rapid7"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Vulnerability scanner
+        // Reference: https://www.rapid7.com/
+        $string1_rapid7_greyware_tool_keyword = "Rapid7" nocase ascii wide
+        // Description: Vulnerability scanner
+        // Reference: https://www.rapid7.com/
+        $string2_rapid7_greyware_tool_keyword = /test\.endpoint\.rapid7\.com/ nocase ascii wide
 
     condition:
         any of them
@@ -33608,573 +33461,609 @@ rule rule_reg_greyware_tool_keyword
         // Description: reg command used to disabled real time monitoring defender - often abused by attackers
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
         $string8_reg_greyware_tool_keyword = " /v DisableRealtimeMonitoring /t REG_DWORD /d 1 /f" nocase ascii wide
+        // Description: 
+        // Reference: N/A
+        $string9_reg_greyware_tool_keyword = /\\reg\.exe.{0,1000}\ssave\sHKLM/ nocase ascii wide
+        // Description: a copy of the registry hive
+        // Reference: N/A
+        $string10_reg_greyware_tool_keyword = /\\Windows\\Temp\\sam\.save/ nocase ascii wide
         // Description: Once AccessVBOM is enabled - an attacker can use VBA to embed or execute malicious code
         // Reference: https://blog.sekoia.io/double-tap-campaign-russia-nexus-apt-possibly-related-to-apt28-conducts-cyber-espionage-on-central-asia-and-kazakhstan-diplomatic-relations/
-        $string9_reg_greyware_tool_keyword = /\\Word\\Security\s\/v\sAccessVBOM\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
+        $string11_reg_greyware_tool_keyword = /\\Word\\Security\s\/v\sAccessVBOM\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
         // Description: exporting registry keys
         // Reference: https://blog.talosintelligence.com/uat-5647-romcom/
-        $string10_reg_greyware_tool_keyword = "cmd /C reg export hkcu" nocase ascii wide
+        $string12_reg_greyware_tool_keyword = "cmd /C reg export hkcu" nocase ascii wide
         // Description: exporting registry keys
         // Reference: https://blog.talosintelligence.com/uat-5647-romcom/
-        $string11_reg_greyware_tool_keyword = "cmd /C reg export hklm" nocase ascii wide
+        $string13_reg_greyware_tool_keyword = "cmd /C reg export hklm" nocase ascii wide
         // Description: the commands are used to export the SAM and SYSTEM registry hives which contain sensitive Windows security data including hashed passwords for local accounts. By obtaining these hives an attacker can attempt to crack the hashes or use them in pass-the-hash attacks for unauthorized access.
         // Reference: N/A
-        $string12_reg_greyware_tool_keyword = /copy\s.{0,1000}sam\.hive\s\\\\/ nocase ascii wide
+        $string14_reg_greyware_tool_keyword = /copy\s.{0,1000}sam\.hive\s\\\\/ nocase ascii wide
         // Description: the commands are used to export the SAM and SYSTEM registry hives which contain sensitive Windows security data including hashed passwords for local accounts. By obtaining these hives an attacker can attempt to crack the hashes or use them in pass-the-hash attacks for unauthorized access.
         // Reference: N/A
-        $string13_reg_greyware_tool_keyword = /copy\s.{0,1000}system\.hive\s\\\\/ nocase ascii wide
+        $string15_reg_greyware_tool_keyword = /copy\s.{0,1000}system\.hive\s\\\\/ nocase ascii wide
         // Description: disables User Account Control
         // Reference: https://github.com/nathanlopez/Stitch/blob/8e22e91c94237959c02d521aab58dc7e3d994cea/PyLib/disableUAC.py#L8
-        $string14_reg_greyware_tool_keyword = /HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System.{0,1000}\s\/v\sEnableLUA\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
+        $string16_reg_greyware_tool_keyword = /HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System.{0,1000}\s\/v\sEnableLUA\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
+        // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string17_reg_greyware_tool_keyword = /HKLM\\SOFTWARE\\Policies\\Microsoft\\VisualStudio\\Devtunnels\\"\s\/v\sDisableDevTunnelsInVisualStudio\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
         // Description: add entire disks exclusions to Windows Defender
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string15_reg_greyware_tool_keyword = /powershell\.exe\s\-nop\s\-c\sAdd\-MpPreference\s\-ExclusionPath\s\\"C\:\\\\"/ nocase ascii wide
+        $string18_reg_greyware_tool_keyword = /powershell\.exe\s\-nop\s\-c\sAdd\-MpPreference\s\-ExclusionPath\s\\"C\:\\\\"/ nocase ascii wide
         // Description: add entire disks exclusions to Windows Defender
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string16_reg_greyware_tool_keyword = /powershell\.exe\s\-nop\s\-c\sAdd\-MpPreference\s\-ExclusionPath\s\\"D\:\\\\"/ nocase ascii wide
+        $string19_reg_greyware_tool_keyword = /powershell\.exe\s\-nop\s\-c\sAdd\-MpPreference\s\-ExclusionPath\s\\"D\:\\\\"/ nocase ascii wide
         // Description: add entire disks exclusions to Windows Defender
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string17_reg_greyware_tool_keyword = /powershell\.exe\s\-nop\s\-c\sAdd\-MpPreference\s\-ExclusionPath\s\\"E\:\\\\"/ nocase ascii wide
+        $string20_reg_greyware_tool_keyword = /powershell\.exe\s\-nop\s\-c\sAdd\-MpPreference\s\-ExclusionPath\s\\"E\:\\\\"/ nocase ascii wide
         // Description: add entire disks exclusions to Windows Defender
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string18_reg_greyware_tool_keyword = /powershell\.exe\s\-nop\s\-c\sAdd\-MpPreference\s\-ExclusionPath\s\\"F\:\\\\"/ nocase ascii wide
+        $string21_reg_greyware_tool_keyword = /powershell\.exe\s\-nop\s\-c\sAdd\-MpPreference\s\-ExclusionPath\s\\"F\:\\\\"/ nocase ascii wide
         // Description: disable protection features of Windows Defender
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string19_reg_greyware_tool_keyword = "Real-Time Protection\" /v \"DisableBehaviorMonitoring\" /t REG_DWORD /d \"1\" /f" nocase ascii wide
+        $string22_reg_greyware_tool_keyword = "Real-Time Protection\" /v \"DisableBehaviorMonitoring\" /t REG_DWORD /d \"1\" /f" nocase ascii wide
         // Description: modifies the Windows Registry to enable Remote Desktop connections by setting the fDenyTSConnections value to 0
         // Reference: N/A
-        $string20_reg_greyware_tool_keyword = /reg\sadd\s\\"HKEY\sLOCAL\sMACHINE\\SYSTEM\\CurentControlSet\\Control\\Terminal\sServer\\"\s\/v\sfDenyTSConnections\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
+        $string23_reg_greyware_tool_keyword = /reg\sadd\s\\"HKEY\sLOCAL\sMACHINE\\SYSTEM\\CurentControlSet\\Control\\Terminal\sServer\\"\s\/v\sfDenyTSConnections\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
         // Description: could be used to manipulate system behavior or remove evidence
         // Reference: https://github.com/xiaoy-sec/Pentest_Note/blob/52156f816f0c2497c25343c2e872130193acca80/wiki/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/Windows%E6%8F%90%E6%9D%83/RDP%26Firewall/%E5%88%A0%E9%99%A4%E7%97%95%E8%BF%B9.md?plain=1#L4
-        $string21_reg_greyware_tool_keyword = /reg\sadd\s\\"HKEY_CURRENT_USER\\Software\\Microsoft\\Terminal\sServer\sClient\\Servers\\"/ nocase ascii wide
+        $string24_reg_greyware_tool_keyword = /reg\sadd\s\\"HKEY_CURRENT_USER\\Software\\Microsoft\\Terminal\sServer\sClient\\Servers\\"/ nocase ascii wide
         // Description: Hides the user from the login screen - a tactic often used for stealthy persistence.
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string22_reg_greyware_tool_keyword = /reg\sadd\s\\"HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\sNT\\CurrentVersion\\Winlogon\\SpecialAccounts\\Userlist\\"\s\/v\s.{0,1000}\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
+        $string25_reg_greyware_tool_keyword = /reg\sadd\s\\"HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\sNT\\CurrentVersion\\Winlogon\\SpecialAccounts\\Userlist\\"\s\/v\s.{0,1000}\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
         // Description: disable protection features of Windows Defender
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string23_reg_greyware_tool_keyword = /reg\sadd\s\\"HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\\"\s\/v\sDisableAntiSpyware\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
+        $string26_reg_greyware_tool_keyword = /reg\sadd\s\\"HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\\"\s\/v\sDisableAntiSpyware\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
         // Description: making Remote Desktop Protocol (RDP) more vulnerable to unauthorized access.
         // Reference: https://github.com/spicy-bear/Threat-Hunting/blob/2c89b519862672e29547b4db4796caa923044595/95.213.145.101/%D1%81%D0%B8%D1%80/bat/cmd.cmd#L19
-        $string24_reg_greyware_tool_keyword = /REG\sADD\s\\"HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\sNT\\Terminal\sServices\\"\s\/f\s\/v\sfAllowUnsolicited\s\/t\sREG_DWORD\s\/d\s\\"00000001\\"/ nocase ascii wide
+        $string27_reg_greyware_tool_keyword = /REG\sADD\s\\"HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\sNT\\Terminal\sServices\\"\s\/f\s\/v\sfAllowUnsolicited\s\/t\sREG_DWORD\s\/d\s\\"00000001\\"/ nocase ascii wide
         // Description: making Remote Desktop Protocol (RDP) more vulnerable to unauthorized access.
         // Reference: https://github.com/spicy-bear/Threat-Hunting/blob/2c89b519862672e29547b4db4796caa923044595/95.213.145.101/%D1%81%D0%B8%D1%80/bat/cmd.cmd#L19
-        $string25_reg_greyware_tool_keyword = /REG\sADD\s\\"HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\sNT\\Terminal\sServices\\"\s\/f\s\/v\sfDenyTSConnections\s\/t\sREG_DWORD\s\/d\s\\"00000000\\"/ nocase ascii wide
+        $string28_reg_greyware_tool_keyword = /REG\sADD\s\\"HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\sNT\\Terminal\sServices\\"\s\/f\s\/v\sfDenyTSConnections\s\/t\sREG_DWORD\s\/d\s\\"00000000\\"/ nocase ascii wide
         // Description: making Remote Desktop Protocol (RDP) more vulnerable to unauthorized access.
         // Reference: https://github.com/spicy-bear/Threat-Hunting/blob/2c89b519862672e29547b4db4796caa923044595/95.213.145.101/%D1%81%D0%B8%D1%80/bat/cmd.cmd#L19
-        $string26_reg_greyware_tool_keyword = /REG\sADD\s\\"HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\sNT\\Terminal\sServices\\"\s\/f\s\/v\sUserAuthentication\s\/t\sREG_DWORD\s\/d\s\\"00000000\\"/ nocase ascii wide
+        $string29_reg_greyware_tool_keyword = /REG\sADD\s\\"HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\sNT\\Terminal\sServices\\"\s\/f\s\/v\sUserAuthentication\s\/t\sREG_DWORD\s\/d\s\\"00000000\\"/ nocase ascii wide
         // Description: Sophos disable tamper protection
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string27_reg_greyware_tool_keyword = /REG\sADD\s\\"HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Sophos\\SAVService\\TamperProtection\\"\s\/t\sREG_DWORD\s\/v\sEnabled\s\/d\s0\s\/f/ nocase ascii wide
+        $string30_reg_greyware_tool_keyword = /REG\sADD\s\\"HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Sophos\\SAVService\\TamperProtection\\"\s\/t\sREG_DWORD\s\/v\sEnabled\s\/d\s0\s\/f/ nocase ascii wide
         // Description: Open passwords mimic + open rdp 3389 - used by many ransomware groups
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string28_reg_greyware_tool_keyword = /reg\sadd\s\\"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal\sServer\\"\s\/v\sfDenyTSConnections\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
+        $string31_reg_greyware_tool_keyword = /reg\sadd\s\\"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal\sServer\\"\s\/v\sfDenyTSConnections\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
         // Description: Enables Remote Desktop Protocol (RDP) connections by setting fDenyTSConnections to 0
         // Reference: N/A
-        $string29_reg_greyware_tool_keyword = /reg\sadd\s\\"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal\sServer\\"\s\/v\sfDenyTSConnections\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
+        $string32_reg_greyware_tool_keyword = /reg\sadd\s\\"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal\sServer\\"\s\/v\sfDenyTSConnections\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
         // Description: making Remote Desktop Protocol (RDP) more vulnerable to unauthorized access.
         // Reference: https://github.com/spicy-bear/Threat-Hunting/blob/2c89b519862672e29547b4db4796caa923044595/95.213.145.101/%D1%81%D0%B8%D1%80/bat/cmd.cmd#L19
-        $string30_reg_greyware_tool_keyword = /REG\sADD\s\\"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal\sServer\\WinStations\\RDP\-Tcp\\"\s\/f\s\/v\sSecurityLayer\s\/t\sREG_DWORD\s\/d\s\\"00000001\\"/ nocase ascii wide
+        $string33_reg_greyware_tool_keyword = /REG\sADD\s\\"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal\sServer\\WinStations\\RDP\-Tcp\\"\s\/f\s\/v\sSecurityLayer\s\/t\sREG_DWORD\s\/d\s\\"00000001\\"/ nocase ascii wide
         // Description: Sophos disable tamper protection
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string31_reg_greyware_tool_keyword = /REG\sADD\s\\"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\services\\SAVService\\"\s\/t\sREG_DWORD\s\/v\sStart\s\/d\s0x00000004\s\/f/ nocase ascii wide
+        $string34_reg_greyware_tool_keyword = /REG\sADD\s\\"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\services\\SAVService\\"\s\/t\sREG_DWORD\s\/v\sStart\s\/d\s0x00000004\s\/f/ nocase ascii wide
         // Description: Sophos disable tamper protection
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string32_reg_greyware_tool_keyword = /REG\sADD\s\\"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Sophos\sEndpoint\sDefense\\TamperProtection\\Config\\"\s\/t\sREG_DWORD\s\/v\sSAVEnabled\s\/d\s0\s\/f/ nocase ascii wide
+        $string35_reg_greyware_tool_keyword = /REG\sADD\s\\"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Sophos\sEndpoint\sDefense\\TamperProtection\\Config\\"\s\/t\sREG_DWORD\s\/v\sSAVEnabled\s\/d\s0\s\/f/ nocase ascii wide
         // Description: Sophos disable tamper protection
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string33_reg_greyware_tool_keyword = /REG\sADD\s\\"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Sophos\sEndpoint\sDefense\\TamperProtection\\Config\\"\s\/t\sREG_DWORD\s\/v\sSEDEnabled\s\/d\s0\s\/f/ nocase ascii wide
+        $string36_reg_greyware_tool_keyword = /REG\sADD\s\\"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Sophos\sEndpoint\sDefense\\TamperProtection\\Config\\"\s\/t\sREG_DWORD\s\/v\sSEDEnabled\s\/d\s0\s\/f/ nocase ascii wide
         // Description: Sophos disable tamper protection
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string34_reg_greyware_tool_keyword = /REG\sADD\s\\"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Sophos\sMCS\sAgent\\"\s\/t\sREG_DWORD\s\/v\sStart\s\/d\s0x00000004\s\/f/ nocase ascii wide
+        $string37_reg_greyware_tool_keyword = /REG\sADD\s\\"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Sophos\sMCS\sAgent\\"\s\/t\sREG_DWORD\s\/v\sStart\s\/d\s0x00000004\s\/f/ nocase ascii wide
         // Description: disable security notifications / adjust User Account Control (UAC) settings / reduce security prompts for administrative actions
         // Reference: https://github.com/spicy-bear/Threat-Hunting/blob/2c89b519862672e29547b4db4796caa923044595/95.213.145.101/%D1%81%D0%B8%D1%80/bat/defendermalwar.bat#L7
-        $string35_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\sDefender\sSecurity\sCenter\\Notifications\\"\s\/v\sDisableNotifications\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
+        $string38_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\sDefender\sSecurity\sCenter\\Notifications\\"\s\/v\sDisableNotifications\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
         // Description: disable Windows Defender-related services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string36_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\Software\\Microsoft\\Windows\sDefender\\"\s\/v\sDisableAntiSpyware\sand\sDisableAntiVirus\s\/t\sREG_DWORD\s\/d\s\\"1\\"\s\/f/ nocase ascii wide
+        $string39_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\Software\\Microsoft\\Windows\sDefender\\"\s\/v\sDisableAntiSpyware\sand\sDisableAntiVirus\s\/t\sREG_DWORD\s\/d\s\\"1\\"\s\/f/ nocase ascii wide
         // Description: modify the Image File Execution Options to substitute accessibility tools with cmd.exe enabling privilege escalation by launching an elevated command prompt
         // Reference: https://github.com/spicy-bear/Threat-Hunting/blob/2c89b519862672e29547b4db4796caa923044595/95.213.145.101/%D1%81%D0%B8%D1%80/bat/cmd.cmd#L12
-        $string37_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\sNT\\CurrentVersion\\Image\sFile\sExecution\sOptions\\HelpPane\.exe\\"\s\/f\s\/v\sDebugger\s\/t\sREG_SZ\s\/d\s\\"\%windir\%\\system32\\cmd\.exe\\"/ nocase ascii wide
+        $string40_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\sNT\\CurrentVersion\\Image\sFile\sExecution\sOptions\\HelpPane\.exe\\"\s\/f\s\/v\sDebugger\s\/t\sREG_SZ\s\/d\s\\"\%windir\%\\system32\\cmd\.exe\\"/ nocase ascii wide
         // Description: modify the Image File Execution Options to substitute accessibility tools with cmd.exe enabling privilege escalation by launching an elevated command prompt
         // Reference: https://github.com/spicy-bear/Threat-Hunting/blob/2c89b519862672e29547b4db4796caa923044595/95.213.145.101/%D1%81%D0%B8%D1%80/bat/cmd.cmd#L12
-        $string38_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\sNT\\CurrentVersion\\Image\sFile\sExecution\sOptions\\Magnify\.exe\\"\s\/f\s\/v\sDebugger\s\/t\sREG_SZ\s\/d\s\\"\%windir\%\\system32\\cmd\.exe\\"/ nocase ascii wide
+        $string41_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\sNT\\CurrentVersion\\Image\sFile\sExecution\sOptions\\Magnify\.exe\\"\s\/f\s\/v\sDebugger\s\/t\sREG_SZ\s\/d\s\\"\%windir\%\\system32\\cmd\.exe\\"/ nocase ascii wide
         // Description: modify the Image File Execution Options to substitute accessibility tools with cmd.exe enabling privilege escalation by launching an elevated command prompt
         // Reference: https://github.com/spicy-bear/Threat-Hunting/blob/2c89b519862672e29547b4db4796caa923044595/95.213.145.101/%D1%81%D0%B8%D1%80/bat/cmd.cmd#L12
-        $string39_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\sNT\\CurrentVersion\\Image\sFile\sExecution\sOptions\\sethc\.exe\\"\s\/f\s\/v\sDebugger\s\/t\sREG_SZ\s\/d\s\\"\%windir\%\\system32\\cmd\.exe\\"/ nocase ascii wide
+        $string42_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\sNT\\CurrentVersion\\Image\sFile\sExecution\sOptions\\sethc\.exe\\"\s\/f\s\/v\sDebugger\s\/t\sREG_SZ\s\/d\s\\"\%windir\%\\system32\\cmd\.exe\\"/ nocase ascii wide
         // Description: modify the Image File Execution Options to substitute accessibility tools with cmd.exe enabling privilege escalation by launching an elevated command prompt
         // Reference: https://github.com/spicy-bear/Threat-Hunting/blob/2c89b519862672e29547b4db4796caa923044595/95.213.145.101/%D1%81%D0%B8%D1%80/bat/cmd.cmd#L12
-        $string40_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\sNT\\CurrentVersion\\Image\sFile\sExecution\sOptions\\utilman\.exe\\"\s\/f\s\/v\sDebugger\s\/t\sREG_SZ\s\/d\s\\"\%windir\%\\system32\\cmd\.exe\\"/ nocase ascii wide
+        $string43_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\sNT\\CurrentVersion\\Image\sFile\sExecution\sOptions\\utilman\.exe\\"\s\/f\s\/v\sDebugger\s\/t\sREG_SZ\s\/d\s\\"\%windir\%\\system32\\cmd\.exe\\"/ nocase ascii wide
         // Description: hiding a user from the login screen by modifying a specific registry key
         // Reference: N/A
-        $string41_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\Software\\Microsoft\\Windows\sNT\\CurrentVersion\\Winlogon\\SpecialAccounts\\Userlist\\"\s\/v\s.{0,1000}\s\/t\sREG_DWORD\s\/d\s0/ nocase ascii wide
+        $string44_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\Software\\Microsoft\\Windows\sNT\\CurrentVersion\\Winlogon\\SpecialAccounts\\Userlist\\"\s\/v\s.{0,1000}\s\/t\sREG_DWORD\s\/d\s0/ nocase ascii wide
         // Description: disables the UAC consent prompt for administrators
         // Reference: https://github.com/spicy-bear/Threat-Hunting/blob/2c89b519862672e29547b4db4796caa923044595/95.213.145.101/%D1%81%D0%B8%D1%80/bat/defendermalwar.bat#L7
-        $string42_reg_greyware_tool_keyword = /REG\sADD\s\\"hklm\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\"\s\/v\s\\"ConsentPromptBehaviorAdmin\\"\s\/t\sREG_Dword\s\/d\s00000000\s\/f/ nocase ascii wide
+        $string45_reg_greyware_tool_keyword = /REG\sADD\s\\"hklm\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\"\s\/v\s\\"ConsentPromptBehaviorAdmin\\"\s\/t\sREG_Dword\s\/d\s00000000\s\/f/ nocase ascii wide
         // Description: disable security notifications / adjust User Account Control (UAC) settings / reduce security prompts for administrative actions
         // Reference: https://github.com/spicy-bear/Threat-Hunting/blob/2c89b519862672e29547b4db4796caa923044595/95.213.145.101/%D1%81%D0%B8%D1%80/bat/defendermalwar.bat#L7
-        $string43_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\"\s\/v\sConsentPromptBehaviorAdmin\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
+        $string46_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\"\s\/v\sConsentPromptBehaviorAdmin\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
         // Description: disables the consent prompt for administrators
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string44_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\"\s\/v\sConsentPromptBehaviorAdmin\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
+        $string47_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\"\s\/v\sConsentPromptBehaviorAdmin\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
         // Description: disable security notifications / adjust User Account Control (UAC) settings / reduce security prompts for administrative actions
         // Reference: https://github.com/spicy-bear/Threat-Hunting/blob/2c89b519862672e29547b4db4796caa923044595/95.213.145.101/%D1%81%D0%B8%D1%80/bat/defendermalwar.bat#L7
-        $string45_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\"\s\/v\sEnableLUA\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
+        $string48_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\"\s\/v\sEnableLUA\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
         // Description: disable security notifications / adjust User Account Control (UAC) settings / reduce security prompts for administrative actions
         // Reference: https://github.com/spicy-bear/Threat-Hunting/blob/2c89b519862672e29547b4db4796caa923044595/95.213.145.101/%D1%81%D0%B8%D1%80/bat/defendermalwar.bat#L7
-        $string46_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\"\s\/v\sPromptOnSecureDesktop\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
+        $string49_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\"\s\/v\sPromptOnSecureDesktop\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
         // Description: disables the secure desktop for User Account Control (UAC) prompts
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string47_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\"\s\/v\sPromptOnSecureDesktop\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
+        $string50_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\"\s\/v\sPromptOnSecureDesktop\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
         // Description: Hides the nvspbind component from the uninstall programs list - making it harder for users or administrators to detect or remove the program
         // Reference: N/A
-        $string48_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\nvspbind\\"\s\/v\sSystemComponent\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
+        $string51_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\nvspbind\\"\s\/v\sSystemComponent\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
         // Description: disable Windows Defender - prevent it from starting quickly and prevent services from staying alive
         // Reference: https://github.com/spicy-bear/Threat-Hunting/blob/2c89b519862672e29547b4db4796caa923044595/95.213.145.101/%D1%81%D0%B8%D1%80/bat/defendermalwar.bat#L7
-        $string49_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\\"\s\/v\sAllowFastServiceStartup\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
+        $string52_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\\"\s\/v\sAllowFastServiceStartup\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
         // Description: disable Windows Defender - prevent it from starting quickly and prevent services from staying alive
         // Reference: https://github.com/spicy-bear/Threat-Hunting/blob/2c89b519862672e29547b4db4796caa923044595/95.213.145.101/%D1%81%D0%B8%D1%80/bat/defendermalwar.bat#L7
-        $string50_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\\"\s\/v\sDisableAntiSpyware\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
+        $string53_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\\"\s\/v\sDisableAntiSpyware\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
         // Description: disable Windows Defender - prevent it from starting quickly and prevent services from staying alive
         // Reference: https://github.com/spicy-bear/Threat-Hunting/blob/2c89b519862672e29547b4db4796caa923044595/95.213.145.101/%D1%81%D0%B8%D1%80/bat/defendermalwar.bat#L7
-        $string51_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\\"\s\/v\sServiceKeepAlive\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
+        $string54_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\\"\s\/v\sServiceKeepAlive\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
         // Description: disable real-time protection features of Windows Defender
         // Reference: https://github.com/spicy-bear/Threat-Hunting/blob/2c89b519862672e29547b4db4796caa923044595/95.213.145.101/%D1%81%D0%B8%D1%80/bat/defendermalwar.bat#L7
-        $string52_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\\Real\-Time\sProtection\\"\s\/v\sDisableBehaviorMonitoring\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
+        $string55_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\\Real\-Time\sProtection\\"\s\/v\sDisableBehaviorMonitoring\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
         // Description: disable real-time protection features of Windows Defender
         // Reference: https://github.com/spicy-bear/Threat-Hunting/blob/2c89b519862672e29547b4db4796caa923044595/95.213.145.101/%D1%81%D0%B8%D1%80/bat/defendermalwar.bat#L7
-        $string53_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\\Real\-Time\sProtection\\"\s\/v\sDisableIOAVProtection\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
+        $string56_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\\Real\-Time\sProtection\\"\s\/v\sDisableIOAVProtection\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
         // Description: disable real-time protection features of Windows Defender
         // Reference: https://github.com/spicy-bear/Threat-Hunting/blob/2c89b519862672e29547b4db4796caa923044595/95.213.145.101/%D1%81%D0%B8%D1%80/bat/defendermalwar.bat#L7
-        $string54_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\\Real\-Time\sProtection\\"\s\/v\sDisableOnAccessProtection\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
+        $string57_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\\Real\-Time\sProtection\\"\s\/v\sDisableOnAccessProtection\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
         // Description: disable real-time protection features of Windows Defender
         // Reference: https://github.com/spicy-bear/Threat-Hunting/blob/2c89b519862672e29547b4db4796caa923044595/95.213.145.101/%D1%81%D0%B8%D1%80/bat/defendermalwar.bat#L7
-        $string55_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\\Real\-Time\sProtection\\"\s\/v\sDisableRealtimeMonitoring\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
+        $string58_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\\Real\-Time\sProtection\\"\s\/v\sDisableRealtimeMonitoring\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
         // Description: disable real-time protection features of Windows Defender
         // Reference: https://github.com/spicy-bear/Threat-Hunting/blob/2c89b519862672e29547b4db4796caa923044595/95.213.145.101/%D1%81%D0%B8%D1%80/bat/defendermalwar.bat#L7
-        $string56_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\\Real\-Time\sProtection\\"\s\/v\sDisableScanOnRealtimeEnable\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
+        $string59_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\\Real\-Time\sProtection\\"\s\/v\sDisableScanOnRealtimeEnable\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
         // Description: disable protection features of Windows Defender
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string57_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\Software\\Policies\\Microsoft\\Windows\sDefender\\Reporting\\"\s\/v\s\\"DisableEnhancedNotifications\\"\s\/t\sREG_DWORD\s\/d\s\\"1\\"\s\/f/ nocase ascii wide
+        $string60_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\Software\\Policies\\Microsoft\\Windows\sDefender\\Reporting\\"\s\/v\s\\"DisableEnhancedNotifications\\"\s\/t\sREG_DWORD\s\/d\s\\"1\\"\s\/f/ nocase ascii wide
         // Description: disable protection features of Windows Defender
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string58_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\Software\\Policies\\Microsoft\\Windows\sDefender\\SpyNet\\"\s\/v\s\\"SpyNetReporting\\"\s\/t\sREG_DWORD\s\/d\s\\"0\\"\s\/f/ nocase ascii wide
+        $string61_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\Software\\Policies\\Microsoft\\Windows\sDefender\\SpyNet\\"\s\/v\s\\"SpyNetReporting\\"\s\/t\sREG_DWORD\s\/d\s\\"0\\"\s\/f/ nocase ascii wide
         // Description: disable protection features of Windows Defender
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string59_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\Software\\Policies\\Microsoft\\Windows\sDefender\\SpyNet\\"\s\/v\s\\"SubmitSamplesConsent\\"\s\/t\sREG_DWORD\s\/d\s\\"0\\"\s\/f/ nocase ascii wide
+        $string62_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\Software\\Policies\\Microsoft\\Windows\sDefender\\SpyNet\\"\s\/v\s\\"SubmitSamplesConsent\\"\s\/t\sREG_DWORD\s\/d\s\\"0\\"\s\/f/ nocase ascii wide
         // Description: reduce Windows Defender's ability to block suspicious files and prevent sample submissions to Microsoft
         // Reference: https://github.com/spicy-bear/Threat-Hunting/blob/2c89b519862672e29547b4db4796caa923044595/95.213.145.101/%D1%81%D0%B8%D1%80/bat/defendermalwar.bat#L7
-        $string60_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\\SpyNet\\"\s\/v\sDisableBlockAtFirstSeen\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
+        $string63_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\\SpyNet\\"\s\/v\sDisableBlockAtFirstSeen\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
         // Description: reduce Windows Defender's ability to block suspicious files and prevent sample submissions to Microsoft
         // Reference: https://github.com/spicy-bear/Threat-Hunting/blob/2c89b519862672e29547b4db4796caa923044595/95.213.145.101/%D1%81%D0%B8%D1%80/bat/defendermalwar.bat#L7
-        $string61_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\\SpyNet\\"\s\/v\sLocalSettingOverrideSpyNetReporting\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
+        $string64_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\\SpyNet\\"\s\/v\sLocalSettingOverrideSpyNetReporting\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
         // Description: reduce Windows Defender's ability to block suspicious files and prevent sample submissions to Microsoft
         // Reference: https://github.com/spicy-bear/Threat-Hunting/blob/2c89b519862672e29547b4db4796caa923044595/95.213.145.101/%D1%81%D0%B8%D1%80/bat/defendermalwar.bat#L7
-        $string62_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\\SpyNet\\"\s\/v\sSubmitSamplesConsent\s\/t\sREG_DWORD\s\/d\s2\s\/f/ nocase ascii wide
+        $string65_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\\SpyNet\\"\s\/v\sSubmitSamplesConsent\s\/t\sREG_DWORD\s\/d\s2\s\/f/ nocase ascii wide
         // Description: mimikatz command
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string63_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sNT\\Printers\\PackagePointAndPrint\\"\s\/f\s\/v\sPackagePointAndPrintOnly\s\/t\sREG_DWORD\s\/d\s1/ nocase ascii wide
+        $string66_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sNT\\Printers\\PackagePointAndPrint\\"\s\/f\s\/v\sPackagePointAndPrintOnly\s\/t\sREG_DWORD\s\/d\s1/ nocase ascii wide
         // Description: mimikatz command
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string64_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sNT\\Printers\\PackagePointAndPrint\\"\s\/f\s\/v\sPackagePointAndPrintServerList\s\/t\sREG_DWORD\s\/d\s1/ nocase ascii wide
+        $string67_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sNT\\Printers\\PackagePointAndPrint\\"\s\/f\s\/v\sPackagePointAndPrintServerList\s\/t\sREG_DWORD\s\/d\s1/ nocase ascii wide
         // Description: mimikatz command
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string65_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sNT\\Printers\\PackagePointAndPrint\\ListofServers\\"\s\/f\s\/v\s1\s\/t\sREG_SZ\s\/d\s/ nocase ascii wide
+        $string68_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sNT\\Printers\\PackagePointAndPrint\\ListofServers\\"\s\/f\s\/v\s1\s\/t\sREG_SZ\s\/d\s/ nocase ascii wide
         // Description: mimikatz command
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string66_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sNT\\Printers\\PointAndPrint\\"\s\/f\s\/v\sRestrictDriverInstallationToAdministrators\s\/t\sREG_DWORD\s\/d\s0/ nocase ascii wide
+        $string69_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sNT\\Printers\\PointAndPrint\\"\s\/f\s\/v\sRestrictDriverInstallationToAdministrators\s\/t\sREG_DWORD\s\/d\s0/ nocase ascii wide
         // Description: Uninstall TrendMicro
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string67_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\SOFTWARE\\Wow6432Node\\TrendMicro\\PC\-cillinNTCorp\\CurrentVersion\\Misc\.\\"\s\/v\s\\"Allow\sUninstall\\"\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
+        $string70_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\SOFTWARE\\Wow6432Node\\TrendMicro\\PC\-cillinNTCorp\\CurrentVersion\\Misc\.\\"\s\/v\s\\"Allow\sUninstall\\"\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
         // Description: PrintNightmare exploitation
         // Reference: https://github.com/outflanknl/PrintNightmare
-        $string68_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\System\\CurrentControlSet\\Control\\Lsa\\"\s\/v\sEveryoneIncludesAnonymous\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
+        $string71_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\System\\CurrentControlSet\\Control\\Lsa\\"\s\/v\sEveryoneIncludesAnonymous\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
         // Description: PrintNightmare exploitation
         // Reference: https://github.com/outflanknl/PrintNightmare
-        $string69_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\System\\CurrentControlSet\\Control\\Lsa\\"\s\/v\sRestrictAnonymous\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
+        $string72_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\System\\CurrentControlSet\\Control\\Lsa\\"\s\/v\sRestrictAnonymous\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
         // Description: enable Remote Desktop connections with reg.exe
         // Reference: N/A
-        $string70_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Terminal\sServer\\"\s\/v\sfDenyTSConnections\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
+        $string73_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Terminal\sServer\\"\s\/v\sfDenyTSConnections\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
         // Description: Enables Remote Desktop Protocol (RDP) connections by setting fDenyTSConnections to 0
         // Reference: N/A
-        $string71_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Terminal\sServer\\"\s\/v\sfDenyTSConnections\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
+        $string74_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Terminal\sServer\\"\s\/v\sfDenyTSConnections\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
         // Description: Tunnel RDP through port 443
         // Reference: N/A
-        $string72_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\System\\CurrentControlSet\\Control\\TerminalServer\\WinStations\\RDP\-Tcp\\"\s\/v\sPortNumber\s\/t\sREG_DWORD\s\/d\s443\s\/f/ nocase ascii wide
+        $string75_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\System\\CurrentControlSet\\Control\\TerminalServer\\WinStations\\RDP\-Tcp\\"\s\/v\sPortNumber\s\/t\sREG_DWORD\s\/d\s443\s\/f/ nocase ascii wide
         // Description: disable logging related to Windows Defender
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string73_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\System\\CurrentControlSet\\Control\\WMI\\Autologger\\DefenderApiLogger\\"\s\/v\s\\"Start\\"\s\/t\sREG_DWORD\s\/d\s\\"0\\"\s\/f/ nocase ascii wide
+        $string76_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\System\\CurrentControlSet\\Control\\WMI\\Autologger\\DefenderApiLogger\\"\s\/v\s\\"Start\\"\s\/t\sREG_DWORD\s\/d\s\\"0\\"\s\/f/ nocase ascii wide
         // Description: disable logging related to Windows Defender
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string74_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\System\\CurrentControlSet\\Control\\WMI\\Autologger\\DefenderAuditLogger\\"\s\/v\s\\"Start\\"\s\/t\sREG_DWORD\s\/d\s\\"0\\"\s\/f/ nocase ascii wide
+        $string77_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\System\\CurrentControlSet\\Control\\WMI\\Autologger\\DefenderAuditLogger\\"\s\/v\s\\"Start\\"\s\/t\sREG_DWORD\s\/d\s\\"0\\"\s\/f/ nocase ascii wide
         // Description: PrintNightmare exploitation
         // Reference: https://github.com/outflanknl/PrintNightmare
-        $string75_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\System\\CurrentControlSet\\Services\\LanManServer\\Parameters\\"\s\/v\sNullSessionPipes\s\/t\sREG_MULTI_SZ\s\/d\ssrvsvc\s\/f/ nocase ascii wide
+        $string78_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\System\\CurrentControlSet\\Services\\LanManServer\\Parameters\\"\s\/v\sNullSessionPipes\s\/t\sREG_MULTI_SZ\s\/d\ssrvsvc\s\/f/ nocase ascii wide
         // Description: PrintNightmare exploitation
         // Reference: https://github.com/outflanknl/PrintNightmare
-        $string76_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\System\\CurrentControlSet\\Services\\LanManServer\\Parameters\\"\s\/v\sNullSessionShares\s\/t\sREG_MULTI_SZ\s\/d\sshare\s\/f/ nocase ascii wide
+        $string79_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\System\\CurrentControlSet\\Services\\LanManServer\\Parameters\\"\s\/v\sNullSessionShares\s\/t\sREG_MULTI_SZ\s\/d\sshare\s\/f/ nocase ascii wide
         // Description: disable Windows Defender-related services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string77_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\System\\CurrentControlSet\\Services\\SecurityHealthService\\"\s\/v\s\\"Start\\"\s\/t\sREG_DWORD\s\/d\s\\"4\\"\s\/f/ nocase ascii wide
+        $string80_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\System\\CurrentControlSet\\Services\\SecurityHealthService\\"\s\/v\s\\"Start\\"\s\/t\sREG_DWORD\s\/d\s\\"4\\"\s\/f/ nocase ascii wide
         // Description: disable Windows Defender-related services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string78_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\System\\CurrentControlSet\\Services\\WdBoot\\"\s\/v\s\\"Start\\"\s\/t\sREG_DWORD\s\/d\s\\"4\\"\s\/f/ nocase ascii wide
+        $string81_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\System\\CurrentControlSet\\Services\\WdBoot\\"\s\/v\s\\"Start\\"\s\/t\sREG_DWORD\s\/d\s\\"4\\"\s\/f/ nocase ascii wide
         // Description: disable Windows Defender-related services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string79_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\System\\CurrentControlSet\\Services\\WdFilter\\"\s\/v\s\\"Start\\"\s\/t\sREG_DWORD\s\/d\s\\"4\\"\s\/f/ nocase ascii wide
+        $string82_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\System\\CurrentControlSet\\Services\\WdFilter\\"\s\/v\s\\"Start\\"\s\/t\sREG_DWORD\s\/d\s\\"4\\"\s\/f/ nocase ascii wide
         // Description: disable Windows Defender-related services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string80_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\System\\CurrentControlSet\\Services\\WdNisDrv\\"\s\/v\s\\"Start\\"\s\/t\sREG_DWORD\s\/d\s\\"4\\"\s\/f/ nocase ascii wide
+        $string83_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\System\\CurrentControlSet\\Services\\WdNisDrv\\"\s\/v\s\\"Start\\"\s\/t\sREG_DWORD\s\/d\s\\"4\\"\s\/f/ nocase ascii wide
         // Description: disable Windows Defender-related services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string81_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\System\\CurrentControlSet\\Services\\WdNisSvc\\"\s\/v\s\\"Start\\"\s\/t\sREG_DWORD\s\/d\s\\"4\\"\s\/f/ nocase ascii wide
+        $string84_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\System\\CurrentControlSet\\Services\\WdNisSvc\\"\s\/v\s\\"Start\\"\s\/t\sREG_DWORD\s\/d\s\\"4\\"\s\/f/ nocase ascii wide
         // Description: disable Windows Defender-related services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string82_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\System\\CurrentControlSet\\Services\\WinDefend\\"\s\/v\s\\"Start\\"\s\/t\sREG_DWORD\s\/d\s\\"4\\"\s\/f/ nocase ascii wide
+        $string85_reg_greyware_tool_keyword = /reg\sadd\s\\"HKLM\\System\\CurrentControlSet\\Services\\WinDefend\\"\s\/v\s\\"Start\\"\s\/t\sREG_DWORD\s\/d\s\\"4\\"\s\/f/ nocase ascii wide
         // Description: disables Windows Defender by setting its start value to 4 (disabled)
         // Reference: https://github.com/spicy-bear/Threat-Hunting/blob/2c89b519862672e29547b4db4796caa923044595/95.213.145.101/%D1%81%D0%B8%D1%80/bat/defendermalwar.bat#L7
-        $string83_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SYSTEM\\CurrentControlSet\\services\\WinDefend\\"\s\/v\sStart\s\/t\sREG_DWORD\s\/d\s4\s\/f/ nocase ascii wide
+        $string86_reg_greyware_tool_keyword = /REG\sADD\s\\"HKLM\\SYSTEM\\CurrentControlSet\\services\\WinDefend\\"\s\/v\sStart\s\/t\sREG_DWORD\s\/d\s4\s\/f/ nocase ascii wide
         // Description: Allowing remote connections to this computer
         // Reference: N/A
-        $string84_reg_greyware_tool_keyword = /reg\sadd\s.{0,1000}HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal\sServer.{0,1000}\s\/v\sfDenyTSConnections\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
+        $string87_reg_greyware_tool_keyword = /reg\sadd\s.{0,1000}HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal\sServer.{0,1000}\s\/v\sfDenyTSConnections\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
         // Description: Hit F5 a bunch of times when you are at the RDP login screen
         // Reference: N/A
-        $string85_reg_greyware_tool_keyword = /REG\sADD\s.{0,1000}HKLM\\SOFTWARE\\Microsoft\\Windows\sNT\\CurrentVersion\\Image\sFile\sExecution\sOptions\\sethc\.exe.{0,1000}\s\/t\sREG_SZ\s\/v\sDebugger\s\/d\s.{0,1000}\\windows\\system32\\cmd\.exe.{0,1000}\s\/f/ nocase ascii wide
+        $string88_reg_greyware_tool_keyword = /REG\sADD\s.{0,1000}HKLM\\SOFTWARE\\Microsoft\\Windows\sNT\\CurrentVersion\\Image\sFile\sExecution\sOptions\\sethc\.exe.{0,1000}\s\/t\sREG_SZ\s\/v\sDebugger\s\/d\s.{0,1000}\\windows\\system32\\cmd\.exe.{0,1000}\s\/f/ nocase ascii wide
         // Description: At the login screen press Windows Key+U and you get a cmd.exe window as SYSTEM.
         // Reference: N/A
-        $string86_reg_greyware_tool_keyword = /REG\sADD\s.{0,1000}HKLM\\SOFTWARE\\Microsoft\\Windows\sNT\\CurrentVersion\\Image\sFile\sExecution\sOptions\\utilman\.exe.{0,1000}\s\/t\sREG_SZ\s\/v\sDebugger\s\/d\s.{0,1000}\\windows\\system32\\cmd\.exe.{0,1000}\s\/f/ nocase ascii wide
+        $string89_reg_greyware_tool_keyword = /REG\sADD\s.{0,1000}HKLM\\SOFTWARE\\Microsoft\\Windows\sNT\\CurrentVersion\\Image\sFile\sExecution\sOptions\\utilman\.exe.{0,1000}\s\/t\sREG_SZ\s\/v\sDebugger\s\/d\s.{0,1000}\\windows\\system32\\cmd\.exe.{0,1000}\s\/f/ nocase ascii wide
         // Description: Defense evasion technique disable windows defender
         // Reference: N/A
-        $string87_reg_greyware_tool_keyword = /reg\sadd\s.{0,1000}HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\\".{0,1000}\s\/v\sDisableAntiSpyware\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
+        $string90_reg_greyware_tool_keyword = /reg\sadd\s.{0,1000}HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\\".{0,1000}\s\/v\sDisableAntiSpyware\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
         // Description: Disable Real Time Protection
         // Reference: N/A
-        $string88_reg_greyware_tool_keyword = /reg\sadd\s.{0,1000}HKLM\\Software\\Policies\\Microsoft\\Windows\sDefender\\".{0,1000}\/v\s.{0,1000}DisableAntiSpyware.{0,1000}\s\/t\sREG_DWORD\s\/d\s.{0,1000}1.{0,1000}\s\/f/ nocase ascii wide
+        $string91_reg_greyware_tool_keyword = /reg\sadd\s.{0,1000}HKLM\\Software\\Policies\\Microsoft\\Windows\sDefender\\".{0,1000}\/v\s.{0,1000}DisableAntiSpyware.{0,1000}\s\/t\sREG_DWORD\s\/d\s.{0,1000}1.{0,1000}\s\/f/ nocase ascii wide
         // Description: Disable Real Time Protection
         // Reference: N/A
-        $string89_reg_greyware_tool_keyword = /reg\sadd\s.{0,1000}HKLM\\Software\\Policies\\Microsoft\\Windows\sDefender.{0,1000}\s\/v\s.{0,1000}DisableAntiVirus.{0,1000}\s\/t\sREG_DWORD\s\/d\s.{0,1000}1.{0,1000}\s\/f/ nocase ascii wide
+        $string92_reg_greyware_tool_keyword = /reg\sadd\s.{0,1000}HKLM\\Software\\Policies\\Microsoft\\Windows\sDefender.{0,1000}\s\/v\s.{0,1000}DisableAntiVirus.{0,1000}\s\/t\sREG_DWORD\s\/d\s.{0,1000}1.{0,1000}\s\/f/ nocase ascii wide
         // Description: Defense evasion technique In order to avoid detection at any point of the kill chain. attackers use several ways to disable anti-virus. disable Microsoft firewall and clear logs.
         // Reference: N/A
-        $string90_reg_greyware_tool_keyword = /reg\sadd\s.{0,1000}HKLM\\Software\\Policies\\Microsoft\\Windows\sDefender.{0,1000}\s\/v\sDisable.{0,1000}\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
+        $string93_reg_greyware_tool_keyword = /reg\sadd\s.{0,1000}HKLM\\Software\\Policies\\Microsoft\\Windows\sDefender.{0,1000}\s\/v\sDisable.{0,1000}\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
         // Description: Windows Defender Tampering Via registry
         // Reference: https://www.virustotal.com/gui/file/00820a1f0972678cfe7885bc989ab3e5602b0febc96baf9bf3741d56aa374f03/behavior
-        $string91_reg_greyware_tool_keyword = /reg\sadd\s.{0,1000}HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\\Threats\\ThreatIDDefaultAction/ nocase ascii wide
+        $string94_reg_greyware_tool_keyword = /reg\sadd\s.{0,1000}HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\\Threats\\ThreatIDDefaultAction/ nocase ascii wide
         // Description: Anti forensic - Disabling Prefetch
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
-        $string92_reg_greyware_tool_keyword = /reg\sadd\s.{0,1000}HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session\sManager\\Memory\sManagement\\PrefetchParameters.{0,1000}\s\/v\sEnablePrefetcher\s\/t\sREG_DWORD\s\/f\s\/d\s0/ nocase ascii wide
+        $string95_reg_greyware_tool_keyword = /reg\sadd\s.{0,1000}HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session\sManager\\Memory\sManagement\\PrefetchParameters.{0,1000}\s\/v\sEnablePrefetcher\s\/t\sREG_DWORD\s\/f\s\/d\s0/ nocase ascii wide
         // Description: Blind ETW Windows Defender: zero out registry values corresponding to its ETW sessions
         // Reference: N/A
-        $string93_reg_greyware_tool_keyword = /reg\sadd\s.{0,1000}HKLM\\System\\CurrentControlSet\\Control\\WMI\\Autologger\\DefenderApiLogger.{0,1000}\s\/v\s.{0,1000}Start.{0,1000}\s\/t\sREG_DWORD\s\/d\s.{0,1000}0.{0,1000}\s\/f/ nocase ascii wide
+        $string96_reg_greyware_tool_keyword = /reg\sadd\s.{0,1000}HKLM\\System\\CurrentControlSet\\Control\\WMI\\Autologger\\DefenderApiLogger.{0,1000}\s\/v\s.{0,1000}Start.{0,1000}\s\/t\sREG_DWORD\s\/d\s.{0,1000}0.{0,1000}\s\/f/ nocase ascii wide
         // Description: Disable Windows Defender Security Center
         // Reference: N/A
-        $string94_reg_greyware_tool_keyword = /reg\sadd\s.{0,1000}HKLM\\System\\CurrentControlSet\\Services\\SecurityHealthService.{0,1000}\s\/v\s.{0,1000}Start.{0,1000}\s\/t\sREG_DWORD\s\/d\s.{0,1000}4.{0,1000}\s\/f/ nocase ascii wide
+        $string97_reg_greyware_tool_keyword = /reg\sadd\s.{0,1000}HKLM\\System\\CurrentControlSet\\Services\\SecurityHealthService.{0,1000}\s\/v\s.{0,1000}Start.{0,1000}\s\/t\sREG_DWORD\s\/d\s.{0,1000}4.{0,1000}\s\/f/ nocase ascii wide
         // Description: command used in the Dispossessor ransomware group notes - The account will no longer be visible on the Windows login screen.
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string95_reg_greyware_tool_keyword = /reg\sadd\s\\\\"HKLM\\SOFTWARE\\Microsoft\\Windows\sNT\\CurrentVersion\\Winlogon\\SpecialAccounts\\UserList\\\\"\s\/t\sREG_DWORD\s\/f\s\/d\s0\s\/v\s/ nocase ascii wide
+        $string98_reg_greyware_tool_keyword = /reg\sadd\s\\\\"HKLM\\SOFTWARE\\Microsoft\\Windows\sNT\\CurrentVersion\\Winlogon\\SpecialAccounts\\UserList\\\\"\s\/t\sREG_DWORD\s\/f\s\/d\s0\s\/v\s/ nocase ascii wide
         // Description: This modification can be used to enable or disable the Restricted Admin mode for Remote Desktop Protocol (RDP) which has implications for Lateral Movement and privilege escalation
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
-        $string96_reg_greyware_tool_keyword = /reg\sadd\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\s\/v\sDisableRestrictedAdmin\s\/t\sREG_DWORD\s\/d\s\\"0\\"\s\/f/ nocase ascii wide
+        $string99_reg_greyware_tool_keyword = /reg\sadd\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\s\/v\sDisableRestrictedAdmin\s\/t\sREG_DWORD\s\/d\s\\"0\\"\s\/f/ nocase ascii wide
         // Description: This modification can be used to enable or disable the Restricted Admin mode for Remote Desktop Protocol (RDP) which has implications for Lateral Movement and privilege escalation
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
-        $string97_reg_greyware_tool_keyword = /reg\sadd\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\s\/v\sDisableRestrictedAdmin\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
+        $string100_reg_greyware_tool_keyword = /reg\sadd\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\s\/v\sDisableRestrictedAdmin\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
         // Description: This particular change is associated with the handling of LAN Manager (LM) hash storage which can affect the security of password storage on the system. This command can be used as part of credential access or defense evasion techniques
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
-        $string98_reg_greyware_tool_keyword = /reg\sadd\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\s\/v\sNoLMHash\s\/t\sREG_DWORD\s\/d\s\\"0\\"\s\/f/ nocase ascii wide
+        $string101_reg_greyware_tool_keyword = /reg\sadd\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\s\/v\sNoLMHash\s\/t\sREG_DWORD\s\/d\s\\"0\\"\s\/f/ nocase ascii wide
         // Description: Disables Protected Process Light (PPL) for Local Security Authority (LSA). This reduces system security by making LSA more vulnerable to tampering - exposing credentials
         // Reference: N/A
-        $string99_reg_greyware_tool_keyword = /reg\sadd\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\LSA\s\/v\sRunAsPPL\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
+        $string102_reg_greyware_tool_keyword = /reg\sadd\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\LSA\s\/v\sRunAsPPL\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
         // Description: Disable Cortex: Change the DLL to a random value
         // Reference: N/A
-        $string100_reg_greyware_tool_keyword = /reg\sadd\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\CryptSvc\\Parameters\s\/t\sREG_EXPAND_SZ\s\/v\sServiceDll\s\/d\s/ nocase ascii wide
+        $string103_reg_greyware_tool_keyword = /reg\sadd\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\CryptSvc\\Parameters\s\/t\sREG_EXPAND_SZ\s\/v\sServiceDll\s\/d\s/ nocase ascii wide
+        // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string104_reg_greyware_tool_keyword = /reg\sadd\sHKLM\\SOFTWARE\\Policies\\Microsoft\\VisualStudio\\Devtunnels\s\/v\sDisableDevTunnelsInVisualStudio\s\/t\sREG_DWORD\s\/d\s0/ nocase ascii wide
         // Description: Disables Protected Process Light (PPL) for Local Security Authority (LSA). This reduces system security by making LSA more vulnerable to tampering - exposing credentials
         // Reference: N/A
-        $string101_reg_greyware_tool_keyword = /reg\sadd\sHKLM\\SYSTEM\\CurrentControlSet\\Control\\LSA\s\/v\sRunAsPPL\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
+        $string105_reg_greyware_tool_keyword = /reg\sadd\sHKLM\\SYSTEM\\CurrentControlSet\\Control\\LSA\s\/v\sRunAsPPL\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
         // Description: allows the storage of plaintext passwords in memory
         // Reference: N/A
-        $string102_reg_greyware_tool_keyword = /reg\sadd\sHKLM\\SYSTEM\\CurrentControlSet\\Control\\SecurityProviders\\WDigest\s\/v\sUseLogonCredential\s\/t\sREG_DWORD\s\/d\s\/f\s1/ nocase ascii wide
+        $string106_reg_greyware_tool_keyword = /reg\sadd\sHKLM\\SYSTEM\\CurrentControlSet\\Control\\SecurityProviders\\WDigest\s\/v\sUseLogonCredential\s\/t\sREG_DWORD\s\/d\s\/f\s1/ nocase ascii wide
         // Description: allows the storage of plaintext passwords in memory
         // Reference: N/A
-        $string103_reg_greyware_tool_keyword = /reg\sadd\sHKLM\\SYSTEM\\CurrentControlSet\\Control\\SecurityProviders\\WDigest\s\/v\sUseLogonCredential\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
+        $string107_reg_greyware_tool_keyword = /reg\sadd\sHKLM\\SYSTEM\\CurrentControlSet\\Control\\SecurityProviders\\WDigest\s\/v\sUseLogonCredential\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
         // Description: Enables WDigest authentication - storing plaintext credentials in memory. This exposes the system to credential theft attacks
         // Reference: N/A
-        $string104_reg_greyware_tool_keyword = /reg\sadd\sHKLM\\SYSTEM\\CurrentControlSet\\Control\\SecurityProviders\\WDigest\s\/v\sUseLogonCredential\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
+        $string108_reg_greyware_tool_keyword = /reg\sadd\sHKLM\\SYSTEM\\CurrentControlSet\\Control\\SecurityProviders\\WDigest\s\/v\sUseLogonCredential\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
         // Description: Open passwords mimic + open rdp 3389 - used by many ransomware groups
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string105_reg_greyware_tool_keyword = /reg\sadd\sHKLM\\SYSTEM\\CurrentControlSet\\Control\\SecurityProviders\\WDigest\s\/v\sUseLogonCredential\s\/t\sREG_DWORD\s\/d\s1/ nocase ascii wide
+        $string109_reg_greyware_tool_keyword = /reg\sadd\sHKLM\\SYSTEM\\CurrentControlSet\\Control\\SecurityProviders\\WDigest\s\/v\sUseLogonCredential\s\/t\sREG_DWORD\s\/d\s1/ nocase ascii wide
         // Description: allows the storage of plaintext passwords in memory
         // Reference: N/A
-        $string106_reg_greyware_tool_keyword = /reg\sadd\sHKLM\\SYSTEM\\CurrentControlSet\\Control\\SecurityProviders\\WDigest\s\/v\sUseLogonCredential\s\/t\sREG_DWORD\s\/f\s\/d\s1/ nocase ascii wide
+        $string110_reg_greyware_tool_keyword = /reg\sadd\sHKLM\\SYSTEM\\CurrentControlSet\\Control\\SecurityProviders\\WDigest\s\/v\sUseLogonCredential\s\/t\sREG_DWORD\s\/f\s\/d\s1/ nocase ascii wide
         // Description: remove the Windows Defender context menu options
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string107_reg_greyware_tool_keyword = /reg\sdelete\s\\"HKCR\\.{0,1000}\\shellex\\ContextMenuHandlers\\EPP\\"\s\/f/ nocase ascii wide
+        $string111_reg_greyware_tool_keyword = /reg\sdelete\s\\"HKCR\\.{0,1000}\\shellex\\ContextMenuHandlers\\EPP\\"\s\/f/ nocase ascii wide
         // Description: remove the Windows Defender context menu options
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string108_reg_greyware_tool_keyword = /reg\sdelete\s\\"HKCR\\Directory\\shellex\\ContextMenuHandlers\\EPP\\"\s\/f/ nocase ascii wide
+        $string112_reg_greyware_tool_keyword = /reg\sdelete\s\\"HKCR\\Directory\\shellex\\ContextMenuHandlers\\EPP\\"\s\/f/ nocase ascii wide
         // Description: remove the Windows Defender context menu options
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string109_reg_greyware_tool_keyword = /reg\sdelete\s\\"HKCR\\Drive\\shellex\\ContextMenuHandlers\\EPP\\"\s\/f/ nocase ascii wide
+        $string113_reg_greyware_tool_keyword = /reg\sdelete\s\\"HKCR\\Drive\\shellex\\ContextMenuHandlers\\EPP\\"\s\/f/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string110_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKCU\\software\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"SUPERAntiSpyware\\"\s\/f\s\/reg\:32/ nocase ascii wide
+        $string114_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKCU\\software\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"SUPERAntiSpyware\\"\s\/f\s\/reg\:32/ nocase ascii wide
         // Description: remove Windows Defender from the system tray
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string111_reg_greyware_tool_keyword = /reg\sdelete\s\\"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"Windows\sDefender\\"\s\/f/ nocase ascii wide
+        $string115_reg_greyware_tool_keyword = /reg\sdelete\s\\"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"Windows\sDefender\\"\s\/f/ nocase ascii wide
         // Description: delete terminal server client entries from the registry - erasing potential evidence of RDP connections
         // Reference: https://github.com/roadwy/DefenderYara/blob/9bbdb7f9fd3513ce30aa69cd1d88830e3cf596ca/Ransom/Win32/Ergop/Ransom_Win32_Ergop_A_.yar#L10
-        $string112_reg_greyware_tool_keyword = /reg\sdelete\s\\"HKEY_CURRENT_USER\\Software\\Microsoft\\Terminal\sServer\sClient\\Default\\"\s\/va\s\/f/ nocase ascii wide
+        $string116_reg_greyware_tool_keyword = /reg\sdelete\s\\"HKEY_CURRENT_USER\\Software\\Microsoft\\Terminal\sServer\sClient\\Default\\"\s\/va\s\/f/ nocase ascii wide
         // Description: delete terminal server client entries from the registry - erasing potential evidence of RDP connections
         // Reference: https://github.com/roadwy/DefenderYara/blob/9bbdb7f9fd3513ce30aa69cd1d88830e3cf596ca/Ransom/Win32/Ergop/Ransom_Win32_Ergop_A_.yar#L10
-        $string113_reg_greyware_tool_keyword = /reg\sdelete\s\\"HKEY_CURRENT_USER\\Software\\Microsoft\\Terminal\sServer\sClient\\Servers\\"\s\/f/ nocase ascii wide
+        $string117_reg_greyware_tool_keyword = /reg\sdelete\s\\"HKEY_CURRENT_USER\\Software\\Microsoft\\Terminal\sServer\sClient\\Servers\\"\s\/f/ nocase ascii wide
         // Description: remove Windows Defender from the system tray
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string114_reg_greyware_tool_keyword = /reg\sdelete\s\\"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run\\"\s\/v\s\\"Windows\sDefender\\"\s\/f/ nocase ascii wide
+        $string118_reg_greyware_tool_keyword = /reg\sdelete\s\\"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run\\"\s\/v\s\\"Windows\sDefender\\"\s\/f/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string115_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"AvastUI\.exe\\"\s\/f\s\/reg\:32/ nocase ascii wide
+        $string119_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"AvastUI\.exe\\"\s\/f\s\/reg\:32/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string116_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"AvastUI\.exe\\"\s\/f\s\/reg\:64/ nocase ascii wide
+        $string120_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"AvastUI\.exe\\"\s\/f\s\/reg\:64/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string117_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"AVGUI\.exe\\"\s\/f\s\/reg\:32/ nocase ascii wide
+        $string121_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"AVGUI\.exe\\"\s\/f\s\/reg\:32/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string118_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"AVGUI\.exe\\"\s\/f\s\/reg\:64/ nocase ascii wide
+        $string122_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"AVGUI\.exe\\"\s\/f\s\/reg\:64/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string119_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"Avira\sSystrayStartTrigger\\"\s\/f\s\/reg\:32/ nocase ascii wide
+        $string123_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"Avira\sSystrayStartTrigger\\"\s\/f\s\/reg\:32/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string120_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"Avira\sSystrayStartTrigger\\"\s\/f\s\/reg\:64/ nocase ascii wide
+        $string124_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"Avira\sSystrayStartTrigger\\"\s\/f\s\/reg\:64/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string121_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"ClamWin\\"\s\/f\s\/reg\:32/ nocase ascii wide
+        $string125_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"ClamWin\\"\s\/f\s\/reg\:32/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string122_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"ClamWin\\"\s\/f\s\/reg\:64/ nocase ascii wide
+        $string126_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"ClamWin\\"\s\/f\s\/reg\:64/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string123_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"COMODO\sInternet\sSecurity\\"\s\/f\s\/reg\:32/ nocase ascii wide
+        $string127_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"COMODO\sInternet\sSecurity\\"\s\/f\s\/reg\:32/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string124_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"COMODO\sInternet\sSecurity\\"\s\/f\s\/reg\:64/ nocase ascii wide
+        $string128_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"COMODO\sInternet\sSecurity\\"\s\/f\s\/reg\:64/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string125_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"egui\\"\s\/f\s\/reg\:32/ nocase ascii wide
+        $string129_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"egui\\"\s\/f\s\/reg\:32/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string126_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"egui\\"\s\/f\s\/reg\:64/ nocase ascii wide
+        $string130_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"egui\\"\s\/f\s\/reg\:64/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string127_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"IseUI\\"\s\/f\s\/reg\:32/ nocase ascii wide
+        $string131_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"IseUI\\"\s\/f\s\/reg\:32/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string128_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"IseUI\\"\s\/f\s\/reg\:64/ nocase ascii wide
+        $string132_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"IseUI\\"\s\/f\s\/reg\:64/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string129_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"QHSafeTray\\"\s\/f\s\/reg\:32/ nocase ascii wide
+        $string133_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"QHSafeTray\\"\s\/f\s\/reg\:32/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string130_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"QHSafeTray\\"\s\/f\s\/reg\:64/ nocase ascii wide
+        $string134_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"QHSafeTray\\"\s\/f\s\/reg\:64/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string131_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"SBAMTray\\"\s\/f\s\/reg\:32/ nocase ascii wide
+        $string135_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"SBAMTray\\"\s\/f\s\/reg\:32/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string132_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"SBAMTray\\"\s\/f\s\/reg\:64/ nocase ascii wide
+        $string136_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"SBAMTray\\"\s\/f\s\/reg\:64/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string133_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"SBRegRebootCleaner\\"\s\/f\s\/reg\:32/ nocase ascii wide
+        $string137_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"SBRegRebootCleaner\\"\s\/f\s\/reg\:32/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string134_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"SBRegRebootCleaner\\"\s\/f\s\/reg\:64/ nocase ascii wide
+        $string138_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"SBRegRebootCleaner\\"\s\/f\s\/reg\:64/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string135_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"SUPERAntiSpyware\\"\s\/f\s\/reg\:32/ nocase ascii wide
+        $string139_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"SUPERAntiSpyware\\"\s\/f\s\/reg\:32/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string136_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"SUPERAntiSpyware\\"\s\/f\s\/reg\:32/ nocase ascii wide
+        $string140_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"SUPERAntiSpyware\\"\s\/f\s\/reg\:32/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string137_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"SUPERAntiSpyware\\"\s\/f\s\/reg\:64/ nocase ascii wide
+        $string141_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"SUPERAntiSpyware\\"\s\/f\s\/reg\:64/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string138_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"SUPERAntiSpyware\\"\s\/f\s\/reg\:64/ nocase ascii wide
+        $string142_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"SUPERAntiSpyware\\"\s\/f\s\/reg\:64/ nocase ascii wide
         // Description: remove Windows Defender from the system tray
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string139_reg_greyware_tool_keyword = /reg\sdelete\s\\"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"Windows\sDefender\\"\s\/f/ nocase ascii wide
+        $string143_reg_greyware_tool_keyword = /reg\sdelete\s\\"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"Windows\sDefender\\"\s\/f/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string140_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"Zillya\sAntivirus\\"\s\/f\s\/reg\:32/ nocase ascii wide
+        $string144_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"Zillya\sAntivirus\\"\s\/f\s\/reg\:32/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string141_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"Zillya\sAntivirus\\"\s\/f\s\/reg\:64/ nocase ascii wide
+        $string145_reg_greyware_tool_keyword = /Reg\sDelete\s\\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"Zillya\sAntivirus\\"\s\/f\s\/reg\:64/ nocase ascii wide
+        // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string146_reg_greyware_tool_keyword = /reg\sdelete\s\\"HKLM\\SOFTWARE\\Policies\\Microsoft\\VisualStudio\\Devtunnels\\"\s\/v\sDisableDevTunnelsInVisualStudio\s\/f/ nocase ascii wide
         // Description: Remove Sophos Registry Keys
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string142_reg_greyware_tool_keyword = /REG\sDelete\s\\"HKLM\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"Sophos\sAutoUpdate\sMonitor\\"\s\/f/ nocase ascii wide
+        $string147_reg_greyware_tool_keyword = /REG\sDelete\s\\"HKLM\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Run\\"\s\/v\s\\"Sophos\sAutoUpdate\sMonitor\\"\s\/f/ nocase ascii wide
+        // Description: Delete stuffs related to windows defender registry
+        // Reference: N/A
+        $string148_reg_greyware_tool_keyword = /reg\sdelete\s.{0,1000}\\Software\\Microsoft\\Windows\sDefender/ nocase ascii wide
         // Description: Disable Real Time Protection
         // Reference: N/A
-        $string143_reg_greyware_tool_keyword = /reg\sdelete\s.{0,1000}HKLM\\Software\\Policies\\Microsoft\\Windows\sDefender.{0,1000}\s\/f/ nocase ascii wide
+        $string149_reg_greyware_tool_keyword = /reg\sdelete\s.{0,1000}HKLM\\Software\\Policies\\Microsoft\\Windows\sDefender.{0,1000}\s\/f/ nocase ascii wide
+        // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string150_reg_greyware_tool_keyword = /reg\sdelete\sHKLM\\SOFTWARE\\Policies\\Microsoft\\VisualStudio\\Devtunnels/ nocase ascii wide
+        // Description: Deletes the registry key responsible for enabling Windows Defender under System Settings.
+        // Reference: N/A
+        $string151_reg_greyware_tool_keyword = /reg\sdelete.{0,1000}\\Software\\Microsoft\\SystemSettings\\SettingId\\SystemSettings_WindowsDefender_UseWindowsDefender/ nocase ascii wide
+        // Description: Deletes the Windows Event Log channel for Windows Defender WHC (Windows Health Center
+        // Reference: N/A
+        $string152_reg_greyware_tool_keyword = /reg\sdelete.{0,1000}\\Software\\Microsoft\\Windows\\CurrentVersion\\WINEVT\\Channels\\Microsoft\-Windows\-Windows\sDefender\/WHC/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string144_reg_greyware_tool_keyword = /reg\squery\s\\"HKEY_LOCAL_MACHINE\\SOFTWARE\\MICROSOFT\\WINDOWS\sNT\\CURRENTVERSION\\WINLOGON\\"\s\/v\sCACHEDLOGONSCOUNT/ nocase ascii wide
+        $string153_reg_greyware_tool_keyword = /reg\squery\s\\"HKEY_LOCAL_MACHINE\\SOFTWARE\\MICROSOFT\\WINDOWS\sNT\\CURRENTVERSION\\WINLOGON\\"\s\/v\sCACHEDLOGONSCOUNT/ nocase ascii wide
         // Description: Query registry for Terminal Server Client settings
         // Reference: N/A
-        $string145_reg_greyware_tool_keyword = /reg\squery\s.{0,1000}\\Software\\Microsoft\\Terminal\sServer\sClient\\Default\\"/ nocase ascii wide
+        $string154_reg_greyware_tool_keyword = /reg\squery\s.{0,1000}\\Software\\Microsoft\\Terminal\sServer\sClient\\Default\\"/ nocase ascii wide
         // Description: associated with PEASS-ng - Privilege Escalation Awesome Scripts suite
         // Reference: https://github.com/peass-ng/PEASS-ng
-        $string146_reg_greyware_tool_keyword = "reg query HKCU /f passw /t REG_SZ /s" nocase ascii wide
+        $string155_reg_greyware_tool_keyword = "reg query HKCU /f passw /t REG_SZ /s" nocase ascii wide
         // Description: associated with PEASS-ng - Privilege Escalation Awesome Scripts suite
         // Reference: https://github.com/peass-ng/PEASS-ng
-        $string147_reg_greyware_tool_keyword = "reg query HKCU /f pwd /t REG_SZ /s" nocase ascii wide
+        $string156_reg_greyware_tool_keyword = "reg query HKCU /f pwd /t REG_SZ /s" nocase ascii wide
         // Description: Query the Windows registry sensitive informations
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string148_reg_greyware_tool_keyword = /reg\squery\shkcu\\software\\.{0,1000}\\putty\\session/ nocase ascii wide
+        $string157_reg_greyware_tool_keyword = /reg\squery\shkcu\\software\\.{0,1000}\\putty\\session/ nocase ascii wide
         // Description: credential access with reg
         // Reference: https://medium.com/detect-fyi/playbook-hunting-chinese-apt-379a6b950492
-        $string149_reg_greyware_tool_keyword = /reg\squery\shkcu\\software\\.{0,1000}\\putty\\session/ nocase ascii wide
+        $string158_reg_greyware_tool_keyword = /reg\squery\shkcu\\software\\.{0,1000}\\putty\\session/ nocase ascii wide
         // Description: queries the Windows Registry for entries in the Run key (indicate programs set to execute upon user login - potentially revealing persistence mechanisms)
         // Reference: N/A
-        $string150_reg_greyware_tool_keyword = /reg\squery\sHKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run/ nocase ascii wide
+        $string159_reg_greyware_tool_keyword = /reg\squery\sHKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string151_reg_greyware_tool_keyword = /reg\squery\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\LSA\s\/v\sRunAsPPL/ nocase ascii wide
+        $string160_reg_greyware_tool_keyword = /reg\squery\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\LSA\s\/v\sRunAsPPL/ nocase ascii wide
         // Description: Check if LSASS is running in PPL
         // Reference: https://raw.githubusercontent.com/carlospolop/PEASS-ng/master/winPEAS/winPEASbat/winPEAS.bat
-        $string152_reg_greyware_tool_keyword = /reg\squery\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\s\/v\sRunAsPPL/ nocase ascii wide
+        $string161_reg_greyware_tool_keyword = /reg\squery\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\s\/v\sRunAsPPL/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string153_reg_greyware_tool_keyword = /reg\squery\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\\s\/v\sRunAsPPL/ nocase ascii wide
+        $string162_reg_greyware_tool_keyword = /reg\squery\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\\s\/v\sRunAsPPL/ nocase ascii wide
         // Description: associated with PEASS-ng - Privilege Escalation Awesome Scripts suite
         // Reference: https://github.com/peass-ng/PEASS-ng
-        $string154_reg_greyware_tool_keyword = "reg query HKLM /f passw /t REG_SZ /s" nocase ascii wide
+        $string163_reg_greyware_tool_keyword = "reg query HKLM /f passw /t REG_SZ /s" nocase ascii wide
         // Description: Searching the Registry for Passwords
         // Reference: N/A
-        $string155_reg_greyware_tool_keyword = "reg query HKLM /f password  /t REG_SZ  /s " nocase ascii wide
+        $string164_reg_greyware_tool_keyword = "reg query HKLM /f password  /t REG_SZ  /s " nocase ascii wide
         // Description: associated with PEASS-ng - Privilege Escalation Awesome Scripts suite
         // Reference: https://github.com/peass-ng/PEASS-ng
-        $string156_reg_greyware_tool_keyword = "reg query HKLM /f pwd /t REG_SZ /s" nocase ascii wide
+        $string165_reg_greyware_tool_keyword = "reg query HKLM /f pwd /t REG_SZ /s" nocase ascii wide
         // Description: Query the Windows registry sensitive informations
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string157_reg_greyware_tool_keyword = /reg\squery\shklm\\software\\OpenSSH/ nocase ascii wide
+        $string166_reg_greyware_tool_keyword = /reg\squery\shklm\\software\\OpenSSH/ nocase ascii wide
         // Description: credential access with reg
         // Reference: https://medium.com/detect-fyi/playbook-hunting-chinese-apt-379a6b950492
-        $string158_reg_greyware_tool_keyword = /reg\squery\shklm\\software\\OpenSSH/ nocase ascii wide
+        $string167_reg_greyware_tool_keyword = /reg\squery\shklm\\software\\OpenSSH/ nocase ascii wide
         // Description: Query the Windows registry sensitive informations
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string159_reg_greyware_tool_keyword = /reg\squery\shklm\\software\\OpenSSH\\Agent/ nocase ascii wide
+        $string168_reg_greyware_tool_keyword = /reg\squery\shklm\\software\\OpenSSH\\Agent/ nocase ascii wide
         // Description: credential access with reg
         // Reference: https://medium.com/detect-fyi/playbook-hunting-chinese-apt-379a6b950492
-        $string160_reg_greyware_tool_keyword = /reg\squery\shklm\\software\\OpenSSH\\Agent/ nocase ascii wide
+        $string169_reg_greyware_tool_keyword = /reg\squery\shklm\\software\\OpenSSH\\Agent/ nocase ascii wide
         // Description: Query the Windows registry sensitive informations
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string161_reg_greyware_tool_keyword = /reg\squery\shklm\\software\\realvnc/ nocase ascii wide
+        $string170_reg_greyware_tool_keyword = /reg\squery\shklm\\software\\realvnc/ nocase ascii wide
         // Description: credential access with reg
         // Reference: https://medium.com/detect-fyi/playbook-hunting-chinese-apt-379a6b950492
-        $string162_reg_greyware_tool_keyword = /reg\squery\shklm\\software\\realvnc/ nocase ascii wide
+        $string171_reg_greyware_tool_keyword = /reg\squery\shklm\\software\\realvnc/ nocase ascii wide
         // Description: Query the Windows registry sensitive informations
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string163_reg_greyware_tool_keyword = /reg\squery\shklm\\software\\realvnc\\Allusers/ nocase ascii wide
+        $string172_reg_greyware_tool_keyword = /reg\squery\shklm\\software\\realvnc\\Allusers/ nocase ascii wide
         // Description: credential access with reg
         // Reference: https://medium.com/detect-fyi/playbook-hunting-chinese-apt-379a6b950492
-        $string164_reg_greyware_tool_keyword = /reg\squery\shklm\\software\\realvnc\\Allusers/ nocase ascii wide
+        $string173_reg_greyware_tool_keyword = /reg\squery\shklm\\software\\realvnc\\Allusers/ nocase ascii wide
         // Description: Query the Windows registry sensitive informations
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string165_reg_greyware_tool_keyword = /reg\squery\shklm\\software\\realvnc\\Allusers\\vncserver/ nocase ascii wide
+        $string174_reg_greyware_tool_keyword = /reg\squery\shklm\\software\\realvnc\\Allusers\\vncserver/ nocase ascii wide
         // Description: credential access with reg
         // Reference: https://medium.com/detect-fyi/playbook-hunting-chinese-apt-379a6b950492
-        $string166_reg_greyware_tool_keyword = /reg\squery\shklm\\software\\realvnc\\Allusers\\vncserver/ nocase ascii wide
+        $string175_reg_greyware_tool_keyword = /reg\squery\shklm\\software\\realvnc\\Allusers\\vncserver/ nocase ascii wide
         // Description: Query the Windows registry sensitive informations
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string167_reg_greyware_tool_keyword = /reg\squery\shklm\\software\\realvnc\\vncserver/ nocase ascii wide
+        $string176_reg_greyware_tool_keyword = /reg\squery\shklm\\software\\realvnc\\vncserver/ nocase ascii wide
         // Description: credential access with reg
         // Reference: https://medium.com/detect-fyi/playbook-hunting-chinese-apt-379a6b950492
-        $string168_reg_greyware_tool_keyword = /reg\squery\shklm\\software\\realvnc\\vncserver/ nocase ascii wide
+        $string177_reg_greyware_tool_keyword = /reg\squery\shklm\\software\\realvnc\\vncserver/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string169_reg_greyware_tool_keyword = /reg\squery\sHKLM\\System\\CurrentControlSet\\Control\\LSA\s\/v\sLsaCfgFlags/ nocase ascii wide
+        $string178_reg_greyware_tool_keyword = /reg\squery\sHKLM\\System\\CurrentControlSet\\Control\\LSA\s\/v\sLsaCfgFlags/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string170_reg_greyware_tool_keyword = /reg\squery\sHKLM\\SYSTEM\\CurrentControlSet\\Control\\SecurityProviders\\WDigest\s\/v\sUseLogonCredential/ nocase ascii wide
+        $string179_reg_greyware_tool_keyword = /reg\squery\sHKLM\\SYSTEM\\CurrentControlSet\\Control\\SecurityProviders\\WDigest\s\/v\sUseLogonCredential/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string171_reg_greyware_tool_keyword = /reg\ssave\s\\"HK\\"L\\"\\"M\\s\\"\\"a\\"\\"m\\"\\"\swin32\.dll/ nocase ascii wide
+        $string180_reg_greyware_tool_keyword = /reg\ssave\s\\"HK\\"L\\"\\"M\\s\\"\\"a\\"\\"m\\"\\"\swin32\.dll/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string172_reg_greyware_tool_keyword = /reg\ssave\s\\"HK\\"L\\"\\"M\\s\\"\\"ys\\"\\"t\\"em\\"\swin32\.exe/ nocase ascii wide
+        $string181_reg_greyware_tool_keyword = /reg\ssave\s\\"HK\\"L\\"\\"M\\s\\"\\"ys\\"\\"t\\"em\\"\swin32\.exe/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string173_reg_greyware_tool_keyword = /reg\ssave\s\\"HK.{0,1000}L.{0,1000}M\\s.{0,1000}ec.{0,1000}u.{0,1000}rit.{0,1000}y.{0,1000}\\"\supdate\.exe/ nocase ascii wide
+        $string182_reg_greyware_tool_keyword = /reg\ssave\s\\"HK.{0,1000}L.{0,1000}M\\s.{0,1000}ec.{0,1000}u.{0,1000}rit.{0,1000}y.{0,1000}\\"\supdate\.exe/ nocase ascii wide
         // Description: saves a copy of the registry hive hklm\sam to a .dat file
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string174_reg_greyware_tool_keyword = /reg\ssave\shklm\\sam\s.{0,1000}\.dat/ nocase ascii wide
+        $string183_reg_greyware_tool_keyword = /reg\ssave\shklm\\sam\s.{0,1000}\.dat/ nocase ascii wide
         // Description: the commands are used to export the SAM and SYSTEM registry hives which contain sensitive Windows security data including hashed passwords for local accounts. By obtaining these hives an attacker can attempt to crack the hashes or use them in pass-the-hash attacks for unauthorized access.
         // Reference: N/A
-        $string175_reg_greyware_tool_keyword = /reg\ssave\sHKLM\\SAM\s.{0,1000}c\:/ nocase ascii wide
+        $string184_reg_greyware_tool_keyword = /reg\ssave\sHKLM\\SAM\s.{0,1000}c\:/ nocase ascii wide
         // Description: the commands are used to export the SAM and SYSTEM registry hives which contain sensitive Windows security data including hashed passwords for local accounts. By obtaining these hives an attacker can attempt to crack the hashes or use them in pass-the-hash attacks for unauthorized access.
         // Reference: N/A
-        $string176_reg_greyware_tool_keyword = /reg\ssave\shklm\\sam\ssam/ nocase ascii wide
+        $string185_reg_greyware_tool_keyword = /reg\ssave\shklm\\sam\ssam/ nocase ascii wide
         // Description: saves a copy of the registry hive hklm\security to a .dat file
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
-        $string177_reg_greyware_tool_keyword = /reg\ssave\sHKLM\\SECURITY\s/ nocase ascii wide
+        $string186_reg_greyware_tool_keyword = /reg\ssave\sHKLM\\SECURITY\s/ nocase ascii wide
         // Description: saves a copy of the registry hive hklm\system to a .dat file
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string178_reg_greyware_tool_keyword = /reg\ssave\shklm\\system\s.{0,1000}\.dat/ nocase ascii wide
+        $string187_reg_greyware_tool_keyword = /reg\ssave\shklm\\system\s.{0,1000}\.dat/ nocase ascii wide
         // Description: the commands are used to export the SAM and SYSTEM registry hives which contain sensitive Windows security data including hashed passwords for local accounts. By obtaining these hives an attacker can attempt to crack the hashes or use them in pass-the-hash attacks for unauthorized access.
         // Reference: N/A
-        $string179_reg_greyware_tool_keyword = /reg\ssave\sHKLM\\SYSTEM\s.{0,1000}c\:/ nocase ascii wide
+        $string188_reg_greyware_tool_keyword = /reg\ssave\sHKLM\\SYSTEM\s.{0,1000}c\:/ nocase ascii wide
         // Description: the commands are used to export the SAM and SYSTEM registry hives which contain sensitive Windows security data including hashed passwords for local accounts. By obtaining these hives an attacker can attempt to crack the hashes or use them in pass-the-hash attacks for unauthorized access.
         // Reference: N/A
-        $string180_reg_greyware_tool_keyword = /reg\ssave\shklm\\system\ssystem/ nocase ascii wide
+        $string189_reg_greyware_tool_keyword = /reg\ssave\shklm\\system\ssystem/ nocase ascii wide
         // Description: PrintNightmare exploitation
         // Reference: https://github.com/outflanknl/PrintNightmare
-        $string181_reg_greyware_tool_keyword = /reg\.exe\sADD\s\\"HKLM\\System\\CurrentControlSet\\Control\\Lsa\\"\s\/v\sEveryoneIncludesAnonymous\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
+        $string190_reg_greyware_tool_keyword = /reg\.exe\sADD\s\\"HKLM\\System\\CurrentControlSet\\Control\\Lsa\\"\s\/v\sEveryoneIncludesAnonymous\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
         // Description: PrintNightmare exploitation
         // Reference: https://github.com/outflanknl/PrintNightmare
-        $string182_reg_greyware_tool_keyword = /reg\.exe\sADD\s\\"HKLM\\System\\CurrentControlSet\\Control\\Lsa\\"\s\/v\sRestrictAnonymous\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
+        $string191_reg_greyware_tool_keyword = /reg\.exe\sADD\s\\"HKLM\\System\\CurrentControlSet\\Control\\Lsa\\"\s\/v\sRestrictAnonymous\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
         // Description: PrintNightmare exploitation
         // Reference: https://github.com/outflanknl/PrintNightmare
-        $string183_reg_greyware_tool_keyword = /reg\.exe\sADD\s\\"HKLM\\System\\CurrentControlSet\\Services\\LanManServer\\Parameters\\"\s\/v\sNullSessionPipes\s\/t\sREG_MULTI_SZ\s\/d\ssrvsvc\s\/f/ nocase ascii wide
+        $string192_reg_greyware_tool_keyword = /reg\.exe\sADD\s\\"HKLM\\System\\CurrentControlSet\\Services\\LanManServer\\Parameters\\"\s\/v\sNullSessionPipes\s\/t\sREG_MULTI_SZ\s\/d\ssrvsvc\s\/f/ nocase ascii wide
         // Description: PrintNightmare exploitation
         // Reference: https://github.com/outflanknl/PrintNightmare
-        $string184_reg_greyware_tool_keyword = /reg\.exe\sADD\s\\"HKLM\\System\\CurrentControlSet\\Services\\LanManServer\\Parameters\\"\s\/v\sNullSessionShares\s\/t\sREG_MULTI_SZ\s\/d\sshare\s\/f/ nocase ascii wide
+        $string193_reg_greyware_tool_keyword = /reg\.exe\sADD\s\\"HKLM\\System\\CurrentControlSet\\Services\\LanManServer\\Parameters\\"\s\/v\sNullSessionShares\s\/t\sREG_MULTI_SZ\s\/d\sshare\s\/f/ nocase ascii wide
         // Description: Windows Defender Tampering Via registry
         // Reference: https://www.virustotal.com/gui/file/00820a1f0972678cfe7885bc989ab3e5602b0febc96baf9bf3741d56aa374f03/behavior
-        $string185_reg_greyware_tool_keyword = /reg\.exe\sadd\s.{0,1000}HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\\Threats\\ThreatIDDefaultAction/ nocase ascii wide
+        $string194_reg_greyware_tool_keyword = /reg\.exe\sadd\s.{0,1000}HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\\Threats\\ThreatIDDefaultAction/ nocase ascii wide
         // Description: CleanRDP.bat script erasing RDP traces used by Dispossessor ransomware group
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string186_reg_greyware_tool_keyword = /reg\.exe\sdelete\s\\"HKEY_CURRENT_USER\\Software\\Microsoft\\Terminal\sServer\sClient\\Default\\"\s\/va\s\/f/ nocase ascii wide
+        $string195_reg_greyware_tool_keyword = /reg\.exe\sdelete\s\\"HKEY_CURRENT_USER\\Software\\Microsoft\\Terminal\sServer\sClient\\Default\\"\s\/va\s\/f/ nocase ascii wide
         // Description: CleanRDP.bat script erasing RDP traces used by Dispossessor ransomware group
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string187_reg_greyware_tool_keyword = /reg\.exe\sdelete\s\\"HKEY_CURRENT_USER\\Software\\Microsoft\\Terminal\sServer\sClient\\Servers\\"\s\/f/ nocase ascii wide
+        $string196_reg_greyware_tool_keyword = /reg\.exe\sdelete\s\\"HKEY_CURRENT_USER\\Software\\Microsoft\\Terminal\sServer\sClient\\Servers\\"\s\/f/ nocase ascii wide
         // Description: saves a copy of the registry hive
         // Reference: N/A
-        $string188_reg_greyware_tool_keyword = /reg\.exe\ssave\shklm\\sam\s/ nocase ascii wide
+        $string197_reg_greyware_tool_keyword = /reg\.exe\ssave\shklm\\sam\s/ nocase ascii wide
         // Description: saves a copy of the registry hive
         // Reference: N/A
-        $string189_reg_greyware_tool_keyword = /reg\.exe\ssave\shklm\\security\s/ nocase ascii wide
+        $string198_reg_greyware_tool_keyword = /reg\.exe\ssave\shklm\\security\s/ nocase ascii wide
         // Description: saves a copy of the registry hive
         // Reference: N/A
-        $string190_reg_greyware_tool_keyword = /reg\.exe\ssave\shklm\\system\s/ nocase ascii wide
+        $string199_reg_greyware_tool_keyword = /reg\.exe\ssave\shklm\\system\s/ nocase ascii wide
         // Description: PrintNightmare exploitation
         // Reference: https://github.com/outflanknl/PrintNightmare
-        $string191_reg_greyware_tool_keyword = /reg\.exe\\"\sADD\s\\"HKLM\\System\\CurrentControlSet\\Control\\Lsa\\"\s\/v\sEveryoneIncludesAnonymous\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
+        $string200_reg_greyware_tool_keyword = /reg\.exe\\"\sADD\s\\"HKLM\\System\\CurrentControlSet\\Control\\Lsa\\"\s\/v\sEveryoneIncludesAnonymous\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
         // Description: PrintNightmare exploitation
         // Reference: https://github.com/outflanknl/PrintNightmare
-        $string192_reg_greyware_tool_keyword = /reg\.exe\\"\sADD\s\\"HKLM\\System\\CurrentControlSet\\Control\\Lsa\\"\s\/v\sRestrictAnonymous\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
+        $string201_reg_greyware_tool_keyword = /reg\.exe\\"\sADD\s\\"HKLM\\System\\CurrentControlSet\\Control\\Lsa\\"\s\/v\sRestrictAnonymous\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
         // Description: PrintNightmare exploitation
         // Reference: https://github.com/outflanknl/PrintNightmare
-        $string193_reg_greyware_tool_keyword = /reg\.exe\\"\sADD\s\\"HKLM\\System\\CurrentControlSet\\Services\\LanManServer\\Parameters\\"\s\/v\sNullSessionPipes\s\/t\sREG_MULTI_SZ\s\/d\ssrvsvc\s\/f/ nocase ascii wide
+        $string202_reg_greyware_tool_keyword = /reg\.exe\\"\sADD\s\\"HKLM\\System\\CurrentControlSet\\Services\\LanManServer\\Parameters\\"\s\/v\sNullSessionPipes\s\/t\sREG_MULTI_SZ\s\/d\ssrvsvc\s\/f/ nocase ascii wide
         // Description: PrintNightmare exploitation
         // Reference: https://github.com/outflanknl/PrintNightmare
-        $string194_reg_greyware_tool_keyword = /reg\.exe\\"\sADD\s\\"HKLM\\System\\CurrentControlSet\\Services\\LanManServer\\Parameters\\"\s\/v\sNullSessionShares\s\/t\sREG_MULTI_SZ\s\/d\sshare\s\/f/ nocase ascii wide
+        $string203_reg_greyware_tool_keyword = /reg\.exe\\"\sADD\s\\"HKLM\\System\\CurrentControlSet\\Services\\LanManServer\\Parameters\\"\s\/v\sNullSessionShares\s\/t\sREG_MULTI_SZ\s\/d\sshare\s\/f/ nocase ascii wide
         // Description: saves a copy of the registry hive
         // Reference: N/A
-        $string195_reg_greyware_tool_keyword = /reg\.exe\\"\ssave\shklm\\sam\s/ nocase ascii wide
+        $string204_reg_greyware_tool_keyword = /reg\.exe\\"\ssave\shklm\\sam\s/ nocase ascii wide
         // Description: saves a copy of the registry hive
         // Reference: N/A
-        $string196_reg_greyware_tool_keyword = /reg\.exe\\"\ssave\shklm\\security\s/ nocase ascii wide
+        $string205_reg_greyware_tool_keyword = /reg\.exe\\"\ssave\shklm\\security\s/ nocase ascii wide
         // Description: saves a copy of the registry hive
         // Reference: N/A
-        $string197_reg_greyware_tool_keyword = /reg\.exe\\"\ssave\shklm\\system\s/ nocase ascii wide
+        $string206_reg_greyware_tool_keyword = /reg\.exe\\"\ssave\shklm\\system\s/ nocase ascii wide
+        // Description: Delete stuffs related to windows defender registry
+        // Reference: N/A
+        $string207_reg_greyware_tool_keyword = /reg\.exe.{0,1000}\sdelete\s.{0,1000}\\Software\\Microsoft\\Windows\sDefender/ nocase ascii wide
+        // Description: Deletes the Windows Event Log channel for Windows Defender WHC (Windows Health Center
+        // Reference: N/A
+        $string208_reg_greyware_tool_keyword = /reg\.exe.{0,1000}\sdelete\s.{0,1000}\\Software\\Microsoft\\Windows\\CurrentVersion\\WINEVT\\Channels\\Microsoft\-Windows\-Windows\sDefender\/WHC/ nocase ascii wide
+        // Description: Deletes the registry key responsible for enabling Windows Defender under System Settings.
+        // Reference: N/A
+        $string209_reg_greyware_tool_keyword = /reg\.exe.{0,1000}\sdelete.{0,1000}\\Software\\Microsoft\\SystemSettings\\SettingId\\SystemSettings_WindowsDefender_UseWindowsDefender/ nocase ascii wide
 
     condition:
         any of them
@@ -36404,6 +36293,9 @@ rule rule_requestbin_net_greyware_tool_keyword
         // Description: allows users to create a unique URL to collect and inspect HTTP requests. It is commonly used for debugging webhooks - it can also be abused by attackers for verifying the reachability and effectiveness of their payloads
         // Reference: http://requestbin.net
         $string2_requestbin_net_greyware_tool_keyword = /http\:\/\/requestbin\.net\/r\// nocase ascii wide
+        // Description: allows users to create a unique URL to collect and inspect HTTP requests. It is commonly used for debugging webhooks - it can also be abused by attackers for verifying the reachability and effectiveness of their payloads
+        // Reference: http://requestbin.net
+        $string3_requestbin_net_greyware_tool_keyword = /https\:\/\/requestbin\.net\/r\// nocase ascii wide
 
     condition:
         any of them
@@ -38659,18 +38551,48 @@ rule rule_rm_greyware_tool_keyword
         // Description: deleting bash history
         // Reference: N/A
         $string2_rm_greyware_tool_keyword = /rm\s\.bash_history/
+        // Description: Indicator Removal on Host - clearing logs
+        // Reference: https://github.com/mthcht/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.md
+        $string3_rm_greyware_tool_keyword = "rm /var/log/"
         // Description: deleting log files
         // Reference: N/A
-        $string3_rm_greyware_tool_keyword = /rm\s\/var\/log\/.{0,1000}\.log/
+        $string4_rm_greyware_tool_keyword = /rm\s\/var\/log\/.{0,1000}\.log/
         // Description: deleting bash history
         // Reference: N/A
-        $string4_rm_greyware_tool_keyword = /rm\s\~\/\.bash_history/
+        $string5_rm_greyware_tool_keyword = /rm\s\~\/\.bash_history/
+        // Description: Indicator Removal on Host
+        // Reference: N/A
+        $string6_rm_greyware_tool_keyword = /rm\s\-f\s.{0,1000}\.bash_history/ nocase ascii wide
+        // Description: Indicator Removal on Host
+        // Reference: N/A
+        $string7_rm_greyware_tool_keyword = /rm\s\-f\s.{0,1000}\.zsh_history/ nocase ascii wide
+        // Description: Indicator Removal on Host - clearing logs
+        // Reference: https://github.com/mthcht/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.md
+        $string8_rm_greyware_tool_keyword = "rm -f /var/log/"
+        // Description: Indicator Removal on Host
+        // Reference: N/A
+        $string9_rm_greyware_tool_keyword = /rm\s\-fr\s.{0,1000}\.zsh_history/ nocase ascii wide
+        // Description: Indicator Removal on Host - clearing logs
+        // Reference: https://github.com/mthcht/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.md
+        $string10_rm_greyware_tool_keyword = "rm -r /var/log/"
+        // Description: Indicator Removal on Host
+        // Reference: N/A
+        $string11_rm_greyware_tool_keyword = /rm\s\-rf\s.{0,1000}\.zsh_history/ nocase ascii wide
         // Description: delete bash history
         // Reference: N/A
-        $string5_rm_greyware_tool_keyword = /rm\s\-rf\s\.bash_history/
+        $string12_rm_greyware_tool_keyword = /rm\s\-rf\s\.bash_history/
+        // Description: Indicator Removal on Host - clearing logs
+        // Reference: https://github.com/mthcht/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.md
+        $string13_rm_greyware_tool_keyword = "rm -rf /var/log/"
+        // Description: Indicator Removal on Host - clearing logs
+        // Reference: https://github.com/mthcht/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.md
+        $string14_rm_greyware_tool_keyword = "rm -rf /var/log/messages"
+        // Description: Indicator Removal on Host - clearing logs
+        // Reference: https://github.com/mthcht/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.md
+        $string15_rm_greyware_tool_keyword = "rm -rf /var/log/security"
         // Description: delete bash history
         // Reference: N/A
-        $string6_rm_greyware_tool_keyword = /rm\s\-rf\s\~\/\.bash_history/
+        $string16_rm_greyware_tool_keyword = /rm\s\-rf\s\~\/\.bash_history/
 
     condition:
         any of them
@@ -38690,6 +38612,25 @@ rule rule_rmdir__greyware_tool_keyword
         // Description: removes files from the Recycle Bin - erasing forensic evidence
         // Reference: https://github.com/roadwy/DefenderYara/blob/9bbdb7f9fd3513ce30aa69cd1d88830e3cf596ca/Ransom/MSIL/Hakbit/Ransom_MSIL_Hakbit_PA_MTB.yar#L7
         $string1_rmdir__greyware_tool_keyword = /rd\s\/s\s\/q\s\%systemdrive\%\\\$RECYCLE\.BIN/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule rule_rmdir_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'rmdir' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "rmdir"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: del command used by Anti Forensics Tools
+        // Reference: https://github.com/PaulNorman01/Forensia
+        $string1_rmdir_greyware_tool_keyword = /rmdir\sC\:\\ProgramData\\Microsoft\\Windows\sDefender\\Quarantine\\Resources\s\/S/ nocase ascii wide
 
     condition:
         any of them
@@ -39973,10 +39914,13 @@ rule rule_sendspace_com_greyware_tool_keyword
     strings:
         // Description: Interesting observation on the file-sharing platform preferences derived from the negotiations chats with LockBit victims
         // Reference: https://twitter.com/mthcht/status/1660953897622544384
-        $string1_sendspace_com_greyware_tool_keyword = /https\:\/\/www\.sendspace\.com\/file\// nocase ascii wide
+        $string1_sendspace_com_greyware_tool_keyword = /https\:\/\/.{0,1000}\.sendspace\.com\/upload/ nocase ascii wide
         // Description: Interesting observation on the file-sharing platform preferences derived from the negotiations chats with LockBit victims
         // Reference: https://twitter.com/mthcht/status/1660953897622544384
-        $string2_sendspace_com_greyware_tool_keyword = /https\:\/\/.{0,1000}\.sendspace\.com\/upload/ nocase ascii wide
+        $string2_sendspace_com_greyware_tool_keyword = /https\:\/\/www\.sendspace\.com\/delete/ nocase ascii wide
+        // Description: Interesting observation on the file-sharing platform preferences derived from the negotiations chats with LockBit victims
+        // Reference: https://twitter.com/mthcht/status/1660953897622544384
+        $string3_sendspace_com_greyware_tool_keyword = /https\:\/\/www\.sendspace\.com\/file\// nocase ascii wide
 
     condition:
         any of them
@@ -40600,18 +40544,36 @@ rule rule_shred_greyware_tool_keyword
         // Description: deleting bash history
         // Reference: N/A
         $string1_shred_greyware_tool_keyword = /shred\s\$HISTFILE/ nocase ascii wide
+        // Description: Indicator Removal on Host
+        // Reference: N/A
+        $string2_shred_greyware_tool_keyword = /shred\s\-n\s.{0,1000}\s\-u\s\-z\s.{0,1000}_history/ nocase ascii wide
+        // Description: Indicator Removal on Host
+        // Reference: N/A
+        $string3_shred_greyware_tool_keyword = /shred\s\-n\s.{0,1000}\s\-z\s\-u\s.{0,1000}_history/ nocase ascii wide
         // Description: Malware or other files dropped or created on a system by an adversary may leave traces behind as to what was done within a network and how. Adversaries may remove these files over the course of an intrusion to keep their footprint low or remove them at the end as part of the post-intrusion cleanup process.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_file_deletion_via_shred.toml
-        $string2_shred_greyware_tool_keyword = "shred --remove" nocase ascii wide
+        $string4_shred_greyware_tool_keyword = "shred --remove" nocase ascii wide
+        // Description: Indicator Removal on Host
+        // Reference: N/A
+        $string5_shred_greyware_tool_keyword = /shred\s\-u\s\-n\s.{0,1000}\s\-z\s.{0,1000}_history/ nocase ascii wide
+        // Description: Indicator Removal on Host
+        // Reference: N/A
+        $string6_shred_greyware_tool_keyword = /shred\s\-u\s\-z\s\-n\s.{0,1000}_history/ nocase ascii wide
         // Description: Malware or other files dropped or created on a system by an adversary may leave traces behind as to what was done within a network and how. Adversaries may remove these files over the course of an intrusion to keep their footprint low or remove them at the end as part of the post-intrusion cleanup process.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_file_deletion_via_shred.toml
-        $string3_shred_greyware_tool_keyword = "shred -u" nocase ascii wide
+        $string7_shred_greyware_tool_keyword = "shred -u" nocase ascii wide
+        // Description: Indicator Removal on Host
+        // Reference: N/A
+        $string8_shred_greyware_tool_keyword = /shred\s\-z\s\-n\s.{0,1000}\s\-u\s.{0,1000}_history/ nocase ascii wide
+        // Description: Indicator Removal on Host
+        // Reference: N/A
+        $string9_shred_greyware_tool_keyword = /shred\s\-z\s\-u\s\-n\s.{0,1000}_history/ nocase ascii wide
         // Description: Malware or other files dropped or created on a system by an adversary may leave traces behind as to what was done within a network and how. Adversaries may remove these files over the course of an intrusion to keep their footprint low or remove them at the end as part of the post-intrusion cleanup process.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_file_deletion_via_shred.toml
-        $string4_shred_greyware_tool_keyword = "shred -z" nocase ascii wide
+        $string10_shred_greyware_tool_keyword = "shred -z" nocase ascii wide
         // Description: Malware or other files dropped or created on a system by an adversary may leave traces behind as to what was done within a network and how. Adversaries may remove these files over the course of an intrusion to keep their footprint low or remove them at the end as part of the post-intrusion cleanup process.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_file_deletion_via_shred.toml
-        $string5_shred_greyware_tool_keyword = "shred --zero" nocase ascii wide
+        $string11_shred_greyware_tool_keyword = "shred --zero" nocase ascii wide
 
     condition:
         any of them
@@ -42526,6 +42488,9 @@ rule rule_sudo_greyware_tool_keyword
         // Description: abusinf LD_PREDLOAD option to escalade privilege
         // Reference: N/A
         $string6_sudo_greyware_tool_keyword = /sudo\sLD_PRELOAD\=\/tmp\/preload\.so\sfind/
+        // Description: Indicator Removal on Host - clearing logs
+        // Reference: https://github.com/mthcht/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.md
+        $string7_sudo_greyware_tool_keyword = "sudo log erase --all"
 
     condition:
         any of them
@@ -43777,207 +43742,210 @@ rule rule_taskkill_greyware_tool_keyword
         // Description: command used in the Dispossessor ransomware group notes
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
         $string9_taskkill_greyware_tool_keyword = /taskkill\s\/f\s\/im\sspa\.exe/ nocase ascii wide
+        // Description: stop running processes associated with SQL
+        // Reference: https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/
+        $string10_taskkill_greyware_tool_keyword = "taskkill /f /im sql" nocase ascii wide
         // Description: Kill All Sophos Services
-        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string10_taskkill_greyware_tool_keyword = /taskkill\s\/f\s\/im\sswi_fc\.exe/ nocase ascii wide
-        // Description: command used in the Dispossessor ransomware group notes
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
         $string11_taskkill_greyware_tool_keyword = /taskkill\s\/f\s\/im\sswi_fc\.exe/ nocase ascii wide
-        // Description: Kill All Sophos Services
-        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
-        $string12_taskkill_greyware_tool_keyword = /taskkill\s\/f\s\/im\sswi_filter\.exe/ nocase ascii wide
         // Description: command used in the Dispossessor ransomware group notes
         // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string12_taskkill_greyware_tool_keyword = /taskkill\s\/f\s\/im\sswi_fc\.exe/ nocase ascii wide
+        // Description: Kill All Sophos Services
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
         $string13_taskkill_greyware_tool_keyword = /taskkill\s\/f\s\/im\sswi_filter\.exe/ nocase ascii wide
+        // Description: command used in the Dispossessor ransomware group notes
+        // Reference: https://vx-underground.org/Archive/Dispossessor%20Leaks
+        $string14_taskkill_greyware_tool_keyword = /taskkill\s\/f\s\/im\sswi_filter\.exe/ nocase ascii wide
         // Description: stopping Backup Service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string14_taskkill_greyware_tool_keyword = /taskkill\s\/im\sagntsvc\.exe\s\/F/ nocase ascii wide
+        $string15_taskkill_greyware_tool_keyword = /taskkill\s\/im\sagntsvc\.exe\s\/F/ nocase ascii wide
         // Description: stopping Network Management
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string15_taskkill_greyware_tool_keyword = /taskkill\s\/IM\sCNTAoSMgr\.exe\s\/F/ nocase ascii wide
+        $string16_taskkill_greyware_tool_keyword = /taskkill\s\/IM\sCNTAoSMgr\.exe\s\/F/ nocase ascii wide
         // Description: stopping Database Service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string16_taskkill_greyware_tool_keyword = /taskkill\s\/im\sdbeng50\.exe\s\/F/ nocase ascii wide
+        $string17_taskkill_greyware_tool_keyword = /taskkill\s\/im\sdbeng50\.exe\s\/F/ nocase ascii wide
         // Description: stopping Database Service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string17_taskkill_greyware_tool_keyword = /taskkill\s\/im\sdbsnmp\.exe\s\/F/ nocase ascii wide
+        $string18_taskkill_greyware_tool_keyword = /taskkill\s\/im\sdbsnmp\.exe\s\/F/ nocase ascii wide
         // Description: stopping Encryption Service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string18_taskkill_greyware_tool_keyword = /taskkill\s\/im\sencsvc\.exe\s\/F/ nocase ascii wide
+        $string19_taskkill_greyware_tool_keyword = /taskkill\s\/im\sencsvc\.exe\s\/F/ nocase ascii wide
         // Description: stopping Office Application
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string19_taskkill_greyware_tool_keyword = /taskkill\s\/im\sexcel\.exe\s\/F/ nocase ascii wide
+        $string20_taskkill_greyware_tool_keyword = /taskkill\s\/im\sexcel\.exe\s\/F/ nocase ascii wide
         // Description: stopping Browser Configuration
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string20_taskkill_greyware_tool_keyword = /taskkill\s\/im\sfirefoxconfig\.exe\s\/F/ nocase ascii wide
+        $string21_taskkill_greyware_tool_keyword = /taskkill\s\/im\sfirefoxconfig\.exe\s\/F/ nocase ascii wide
         // Description: stopping Office Application
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string21_taskkill_greyware_tool_keyword = /taskkill\s\/im\sinfopath\.exe\s\/F/ nocase ascii wide
+        $string22_taskkill_greyware_tool_keyword = /taskkill\s\/im\sinfopath\.exe\s\/F/ nocase ascii wide
         // Description: stopping Database Service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string22_taskkill_greyware_tool_keyword = /taskkill\s\/im\sisqlplussvc\.exe\s\/F/ nocase ascii wide
+        $string23_taskkill_greyware_tool_keyword = /taskkill\s\/im\sisqlplussvc\.exe\s\/F/ nocase ascii wide
         // Description: stopping Antivirus
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string23_taskkill_greyware_tool_keyword = /taskkill\s\/IM\smbamtray\.exe\s\/F/ nocase ascii wide
+        $string24_taskkill_greyware_tool_keyword = /taskkill\s\/IM\smbamtray\.exe\s\/F/ nocase ascii wide
         // Description: stopping Database Application
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string24_taskkill_greyware_tool_keyword = /taskkill\s\/im\smsaccess\.exe\s\/F/ nocase ascii wide
+        $string25_taskkill_greyware_tool_keyword = /taskkill\s\/im\smsaccess\.exe\s\/F/ nocase ascii wide
         // Description: stopping Database Service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string25_taskkill_greyware_tool_keyword = /taskkill\s\/im\smsftesql\.exe\s\/F/ nocase ascii wide
+        $string26_taskkill_greyware_tool_keyword = /taskkill\s\/im\smsftesql\.exe\s\/F/ nocase ascii wide
         // Description: stopping Office Application
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string26_taskkill_greyware_tool_keyword = /taskkill\s\/im\smspub\.exe\s\/F/ nocase ascii wide
+        $string27_taskkill_greyware_tool_keyword = /taskkill\s\/im\smspub\.exe\s\/F/ nocase ascii wide
         // Description: stopping Remote Desktop Service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string27_taskkill_greyware_tool_keyword = /taskkill\s\/im\smydesktopqos\.exe\s\/F/ nocase ascii wide
+        $string28_taskkill_greyware_tool_keyword = /taskkill\s\/im\smydesktopqos\.exe\s\/F/ nocase ascii wide
         // Description: stopping Remote Desktop Service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string28_taskkill_greyware_tool_keyword = /taskkill\s\/im\smydesktopservice\.exe\s\/F/ nocase ascii wide
+        $string29_taskkill_greyware_tool_keyword = /taskkill\s\/im\smydesktopservice\.exe\s\/F/ nocase ascii wide
         // Description: stopping Database Service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string29_taskkill_greyware_tool_keyword = /taskkill\s\/im\smysqld\.exe\s\/F/ nocase ascii wide
+        $string30_taskkill_greyware_tool_keyword = /taskkill\s\/im\smysqld\.exe\s\/F/ nocase ascii wide
         // Description: stopping Database Service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string30_taskkill_greyware_tool_keyword = /taskkill\s\/im\smysqld\-nt\.exe\s\/F/ nocase ascii wide
+        $string31_taskkill_greyware_tool_keyword = /taskkill\s\/im\smysqld\-nt\.exe\s\/F/ nocase ascii wide
         // Description: stopping Database Service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string31_taskkill_greyware_tool_keyword = /taskkill\s\/im\smysqld\-opt\.exe\s\/F/ nocase ascii wide
+        $string32_taskkill_greyware_tool_keyword = /taskkill\s\/im\smysqld\-opt\.exe\s\/F/ nocase ascii wide
         // Description: stopping Antivirus
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string32_taskkill_greyware_tool_keyword = "taskkill /IM Ntrtsc" nocase ascii wide
+        $string33_taskkill_greyware_tool_keyword = "taskkill /IM Ntrtsc" nocase ascii wide
         // Description: stopping Database Service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string33_taskkill_greyware_tool_keyword = /taskkill\s\/im\socautoupds\.exe\s\/F/ nocase ascii wide
+        $string34_taskkill_greyware_tool_keyword = /taskkill\s\/im\socautoupds\.exe\s\/F/ nocase ascii wide
         // Description: stopping Database Service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string34_taskkill_greyware_tool_keyword = /taskkill\s\/im\socomm\.exe\s\/F/ nocase ascii wide
+        $string35_taskkill_greyware_tool_keyword = /taskkill\s\/im\socomm\.exe\s\/F/ nocase ascii wide
         // Description: stopping Database Service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string35_taskkill_greyware_tool_keyword = /taskkill\s\/im\socssd\.exe\s\/F/ nocase ascii wide
+        $string36_taskkill_greyware_tool_keyword = /taskkill\s\/im\socssd\.exe\s\/F/ nocase ascii wide
         // Description: stopping Office Application
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string36_taskkill_greyware_tool_keyword = /taskkill\s\/im\sonenote\.exe\s\/F/ nocase ascii wide
+        $string37_taskkill_greyware_tool_keyword = /taskkill\s\/im\sonenote\.exe\s\/F/ nocase ascii wide
         // Description: stopping Database Service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string37_taskkill_greyware_tool_keyword = /taskkill\s\/im\soracle\.exe\s\/F/ nocase ascii wide
+        $string38_taskkill_greyware_tool_keyword = /taskkill\s\/im\soracle\.exe\s\/F/ nocase ascii wide
         // Description: stopping Email Client
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string38_taskkill_greyware_tool_keyword = /taskkill\s\/im\soutlook\.exe\s\/F/ nocase ascii wide
+        $string39_taskkill_greyware_tool_keyword = /taskkill\s\/im\soutlook\.exe\s\/F/ nocase ascii wide
         // Description: stopping Antivirus
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string39_taskkill_greyware_tool_keyword = /taskkill\s\/IM\sPccNTMon\.exe\s\/F/ nocase ascii wide
+        $string40_taskkill_greyware_tool_keyword = /taskkill\s\/IM\sPccNTMon\.exe\s\/F/ nocase ascii wide
         // Description: stopping Office Application
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string40_taskkill_greyware_tool_keyword = /taskkill\s\/im\spowerpnt\.exe\s\/F/ nocase ascii wide
+        $string41_taskkill_greyware_tool_keyword = /taskkill\s\/im\spowerpnt\.exe\s\/F/ nocase ascii wide
         // Description: stopping Antivirus
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string41_taskkill_greyware_tool_keyword = /taskkill\s\/im\ssavfmsesp\.exe\s\/f/ nocase ascii wide
+        $string42_taskkill_greyware_tool_keyword = /taskkill\s\/im\ssavfmsesp\.exe\s\/f/ nocase ascii wide
         // Description: stopping Database Backup
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string42_taskkill_greyware_tool_keyword = /taskkill\s\/im\ssqbcoreservice\.exe\s\/F/ nocase ascii wide
+        $string43_taskkill_greyware_tool_keyword = /taskkill\s\/im\ssqbcoreservice\.exe\s\/F/ nocase ascii wide
         // Description: stopping Database Service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string43_taskkill_greyware_tool_keyword = /taskkill\s\/im\ssqlagent\.exe\s\/F/ nocase ascii wide
+        $string44_taskkill_greyware_tool_keyword = /taskkill\s\/im\ssqlagent\.exe\s\/F/ nocase ascii wide
         // Description: stopping Database Service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string44_taskkill_greyware_tool_keyword = /taskkill\s\/im\ssqlbrowser\.exe\s\/F/ nocase ascii wide
+        $string45_taskkill_greyware_tool_keyword = /taskkill\s\/im\ssqlbrowser\.exe\s\/F/ nocase ascii wide
         // Description: stopping Database Service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string45_taskkill_greyware_tool_keyword = /taskkill\s\/im\ssqlservr\.exe\s\/F/ nocase ascii wide
+        $string46_taskkill_greyware_tool_keyword = /taskkill\s\/im\ssqlservr\.exe\s\/F/ nocase ascii wide
         // Description: stopping Synchronization Service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string46_taskkill_greyware_tool_keyword = /taskkill\s\/im\ssynctime\.exe\s\/F/ nocase ascii wide
+        $string47_taskkill_greyware_tool_keyword = /taskkill\s\/im\ssynctime\.exe\s\/F/ nocase ascii wide
         // Description: stopping Email Client Configuration
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string47_taskkill_greyware_tool_keyword = /taskkill\s\/im\stbirdconfig\.exe\s\/F/ nocase ascii wide
+        $string48_taskkill_greyware_tool_keyword = /taskkill\s\/im\stbirdconfig\.exe\s\/F/ nocase ascii wide
         // Description: stopping Email Client
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string48_taskkill_greyware_tool_keyword = /taskkill\s\/im\sthebat\.exe\s\/F/ nocase ascii wide
+        $string49_taskkill_greyware_tool_keyword = /taskkill\s\/im\sthebat\.exe\s\/F/ nocase ascii wide
         // Description: stopping Email Client
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string49_taskkill_greyware_tool_keyword = /taskkill\s\/im\sthebat64\.exe\s\/F/ nocase ascii wide
+        $string50_taskkill_greyware_tool_keyword = /taskkill\s\/im\sthebat64\.exe\s\/F/ nocase ascii wide
         // Description: stopping Email Client
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string50_taskkill_greyware_tool_keyword = /taskkill\s\/im\sthunderbird\.exe\s\/F/ nocase ascii wide
+        $string51_taskkill_greyware_tool_keyword = /taskkill\s\/im\sthunderbird\.exe\s\/F/ nocase ascii wide
         // Description: stopping Antivirus
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string51_taskkill_greyware_tool_keyword = /taskkill\s\/IM\stmlisten\.exe\s\/F/ nocase ascii wide
+        $string52_taskkill_greyware_tool_keyword = /taskkill\s\/IM\stmlisten\.exe\s\/F/ nocase ascii wide
         // Description: stopping Office Application
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string52_taskkill_greyware_tool_keyword = /taskkill\s\/im\svisio\.exe\s\/F/ nocase ascii wide
+        $string53_taskkill_greyware_tool_keyword = /taskkill\s\/im\svisio\.exe\s\/F/ nocase ascii wide
         // Description: stopping Office Application
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string53_taskkill_greyware_tool_keyword = /taskkill\s\/im\swinword\.exe\s\/F/ nocase ascii wide
+        $string54_taskkill_greyware_tool_keyword = /taskkill\s\/im\swinword\.exe\s\/F/ nocase ascii wide
         // Description: stopping Text Editor
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string54_taskkill_greyware_tool_keyword = /taskkill\s\/im\swordpad\.exe\s\/F/ nocase ascii wide
+        $string55_taskkill_greyware_tool_keyword = /taskkill\s\/im\swordpad\.exe\s\/F/ nocase ascii wide
         // Description: stopping Financial Service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string55_taskkill_greyware_tool_keyword = /taskkill\s\/im\sxfssvccon\.exe\s\/F/ nocase ascii wide
+        $string56_taskkill_greyware_tool_keyword = /taskkill\s\/im\sxfssvccon\.exe\s\/F/ nocase ascii wide
         // Description: stopping Backup Service
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string56_taskkill_greyware_tool_keyword = /taskkill\s\/im\szoolz\.exe\s\/F/ nocase ascii wide
+        $string57_taskkill_greyware_tool_keyword = /taskkill\s\/im\szoolz\.exe\s\/F/ nocase ascii wide
         // Description: terminate processes related to SQL servers
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string57_taskkill_greyware_tool_keyword = /taskkill\s\-f\s\-im\sfdhost\.exe/ nocase ascii wide
-        // Description: terminate processes related to SQL servers
-        // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string58_taskkill_greyware_tool_keyword = /taskkill\s\-f\s\-im\sfdlauncher\.exe/ nocase ascii wide
+        $string58_taskkill_greyware_tool_keyword = /taskkill\s\-f\s\-im\sfdhost\.exe/ nocase ascii wide
         // Description: terminate processes related to SQL servers
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
         $string59_taskkill_greyware_tool_keyword = /taskkill\s\-f\s\-im\sfdlauncher\.exe/ nocase ascii wide
         // Description: terminate processes related to SQL servers
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string60_taskkill_greyware_tool_keyword = /taskkill\s\-f\s\-im\sMsDtsSrvr\.exe/ nocase ascii wide
+        $string60_taskkill_greyware_tool_keyword = /taskkill\s\-f\s\-im\sfdlauncher\.exe/ nocase ascii wide
         // Description: terminate processes related to SQL servers
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string61_taskkill_greyware_tool_keyword = /taskkill\s\-f\s\-im\smsftesql\.exe/ nocase ascii wide
+        $string61_taskkill_greyware_tool_keyword = /taskkill\s\-f\s\-im\sMsDtsSrvr\.exe/ nocase ascii wide
         // Description: terminate processes related to SQL servers
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string62_taskkill_greyware_tool_keyword = /taskkill\s\-f\s\-im\smsmdsrv\.exe/ nocase ascii wide
+        $string62_taskkill_greyware_tool_keyword = /taskkill\s\-f\s\-im\smsftesql\.exe/ nocase ascii wide
         // Description: terminate processes related to SQL servers
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string63_taskkill_greyware_tool_keyword = /taskkill\s\-f\s\-im\spg_ctl\.exe/ nocase ascii wide
+        $string63_taskkill_greyware_tool_keyword = /taskkill\s\-f\s\-im\smsmdsrv\.exe/ nocase ascii wide
         // Description: terminate processes related to SQL servers
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string64_taskkill_greyware_tool_keyword = /taskkill\s\-f\s\-im\spostgres\.exe/ nocase ascii wide
+        $string64_taskkill_greyware_tool_keyword = /taskkill\s\-f\s\-im\spg_ctl\.exe/ nocase ascii wide
         // Description: terminate processes related to SQL servers
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string65_taskkill_greyware_tool_keyword = /taskkill\s\-f\s\-im\sReportingServicesService\.exe/ nocase ascii wide
+        $string65_taskkill_greyware_tool_keyword = /taskkill\s\-f\s\-im\spostgres\.exe/ nocase ascii wide
         // Description: terminate processes related to SQL servers
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string66_taskkill_greyware_tool_keyword = /taskkill\s\-f\s\-im\sSQLAGENT\.EXE/ nocase ascii wide
+        $string66_taskkill_greyware_tool_keyword = /taskkill\s\-f\s\-im\sReportingServicesService\.exe/ nocase ascii wide
         // Description: terminate processes related to SQL servers
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string67_taskkill_greyware_tool_keyword = /taskkill\s\-f\s\-im\ssqlbrowser\.exe/ nocase ascii wide
+        $string67_taskkill_greyware_tool_keyword = /taskkill\s\-f\s\-im\sSQLAGENT\.EXE/ nocase ascii wide
         // Description: terminate processes related to SQL servers
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string68_taskkill_greyware_tool_keyword = /taskkill\s\-f\s\-im\ssqlceip\.exe/ nocase ascii wide
+        $string68_taskkill_greyware_tool_keyword = /taskkill\s\-f\s\-im\ssqlbrowser\.exe/ nocase ascii wide
         // Description: terminate processes related to SQL servers
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string69_taskkill_greyware_tool_keyword = /taskkill\s\-f\s\-im\ssqlservr\.exe/ nocase ascii wide
+        $string69_taskkill_greyware_tool_keyword = /taskkill\s\-f\s\-im\ssqlceip\.exe/ nocase ascii wide
         // Description: terminate processes related to SQL servers
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
         $string70_taskkill_greyware_tool_keyword = /taskkill\s\-f\s\-im\ssqlservr\.exe/ nocase ascii wide
         // Description: terminate processes related to SQL servers
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string71_taskkill_greyware_tool_keyword = /taskkill\s\-f\s\-im\ssqlwriter\.exe/ nocase ascii wide
+        $string71_taskkill_greyware_tool_keyword = /taskkill\s\-f\s\-im\ssqlservr\.exe/ nocase ascii wide
         // Description: terminate processes related to SQL servers
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string72_taskkill_greyware_tool_keyword = /taskkill\s\-f\s\-im\sSsms\.exe/ nocase ascii wide
+        $string72_taskkill_greyware_tool_keyword = /taskkill\s\-f\s\-im\ssqlwriter\.exe/ nocase ascii wide
+        // Description: terminate processes related to SQL servers
+        // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
+        $string73_taskkill_greyware_tool_keyword = /taskkill\s\-f\s\-im\sSsms\.exe/ nocase ascii wide
         // Description: killing lsass process
         // Reference: https://x.com/malmoeb/status/1741114854037987437
-        $string73_taskkill_greyware_tool_keyword = /taskkill\.exe\s\/F\s\/IM\slsass\.exe/ nocase ascii wide
+        $string74_taskkill_greyware_tool_keyword = /taskkill\.exe\s\/F\s\/IM\slsass\.exe/ nocase ascii wide
         // Description: evade EDR/AV by repairing with msiexec and killing the process
         // Reference: https://badoption.eu/blog/2024/03/23/cortex.html
-        $string74_taskkill_greyware_tool_keyword = /taskkill\.exe\s\/F\s\/IM\smsiexec\.exe/ nocase ascii wide
+        $string75_taskkill_greyware_tool_keyword = /taskkill\.exe\s\/F\s\/IM\smsiexec\.exe/ nocase ascii wide
         // Description: outputs a verbose list of all running processes associated with the SYSTEM account
         // Reference: N/A
-        $string75_taskkill_greyware_tool_keyword = "tasklist /v /fi \"username eq system\"" nocase ascii wide
+        $string76_taskkill_greyware_tool_keyword = "tasklist /v /fi \"username eq system\"" nocase ascii wide
         // Description: outputs a verbose list of all running processes associated with the SYSTEM account
         // Reference: N/A
-        $string76_taskkill_greyware_tool_keyword = /tasklist\.exe\\"\s\/v\s\/fi\s\\"username\seq\ssystem\\"/ nocase ascii wide
+        $string77_taskkill_greyware_tool_keyword = /tasklist\.exe\\"\s\/v\s\/fi\s\\"username\seq\ssystem\\"/ nocase ascii wide
 
     condition:
         any of them
@@ -44476,6 +44444,37 @@ rule rule_tempsend_com_greyware_tool_keyword
 }
 
 
+rule rule_termbin_com_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'termbin.com' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "termbin.com"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: sending data to a pastebin
+        // Reference: termbin.com
+        $string1_termbin_com_greyware_tool_keyword = /\snc\stermbin\.com\s/ nocase ascii wide
+        // Description: sending data to a pastebin
+        // Reference: termbin.com
+        $string2_termbin_com_greyware_tool_keyword = /\snetcat\stermbin\.com\s/ nocase ascii wide
+        // Description: sending data to a pastebin
+        // Reference: termbin.com
+        $string3_termbin_com_greyware_tool_keyword = /\stermbin\.com\s9999/ nocase ascii wide
+        // Description: accessing paste raw content
+        // Reference: termbin.com
+        $string4_termbin_com_greyware_tool_keyword = /curl\shttps\:\/\/termbin\.com\// nocase ascii wide
+        // Description: accessing paste raw content
+        // Reference: termbin.com
+        $string5_termbin_com_greyware_tool_keyword = /https\:\/\/termbin\.com\/test/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule rule_textbin_net_greyware_tool_keyword
 {
     meta:
@@ -44894,6 +44893,25 @@ rule rule_touch_greyware_tool_keyword
 }
 
 
+rule rule_track_adform_net_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'track.adform.net' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "track.adform.net"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Attackers can use track.adform.net to masquerade their domain for phishing purposes.
+        // Reference: https://www.joesandbox.com/analysis/514456/0/html
+        $string1_track_adform_net_greyware_tool_keyword = /https\:\/\/track\.adform\.net\/C\/\?bn\=.{0,1000}\;cpdir\=http/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule rule_transfer_sh_greyware_tool_keyword
 {
     meta:
@@ -44967,6 +44985,62 @@ rule rule_Trellonet_greyware_tool_keyword
         // Description: External VPN usage within coporate network
         // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
         $string1_Trellonet_greyware_tool_keyword = "njpmifchgidinihmijhcfpbdmglecdlb" nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule rule_truncate_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'truncate' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "truncate"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Indicator Removal on Host - clearing logs
+        // Reference: https://github.com/mthcht/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.md
+        $string1_truncate_greyware_tool_keyword = "truncate -s 0 /var/log/messages"
+        // Description: Indicator Removal on Host - clearing logs
+        // Reference: https://github.com/mthcht/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.md
+        $string2_truncate_greyware_tool_keyword = "truncate --size=0 /var/log/security"
+
+    condition:
+        any of them
+}
+
+
+rule rule_trycloudflare_com_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'trycloudflare.com' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "trycloudflare.com"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: The subdomain .trycloudflare.com is a temporary hostname provided by Cloudflare Tunnel - It allows users to expose local services to the internet without needing to configure port forwarding or a public IP - attackers frequently abuse it for malicious activities
+        // Reference: https://www.forcepoint.com/blog/x-labs/asyncrat-python-trycloudflare-malware
+        $string1_trycloudflare_com_greyware_tool_keyword = /\.trycloudfare\.com.{0,1000}DavWWWRoot/ nocase ascii wide
+        // Description: The subdomain .trycloudflare.com is a temporary hostname provided by Cloudflare Tunnel - It allows users to expose local services to the internet without needing to configure port forwarding or a public IP - attackers frequently abuse it for malicious activities
+        // Reference: https://www.forcepoint.com/blog/x-labs/asyncrat-python-trycloudflare-malware
+        $string2_trycloudflare_com_greyware_tool_keyword = /http\:\/\/.{0,1000}\.trycloudfare\.com/ nocase ascii wide
+        // Description: The subdomain .trycloudflare.com is a temporary hostname provided by Cloudflare Tunnel - It allows users to expose local services to the internet without needing to configure port forwarding or a public IP - attackers frequently abuse it for malicious activities
+        // Reference: https://www.forcepoint.com/blog/x-labs/asyncrat-python-trycloudflare-malware
+        $string3_trycloudflare_com_greyware_tool_keyword = /https\:\/\/.{0,1000}\.trycloudfare\.com/ nocase ascii wide
+        // Description: Attackers abuse this service to expose malicious servers on a *.trycloudflare.com subdomain
+        // Reference: https://lots-project.com/site/2a2e747279636c6f7564666c6172652e636f6d
+        $string4_trycloudflare_com_greyware_tool_keyword = /https\:\/\/.{0,1000}\.trycloudflare\.com/ nocase ascii wide
+        // Description: The subdomain .trycloudflare.com is a temporary hostname provided by Cloudflare Tunnel - It allows users to expose local services to the internet without needing to configure port forwarding or a public IP - attackers frequently abuse it for malicious activities
+        // Reference: https://www.forcepoint.com/blog/x-labs/asyncrat-python-trycloudflare-malware
+        $string5_trycloudflare_com_greyware_tool_keyword = /location\:\\\\.{0,1000}\.trycloudfare\.com/ nocase ascii wide
+        // Description: The subdomain .trycloudflare.com is a temporary hostname provided by Cloudflare Tunnel - It allows users to expose local services to the internet without needing to configure port forwarding or a public IP - attackers frequently abuse it for malicious activities
+        // Reference: https://www.forcepoint.com/blog/x-labs/asyncrat-python-trycloudflare-malware
+        $string6_trycloudflare_com_greyware_tool_keyword = /QNAME.{0,1000}\.trycloudfare\.com/ nocase ascii wide
 
     condition:
         any of them
@@ -45807,121 +45881,124 @@ rule rule_UltraVNC_greyware_tool_keyword
         $string13_UltraVNC_greyware_tool_keyword = /\\options\.vnc/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string14_UltraVNC_greyware_tool_keyword = /\\Services\\EventLog\\Application\\UltraVNC\\/ nocase ascii wide
+        $string14_UltraVNC_greyware_tool_keyword = /\\Program\sFiles\s\(x86\)\\uvnc\sbvba\\/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string15_UltraVNC_greyware_tool_keyword = /\\SOFTWARE\\ORL\\VNCHooks\\Application_Prefs\\WinVNC/ nocase ascii wide
+        $string15_UltraVNC_greyware_tool_keyword = /\\Services\\EventLog\\Application\\UltraVNC\\/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string16_UltraVNC_greyware_tool_keyword = /\\ultravnc\.cer/ nocase ascii wide
+        $string16_UltraVNC_greyware_tool_keyword = /\\SOFTWARE\\ORL\\VNCHooks\\Application_Prefs\\WinVNC/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string17_UltraVNC_greyware_tool_keyword = /\\UltraVNC\.ini/ nocase ascii wide
+        $string17_UltraVNC_greyware_tool_keyword = /\\ultravnc\.cer/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string18_UltraVNC_greyware_tool_keyword = /\\uvnc\sbvba\\UltraVNC\\/ nocase ascii wide
+        $string18_UltraVNC_greyware_tool_keyword = /\\UltraVNC\.ini/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string19_UltraVNC_greyware_tool_keyword = /\\uvnc_launch\.exe/ nocase ascii wide
+        $string19_UltraVNC_greyware_tool_keyword = /\\uvnc\sbvba\\UltraVNC\\/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string20_UltraVNC_greyware_tool_keyword = /\\uvnc_settings\.ex/ nocase ascii wide
+        $string20_UltraVNC_greyware_tool_keyword = /\\uvnc_launch\.exe/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string21_UltraVNC_greyware_tool_keyword = /\\uvnc_settings\.exe/ nocase ascii wide
+        $string21_UltraVNC_greyware_tool_keyword = /\\uvnc_settings\.ex/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string22_UltraVNC_greyware_tool_keyword = /\\uvnckeyboardhelper\.exe/ nocase ascii wide
+        $string22_UltraVNC_greyware_tool_keyword = /\\uvnc_settings\.exe/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string23_UltraVNC_greyware_tool_keyword = /\\vncviewer\.exe/ nocase ascii wide
+        $string23_UltraVNC_greyware_tool_keyword = /\\uvnckeyboardhelper\.exe/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string24_UltraVNC_greyware_tool_keyword = /\\winvnc\.exe/ nocase ascii wide
+        $string24_UltraVNC_greyware_tool_keyword = /\\vncviewer\.exe/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string25_UltraVNC_greyware_tool_keyword = /\\winvncsc\.exe/ nocase ascii wide
+        $string25_UltraVNC_greyware_tool_keyword = /\\winvnc\.exe/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string26_UltraVNC_greyware_tool_keyword = /\\winwvc\.exe/ nocase ascii wide
+        $string26_UltraVNC_greyware_tool_keyword = /\\winvncsc\.exe/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string27_UltraVNC_greyware_tool_keyword = /bvba_UltraVNC_.{0,1000}_exe/ nocase ascii wide
+        $string27_UltraVNC_greyware_tool_keyword = /\\winwvc\.exe/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string28_UltraVNC_greyware_tool_keyword = /certutil\.exe.{0,1000}\s\-addstore\s\\"TrustedPublisher\\".{0,1000}ultravnc\.cer/ nocase ascii wide
+        $string28_UltraVNC_greyware_tool_keyword = /bvba_UltraVNC_.{0,1000}_exe/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string29_UltraVNC_greyware_tool_keyword = "'Company'>UltraVNC</Data>" nocase ascii wide
+        $string29_UltraVNC_greyware_tool_keyword = /certutil\.exe.{0,1000}\s\-addstore\s\\"TrustedPublisher\\".{0,1000}ultravnc\.cer/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string30_UltraVNC_greyware_tool_keyword = "'Description'>VNC server</Data>" nocase ascii wide
+        $string30_UltraVNC_greyware_tool_keyword = "'Company'>UltraVNC</Data>" nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string31_UltraVNC_greyware_tool_keyword = /firewall\sadd\sallowedprogram\s.{0,1000}vncviewer\.exe.{0,1000}\sENABLE\sALL/ nocase ascii wide
+        $string31_UltraVNC_greyware_tool_keyword = "'Description'>VNC server</Data>" nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string32_UltraVNC_greyware_tool_keyword = /firewall\sadd\sallowedprogram\s.{0,1000}winvnc\.exe.{0,1000}\sENABLE\sALL/ nocase ascii wide
+        $string32_UltraVNC_greyware_tool_keyword = /firewall\sadd\sallowedprogram\s.{0,1000}vncviewer\.exe.{0,1000}\sENABLE\sALL/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string33_UltraVNC_greyware_tool_keyword = "firewall add portopening TCP 5800 vnc5800" nocase ascii wide
+        $string33_UltraVNC_greyware_tool_keyword = /firewall\sadd\sallowedprogram\s.{0,1000}winvnc\.exe.{0,1000}\sENABLE\sALL/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string34_UltraVNC_greyware_tool_keyword = "firewall add portopening TCP 5900 vnc5900" nocase ascii wide
+        $string34_UltraVNC_greyware_tool_keyword = "firewall add portopening TCP 5800 vnc5800" nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string35_UltraVNC_greyware_tool_keyword = /HKCR\\\.vnc/ nocase ascii wide
+        $string35_UltraVNC_greyware_tool_keyword = "firewall add portopening TCP 5900 vnc5900" nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string36_UltraVNC_greyware_tool_keyword = /Program\sFiles\s\(x86\)\\uvnc\sbvba\\/ nocase ascii wide
+        $string36_UltraVNC_greyware_tool_keyword = /HKCR\\\.vnc/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string37_UltraVNC_greyware_tool_keyword = /UltraVNC\sLauncher\.lnk/ nocase ascii wide
+        $string37_UltraVNC_greyware_tool_keyword = /Program\sFiles\s\(x86\)\\uvnc\sbvba\\/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string38_UltraVNC_greyware_tool_keyword = "ultravnc mslogonacl" nocase ascii wide
+        $string38_UltraVNC_greyware_tool_keyword = /UltraVNC\sLauncher\.lnk/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string39_UltraVNC_greyware_tool_keyword = /UltraVNC\sRepeater\.lnk/ nocase ascii wide
+        $string39_UltraVNC_greyware_tool_keyword = "ultravnc mslogonacl" nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string40_UltraVNC_greyware_tool_keyword = /UltraVNC\sServer\sSettings\.lnk/ nocase ascii wide
+        $string40_UltraVNC_greyware_tool_keyword = /UltraVNC\sRepeater\.lnk/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string41_UltraVNC_greyware_tool_keyword = /UltraVNC\sServer\.lnk/ nocase ascii wide
+        $string41_UltraVNC_greyware_tool_keyword = /UltraVNC\sServer\sSettings\.lnk/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string42_UltraVNC_greyware_tool_keyword = "ultravnc testauth" nocase ascii wide
+        $string42_UltraVNC_greyware_tool_keyword = /UltraVNC\sServer\.lnk/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string43_UltraVNC_greyware_tool_keyword = /UltraVNC\sViewer\.lnk/ nocase ascii wide
+        $string43_UltraVNC_greyware_tool_keyword = "ultravnc testauth" nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string44_UltraVNC_greyware_tool_keyword = /UltraVNC_.{0,1000}_X86_Setup/ nocase ascii wide
+        $string44_UltraVNC_greyware_tool_keyword = /UltraVNC\sViewer\.lnk/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string45_UltraVNC_greyware_tool_keyword = /ULTRAVNC_1.{0,1000}_X86_SETUP\.EXE\-.{0,1000}\.pf/ nocase ascii wide
+        $string45_UltraVNC_greyware_tool_keyword = /UltraVNC_.{0,1000}_X86_Setup/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string46_UltraVNC_greyware_tool_keyword = "ultravnc_repeater" nocase ascii wide
+        $string46_UltraVNC_greyware_tool_keyword = /ULTRAVNC_1.{0,1000}_X86_SETUP\.EXE\-.{0,1000}\.pf/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string47_UltraVNC_greyware_tool_keyword = "ultravnc_server" nocase ascii wide
+        $string47_UltraVNC_greyware_tool_keyword = "ultravnc_repeater" nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string48_UltraVNC_greyware_tool_keyword = "ultravnc_viewer" nocase ascii wide
+        $string48_UltraVNC_greyware_tool_keyword = "ultravnc_server" nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string49_UltraVNC_greyware_tool_keyword = "VNCviewer Config File" nocase ascii wide
+        $string49_UltraVNC_greyware_tool_keyword = "ultravnc_viewer" nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string50_UltraVNC_greyware_tool_keyword = /VncViewer\.Config/ nocase ascii wide
+        $string50_UltraVNC_greyware_tool_keyword = "VNCviewer Config File" nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string51_UltraVNC_greyware_tool_keyword = /VNCVIEWER\.EXE\-.{0,1000}\.pf/ nocase ascii wide
+        $string51_UltraVNC_greyware_tool_keyword = /VncViewer\.Config/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string52_UltraVNC_greyware_tool_keyword = /WinVNC\.exe/ nocase ascii wide
+        $string52_UltraVNC_greyware_tool_keyword = /VNCVIEWER\.EXE\-.{0,1000}\.pf/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string53_UltraVNC_greyware_tool_keyword = /WinVNC\.exe/ nocase ascii wide
 
     condition:
         any of them
@@ -46009,6 +46086,40 @@ rule rule_Unlimited_VPN__and__Proxy_by_ibVPN_greyware_tool_keyword
         // Description: External VPN usage within coporate network
         // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
         $string1_Unlimited_VPN__and__Proxy_by_ibVPN_greyware_tool_keyword = "higioemojdadgdbhbbbkfbebbdlfjbip" nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule rule_unlink_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'unlink' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "unlink"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Indicator Removal on Host - clearing logs
+        // Reference: https://github.com/mthcht/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.md
+        $string1_unlink_greyware_tool_keyword = "unlink /var/log/"
+        // Description: Indicator Removal on Host
+        // Reference: N/A
+        $string2_unlink_greyware_tool_keyword = /unlink\s\~\/\.bash_history/ nocase ascii wide
+        // Description: Indicator Removal on Host
+        // Reference: N/A
+        $string3_unlink_greyware_tool_keyword = /unlink\s\~\/\.zsh_history/ nocase ascii wide
+        // Description: Indicator Removal on Host - clearing logs
+        // Reference: https://github.com/mthcht/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.md
+        $string4_unlink_greyware_tool_keyword = "unlink -f /var/log/"
+        // Description: Indicator Removal on Host - clearing logs
+        // Reference: https://github.com/mthcht/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.md
+        $string5_unlink_greyware_tool_keyword = "unlink -r /var/log/"
+        // Description: Indicator Removal on Host - clearing logs
+        // Reference: https://github.com/mthcht/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.md
+        $string6_unlink_greyware_tool_keyword = "unlink -rf /var/log/"
 
     condition:
         any of them
@@ -46339,6 +46450,49 @@ rule rule_VirtualShield_VPN_greyware_tool_keyword
 }
 
 
+rule rule_VncSharp_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'VncSharp' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "VncSharp"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: VncSharp is a GPL implementation of the VNC Remote Framebuffer (RFB) Protocol for the .NET Framework
+        // Reference: https://github.com/humphd/VncSharp
+        $string1_VncSharp_greyware_tool_keyword = /\/VncSharp\.exe/ nocase ascii wide
+        // Description: VncSharp is a GPL implementation of the VNC Remote Framebuffer (RFB) Protocol for the .NET Framework
+        // Reference: https://github.com/humphd/VncSharp
+        $string2_VncSharp_greyware_tool_keyword = /\/VncSharp\.git/ nocase ascii wide
+        // Description: VncSharp is a GPL implementation of the VNC Remote Framebuffer (RFB) Protocol for the .NET Framework
+        // Reference: https://github.com/humphd/VncSharp
+        $string3_VncSharp_greyware_tool_keyword = /\\VncSharp\.exe/ nocase ascii wide
+        // Description: VncSharp is a GPL implementation of the VNC Remote Framebuffer (RFB) Protocol for the .NET Framework
+        // Reference: https://github.com/humphd/VncSharp
+        $string4_VncSharp_greyware_tool_keyword = /\\VncSharp\.sln/ nocase ascii wide
+        // Description: VncSharp is a GPL implementation of the VNC Remote Framebuffer (RFB) Protocol for the .NET Framework
+        // Reference: https://github.com/humphd/VncSharp
+        $string5_VncSharp_greyware_tool_keyword = "73e83646-1d53-4dec-950a-a48559e438e8" nocase ascii wide
+        // Description: VncSharp is a GPL implementation of the VNC Remote Framebuffer (RFB) Protocol for the .NET Framework
+        // Reference: https://github.com/humphd/VncSharp
+        $string6_VncSharp_greyware_tool_keyword = "dfedf8e6a6cdb480ee00545da5e7d5370b5b7057d0b274f3a6f9cf4a192a87e6" nocase ascii wide
+        // Description: VncSharp is a GPL implementation of the VNC Remote Framebuffer (RFB) Protocol for the .NET Framework
+        // Reference: https://github.com/humphd/VncSharp
+        $string7_VncSharp_greyware_tool_keyword = "E0695F0F-0FAF-44BC-AE55-A1FCBFE70271" nocase ascii wide
+        // Description: VncSharp is a GPL implementation of the VNC Remote Framebuffer (RFB) Protocol for the .NET Framework
+        // Reference: https://github.com/humphd/VncSharp
+        $string8_VncSharp_greyware_tool_keyword = "e7f6c011776e8db7cd330b54174fd76f7d0216b612387a5ffcfb81e6f0919683" nocase ascii wide
+        // Description: VncSharp is a GPL implementation of the VNC Remote Framebuffer (RFB) Protocol for the .NET Framework
+        // Reference: https://github.com/humphd/VncSharp
+        $string9_VncSharp_greyware_tool_keyword = "humphd/VncSharp" nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule rule_vncviewer_greyware_tool_keyword
 {
     meta:
@@ -46608,9 +46762,12 @@ rule rule_vssadmin_greyware_tool_keyword
         // Description: Deletes all Volume Shadow Copies from the system quietly (without prompts).
         // Reference: N/A
         $string7_vssadmin_greyware_tool_keyword = /vssadmin.{0,1000}\sDelete\sShadows\s\/All\s\/Quiet/ nocase ascii wide
+        // Description: inhibiting recovery by deleting backup and recovery data to prevent system recovery after an attack
+        // Reference: N/A
+        $string8_vssadmin_greyware_tool_keyword = /vssadmin.{0,1000}resize\sshadowstorage\s\/for\=c\:\s\/on\=c\:\s\/maxsize\=1/ nocase ascii wide
         // Description: the command is used to create a new Volume Shadow Copy for a specific volume which can be utilized by an attacker to collect data from the local system
         // Reference: N/A
-        $string8_vssadmin_greyware_tool_keyword = /vssadmin\.exe\sCreate\sShadow\s\/for\=/ nocase ascii wide
+        $string9_vssadmin_greyware_tool_keyword = /vssadmin\.exe\sCreate\sShadow\s\/for\=/ nocase ascii wide
 
     condition:
         any of them
@@ -48294,7 +48451,7 @@ rule rule_xmrig_greyware_tool_keyword
     strings:
         // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
         // Reference: https://github.com/C3Pool/xmrig_setup/
-        $string1_xmrig_greyware_tool_keyword = /\s\sxmrig\.exe/ nocase ascii wide
+        $string1_xmrig_greyware_tool_keyword = /\sxmrig\.exe/ nocase ascii wide
         // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
         // Reference: https://github.com/C3Pool/xmrig_setup/
         $string2_xmrig_greyware_tool_keyword = " c3pool_miner" nocase ascii wide
@@ -48456,7 +48613,7 @@ rule rule_xmrig_greyware_tool_keyword
         $string54_xmrig_greyware_tool_keyword = "killall xmrig" nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string55_xmrig_greyware_tool_keyword = "LS1kb25hdGUtbGV2ZWw9" nocase ascii wide
+        $string55_xmrig_greyware_tool_keyword = "LS1kb25hdGUtbGV2ZWw9"
         // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
         // Reference: https://github.com/C3Pool/xmrig_setup/
         $string56_xmrig_greyware_tool_keyword = "mining in background will be started using your startup directory script and only work when your are logged in this host" nocase ascii wide
@@ -48676,6 +48833,31 @@ rule rule_ZenMate_VPN_greyware_tool_keyword
         // Description: External VPN usage within coporate network
         // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
         $string1_ZenMate_VPN_greyware_tool_keyword = "fdcgdnkidjaadafnichfpabhfomcebme" nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule rule_zerobin_net_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'zerobin.net' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "zerobin.net"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: accessing paste raw content
+        // Reference: https://zerobin.net/
+        $string1_zerobin_net_greyware_tool_keyword = /http\:\/\/zerobinftagjpeeebbvyzjcqyjpmjvynj5qlexwyxe7l3vqejxnqv5qd\.onion/ nocase ascii wide
+        // Description: accessing paste raw content
+        // Reference: https://zerobin.net/
+        $string2_zerobin_net_greyware_tool_keyword = /https\:\/\/zerobin\.net\/\?/ nocase ascii wide
+        // Description: sending data to a pastebin
+        // Reference: https://zerobin.net/
+        $string3_zerobin_net_greyware_tool_keyword = /https\:\/\/zerobin\.net\/js\/privatebin\.js/ nocase ascii wide
 
     condition:
         any of them
@@ -49178,6 +49360,28 @@ rule rule__0bin_net_greyware_tool_keyword
 }
 
 
+rule rule__12ft_io_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool '12ft.io' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "12ft.io"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Attackers can use 12ft.io to masquerade their domain for phishing purposes.
+        // Reference: https://12ft.io/
+        $string1__12ft_io_greyware_tool_keyword = /https\:\/\/12ft\.io\/api\/proxy\?q\=http/ nocase ascii wide
+        // Description: Attackers can use 12ft.io to masquerade their domain for phishing purposes.
+        // Reference: https://12ft.io/
+        $string2__12ft_io_greyware_tool_keyword = /https\:\/\/12ft\.io\/proxy\?q\=/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule rule__1clickVPN_greyware_tool_keyword
 {
     meta:
@@ -49463,81 +49667,156 @@ rule rule___greyware_tool_keyword
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
         $string34___greyware_tool_keyword = /\\9\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string35___greyware_tool_keyword = /\\AppData\\Local\\Temp\\a\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string36___greyware_tool_keyword = /\\AppData\\Local\\Temp\\b\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string37___greyware_tool_keyword = /\\AppData\\Local\\Temp\\c\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string38___greyware_tool_keyword = /\\AppData\\Local\\Temp\\d\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string39___greyware_tool_keyword = /\\AppData\\Local\\Temp\\e\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string40___greyware_tool_keyword = /\\AppData\\Local\\Temp\\f\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string41___greyware_tool_keyword = /\\AppData\\Local\\Temp\\g\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string42___greyware_tool_keyword = /\\AppData\\Local\\Temp\\h\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string43___greyware_tool_keyword = /\\AppData\\Local\\Temp\\i\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string44___greyware_tool_keyword = /\\AppData\\Local\\Temp\\j\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string45___greyware_tool_keyword = /\\AppData\\Local\\Temp\\k\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string46___greyware_tool_keyword = /\\AppData\\Local\\Temp\\l\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string47___greyware_tool_keyword = /\\AppData\\Local\\Temp\\m\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string48___greyware_tool_keyword = /\\AppData\\Local\\Temp\\n\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string49___greyware_tool_keyword = /\\AppData\\Local\\Temp\\o\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string50___greyware_tool_keyword = /\\AppData\\Local\\Temp\\p\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string51___greyware_tool_keyword = /\\AppData\\Local\\Temp\\q\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string52___greyware_tool_keyword = /\\AppData\\Local\\Temp\\r\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string53___greyware_tool_keyword = /\\AppData\\Local\\Temp\\s\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string54___greyware_tool_keyword = /\\AppData\\Local\\Temp\\t\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string55___greyware_tool_keyword = /\\AppData\\Local\\Temp\\u\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string56___greyware_tool_keyword = /\\AppData\\Local\\Temp\\v\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string57___greyware_tool_keyword = /\\AppData\\Local\\Temp\\w\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string58___greyware_tool_keyword = /\\AppData\\Local\\Temp\\x\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string59___greyware_tool_keyword = /\\AppData\\Local\\Temp\\y\.exe/ nocase ascii wide
+        // Description: suspicious executable name in temp location
+        // Reference: https[://]87[.]120[.]120[.]56/crypt/xx.ps1
+        $string60___greyware_tool_keyword = /\\AppData\\Local\\Temp\\z\.exe/ nocase ascii wide
         // Description: script in startup location
         // Reference: N/A
-        $string35___greyware_tool_keyword = /\\AppData\\Roaming\\Microsoft\\Windows\\Start\sMenu\\Programs\\Startup\\.{0,1000}\.bat/ nocase ascii wide
+        $string61___greyware_tool_keyword = /\\AppData\\Roaming\\Microsoft\\Windows\\Start\sMenu\\Programs\\Startup\\.{0,1000}\.bat/ nocase ascii wide
         // Description: script in startup location
         // Reference: N/A
-        $string36___greyware_tool_keyword = /\\AppData\\Roaming\\Microsoft\\Windows\\Start\sMenu\\Programs\\Startup\\.{0,1000}\.cmd/ nocase ascii wide
+        $string62___greyware_tool_keyword = /\\AppData\\Roaming\\Microsoft\\Windows\\Start\sMenu\\Programs\\Startup\\.{0,1000}\.cmd/ nocase ascii wide
         // Description: script in startup location
         // Reference: N/A
-        $string37___greyware_tool_keyword = /\\AppData\\Roaming\\Microsoft\\Windows\\Start\sMenu\\Programs\\Startup\\.{0,1000}\.hta/ nocase ascii wide
+        $string63___greyware_tool_keyword = /\\AppData\\Roaming\\Microsoft\\Windows\\Start\sMenu\\Programs\\Startup\\.{0,1000}\.hta/ nocase ascii wide
         // Description: script in startup location
         // Reference: N/A
-        $string38___greyware_tool_keyword = /\\AppData\\Roaming\\Microsoft\\Windows\\Start\sMenu\\Programs\\Startup\\.{0,1000}\.ps1/ nocase ascii wide
+        $string64___greyware_tool_keyword = /\\AppData\\Roaming\\Microsoft\\Windows\\Start\sMenu\\Programs\\Startup\\.{0,1000}\.ps1/ nocase ascii wide
         // Description: script in startup location
         // Reference: N/A
-        $string39___greyware_tool_keyword = /\\AppData\\Roaming\\Microsoft\\Windows\\Start\sMenu\\Programs\\Startup\\.{0,1000}\.vbs/ nocase ascii wide
+        $string65___greyware_tool_keyword = /\\AppData\\Roaming\\Microsoft\\Windows\\Start\sMenu\\Programs\\Startup\\.{0,1000}\.vbs/ nocase ascii wide
         // Description: generic suspicious keyword keygen.exe observed in multiple cracked software often packed with malwares
         // Reference: N/A
-        $string40___greyware_tool_keyword = /\\keygen\.exe/ nocase ascii wide
+        $string66___greyware_tool_keyword = /\\keygen\.exe/ nocase ascii wide
         // Description: suspicious file name - has been used by threat actors
         // Reference: N/A
-        $string41___greyware_tool_keyword = /\\PAYMENT\.hta/ nocase ascii wide
+        $string67___greyware_tool_keyword = /\\PAYMENT\.hta/ nocase ascii wide
         // Description: suspicious file name - has been used by threat actors
         // Reference: N/A
-        $string42___greyware_tool_keyword = /\\PAYMENT\.hta/ nocase ascii wide
+        $string68___greyware_tool_keyword = /\\PAYMENT\.hta/ nocase ascii wide
         // Description: suspicious file name - has been used by threat actors
         // Reference: N/A
-        $string43___greyware_tool_keyword = /\\PAYMENTS\.exe/ nocase ascii wide
+        $string69___greyware_tool_keyword = /\\PAYMENTS\.exe/ nocase ascii wide
         // Description: reversed string cmd.exe /c obfuscation
         // Reference: N/A
-        $string44___greyware_tool_keyword = /c\/\sexe\.dmc/ nocase ascii wide
+        $string70___greyware_tool_keyword = /c\/\sexe\.dmc/ nocase ascii wide
         // Description: file path containing mixed Unicode-escaped and ASCII characters to evade detection
         // Reference: https://cloud.google.com/blog/topics/threat-intelligence/melting-unc2198-icedid-to-ransomware-operations
-        $string45___greyware_tool_keyword = /c\:\\.{0,1000}\\\\u0.{0,1000}\\\\u0.{0,1000}\\\\u0.{0,1000}\\\\u0/ nocase ascii wide
+        $string71___greyware_tool_keyword = /c\:\\.{0,1000}\\\\u0.{0,1000}\\\\u0.{0,1000}\\\\u0.{0,1000}\\\\u0/ nocase ascii wide
         // Description: reversed string for obfuscation
         // Reference: N/A
-        $string46___greyware_tool_keyword = "delbasiD epyTputratS- " nocase ascii wide
+        $string72___greyware_tool_keyword = "delbasiD epyTputratS- " nocase ascii wide
         // Description: reversed string for obfuscation
         // Reference: N/A
-        $string47___greyware_tool_keyword = "ecnereferPpM-teS" nocase ascii wide
+        $string73___greyware_tool_keyword = "ecnereferPpM-teS" nocase ascii wide
         // Description: reversed string for obfuscation
         // Reference: N/A
-        $string48___greyware_tool_keyword = "eliforPllaweriFteN-teS" nocase ascii wide
+        $string74___greyware_tool_keyword = "eliforPllaweriFteN-teS" nocase ascii wide
         // Description: reversed string rundll32.exe obfuscation
         // Reference: N/A
-        $string49___greyware_tool_keyword = /exe\.23lldnur/ nocase ascii wide
+        $string75___greyware_tool_keyword = /exe\.23lldnur/ nocase ascii wide
         // Description: reversed string for obfuscation
         // Reference: N/A
-        $string50___greyware_tool_keyword = /exe\.erolpxei/ nocase ascii wide
+        $string76___greyware_tool_keyword = /exe\.erolpxei/ nocase ascii wide
         // Description: reversed string for obfuscation
         // Reference: N/A
-        $string51___greyware_tool_keyword = /exe\.rerolpxe/ nocase ascii wide
+        $string77___greyware_tool_keyword = /exe\.rerolpxe/ nocase ascii wide
         // Description: reversed string for obfuscation
         // Reference: N/A
-        $string52___greyware_tool_keyword = /exe\.ssasl/ nocase ascii wide
+        $string78___greyware_tool_keyword = /exe\.ssasl/ nocase ascii wide
         // Description: reversed string for obfuscation
         // Reference: N/A
-        $string53___greyware_tool_keyword = /exe\.tsohcvs/ nocase ascii wide
+        $string79___greyware_tool_keyword = /exe\.tsohcvs/ nocase ascii wide
         // Description: reversed string for obfuscation
         // Reference: N/A
-        $string54___greyware_tool_keyword = "gnirotinoMemitlaeRelbasiD" nocase ascii wide
-        // Description: allows users to create a unique URL to collect and inspect HTTP requests. It is commonly used for debugging webhooks - it can also be abused by attackers for verifying the reachability and effectiveness of their payloads
-        // Reference: http://requestbin.net
-        $string55___greyware_tool_keyword = /https\:\/\/requestbin\.net\/r\// nocase ascii wide
+        $string80___greyware_tool_keyword = "gnirotinoMemitlaeRelbasiD" nocase ascii wide
         // Description: reversed string for obfuscation
         // Reference: N/A
-        $string56___greyware_tool_keyword = "llawerifvda hsten" nocase ascii wide
+        $string81___greyware_tool_keyword = "llawerifvda hsten" nocase ascii wide
         // Description: reversed string for obfuscation
         // Reference: N/A
-        $string57___greyware_tool_keyword = /niB\.elcyceR\$/ nocase ascii wide
+        $string82___greyware_tool_keyword = /niB\.elcyceR\$/ nocase ascii wide
         // Description: reversed string for obfuscation
         // Reference: N/A
-        $string58___greyware_tool_keyword = "teSlortnoCtnerruC" nocase ascii wide
+        $string83___greyware_tool_keyword = "teSlortnoCtnerruC" nocase ascii wide
         // Description: Suspicious tlds with suspicious file types
         // Reference: N/A
-        $string59___greyware_tool_keyword = /https\:\/\/.{0,1000}\.xyz\/.{0,1000}\.ps1/ nocase ascii wide
+        $string84___greyware_tool_keyword = /https\:\/\/.{0,1000}\.xyz\/.{0,1000}\.ps1/ nocase ascii wide
 
     condition:
         any of them

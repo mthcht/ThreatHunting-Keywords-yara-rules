@@ -14,18 +14,48 @@ rule rm
         // Description: deleting bash history
         // Reference: N/A
         $string2 = /rm\s\.bash_history/
+        // Description: Indicator Removal on Host - clearing logs
+        // Reference: https://github.com/mthcht/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.md
+        $string3 = "rm /var/log/"
         // Description: deleting log files
         // Reference: N/A
-        $string3 = /rm\s\/var\/log\/.{0,100}\.log/
+        $string4 = /rm\s\/var\/log\/.{0,100}\.log/
         // Description: deleting bash history
         // Reference: N/A
-        $string4 = /rm\s\~\/\.bash_history/
+        $string5 = /rm\s\~\/\.bash_history/
+        // Description: Indicator Removal on Host
+        // Reference: N/A
+        $string6 = /rm\s\-f\s.{0,100}\.bash_history/ nocase ascii wide
+        // Description: Indicator Removal on Host
+        // Reference: N/A
+        $string7 = /rm\s\-f\s.{0,100}\.zsh_history/ nocase ascii wide
+        // Description: Indicator Removal on Host - clearing logs
+        // Reference: https://github.com/mthcht/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.md
+        $string8 = "rm -f /var/log/"
+        // Description: Indicator Removal on Host
+        // Reference: N/A
+        $string9 = /rm\s\-fr\s.{0,100}\.zsh_history/ nocase ascii wide
+        // Description: Indicator Removal on Host - clearing logs
+        // Reference: https://github.com/mthcht/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.md
+        $string10 = "rm -r /var/log/"
+        // Description: Indicator Removal on Host
+        // Reference: N/A
+        $string11 = /rm\s\-rf\s.{0,100}\.zsh_history/ nocase ascii wide
         // Description: delete bash history
         // Reference: N/A
-        $string5 = /rm\s\-rf\s\.bash_history/
+        $string12 = /rm\s\-rf\s\.bash_history/
+        // Description: Indicator Removal on Host - clearing logs
+        // Reference: https://github.com/mthcht/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.md
+        $string13 = "rm -rf /var/log/"
+        // Description: Indicator Removal on Host - clearing logs
+        // Reference: https://github.com/mthcht/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.md
+        $string14 = "rm -rf /var/log/messages"
+        // Description: Indicator Removal on Host - clearing logs
+        // Reference: https://github.com/mthcht/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.md
+        $string15 = "rm -rf /var/log/security"
         // Description: delete bash history
         // Reference: N/A
-        $string6 = /rm\s\-rf\s\~\/\.bash_history/
+        $string16 = /rm\s\-rf\s\~\/\.bash_history/
         $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
         $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
         $metadata_regex_php = /<\?php/ nocase ascii

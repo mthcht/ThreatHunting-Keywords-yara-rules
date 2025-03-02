@@ -124,58 +124,43 @@ rule LaZagne
         $string38 = "fd0571eeb3d23326429a47df6b1104383efca78191f36099897ec29e5a4da50e" nocase ascii wide
         // Description: The LaZagne project is an open source application used to retrieve lots of passwords stored on a local computer. Each software stores its passwords using different techniques (plaintext   APIs   custom algorithms   databases   etc.). This tool has been developed for the purpose of finding these passwords for the most commonly-used software.
         // Reference: https://github.com/AlessandroZ/LaZagne
-        $string39 = /Hacktool\.Lazagne/ nocase ascii wide
+        $string39 = /laZagne\.exe\sbrowsers/ nocase ascii wide
         // Description: The LaZagne project is an open source application used to retrieve lots of passwords stored on a local computer. Each software stores its passwords using different techniques (plaintext   APIs   custom algorithms   databases   etc.). This tool has been developed for the purpose of finding these passwords for the most commonly-used software.
         // Reference: https://github.com/AlessandroZ/LaZagne
-        $string40 = "HTool-Lazagne" nocase ascii wide
+        $string40 = /Lazagne\.exe/ nocase ascii wide
         // Description: The LaZagne project is an open source application used to retrieve lots of passwords stored on a local computer. Each software stores its passwords using different techniques (plaintext   APIs   custom algorithms   databases   etc.). This tool has been developed for the purpose of finding these passwords for the most commonly-used software.
         // Reference: https://github.com/AlessandroZ/LaZagne
-        $string41 = /laZagne\.exe\sbrowsers/ nocase ascii wide
+        $string41 = /Lazagne\.py/ nocase ascii wide
         // Description: The LaZagne project is an open source application used to retrieve lots of passwords stored on a local computer. Each software stores its passwords using different techniques (plaintext   APIs   custom algorithms   databases   etc.). This tool has been developed for the purpose of finding these passwords for the most commonly-used software.
         // Reference: https://github.com/AlessandroZ/LaZagne
-        $string42 = /Lazagne\.exe/ nocase ascii wide
+        $string42 = /lazagne\.softwares\.sysadmin\.aws/ nocase ascii wide
         // Description: The LaZagne project is an open source application used to retrieve lots of passwords stored on a local computer. Each software stores its passwords using different techniques (plaintext   APIs   custom algorithms   databases   etc.). This tool has been developed for the purpose of finding these passwords for the most commonly-used software.
         // Reference: https://github.com/AlessandroZ/LaZagne
-        $string43 = /Lazagne\.py/ nocase ascii wide
+        $string43 = /lazagne\.softwares\.windows/ nocase ascii wide
         // Description: The LaZagne project is an open source application used to retrieve lots of passwords stored on a local computer. Each software stores its passwords using different techniques (plaintext   APIs   custom algorithms   databases   etc.). This tool has been developed for the purpose of finding these passwords for the most commonly-used software.
         // Reference: https://github.com/AlessandroZ/LaZagne
-        $string44 = /lazagne\.softwares\.sysadmin\.aws/ nocase ascii wide
+        $string44 = /lazagne\.tar\.gz/ nocase ascii wide
         // Description: The LaZagne project is an open source application used to retrieve lots of passwords stored on a local computer. Each software stores its passwords using different techniques (plaintext   APIs   custom algorithms   databases   etc.). This tool has been developed for the purpose of finding these passwords for the most commonly-used software.
         // Reference: https://github.com/AlessandroZ/LaZagne
-        $string45 = /lazagne\.softwares\.windows/ nocase ascii wide
+        $string45 = /LaZagne\-master\.zip/ nocase ascii wide
         // Description: The LaZagne project is an open source application used to retrieve lots of passwords stored on a local computer. Each software stores its passwords using different techniques (plaintext   APIs   custom algorithms   databases   etc.). This tool has been developed for the purpose of finding these passwords for the most commonly-used software.
         // Reference: https://github.com/AlessandroZ/LaZagne
-        $string46 = /lazagne\.tar\.gz/ nocase ascii wide
+        $string46 = /memory.{0,1000}mimipy\.py/ nocase ascii wide
         // Description: The LaZagne project is an open source application used to retrieve lots of passwords stored on a local computer. Each software stores its passwords using different techniques (plaintext   APIs   custom algorithms   databases   etc.). This tool has been developed for the purpose of finding these passwords for the most commonly-used software.
         // Reference: https://github.com/AlessandroZ/LaZagne
-        $string47 = /LaZagne\-master\.zip/ nocase ascii wide
+        $string47 = /memory\/onepassword\.py/ nocase ascii wide
         // Description: The LaZagne project is an open source application used to retrieve lots of passwords stored on a local computer. Each software stores its passwords using different techniques (plaintext   APIs   custom algorithms   databases   etc.). This tool has been developed for the purpose of finding these passwords for the most commonly-used software.
         // Reference: https://github.com/AlessandroZ/LaZagne
-        $string48 = /memory.{0,1000}mimipy\.py/ nocase ascii wide
+        $string48 = /memorydump\.py/ nocase ascii wide
         // Description: The LaZagne project is an open source application used to retrieve lots of passwords stored on a local computer. Each software stores its passwords using different techniques (plaintext   APIs   custom algorithms   databases   etc.). This tool has been developed for the purpose of finding these passwords for the most commonly-used software.
         // Reference: https://github.com/AlessandroZ/LaZagne
-        $string49 = /memory\/onepassword\.py/ nocase ascii wide
+        $string49 = /mimipy\.py/ nocase ascii wide
         // Description: The LaZagne project is an open source application used to retrieve lots of passwords stored on a local computer. Each software stores its passwords using different techniques (plaintext   APIs   custom algorithms   databases   etc.). This tool has been developed for the purpose of finding these passwords for the most commonly-used software.
         // Reference: https://github.com/AlessandroZ/LaZagne
-        $string50 = /memorydump\.py/ nocase ascii wide
+        $string50 = /windows.{0,1000}lsa_secrets\.py/ nocase ascii wide
         // Description: The LaZagne project is an open source application used to retrieve lots of passwords stored on a local computer. Each software stores its passwords using different techniques (plaintext   APIs   custom algorithms   databases   etc.). This tool has been developed for the purpose of finding these passwords for the most commonly-used software.
         // Reference: https://github.com/AlessandroZ/LaZagne
-        $string51 = /mimipy\.py/ nocase ascii wide
-        // Description: The LaZagne project is an open source application used to retrieve lots of passwords stored on a local computer. Each software stores its passwords using different techniques (plaintext   APIs   custom algorithms   databases   etc.). This tool has been developed for the purpose of finding these passwords for the most commonly-used software.
-        // Reference: https://github.com/AlessandroZ/LaZagne
-        $string52 = /Trojan\.Lazagne/ nocase ascii wide
-        // Description: The LaZagne project is an open source application used to retrieve lots of passwords stored on a local computer. Each software stores its passwords using different techniques (plaintext   APIs   custom algorithms   databases   etc.). This tool has been developed for the purpose of finding these passwords for the most commonly-used software.
-        // Reference: https://github.com/AlessandroZ/LaZagne
-        $string53 = /Win32\.LaZagne/ nocase ascii wide
-        // Description: The LaZagne project is an open source application used to retrieve lots of passwords stored on a local computer. Each software stores its passwords using different techniques (plaintext   APIs   custom algorithms   databases   etc.). This tool has been developed for the purpose of finding these passwords for the most commonly-used software.
-        // Reference: https://github.com/AlessandroZ/LaZagne
-        $string54 = /Win64\.Lazagne/ nocase ascii wide
-        // Description: The LaZagne project is an open source application used to retrieve lots of passwords stored on a local computer. Each software stores its passwords using different techniques (plaintext   APIs   custom algorithms   databases   etc.). This tool has been developed for the purpose of finding these passwords for the most commonly-used software.
-        // Reference: https://github.com/AlessandroZ/LaZagne
-        $string55 = /windows.{0,1000}lsa_secrets\.py/ nocase ascii wide
-        // Description: The LaZagne project is an open source application used to retrieve lots of passwords stored on a local computer. Each software stores its passwords using different techniques (plaintext   APIs   custom algorithms   databases   etc.). This tool has been developed for the purpose of finding these passwords for the most commonly-used software.
-        // Reference: https://github.com/AlessandroZ/LaZagne
-        $string56 = /Windows\/lazagne\.spec/ nocase ascii wide
+        $string51 = /Windows\/lazagne\.spec/ nocase ascii wide
 
     condition:
         any of them
